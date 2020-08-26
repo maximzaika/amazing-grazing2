@@ -22,6 +22,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<body>
-		<h1><?php echo htmlspecialchars_decode($final);?>
+		<?php echo htmlspecialchars_decode($final);?>
 	</body>
 </html>
