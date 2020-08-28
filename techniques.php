@@ -20,125 +20,146 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/techniques.css">
   </head>
   <body>
-
-    <div class="container pt-5 pb-4">
-			<div class="row justify-content-between">
-				<div class="col-md-8 order-md-last">
-					<div class="row">
-						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html">Lawn<span>Care</span></a>
-						</div>
-						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-							<form action="#" class="searchform order-lg-last">
-			          <div class="form-group d-flex">
-			            <input type="text" class="form-control pl-3" placeholder="Search">
-			            <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-			          </div>
-			        </form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 d-flex">
-					<div class="social-media">
-		    		<p class="mb-0 d-flex">
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-		    		</p>
-	        </div>
+	<!--"Go to top button"-->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container-fluid">
+				<!-- Website Logo -->
+				<a class="navbar-brand" style="margin-bottom:0" href="#">
+					<img src="images/amazing-grazing-logo_crop_100_39.png" alt=""> <!-- logo size 100x39 px -->
+				</a>
+			
+			    <!-- Bootstrap settings used when the window is minimized / on smaller screens -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav m-auto">
+						<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
+						<li class="nav-item"><a href="techniques.php" class="nav-link">Techniques</a></li>
+						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
+						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
+					</ul>
 				</div>
 			</div>
-		</div>
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container-fluid">
-	    
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="fa fa-bars"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav m-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About us</a></li>
-            <li class="nav-item active"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+		</nav>
+		<!-- End Navigation Bar -->
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Our Services</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
+			<div class="col-md-9 ftco-animate pb-5 text-center">
+				<h1 class="mb-3 bread">GRAZING METHODS</h1>
+			<!--
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+          -->
+		  </div>
         </div>
       </div>
     </section>
-   	
-		<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-3 py-5 order-md-last">
-	          <div class="heading-section ftco-animate">
-	          	<span class="subheading">Services</span>
-	            <h2 class="mb-4">Lawn Services</h2>
-	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your.</p>
-	            <p><a href="#" class="btn btn-primary py-3 px-4">Get a Quote</a></p>
-	          </div>
-    			</div>
-    			<div class="col-lg-9 services-wrap px-4 pt-5">
-    				<div class="row pt-md-3">
-    					<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-fence"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Garden Care</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-lawn-mower"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Lawn mowing</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-natural-resources"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Lawn care</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+	
+	<div class="container">
+		<br/>
+		<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+	</div>
+	<!--Coninuous grazing-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-7">
+					<div class="heading-section ftco-animate">
+						<h2 style="color: #228B22;text-align: left;">CONTINUOUS GRAZING</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-7">
+					<div class="heading-section ftco-animate" >
+						<div class="row" style="padding: 15px;">
+							<p>No rotation of livestock with single pasture system.</p>
+							<p>Continuous grazing requires high conservative stocking rates in general.</p>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-4 d-flex">
+								<a href="download/rotational_grazing.png">
+									<button class="bochure">Look at the Brochure</button>
+								</a>
+							</div>
+							<div class="col-xs-12 col-md-4 d-flex">
+								<a href="download/rotational_grazing.png" download>
+									<button class="bochure">Download Brochure</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--video/gif/image-->
+				<div class="col-xs-12 col-md-5 d-flex justify-content-center align-items-center">
+					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--seasonal grazing-->
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5">
+					<div class="heading-section ftco-animate">
+						<h2 style="color: #228B22;text-align: left;">SEASONAL GRAZING</h2>
+					</div>
+			</div>
+		</div>
+		<!-- Slideshow container -->
+		<div class="slideshow-container">
 
+			<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 4</div>
+				<img src="images/continuous_grazing.png" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 4</div>
+				<img src="images/grazing_methods.jpg" style="width:100%">
+				<div class="text">Caption Two</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 4</div>
+				<img src="images/continuous_grazing.png" style="width:100%">
+				<div class="text">Caption Three</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 4</div>
+				<img src="images/grazing_methods.jpg" style="width:100%">
+				<div class="text">Caption Four</div>
+			</div>
+			
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+		
+	</section>
+	<!---------->
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
@@ -314,6 +335,6 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
-    
+    <script src="js/techniques.js"></script>
   </body>
 </html>
