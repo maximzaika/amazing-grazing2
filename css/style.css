@@ -8410,6 +8410,11 @@ h1, h2, h3, h4, h5,
   .img-video {
     height: 400px; } }
 
+.btn-topic {
+	/*width: 230px;*/
+	height: 52px !important;
+}
+
 .icon-video {
   width: 80px;
   height: 80px;
@@ -9008,6 +9013,9 @@ textarea.form-control {
   width: 100%;
   height: 270px; }
 
+.newsDropDown-padding {
+	padding-bottom: 1rem !important;}
+
 .blog-entry {
   overflow: hidden; }
   @media (min-width: 768px) {
@@ -9018,7 +9026,7 @@ textarea.form-control {
       margin-bottom: 30px; } }
   .blog-entry .text {
     position: relative;
-    background: #fff;
+    background: #f2f2f2;
     width: 100%;
     margin: 0 auto; }
     .blog-entry .text .topper {
