@@ -46,7 +46,7 @@ $(function(){
 		/*$("#drop-region").empty(); */
 		
 		$.ajax({
-			url: 'http://localhost/amazing-grazing/php/gnewsAPI_POST.php',
+			url: 'php/gnewsAPI_POST.php',
 			type: "POST",
 			dataType: 'json',
 			data: {receivedNewsTopic: topicName, /* receivedNewsData */
