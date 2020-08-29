@@ -76,40 +76,31 @@
 	</div>
 	<!--Coninuous grazing-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
-			<div class="row">
-				<div class="col-xs-12 col-md-1"></div>
-				<div class="col-xs-12 col-md-5">
-					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;text-align: left;">CONTINUOUS GRAZING</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
+		<div class="row">
 			<div class="col-xs-12 col-md-1"></div>
-				<div class="col-xs-12 col-md-5">
-					<div class="heading-section ftco-animate" >
-						<div class="row" style="padding: 15px;">
-							<p>No rotation of livestock with single pasture system.</p>
-							<p>Continuous grazing requires high conservative stocking rates in general.</p>
-						</div>
-						<div class="row">
-							<div class="col-xs-12 col-md-6">
-								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
-							</div>
-							<div class="col-xs-12 col-md-6">
-								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
-							</div>
-						</div>
+			<div class="col-xs-12 col-md-5">
+				<div class="heading-section ftco-animate"  style="padding-left: 60px;">
+					<div class="row">
+						<h2 style="color: #228B22;text-align: left;">CONTINUOUS GRAZING</h2>
+						<p style="text-align: justify;">No rotation of livestock with single pasture system.</p>
+						<p style="text-align: justify;">Continuous grazing requires high conservative stocking rates in general.</p>
 					</div>
+					<!--<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
+						</div>
+					</div>-->
 				</div>
-				
-				<!--video/gif/image-->
-				<div class="col-xs-12 col-md-5 d-flex justify-content-center align-items-center">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing"  height="200">
-				</div>
-				<div class="col-xs-12 col-md-1"></div>
 			</div>
-		</div>
+			<!--video/gif/image-->
+			<div class="col-xs-12 col-md-5 d-flex justify-content-center align-items-center">
+				<img src="images/continuous_grazing.png" alt="Continuous grazing"  height="220" style="padding-right: 60px;">
+			</div>
+			<div class="col-xs-12 col-md-1"></div>
+		</div>	
 	</section>
 	<br/><br/>
 	<!--rotational grazing-->
@@ -118,15 +109,15 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-1"></div>
 				<div class="col-xs-12 col-md-4">
-				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 20px">
 				</div>
 				<div class="col-xs-12 col-md-6">
-					<div class="heading-section ftco-animate">
-						<br/>
+					<div class="heading-section ftco-animate" style="margin:30px 30px">
+						
 						<h2 style="text-align:right; color:white;">ROTATIONAL GRAZING</h2>
-						<p style="color:white;">Slow Rotational Grazing: Pastures of 2 or more with standard moves from every 2 weeks to every few months.</p>
-						<p style="color:white;">Planned Rotational Grazing: Strategic moves in every 3 to 10 days to enable land recovery and rest in grazed pastures.</p>
-						<div class="row">
+						<p style="color:white; text-align: justify;">Slow Rotational Grazing: Pastures of 2 or more with standard moves from every 2 weeks to every few months.</p>
+						<p style="color:white; text-align: justify;">Planned Rotational Grazing: Strategic moves in every 3 to 10 days to enable land recovery and rest in grazed pastures.</p>
+						<div class="row align-items-end">
 							<div class="col-xs-12 col-md-6">
 								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
 							</div>
@@ -142,36 +133,32 @@
         </div>
     </section>
 	
-	<!--seasonal grazing-->
+	<!--seasonal grazing - slideshow
 	<section class="ftco-section">
 		
 			<div class="row justify-content-center mb-5">
 					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;text-align: left;">SEASONAL GRAZING</h2>
+						<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
 					</div>
 			</div>
 		<div class="container">	
 		
-		
-		
-		
 		</div>
 		
-		
-		
-	</section>
-	<!----------------------------------------------------->
+	</section>-->
+	<!---------------------split line-------------------------------->
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
 				<div class="col-md-10 text-center heading-section ftco-animate">
-					<span class="subheading">Tips &amp; Techniques</span>
-					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>
+					<!--<span class="subheading">Tips &amp; Techniques</span>
+					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>-->
+					<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-1  d-flex align-items-center justify-content-center">
-					<a class="arrow_button" onclick="plusSlides(-1)">&#10094;</a>
+					<!--<a class="arrow_button" onclick="plusSlides(-1)">&#10094;</a>-->
 				</div>
 				<div class="col-md-10">
 					<div class="carousel-seasonal owl-carousel ftco-owl">
@@ -218,11 +205,68 @@
 					</div>
 				</div>
 				<div class="col-md-1 d-flex align-items-center justify-content-center"> 
-					<a class="arrow_button" onclick="plusSlides(1)">&#10095;</a>
+					<!--<a class="arrow_button" onclick="plusSlides(1)">&#10095;</a>-->
 				</div>
 			</div>
     	</div>
     </section>
+
+<!-- other grazing methods-->
+	<section class="ftco-section bg-light">
+		<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-1"></div>
+			<div class="col-xs-12 col-md-10">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h2 style="color: #228B22;text-align: center;">OTHER GRAZING METHODS</h2>
+					</div>
+				</div>
+			
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');">
+							</a>
+							<div class="text p-4 float-right d-block">								
+								<h3 class="heading mb-0"><a href="#">Management Intensive Grazing</a></h3>
+								<p>Advanced structured system where moves are reached every 1 to 4 days. Management intensive grazing requires more temporary fences and permanent pastures in place to generate small paddocks. Herd densities are typically between 3-14 AU per acre.</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/mod_grazing.jpeg');">
+							</a>
+							<div class="text p-4 float-right d-block">								
+								<h3 class="heading mb-0"><a href="#">Mob Grazing</a></h3>
+								<p>Requires significantly higher stock densities between 75-300+ AU per acre. Multiple moves per day are required to maintain ideal stock densities. Temporary fencing is often used to create small paddocks.</p>								
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/adaptive_high_stock_density_grazing.jpeg');">
+							</a>
+							<div class="text p-4 float-right d-block">														
+								<h3 class="heading mb-0"><a href="#">Adaptive High-Stock Density Grazing</a></h3>
+								<p>Apply multiple of the previous methods of grazing to enable graziers to adjust herd density to achieve nutritional needs of livestock and satisfy the conditions of the soil.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-1"></div>
+		</div>
+		
+			
+		</div>
+	</section>
+		<!-- other grazing end-->
+
+
 
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
