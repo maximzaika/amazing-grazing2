@@ -90,7 +90,7 @@
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
-						<li class="nav-item"><a href="services.php" class="nav-link">Techniques</a></li>
+						<li class="nav-item"><a href="techniques.php" class="nav-link">Techniques</a></li>
 						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
 						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
 					</ul>
