@@ -24,7 +24,7 @@
 				$sourceUrl = $data['articles'][$i]['source']['url'];
 				
 				$full_news = $full_news . 
-					'<div class="col-md-4 d-flex ftco-animate">' .
+					'<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' .
 					  '<div class="blog-entry justify-content-end">' .
 						'<a href="'.$articleUrl.'" class="block-20" style="background-image: url('."'".$articleImg."'". ');"></a>'.
 						'<div class="text p-4 float-right d-block">' .
@@ -54,22 +54,25 @@
 	}
 	
 	$totalNews = 6;
-	$newsToken = '2f43dc9d754f3008f68a7f50b670c208';
-	$todayMonth = date("m")+1;
-	$todayMonth = $todayMonth-1;
-	$startDate = '2020-'.$todayMonth.'-01';
-	
+	$topicName = $_POST['receivedNewsTopic'];
+	$regionName = $_POST['receivedNewsRegion'];
+	$startDateWrong = $_POST['receivedNewsStart'];
+	  $startDate = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2);
 	
 	/* Gnews API code 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
 	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 */
+		 
+	$newsToken = '2f43dc9d754f3008f68a7f50b670c208';
+	
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$newsToken); 
+	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate.'&in=title&token='.$newsToken); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
 	$newsData = curl_exec($ch); 
 	curl_close($ch); 
-	/* End Gnews API code */
     
 	$newsData = json_decode($newsData, true);
+	$newsHTML = newsGenerator($newsData, $totalNews);
+	echo json_encode(array("newsHTML"=>$newsHTML));
 ?>

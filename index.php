@@ -31,6 +31,9 @@
 		<link rel="stylesheet" href="css/flaticon.css">
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
+		
+		<!-- date picker -->
+		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
 	</head>
 	<body>
         
@@ -90,7 +93,7 @@
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
-						<li class="nav-item"><a href="services.php" class="nav-link">Techniques</a></li>
+						<li class="nav-item"><a href="techniques.php" class="nav-link">Techniques</a></li>
 						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
 						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
 					</ul>
@@ -200,10 +203,64 @@
 						<h2>News</h2>
 					</div>
 				</div>
+				
+				<div class="row">
+					 <div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">
+						Select topic
+						<button id="drop-topic" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Grazing</button>
+						<div class="dropdown-news-topic dropdown-menu">
+							<a id="T_Drought" class="dropdown-item updateNews updateNewsJS">Drought</a>
+							<a id="T_Fire" class="dropdown-item updateNews updateNewsJS">Fire</a>
+							<a id="T_Grazing" class="dropdown-item updateNews updateNewsJS">Grazing</a>
+							<a id="T_Livestock" class="dropdown-item updateNews updateNewsJS">Livestock</a>
+						</div>
+					</div>
+					
+					<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">
+						Select start date
+						<div class="input-group mb-3">
+							<input id="enter-start-date" class="form-control border-right-0" id="start-date" name="start-date" placeholder="Select Date" value="01/07/2020" type="text"/>
+							
+							<div class="input-group-prepend">
+								<div class="input-group-prepend input-focus-start">
+									<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--<div class="col-sm-12 col-md-4 col-lg-3 .col-xl-3">
+						Select end date
+						<div class="input-group mb-3">
+							<input id="enter-end-date" class="form-control border-right-0" id="end-date" name="end-date" placeholder="Select Date"  value="30/08/2020" type="text"/>
+							
+							<div class="input-group-prepend">
+								<div class="input-group-prepend input-focus-end">
+									<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>
+									
+								</div>
+							</div>
+						</div>
+					</div>-->
+					
+					<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">
+						Select region
+						<button id="drop-region" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Australia</button>
+						<div class="dropdown-news-topic dropdown-menu">
+							<a id="R_au_Australia" class="dropdown-item updateNews updateNewsJS">Australia</a>
+							<a id="R_ca_Canada" class="dropdown-item updateNews updateNewsJS">Canada</a>
+							<a id="R_eu_Europe" class="dropdown-item updateNews updateNewsJS">Europe</a>
+							<a id="R_ru_Russia" class="dropdown-item updateNews updateNewsJS">Russia</a>
+							<a id="R_us_United States" class="dropdown-item updateNews updateNewsJS">United States</a>
+						</div>
+					</div>
+				</div>
+		
 			    
 				<!-- All The news are displayed here -->
-				<div class="row d-flex">
-					<?php echo htmlspecialchars_decode(newsGenerator($newsData));?>
+				<div id="update-news" class="row d-flex">
+					<?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 				</div>
 			</div>
 		</section>
@@ -530,6 +587,38 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/amazing-grazing/news-picker.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script>
+	$(document).ready(function(){
+	  $('.input-focus-start').on('click', function() {
+		$('#enter-start-date').focus();
+	  });
+	  
+	  $('.input-focus-end').on('click', function() {
+		$('#enter-end-date').focus();
+	  });
+	  
+	  /* Start datepicker for start-date */
+      var date_input=$('input[name="start-date"]'); //our date input has the name "date"
+      var options={
+		    format: 'dd/mm/yyyy',
+            multidate: false,
+			keyboardNavigation: false,
+			forceParse: false,
+			daysOfWeekHighlighted: "0,6",
+			autoclose: true,
+			todayHighlight: true
+      };
+      date_input.datepicker(options);
+	  /* End datepicker for start-date */
+	  
+	  /* Start datepicker for start-date */
+      /*var date_input2=$('input[name="end-date"]'); //our date input has the name "date"
+      date_input2.datepicker(options);*/
+	  /* End datepicker for start-date */
+    })
+</script>
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
