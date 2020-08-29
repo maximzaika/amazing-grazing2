@@ -103,7 +103,7 @@
 		</div>	
 	</section>
 	<br/><br/>
-	<!--rotational grazing-->
+	<!--rotational grazing
 	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
          <div class="container">
 			<div class="row">
@@ -117,7 +117,7 @@
 						<h2 style="text-align:right; color:white;">ROTATIONAL GRAZING</h2>
 						<p style="color:white; text-align: justify;">Slow Rotational Grazing: Pastures of 2 or more with standard moves from every 2 weeks to every few months.</p>
 						<p style="color:white; text-align: justify;">Planned Rotational Grazing: Strategic moves in every 3 to 10 days to enable land recovery and rest in grazed pastures.</p>
-						<div class="row align-items-end">
+						<div class="row">
 							<div class="col-xs-12 col-md-6">
 								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
 							</div>
@@ -131,106 +131,104 @@
 				<div class="col-xs-12 col-md-1"></div>
 			</div>
         </div>
-    </section>
+    </section>-->
 	
-	<!--seasonal grazing - slideshow
-	<section class="ftco-section">
-		
-			<div class="row justify-content-center mb-5">
+		<!--rotational grazing-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+         <div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-4">
+				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+				</div>
+				<div class="col-xs-12 col-md-6">
 					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
+						<br/>
+						<h2 style="text-align:right; color:white;padding: 30px;">ROTATIONAL GRAZING</h2>
+						<p style="color:white;px;padding-bottom: 15px;">
+						Rotating the livestock by dividing different sections of the whole paddock. 
+						While the last paddock in the series was grazed, the first section was in a rested state which allows adequate time for the
+						regrowth of the pasture in that section of paddock, and the grazing sequence can be
+						commenced in a sustainable and effective way.
+						</p>
+						<p style="color:white;px;padding-bottom: 15px;">
+						Rotational grazing can express much higher stocking rates of paddock-bypaddock
+						than regular pre-set stocking. It enhanced the nutritious level of the grazing
+						plants in the best growth stage of their lifecycle, therefore enables multiple livestock
+						to be able to continue their thriving.
+						</p>
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<p style="padding: 30px;"></p>
+							</div>
+						</div>
 					</div>
+				</div>
+				
+				<div class="col-xs-12 col-md-1"></div>
 			</div>
-		<div class="container">	
-		
-		</div>
-		
-	</section>-->
-	<!---------------------split line-------------------------------->
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center heading-section ftco-animate">
-					<!--<span class="subheading">Tips &amp; Techniques</span>
-					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>-->
-					<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
+        </div>
+    </section>
+	<!--rotational grazing-->
+	
+	<!--rotational grazing 2-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="row">
+				<div class="col-xs-12 col-md-3"></div>
+				<div class="col-xs-12 col-md-6">
+					<div class="heading-section ftco-animate">
+						<h2 style="padding-top: 60px; color: #228B22;text-align: center; ">WHY USE IT?</h2>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-1  d-flex align-items-center justify-content-center">
-					<!--<a class="arrow_button" onclick="plusSlides(-1)">&#10094;</a>-->
-				</div>
-				<div class="col-md-10">
-					<div class="carousel-seasonal owl-carousel ftco-owl">
-						<div class="item">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Spring</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Summer</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Winter</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
+			<div class="col-xs-12 col-md-3"></div>
+				<div class="col-xs-12 col-md-6">
+					<div class="heading-section ftco-animate" >
+						<div class="row" style="padding-top: 30px;padding-bottom: 60px;text-align: center;">
+							<p>Rotational grazing can express much higher stocking rates of paddock-bypaddock
+							than regular pre-set stocking. It enhanced the nutritious level of the grazing
+							plants in the best growth stage of their lifecycle, therefore enables multiple livestock
+							to be able to continue their thriving.
+							</p>
+							<p>
+							Using this technique, you can maintain your land forage as high productive
+							pasture which extends the period of balanced growth. At the same time, compared to
+							continuous grazing, you can decrease the methane emissions from livestock by up to
+							22% (per unit of cattle gain).
+							</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-1 d-flex align-items-center justify-content-center"> 
-					<!--<a class="arrow_button" onclick="plusSlides(1)">&#10095;</a>-->
-				</div>
+				<div class="col-xs-12 col-md-1"></div>
 			</div>
-    	</div>
-    </section>
-
-<!-- other grazing methods-->
-	<section class="ftco-section bg-light">
-		<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-md-1"></div>
-			<div class="col-xs-12 col-md-10">
+		</div>
+	</section>
+	<!--rotational grazing 2-->
+	
+	<!-- DIFFERENT ROTATIONAL GRAZING METHODS -->
+		<section class="ftco-section bg-light">
+			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
-					<div class="col-md-7 heading-section text-center ftco-animate">
-						<h2 style="color: #228B22;text-align: center;">OTHER GRAZING METHODS</h2>
+					<div class="col-md-10 heading-section text-center ftco-animate">
+						<h2>DIFFERENT ROTATIONAL GRAZING METHODS</h2>
 					</div>
 				</div>
 			
 				<div class="row d-flex">
 					<div class="col-md-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
-							<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');">
-							</a>
+								<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');">
+								</a>
 							<div class="text p-4 float-right d-block">								
-								<h3 class="heading mb-0"><a href="#">Management Intensive Grazing</a></h3>
-								<p>Advanced structured system where moves are reached every 1 to 4 days. Management intensive grazing requires more temporary fences and permanent pastures in place to generate small paddocks. Herd densities are typically between 3-14 AU per acre.</p>	
+								<h3 class="heading mb-0"><a href="#">Slow Rotational Grazing</a></h3>
+								<p>Slow rotational grazing is pastures of 2 or more with standard moves from every 2 weeks to every few months in order to enable land recovery and rest.</p>	
 							</div>
 						</div>
 					</div>
@@ -258,15 +256,89 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-1"></div>
-		</div>
-		
-			
-		</div>
-	</section>
-		<!-- other grazing end-->
-
-
+		</section>
+		<!-- DIFFERENT ROTATIONAL GRAZING METHODS -->
+	
+	
+	<!--Seasonal grazing-->
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					<!--<span class="subheading">Tips &amp; Techniques</span>
+					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>-->
+					<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
+					<p style="text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
+					</p>
+					<p style="text-align: justify;">Different season conditions provide different use of land for certain species. The benefits and disadvantages of seasonal grazing on the grassland can be very different based on the season you selected. Seasonal grazing offers a great chance to adjust your grazing regime of the year. It can benefit the targeted flora species in the habitat for better effectivity in the long-term.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1  d-flex align-items-center justify-content-center">
+				</div>
+				<div class="col-md-10">
+					<div class="carousel-seasonal owl-carousel ftco-owl">
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Spring</h3>
+									<p>Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Summer</h3>
+									<p>Not the best time. Light grazing is a more ideal option.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Winter</h3>
+									<p>It is a chance that you can adjust your whole year grazing regime.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Autumn</h3>
+									<p>The most suitable time to apply heavy grazing combined with a rotational or continuous technique.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1 d-flex align-items-center justify-content-center"> 
+				</div>
+			</div>
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					</br>
+					<h2 class="mb-4">Our Suggestion</h2>
+					<p style="text-align: justify;">Set your grazing regime and goals. Be clear with your grazing and productivity expectation.
+					</p>
+					<p style="text-align: justify;">Determine your concerns or problems that need to be solved regarding different seasons.
+					</p>
+				</div>
+			</div>
+    	</div>
+    </section>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
