@@ -76,12 +76,11 @@
 	</div>
 	<!--Coninuous grazing-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
-		<div class="container">
 			<div class="row">
-			<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-1"></div>
 				<div class="col-xs-12 col-md-5">
 					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;text-align: center;">CONTINUOUS GRAZING</h2>
+						<h2 style="color: #228B22;text-align: left;">CONTINUOUS GRAZING</h2>
 					</div>
 				</div>
 			</div>
@@ -93,16 +92,12 @@
 							<p>No rotation of livestock with single pasture system.</p>
 							<p>Continuous grazing requires high conservative stocking rates in general.</p>
 						</div>
-						<div class="row d-flex justify-content-center align-items-center">
+						<div class="row">
 							<div class="col-xs-12 col-md-6">
-								<a href="download/rotational_grazing.png">
-									<button class="bochure">Look at the Brochure</button>
-								</a>
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
 							</div>
 							<div class="col-xs-12 col-md-6">
-								<a href="download/rotational_grazing.png" download>
-									<button class="bochure">Download Brochure</button>
-								</a>
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
 							</div>
 						</div>
 					</div>
@@ -116,6 +111,37 @@
 			</div>
 		</div>
 	</section>
+	<br/><br/>
+	<!--rotational grazing-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+         <div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-4">
+				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="heading-section ftco-animate">
+						<br/>
+						<h2 style="text-align:right; color:white;">ROTATIONAL GRAZING</h2>
+						<p style="color:white;">Slow Rotational Grazing: Pastures of 2 or more with standard moves from every 2 weeks to every few months.</p>
+						<p style="color:white;">Planned Rotational Grazing: Strategic moves in every 3 to 10 days to enable land recovery and rest in grazed pastures.</p>
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-md-1"></div>
+			</div>
+        </div>
+    </section>
+	
 	<!--seasonal grazing-->
 	<section class="ftco-section">
 		

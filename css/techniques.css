@@ -1,4 +1,4 @@
-.bochure {
+/*.bochure {
   background-color: white; 
   color: green; 
   border: 2px solid #4CAF50;
@@ -16,6 +16,10 @@
 .bochure:hover {
   background-color: #4CAF50;
   color: white;
+}*/
+
+#bochure:hover {
+  font-weight: bold;
 }
 
 #myBtn {
