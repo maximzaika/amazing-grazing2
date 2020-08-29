@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LawnCare - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Amazing Grazing - Protecting Australian Grasslands</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -67,32 +67,39 @@
 	
 	<div class="container">
 		<br/>
-		<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+		<div class="row">
+			<div class="col-xs-12 col-md-1"></div>
+			<div class="col-xs-12 col-md-10">
+				<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+			</div>
+		</div>
 	</div>
 	<!--Coninuous grazing-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-7">
+			<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-5">
 					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;text-align: left;">CONTINUOUS GRAZING</h2>
+						<h2 style="color: #228B22;text-align: center;">CONTINUOUS GRAZING</h2>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-md-7">
+			<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-5">
 					<div class="heading-section ftco-animate" >
 						<div class="row" style="padding: 15px;">
 							<p>No rotation of livestock with single pasture system.</p>
 							<p>Continuous grazing requires high conservative stocking rates in general.</p>
 						</div>
-						<div class="row">
-							<div class="col-xs-12 col-md-4 d-flex">
+						<div class="row d-flex justify-content-center align-items-center">
+							<div class="col-xs-12 col-md-6">
 								<a href="download/rotational_grazing.png">
 									<button class="bochure">Look at the Brochure</button>
 								</a>
 							</div>
-							<div class="col-xs-12 col-md-4 d-flex">
+							<div class="col-xs-12 col-md-6">
 								<a href="download/rotational_grazing.png" download>
 									<button class="bochure">Download Brochure</button>
 								</a>
@@ -100,120 +107,94 @@
 						</div>
 					</div>
 				</div>
+				
 				<!--video/gif/image-->
 				<div class="col-xs-12 col-md-5 d-flex justify-content-center align-items-center">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid">
+					<img src="images/continuous_grazing.png" alt="Continuous grazing"  height="200">
 				</div>
+				<div class="col-xs-12 col-md-1"></div>
 			</div>
 		</div>
 	</section>
 	<!--seasonal grazing-->
 	<section class="ftco-section">
-		<div class="container">
+		
 			<div class="row justify-content-center mb-5">
 					<div class="heading-section ftco-animate">
 						<h2 style="color: #228B22;text-align: left;">SEASONAL GRAZING</h2>
 					</div>
 			</div>
-		</div>
-		<!-- Slideshow container -->
-		<div class="slideshow-container">
-
-			<!-- Full-width images with number and caption text -->
-			<div class="mySlides fade">
-				<div class="numbertext">1 / 4</div>
-				<img src="images/continuous_grazing.png" style="width:100%">
-				<div class="text">Caption Text</div>
-			</div>
-
-			<div class="mySlides fade">
-				<div class="numbertext">2 / 4</div>
-				<img src="images/grazing_methods.jpg" style="width:100%">
-				<div class="text">Caption Two</div>
-			</div>
-
-			<div class="mySlides fade">
-				<div class="numbertext">3 / 4</div>
-				<img src="images/continuous_grazing.png" style="width:100%">
-				<div class="text">Caption Three</div>
-			</div>
-
-			<div class="mySlides fade">
-				<div class="numbertext">4 / 4</div>
-				<img src="images/grazing_methods.jpg" style="width:100%">
-				<div class="text">Caption Four</div>
-			</div>
-			
-			<!-- Next and previous buttons -->
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</div>
-		<br>
-
-		<!-- The dots/circles -->
-		<div style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
+		<div class="container">	
+		
+		
+		
+		
 		</div>
 		
+		
+		
 	</section>
-	<!---------->
+	<!----------------------------------------------------->
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
-          <div class="col-md-10 text-center heading-section ftco-animate">
-          	<span class="subheading">Tips &amp; Techniques</span>
-            <h2 class="mb-4">Seasonal Lawn Care Tips</h2>
-          </div>
-        </div>
-        <div class="row">
-        	<div class="col-md-12">
-        		<div class="carousel-seasonal owl-carousel ftco-owl">
-              <div class="item">
-              	<div class="wrap">
-			        		<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
-			        		</div>
-			        		<div class="text text-center px-4">
-		        				<h3><a href="#">Spring</a></h3>
-		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-              	<div class="wrap">
-			        		<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
-			        		</div>
-			        		<div class="text text-center px-4">
-		        				<h3><a href="#">Summer</a></h3>
-		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-              	<div class="wrap">
-			        		<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
-			        		</div>
-			        		<div class="text text-center px-4">
-		        				<h3><a href="#">Winter</a></h3>
-		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		        			</div>
-		        		</div>
-              </div>
-              <div class="item">
-              	<div class="wrap">
-			        		<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
-			        		</div>
-			        		<div class="text text-center px-4">
-		        				<h3><a href="#">Fall</a></h3>
-		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		        			</div>
-		        		</div>
-              </div>
-            </div>
-        	</div>
-        </div>
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					<span class="subheading">Tips &amp; Techniques</span>
+					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1  d-flex align-items-center justify-content-center">
+					<a class="arrow_button" onclick="plusSlides(-1)">&#10094;</a>
+				</div>
+				<div class="col-md-10">
+					<div class="carousel-seasonal owl-carousel ftco-owl">
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Spring</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Summer</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Winter</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1 d-flex align-items-center justify-content-center"> 
+					<a class="arrow_button" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+			</div>
     	</div>
     </section>
 
@@ -335,6 +316,6 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
-    <script src="js/techniques.js"></script>
+    <script src="js/top.js"></script>
   </body>
 </html>
