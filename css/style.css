@@ -436,8 +436,14 @@ pre {
     word-break: normal; }
 
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 1200px;
   overflow-y: scroll; }
+  
+@media (min-width: 400px) {
+  .pre-scrollable {
+    max-height: 800px;
+    overflow-y: scroll; }
+  }
 
 .container {
   width: 100%;
@@ -8726,13 +8732,13 @@ textarea.form-control {
     font-size: 20px;
     font-weight: 400; }
   .ftco-footer .ftco-footer-widget ul li a {
-    color: #fff; }
+    color: #4e9525; }
     .ftco-footer .ftco-footer-widget ul li a span {
-      color: #fff; }
-    .ftco-footer .ftco-footer-widget ul li a:hover {
       color: #4e9525; }
+    .ftco-footer .ftco-footer-widget ul li a:hover {
+      color: #fff; }
       .ftco-footer .ftco-footer-widget ul li a:hover span {
-        color: #4e9525; }
+        color: #fff; }
   .ftco-footer .ftco-footer-widget .btn-primary {
     background: #fff !important;
     border: 2px solid #fff !important; }

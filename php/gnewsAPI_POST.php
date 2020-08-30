@@ -1,5 +1,7 @@
 <?php
-    /* Reads in the array converted from json. 
+    /* This is another file specifically used for the updating the criterias.
+	
+	   Reads in the array converted from json. 
 	   Identifies the data of each news.
 	   Identifies the right month.
 	   Loops to create html for all the news */
@@ -8,8 +10,9 @@
 		$total--;
 		
 		$full_news = '';
-		
+		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ($data['articleCount'] != 0) {
+			/* Loop through the number of articles available */
 			for ($i=$total; $i>-1; $i--) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
@@ -23,6 +26,7 @@
 				$sourceName = $data['articles'][$i]['source']['name'];
 				$sourceUrl = $data['articles'][$i]['source']['url'];
 				
+				/* Create HTML readable code for the page */
 				$full_news = $full_news . 
 					'<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' .
 					  '<div class="blog-entry justify-content-end">' .
@@ -53,26 +57,52 @@
 		return $full_news;
 	}
 	
-	$totalNews = 6;
+	require_once "../server_config.php";
+	/* Get the Token from the DB */
+	$get_newsAPI_2 = "SELECT g_news_id, g_news_count, g_news_token FROM g_news_api";
+	$apiData_2 = $con -> query($get_newsAPI_2);
+	
+	$post_apiToken_2 = '';
+	if ($apiData_2->num_rows > 0) {
+		while($row = $apiData_2->fetch_assoc()) {
+			if ($row['g_news_count'] < 100) { /* if count < 100 then not used all */
+				$post_apiID_2 = $row['g_news_id'];
+			    $post_apiCount_2 = $row['g_news_count'];
+			    $post_apiToken_2 = $row['g_news_token'];
+				
+				$incrCount1 = $post_apiCount_2+1;
+				
+				$updateTokenCount1 = 'UPDATE g_news_api '. /* query to update the database with latest count */
+				                    'SET g_news_count='.$incrCount1.' '.
+									'WHERE g_news_id='.$post_apiID_2;
+				$con->query($updateTokenCount1); /* update database */
+				break;
+			} else { /* if not 100 then it is not all used */
+				continue;
+			}
+		}
+	}
+	
+	$totalNews = 10;
 	$topicName = $_POST['receivedNewsTopic'];
 	$regionName = $_POST['receivedNewsRegion'];
-	$startDateWrong = $_POST['receivedNewsStart'];
-	  $startDate = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2);
+	$startDateWrong = $_POST['receivedNewsStart']; /* Receives the date in the wrong format */
+	  $startDate = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2); /* Fix the date format */
 	
 	/* Gnews API code 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
-	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 */
-		 
-	$newsToken = '2f43dc9d754f3008f68a7f50b670c208';
+	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 
+		 token 3 (100 per day max) = c3fae1827597a016ef41d4fb9c4f95fe 
+		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c */
 	
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate.'&in=title&token='.$newsToken); 
+	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_2); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
 	$newsData = curl_exec($ch); 
 	curl_close($ch); 
     
-	$newsData = json_decode($newsData, true);
-	$newsHTML = newsGenerator($newsData, $totalNews);
-	echo json_encode(array("newsHTML"=>$newsHTML));
+	$newsData = json_decode($newsData, true); /* Decode the son format into a readable table */
+	$newsHTML = newsGenerator($newsData, $totalNews); /* Execute the function to scan through the news and create HTMLK readable format */
+	echo json_encode(array("newsHTML"=>$newsHTML)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
 ?>

@@ -1,9 +1,19 @@
+
+<?php 
+    /* Server side files */
+	require_once "server_config.php";
+	require_once "php/navigation.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Amazing Grazing - Protecting Australian Grasslands</title>
+    <title>Amazing Grazing - Grazing Techiques</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Browser tab logo -->
+	<link rel="icon" href="images/amazing-grazing-logo_small.png"> 
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -25,31 +35,9 @@
   <body>
 	<!--"Go to top button"-->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <!-- Navigation Bar -->
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-			<div class="container-fluid">
-				<!-- Website Logo -->
-				<a class="navbar-brand" style="margin-bottom:0" href="#">
-					<img src="images/amazing-grazing-logo_crop_100_39.png" alt=""> <!-- logo size 100x39 px -->
-				</a>
-			
-			    <!-- Bootstrap settings used when the window is minimized / on smaller screens -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="fa fa-bars"></span> Menu
-				</button>
-				
-				<div class="collapse navbar-collapse" id="ftco-nav">
-					<ul class="navbar-nav m-auto">
-						<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
-						<li class="nav-item"><a href="techniques.php" class="nav-link">Techniques</a></li>
-						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
-						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- End Navigation Bar -->
+	<!-- Navigation Bar -->
+	<?php echo generateNavTabs($con, 'techniques.php');?>
+	<!-- End Navigation Bar -->
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -65,12 +53,10 @@
       </div>
     </section>
 	
-	<div class="container">
-		<br/>
+	<div class="container" style="padding-top: 15px;">
 		<div class="row">
-			<div class="col-xs-12 col-md-1"></div>
-			<div class="col-xs-12 col-md-10">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+			<div class="col-md-12 pull-left">
+				<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
 			</div>
 		</div>
 	</div>
@@ -461,3 +447,5 @@
     <script src="js/top.js"></script>
   </body>
 </html>
+
+<?php $con -> close(); ?>

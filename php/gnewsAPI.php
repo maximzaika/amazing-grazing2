@@ -1,5 +1,8 @@
 <?php
-    /* Reads in the array converted from json. 
+    /* This file runs once only upon the load of the page.
+	   HTML calls the function in this .php file.
+	
+	   Reads in the array converted from json. 
 	   Identifies the data of each news.
 	   Identifies the right month.
 	   Loops to create html for all the news */
@@ -8,8 +11,9 @@
 		$total--;
 		
 		$full_news = '';
-		
+		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ($data['articleCount'] != 0) {
+			/* Loop through the number of articles available */
 			for ($i=$total; $i>-1; $i--) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
@@ -23,8 +27,9 @@
 				$sourceName = $data['articles'][$i]['source']['name'];
 				$sourceUrl = $data['articles'][$i]['source']['url'];
 				
+				/* Create HTML readable code for the page */
 				$full_news = $full_news . 
-					'<div class="col-md-4 d-flex ftco-animate">' .
+					'<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' .
 					  '<div class="blog-entry justify-content-end">' .
 						'<a href="'.$articleUrl.'" class="block-20" style="background-image: url('."'".$articleImg."'". ');"></a>'.
 						'<div class="text p-4 float-right d-block">' .
@@ -53,23 +58,49 @@
 		return $full_news;
 	}
 	
-	$totalNews = 6;
-	$newsToken = '2f43dc9d754f3008f68a7f50b670c208';
+	/* Get the Token from the DB */
+	$get_newsAPI_1 = "SELECT g_news_id, g_news_count, g_news_token FROM g_news_api";
+	$apiData_1 = $con -> query($get_newsAPI_1);
+	
+	$post_apiToken_1 = '';
+	if ($apiData_1->num_rows > 0) {
+		
+		while($row = $apiData_1->fetch_assoc()) {
+			if ($row['g_news_count'] < 100) { /* if count < 100 then not used all */
+				$post_apiID_1 = $row['g_news_id'];
+			    $post_apiCount_1 = $row['g_news_count'];
+			    $post_apiToken_1 = $row['g_news_token'];
+				
+				$incrCount = $post_apiCount_1+1;
+				
+				$updateTokenCount = 'UPDATE g_news_api '. /* query to update the database with latest count */
+				                    'SET g_news_count='.$incrCount.' '.
+									'WHERE g_news_id='.$post_apiID_1;
+				$con->query($updateTokenCount); /* update database */
+				break;
+			} else { /* if not 100 then it is not all used */
+				continue;
+			}
+		}
+	}
+	
+	$totalNews = 10;
 	$todayMonth = date("m")+1;
 	$todayMonth = $todayMonth-1;
 	$startDate = '2020-'.$todayMonth.'-01';
 	
-	
 	/* Gnews API code 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
-	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 */
+	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 
+		 token 3 (100 per day max) = c3fae1827597a016ef41d4fb9c4f95fe 
+		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c */
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$newsToken); 
+	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_1); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
 	$newsData = curl_exec($ch); 
 	curl_close($ch); 
 	/* End Gnews API code */
     
-	$newsData = json_decode($newsData, true);
+	$newsData = json_decode($newsData, true); /* Decode the son format into a readable table */
 ?>
