@@ -1,20 +1,9 @@
-
-<?php 
-    /* Server side files */
-	require_once "server_config.php";
-	require_once "php/navigation.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Amazing Grazing - Grazing Techiques</title>
-	
+    <title>Patch-burn Grazing</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<!-- Browser tab logo -->
-	<link rel="icon" href="images/amazing-grazing-logo_small.png"> 
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -36,10 +25,31 @@
   <body>
 	<!--"Go to top button"-->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-	<!-- Navigation Bar -->
-	<?php echo generateNavTabs($con, 'techniques.php');?>
-	<!-- End Navigation Bar -->
+    <!-- Navigation Bar -->
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container-fluid">
+				<!-- Website Logo -->
+				<a class="navbar-brand" style="margin-bottom:0" href="#">
+					<img src="images/amazing-grazing-logo_crop_100_39.png" alt=""> <!-- logo size 100x39 px -->
+				</a>
+			
+			    <!-- Bootstrap settings used when the window is minimized / on smaller screens -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav m-auto">
+						<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
+						<li class="nav-item active"><a href="techniques.php" class="nav-link">Techniques</a></li>
+						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
+						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- End Navigation Bar -->
     
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
@@ -47,117 +57,129 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
 			<div class="col-md-9 ftco-animate pb-5 text-center">
 				<h1 class="mb-3 bread">GRAZING METHODS</h1>
+			<!--
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+          -->
 		  </div>
         </div>
       </div>
     </section>
 	
-	<div class="container" style="padding-top: 15px;">
+	<div class="container">
+		<br/>
 		<div class="row">
-			<div class="col-md-12 pull-left">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+			<div class="col-xs-12 col-md-1"></div>
+			<div class="col-xs-12 col-md-10">
+				<p class="breadcrumbs">
+					<span class="mr-2">
+						<a href="index.php">Home 
+							<i class="ion-ios-arrow-forward"></i>
+						</a>
+					</span> 
+					<span class="mr-2">
+						<a href="techniques.php">Techniques 
+							<i class="ion-ios-arrow-forward"></i>
+						</a>
+					</span>
+					<span>Patch-burn Grazing 
+						<i class="ion-ios-arrow-forward"></i>
+					</span>
+				</p>
 			</div>
 		</div>
 	</div>
-	<!--continuous grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-						<p style="color: white; text-align: justify;">
-						Continuous grazing has been choose by the most farmers as a popular grazing technique according to its low effort on labour and simple approaches. 
-						Temporary fencing and subtracting animals was used to assist in common. 
-						On the other hand, continuous grazing is very intensive technique which related to low productivity and unsustainable development in long-term. 
-						Therefore, we recommend these techniques that more efficient to protect the grassland!
-						</p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;">
-				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End continuous grazing-->
-	<!--rotational grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
-    			</div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
-						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
-						Therefore, read through these explanations of standard terminologies of rotational grazing. 
-						In order to express the frequency of moves and herd density, 
-						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
-						</p>
-						<p><a href="rotational.php" class="btn btn-warning">Read more</a></p>
-					</div>
-    			</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--end rotational grazing-->
-	<!--seasonal grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">SEASONAL GRAZING</h2>
-						<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. 
-						Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
-						By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
-						</p>
-						<p><a href="seasonal.php" class="btn btn-warning">Read more</a></p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5 align-items-center">
-					<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;">
-				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End seasonal grazing-->
-
+	
 	<!--Patch-burn grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb">
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row">
 				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
-    			</div>
-    			<div class="col-lg-6 py-5">
+    			<div class="col-lg-6 py-4">
 					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
+						<h2 class="mb-4" style="text-align:left;color: #228B22;">PATCH-BURN GRAZING</h2>
 						<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. 
 					It helps to manage the grassland that certain areas of the paddock will be burned in a certain year to attract the grazing livestock. 
 					Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. 
 					The rest of the portion of the grassland will be shifted for the new burning. 
 					In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 						</p>
-						<p><a href="patch-burn.php" class="btn btn-warning">Read more</a></p>
 					</div>
+    			</div>
+				<div class="col-lg-4">
+					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
     			</div>
 				<div class="col-lg-1"></div>
 		    </div>
     	</div>
 	</section>
-	<!--End Patch-burn grazing-->
+	<!--why use it-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3"></div>
+    			<div class="col-lg-6 py-4">
+					<div class="heading-section ftco-animate">
+						<h2 class="mb-4" style="text-align:center;color: #228B22;">WHY USE IT?</h2>
+						<p style="padding-bottom: 15px; text-align: center;">
+						Although patch-burn is a great technique for sustainable grazing, it is not an all-purpose solution for every situation. 
+					For example, it is not suitable for paddock smaller than 20 acres. 
+					However, there are still many benefits reasons that you should choose patch-burn. 
+					It not only improves the quality of the whole habitat, boosts the biomass diversity, 
+					but also a great cost-saving technology that requires less costly infrastructure or fencing to achieve a comprehensive and sustainable grazing system. 
+					For example, farmers can choose to burn 1/4 of the whole paddock in rotation each year and switch each section for effective grazing and land healing.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3">
+				</div>
 
-    
+			</div>
+		</div>
+	</section>
+	<!--end why use it-->
+	
+	<!--our suggestion-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+				<div class="col-md-10 py-4 text-center heading-section ftco-animate">
+					<h2 class="mb-4" style=" color: #228B22; ">Our suggestion</h2>
+					<div class="services-wrap">
+						<ul style="list-style: circle outside;">
+							<li style="text-align: justify;" class="services-list">In general, patch-burn requires at least 3 years to accomplish for the whole life cycle. 
+							Therefore, take your time that burns 1/4 of the whole paddock each year in rotation and enjoy the benefits from the very start.
+							</li>
+							<li style="text-align: justify;" class="services-list">Before patch-burn, keep in mind that resting a certain section of the whole paddock for a required step during the growing season. 
+							It can assist your practice in building useful energy loads in the first year.
+							</li>
+							<li style="text-align: justify;" class="services-list">In the case of multiple paddock grazing at the same time, the system of livestock should be rotated so the livestock can get rid of the burned section.
+							</li>
+							<li style="text-align: justify;" class="services-list">For the 2nd year, we suggest you conduct planned burn on another section of the rest unburned area that continuous from last year’s efforts.
+							</li>
+							<li style="text-align: justify;" class="services-list">For your information, for the 2nd second year, livestock should firstly graze in the latest burned area. 
+							That is, the burned area in the 1st year can have enough time to regrowth and rest.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    	</div>
+    </section>
+	<!--End Patch-burn grazing-->
+	
+	<!--view and download brochure-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
+					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-primary" style="margin: 10px;">View the Brochure</a>
+					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-primary" style="margin: 10px;" download>Downlaod the Brochure</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--end view and download brochure here-->
+
 	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -279,5 +301,3 @@
     <script src="js/top.js"></script>
   </body>
 </html>
-
-<?php $con -> close(); ?>
