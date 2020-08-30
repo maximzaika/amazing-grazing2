@@ -128,15 +128,15 @@
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 py-5">
-						<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
+					<div class="col-sm-12 col-md-6 col-lg-4 text-center">
+						<img src="images/patch-burn.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;" width="300" height="300">
 					</div>
-					<div class="col-lg-6 py-5">
+					<div class="col-sm-12 col-md-6 col-lg-8 py-5">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
 							<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 							</p>
-							<p><a href="rotational.php" class="btn btn-amazing-techniques">Read more</a></p>
+							<p><a href="patch-burn.php" class="btn btn-amazing-techniques">Read more</a></p>
 						</div>
 					</div>
 				</div>

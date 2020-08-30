@@ -86,23 +86,25 @@
 		</section>
 		<!-- End Section 2: Rotational Grazing -->
 
-		<!--Section 2: Why Should I use it?-->
+		<!--Section 3: Why Should I use it?-->
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 pull left">
+					<div class="col-lg-6 py-5">
 						<div class="heading-section ftco-animate">
-							<h2 class="mb-4" style="text-align:left; color: #228B22;">WHY SHOULD I USE IT?</h2>
-							<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing can express much higher stocking rates of paddock-by-paddock than regular pre-set stocking. It enhances the nutritious level of the grazing plants in the best growth stage of their lifecycle, therefore enabling multiple livestock to be able to continue their thriving. Using this technique, you can maintain your land forage as high productive pasture which extends the period of balanced growth. At the same time, compared to continuous grazing, you can decrease the methane emissions from livestock by up to 22% (per unit of cattle gain).
-							</p>
+							<h2 class="mb-4" style="text-align:left;color: #228B22;">WHY SHOULD I USE IT?</h2>
+							<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing can express much higher stocking rates of paddock-by-paddock than regular pre-set stocking. It enhances the nutritious level of the grazing plants in the best growth stage of their lifecycle, therefore enabling multiple livestock to be able to continue their thriving. Using this technique, you can maintain your land forage as high productive pasture which extends the period of balanced growth. At the same time, compared to continuous grazing, you can decrease the methane emissions from livestock by up to 22% (per unit of cattle gain). In this case, cows will have more energy to produce milk.</p>
 						</div>
+					</div>
+					<div class="col-lg-6 py-5 align-items-center">
+						<img src="images/cow_life.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;">
 					</div>
 				</div>
 			</div>
 		</section>
-		<!--End Section 2: Why Should I use it?-->
+		<!--End Section 3: Why Should I use it?-->
 		
-		<!-- Section 3: Different Rotational Grazing Methods --> 
+		<!-- Section 4: Different Rotational Grazing Methods --> 
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<!-- Title -->
@@ -149,9 +151,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 3: Different Rotational Grazing Methods --> 
+		<!-- End Section 4: Different Rotational Grazing Methods --> 
 		
-		<!-- Section 4: Our Suggestion-->
+		<!-- Section 5: Our Suggestion-->
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row justify-content-center mb-5">
@@ -235,9 +237,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 4: Our Suggestion-->
+		<!-- End Section 5: Our Suggestion-->
 
-		<!-- Section 5: Footer -->
+		<!-- Section 6: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
@@ -276,7 +278,7 @@
 				</div>
 			</div>
 		</footer>
-		<!-- End Section 5: Footer -->
+		<!-- End Section 6: Footer -->
 		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
