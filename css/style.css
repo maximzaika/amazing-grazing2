@@ -2074,6 +2074,15 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
+.btn-amazing-techniques {
+	color: #fff;
+    background-color: #4e9525;
+    border-color: #fff; }
+  .btn-amazing-techniques:hover {
+    color: #fbd341;
+    background-color: #4e9525;
+    border-color: #fbd341; }
+
 .btn-primary {
   color: #fff;
   background-color: #007bff;
@@ -2174,6 +2183,15 @@ fieldset:disabled a.btn {
       -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
       box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5); }
 
+.btn-amazing-grazing {
+	color: #fff;
+    background-color: #4e9525;
+    border-color: #fff; }
+  .btn-amazing-grazing:hover {
+    color: #fbd341;
+    background-color: #4e9525;
+    border-color: #fbd341; }
+	
 .btn-warning {
   color: #212529;
   background-color: #ffc107;
@@ -8280,6 +8298,10 @@ h1, h2, h3, h4, h5,
         color: #4e9525; }
         .slider-text .breadcrumbs span a:hover i, .slider-text .breadcrumbs span a:focus i {
           color: #4e9525; }
+
+.breadcrumbs2 {
+	color: rgba(255, 255, 255, 0.5);
+}
 
 .slider-text .bread {
   font-weight: 700 !important; }

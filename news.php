@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>LawnCare - Free Bootstrap 4 Template by Colorlib</title>
+		<title>Amazing Grazing - News</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
@@ -56,10 +56,10 @@
 		<div class="container" style="padding-top: 15px;">
 			<div class="row">
 				<div class="col-md-12 pull-left">
-					<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>News <i class="ion-ios-arrow-forward"></i></span></h5>
+					<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span><u><i>News </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+					<hr>
 					<h5 class="text-justify">Usually news are ignored but we believe that news may contain latest information regarding various grazing techniques that farmers developed themselves. Often, there might not be related news in our country, so feel free to customize the search criteria below to meet your requirements. Who knows, you might find a thing or two in other countries.</h5>
 				</div>
-				
 			</div>
 		</div>
 		<!-- End Breadcrumb -->
@@ -102,21 +102,22 @@
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Reading <span>news is not enough</span></a></h2>
 							<ul class="list-unstyled">
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? Click to find out more.</a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that unexperiened farmers tend to use continuous grazing, which is the most inefficient grazing techniques and damages soil? Click to find out more.</a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? Try to use our drought prediction technique that might assist you.</a></li>
+								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that unexperiened farmers tend to use continuous grazing, which is the most inefficient grazing techniques and damages soil? <u>Click to find out more.</u></a></li>
+								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				
+				<!-- License -->
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
 						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.</a> 
 						| Free icons are taken from the <a href="fonts/flaticon/license/license.html">Flaticon </a>
-						| Free image is take from the <a href="https://unsplash.com">Unsplash</a></p>
+						| Free images are taken from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, <a href="https://pixabay.com">Pixabay</a></p>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
