@@ -68,5 +68,4 @@ $(function(){
 	
 	$(".updateNewsJS").click(updateNewsFunc);
 	$("#enter-start-date").change(updateNewsFunc);
-	/* $("#enter-end-date").change(updateNewsFunc); */
 });
