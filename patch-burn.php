@@ -106,7 +106,8 @@
 					</div>
     			</div>
 				<div class="col-lg-4">
-					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
+					<!--<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">-->
+					<img src="images/patch burn grazing.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 50px;" width="280" height="280">
     			</div>
 				<div class="col-lg-1"></div>
 		    </div>

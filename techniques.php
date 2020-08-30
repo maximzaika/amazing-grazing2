@@ -149,7 +149,7 @@
     		<div class="row">
 				<div class="col-lg-1"></div>
 				<div class="col-lg-4 py-5">
-					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
+					<img src="images/patch burn grazing.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 50px;" width="300" height="300">
     			</div>
     			<div class="col-lg-6 py-5">
 					<div class="heading-section ftco-animate">
