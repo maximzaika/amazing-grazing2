@@ -102,21 +102,19 @@
 						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 						</p>
 						<div class="row">
-							<div class="col-xs-12 col-md-6">
+							<div class="col-xs-12 col-md-6 py-1">
 								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
 							</div>
-							<div class="col-xs-12 col-md-6">
+							<div class="col-xs-12 col-md-6 py-1 ">
 								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
 							</div>
-							<div class="col-xs-12 col-md-6">
-								<p style="padding: 30px;"></p>
-							</div>
+							
 						</div>
 					</div>
 				</div>
 				
 				<div class="col-lg-4 py-5">
-				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
 				</div>
 				<div class="col-xs-12 col-md-1"></div>
 			</div>

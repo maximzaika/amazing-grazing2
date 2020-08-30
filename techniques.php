@@ -103,7 +103,7 @@
     		<div class="row">
 				<div class="col-lg-1"></div>
 				<div class="col-lg-4 py-5">
-					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
     			</div>
     			<div class="col-lg-6 py-5">
 					<div class="heading-section ftco-animate">

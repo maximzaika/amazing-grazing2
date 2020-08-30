@@ -105,7 +105,7 @@
 						</p>
 					</div>
     			</div>
-				<div class="col-lg-4 py-5">
+				<div class="col-lg-4">
 					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
     			</div>
 				<div class="col-lg-1"></div>
@@ -117,7 +117,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3"></div>
-    			<div class="col-lg-6">
+    			<div class="col-lg-6 py-4">
 					<div class="heading-section ftco-animate">
 						<h2 class="mb-4" style="text-align:center;color: #228B22;">WHY USE IT?</h2>
 						<p style="padding-bottom: 15px; text-align: center;">
@@ -142,7 +142,7 @@
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
-				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
+				<div class="col-md-10 py-4 text-center heading-section ftco-animate">
 					<h2 class="mb-4" style=" color: #228B22; ">Our suggestion</h2>
 					<div class="services-wrap">
 						<ul style="list-style: circle outside;">
