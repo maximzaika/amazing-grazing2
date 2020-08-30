@@ -21,11 +21,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/top.css">
-	<style>
-		#brochure:hover {
-			font-weight: bold;
-		}
-	</style>
+
 	
   </head>
   <body>

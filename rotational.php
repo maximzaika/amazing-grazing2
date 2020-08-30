@@ -96,20 +96,12 @@
     			<div class="col-lg-6 py-4">
 					<div class="heading-section ftco-animate">
 						<h2 class="mb-4" style="text-align:left;color: #228B22;">ROTATIONAL GRAZING</h2>
-						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
+						<p style="text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
 						Therefore, read through these explanations of standard terminologies of rotational grazing. 
 						In order to express the frequency of moves and herd density, 
 						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 						</p>
-						<div class="row">
-							<div class="col-xs-12 col-md-6 py-1">
-								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
-							</div>
-							<div class="col-xs-12 col-md-6 py-1 ">
-								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
-							</div>
-							
-						</div>
+						
 					</div>
 				</div>
 				
@@ -121,6 +113,9 @@
         </div>
     </section>
 	<!--end rotational grazing-->
+
+	
+	
 	<!--why use it-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container">
@@ -227,6 +222,19 @@
     </section>
 	<!--End Patch-burn grazing-->
 
+
+<!--view and download brochure-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
+					<a href="download/rotational_grazing_brochure.pdf" class="btn btn-warning py-2 px-3" id="brochure">View and downlaod the Brochure</a>
+				
+				</div>
+			</div>
+		</div>
+	</section>
+<!--end view and download brochure here-->
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -346,5 +354,6 @@
   gtag('config', 'UA-23581568-13');
 </script>
     <script src="js/top.js"></script>
+	
   </body>
 </html>

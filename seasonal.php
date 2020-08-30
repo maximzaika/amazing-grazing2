@@ -71,7 +71,7 @@
 			<div class="col-xs-12 col-md-1"></div>
 			<div class="col-xs-12 col-md-10">
 				<p class="breadcrumbs">
-					<span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+					<span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> 
 					<span class="mr-2">
 						<a href="techniques.php">Techniques 
 							<i class="ion-ios-arrow-forward"></i>
@@ -106,7 +106,7 @@
 					<div class="carousel-seasonal owl-carousel ftco-owl">
 						<div class="item">
 							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/spring.jpeg);">
 								</div>
 								<div class="text text-center px-4">
 									<h3>Spring</h3>
@@ -121,7 +121,7 @@
 						</div>
 						<div class="item">
 							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/summer.jpeg);">
 								</div>
 								<div class="text text-center px-4">
 									<h3>Summer</h3>
@@ -138,7 +138,7 @@
 						</div>
 						<div class="item">
 							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/winter.jpeg);">
 								</div>
 								<div class="text text-center px-4">
 									<h3>Winter</h3>
@@ -155,7 +155,7 @@
 						</div>
 						<div class="item">
 							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/autumn.jpeg);">
 								</div>
 								<div class="text text-center px-4">
 									<h3>Autumn</h3>
@@ -194,6 +194,18 @@
     	</div>
     </section>
 	<!--end seasonal grazing-->
+	<!--view and download brochure-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
+					<a href="download/seasonal_grazing_brochure.pdf" class="btn btn-warning py-2 px-3" id="brochure">View and downlaod the Brochure</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--end view and download brochure here-->
+	
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">

@@ -167,7 +167,18 @@
     </section>
 	<!--End Patch-burn grazing-->
 	
-	
+	<!--view and download brochure-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
+					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-warning py-2 px-3" id="brochure">View and downlaod the Brochure</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--end view and download brochure here-->
+
 	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
