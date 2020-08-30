@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Grazing Techniques</title>
+    <title>Seasonal Grazing</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -21,12 +21,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/top.css">
-	<style>
-		#brochure:hover {
-			font-weight: bold;
-		}
-	</style>
-	
   </head>
   <body>
 	<!--"Go to top button"-->
@@ -48,7 +42,7 @@
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
-						<li class="nav-item active"><a href="techniques.php" class="nav-link">Techniques</a></li>
+						<li class="nav-item  active"><a href="techniques.php" class="nav-link">Techniques</a></li>
 						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
 						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
 					</ul>
@@ -63,6 +57,9 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
 			<div class="col-md-9 ftco-animate pb-5 text-center">
 				<h1 class="mb-3 bread">GRAZING METHODS</h1>
+			<!--
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+          -->
 		  </div>
         </div>
       </div>
@@ -73,106 +70,131 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-1"></div>
 			<div class="col-xs-12 col-md-10">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+				<p class="breadcrumbs">
+					<span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> 
+					<span class="mr-2">
+						<a href="techniques.php">Techniques 
+							<i class="ion-ios-arrow-forward"></i>
+						</a>
+					</span>
+					<span>Seasonal Grazing 
+						<i class="ion-ios-arrow-forward"></i>
+					</span>
+				</p>
 			</div>
 		</div>
 	</div>
-	<!--continuous grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+		
+	<!--Seasonal grazing-->
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-						<p style="color: white; text-align: justify;">No rotation of livestock with single pasture system.</p>
-						<p style=" color: white; text-align: justify;">Continuous grazing requires high conservative stocking rates in general.</p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;>
+    		<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					<!--<span class="subheading">Tips &amp; Techniques</span>
+					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>-->
+					<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
+					<p style="text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
+					</p>
+					<p style="text-align: justify;">Different season conditions provide different use of land for certain species. The benefits and disadvantages of seasonal grazing on the grassland can be very different based on the season you selected. Seasonal grazing offers a great chance to adjust your grazing regime of the year. It can benefit the targeted flora species in the habitat for better effectivity in the long-term.
+					</p>
 				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End continuous grazing-->
-	<!--rotational grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
-    			</div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
-						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
-						Therefore, read through these explanations of standard terminologies of rotational grazing. 
-						In order to express the frequency of moves and herd density, 
-						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
-						</p>
-						<p><a href="rotational.php" class="btn btn-warning">Read more</a></p>
-					</div>
-    			</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--end rotational grazing-->
-	<!--seasonal grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">SEASONAL GRAZING</h2>
-						<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. 
-						Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
-						By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
-						</p>
-						<p><a href="seasonal.php" class="btn btn-warning">Read more</a></p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5 align-items-center">
-					<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;>
+			</div>
+			<div class="row">
+				<div class="col-md-1  d-flex align-items-center justify-content-center">
 				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End seasonal grazing-->
-
-	<!--Patch-burn grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
-    			</div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
-						<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. 
-					It helps to manage the grassland that certain areas of the paddock will be burned in a certain year to attract the grazing livestock. 
-					Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. 
-					The rest of the portion of the grassland will be shifted for the new burning. 
-					In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
-						</p>
-						<p><a href="patch-burn.php" class="btn btn-warning">Read more</a></p>
+				<div class="col-md-10">
+					<div class="carousel-seasonal owl-carousel ftco-owl">
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-1.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Spring</h3>
+									<p>Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.</p>
+									<!--<p style="text-align: justify;">
+									It is not the most appropriate time for effective grazing that strong flowering field the layer of the flora can be disturbing regards to the quality of the grassland in general like plant species of butterfly–source. 
+									Therefore, grazing heavily during spring may decrease the diversity of flora species then cause unwanted plant dominance by those robust and resistant flora species in general, and further break the balance of the grassland bio-ecosystem. 
+									However, you still can apply seasonal grazing in spring, but keep in mind, it is better to keep relatively light grazing in regards to other seasons of the year.
+									</p>-->
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-2.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Summer</h3>
+									<p>Not the best time. Light grazing is a more ideal option.</p>
+									<!--<p style="text-align: justify;">
+									We are sorry but it is still not the best time! 
+									Light grazing is a more ideal option that intensive grazing in this season can largely destroy the plant saplings and seedlings. 
+									In addition, it may decrease the grassland potential for sustainable development that decrease the diversity of flora and further imbalance the ecosystem.
+									Again, you still can apply seasonal grazing in summer, but in a light way. 
+									Just need to be aware of the decrease of balanced grassland species diversity and other habitat sustainability.
+									</p>-->
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-3.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Winter</h3>
+									<p>It is a chance that you can adjust your whole year grazing regime.</p>
+									<!--<p style="text-align: justify;">
+									Winter is a chance that you can adjust your whole year grazing regime. 
+									A heavy grain in this season is not appropriate that significant grassland disturbance can be found that it is better to let the grass seeds finding their suitable niches for germination in the coming seasons. 
+									On the other hand, it provides an opportunity to decrease the bracken and grass litter that very limited impact will be shown on spring flora species.
+									Also, livestock can consume optimal grass in winter to decrease the buying cost of hay by seeding grassland in warm weather like spring and summer to boost the growth of the land. 
+									You can spread the seeds on top of the snow during the later stage of winter to allow it melts and keep moist into the land for better regrowth and rest.
+									</p>-->
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal-4.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3>Autumn</h3>
+									<p>The most suitable time to apply heavy grazing combined with a rotational or continuous technique.</p>
+									<!--<p style="text-align: justify;">
+									Finally! The best time of the year has come. 
+									If you have not approached heavy grazing in spring or summer, the autumn biomass will be its best condition that can maximise its potential for effective grazing. 
+									The benefits of conduct heavy grazing in this season is quite obvious that autumn provides the most nutritious natural food for the livestock, 
+									and it is also easy to maintain its balance of the ecosystem and minimise the disadvantages related to grazing. 
+									It is the most suitable time to apply heavy grazing combined with a rotational or continuous technique for better results.
+									
+									</p>-->
+								</div>
+							</div>
+						</div>
 					</div>
-    			</div>
-				<div class="col-lg-1"></div>
-		    </div>
+				</div>
+				<div class="col-md-1 d-flex align-items-center justify-content-center"> 
+				</div>
+			</div>
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					</br>
+					<h2 class="mb-4" style=" color: #228B22;">Our Suggestion</h2>
+					<div class="services-wrap">
+					<ul style="list-style: circle outside;">
+						<li style="text-align: justify;"  class="services-list">Set your grazing regime and goals. Be clear with your grazing and productivity expectation.</li>
+						<li style="text-align: justify;"  class="services-list">Determine your concerns or problems that need to be solved regarding different seasons.</li>
+						<li style="text-align: justify;"  class="services-list">Based on your understanding of these seasonal characteristics, plan your very own solution to overcome these challenges to maximise the grazing effectivity.</li>
+						<li style="text-align: justify;"  class="services-list">Always keep track of your records including livestock, land condition, water consumptions, forages growth, and other infrastructure use based on 12-month consideration for next year’s plan.</li>
+						
+					</ul>
+					</div>
+				</div>
+			</div>
     	</div>
-	</section>
-	<!--End Patch-burn grazing-->
-
-    
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+    </section>
+	<!--end seasonal grazing-->
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
         	<div class="col-lg-8 py-4">
@@ -193,7 +215,7 @@
         </div>
       </div>
     </section>
-
+	
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Grazing Techniques</title>
+    <title>Rotational Grazing</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -21,12 +21,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/top.css">
-	<style>
-		#brochure:hover {
-			font-weight: bold;
-		}
-	</style>
-	
   </head>
   <body>
 	<!--"Go to top button"-->
@@ -63,6 +57,9 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
 			<div class="col-md-9 ftco-animate pb-5 text-center">
 				<h1 class="mb-3 bread">GRAZING METHODS</h1>
+			<!--
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+          -->
 		  </div>
         </div>
       </div>
@@ -73,106 +70,144 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-1"></div>
 			<div class="col-xs-12 col-md-10">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
+				<p class="breadcrumbs">
+					<span class="mr-2">
+						<a href="index.php">Home 
+							<i class="ion-ios-arrow-forward"></i>
+						</a>
+					</span> 
+					<span class="mr-2">
+						<a href="techniques.php">Techniques 
+							<i class="ion-ios-arrow-forward"></i>
+						</a>
+					</span>
+					<span>Rotational Grazing 
+						<i class="ion-ios-arrow-forward"></i>
+					</span>
+				</p>
 			</div>
 		</div>
 	</div>
-	<!--continuous grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-						<p style="color: white; text-align: justify;">No rotation of livestock with single pasture system.</p>
-						<p style=" color: white; text-align: justify;">Continuous grazing requires high conservative stocking rates in general.</p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;>
-				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End continuous grazing-->
-	<!--rotational grazing-->
+	
+	
+		<!--rotational grazing-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
-    			</div>
-    			<div class="col-lg-6 py-5">
+         <div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-xs-12 col-md-6">
 					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
+						<h2 class="mb-4" style="text-align:left;color: #228B22;">ROTATIONAL GRAZING</h2>
 						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
 						Therefore, read through these explanations of standard terminologies of rotational grazing. 
 						In order to express the frequency of moves and herd density, 
 						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 						</p>
-						<p><a href="rotational.php" class="btn btn-warning">Read more</a></p>
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" id="bochure">Look at the Brochure</a>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<a href="download/rotational_grazing.png" class="btn btn-warning py-2 px-3" download id="bochure">Download Brochure</a>
+							</div>
+							<div class="col-xs-12 col-md-6">
+								<p style="padding: 30px;"></p>
+							</div>
+						</div>
 					</div>
-    			</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--end rotational grazing-->
-	<!--seasonal grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: white;">SEASONAL GRAZING</h2>
-						<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. 
-						Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
-						By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
-						</p>
-						<p><a href="seasonal.php" class="btn btn-warning">Read more</a></p>
-					</div>
-    			</div>
-				<div class="col-lg-4 py-5 align-items-center">
-					<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;>
 				</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
-	</section>
-	<!--End seasonal grazing-->
-
-	<!--Patch-burn grazing-->
+				<div class="col-xs-12 col-md-4">
+				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
+				</div>
+				<div class="col-xs-12 col-md-1"></div>
+			</div>
+        </div>
+    </section>
+	<!--end rotational grazing-->
+	<!--why use it-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-4 py-5">
-					<img src="images/patch-burn.png" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;">
-    			</div>
-    			<div class="col-lg-6 py-5">
+			<div class="row">
+				<div class="col-xs-12 col-md-3"></div>
+				<div class="col-xs-12 col-md-6">
 					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
-						<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. 
-					It helps to manage the grassland that certain areas of the paddock will be burned in a certain year to attract the grazing livestock. 
-					Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. 
-					The rest of the portion of the grassland will be shifted for the new burning. 
-					In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
-						</p>
-						<p><a href="patch-burn.php" class="btn btn-warning">Read more</a></p>
+						<h2 style="color: #228B22;text-align: center; ">WHY USE IT?</h2>
 					</div>
-    			</div>
-				<div class="col-lg-1"></div>
-		    </div>
-    	</div>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col-xs-12 col-md-3"></div>
+				<div class="col-xs-12 col-md-6">
+					<div class="heading-section ftco-animate" >
+						<div class="row" style="padding-top: 30px;padding-bottom: 60px;text-align: center;">
+							<p>Rotational grazing can express much higher stocking rates of paddock-bypaddock
+							than regular pre-set stocking. It enhanced the nutritious level of the grazing
+							plants in the best growth stage of their lifecycle, therefore enables multiple livestock
+							to be able to continue their thriving.
+							</p>
+							<p>
+							Using this technique, you can maintain your land forage as high productive
+							pasture which extends the period of balanced growth. At the same time, compared to
+							continuous grazing, you can decrease the methane emissions from livestock by up to
+							22% (per unit of cattle gain).
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-1"></div>
+			</div>
+		</div>
 	</section>
-	<!--End Patch-burn grazing-->
+	<!--end why use it-->
+	
+	<!-- DIFFERENT ROTATIONAL GRAZING METHODS -->
+		<section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-10 heading-section text-center ftco-animate">
+						<h2 style=" color: #228B22; ">DIFFERENT ROTATIONAL GRAZING METHODS</h2>
+					</div>
+				</div>
+			
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+								<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');">
+								</a>
+							<div class="text p-4 float-right d-block">								
+								<h3 class="heading mb-0"><a href="#">Slow Rotational Grazing</a></h3>
+								<p>Slow rotational grazing is pastures of 2 or more with standard moves from every 2 weeks to every few months in order to enable land recovery and rest.</p>	
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/mod_grazing.jpeg');">
+							</a>
+							<div class="text p-4 float-right d-block">								
+								<h3 class="heading mb-0"><a href="#">Mob Grazing</a></h3>
+								<p>Requires significantly higher stock densities between 75-300+ AU per acre. Multiple moves per day are required to maintain ideal stock densities. Temporary fencing is often used to create small paddocks.</p>								
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/adaptive_high_stock_density_grazing.jpeg');">
+							</a>
+							<div class="text p-4 float-right d-block">														
+								<h3 class="heading mb-0"><a href="#">Adaptive High-Stock Density Grazing</a></h3>
+								<p>Apply multiple of the previous methods of grazing to enable graziers to adjust herd density to achieve nutritional needs of livestock and satisfy the conditions of the soil.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END DIFFERENT ROTATIONAL GRAZING METHODS -->
+	
 
-    
-	<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+    <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
         <div class="row d-flex justify-content-center">
         	<div class="col-lg-8 py-4">
