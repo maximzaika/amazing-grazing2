@@ -172,7 +172,8 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5">
 				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
-					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-warning py-2 px-3" id="brochure">View and downlaod the Brochure</a>
+					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-primary" style="margin: 10px;">View the Brochure</a>
+					<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-primary" style="margin: 10px;" download>Downlaod the Brochure</a>
 				</div>
 			</div>
 		</div>

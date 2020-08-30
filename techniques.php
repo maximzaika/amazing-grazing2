@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/top.css">
-
-	
   </head>
   <body>
 	<!--"Go to top button"-->
