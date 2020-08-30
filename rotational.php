@@ -1,145 +1,100 @@
+<?php 
+    /* Server side files */
+	require_once "server_config.php";
+	require_once "php/navigation.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Rotational Grazing</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+	<head>
+		<title>Amazing Grazing - Rotational Grazing</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/top.css">
-  </head>
-  <body>
+		<!-- Browser tab logo -->
+		<link rel="icon" href="images/amazing-grazing-logo_small.png"> 
+	
+		<!-- Original files -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/flaticon.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/top.css">
+	</head>
+	<body>
 	<!--"Go to top button"-->
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    <!-- Navigation Bar -->
-		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-			<div class="container-fluid">
-				<!-- Website Logo -->
-				<a class="navbar-brand" style="margin-bottom:0" href="#">
-					<img src="images/amazing-grazing-logo_crop_100_39.png" alt=""> <!-- logo size 100x39 px -->
-				</a>
-			
-			    <!-- Bootstrap settings used when the window is minimized / on smaller screens -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="fa fa-bars"></span> Menu
-				</button>
-				
-				<div class="collapse navbar-collapse" id="ftco-nav">
-					<ul class="navbar-nav m-auto">
-						<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-						<li class="nav-item"><a href="about.php" class="nav-link">News</a></li>
-						<li class="nav-item active"><a href="techniques.php" class="nav-link">Techniques</a></li>
-						<li class="nav-item"><a href="gallery.php" class="nav-link">Statistics</a></li>
-						<li class="nav-item"><a href="blog.php" class="nav-link">Predict Drought</a></li>
-					</ul>
+    
+	<!-- Navigation Bar -->
+	<?php echo generateNavTabs($con, 'techniques.php');?>
+	<!-- End Navigation Bar -->
+    
+    <!-- Section 1: Page header - Grazing Techniques -->
+	<section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div> <!-- add the darkness to the photo -->
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-end justify-content-center">
+					<div class="col-md-9 ftco-animate pb-5 text-center">
+						<h1 class="mb-3 bread">Grazing Techniques</h1>
+					</div>
 				</div>
 			</div>
-		</nav>
-		<!-- End Navigation Bar -->
-    
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-			<div class="col-md-9 ftco-animate pb-5 text-center">
-				<h1 class="mb-3 bread">GRAZING METHODS</h1>
-			<!--
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Techniques <i class="ion-ios-arrow-forward"></i></span></p>
-          -->
-		  </div>
-        </div>
-      </div>
-    </section>
+	</section>
+	<!-- End Section 1: Page header - Grazing Techniques -->
 	
-	<div class="container">
-		<br/>
+	<!-- Breadcrumbs -->
+	<div class="container" style="padding-top: 15px;">
 		<div class="row">
-			<div class="col-xs-12 col-md-1"></div>
-			<div class="col-xs-12 col-md-10">
-				<p class="breadcrumbs">
-					<span class="mr-2">
-						<a href="index.php">Home 
-							<i class="ion-ios-arrow-forward"></i>
-						</a>
-					</span> 
-					<span class="mr-2">
-						<a href="techniques.php">Techniques 
-							<i class="ion-ios-arrow-forward"></i>
-						</a>
-					</span>
-					<span>Rotational Grazing 
-						<i class="ion-ios-arrow-forward"></i>
-					</span>
-				</p>
+			<div class="col-md-12 pull-left">
+				<h5 class="breadcrumbs">
+					<span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a>
+					<span class="mr-2"><a href="techniques.php">Techniques <i class="ion-ios-arrow-forward"></i></a>
+					<span><u><i>Rotational grazing</i> <i class="ion-ios-arrow-forward"></u></i></a>
+				</h5> 
+				<hr>
 			</div>
 		</div>
 	</div>
-		<!--rotational grazing-->
-	<section class="ftco-section ftco-no-pt ftco-no-pb">
-         <div class="container">
-			<div class="row">
-				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-4">
-					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:left;color: #228B22;">ROTATIONAL GRAZING</h2>
-						<p style="text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
-						Therefore, read through these explanations of standard terminologies of rotational grazing. 
-						In order to express the frequency of moves and herd density, 
-						guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
-						</p>
-						
-					</div>
-				</div>
-				
-				<div class="col-lg-4 py-5">
-				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
-				</div>
-				<div class="col-xs-12 col-md-1"></div>
-			</div>
-        </div>
-    </section>
-	<!--end rotational grazing-->
-
+	<!-- End Breadcrumb -->
 	
-	
-	<!--why use it-->
+	<!-- Section 2: Rotational Grazing -->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3"></div>
-    			<div class="col-lg-6">
+				<div class="col-sm-12 col-md-6 col-lg-8 py-5">
 					<div class="heading-section ftco-animate">
-						<h2 class="mb-4" style="text-align:center;color: #228B22;">WHY USE IT?</h2>
-						<p style="padding-bottom: 15px; text-align: center;">Rotational grazing can express much higher stocking rates of paddock-bypaddock
-							than regular pre-set stocking. It enhanced the nutritious level of the grazing
-							plants in the best growth stage of their lifecycle, therefore enables multiple livestock
-							to be able to continue their thriving.
-						</p>
-						<p style="padding-bottom: 15px; text-align: center;">
-							Using this technique, you can maintain your land forage as high productive
-							pasture which extends the period of balanced growth. At the same time, compared to
-							continuous grazing, you can decrease the methane emissions from livestock by up to
-							22% (per unit of cattle gain).
+						<h2 class="mb-4" style="text-align:left; color: #228B22;">ROTATIONAL GRAZING</h2>
+						<p style="text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. Therefore, read through these explanations of standard terminologies of rotational grazing. In order to express the frequency of moves and herd density, guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-3">
+				
+				<div class="col-sm-12 col-md-6 col-lg-4 py-5 text-center">
+					<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
 				</div>
+			</div>
+        </div>
+    </section>
+	<!-- End Section 2: Rotational Grazing -->
 
+	<!--Section 2: Why Should I use it?-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
+			<div class="row">
+    			<div class="col-lg-12 pull left">
+					<div class="heading-section ftco-animate">
+						<h2 class="mb-4" style="text-align:left; color: #228B22;">WHY SHOULD I USE IT?</h2>
+						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing can express much higher stocking rates of paddock-by-paddock than regular pre-set stocking. It enhances the nutritious level of the grazing plants in the best growth stage of their lifecycle, therefore enabling multiple livestock to be able to continue their thriving. Using this technique, you can maintain your land forage as high productive pasture which extends the period of balanced growth. At the same time, compared to continuous grazing, you can decrease the methane emissions from livestock by up to 22% (per unit of cattle gain).
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
