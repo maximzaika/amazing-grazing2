@@ -160,7 +160,7 @@
 	<!--end why use it-->
 	
 	<!-- DIFFERENT ROTATIONAL GRAZING METHODS -->
-		<section class="ftco-section bg-light">
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
 					<div class="col-md-10 heading-section text-center ftco-animate">
@@ -205,7 +205,37 @@
 			</div>
 		</section>
 		<!-- END DIFFERENT ROTATIONAL GRAZING METHODS -->
-	
+	<!--our suggestion-->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					<!--<span class="subheading">Tips &amp; Techniques</span>-->
+					<h2 class="mb-4" style=" color: #228B22; ">Our suggestion</h2>
+					<div class="services-wrap">
+						<ul style="list-style: circle outside;">
+							<li style="text-align: justify;" class="services-list">
+							According to sustainable grazing, we suggest that keeping your livestock in the first divided paddock in which the land is in the most optimal condition to start the rotation.
+							</li>
+							<li style="text-align: justify;" class="services-list">
+							When the livestock consumed around 1/2 forage height, it is the time to move them to the next paddock that is in ideal condition.
+							</li>
+							<li style="text-align: justify;" class="services-list">
+							It is the time you let the first paddock to regrowth and rest! It will involve in a new grazing sequence as long as it is again suitable with the optimal land condition.
+							</li>
+							<li style="text-align: justify;" class="services-list">
+							Case by case, we suggest you apply this technique with a different time period that suits your situation best. From < 5-day short grazing to 15-40-day long grazing or even decided by your own observation to the forage land maturity and height.
+							</li>
+							<li style="text-align: justify;" class="services-list">
+							For your information, this technique may require relatively greater labor efforts to arrange the stocking and more supports from the infrastructure side like fencing staff. However, it always allows higher stocking rates in general.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+    	</div>
+    </section>
+	<!--End Patch-burn grazing-->
 
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
       <div class="container">
