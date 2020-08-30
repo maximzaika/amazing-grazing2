@@ -85,8 +85,12 @@
     			<div class="col-lg-6 py-5">
 					<div class="heading-section ftco-animate">
 						<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-						<p style="color: white; text-align: justify;">No rotation of livestock with single pasture system.</p>
-						<p style=" color: white; text-align: justify;">Continuous grazing requires high conservative stocking rates in general.</p>
+						<p style="color: white; text-align: justify;">
+						Continuous grazing has been choose by the most farmers as a popular grazing technique according to its low effort on labour and simple approaches. 
+						Temporary fencing and subtracting animals was used to assist in common. 
+						On the other hand, continuous grazing is very intensive technique which related to low productivity and unsustainable development in long-term. 
+						Therefore, we recommend these techniques that more efficient to protect the grassland!
+						</p>
 					</div>
     			</div>
 				<div class="col-lg-4 py-5">
