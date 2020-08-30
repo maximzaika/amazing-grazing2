@@ -88,14 +88,12 @@
 			</div>
 		</div>
 	</div>
-	
-	
 		<!--rotational grazing-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
          <div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-1"></div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-lg-1"></div>
+    			<div class="col-lg-6 py-4">
 					<div class="heading-section ftco-animate">
 						<h2 class="mb-4" style="text-align:left;color: #228B22;">ROTATIONAL GRAZING</h2>
 						<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. 
@@ -116,7 +114,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-4">
+				
+				<div class="col-lg-4 py-5">
 				<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300" style="margin:30px 30px">
 				</div>
 				<div class="col-xs-12 col-md-1"></div>
@@ -126,40 +125,34 @@
 	<!--end rotational grazing-->
 	<!--why use it-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-3"></div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-lg-3"></div>
+    			<div class="col-lg-6">
 					<div class="heading-section ftco-animate">
-						<h2 style="color: #228B22;text-align: center; ">WHY USE IT?</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-			<div class="col-xs-12 col-md-3"></div>
-				<div class="col-xs-12 col-md-6">
-					<div class="heading-section ftco-animate" >
-						<div class="row" style="padding-top: 30px;padding-bottom: 60px;text-align: center;">
-							<p>Rotational grazing can express much higher stocking rates of paddock-bypaddock
+						<h2 class="mb-4" style="text-align:center;color: #228B22;">WHY USE IT?</h2>
+						<p style="padding-bottom: 15px; text-align: center;">Rotational grazing can express much higher stocking rates of paddock-bypaddock
 							than regular pre-set stocking. It enhanced the nutritious level of the grazing
 							plants in the best growth stage of their lifecycle, therefore enables multiple livestock
 							to be able to continue their thriving.
-							</p>
-							<p>
+						</p>
+						<p style="padding-bottom: 15px; text-align: center;">
 							Using this technique, you can maintain your land forage as high productive
 							pasture which extends the period of balanced growth. At the same time, compared to
 							continuous grazing, you can decrease the methane emissions from livestock by up to
 							22% (per unit of cattle gain).
-							</p>
-						</div>
+						</p>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-lg-3">
+				</div>
+
 			</div>
 		</div>
 	</section>
 	<!--end why use it-->
 	
-	<!-- DIFFERENT ROTATIONAL GRAZING METHODS -->
+	<!-- DIFFERENT ROTATIONAL GRAZING METHODS--> 
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-3">
@@ -167,9 +160,8 @@
 						<h2 style=" color: #228B22; ">DIFFERENT ROTATIONAL GRAZING METHODS</h2>
 					</div>
 				</div>
-			
 				<div class="row d-flex">
-					<div class="col-md-4 d-flex ftco-animate">
+					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 								<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');">
 								</a>
@@ -180,7 +172,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-4 d-flex ftco-animate">
+					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<a href="blog-single.html" class="block-20" style="background-image: url('images/mod_grazing.jpeg');">
 							</a>
@@ -191,7 +183,7 @@
 						</div>
 					</div>
 				
-					<div class="col-md-4 d-flex ftco-animate">
+					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
 							<a href="blog-single.html" class="block-20" style="background-image: url('images/adaptive_high_stock_density_grazing.jpeg');">
 							</a>
@@ -209,7 +201,7 @@
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center heading-section ftco-animate">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
 					<!--<span class="subheading">Tips &amp; Techniques</span>-->
 					<h2 class="mb-4" style=" color: #228B22; ">Our suggestion</h2>
 					<div class="services-wrap">

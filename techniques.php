@@ -90,7 +90,7 @@
 					</div>
     			</div>
 				<div class="col-lg-4 py-5">
-					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;>
+					<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;">
 				</div>
 				<div class="col-lg-1"></div>
 		    </div>
@@ -137,7 +137,7 @@
 					</div>
     			</div>
 				<div class="col-lg-4 py-5 align-items-center">
-					<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;>
+					<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;">
 				</div>
 				<div class="col-lg-1"></div>
 		    </div>

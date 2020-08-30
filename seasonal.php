@@ -89,7 +89,7 @@
     <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center heading-section ftco-animate">
+				<div class="col-md-10 py-4 text-center heading-section ftco-animate">
 					<!--<span class="subheading">Tips &amp; Techniques</span>
 					<h2 class="mb-4">Seasonal Lawn Care Tips</h2>-->
 					<h2 style="color: #228B22;">SEASONAL GRAZING</h2>
@@ -177,7 +177,7 @@
 				</div>
 			</div>
 			<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center heading-section ftco-animate">
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
 					</br>
 					<h2 class="mb-4" style=" color: #228B22;">Our Suggestion</h2>
 					<div class="services-wrap">

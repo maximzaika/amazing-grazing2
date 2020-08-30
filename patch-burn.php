@@ -94,7 +94,7 @@
     	<div class="container">
     		<div class="row">
 				<div class="col-lg-1"></div>
-    			<div class="col-lg-6 py-5">
+    			<div class="col-lg-6 py-4">
 					<div class="heading-section ftco-animate">
 						<h2 class="mb-4" style="text-align:left;color: #228B22;">PATCH-BURN GRAZING</h2>
 						<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. 
@@ -114,41 +114,35 @@
 	</section>
 	<!--why use it-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-md-3"></div>
-				<div class="col-xs-12 col-md-6">
+				<div class="col-lg-3"></div>
+    			<div class="col-lg-6">
 					<div class="heading-section ftco-animate">
-						<h2 style=" color: #228B22;text-align: center; ">WHY USE IT?</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-			<div class="col-xs-12 col-md-3"></div>
-				<div class="col-xs-12 col-md-6">
-					<div class="heading-section ftco-animate" >
-						<div class="row" style="padding-top: 30px;padding-bottom: 60px;text-align: center;">
-						<p>
-					Although patch-burn is a great technique for sustainable grazing, it is not an all-purpose solution for every situation. 
+						<h2 class="mb-4" style="text-align:center;color: #228B22;">WHY USE IT?</h2>
+						<p style="padding-bottom: 15px; text-align: center;">
+						Although patch-burn is a great technique for sustainable grazing, it is not an all-purpose solution for every situation. 
 					For example, it is not suitable for paddock smaller than 20 acres. 
 					However, there are still many benefits reasons that you should choose patch-burn. 
 					It not only improves the quality of the whole habitat, boosts the biomass diversity, 
 					but also a great cost-saving technology that requires less costly infrastructure or fencing to achieve a comprehensive and sustainable grazing system. 
 					For example, farmers can choose to burn 1/4 of the whole paddock in rotation each year and switch each section for effective grazing and land healing.
 						</p>
-						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-1"></div>
+				<div class="col-lg-3">
+				</div>
+
 			</div>
 		</div>
 	</section>
 	<!--end why use it-->
+	
 	<!--our suggestion-->
 	<section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
-				<div class="col-md-10 text-center heading-section ftco-animate">
-					<!--<span class="subheading">Tips &amp; Techniques</span>-->
+				<div class="col-md-10 py-5 text-center heading-section ftco-animate">
 					<h2 class="mb-4" style=" color: #228B22; ">Our suggestion</h2>
 					<div class="services-wrap">
 						<ul style="list-style: circle outside;">
