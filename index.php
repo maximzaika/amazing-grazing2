@@ -68,7 +68,10 @@
 				<div class="row">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
-						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
+						    <?php 
+							echo $startDate;
+							echo $urltesteeee;
+							echo htmlspecialchars_decode(generateOfferings($con));?>
 						</div>
 					</div>
 				</div>
