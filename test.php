@@ -31,7 +31,6 @@
 	
 	<!-- date picker -->
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">.
-	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>-->
   </head>
   <body>
 
@@ -84,7 +83,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
@@ -98,60 +97,84 @@
       </div>
     </div>
 
-    <section class="ftco-section ftco-no-pt">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-3 py-5 order-md-last">
-	          <div class="heading-section ftco-animate">
-	          	<span class="subheading">Services</span>
-	            <h2 class="mb-4">Lawn Services</h2>
-	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your.</p>
-	            <p><a href="#" class="btn btn-primary py-3 px-4">Get a Quote</a></p>
-	          </div>
-    			</div>
-    			<div class="col-lg-9 services-wrap px-4 pt-5">
-    				<div class="row pt-md-3">
-    					<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-fence"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Garden Care</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-lawn-mower"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Lawn mowing</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-		    			<div class="col-md-4 d-flex align-items-stretch">
-		    				<div class="services text-center">
-		    					<div class="icon d-flex justify-content-center align-items-center">
-		    						<span class="flaticon-natural-resources"></span>
-		    					</div>
-		    					<div class="text">
-		    						<h3>Lawn care</h3>
-		    						<p>Seeking justice in the world is a sed significant emotional and investment when we follow this call.</p>
-		    					</div>
-		    					<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></a>
-		    				</div>
-		    			</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+    <!-- Section 1: We Protect by Providing -->
+		<section class="ftco-section ftco-no-pt">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
+						<span class="subheading">Offerings</span>
+						<h2 class="mb-4">We Protect by Providing</h2>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12 services-wrap px-4">
+						<div class="row pt-md-3">
+						    <!-- Tile 1: News -->
+							<div class="col-md-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+										<span class="flaticon-news"></span>
+									</div>
+									<div class="text">
+										<h3>News</h3>
+										<p>Staying up to date with the news regarding grazing, fires, drought, and livestock is important for all of us.</p>
+									</div>
+									<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span>Read more &nbsp </span><span class="ion-ios-arrow-round-forward"></span></a>
+								</div>
+							</div>
+							<!-- End Tile 1: News -->
+							
+							<!-- Tile 2: Statistics -->
+							<div class="col-md-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+										<span class="flaticon-statistics"></span>
+									</div>
+									<div class="text">
+										<h3>Statistics</h3>
+										<p>Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.</p>
+									</div>
+									<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span>Read more &nbsp </span><span class="ion-ios-arrow-round-forward"></span></a>
+								</div>
+							</div>
+							<!-- End Tile 2: Statistics -->
+							
+							<!-- Tile 3: Grazing Techniques -->
+							<div class="col-md-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+										<span class="flaticon-horse-grazing-black-silhouette""></span>
+									</div>
+									<div class="text">
+										<h3>Grazing Techniques</h3>
+										<p>Preserving grassland's nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.</p>
+									</div>
+									<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span>Read more &nbsp </span><span class="ion-ios-arrow-round-forward"></span></a>
+								</div>
+							</div>
+							<!-- End Tile 3: Grazing Techniques -->
+							
+							<!-- Tile 4: Drought Prediction -->
+							<div class="col-md-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+										<span class="flaticon-drought"></span>
+									</div>
+									<div class="text">
+										<h3>Drought Prediction</h3>
+										<p>Drought is one of the issues that prevent effective grazing, ruins the soil, causes fires, and leads to livestock reduction. We aim to predict drought seasons to assist you.</p>
+									</div>
+									<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span>Read more &nbsp </span><span class="ion-ios-arrow-round-forward"></span></a>
+								</div>
+							</div>
+							<!-- End Tile 4: Drought Prediction -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Section 1: We Protect by Providing -->
    	
     <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
     	<div class="container">
@@ -353,9 +376,9 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light">
+    <section class="bg-light pt-5">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
+        <div class="row justify-content-center mb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Our Blog</span>
             <h2>Recent Blog</h2>
@@ -417,41 +440,10 @@
 			</div>
 		</div>
 		
-		
-		<!-- functional
-		
-		<div class="input-group mb-3">
-			<div class="input-group-prepend">
-				<button id="drop-name" type="button" class="btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">
-					Active topic: Grazing
-				</button>
-				<div class="dropdown-news-topic dropdown-menu">
-					<a id="Grazing" class="dropdown-item updateNews updateNewsJS">Grazing</a>
-					<a id="Livestock" class="dropdown-item updateNews updateNewsJS">Livestock</a>
-					<a id="Drought" class="dropdown-item updateNews updateNewsJS">Drought</a>
-					<a id="Fire" class="dropdown-item updateNews updateNewsJS">Fire</a>
-				</div>
-			</div>
-			
-			<input id="enter-date" class="form-control border-right-0" id="date" name="date" placeholder="Select Date" type="text"/>
-			
-			
-			<div class="input-group-prepend input-focus">
-				<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>
-				
-			</div>
-			
-			
-			
-			  
-		</div>-->
-		
-		
-		
-		
+		<hr> 
         <div id="update-news" class="row d-flex">
-          <?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
-          
+          <?php #echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
+          test test
           
         </div>
       </div>
