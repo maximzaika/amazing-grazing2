@@ -29,10 +29,10 @@
 				
 				/* Create HTML readable code for the page */
 				$full_news = $full_news . 
-					'<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' .
+					'<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex ftco-animate fadeInUp ftco-animated">' .
 					  '<div class="blog-entry justify-content-end">' .
 						'<a href="'.$articleUrl.'" class="block-20" style="background-image: url('."'".$articleImg."'". ');"></a>'.
-						'<div class="text p-4 float-right d-block">' .
+						'<div class="text p-4 float-right d-block" style="height: 100%;">' .
 						  '<div class="topper d-flex align-items-center">' .
 							'<div class="one py-2 pl-3 pr-1 align-self-stretch">' .
 							  '<span class="day">'.$articleDD.'</span>' . 
@@ -44,9 +44,11 @@
 							'</div>'.
 						  '</div>'.
 						  
-						  '<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
-						  '<p>'.$articleDescr.'</p>'.
-						  '<p><a href="'.$articleUrl.'" class="btn btn-primary">Read more</a></p>'.
+						  '<div style="padding-bottom:55px;">'.
+						    '<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
+						    '<p class="text-justify">'.$articleDescr.'</p>'.
+						    '<p><a href="'.$articleUrl.'" class="btn btn-primary" style="position: absolute; bottom: 300px;">Read article</a></p>'.
+						  '</div>'.
 						'</div>'.
 					  '</div>'.
 					'</div>';
