@@ -93,9 +93,8 @@
 	/* ADD: store the date on the server */
 	$totalNews = 10;
 	
-	
 	$days_ago = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
-	$startDate = $days_ago;;
+	$startDate = $days_ago;
 	
 	$googleAPIurl = 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_1;
 
