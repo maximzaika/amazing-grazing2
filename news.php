@@ -75,7 +75,7 @@
 				
 				<!-- News Navigation (Select topic, select start date, select region) -->
 				<div class="row">
-					 <?php echo htmlspecialchars_decode(generateNewsNav($con));?>
+					 <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 				</div>
 		
 			    <hr> <!-- add horizonal line between the news and navigation -->
