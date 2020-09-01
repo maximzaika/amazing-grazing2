@@ -52,9 +52,11 @@
 					'</div>';
 			}
 		} else {
-			if (($data['articleCount'] = 0) && (isset($data['articleCount']) == 0)) {
+			if (($data['articleCount'] = 0)) {
 				$full_news = "There are no news available based on your search criteria. Please, select another date.";
-			} else {
+			}
+			
+			if (isset($data['articleCount']) == 0) {
 				$full_news = "Server Error: You ran out of free news requests for today";
 			}	
 		}
@@ -90,12 +92,10 @@
 	
 	/* ADD: store the date on the server */
 	$totalNews = 10;
-	$todayMonth = date("m")+1;
-	$todayMonth = $todayMonth-1;
-	if (strlen($todayMonth) == 1) {
-		$todayMonth = '0' . $todayMonth;
-	}
-	$startDate = '2020-'.$todayMonth.'-27';
+	
+	
+	$days_ago = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
+	$startDate = $days_ago;;
 	
 	$googleAPIurl = 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_1;
 
