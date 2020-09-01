@@ -119,7 +119,7 @@
 					<!-- Method 1 : Slow Rotational Grazing -->
 					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
-								<a class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');"></a>
+								<a href="blog-single.html" class="block-20" style="background-image: url('images/management_intensive_grazing.jpeg');"></a>
 							<div class="text p-4 float-right d-block">								
 								<h3 class="heading mb-0 text-center">Slow Rotational</h3>
 								<p class="text-justify" style="padding-top:20px;">Slow rotational grazing is pastures of 2 or more with standard moves from every 2 weeks to every few months in order to enable land recovery and rest.</p>	
@@ -130,7 +130,7 @@
 					<!-- Method 2 : Mob Grazing -->
 					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
-							<a class="block-20" style="background-image: url('images/mod_grazing.jpeg');"></a>
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/mod_grazing.jpeg');"></a>
 							<div class="text p-4 float-right d-block">								
 								<h3 class="heading mb-0 text-center">Mob</h3>
 								<p class="text-justify" style="padding-top:20px;">Requires significantly higher stock densities between 75-300+ AU per acre. Multiple moves per day are required to maintain ideal stock densities. Temporary fencing is often used to create small paddocks.</p>								
@@ -141,7 +141,7 @@
 					<!-- Method 3 : Adaptive High-Stock Density Grazing -->
 					<div class="col-lg-4 d-flex ftco-animate">
 						<div class="blog-entry justify-content-end">
-							<a class="block-20" style="background-image: url('images/adaptive_high_stock_density_grazing.jpeg');"></a>
+							<a href="blog-single.html" class="block-20" style="background-image: url('images/adaptive_high_stock_density_grazing.jpeg');"></a>
 							<div class="text p-4 float-right d-block">														
 								<h3 class="heading mb-0 text-center">Adaptive High-Stock Density</h3>
 								<p class="text-justify" style="padding-top:20px;">Apply multiple of the previous methods of grazing to enable graziers to adjust herd density to achieve the nutritional needs of livestock and satisfy the conditions of the soil.</p>
