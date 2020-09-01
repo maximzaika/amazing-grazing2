@@ -68,7 +68,8 @@
 				<div class="row">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
-						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
+						    <?php 
+							echo htmlspecialchars_decode(generateOfferings($con));?>
 						</div>
 					</div>
 				</div>
@@ -88,7 +89,7 @@
 				
 				<!-- News Navigation (Select topic, select start date, select region) -->
 				<div class="row">
-					 <?php echo htmlspecialchars_decode(generateNewsNav($con));?>
+					 <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 				</div>
 		
 			    <hr> <!-- add horizonal line between the news and navigation -->

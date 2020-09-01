@@ -10,10 +10,11 @@
 		$total--;
 		
 		$full_news = '';
+		
 		/* Skip searching through the loop if there are no news for the criteria selected */
-		if ($data['articleCount'] != 0) {
+		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
 			/* Loop through the number of articles available */
-			for ($i=$total; $i>-1; $i--) {
+			for ($i=$data['articleCount']-1; $i>-1; $i--) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
 				$articleUrl = $data['articles'][$i]['url'];
@@ -51,7 +52,13 @@
 					'</div>';
 			}
 		} else {
-			$full_news = "There are no news available based on your search criteria. Please, select another date.";
+			if (($data['articleCount'] = 0)) {
+				$full_news = "There are no news available based on your search criteria. Please, select another date.";
+			}
+			
+			if (isset($data['articleCount']) == 0) {
+				$full_news = "Server Error: You ran out of free news requests for today";
+			}
 		}
 		
 		return $full_news;
@@ -87,7 +94,9 @@
 	$topicName = $_POST['receivedNewsTopic'];
 	$regionName = $_POST['receivedNewsRegion'];
 	$startDateWrong = $_POST['receivedNewsStart']; /* Receives the date in the wrong format */
-	  $startDate = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2); /* Fix the date format */
+	  $startDate_1 = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2); /* Fix the date format */
+
+	$googleAPIurl = 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate_1.'&in=title&token='.$post_apiToken_2;
 	
 	/* Gnews API code 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
@@ -96,7 +105,7 @@
 		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c */
 	
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_2); 
+	curl_setopt($ch, CURLOPT_URL, $googleAPIurl); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
 	$newsData = curl_exec($ch); 

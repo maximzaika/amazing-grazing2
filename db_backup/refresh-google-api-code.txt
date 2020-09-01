@@ -1,15 +1,42 @@
-UPDATE g_news_api
-SET g_news_count=0
-WHERE g_news_id=1
+-------- website MySQL ----------
 
 UPDATE g_news_api
 SET g_news_count=0
-WHERE g_news_id=2
+WHERE g_news_id=1;
 
 UPDATE g_news_api
 SET g_news_count=0
-WHERE g_news_id=3
+WHERE g_news_id=2;
 
 UPDATE g_news_api
 SET g_news_count=0
-WHERE g_news_id=4
+WHERE g_news_id=3;
+
+UPDATE g_news_api
+SET g_news_count=100
+WHERE g_news_id=4;
+
+UPDATE g_news_api
+SET g_news_count=100
+WHERE g_news_id=5;
+
+-------- local mysql ------------
+UPDATE g_news_api
+SET g_news_count=100
+WHERE g_news_id=1;
+
+UPDATE g_news_api
+SET g_news_count=100
+WHERE g_news_id=2;
+
+UPDATE g_news_api
+SET g_news_count=100
+WHERE g_news_id=3;
+
+UPDATE g_news_api
+SET g_news_count=0
+WHERE g_news_id=4;
+
+UPDATE g_news_api
+SET g_news_count=0
+WHERE g_news_id=5;
