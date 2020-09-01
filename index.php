@@ -68,8 +68,7 @@
 				<div class="row">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
-						    <?php 
-							echo htmlspecialchars_decode(generateOfferings($con));?>
+						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
 						</div>
 					</div>
 				</div>
@@ -95,7 +94,7 @@
 			    <hr> <!-- add horizonal line between the news and navigation -->
 				
 				<!-- All The news are displayed here -->
-				<div id="update-news" class="row d-flex pre-scrollable">
+				<div id="update-news" class="row pre-scrollable">
 					<?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 				</div>
 			</div>
