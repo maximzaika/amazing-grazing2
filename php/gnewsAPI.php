@@ -12,9 +12,9 @@
 		
 		$full_news = '';
 		/* Skip searching through the loop if there are no news for the criteria selected */
-		if ($data['articleCount'] != 0) {
+		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
 			/* Loop through the number of articles available */
-			for ($i=$total; $i>-1; $i--) {
+			for ($i=$data['articleCount']-1; $i>-1; $i--) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
 				$articleUrl = $data['articles'][$i]['url'];
@@ -52,7 +52,13 @@
 					'</div>';
 			}
 		} else {
-			$full_news = "There are no news available based on your search criteria. Please, select another date.";
+			if (($data['articleCount'] = 0)) {
+				$full_news = "There are no news available based on your search criteria. Please, select another date.";
+			}
+			
+			if (isset($data['articleCount']) == 0) {
+				$full_news = "Server Error: You ran out of free news requests for today";
+			}	
 		}
 		
 		return $full_news;
@@ -84,18 +90,21 @@
 		}
 	}
 	
+	/* ADD: store the date on the server */
 	$totalNews = 10;
-	$todayMonth = date("m")+1;
-	$todayMonth = $todayMonth-1;
-	$startDate = '2020-'.$todayMonth.'-01';
 	
+	$days_ago = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
+	$startDate = $days_ago;
+	
+	$googleAPIurl = 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_1;
+
 	/* Gnews API code 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
 	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 
 		 token 3 (100 per day max) = c3fae1827597a016ef41d4fb9c4f95fe 
 		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c */
 	$ch = curl_init(); 
-	curl_setopt($ch, CURLOPT_URL, 'https://gnews.io/api/v3/search?q=grazing&max='.$totalNews.'&country=au&image=required&mindate='.$startDate.'&in=title&token='.$post_apiToken_1); 
+	curl_setopt($ch, CURLOPT_URL, $googleAPIurl); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); 
 	$newsData = curl_exec($ch); 

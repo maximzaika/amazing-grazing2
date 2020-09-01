@@ -1,10 +1,11 @@
 <?php  /* This file executes the navigation that allows users to control preferred
           news search criterias.  */
-	    function generateNewsNav($con) {
+	    function generateNewsNav($con, $date) {
 			$getTopic = "SELECT news_topic_id, news_topic_label, news_topic_topic FROM news_topic_content";
 			$topic_Data = $con -> query($getTopic);
 			
 			$title_date_full = '';
+			$date = substr($date,8,2) . '-' . substr($date,5,2) . '-' . substr($date,0,4);
 			
 			if ($topic_Data->num_rows > 0) {
 				$title_date_full = $title_date_full . 
@@ -29,7 +30,7 @@
 									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">'.
 									  '<h5>Select date</h5>'.
 									  '<div class="input-group mb-3">'.
-									    '<input id="enter-start-date" class="form-control border-right-0" id="start-date" name="start-date" placeholder="Select Date" value="01/07/2020" type="text"/>'.
+									    '<input id="enter-start-date" class="form-control border-right-0" id="start-date" name="start-date" placeholder="Select Date" value="'.$date.'" type="text"/>'.
 										'<div class="input-group-prepend">'.
 										  '<div class="input-group-prepend input-focus-start">'.
 										    '<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>'.

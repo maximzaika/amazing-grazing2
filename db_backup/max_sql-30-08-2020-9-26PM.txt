@@ -111,3 +111,11 @@ VALUES (3, 35, 'c3fae1827597a016ef41d4fb9c4f95fe');
 
 INSERT INTO g_news_api
 VALUES (4, 0, '9e0677170130c646c24d9d907974166c');
+
+INSERT INTO g_news_api
+VALUES (5, 0, '1d5029e4a17729fbd82d52087fc2c85c');
+
+CREATE TABLE news_date (
+    PersonID int,
+    date varchar(255)
+);
