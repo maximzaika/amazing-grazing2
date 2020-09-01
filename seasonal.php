@@ -124,27 +124,7 @@
 							</div>
 							<!-- End Item 2: Summer -->
 							
-							<!-- Item 3: Winter -->
-							<div class="item">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/winter.jpeg);">
-									</div>
-									<div class="text text-center px-4">
-										<h3>Winter</h3>
-										<p>It is a chance that you can adjust your whole year grazing regime.</p>
-										<!--<p style="text-align: justify;">
-										Winter is a chance that you can adjust your whole year grazing regime. 
-										A heavy grain in this season is not appropriate that significant grassland disturbance can be found that it is better to let the grass seeds finding their suitable niches for germination in the coming seasons. 
-										On the other hand, it provides an opportunity to decrease the bracken and grass litter that very limited impact will be shown on spring flora species.
-										Also, livestock can consume optimal grass in winter to decrease the buying cost of hay by seeding grassland in warm weather like spring and summer to boost the growth of the land. 
-										You can spread the seeds on top of the snow during the later stage of winter to allow it melts and keep moist into the land for better regrowth and rest.
-										</p>-->
-									</div>
-								</div>
-							</div>
-							<!-- End Item 3: Winter -->
-							
-							<!-- Item 4: Autumn -->
+							<!-- Item 3: Autumn -->
 							<div class="item">
 								<div class="wrap">
 									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/autumn.jpeg);">
@@ -163,7 +143,27 @@
 									</div>
 								</div>
 							</div>
-							<!-- End Item 4: Autumn -->
+							<!-- End Item 3: Autumn -->
+							
+							<!-- Item 4: Winter -->
+							<div class="item">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/winter.jpeg);">
+									</div>
+									<div class="text text-center px-4">
+										<h3>Winter</h3>
+										<p>It is a chance that you can adjust your whole year grazing regime.</p>
+										<!--<p style="text-align: justify;">
+										Winter is a chance that you can adjust your whole year grazing regime. 
+										A heavy grain in this season is not appropriate that significant grassland disturbance can be found that it is better to let the grass seeds finding their suitable niches for germination in the coming seasons. 
+										On the other hand, it provides an opportunity to decrease the bracken and grass litter that very limited impact will be shown on spring flora species.
+										Also, livestock can consume optimal grass in winter to decrease the buying cost of hay by seeding grassland in warm weather like spring and summer to boost the growth of the land. 
+										You can spread the seeds on top of the snow during the later stage of winter to allow it melts and keep moist into the land for better regrowth and rest.
+										</p>-->
+									</div>
+								</div>
+							</div>
+							<!-- End Item 4: Winter -->
 						</div>
 						<!-- End Carousel -->
 					</div> 
