@@ -86,45 +86,7 @@
 					<div class="col-md-12">
 						<!-- Carousel -->
 						<div class="carousel-seasonal owl-carousel ftco-owl">
-							<!-- Item 1: Spring -->
-							<div class="item">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/spring.jpeg);">
-									</div>
-									<div class="text text-center px-4">
-										<h3>Spring</h3>
-										<p>Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.</p>
-										<!--<p style="text-align: justify;">
-										It is not the most appropriate time for effective grazing that strong flowering field the layer of the flora can be disturbing regards to the quality of the grassland in general like plant species of butterfly–source. 
-										Therefore, grazing heavily during spring may decrease the diversity of flora species then cause unwanted plant dominance by those robust and resistant flora species in general, and further break the balance of the grassland bio-ecosystem. 
-										However, you still can apply seasonal grazing in spring, but keep in mind, it is better to keep relatively light grazing in regards to other seasons of the year.
-										</p>-->
-									</div>
-								</div>
-							</div>
-							<!-- End Item 1: Spring -->
-							
-							<!-- Item 2: Summer -->
-							<div class="item">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/summer.jpeg);">
-									</div>
-									<div class="text text-center px-4">
-										<h3>Summer</h3>
-										<p>Not the best time. Light grazing is a more ideal option.</p>
-										<!--<p style="text-align: justify;">
-										We are sorry but it is still not the best time! 
-										Light grazing is a more ideal option that intensive grazing in this season can largely destroy the plant saplings and seedlings. 
-										In addition, it may decrease the grassland potential for sustainable development that decrease the diversity of flora and further imbalance the ecosystem.
-										Again, you still can apply seasonal grazing in summer, but in a light way. 
-										Just need to be aware of the decrease of balanced grassland species diversity and other habitat sustainability.
-										</p>-->
-									</div>
-								</div>
-							</div>
-							<!-- End Item 2: Summer -->
-							
-							<!-- Item 3: Autumn -->
+							<!-- Item 1: Autumn -->
 							<div class="item">
 								<div class="wrap">
 									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/autumn.jpeg);">
@@ -132,20 +94,12 @@
 									<div class="text text-center px-4">
 										<h3>Autumn</h3>
 										<p>The most suitable time to apply heavy grazing combined with a rotational or continuous technique.</p>
-										<!--<p style="text-align: justify;">
-										Finally! The best time of the year has come. 
-										If you have not approached heavy grazing in spring or summer, the autumn biomass will be its best condition that can maximise its potential for effective grazing. 
-										The benefits of conduct heavy grazing in this season is quite obvious that autumn provides the most nutritious natural food for the livestock, 
-										and it is also easy to maintain its balance of the ecosystem and minimise the disadvantages related to grazing. 
-										It is the most suitable time to apply heavy grazing combined with a rotational or continuous technique for better results.
-										
-										</p>-->
 									</div>
 								</div>
 							</div>
-							<!-- End Item 3: Autumn -->
+							<!-- End Item 1: Autumn -->
 							
-							<!-- Item 4: Winter -->
+							<!-- Item 2: Winter -->
 							<div class="item">
 								<div class="wrap">
 									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/winter.jpeg);">
@@ -153,17 +107,38 @@
 									<div class="text text-center px-4">
 										<h3>Winter</h3>
 										<p>It is a chance that you can adjust your whole year grazing regime.</p>
-										<!--<p style="text-align: justify;">
-										Winter is a chance that you can adjust your whole year grazing regime. 
-										A heavy grain in this season is not appropriate that significant grassland disturbance can be found that it is better to let the grass seeds finding their suitable niches for germination in the coming seasons. 
-										On the other hand, it provides an opportunity to decrease the bracken and grass litter that very limited impact will be shown on spring flora species.
-										Also, livestock can consume optimal grass in winter to decrease the buying cost of hay by seeding grassland in warm weather like spring and summer to boost the growth of the land. 
-										You can spread the seeds on top of the snow during the later stage of winter to allow it melts and keep moist into the land for better regrowth and rest.
-										</p>-->
 									</div>
 								</div>
 							</div>
-							<!-- End Item 4: Winter -->
+							<!-- End Item 2: Winter -->
+							
+							<!-- Item 3: Spring -->
+							<div class="item">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/spring.jpeg);">
+									</div>
+									<div class="text text-center px-4">
+										<h3>Spring</h3>
+										<p>Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.</p>
+									</div>
+								</div>
+							</div>
+							<!-- End Item 3: Spring -->
+							
+							<!-- Item 4: Summer -->
+							<div class="item">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/summer.jpeg);">
+									</div>
+									<div class="text text-center px-4">
+										<h3>Summer</h3>
+										<p>Not the best time. Light grazing is a more ideal option.</p>
+									</div>
+								</div>
+							</div>
+							<!-- End Item 4: Summer -->
+							
+							
 						</div>
 						<!-- End Carousel -->
 					</div> 
