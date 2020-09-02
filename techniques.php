@@ -68,9 +68,8 @@
 					<div class="col-lg-6" style="padding-top:25px;">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-							<p style="color: white; text-align: justify;">
-							Continuous grazing has been chosen by most farmers as a popular grazing technique according to its low effort on labour and simple approaches. Temporary fencing and subtracting animals were used to assist in common. On the other hand, continuous grazing is a very intensive technique related to low productivity and unsustainable development in the long-term. Therefore, we recommend the following techniques that are more efficient in protect the grassland!
-							</p>
+							<p style="color: white; text-align: justify;"><i class="fa fa-check" style="font-size:40px;" aria-hidden="true"></i> Most popular technique, low effort on labour and simple approach, and fencing is used to keep the livestock in the same area. </p>
+							<p style="color: white; text-align: justify;"><i class="fa fa-times" style="font-size:40px;" aria-hidden="true"></i> Damages grassland's soil and destroys native vegetation, stream banks and contaminate waterways. Avoid using!</p>
 						</div>
 					</div>
 					<div class="col-lg-6 py-5" style="padding-top: 0rem !important;">
@@ -92,6 +91,7 @@
 					<div class="col-sm-12 col-md-6 col-lg-8 py-5" style="padding-top:25px;">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
+							<p style="text-align: justify;"><i class="fa fa-check" style="font-size:40px; color: #4e9525;" aria-hidden="true"></i> The most appropriate approach that protects Australian grasslands! </p>
 							<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. Therefore, read through these explanations of standard terminologies of rotational grazing. In order to express the frequency of moves and herd density, guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 							</p>
 							<p><a href="rotational.php" class="btn btn-amazing-techniques">Continute reading</a></p>
@@ -109,7 +109,8 @@
 					<div class="col-lg-8 py-5">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:left;color: white;">SEASONAL GRAZING</h2>
-							<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. 
+							<p style="color: white; text-align: justify;"><i class="fa fa-check" style="font-size:40px; color: white;" aria-hidden="true"></i> The most appropriate approach that protects Australian grasslands! </p>
+							<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operates in a specific portion during certain seasons of the whole year. 
 							Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
 							By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
 							</p>
@@ -134,6 +135,7 @@
 					<div class="col-sm-12 col-md-6 col-lg-8 py-5">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
+							<p style="text-align: justify;"><i class="fa fa-check" style="font-size:40px; color: #4e9525;" aria-hidden="true"></i> The most appropriate approach that protects Australian grasslands! </p>
 							<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 							</p>
 							<p><a href="patch-burn.php" class="btn btn-amazing-techniques">Continue reading</a></p>
