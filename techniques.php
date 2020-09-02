@@ -28,11 +28,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/top.css">
+
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>
-		<!--"Go to top button"-->
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
 		<!-- Navigation Bar -->
 		<?php echo generateNavTabs($con, 'techniques.php');?>
 		<!-- End Navigation Bar -->
@@ -185,11 +185,12 @@
 		</footer>
 		<!-- End Section 3: Footer -->
 		
-	  
-
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+		
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
+		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -202,7 +203,10 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
-	
+		
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
+		
 	</body>
 </html>
 
