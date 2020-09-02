@@ -8575,6 +8575,9 @@ h1, h2, h3, h4, h5,
         background: #fbd341; }
         .services-wrap .services-list:hover .btn-custom span {
           color: #4e9525; }
+		  .services-wrap .services-color:hover {
+		   background: #fff;
+           color: black; }
 
 .ftco-intro {
   color: rgba(255, 255, 255, 0.9); }
