@@ -73,8 +73,8 @@
 							<h2 class="mb-4" style="text-align:left; color: #228B22;">PATCH-BURN GRAZING</h2>
 							<p style="text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 							</p>
-							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques">View the Brochure</a>
-							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques" download>Downlaod the Brochure</a>
+							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques"><i class="fa fa-eye" aria-hidden="true"></i> View the Brochure</a>
+							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod the Brochure</a>
 						</div>
 					</div>
 					
@@ -196,8 +196,8 @@
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that we aim to provide the most recent information about grazing, livestock, wildfires, and drought possible? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li> -->
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li> -->
 							</ul>
 						</div>
 					</div>
