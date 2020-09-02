@@ -1,7 +1,6 @@
 $(function(){
 	var updateNewsFunc = function() {
 		var receivedNewsData = $(this).attr("id"); /* get the id of the clicked button */
-		console.log('receivedNewsData > ' + receivedNewsData);
 		
 		if (receivedNewsData.substr(0, 2) == "T_") {
 			var length = receivedNewsData.length;
@@ -33,12 +32,6 @@ $(function(){
 		
 		var startDate = document.getElementById("enter-start-date").value;
 		/*var endDate = document.getElementById("enter-end-date").value;*/
-		
-		
-		console.log("topicName  is > " + topicName);
-		console.log("regionName is > " + regionName);
-		console.log("startDate  is > " + startDate);
-		/*console.log("endDate    is > " + endDate);*/
 			
 		$("#update-news").empty(); /*reset the news div*/
 		
@@ -54,7 +47,6 @@ $(function(){
 				   receivedNewsStart: startDate
 				   /*receivedNewsEnd: endDate*/},
 			success: function (data) {
-				console.log(data.newsHTML);
 				var newsDiv = document.getElementById('update-news');
 				newsDiv.innerHTML = data.newsHTML;
 			},
