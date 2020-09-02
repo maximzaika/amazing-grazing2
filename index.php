@@ -55,13 +55,13 @@
 		</div>
 		<!-- End Header -->
 		
-		<!-- Section 1: We Protect by Providing -->
+		<!-- Section 1: Offerings -->
 		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 1em;">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
-						<span class="subheading">Offerings</span>
-						<h2 class="mb-4">We Protect by Providing</h2>
+						<h2 class="mb-4">Offerings</h2>
+						<span class="subheading">We protect by providing</span>
 					</div>
 				</div>
 				
@@ -81,14 +81,15 @@
 			<div class="container">
 				<div class="row justify-content-center pb-3">
 					<div class="col-md-7 heading-section text-center ftco-animate">
-						<span class="subheading">Our news</span>
-						<h2>News</h2>
+					    <h2>News</h2>
+						<span class="subheading">Your personalised latest news</span>
 					</div>
 				</div>
 				
 				<!-- News Navigation (Select topic, select start date, select region) -->
 				<div class="row">
-					 <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
+					 <?php 
+					 echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 				</div>
 		
 			    <hr> <!-- add horizonal line between the news and navigation -->
@@ -117,9 +118,9 @@
 							<h2 class="ftco-heading-2">Areas of interest</h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various news related to drought, fire, grazing, and livestock.</a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected.</a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected.</a></li>-->
 								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>-->
 							</ul>
 						</div>
 					</div>
