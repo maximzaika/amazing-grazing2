@@ -16,10 +16,10 @@ INSERT INTO nav_bar
 VALUES (3, 'techniques.php', 'Techniques');
 
 INSERT INTO nav_bar
-VALUES (3, 'wip.php', 'Statistics');
+VALUES (4, 'wip.php', 'Statistics');
 
 INSERT INTO nav_bar
-VALUES (3, 'wip.php', 'Predict Drought');
+VALUES (5, 'wip.php', 'Predict Drought');
 
 
 CREATE TABLE index_offerings ( 
