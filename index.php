@@ -48,7 +48,7 @@
 						<h2 class="subheading"><i>Welcome to Amazing Grazing</i></h2>
 						<h1>Make a difference in protecting Australian grasslands</h1>
 						<p class="mb-4">By grazing and preserving your livestock</p>
-						<p><a href="#" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
+						<p><a href="#offerings" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 		<!-- End Header -->
 		
 		<!-- Section 1: We Protect by Providing -->
-		<section class="ftco-section ftco-no-pt" style="padding-bottom: 1em;">
+		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 1em;">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
@@ -68,8 +68,7 @@
 				<div class="row">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
-						    <?php 
-							echo htmlspecialchars_decode(generateOfferings($con));?>
+						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
 						</div>
 					</div>
 				</div>
@@ -95,7 +94,7 @@
 			    <hr> <!-- add horizonal line between the news and navigation -->
 				
 				<!-- All The news are displayed here -->
-				<div id="update-news" class="row d-flex pre-scrollable">
+				<div id="update-news" class="row pre-scrollable">
 					<?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 				</div>
 			</div>

@@ -101,13 +101,13 @@ CREATE TABLE g_news_api (
 );
 
 INSERT INTO g_news_api
-VALUES (1, 100, '2f43dc9d754f3008f68a7f50b670c208');
+VALUES (1, 0, '2f43dc9d754f3008f68a7f50b670c208');
 
 INSERT INTO g_news_api
-VALUES (2, 100, 'c29b556f2f1ddd7ada7f2d7b6834b2c7');
+VALUES (2, 0, 'c29b556f2f1ddd7ada7f2d7b6834b2c7');
 
 INSERT INTO g_news_api
-VALUES (3, 35, 'c3fae1827597a016ef41d4fb9c4f95fe');
+VALUES (3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe');
 
 INSERT INTO g_news_api
 VALUES (4, 0, '9e0677170130c646c24d9d907974166c');
@@ -115,7 +115,8 @@ VALUES (4, 0, '9e0677170130c646c24d9d907974166c');
 INSERT INTO g_news_api
 VALUES (5, 0, '1d5029e4a17729fbd82d52087fc2c85c');
 
-CREATE TABLE news_date (
-    PersonID int,
-    date varchar(255)
-);
+INSERT INTO g_news_api
+VALUES (6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2');
+
+INSERT INTO g_news_api
+VALUES (7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');

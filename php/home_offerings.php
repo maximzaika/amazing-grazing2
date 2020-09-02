@@ -14,7 +14,7 @@
 					$post_ofrUrl = $row['ofr_url'];
 					
 					$ofrContent = $ofrContent . 
-									'<div class="col-md-3 d-flex align-items-stretch">'.
+									'<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">'.
 										'<div class="services text-center">'.
 											'<div class="icon d-flex justify-content-center align-items-center">'.
 												'<span class="'.$post_ofrIcon.'"></span>'.
