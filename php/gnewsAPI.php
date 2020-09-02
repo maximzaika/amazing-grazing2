@@ -14,7 +14,7 @@
 		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
 			/* Loop through the number of articles available */
-			for ($i=$data['articleCount']-1; $i>-1; $i--) {
+			for ($i=0; $i<$data['articleCount']-1; $i++) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
 				$articleUrl = $data['articles'][$i]['url'];
@@ -45,16 +45,16 @@
 						  '</div>'.
 						  
 						  '<div style="padding-bottom:55px;">'.
-						    '<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
-						    '<p class="text-justify">'.$articleDescr.'</p>'.
-						    '<p><a href="'.$articleUrl.'" class="btn btn-primary" style="position: absolute; bottom: 300px;">Read article</a></p>'.
+							'<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
+							'<p class="text-justify">'.$articleDescr.'</p>'.
+							'<p><a href="'.$articleUrl.'" class="btn btn-primary" style="position: absolute; bottom: 300px;">Read article</a></p>'.
 						  '</div>'.
 						'</div>'.
 					  '</div>'.
 					'</div>';
 			}
 		} else {
-			if (($data['articleCount'] = 0)) {
+			if (($data['articleCount'] == 0)) {
 				$full_news = "There are no news available based on your search criteria. Please, select another date.";
 			}
 			
@@ -94,7 +94,6 @@
 	
 	/* ADD: store the date on the server */
 	$totalNews = 10;
-	
 	$days_ago = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
 	$startDate = $days_ago;
 	
