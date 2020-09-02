@@ -31,8 +31,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		
-		<!-- Added in teration 1 -->
+		<!-- Added in iteration 1 -->
 		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+		
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>
 		
@@ -42,6 +45,7 @@
 		
 		<!-- Header -->
 		<div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/test-graze-3.jpeg');" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div> <!-- add the darkness to the photo -->
 			<div class="container">
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
@@ -143,6 +147,9 @@
   
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
 		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
@@ -161,7 +168,9 @@
 		<script src="js/amazing-grazing/news-picker-detection.js"></script>
 		<script src="js/amazing-grazing/news-picker.js"></script>
 		<script src="js/bootstrap-datepicker.js"></script>
-    
+		
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 	</body>
 </html>
 
