@@ -28,11 +28,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/top.css">
+
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>
-		<!--"Go to top button"-->
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
 		<!-- Navigation Bar -->
 		<?php echo generateNavTabs($con, 'techniques.php');?>
 		<!-- End Navigation Bar -->
@@ -94,7 +94,7 @@
 							<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
 							<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. Therefore, read through these explanations of standard terminologies of rotational grazing. In order to express the frequency of moves and herd density, guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
 							</p>
-							<p><a href="rotational.php" class="btn btn-amazing-techniques">Read more</a></p>
+							<p><a href="rotational.php" class="btn btn-amazing-techniques">Continute reading</a></p>
 						</div>
 					</div>
 				</div>
@@ -113,7 +113,7 @@
 							Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
 							By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
 							</p>
-							<p><a href="seasonal.php" class="btn btn-amazing-grazing">Read more</a></p>
+							<p><a href="seasonal.php" class="btn btn-amazing-grazing">Continute reading</a></p>
 						</div>
 					</div>
 					<div class="col-lg-4 py-5 align-items-center">
@@ -136,7 +136,7 @@
 							<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
 							<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 							</p>
-							<p><a href="patch-burn.php" class="btn btn-amazing-techniques">Read more</a></p>
+							<p><a href="patch-burn.php" class="btn btn-amazing-techniques">Continue reading</a></p>
 						</div>
 					</div>
 				</div>
@@ -154,8 +154,8 @@
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that we aim to provide the most recent information about grazing, livestock, wildfires, and drought possible? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li> -->
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -185,11 +185,12 @@
 		</footer>
 		<!-- End Section 3: Footer -->
 		
-	  
-
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+		
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
+		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -202,7 +203,10 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
-	
+		
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
+		
 	</body>
 </html>
 

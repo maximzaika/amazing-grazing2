@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2020 at 12:49 PM
+-- Generation Time: Sep 02, 2020 at 05:11 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -42,9 +42,7 @@ CREATE TABLE `index_offerings` (
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
 (1, 'flaticon-news', 'News', 'Staying up to date with the news regarding grazing, fires, drought, and livestock is important for all of us.', 'news.php'),
-(2, 'flaticon-statistics', 'Statistics', 'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 'wip.php'),
-(3, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserving grassland\'s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 'techniques.php'),
-(4, 'flaticon-drought', 'Drought Prediction', 'Drought is one of the issues that prevent effective grazing, ruins the soil, causes fires, and leads to livestock reduction. We aim to predict drought seasons to assist you.', 'wip.php');
+(3, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserving grassland\'s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 'techniques.php');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

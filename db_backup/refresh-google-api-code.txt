@@ -20,6 +20,14 @@ UPDATE g_news_api
 SET g_news_count=100
 WHERE g_news_id=5;
 
+UPDATE g_news_api
+SET g_news_count=0
+WHERE g_news_id=6;
+
+UPDATE g_news_api
+SET g_news_count=0
+WHERE g_news_id=7;
+
 -------- local mysql ------------
 UPDATE g_news_api
 SET g_news_count=100
