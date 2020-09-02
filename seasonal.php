@@ -156,11 +156,11 @@
 						<!-- Suggestions -->
 						<div class="services-wrap">
 							<!-- Suggestion 1 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Set your grazing regime and goals. Be clear with your grazing and productivity expectation.
@@ -171,11 +171,11 @@
 							</li>
 							
 							<!-- Suggestion 2 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Determine your concerns or problems that need to be solved regarding different seasons.
@@ -185,11 +185,11 @@
 							</li>
 							
 							<!-- Suggestion 3 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Based on your understanding of these seasonal characteristics, plan your very own solution to overcome these challenges to maximize the grazing effectivity.
@@ -199,11 +199,11 @@
 							</li>
 							
 							<!-- Suggestion 4 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Always keep track of your records including livestock, land condition, water consumptions, forages growth, and other infrastructure use based on 12-month consideration for next year’s plan.

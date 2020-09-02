@@ -163,11 +163,11 @@
 						<!-- Suggestions -->
 						<div class="services-wrap">
 							<!-- Suggestion 1 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											According to sustainable grazing, we suggest that keeping your livestock in the first divided paddock in which the land is in the most optimal condition to start the rotation.
@@ -178,11 +178,11 @@
 							</li>
 							
 							<!-- Suggestion 2 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											When the livestock consumed around 1/2 forage height, it is the time to move them to the next paddock that is in ideal condition.
@@ -192,11 +192,11 @@
 							</li>
 							
 							<!-- Suggestion 3 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											It is the time you let the first paddock to regrowth and rest! It will involve in a new grazing sequence as long as it is again suitable with the optimal land condition.
@@ -206,11 +206,11 @@
 							</li>
 							
 							<!-- Suggestion 4 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Case by case, we suggest you to apply this technique with a different time period that suits your situation best. The minimum grazing period is at least 5-day short grazing to 15-40-day long grazing, but the decision needs to be done based on own observation to the forage land maturity and height.
@@ -220,11 +220,11 @@
 							</li>
 							
 							<!-- Suggestion 5 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											For your information, this technique may require relatively greater labor efforts to arrange the stocking and more supports from the infrastructure side like fencing staff. However, it always allows higher stocking rates in general.
@@ -282,7 +282,8 @@
 		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+        
+		<!-- Scripts -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 		<script src="js/popper.min.js"></script>
@@ -294,6 +295,7 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/top.js"></script> <!-- scrolls to top -->
 
 	</body>
 </html>
