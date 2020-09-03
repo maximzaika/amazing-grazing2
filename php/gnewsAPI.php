@@ -45,8 +45,8 @@
 						  '</div>'.
 						  
 						  '<div style="padding-bottom:55px;">'.
-							'<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
-							'<p class="text-justify">'.$articleDescr.'</p>'.
+							'<h4 class="heading mb-0"><a href="'.$articleUrl.'"><b>'.$articleTitle.'</b></a></h4>'.
+							'<h5 class="text-justify">'.$articleDescr.'</h5>'.
 							'<p><a href="'.$articleUrl.'" class="btn btn-primary" style="position: absolute; bottom: 300px;">Read article</a></p>'.
 						  '</div>'.
 						'</div>'.
