@@ -68,8 +68,10 @@
 					<div class="col-lg-6" style="padding-top:25px;">
 						<div class="heading-section ftco-animate">
 							<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-							<p style="color: white; text-align: justify;"><i class="fa fa-check" style="font-size:40px;" aria-hidden="true"></i> Most popular technique, low effort on labour and simple approach, and fencing is used to keep the livestock in the same area. </p>
 							<p style="color: white; text-align: justify;"><i class="fa fa-times" style="font-size:40px;" aria-hidden="true"></i> Damages grassland's soil and destroys native vegetation, stream banks and contaminate waterways. Avoid using!</p>
+							<p style="color: white; text-align: justify;">
+							Continuous grazing has been chosen by most farmers as a popular grazing technique according to its low effort on labour and simple approaches. Temporary fencing and subtracting animals were used to assist in common. On the other hand, continuous grazing is a very intensive technique related to low productivity and unsustainable development in the long-term. Therefore, we recommend the following techniques that are more efficient in protect the grassland!
+							</p>
 						</div>
 					</div>
 					<div class="col-lg-6 py-5" style="padding-top: 0rem !important;">
@@ -85,7 +87,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-6 col-lg-4 py-5 text-center">
-						<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
+						<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="350" height="350">
 					</div>
 					
 					<div class="col-sm-12 col-md-6 col-lg-8 py-5" style="padding-top:25px;">
@@ -130,7 +132,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-6 col-lg-4 text-center">
-						<img src="images/patch-burn.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;" width="300" height="300">
+						<img src="images/patch-burn.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;" width="350" height="350">
 					</div>
 					<div class="col-sm-12 col-md-6 col-lg-8 py-5">
 						<div class="heading-section ftco-animate">
