@@ -60,7 +60,7 @@
 		<!-- End Header -->
 		
 		<!-- Section 1: Offerings -->
-		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 1em;">
+		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 4em;">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
