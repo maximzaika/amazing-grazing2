@@ -8380,7 +8380,7 @@ h1, h2, h3, h4, h5,
     display: inline-block; }
 
 .bg-light {
-  background: /*rgb(248,249,250)*/rgb(166, 166, 166, 0.1) !important; }
+  background: #F7F9F9/*rgb(248,249,250)rgb(166, 166, 166, 0.1)*/ !important; }
 
 .bg-secondary {
   background: #fbd341 !important; }
