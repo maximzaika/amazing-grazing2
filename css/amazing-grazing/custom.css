@@ -42,8 +42,8 @@
 
 /* Animate GIF */
 img.animated-gif{
-	height: 450px;
-	max-width: auto;
+	height: auto;
+	max-width: 100%;
 	padding-bottom: 20px;
 }
 
@@ -69,7 +69,7 @@ img.animated-gif{
 .service-techniques {
 	padding: 10px 0px;
 	margin-bottom: 20px;
-	text-align: justify;
+	text-align: center;
 	background: #fff;
 	border-radius: 4px;
 	position: relative;
