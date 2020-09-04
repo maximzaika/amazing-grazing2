@@ -75,7 +75,7 @@
 								<img src="images/rotational-grazing.gif" class="animated-gif" alt="Rotational Grazing">
 							</div>
 							
-							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6">
+							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
 								<div class="services-wrap">
 									<!-- Section 1 -->
 									<li class="service-techniques services-color">

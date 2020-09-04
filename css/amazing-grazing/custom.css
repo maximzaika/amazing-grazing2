@@ -42,8 +42,8 @@
 
 /* Animate GIF */
 img.animated-gif{
-	height: 450px;
-	max-width: auto;
+	height: auto;
+	max-width: 100%;
 	padding-bottom: 20px;
 }
 
