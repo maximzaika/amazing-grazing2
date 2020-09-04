@@ -81,10 +81,10 @@
 									<li class="service-techniques services-color">
 										<div class="container">
 											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
+												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
-												<div class="col-md-8" style="margin: auto;">
+												<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">
 													<h5>Most simple, popular, and low effort on labour</h5>
 												</div>
 											</div>
@@ -96,10 +96,10 @@
 									<li class="service-techniques services-color">
 										<div class="container">
 											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
+												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
+												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
 													<h5>Temporary fencing is used</h5>
 												</div>
 											</div>
@@ -110,10 +110,10 @@
 									<li class="service-techniques services-color">
 										<div class="container">
 											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
+												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
 													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
 												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
+												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
 													<h5>Damages soil, stream banks, and native vegetation</h5>
 												</div>
 											</div>
@@ -124,10 +124,10 @@
 									<li class="service-techniques services-color">
 										<div class="container">
 											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
+												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
 													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
 												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
+												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
 													<h5>Low productivity and unsustainable development in the long-term</h5>
 												</div>
 											</div>
