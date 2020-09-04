@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	/* Focus on the input when the date button is clicked */
   $('.input-focus-start').on('click', function() {
 	$('#enter-start-date').focus();
   });

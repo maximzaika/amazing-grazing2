@@ -10,7 +10,7 @@
 			if ($topic_Data->num_rows > 0) {
 				$title_date_full = $title_date_full . 
 									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">' .
-									  '<h5>Select topic</h5>'.
+									  '<h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Select topic</h5>'.
 									  '<button id="drop-topic" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Grazing</button>'.
 									  '<div class="dropdown-news-topic dropdown-menu">';
 									
@@ -25,18 +25,6 @@
 				
 				$title_date_full = $title_date_full . 
 									  '</div>'.
-									'</div>'.
-									
-									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">'.
-									  '<h5>Select date</h5>'.
-									  '<div class="input-group mb-3">'.
-									    '<input id="enter-start-date" class="form-control border-right-0" id="start-date" name="start-date" placeholder="Select Date" value="'.$date.'" type="text"/>'.
-										'<div class="input-group-prepend">'.
-										  '<div class="input-group-prepend input-focus-start">'.
-										    '<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>'.
-										  '</div>'.
-										'</div>'.
-									  '</div>'.
 									'</div>';
 			}
 			
@@ -45,7 +33,7 @@
 			if ($region_Data->num_rows > 0) {
 				$title_date_full = $title_date_full . 
 									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">' .
-									  '<h5>Select country</h5>'.
+									  '<h5><i class="fa fa-globe" aria-hidden="true"></i> Select country</h5>'.
 									  '<button id="drop-region" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Australia</button>'.
 									  '<div class="dropdown-news-topic dropdown-menu">';
 				while($row = $region_Data->fetch_assoc()) {
@@ -60,6 +48,37 @@
 									  '</div>'.
 									'</div>';
 			}
+
+			/* Sort */
+			
+			$title_date_full = $title_date_full .
+			                     '<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">'.
+								   '<h5><i class="fa fa-sort" aria-hidden="true"></i> Sort by date</h5>'.
+								   '<button id="drop-sort" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Sort Newest to Oldest</button>'.
+								   '<div class="dropdown-news-topic dropdown-menu">'.
+								     '<a id="S_new-to-old" class="dropdown-item updateNews updateNewsJS">Sort Newest to Oldest</a>'.
+									 '<a id="S_old-to-new" class="dropdown-item updateNews updateNewsJS">Sort Oldest to Newest</a>'.
+								   '</div>'.
+								 '</div>';
+			
+			/* End Sort */
+			
+			/* Date  */			
+			/*$title_date_full = $title_date_full . 
+								'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">'.
+								  '<h5>Select date</h5>'.
+								  '<div class="input-group mb-3">'.
+									'<input id="enter-start-date" class="form-control border-right-0" id="start-date" name="start-date" placeholder="Select Date" value="'.$date.'" type="text"/>'.
+									'<div class="input-group-prepend">'.
+									  '<div class="input-group-prepend input-focus-start">'.
+										'<div class="border-left-0 input-group-text bg-transparent"><i class="fa fa-calendar"></i></div>'.
+									  '</div>'.
+									'</div>'.
+								  '</div>'.
+								'</div>';*/
+								
+			
+			/* End Date */
 			
 			return $title_date_full;
 		}

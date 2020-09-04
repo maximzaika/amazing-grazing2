@@ -14,14 +14,14 @@
 					$post_ofrUrl = $row['ofr_url'];
 					
 					$ofrContent = $ofrContent . 
-									'<div class="col-md-3 d-flex align-items-stretch">'.
+									'<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">'.
 										'<div class="services text-center">'.
 											'<div class="icon d-flex justify-content-center align-items-center">'.
 												'<span class="'.$post_ofrIcon.'"></span>'.
 											'</div>'.
-											'<div class="text">'.
-												'<h3>'.$post_ofrTitle.'</h3>'.
-												'<p>'.$post_ofrDescr.'</p>'.
+											'<div class="text" style="padding-bottom:25px;">'.
+												'<h4><b>'.$post_ofrTitle.'</b></h4>'.
+												'<h5>'.$post_ofrDescr.'</h5>'.
 											'</div>'.
 											'<a href="'.$post_ofrUrl.'" class="btn-custom d-flex align-items-center justify-content-center"><span>Read more &nbsp </span><span class="ion-ios-arrow-round-forward"></span></a>'.
 										'</div>'.

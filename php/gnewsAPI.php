@@ -14,7 +14,7 @@
 		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
 			/* Loop through the number of articles available */
-			for ($i=$data['articleCount']-1; $i>-1; $i--) {
+			for ($i=0; $i<$data['articleCount']-1; $i++) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
 				$articleUrl = $data['articles'][$i]['url'];
@@ -29,10 +29,10 @@
 				
 				/* Create HTML readable code for the page */
 				$full_news = $full_news . 
-					'<div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">' .
+					'<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex ftco-animate fadeInUp ftco-animated">' .
 					  '<div class="blog-entry justify-content-end">' .
 						'<a href="'.$articleUrl.'" class="block-20" style="background-image: url('."'".$articleImg."'". ');"></a>'.
-						'<div class="text p-4 float-right d-block">' .
+						'<div class="text p-4 float-right d-block" style="height: 100%;">' .
 						  '<div class="topper d-flex align-items-center">' .
 							'<div class="one py-2 pl-3 pr-1 align-self-stretch">' .
 							  '<span class="day">'.$articleDD.'</span>' . 
@@ -44,15 +44,17 @@
 							'</div>'.
 						  '</div>'.
 						  
-						  '<h3 class="heading mb-0"><a href="'.$articleUrl.'">'.$articleTitle.'</a></h3>'.
-						  '<p>'.$articleDescr.'</p>'.
-						  '<p><a href="'.$articleUrl.'" class="btn btn-primary">Read more</a></p>'.
+						  '<div style="padding-bottom:55px;">'.
+							'<h4 class="heading mb-0"><a href="'.$articleUrl.'"><b>'.$articleTitle.'</b></a></h4>'.
+							'<h5 class="text-justify">'.$articleDescr.'</h5>'.
+							'<p><a href="'.$articleUrl.'" class="btn btn-primary" style="position: absolute; bottom: 300px;">Read article</a></p>'.
+						  '</div>'.
 						'</div>'.
 					  '</div>'.
 					'</div>';
 			}
 		} else {
-			if (($data['articleCount'] = 0)) {
+			if (($data['articleCount'] == 0) && (isset($data['articleCount']) == 1)) {
 				$full_news = "There are no news available based on your search criteria. Please, select another date.";
 			}
 			
@@ -92,7 +94,6 @@
 	
 	/* ADD: store the date on the server */
 	$totalNews = 10;
-	
 	$days_ago = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
 	$startDate = $days_ago;
 	

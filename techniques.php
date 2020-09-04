@@ -28,11 +28,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/top.css">
+
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>
-		<!--"Go to top button"-->
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
 		<!-- Navigation Bar -->
 		<?php echo generateNavTabs($con, 'techniques.php');?>
 		<!-- End Navigation Bar -->
@@ -51,12 +51,12 @@
 		<!-- End Section 1: Page header - Grazing Techniques -->
 		
 		<!-- Section 2: Continuous grazing-->
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
 			<!-- Breadcrumbs -->
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
-						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php" style="color: white;">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Techniques </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Techniques </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
 						<hr>
 					</div>
 				</div>
@@ -64,17 +64,78 @@
 			<!-- End Breadcrumb -->
 			
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-6" style="padding-top:25px;">
-						<div class="heading-section ftco-animate">
-							<h2 class="mb-4" style="text-align:left;color: white;">CONTINUOUS GRAZING</h2>
-							<p style="color: white; text-align: justify;">
-							Continuous grazing has been chosen by most farmers as a popular grazing technique according to its low effort on labour and simple approaches. Temporary fencing and subtracting animals were used to assist in common. On the other hand, continuous grazing is a very intensive technique related to low productivity and unsustainable development in the long-term. Therefore, we recommend the following techniques that are more efficient in protect the grassland!
-							</p>
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style=" color: #228B22; ">CONTINUOUS GRAZING</h2>
+							
+							
+						<div class="row">
+							
+							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<img src="images/continuous-grazing.gif" class="animated-gif" alt="Rotational Grazing">
+							</div>
+							
+							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<div class="services-wrap">
+									<!-- Section 1 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8" style="margin: auto;">
+													<h5>Most simple, popular, and low effort on labour</h5>
+												</div>
+											</div>
+										</div>
+									
+									</li>
+									
+									<!-- Section 2 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Temporary fencing is used</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 3 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Damages soil, stream banks, and native vegetation</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 4 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Low productivity and unsustainable development in the long-term</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-6 py-5" style="padding-top: 0rem !important;">
-						<img src="images/continuous_grazing.png" alt="Continuous grazing" width="300" height="300" >
 					</div>
 				</div>
 			</div>
@@ -84,65 +145,298 @@
 		<!-- Section 3: Rotational grazing-->
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-6 col-lg-4 py-5 text-center">
-						<img src="images/rotational-grazing.gif" alt="Rotational Grazing" width="300" height="300">
-					</div>
-					
-					<div class="col-sm-12 col-md-6 col-lg-8 py-5" style="padding-top:25px;">
-						<div class="heading-section ftco-animate">
-							<h2 class="mb-4" style="text-align:right;color: #228B22;">ROTATIONAL GRAZING</h2>
-							<p style="padding-bottom: 15px; text-align: justify;">Rotational grazing technique and its terminology might be hard to start without comprehensive understanding. Therefore, read through these explanations of standard terminologies of rotational grazing. In order to express the frequency of moves and herd density, guidelines are regarded as grazing systems like how many days per graze and cow numbers in total per acre.
-							</p>
-							<p><a href="rotational.php" class="btn btn-amazing-techniques">Read more</a></p>
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style=" color: #228B22; ">ROTATIONAL GRAZING</h2>
+							
+							
+						<div class="row">
+							
+							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<img src="images/rotational-grazing.gif" class="animated-gif" alt="Rotational Grazing">
+							</div>
+							
+							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<div class="services-wrap">
+									<!-- Section 1 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8" style="margin: auto;">
+													<h5>The most appropriate approach that protects Australian grasslands!</h5>
+												</div>
+											</div>
+										</div>
+									
+									</li>
+									
+									<!-- Section 2 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Temporary fencing is used</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 3 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Damages soil, stream banks, and native vegetation</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 4 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Low productivity and unsustainable development in the long-term</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
 						</div>
+						
+						<div class="container-fuild">
+							<div class="row">
+								<div class="col-md-4">
+									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
+									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/rotational_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/rotational_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod brochure</a>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End Section 3: Rotational grazing-->
 		
-		<!-- Section 4: Seasonal grazing-->
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-primary">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 py-5">
-						<div class="heading-section ftco-animate">
-							<h2 class="mb-4" style="text-align:left;color: white;">SEASONAL GRAZING</h2>
-							<p style="color: white; text-align: justify;">Seasonal grazing is a great technique that only operating in a specific portion during certain seasons of the whole year. 
-							Seasonal grazing also can be combined using rotational and continuous grazing that takes place in that season. 
-							By applying this technique, it enables to shorten that time consumption spending on the farming infrastructure and livestock managing.
-							</p>
-							<p><a href="seasonal.php" class="btn btn-amazing-grazing">Read more</a></p>
+				<!-- Section 4: Seasonal grazing-->
+				<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+					<div class="container">
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style=" color: #228B22; ">SEASONAL GRAZING</h2>
+							
+							
+						<div class="row">
+							
+							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<img src="images/rotational-grazing.gif" class="animated-gif" alt="SEASONAL GRAZING">
+							</div>
+							
+							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<div class="services-wrap">
+									<!-- Section 1 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8" style="margin: auto;">
+													<h5>Spring</h5>
+												</div>
+											</div>
+										</div>
+									
+									</li>
+									
+									<!-- Section 2 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Summer</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 3 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Autumn</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 4 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Winter</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-4 py-5 align-items-center">
-						<img src="images/seasonal_grazing.png" alt="Seasonal grazing" class="img-fluid rounded" style="padding-top: 50px;">
+						
+						<div class="container-fuild">
+							<div class="row">
+								<div class="col-md-4">
+									<button onclick="location.href='seasonal.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/seasonal_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/seasonal_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod brochure</a>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Section 4: Seasonal grazing -->
-
-		<!-- Section 5: Patch-burn grazing -->
+		<!-- End Section 4: Seasonal grazing-->
+		
+		<!-- Section 5: Patch-burn grazing-->
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-6 col-lg-4 text-center">
-						<img src="images/patch-burn.gif" alt="Patch-burn Grazing" class="img-fluid rounded" style="padding-top: 100px;" width="300" height="300">
-					</div>
-					<div class="col-sm-12 col-md-6 col-lg-8 py-5">
-						<div class="heading-section ftco-animate">
-							<h2 class="mb-4" style="text-align:right;color: #228B22;">PATCH-BURN GRAZING</h2>
-							<p style="padding-bottom: 15px; text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
-							</p>
-							<p><a href="patch-burn.php" class="btn btn-amazing-techniques">Read more</a></p>
+				<div class="row justify-content-center mb-5">
+					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style=" color: #228B22; ">PATCH-BURN GRAZING</h2>
+							
+							
+						<div class="row">
+							
+							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<img src="images/patch-burn.gif" class="animated-gif" alt="PATCH-BURN">
+							</div>
+							
+							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
+								<div class="services-wrap">
+									<!-- Section 1 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8" style="margin: auto;">
+													<h5>The most appropriate approach that protects Australian grasslands!</h5>
+												</div>
+											</div>
+										</div>
+									
+									</li>
+									
+									<!-- Section 2 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Temporary fencing is used</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 3 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Damages soil, stream banks, and native vegetation</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+									<!-- Section 4 -->
+									<li class="service-techniques services-color">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-4 text-center" style="margin: auto;">
+													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+												</div>
+												<div class="col-md-8 align-center" style="margin: auto">
+													<h5>Low productivity and unsustainable development in the long-term</h5>
+												</div>
+											</div>
+										</div>
+									</li>
+								</div>
+							</div>
 						</div>
+						
+						<div class="container-fuild">
+							<div class="row">
+								<div class="col-md-4">
+									<button onclick="location.href='patch-burn.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
+									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/patch-burn_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>
+								</div>
+								
+								<div class="col-md-4">
+									<a href="download/patch-burn_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod brochure</a>
+								</div>
+							</div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Section 5: Patch-burn grazing -->
+		<!-- End Section 5: Patch-burn grazing-->
 
 		<!-- Section 3: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -154,8 +448,8 @@
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that we aim to provide the most recent information about grazing, livestock, wildfires, and drought possible? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li> -->
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -185,11 +479,12 @@
 		</footer>
 		<!-- End Section 3: Footer -->
 		
-	  
-
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+		
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
+		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -202,7 +497,10 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
-	
+		
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
+		
 	</body>
 </html>
 

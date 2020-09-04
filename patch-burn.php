@@ -27,11 +27,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/top.css">
+		
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
-	<body>
-		<!--"Go to top button"-->
-		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    
+	<body>   
 		<!-- Navigation Bar -->
 		<?php echo generateNavTabs($con, 'techniques.php');?>
 		<!-- End Navigation Bar -->
@@ -73,8 +73,8 @@
 							<h2 class="mb-4" style="text-align:left; color: #228B22;">PATCH-BURN GRAZING</h2>
 							<p style="text-align: justify;">Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.
 							</p>
-							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques">View the Brochure</a>
-							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques" download>Downlaod the Brochure</a>
+							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques"><i class="fa fa-eye" aria-hidden="true"></i> View the Brochure</a>
+							<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-amazing-techniques" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod the Brochure</a>
 						</div>
 					</div>
 					
@@ -110,11 +110,11 @@
 						<!-- Suggestions -->
 						<div class="services-wrap">
 							<!-- Suggestion 1 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											In general, patch-burn requires at least 3 years to accomplish for the whole life cycle. Therefore, take your time that burns 1/4 of the whole paddock each year in rotation and enjoy the benefits from the very start.
@@ -125,11 +125,11 @@
 							</li>
 							
 							<!-- Suggestion 2 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											Before patch-burn, keep in mind that resting a certain section of the whole paddock is a required step during the growing season. It can assist your practice in building useful energy loads in the first year.
@@ -139,11 +139,11 @@
 							</li>
 							
 							<!-- Suggestion 3 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											In the case of multiple paddock grazing at the same time, the system of livestock should be rotated so the livestock can get rid of the burned section.
@@ -153,11 +153,11 @@
 							</li>
 							
 							<!-- Suggestion 4 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											For the 2nd year, we suggest you conduct planned burn on another section of the rest unburned area that continuous from last year’s efforts.
@@ -167,11 +167,11 @@
 							</li>
 							
 							<!-- Suggestion 5 -->
-							<li style="text-align: justify;" class="services-list">
+							<li style="text-align: justify;" class="services-list services-color">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-2 text-center" style="margin-top: auto; margin-bottom: auto">
-											<i class="fa fa-check" aria-hidden="true"></i>
+											<i class="fa fa-check" style="color: #4e9525;" aria-hidden="true"></i>
 										</div>
 										<div class="col-md-10 align-center" style="margin-top: auto; margin-bottom: auto">
 											For your information, during the second second year, livestock should firstly graze in the latest burned area. That is, the burned area in the first year can have enough time to regrowth and rest.
@@ -196,8 +196,8 @@
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that we aim to provide the most recent information about grazing, livestock, wildfires, and drought possible? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li> -->
+								<!-- <li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li> -->
 							</ul>
 						</div>
 					</div>
@@ -227,35 +227,28 @@
 		</footer>
 		<!-- End Section 7: Footer -->
     
-  
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
+		
+		<!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/scrollax.min.js"></script>
+		<script src="js/main.js"></script>
 
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-
-   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-    <script src="js/top.js"></script>
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
   </body>
 </html>
+
+<?php $con -> close(); ?>

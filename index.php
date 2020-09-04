@@ -31,8 +31,11 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		
-		<!-- Added in teration 1 -->
+		<!-- Added in iteration 1 -->
 		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+		
+		<!-- Added in iteration 2 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>
 		
@@ -42,34 +45,34 @@
 		
 		<!-- Header -->
 		<div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/test-graze-3.jpeg');" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div> <!-- add the darkness to the photo -->
 			<div class="container">
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h2 class="subheading"><i>Welcome to Amazing Grazing</i></h2>
 						<h1>Make a difference in protecting Australian grasslands</h1>
 						<p class="mb-4">By grazing and preserving your livestock</p>
-						<p><a href="#" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
+						<p><a href="#offerings" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End Header -->
 		
-		<!-- Section 1: We Protect by Providing -->
-		<section class="ftco-section ftco-no-pt" style="padding-bottom: 1em;">
+		<!-- Section 1: Offerings -->
+		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 4em;">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
-						<span class="subheading">Offerings</span>
-						<h2 class="mb-4">We Protect by Providing</h2>
+						<h2 class="mb-4">Offerings</h2>
+						<span class="subheading">We protect by providing</span>
 					</div>
 				</div>
 				
 				<div class="row">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
-						    <?php 
-							echo htmlspecialchars_decode(generateOfferings($con));?>
+						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
 						</div>
 					</div>
 				</div>
@@ -82,20 +85,21 @@
 			<div class="container">
 				<div class="row justify-content-center pb-3">
 					<div class="col-md-7 heading-section text-center ftco-animate">
-						<span class="subheading">Our news</span>
-						<h2>News</h2>
+					    <h2>News</h2>
+						<span class="subheading">Your personalised latest news</span>
 					</div>
 				</div>
 				
 				<!-- News Navigation (Select topic, select start date, select region) -->
 				<div class="row">
-					 <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
+					 <?php 
+					 echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 				</div>
 		
 			    <hr> <!-- add horizonal line between the news and navigation -->
 				
 				<!-- All The news are displayed here -->
-				<div id="update-news" class="row d-flex pre-scrollable">
+				<div id="update-news" class="row pre-scrollable">
 					<?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 				</div>
 			</div>
@@ -118,9 +122,9 @@
 							<h2 class="ftco-heading-2">Areas of interest</h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various news related to drought, fire, grazing, and livestock.</a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected.</a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected.</a></li>-->
 								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
-								<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>
+								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>-->
 							</ul>
 						</div>
 					</div>
@@ -143,6 +147,9 @@
   
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+		<!-- Added in iteration 2 -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
 		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
@@ -161,7 +168,9 @@
 		<script src="js/amazing-grazing/news-picker-detection.js"></script>
 		<script src="js/amazing-grazing/news-picker.js"></script>
 		<script src="js/bootstrap-datepicker.js"></script>
-    
+		
+		<!-- Added in ITteration 2 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 	</body>
 </html>
 
