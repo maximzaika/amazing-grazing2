@@ -2074,15 +2074,6 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.fa-check {
-	font-size: 100px;
-}
-
-.fa-times {
-	font-size: 100px;
-	color: red;
-}
-
 .btn-amazing-techniques {
 	color: #fff;
     background-color: #4e9525;

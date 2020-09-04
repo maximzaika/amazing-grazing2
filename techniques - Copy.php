@@ -64,96 +64,18 @@
 			<!-- End Breadcrumb -->
 			
 			<div class="container">
-				<div class="row justify-content-center mb-5">
-					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
-						<h2 class="mb-4" style=" color: #228B22; ">CONTINUOUS GRAZING</h2>
-							
-							
-						<div class="row">
-							
-							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
-								<img src="images/rotational-grazing.gif" class="animated-gif" alt="Rotational Grazing">
-							</div>
-							
-							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6">
-								<div class="services-wrap">
-									<!-- Section 1 -->
-									<li class="service-techniques services-color">
-										<div class="container">
-											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
-													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-												</div>
-												<div class="col-md-8" style="margin: auto;">
-													<h5>Most simple, popular, and low effort on labour</h5>
-												</div>
-											</div>
-										</div>
-									
-									</li>
-									
-									<!-- Section 2 -->
-									<li class="service-techniques services-color">
-										<div class="container">
-											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
-													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
-													<h5>Temporary fencing is used</h5>
-												</div>
-											</div>
-										</div>
-									</li>
-									
-									<!-- Section 3 -->
-									<li class="service-techniques services-color">
-										<div class="container">
-											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
-												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
-													<h5>Damages soil, stream banks, and native vegetation</h5>
-												</div>
-											</div>
-										</div>
-									</li>
-									
-									<!-- Section 4 -->
-									<li class="service-techniques services-color">
-										<div class="container">
-											<div class="row">
-												<div class="col-md-4 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
-												</div>
-												<div class="col-md-8 align-center" style="margin: auto">
-													<h5>Low productivity and unsustainable development in the long-term</h5>
-												</div>
-											</div>
-										</div>
-									</li>
-								</div>
-							</div>
+				<div class="row">
+					<div class="col-lg-6" style="padding-top:25px;">
+						<div class="heading-section ftco-animate">
+							<h4 class="mb-4" style="text-align:left;"><b>CONTINUOUS GRAZING</b></h4>
+							<h5 style="text-align: justify;"><i class="fa fa-times" style="font-size:40px;" aria-hidden="true"></i> Damages grassland's soil and destroys native vegetation, stream banks and contaminate waterways. Avoid using!</h5>
+							<h5 style="text-align: justify;">
+							Continuous grazing has been chosen by most farmers as a popular grazing technique according to its low effort on labour and simple approaches. Temporary fencing and subtracting animals were used to assist in common. On the other hand, continuous grazing is a very intensive technique related to low productivity and unsustainable development in the long-term. Therefore, we recommend the following techniques that are more efficient in protect the grassland!
+							</h5>
 						</div>
-						
-						<div class="container-fuild">
-							<div class="row">
-								<div class="col-md-4">
-									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
-									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
-								</div>
-								
-								<div class="col-md-4">
-									<a href="download/rotational_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>
-								</div>
-								
-								<div class="col-md-4">
-									<a href="download/rotational_grazing_brochure.pdf" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Downlaod brochure</a>
-								</div>
-							</div>
-						</div>
-						
+					</div>
+					<div class="col-lg-6 py-5" style="padding-top: 0rem !important;">
+						<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;">
 					</div>
 				</div>
 			</div>
