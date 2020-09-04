@@ -74,7 +74,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6 py-5" style="padding-top: 0rem !important;">
-						<img src="images/continuous_grazing.png" alt="Continuous grazing" class="img-fluid rounded" style="padding-top: 50px;">
+						<img src="images/continuous_grazing.png" alt="Continuous grazing" width="300" height="300" >
 					</div>
 				</div>
 			</div>
