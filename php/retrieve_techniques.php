@@ -31,7 +31,7 @@
 															
 															'<div class="row">'.
 															  '<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
-															    '<img src="images/'.$techn_img.'" class="animated-gif" alt="Seasonal Grazing">'.
+															    '<img src="images/'.$techn_img.'" class="animated-gif" style="border-radius:40px;" alt="Seasonal Grazing">'.
 															  '</div>'.
 															
 															  '<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
