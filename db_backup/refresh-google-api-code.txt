@@ -13,11 +13,11 @@ SET g_news_count=0
 WHERE g_news_id=3;
 
 UPDATE g_news_api
-SET g_news_count=100
+SET g_news_count=0
 WHERE g_news_id=4;
 
 UPDATE g_news_api
-SET g_news_count=100
+SET g_news_count=0
 WHERE g_news_id=5;
 
 UPDATE g_news_api
@@ -25,7 +25,7 @@ SET g_news_count=0
 WHERE g_news_id=6;
 
 UPDATE g_news_api
-SET g_news_count=0
+SET g_news_count=50
 WHERE g_news_id=7;
 
 -------- local mysql ------------
