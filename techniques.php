@@ -166,7 +166,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">
-													<h5>Most simple, popular, and low effort on labour</h5>
+													<h5>Can be implemented immediately</h5>
 												</div>
 											</div>
 										</div>
@@ -181,7 +181,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Temporary fencing is used</h5>
+													<h5>Enhances nutritious level of grassland</h5>
 												</div>
 											</div>
 										</div>
@@ -192,10 +192,10 @@
 										<div class="container">
 											<div class="row">
 												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+													<i class="fa fa-check fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Damages soil, stream banks, and native vegetation</h5>
+													<h5>Express higher stocking rates of paddock-by-paddock</h5>
 												</div>
 											</div>
 										</div>
@@ -206,10 +206,10 @@
 										<div class="container">
 											<div class="row">
 												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+													<i class="fa fa-check fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Low productivity and unsustainable development in the long-term</h5>
+													<h5>Decrease the methane emissions from livestock</h5>
 												</div>
 											</div>
 										</div>
@@ -221,7 +221,7 @@
 						<div class="container-fuild">
 							<div class="row">
 								<div class="col-md-4">
-									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
+									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;"><i class="fas fa-book-reader" aria-hidden="true"></i>Continue reading</button>
 									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
 								</div>
 								
@@ -265,7 +265,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">
-													<h5>Most simple, popular, and low effort on labour</h5>
+													<h5>Longer regrowth time for the grassland</h5>
 												</div>
 											</div>
 										</div>
@@ -280,7 +280,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Temporary fencing is used</h5>
+													<h5>Easily combined with other techniques</h5>
 												</div>
 											</div>
 										</div>
@@ -291,10 +291,10 @@
 										<div class="container">
 											<div class="row">
 												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+													<i class="fa fa-check fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Damages soil, stream banks, and native vegetation</h5>
+													<h5>Great chance to adjust the grazing regime of the year</h5>
 												</div>
 											</div>
 										</div>
@@ -305,10 +305,10 @@
 										<div class="container">
 											<div class="row">
 												<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">
-													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
+													<i class="fa fa-check fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Low productivity and unsustainable development in the long-term</h5>
+													<h5>Limited time consumption and less farming infrastructure management</h5>
 												</div>
 											</div>
 										</div>
@@ -363,7 +363,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">
-													<h5>Most simple, popular, and low effort on labour</h5>
+													<h5>Enable recovery of used patches of grassland</h5>
 												</div>
 											</div>
 										</div>
@@ -378,7 +378,7 @@
 													<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Temporary fencing is used</h5>
+													<h5>Cost-saving technology requires less costly infrastructure or fencing</h5>
 												</div>
 											</div>
 										</div>
@@ -392,7 +392,7 @@
 													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Damages soil, stream banks, and native vegetation</h5>
+													<h5>Only suitable for paddock larger than 20 acres</h5>
 												</div>
 											</div>
 										</div>
@@ -406,7 +406,7 @@
 													<i class="fa fa-times fa-times-techniques" aria-hidden="true"></i>
 												</div>
 												<div class="col-xxs-8 col-xs-4 col-sm-11 col-md-10 col-lg-10" style="margin: auto">
-													<h5>Low productivity and unsustainable development in the long-term</h5>
+													<h5>May takes longer time (3 years) to burn all patches</h5>
 												</div>
 											</div>
 										</div>
