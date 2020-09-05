@@ -65,7 +65,7 @@
 		<!-- End Breadcrumb -->
 		
 		<!-- Section 2: Grazing Technqiues-->
-		<?php echo htmlspecialchars_decode(retrieveTechniques($con));?>
+		<?php echo htmlspecialchars_decode(retrieveTechniques($con, "ALL"));?>
 		<!-- End Section 2: Grazing Techniques-->
 		
 		<!-- Section 3: Footer -->
