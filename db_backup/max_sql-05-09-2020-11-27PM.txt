@@ -1,0 +1,105 @@
+CREATE TABLE technique_selected (
+    selected_id int NOT NULL AUTO_INCREMENT,
+    selected_techn varchar(40) NOT NULL,
+    selected_title varchar(25) NOT NULL,
+    selected_text varchar(800) NOT NULL,
+    selected_img varchar(50),
+    selected_indiv_img varchar(300),
+    selected_indiv_section_title varchar(100),
+    selected_indiv_title varchar(100),
+    selected_indiv_text varchar(800),
+    PRIMARY KEY (selected_id)
+);
+
+INSERT INTO technique_selected (selected_indiv_section_title, selected_techn, selected_title, selected_text, selected_img, selected_indiv_img, selected_indiv_title, selected_indiv_text)
+VALUES ('DIFFERENT ROTATIONAL GRAZING METHODS',
+	'ROTATIONAL GRAZING',
+        'WHY SHOULD I USE IT?',
+        'Rotational grazing can express much higher stocking rates of paddock-by-paddock than regular pre-set stocking. It enhances the nutritious level of the grazing plants in the best growth stage of their lifecycle, therefore enabling multiple livestock to be able to continue their thriving. Using this technique, you can maintain your land forage as high productive pasture which extends the period of balanced growth. At the same time, compared to continuous grazing, you can decrease the methane emissions from livestock by up to 22% (per unit of cattle gain). In this case, cows will have more energy to produce milk.',
+	'cow_life.png',
+        'management_intensive_grazing.jpeg;mod_grazing.jpeg;adaptive_high_stock_density_grazing.jpeg',
+	'Slow Rotational;Mob;Adaptive High-Stock Density',
+	'Slow rotational grazing is pastures of 2 or more with standard moves from every 2 weeks to every few months in order to enable land recovery and rest.;Requires significantly higher stock densities between 75-300+ AU per acre. Multiple moves per day are required to maintain ideal stock densities. Temporary fencing is often used to create small paddocks.;Apply multiple of the previous methods of grazing to enable graziers to adjust herd density to achieve the nutritional needs of livestock and satisfy the conditions of the soil.');
+
+INSERT INTO technique_selected (selected_indiv_section_title, selected_techn, selected_title, selected_text, selected_img, selected_indiv_img, selected_indiv_title, selected_indiv_text)
+VALUES ('',
+	'SEASONAL GRAZING',
+        'WHY SHOULD I USE IT?',
+        'Different season conditions provide different use of land for certain species. The benefits and disadvantages of seasonal grazing on the grassland can be very different based on the season you selected. Seasonal grazing offers a great chance to adjust your grazing regime of the year. It can benefit the targeted flora species in the habitat for better effectivity in the long-term.',
+	'',
+        'autumn.jpeg;winter.jpeg;spring.jpeg;summer.jpeg',
+	'Autumn;Winter;Spring;Summer',
+	'The most suitable time to apply heavy grazing combined with a rotational or continuous technique.;It is a chance that you can adjust your whole year grazing regime.;Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.;Not the best time. Light grazing is a more ideal option.');
+
+INSERT INTO technique_selected (selected_indiv_section_title, selected_techn, selected_title, selected_text, selected_img, selected_indiv_img, selected_indiv_title, selected_indiv_text)
+VALUES ('',
+	'PATCH-BURN GRAZING',
+        'WHY SHOULD I USE IT?',
+        'Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.',
+	'',
+        '',
+	'',
+	'');
+
+CREATE TABLE suggestion_tech(
+    suggestion_id int NOT NULL AUTO_INCREMENT,
+    suggestion_techn varchar(40) NOT NULL,
+    suggestion_text varchar(250) NOT NULL,
+    PRIMARY KEY (suggestion_id)
+);
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('ROTATIONAL GRAZING',
+	'Keeping your livestock in the first divided paddock in which the land is in the most optimal condition to start the rotation.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('ROTATIONAL GRAZING',
+	'Ideally you would want to move livestock to the next paddock when livestock consumed around half forage height.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('ROTATIONAL GRAZING',
+	'It is the time you let the first paddock to regrowth and rest! It will involve in a new grazing sequence as long as it is again suitable with the optimal land condition.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('ROTATIONAL GRAZING',
+	'Apply this technique with a different time period that suits your situation best. The minimum grazing period is at least 5-day short grazing to 15-40-day long grazing.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('ROTATIONAL GRAZING',
+	'This technique may require relatively greater labor efforts to arrange the stocking and more support from the infrastructure side like fencing staff.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('SEASONAL GRAZING',
+	'Set your grazing regime and goals. Be clear with your grazing and productivity expectation.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('SEASONAL GRAZING',
+	'Determine your concerns or problems that need to be solved regarding different seasons.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('SEASONAL GRAZING',
+	'Based on your understanding of these seasonal characteristics, plan your very own solution to overcome these challenges to maximize the grazing effectivity.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('SEASONAL GRAZING',
+	'Always keep track of your records including livestock, land condition, water consumptions, forages growth, and other infrastructure use based on 12-month consideration for next year’s plan.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('PATCH-BURN GRAZING',
+	'In general, patch-burn requires at least 3 years to accomplish for the whole life cycle. Therefore, take your time that burns 1/4 of the whole paddock each year in rotation and enjoy the benefits from the very start.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('PATCH-BURN GRAZING',
+	'Before patch-burn, keep in mind that resting a certain section of the whole paddock is a required step during the growing season. It can assist your practice in building useful energy loads in the first year.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('PATCH-BURN GRAZING',
+	'In the case of multiple paddock grazing at the same time, the system of livestock should be rotated so the livestock can get rid of the burned section.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('PATCH-BURN GRAZING',
+	'For the 2nd year, we suggest you conduct planned burn on another section of the rest unburned area that continuous from last year’s efforts.');
+
+INSERT INTO suggestion_tech (suggestion_techn, suggestion_text)
+VALUES ('PATCH-BURN GRAZING',
+	'For your information, during the second second year, livestock should firstly graze in the latest burned area. That is, the burned area in the first year can have enough time to regrowth and rest.');
