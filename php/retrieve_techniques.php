@@ -72,14 +72,14 @@
 					$technContent = $technContent .			'</div>';
 					
 					if ($techn_continue != '') {
-						$technContent = $technContent .		  '<button onclick="location.href='."'".$techn_continue."'".'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading <i class="fa fa-arrow-right" aria-hidden="true"></i></button>'.
+						$technContent = $technContent .		  '<button onclick="location.href='."'".$techn_continue."'".'" type="button" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px;">Continue reading <i class="fa fa-arrow-right" aria-hidden="true"></i></button>'.
 						                                      '<div class="row">'.
 																'<div class="col-md-6">'.
-																  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>'.
+																  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>'.
 																'</div>'.
 																
 															    '<div class="col-md-6">'.
-															      '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Download brochure</a>'.
+															      '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Download brochure</a>'.
 																'</div>'.
 															  '</div>';
 					}
