@@ -140,7 +140,7 @@
 						<div class="container-fuild">
 							<div class="row">
 								<div class="col-md-4">
-									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading</button>
+									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;">Continue reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
 								</div>
 								
