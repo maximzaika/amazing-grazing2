@@ -72,7 +72,7 @@
 						<div class="row">
 							
 							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
-								<img src="images/continuous-grazing.gif" class="animated-gif" alt="Rotational Grazing">
+								<img src="images/continuous-grazing.gif" class="animated-gif" alt="Seasonal Grazing">
 							</div>
 							
 							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
@@ -221,7 +221,9 @@
 						<div class="container-fuild">
 							<div class="row">
 								<div class="col-md-4">
-									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;"><i class="fas fa-book-reader" aria-hidden="true"></i>Continue reading</button>
+
+									<button onclick="location.href='rotational.php'" type="button" class="w-100 btn btn-topic btn-primary" style="margin-top: 10px;"><i class="fa fa-book" aria-hidden="true"></i> Continue reading</button>
+
 									<!--<p><a href="rotational.php" class="btn btn-amazing-techniques">Continue reading</a></p>-->
 								</div>
 								
@@ -252,7 +254,7 @@
 						<div class="row">
 							
 							<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
-								<img src="images/seasonal-grazing.gif" class="animated-gif" alt="SEASONAL GRAZING">
+								<img src="images/seasonal_animation_v4.gif" style="border-radius: 40px;" class="animated-gif" alt="SEASONAL GRAZING">
 							</div>
 							
 							<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">
