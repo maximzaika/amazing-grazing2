@@ -227,7 +227,7 @@
 							                '<div class="row">'.
 												'<div class="col-lg-12 py-5">'.
 													'<div class="heading-section ftco-animate">'.
-														'<h2 class="mb-4" style="text-align:left;color: #228B22;">'.$selected_title.'</h2>'.
+														'<h2 class="mb-4 text-center" style="color: #228B22;">'.$selected_title.'</h2>'.
 														'<h5 style="padding-bottom: 15px; text-align: justify;">'.$selected_text.'</h5>'.
 													'</div>'.
 												'</div>'.
