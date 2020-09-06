@@ -1,0 +1,122 @@
+<!-- Max: iteration 1 -->
+
+CREATE TABLE nav_bar (
+    nav_id int,
+    nav_link varchar(255),
+    nav_title varchar(255)
+);
+
+INSERT INTO nav_bar
+VALUES (1, 'index.php', 'Home');
+
+INSERT INTO nav_bar
+VALUES (2, 'news.php', 'News');
+
+INSERT INTO nav_bar
+VALUES (3, 'techniques.php', 'Techniques');
+
+INSERT INTO nav_bar
+VALUES (4, 'wip.php', 'Statistics');
+
+INSERT INTO nav_bar
+VALUES (5, 'wip.php', 'Predict Drought');
+
+
+CREATE TABLE index_offerings ( 
+    ofr_id int, 
+    ofr_icon varchar(255), 
+    ofr_title varchar(255), 
+    ofr_descr varchar(255), 
+    ofr_url varchar(255)
+);
+ 
+INSERT INTO index_offerings
+VALUES (1, 
+        'flaticon-news', 
+        'News', 
+        'Staying up to date with the news regarding grazing, fires, drought, and livestock is important for all of us.', 
+        'news.php');
+
+INSERT INTO index_offerings
+VALUES (2, 
+        'flaticon-statistics', 
+        'Statistics', 
+        'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 
+        'wip.php');
+
+INSERT INTO index_offerings
+VALUES (3, 
+        'flaticon-horse-grazing-black-silhouette', 
+        'Grazing Techniques', 
+        'Preserving grassland''s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 
+        'techniques.php');
+        
+INSERT INTO index_offerings
+VALUES (4, 
+        'flaticon-drought', 
+        'Drought Prediction', 
+        'Drought is one of the issues that prevent effective grazing, ruins the soil, causes fires, and leads to livestock reduction. We aim to predict drought seasons to assist you.', 
+        'wip.php');
+
+CREATE TABLE news_topic_content (
+    news_topic_id int,
+    news_topic_label varchar(255),
+    news_topic_topic varchar(255)
+);
+
+INSERT INTO news_topic_content
+VALUES (1, 'T_Drought', 'Drought');
+
+INSERT INTO news_topic_content
+VALUES (2, 'T_Wildfire', 'Wildfire');
+
+INSERT INTO news_topic_content
+VALUES (3, 'T_Grazing', 'Grazing');
+
+INSERT INTO news_topic_content
+VALUES (4, 'T_Livestock', 'Livestock');
+
+CREATE TABLE news_region_content (
+    news_reg_id int,
+    news_reg_label varchar(255),
+    news_reg_topic varchar(255)
+);
+
+INSERT INTO news_region_content
+VALUES (1, 'R_au_Australia', 'Australia');
+
+INSERT INTO news_region_content
+VALUES (2, 'R_ca_Canada', 'Canada');
+
+INSERT INTO news_region_content
+VALUES (3, 'R_eu_Europe', 'Europe');
+
+INSERT INTO news_region_content
+VALUES (4, 'R_us_United States', 'United States');
+
+CREATE TABLE g_news_api (
+    g_news_id int,
+    g_news_count int,
+    g_news_token varchar(255)
+);
+
+INSERT INTO g_news_api
+VALUES (1, 0, '2f43dc9d754f3008f68a7f50b670c208');
+
+INSERT INTO g_news_api
+VALUES (2, 0, 'c29b556f2f1ddd7ada7f2d7b6834b2c7');
+
+INSERT INTO g_news_api
+VALUES (3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe');
+
+INSERT INTO g_news_api
+VALUES (4, 0, '9e0677170130c646c24d9d907974166c');
+
+INSERT INTO g_news_api
+VALUES (5, 0, '1d5029e4a17729fbd82d52087fc2c85c');
+
+INSERT INTO g_news_api
+VALUES (6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2');
+
+INSERT INTO g_news_api
+VALUES (7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');
