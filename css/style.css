@@ -2074,15 +2074,6 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-amazing-techniques {
-	color: #fff;
-    background-color: #4e9525;
-    border-color: #fff; }
-  .btn-amazing-techniques:hover {
-    color: #fbd341;
-    background-color: #4e9525;
-    border-color: #fbd341; }
-
 .btn-primary {
   color: #fff;
   background-color: #007bff;
