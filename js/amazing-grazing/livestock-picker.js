@@ -120,49 +120,54 @@ $(function(){
 				 - No other options allowed together with total
 				*/
 				
-				if (check_active == "true false false false") {
-					var div = document.createElement('div');
-					div.textContent = "true false false false";
-					document.getElementById("tableau-chart").appendChild(div);
-					
-					
-					
-					
-				} else if (check_active == "false true false false") {
-					var div = document.createElement('div');
-					div.textContent = "false true false false";
-					document.getElementById("tableau-chart").appendChild(div);
-				} else if (check_active == "false false true false") {
-					var div = document.createElement('div');
-					div.textContent = "false false true false";
-					document.getElementById("tableau-chart").appendChild(div);
-				} else if (check_active == "true false true false") {
-					var div = document.createElement('div');
-					div.textContent = "true false true false";
-					document.getElementById("tableau-chart").appendChild(div);
-				} else if (check_active == "true true false false") {
-					var div = document.createElement('div');
-					div.textContent = "true true false false";
-					document.getElementById("tableau-chart").appendChild(div);
-				} else if (check_active == "false true true false") {
-					var div = document.createElement('div');
-					div.textContent = "false true true false";
-					document.getElementById("tableau-chart").appendChild(div);
-				} else if (check_active == "false false false true") {
-					var div = document.createElement('div');
-					div.textContent = "false false false true";
-					document.getElementById("tableau-chart").appendChild(div);
-					
-					var div_id = 'viz1599549202112';
-					
-					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumberslinechart&#47;TotalLivestockNumbersfrom1973to2016&#47;1_rss.png';
+				if (check_active == "true false false false") { // beef cattle
+					var div_id = 'viz1599650978312';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-					var o_name_val = 'totallivestocknumberslinechart&#47;TotalLivestockNumbersfrom1973to2016';
-					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumberslinechart&#47;TotalLivestockNumbersfrom1973to2016&#47;1.png';
-				} else { // true true true
-					var div = document.createElement('div');
-					div.textContent = "true true true";
-					document.getElementById("tableau-chart").appendChild(div);
+					var o_name_val = 'cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false true false false") { // dairy cattle
+					var div_id = 'viz1599651064005';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false false true false") { // sheep
+					var div_id = 'viz1599651184552';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "true false true false") { // beef cattle & sheep
+					var div_id = 'viz1599652366751';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "true true false false") { // beef & dairy cattle
+					var div_id = 'viz1599652188763';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false true true false") { // dairy cattle & sheep
+					var div_id = 'viz1599652418301';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false false false true") { // total numbers								
+					var div_id = 'viz1599651273179';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else { // true true true - beef & dairy cattle, & sheep
+					var div_id = 'viz1599652501574';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;mu&#47;multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+					var o_name_val = 'multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;mu&#47;multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016&#47;1.png';
 				}
 			}
 			
@@ -174,7 +179,7 @@ $(function(){
 			
 			div.classList.add('tableauPlaceholder');
 			div.setAttribute('id', div_id);
-			div.setAttribute('style', 'position: relative; width:100%; height:50%;');
+			div.setAttribute('style', 'position: relative; width:100%;');
 			
 			// add noscript
 			var noscript = document.createElement('noscript');
@@ -292,8 +297,13 @@ $(function(){
 			
 			var divElement = document.getElementById(div_id);                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
-			vizElement.style.width='100%';
-			vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+			if (divElement.offsetWidth > 700) {
+				vizElement.style.width='100%';
+				vizElement.style.height=(500*0.75)+'px';
+			} else {
+				vizElement.style.width='100%';
+				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+			}                   
 			var scriptElement = document.createElement('script');                    
 			scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
 			vizElement.parentNode.insertBefore(scriptElement, vizElement); 

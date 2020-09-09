@@ -39,6 +39,7 @@
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'statistics.php'));?>
 		<!-- End Navigation Bar -->
 		
+		<!-- Error -->
 		<div class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
@@ -64,7 +65,7 @@
 				<div class="container">
 					<div class="row no-gutters slider-text align-items-end justify-content-center">
 						<div class="col-md-9 ftco-animate pb-5 text-center">
-							<h1 class="mb-3 bread">Grazing Techniques</h1>
+							<h1 class="mb-3 bread">Livestock Statistics</h1>
 						</div>
 					</div>
 				</div>
@@ -76,7 +77,7 @@
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
-						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Statistics </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Livestock Statistics </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
 						<hr>
 					</div>
 				</div>
@@ -85,43 +86,43 @@
 		<!-- End Breadcrumb -->
 		<section class="ftco-section bg-light">
 			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-					<div class="col-xs-12 col-md-12">
-						<h5>Select livestock</h5>
-						<!--<div class="container" style="padding-left: 0px; padding-right: 0px;"> -->
-							<div class="row" style="padding-bottom: 25px;">
-								<div class="col-xs-3 col-md-3" style="padding-left: 5px; padding-right: 5px;">
-									<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
-								</div>
-								
-								<div class="col-xs-3 col-md-3" style="padding-left: 5px; padding-right: 5px;">
-									<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
-								</div>
-								
-								<div class="col-xs-3 col-md-3" style="padding-left: 5px; padding-right: 5px;">
-									<button id="livestock_sheep" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Sheep</button>
-								</div>
-								
-								<div class="col-xs-3 col-md-3" style="padding-left: 5px; padding-right: 5px;">
-									<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
-								</div>
-							</div> 
+				<!--<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-xs-12 col-md-12">-->
+					<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>
+					<!--<div class="container" style="padding-left: 0px; padding-right: 0px;"> -->
+					<div class="row mb-3">
+						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+							<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
+						</div>
+						
+						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+							<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
+						</div>
+						
+						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+							<button id="livestock_sheep" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Sheep</button>
+						</div>
+						
+						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+							<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
+						</div>
+					</div> 
 						<!-- </div> -->
-					</div>
+					<!--</div>-->
 					
-					<div id="tableau-chart" class="container">
-						<div class='tableauPlaceholder' id='viz1599549008892' style='position: relative; width:100%; height:50%;'>
+					<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
+						<div class='tableauPlaceholder' id='viz1599651184552' style='position: relative; width:100%;'>
 							<noscript>
-								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumberslinechart&#47;SheepNumbersfrom1973to2016&#47;1_rss.png' style='border: none' /></a>
+								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png' style='border: none' /></a>
 							</noscript>
 							<object class='tableauViz'  style='display:none;'>
 								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
 								<param name='embed_code_version' value='3' /> 
 								<param name='site_root' value='' />
-								<param name='name' value='sheepnumberslinechart&#47;SheepNumbersfrom1973to2016' />
+								<param name='name' value='sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016' />
 								<param name='tabs' value='no' />
 								<param name='toolbar' value='yes' />
-								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumberslinechart&#47;SheepNumbersfrom1973to2016&#47;1.png' /> 
+								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1.png' /> 
 								<param name='animate_transition' value='yes' />
 								<param name='display_static_image' value='yes' />
 								<param name='display_spinner' value='yes' />
@@ -132,7 +133,7 @@
 							</object>
 						</div>
 					</div>
-				</div>
+				<!--</div>-->
 			</div>
 		</section>
 		
@@ -204,10 +205,16 @@
 		
 		<script type='text/javascript'>                    
 			window.onload = function() {
-				var divElement = document.getElementById('viz1599549008892');                    
-				var vizElement = divElement.getElementsByTagName('object')[0];                    
-				vizElement.style.width='100%';
-				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+				var divElement = document.getElementById('viz1599651184552');                    
+				var vizElement = divElement.getElementsByTagName('object')[0]; 
+				if (divElement.offsetWidth > 700) {
+					vizElement.style.width='100%';
+					vizElement.style.height=(500*0.75)+'px';
+				} else {
+					vizElement.style.width='100%';
+					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+				}
+							
 				var scriptElement = document.createElement('script');                    
 				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);       
