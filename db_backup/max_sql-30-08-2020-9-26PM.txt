@@ -39,17 +39,17 @@ VALUES (1,
 
 INSERT INTO index_offerings
 VALUES (2, 
-        'flaticon-statistics', 
-        'Statistics', 
-        'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 
-        'wip.php');
-
-INSERT INTO index_offerings
-VALUES (3, 
         'flaticon-horse-grazing-black-silhouette', 
         'Grazing Techniques', 
         'Preserving grassland''s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 
         'techniques.php');
+
+INSERT INTO index_offerings
+VALUES (3, 
+        'flaticon-statistics', 
+        'Statistics', 
+        'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 
+        'wip.php');
         
 INSERT INTO index_offerings
 VALUES (4, 
