@@ -9,7 +9,7 @@
 			
 			if ($topic_Data->num_rows > 0) {
 				$title_date_full = $title_date_full . 
-									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">' .
+									'<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">' .
 									  '<h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Select topic</h5>'.
 									  '<button id="drop-topic" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Grazing</button>'.
 									  '<div class="dropdown-news-topic dropdown-menu">';
@@ -32,7 +32,7 @@
 			$region_Data = $con -> query($getRegion);
 			if ($region_Data->num_rows > 0) {
 				$title_date_full = $title_date_full . 
-									'<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">' .
+									'<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">' .
 									  '<h5><i class="fa fa-globe" aria-hidden="true"></i> Select country</h5>'.
 									  '<button id="drop-region" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Australia</button>'.
 									  '<div class="dropdown-news-topic dropdown-menu">';
@@ -52,7 +52,7 @@
 			/* Sort */
 			
 			$title_date_full = $title_date_full .
-			                     '<div class="col-sm-12 col-md-4 col-lg-4 .col-xl-4">'.
+			                     '<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">'.
 								   '<h5><i class="fa fa-sort" aria-hidden="true"></i> Sort by date</h5>'.
 								   '<button id="drop-sort" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Sort Newest to Oldest</button>'.
 								   '<div class="dropdown-news-topic dropdown-menu">'.
