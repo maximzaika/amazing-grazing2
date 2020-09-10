@@ -84,12 +84,12 @@
 			</div>
 		</div>
 		<!-- End Breadcrumb -->
+		
 		<section class="ftco-section bg-light">
 			<div class="container">
-				<!--<div class="row justify-content-center mb-5 pb-3">
-					<div class="col-xs-12 col-md-12">-->
+			
 					<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>
-					<!--<div class="container" style="padding-left: 0px; padding-right: 0px;"> -->
+					
 					<div class="row mb-3">
 						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
 							<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
@@ -107,9 +107,7 @@
 							<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
 						</div>
 					</div> 
-						<!-- </div> -->
-					<!--</div>-->
-					
+
 					<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
 						<div class='tableauPlaceholder' id='viz1599651184552' style='position: relative; width:100%;'>
 							<noscript>
@@ -133,7 +131,6 @@
 							</object>
 						</div>
 					</div>
-				<!--</div>-->
 			</div>
 		</section>
 		

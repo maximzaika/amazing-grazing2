@@ -120,49 +120,49 @@ $(function(){
 				 - No other options allowed together with total
 				*/
 				
-				if (check_active == "true false false false") { // beef cattle
+				if (check_active == "true false false false") { // beef cattle - working
 					var div_id = 'viz1599650978312';
 					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 					var o_name_val = 'cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016';
 					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "false true false false") { // dairy cattle
-					var div_id = 'viz1599651064005';
-					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+				} else if (check_active == "false true false false") { // dairy cattle - working
+					var div_id = 'viz1599661488462';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-					var o_name_val = 'diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016';
-					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattlenumbers-greenline&#47;DiaryCattleNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "false false true false") { // sheep
+					var o_name_val = 'dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false false true false") { // sheep - working
 					var div_id = 'viz1599651184552';
 					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 					var o_name_val = 'sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016';
 					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "true false true false") { // beef cattle & sheep
+				} else if (check_active == "true false true false") { // beef cattle & sheep - working
 					var div_id = 'viz1599652366751';
 					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 					var o_name_val = 'beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016';
 					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "true true false false") { // beef & dairy cattle
-					var div_id = 'viz1599652188763';
-					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+				} else if (check_active == "true true false false") { // beef & dairy cattle - working
+					var div_id = 'viz1599662791854';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-					var o_name_val = 'beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016';
-					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDiaryCattleNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "false true true false") { // dairy cattle & sheep
-					var div_id = 'viz1599652418301';
-					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+					var o_name_val = 'beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false true true false") { // dairy cattle & sheep - working
+					var div_id = 'viz1599663014296';
+					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-					var o_name_val = 'diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016';
-					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DiaryCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else if (check_active == "false false false true") { // total numbers								
+					var o_name_val = 'diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016';
+					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
+				} else if (check_active == "false false false true") { // total numbers - working					
 					var div_id = 'viz1599651273179';
 					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 					var o_name_val = 'totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016';
 					var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1.png';
-				} else { // true true true - beef & dairy cattle, & sheep
+				} else { // true true true - beef & dairy cattle, & sheep - working
 					var div_id = 'viz1599652501574';
 					var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;mu&#47;multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
 					var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
