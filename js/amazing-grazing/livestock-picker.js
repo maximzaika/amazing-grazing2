@@ -171,12 +171,10 @@ $(function(){
 				}
 			}
 			
+			/* Add custom graph to the webpage based on user selection */
 
-			
 			// add div
-			var div = document.createElement('div'); // create tableau div
-			
-			
+			var div = document.createElement('div');
 			div.classList.add('tableauPlaceholder');
 			div.setAttribute('id', div_id);
 			div.setAttribute('style', 'position: relative; width:100%;');
@@ -192,7 +190,6 @@ $(function(){
 			
 					// add img
 					var noscript_img = document.createElement('img');
-					
 					noscript_img.setAttribute('alt', ' ');
 					noscript_img.setAttribute('src', specialToHTML(img_src));
 					noscript_img.setAttribute('style', 'border: none');
@@ -206,7 +203,6 @@ $(function(){
 			
 				// add params - host_url
 				var o_host_url = document.createElement('param');
-				
 				o_host_url.setAttribute('name', 'host_url');
 				o_host_url.setAttribute('value', o_h_url);
 				table_object.appendChild(o_host_url);
@@ -225,7 +221,6 @@ $(function(){
 				
 				// add params - name
 				var o_name = document.createElement('param');
-				
 				o_name.setAttribute('name', 'name');
 				o_name.setAttribute('value', specialToHTML(o_name_val));
 				table_object.appendChild(o_name);
@@ -291,10 +286,10 @@ $(function(){
 				o_filter.setAttribute('value', 'publish=yes');
 				table_object.appendChild(o_filter);
 			
+			document.getElementById("tableau-chart").appendChild(div); // add to the webpage
 			
 			
-			document.getElementById("tableau-chart").appendChild(div); // add to the document
-			
+			/* Control tableau execution */
 			var divElement = document.getElementById(div_id);                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
 			if (divElement.offsetWidth > 700) {

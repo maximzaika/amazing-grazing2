@@ -73,7 +73,7 @@
 		<!-- End Section 1: Page header - Grazing Techniques -->
 		
 		<!-- Breadcrumbs -->
-		<div class="container-fluid  bg-light">
+		<div class="container-fluid bg-light">
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
@@ -85,12 +85,23 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<section class="ftco-section bg-light">
-			<div class="container">
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light" >
+			<div class="container pt-md-4">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style="color: #228B22;">LIVESTOCK IS REDUCING</h2>
+					</div>
+				</div>
+			</div>
 			
-					<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>
+			<div class="container">
 					
-					<div class="row mb-3">
+					
+					
+					
+					
+					<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>
+					<!--<div class="row mb-3">
 						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
 							<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
 						</div>
@@ -106,12 +117,38 @@
 						<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
 							<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
 						</div>
-					</div> 
+					</div> -->
+					
+					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
+						<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>
+						
+						<div class="collapse dont-collapse-sm" id="collapseExample">
+						  
+							<div class="row mb-3">
+								<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+									<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
+								</div>
+								
+								<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+									<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
+								</div>
+								
+								<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+									<button id="livestock_sheep" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Sheep</button>
+								</div>
+								
+								<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
+									<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
+								</div>
+							</div> 
+						  
+						</div>
+					</div>
 
 					<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
 						<div class='tableauPlaceholder' id='viz1599651184552' style='position: relative; width:100%;'>
 							<noscript>
-								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png' style='border: none' /></a>
+								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png' style='border: none;' /></a>
 							</noscript>
 							<object class='tableauViz'  style='display:none;'>
 								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
@@ -134,7 +171,144 @@
 			</div>
 		</section>
 		
-		
+		<section id="offerings" class="ftco-section ftco-no-pt bg-light" style="padding: 4em 0;">
+			<div class="container pt-md-4">
+				<div class="row justify-content-center">
+					<div class="col-md-12 text-center heading-section coftco-animate">
+						<h2 class="mb-4" style="color: #228B22;">FACTS ABOUT FUTURE</h2>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 services-wrap px-4">
+						<div class="row pt-md-3">
+							<div class="col-sm-3 col-md-3 d-flex align-items-stretch">
+								<div class="services text-center" style="padding-bottom: 10px;">
+									<div class="icon d-flex justify-content-center align-items-center">
+									
+										<span class="flaticon-livestock"></span>
+									</div>
+									
+									<div class="text">
+										<h4><b>Beef cattle in</b></h4>
+										<hr>
+										<div class="container">
+											
+											<div class="row">
+												<div class="col-md-12">
+												
+													<h4><b>2016</b></h4>
+													<h5><i class="fa fa-dot-circle-o" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">70,000,000</span></h5>
+												</div>
+												<div class="col-md-12">
+												
+													<h4><b>2020</b></h4>
+													<h5><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">59,999,666</span></h5>
+												</div>
+												
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-3 col-md-3 d-flex align-items-stretch">
+								<div class="services text-center" style="padding-bottom: 10px;">
+									<div class="icon d-flex justify-content-center align-items-center">
+									
+										<span class="flaticon-milk"></span>
+									</div>
+									
+									<div class="text">
+										<h4><b>Litres of milk in</b></h4>
+										<hr>
+										<div class="container">
+											
+											<div class="row">
+												<div class="col-md-12">
+												
+													<h4><b>2016</b></h4>
+													<h5><i class="fa fa-dot-circle-o" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">70,000,000</span></h5>
+												</div>
+												<div class="col-md-12">
+												
+													<h4><b>2020</b></h4>
+													<h5><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">59,999,666</span></h5>
+												</div>
+												
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-3 col-md-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+									
+										<span class="flaticon-meat"></span>
+									</div>
+									
+									<div class="text">
+										<h4><b>Kg of beef in</b></h4>
+										<hr>
+										<div class="container">
+											
+											<div class="row">
+												<div class="col-md-12">
+												
+													<h4><b>2016</b></h4>
+													<h5><i class="fa fa-dot-circle-o" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">30,566,777</span></h5>
+												</div>
+												<div class="col-md-12">
+												
+													<h4><b>2020</b></h4>
+													<h5><i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">25,444,333</span></h5>
+												</div>
+												
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<!--
+							<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+									
+										<span class="flaticon-meat"></span>
+									</div>
+									
+									<div class="text" style="padding-bottom:25px;">
+										<h4><b>Meat QTY in 2016</b></h4>
+										<h5><span data-toggle="counter-up">45,532,548</span></h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 d-flex align-items-stretch">
+								<div class="services text-center">
+									<div class="icon d-flex justify-content-center align-items-center">
+									
+										<span class="flaticon-news"></span>
+									</div>
+									
+									<div class="text" style="padding-bottom:25px;">
+										<h4><b>Meat QTY in 2020</b></h4>
+										<h5><span data-toggle="counter-up">35,666,555</span></h5>
+									</div>
+								</div>
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 		<!-- Section 3: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -197,25 +371,55 @@
 		<script src="js/main.js"></script>
 		
 		<!-- Added in ITteration 2 -->
-		<!--<script src="js/amazing-grazing/main.js"></script>--> <!-- Floating back to top button, scroll to anchor -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
+		<script src="js/amazing-grazing/counterup.min.js"></script>
 		
-		<script type='text/javascript'>                    
+		<script type='text/javascript'> <!-- initially triggers the tableau -->                    
 			window.onload = function() {
 				var divElement = document.getElementById('viz1599651184552');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
+				
 				if (divElement.offsetWidth > 700) {
 					vizElement.style.width='100%';
 					vizElement.style.height=(500*0.75)+'px';
+					console.log('size is more than 700');
+				} else if (divElement.offsetWidth > 320) {
+					console.log('size is more than 370');
+					vizElement.style.width='100%';
+					vizElement.style.height=(500)+'px';
 				} else {
 					vizElement.style.width='100%';
 					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+					console.log('size is less than 370');
 				}
 							
-				var scriptElement = document.createElement('script');                    
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);       
+				var scriptElement = document.createElement('script');      
+				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);
 			};
+		</script>
+		
+		<script type='text/javascript'> <!-- renames the filter button upon click -->
+			$("#show-filter").click(function() {
+				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
+				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
+				
+				var curr_text = document.getElementById("show-filter").innerHTML;
+				
+				if (curr_text == max_btn) {
+					document.getElementById("show-filter").innerHTML  = min_btn;
+				} else {
+					document.getElementById("show-filter").innerHTML  = max_btn;
+				}
+			});
+		</script>
+		
+		<script type='text/javascript'> <!-- enables the counter script -->
+			$('[data-toggle="counter-up"]').counterUp({
+				delay: 10,
+				time: 500
+			  });
 		</script>
 	</body>
 </html>

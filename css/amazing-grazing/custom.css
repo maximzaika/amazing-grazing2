@@ -56,7 +56,7 @@ img.techn-img{
 	border-radius: 40px;
 }
 
-/* Chck and Cross Icons */
+/* Check and Cross Icons */
 .fa-check {
 	font-size: 100px;
 	color: #4e9525;
@@ -73,6 +73,16 @@ img.techn-img{
 
 .fa-times-techniques {
 	font-size: 50px;
+}
+
+.fa-dot-circle-o {
+	font-size: 25px;
+	color: orange;
+}
+
+.fa-arrow-circle-down {
+	font-size: 25px;
+	color: red;
 }
 
 .service-techniques {
@@ -123,3 +133,12 @@ img.techn-img{
     color: #fbd341;
     background-color: #fff;
     border-color: #fbd341;}
+
+/* Mobile collaps filter */
+@media (min-width: 768px) {
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
+}
