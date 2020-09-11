@@ -2074,15 +2074,6 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-amazing-techniques {
-	color: #fff;
-    background-color: #4e9525;
-    border-color: #fff; }
-  .btn-amazing-techniques:hover {
-    color: #fbd341;
-    background-color: #4e9525;
-    border-color: #fbd341; }
-
 .btn-primary {
   color: #fff;
   background-color: #007bff;
@@ -8485,7 +8476,7 @@ h1, h2, h3, h4, h5,
     transition: all 0.3s ease; }
     .services .icon span {
       color: #4e9525;
-      font-size: 40px; }
+      font-size: 60px; }
   .services .text h3 {
     font-size: 18px;
     font-weight: 600; }

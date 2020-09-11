@@ -1,4 +1,6 @@
 ;(function () {
+	
+	// Function rsponsible for the functionalities of the scroll to top button
 	var scrollToTop = function() {
 		$('.js-gotop').on('click', function(event){ /* Detect the click of the js-gotop class */
 			event.preventDefault(); /* prevents default interaction */
@@ -39,6 +41,7 @@
 			}
 		});
 	};
+	  
 	
 	$(function(){
 		scrollToTop();
