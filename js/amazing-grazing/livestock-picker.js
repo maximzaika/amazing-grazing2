@@ -171,8 +171,8 @@ $(function(){
 				}
 			}
 			
+			
 			/* Add custom graph to the webpage based on user selection */
-
 			// add div
 			var div = document.createElement('div');
 			div.classList.add('tableauPlaceholder');
@@ -288,6 +288,11 @@ $(function(){
 			
 			document.getElementById("tableau-chart").appendChild(div); // add to the webpage
 			
+			/* Trigger the year modification */ 
+			var yearContent = document.getElementById("drop-year").textContent;
+			var selectedYear = "#y_"+yearContent;
+			console.log('selectedYear > ' + selectedYear)
+			$(selectedYear).trigger("click");
 			
 			/* Control tableau execution */
 			var divElement = document.getElementById(div_id);                    
