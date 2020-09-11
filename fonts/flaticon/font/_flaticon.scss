@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 10/09/2020 16:22
+    Creation date: 11/09/2020 09:34
     */
 
     @font-face {
@@ -45,6 +45,8 @@
 .flaticon-milk:before { content: "\f105"; }
 .flaticon-meat:before { content: "\f106"; }
 .flaticon-livestock:before { content: "\f107"; }
+.flaticon-sheep:before { content: "\f108"; }
+.flaticon-region:before { content: "\f109"; }
     
     $font-Flaticon-horse-grazing-black-silhouette: "\f100";
     $font-Flaticon-newspaper: "\f101";
@@ -54,3 +56,5 @@
     $font-Flaticon-milk: "\f105";
     $font-Flaticon-meat: "\f106";
     $font-Flaticon-livestock: "\f107";
+    $font-Flaticon-sheep: "\f108";
+    $font-Flaticon-region: "\f109";
