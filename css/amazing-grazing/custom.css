@@ -85,6 +85,11 @@ img.techn-img{
 	color: red;
 }
 
+.fa-arrow-circle-up {
+	font-size: 25px;
+	color: #4e9525;
+}
+
 .service-techniques {
 	padding: 10px 0px;
 	margin-bottom: 20px;
@@ -141,4 +146,11 @@ img.techn-img{
     height: auto !important;
     visibility: visible;
   }
+}
+
+/* Stick filter to top */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
