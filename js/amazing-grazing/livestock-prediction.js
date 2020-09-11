@@ -26,8 +26,6 @@ $(function(){
 		
 		selectIcon = ""
 		if (title.includes("Sheep") || title.includes("Wool") || title.includes("Beef") || title.includes("Dairy") || title.includes("Milk") || title.includes("Meat")) {
-			console.log('remainVal[0] >' + remainVal[0]);
-			console.log('curVal[0] >' + curVal[0]);
 			if (readNumber(remainVal)[0] < readNumber(curVal)[0]) {
 				selectIcon = icon_bad;
 			} else if (readNumber(remainVal)[0] == readNumber(curVal)[0]) {
@@ -59,11 +57,11 @@ $(function(){
 									'<hr>'+
 									'<div class="container">'+
 										'<div class="row">'+
-											'<div class="col-md-6">'+
+											'<div class="col-md-12">'+
 												'<h4><b>2016</b></h4>'+
 												'<h5><i class="fa '+icon_same+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(curVal)[0] +'</span>'+readNumber(curVal)[1]+'</h5>'+
 											'</div>'+
-											'<div class="col-md-6">'+
+											'<div class="col-md-12">'+
 												'<h4><b>' + year + '</b></h4>'+
 												'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal)[0] +'</span>'+readNumber(remainVal)[1]+'</h5>'+
 											'</div>'+
