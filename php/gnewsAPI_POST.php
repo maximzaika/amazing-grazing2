@@ -161,7 +161,7 @@
 	$newsData = curl_exec($ch); 
 	curl_close($ch); 
     
-	$newsData = json_decode($newsData, true); /* Decode the son format into a readable table */
+	$newsData = json_decode($newsData, true); /* Decode the json format into a readable table */
 	$newsHTML = newsGenerator($newsData, $totalNews, $sortDate); /* Execute the function to scan through the news and create HTMLK readable format */
 	echo json_encode(array("newsHTML"=>$newsHTML)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
 ?>
