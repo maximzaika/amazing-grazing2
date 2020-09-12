@@ -16,19 +16,19 @@ $(function(){
 		
 		if (nStr > 1000000000000) {
 			nStr = Math.round(nStr/1000000000000 * 100)/100;
-			return [nStr, ' tril' + word];
+			return [nStr, ' trillion' + word];
 		} else if (nStr > 1000000000) {
 			nStr = Math.round(nStr/1000000000 * 100)/100;
-			return [nStr, ' bil' + word];
+			return [nStr, ' billion' + word];
 		} else if (nStr > 1000000) {
 			nStr = Math.round(nStr/1000000 * 100)/100;
-			return [nStr, ' mil' + word];
+			return [nStr, ' million' + word];
 		} else if (nStr > 1000) {
 			nStr = Math.round(nStr/1000 * 100)/100;
 			return [nStr, ' thousand' + word];
 		} else {
 			nStr = 0;
-			return [nStr, ''];
+			return [nStr, word];
 		}
 	}
 	
@@ -472,9 +472,9 @@ $(function(){
 
 		selectIcon = ""
 		if (title.includes("Sheep") || title.includes("Livestock") || title.includes("Wool") || title.includes("Yarn") || title.includes("Beef") || title.includes("Dairy") || title.includes("Milk") || title.includes("Meat")) {
-			if (readNumber(remainVal, title)[0] < readNumber(curVal, title)[0]) {
+			if (remainVal < curVal) {
 				selectIcon = icon_bad;
-			} else if (readNumber(remainVal, title)[0] == readNumber(curVal, title)[0]) {
+			} else if (remainVal == curVal, title) {
 				selectIcon = icon_same;
 			} else { // good
 				selectIcon = icon_good;
@@ -482,9 +482,9 @@ $(function(){
 		}
 		
 		if (title.includes("Land")) {
-			if (readNumber(remainVal, title)[0] > readNumber(curVal, title)[0]) {
+			if (remainVal > curVal) {
 				selectIcon = icon_bad;
-			} else if (readNumber(remainVal, title)[0] == readNumber(curVal, title)[0]) {
+			} else if (remainVal == curVal) {
 				selectIcon = icon_same;
 			} else { // good
 				selectIcon = icon_good;
