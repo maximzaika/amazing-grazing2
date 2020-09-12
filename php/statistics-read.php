@@ -41,9 +41,9 @@
 				$con->query($create_sql);				
 			}
 
-			$record_sql = $insert_record .$year_arr[$i].','.
+			$record_sql = $insert_record   .$year_arr[$i].','.
 										'"'.$type_arr[$i].'",'.
-										$qty_arr[$i].');';
+										    $qty_arr[$i].');';
 			$con->query($record_sql);
 		}
 	}
@@ -63,15 +63,16 @@
 								'predict_year int NOT NULL,'.
 								'predict_type varchar(20) NOT NULL,'.
 								'predict_qty float NOT NULL,'.
-								'PRIMARY KEY (stock_id)'.
+								'PRIMARY KEY (predict_id)'.
 							  ');';
 	
-	$prediciton_sql_record = ' INSERT INTO livestock_dataset (predict_year, predict_type, predict_qty)'.
-						   ' VALUES (';
+	$prediciton_sql_record = ' INSERT INTO prediction_dataset (predict_year, predict_type, predict_qty)'.
+						     ' VALUES (';
 								   
-	pushToDB($con, "livestock_year_1973_2016.xlsx", $create_original, $record_sql);
+	pushToDB($con, "livestock_year_1973_2016.xlsx", $create_original, $original_sql_record);
 	pushToDB($con, "livestock_year_2017_and_more.xlsx", $create_prediction, $prediciton_sql_record);
 	
+	echo "Successfully Pushed to DB";
 	
 	$con -> close();
 ?>

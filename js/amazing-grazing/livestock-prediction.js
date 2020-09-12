@@ -1,20 +1,34 @@
 $(function(){
 	/* This function rounds large values and added bil, mil, etc. 
 	   based on the value */
-	function readNumber(nStr) {
+	function readNumber(nStr, title) {
+		if (title.includes("QTY")) {
+			word = "";
+		} else if (title.includes("Beef") || title.includes("Wool")) {
+			word = " KG";
+		} else if (title.includes("Milk")) {
+			word = ' L';
+		} else if (title.includes("Yarn")) {
+			word = ' KM';
+		} else {
+			word = ' M<sup>2</sup>';
+		}
+		
 		if (nStr > 1000000000000) {
 			nStr = Math.round(nStr/1000000000000 * 100)/100;
-			//console.log('proper number > ' + nStr);
-			return [nStr, ' tril'];
+			return [nStr, ' tril' + word];
 		} else if (nStr > 1000000000) {
 			nStr = Math.round(nStr/1000000000 * 100)/100;
-			return [nStr, ' bil'];
+			return [nStr, ' bil' + word];
 		} else if (nStr > 1000000) {
 			nStr = Math.round(nStr/1000000 * 100)/100;
-			return [nStr, ' mil'];
+			return [nStr, ' mil' + word];
 		} else if (nStr > 1000) {
 			nStr = Math.round(nStr/1000 * 100)/100;
-			return [nStr, ' thousand'];
+			return [nStr, ' thousand' + word];
+		} else {
+			nStr = 0;
+			return [nStr, ''];
 		}
 	}
 	
@@ -23,12 +37,12 @@ $(function(){
 		icon_same = "fa-dot-circle-o";
 		icon_good = "fa-arrow-circle-up";
 		icon_bad = "fa-arrow-circle-down";
-		
+
 		selectIcon = ""
-		if (title.includes("Sheep") || title.includes("Wool") || title.includes("Beef") || title.includes("Dairy") || title.includes("Milk") || title.includes("Meat")) {
-			if (readNumber(remainVal)[0] < readNumber(curVal)[0]) {
+		if (title.includes("Sheep") || title.includes("Livestock") || title.includes("Wool") || title.includes("Yarn") || title.includes("Beef") || title.includes("Dairy") || title.includes("Milk") || title.includes("Meat")) {
+			if (readNumber(remainVal, title)[0] < readNumber(curVal, title)[0]) {
 				selectIcon = icon_bad;
-			} else if (readNumber(remainVal)[0] == readNumber(curVal)[0]) {
+			} else if (readNumber(remainVal, title)[0] == readNumber(curVal, title)[0]) {
 				selectIcon = icon_same;
 			} else { // good
 				selectIcon = icon_good;
@@ -36,9 +50,9 @@ $(function(){
 		}
 		
 		if (title.includes("Land")) {
-			if (readNumber(remainVal)[0] > readNumber(curVal)[0]) {
+			if (readNumber(remainVal, title)[0] > readNumber(curVal, title)[0]) {
 				selectIcon = icon_bad;
-			} else if (readNumber(remainVal)[0] == readNumber(curVal)[0]) {
+			} else if (readNumber(remainVal, title)[0] == readNumber(curVal, title)[0]) {
 				selectIcon = icon_same;
 			} else { // good
 				selectIcon = icon_good;
@@ -46,7 +60,7 @@ $(function(){
 		}
 		
 		
-		var content =   '<div id="animate-in" style="padding-bottom:40px;" class="col-xs-6 col-sm-6 col-md-4 d-flex align-items-stretch animated fadeInLeft">'+
+		var content =   '<div id="animate-in" style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 d-flex align-items-stretch animated fadeInLeft">'+
 							'<div class="services text-center" style="padding-bottom: 10px;">'+
 								'<div class="icon d-flex justify-content-center align-items-center">'+
 									'<span class="'+icon+'"></span>'+
@@ -57,13 +71,13 @@ $(function(){
 									'<hr>'+
 									'<div class="container">'+
 										'<div class="row">'+
-											'<div class="col-md-12">'+
-												'<h4><b>2016</b></h4>'+
-												'<h5><i class="fa '+icon_same+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(curVal)[0] +'</span>'+readNumber(curVal)[1]+'</h5>'+
+											'<div class="col-sm-12 col-md-6">'+
+												'<h4><b>2020</b></h4>'+
+												'<h5><i class="fa '+icon_same+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(curVal, title)[0] +'</span>'+readNumber(curVal, title)[1]+'</h5>'+
 											'</div>'+
-											'<div class="col-md-12">'+
+											'<div class="col-sm-12 col-md-6">'+
 												'<h4><b>' + year + '</b></h4>'+
-												'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal)[0] +'</span>'+readNumber(remainVal)[1]+'</h5>'+
+												'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal, title)[0] +'</span>'+readNumber(remainVal, title)[1]+'</h5>'+
 											'</div>'+
 										'</div>'+
 									'</div>'+
@@ -104,102 +118,234 @@ $(function(){
 			$("#prediction-data").empty(); // clear the div container
 			
 			//var insertInDIV = document.getElementById("prediction-data").innerHTML;
-			
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
 				dataType: 'json',
-				data: {receivedYear: year},
+				data: {selectedYear: year},
 				success: function (data) {
+					var current_beef_qty = data.current_beef_qty;
+					var current_dairy_qty = data.current_dairy_qty;
+					var current_sheep_qty = data.current_sheep_qty;
+					var current_total_qty = data.current_total_qty;
+					
+					var selected_beef_qty = data.selected_beef_qty;
+					var selected_dairy_qty = data.selected_dairy_qty;
+					var selected_sheep_qty = data.selected_sheep_qty;
+					var selected_total_qty = data.selected_total_qty;
+					
+					
 					/* QTY */
 					var latestYr = data.latestYr * 1000000; // latest livestock number - qty
 					var selYr = data.selYr * 1000000; // selected livestock number - qty
 					
-					/* Dairy milk */
-					var latestRemainMilk = latestYr * 28 * (10 * (30*10)); //latest year milk - in ltr
-					var selRemainMilk = selYr * 28 * (10 * (30*10)); // selected year milk - in ltr
-					
-					/* Cattle beef */
-					var latestRemainMeat = latestYr * (544.3 * 0.417); //latest year meat - in kg
-					var selRemainMeat = selYr * (544.3 * 0.417); // selected year meat - in kg
-					
-					/* land use */
-					var latestLandBeef = latestYr * 326.21; //latest year meat - in m^2
-					var remainLandBeef = selYr * 326.21; //latest year meat - in m^2
-					
-					var latestDairyBeef = latestYr * 43.24; //latest year meat - in m^2
-					var remainDairyBeef = selYr * 43.24; //latest year meat - in m^2
-					
-					var latestLandSheep = latestYr * 369.81; //latest year meat - in m^2
-					var remainLandSheep = selYr * 369.81; //latest year meat - in m^2
-					
 					/* icons */
-					var icons = ['flaticon-livestock', 'flaticon-milk', 'flaticon-meat', 'flaticon-sheep', 'flaticon-region'];
-					var title = ['Beef in', 'Dairy in', 'Sheeps in', 'Milk in', 'Meat in', 'Land use in'];
+					var icons = ['flaticon-livestock', 'flaticon-milk', 'flaticon-meat', 'flaticon-sheep', 'flaticon-region', 'flaticon-sheep-1', 'flaticon-wool'];
+					var title = ['Beef cattle QTY in', 'Dairy cattle QTY in', 'Sheep QTY in', 'Milk produced in', 'Beef produced in', 'Land used in', 'Wool produced in', 'Yarn produced in', 'Livestock QTY in'];
 					
 					/* HTML content */				 
-					
 					if (check_active == "true false false false") {
+						var latestYr = current_beef_qty * 1000000; // latest livestock number - qty
+						var selYr = selected_beef_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMeat = latestYr * (544.3 * 0.417); //latest year meat - in kg
+						var selRemainMeat = selYr * (544.3 * 0.417); // selected year meat - in kg
+						
+						var latestLandBeef = latestYr * 326.21; //latest year meat - in m^2
+						var remainLandBeef = selYr * 326.21; //latest year meat - in m^2
+						
 						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
 						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
 					} else if (check_active == "false true false false") {
+						var latestYr = current_dairy_qty * 1000000; // latest livestock number - qty
+						var selYr = selected_dairy_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMilk = latestYr * 28 * (10 * (30*10)); //latest year milk - in ltr
+						var selRemainMilk = selYr * 28 * (10 * (30*10)); // selected year milk - in ltr
+						
+						var latestDairyBeef = latestYr * 43.24; //latest year meat - in m^2
+						var remainDairyBeef = selYr * 43.24; //latest year meat - in m^2
+						
 						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
 						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef);
 						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
 					} else if (check_active == "false false true false") {
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr); 			 
-						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep);
-						document.getElementById("prediction-data").innerHTML = sheepQTY + sheepLandUse;
-					} else if (check_active == "true false true false") {
-						var totalLatestLand = latestLandBeef+latestLandSheep;
-						var totalRemainLand = remainLandBeef+remainLandSheep;
+						var latestYr = current_sheep_qty * 1000000; //current year sheep - qty
+						var selYr = selected_sheep_qty * 1000000; //selected year sheep - qty
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr);
+						var latestWoolProduction = latestYr * 11.3; //current year wool production - in kg
+						var selWoolProduction = selYr * 11.3; //selected year wool production - in kg
+						
+						var latestYarnProduction = latestYr * 11.3 * 16; //current year yarn production - in km
+						var selYarnProduction = selYr * 11.3 * 16; //selected year yern production - in km
+						
+						var latestLandSheep = latestYr * 369.81; //current year land - in m^2
+						var remainLandSheep = selYr * 369.81; //selected year sheep - in m^2
+						
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr); 			 
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
+						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep);
+						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
+					} else if (check_active == "true false true false") {
+						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
+						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMeat = latestYr_beef * (544.3 * 0.417); //latest year meat - in kg
+						var selRemainMeat = selYr_beef * (544.3 * 0.417); // selected year meat - in kg
+						
+						var latestYr_sheep = current_sheep_qty * 1000000; // latest livestock number - qty
+						var selYr_sheep = selected_sheep_qty * 1000000; // selected livestock number - qty
+						
+						var latestWoolProduction = latestYr_sheep * 11.3; //current year wool production - in kg
+						var selWoolProduction = selYr_sheep * 11.3; //selected year wool production - in kg
+						
+						var latestYarnProduction = latestYr_sheep * 11.3 * 16; //current year yarn production - in km
+						var selYarnProduction = selYr_sheep * 11.3 * 16; //selected year yern production - in km
+						
+						var totalLatestLand = (latestYr_beef * 326.21) + (latestYr_sheep * 369.81);
+						var totalRemainLand = (selYr_beef * 326.21) + (selYr_sheep * 369.81);
+						
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
-																				sheepQTY + totalLAndUse;
+																				sheepQTY + woolProduction +
+																				yarnProduction + totalLAndUse;
 					} else if (check_active == "true true false false") {
-						var totalLatestLand = latestLandBeef+latestDairyBeef;
-						var totalRemainLand = remainLandBeef+remainDairyBeef;
+						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
+						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr);
+						var latestRemainMeat = latestYr_beef * (544.3 * 0.417); //latest year meat - in kg
+						var selRemainMeat = selYr_beef * (544.3 * 0.417); // selected year meat - in kg
+						
+						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
+						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMilk = latestYr_dairy * 28 * (10 * (30*10)); //latest year milk - in ltr
+						var selRemainMilk = selYr_dairy * 28 * (10 * (30*10)); // selected year milk - in ltr
+						
+						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24);
+						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24);
+						
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr); 
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
 					} else if (check_active == "false true true false") { 
-						var totalLatestLand = latestLandBeef+latestLandSheep;
-						var totalRemainLand = remainLandBeef+remainLandSheep;
+						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
+						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
 						
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr); 
+						var latestRemainMilk = latestYr_dairy * 28 * (10 * (30*10)); //latest year milk - in ltr
+						var selRemainMilk = selYr_dairy * 28 * (10 * (30*10)); // selected year milk - in ltr
+						
+						var latestYr_sheep = current_sheep_qty * 1000000; // latest livestock number - qty
+						var selYr_sheep = selected_sheep_qty * 1000000; // selected livestock number - qty
+						
+						var latestWoolProduction = latestYr_sheep * 11.3; //current year wool production - in kg
+						var selWoolProduction = selYr_sheep * 11.3; //selected year wool production - in kg
+						
+						var latestYarnProduction = latestYr_sheep * 11.3 * 16; //current year yarn production - in km
+						var selYarnProduction = selYr_sheep * 11.3 * 16; //selected year yern production - in km
+						
+						var totalLatestLand = (latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
+						var totalRemainLand = (selYr_dairy * 43.24)+(selYr_sheep * 369.81);
+						
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
 						document.getElementById("prediction-data").innerHTML =  dairyQTY + milkQTY +
-																				sheepQTY + totalLAndUse;
+																				sheepQTY + woolProduction +
+																				yarnProduction + totalLAndUse;
 					} else if (check_active == "false false false true") {
+						var latestYr = current_total_qty * 1000000; // latest livestock number - qty
+						var selYr = selected_total_qty * 1000000; // selected livestock number - qty
+						
+						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
+						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMeat = latestYr_beef * (544.3 * 0.417); //latest year meat - in kg
+						var selRemainMeat = selYr_beef * (544.3 * 0.417); // selected year meat - in kg
+						
+						var latestYr_sheep = current_sheep_qty * 1000000; // latest livestock number - qty
+						var selYr_sheep = selected_sheep_qty * 1000000; // selected livestock number - qty
+						
+						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
+						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMilk = latestYr_dairy * 28 * (10 * (30*10)); //latest year milk - in ltr
+						var selRemainMilk = selYr_dairy * 28 * (10 * (30*10)); // selected year milk - in ltr
+						
+						var latestWoolProduction = latestYr_sheep * 11.3; //current year wool production - in kg
+						var selWoolProduction = selYr_sheep * 11.3; //selected year wool production - in kg
+						
+						var latestYarnProduction = latestYr_sheep * 11.3 * 16; //current year yarn production - in km
+						var selYarnProduction = selYr_sheep * 11.3 * 16; //selected year yern production - in km
+						
+						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
+						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24)+(selYr_sheep * 369.81);
+						
+						var totalQTY = contentHTML(icons[0], title[8], latestYr, year, selYr); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
+						 			 
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
+						document.getElementById("prediction-data").innerHTML = totalQTY + milkQTY +
+																				 beefMeatQTY + woolProduction +
+																				yarnProduction + totalLAndUse;
 						
 					} else { // true true true false
-						var totalLatestLand = latestLandBeef+latestDairyBeef+latestLandSheep;
-						var totalRemainLand = remainLandBeef+remainDairyBeef+remainLandSheep;
+						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
+						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr);
+						var latestRemainMeat = latestYr_beef * (544.3 * 0.417); //latest year meat - in kg
+						var selRemainMeat = selYr_beef * (544.3 * 0.417); // selected year meat - in kg
+						
+						var latestYr_sheep = current_sheep_qty * 1000000; // latest livestock number - qty
+						var selYr_sheep = selected_sheep_qty * 1000000; // selected livestock number - qty
+						
+						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
+						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
+						
+						var latestRemainMilk = latestYr_dairy * 28 * (10 * (30*10)); //latest year milk - in ltr
+						var selRemainMilk = selYr_dairy * 28 * (10 * (30*10)); // selected year milk - in ltr
+						
+						var latestWoolProduction = latestYr_sheep * 11.3; //current year wool production - in kg
+						var selWoolProduction = selYr_sheep * 11.3; //selected year wool production - in kg
+						
+						var latestYarnProduction = latestYr_sheep * 11.3 * 16; //current year yarn production - in km
+						var selYarnProduction = selYr_sheep * 11.3 * 16; //selected year yern production - in km
+						
+						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
+						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24)+(selYr_sheep * 369.81);
+						
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr); 
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr); 			 
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep); 			 
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				dairyQTY + milkQTY +
-																				sheepQTY + totalLAndUse;
+																				sheepQTY + woolProduction +
+																				yarnProduction + totalLAndUse;
 					}
 					
 					/* Enable number count */

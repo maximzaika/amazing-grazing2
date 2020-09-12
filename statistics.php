@@ -73,7 +73,7 @@
 		<!-- End Section 1: Page header - Grazing Techniques -->
 		
 		<!-- Breadcrumbs -->
-		<div class="container-fluid bg-light">
+		<div class="container-fluid bg-light ftco-animate">
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
@@ -85,104 +85,106 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light" >
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" >
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
-					<div class="col-md-12 text-center heading-section coftco-animate">
-						<h2 class="mb-4" style="color: #228B22;">LIVESTOCK IS REDUCING</h2>
+					<div class="col-md-12 text-center heading-section">
+						<h2 class="mb-4">LIVESTOCK IS REDUCING</h2>
+						<span class="subheading">Grasslands and humans are in danger!</span>
 					</div>
 				</div>
 			</div>
 			
-			<div class="container">
+			<div class="container py-5 pt-md-5">
 				
-				<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>				
+							
 				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
-					<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>
-					
-					<div class="collapse dont-collapse-sm" id="collapseExample">
+					<div class="row">
+						<div class="col-md-3">
+							<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>	
+							<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>
+							
+							<div class="collapse dont-collapse-sm" id="collapseExample">
+								
+								<div class="row mb-3 ">
+									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
+										<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
+									</div>
+									
+									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
+										<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
+									</div>
+									
+									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
+										<button id="livestock_sheep" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Sheep</button>
+									</div>
+									
+									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
+										<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
+									</div>
+									
+								</div> 
+							</div>
+							
+							
+								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select year to predict</h5>
+								<div class="dropdown">
+								  <button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</button>
+								  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a id="y_2030" class="dropdown-item lvstYearPrediction">2030</a>
+									<a id="y_2040" class="dropdown-item lvstYearPrediction">2040</a>
+									<a id="y_2050" class="dropdown-item lvstYearPrediction">2050</a>
+									<a id="y_2060" class="dropdown-item lvstYearPrediction">2060</a>
+								  </div>
+								</div>
+							
+						</div>
 						
-						<div class="row mb-3 ">
-							<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
-								<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
+						<div class="col-md-9">
+							<h5><i class="fa fa-line-chart" aria-hidden="true"></i> Prediction graph</h5>
+							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
+								<div class='tableauPlaceholder' id='viz1599895574623' style='position: relative; width:100%;'>
+									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png' style='border: none' /></a>
+									</noscript>
+									<object class='tableauViz'  style='display:none;'>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+										<param name='embed_code_version' value='3' /> 
+										<param name='site_root' value='' />
+										<param name='name' value='sheep1973-2030&#47;SheepNumbersfrom1973to2030' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png' /> 
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='language' value='en' />
+										<param name='filter' value='publish=yes' />
+									</object>
+								</div>
 							</div>
-							
-							<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
-								<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
-							</div>
-							
-							<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
-								<button id="livestock_sheep" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Sheep</button>
-							</div>
-							
-							<div class="col-xs-3 col-md-3" style="padding-bottom: 5px; padding-top: 5px;">
-								<button id="livestock_total" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Total</button>
-							</div>
-						</div> 
-					  
+						</div>
 					</div>
 				</div>
 
-				<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
-					<div class='tableauPlaceholder' id='viz1599651184552' style='position: relative; width:100%;'>
-						<noscript>
-							<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png' style='border: none;' /></a>
-						</noscript>
-						<object class='tableauViz'  style='display:none;'>
-							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-							<param name='embed_code_version' value='3' /> 
-							<param name='site_root' value='' />
-							<param name='name' value='sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016' />
-							<param name='tabs' value='no' />
-							<param name='toolbar' value='yes' />
-							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1.png' /> 
-							<param name='animate_transition' value='yes' />
-							<param name='display_static_image' value='yes' />
-							<param name='display_spinner' value='yes' />
-							<param name='display_overlay' value='yes' />
-							<param name='display_count' value='yes' />
-							<param name='language' value='en' />
-							<param name='filter' value='publish=yes' />
-						</object>
-					</div>
-				</div>
+				
 			</div>
 		</section>
 		
 		<!-- Section: Facts About Future -->
 		<section id="offerings" class="ftco-section ftco-no-pt ft-co-no-pb bg-light">
 			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-12 py-5 text-center heading-section coftco-animate">
-						<h2 class="mb-4" style="color: #228B22;">FACTS ABOUT FUTURE</h2>
-					
-					
-						<h5 class="text-left"><i class="fa fa-check-square-o" aria-hidden="true"></i> Select year to show prediction</h5>
-					
-						<div class="row">
-							<div class="col-md-4">
-								<div class="dropdown">
-								  <button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2020</button>
-								  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a id="y_2020" class="dropdown-item lvstYearPrediction">2020</a>
-									<a id="y_2025" class="dropdown-item lvstYearPrediction">2025</a>
-									<a id="y_2030" class="dropdown-item lvstYearPrediction">2030</a>
-									<a id="y_2035" class="dropdown-item lvstYearPrediction">2035</a>
-									<a id="y_2040" class="dropdown-item lvstYearPrediction">2040</a>
-									<a id="y_2045" class="dropdown-item lvstYearPrediction">2045</a>
-									<a id="y_2050" class="dropdown-item lvstYearPrediction">2050</a>
-									<a id="y_2055" class="dropdown-item lvstYearPrediction">2055</a>
-									<a id="y_2060" class="dropdown-item lvstYearPrediction">2060</a>
-								  </div>
-								</div>
-							</div>
-						</div>
-					<div class="col-md-4 offset-md-4"></div>
+				<div class="row justify-content-center pt-md-4">
+					<div class="col-md-12 text-center heading-section coftco-animate">
+						<h2 class="mb-4">FACTS ABOUT FUTURE</h2>
+						<span class="subheading">Our future is in danger!</span>
+					</div>
 				</div>
 			</div>
 			
 			<!-- Card section -->
-			<div class="container" style="padding-left: 0px; padding-right: 0px;">
+			<div class="container" >
 				<div class="row">
 					<div class="col-lg-12 services-wrap">
 						<div id="prediction-data" class="row pt-md-3"> 
@@ -264,7 +266,7 @@
 		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
 			window.onload = function() {
-				var divElement = document.getElementById('viz1599651184552');                    
+				var divElement = document.getElementById('viz1599895574623');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
 				if (divElement.offsetWidth > 700) {
@@ -291,6 +293,21 @@
 				console.log('selectedYear > ' + selectedYear)
 				$(selectedYear).trigger("click");
 			};
+		</script>
+		
+		<script type='text/javascript'> <!-- renames the filter button upon click -->
+			$("#show-filter").click(function() {
+				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
+				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
+				
+				var curr_text = document.getElementById("show-filter").innerHTML;
+				
+				if (curr_text == max_btn) {
+					document.getElementById("show-filter").innerHTML  = min_btn;
+				} else {
+					document.getElementById("show-filter").innerHTML  = max_btn;
+				}
+			});
 		</script>
 		
 		<script type='text/javascript'> <!-- enables the counter script -->
