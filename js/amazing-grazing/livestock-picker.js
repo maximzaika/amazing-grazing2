@@ -125,11 +125,11 @@ $(function(){
 				
 				if (check_active == "true false false false") { // beef cattle - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599650978312';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912357011';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;cattlenumbers&#47;BeefCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -139,19 +139,31 @@ $(function(){
 						var o_name_val = 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599898084840';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903442274';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906080745';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1.png';
 					}
 				} else if (check_active == "false true false false") { // dairy cattle - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599661488462';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912454818';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattlenumbers-greenline&#47;DairyCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -161,20 +173,32 @@ $(function(){
 						var o_name_val = 'dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599898453024';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903542905';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906250101';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1.png';
 					}
 					
 				} else if (check_active == "false false true false") { // sheep - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599651184552';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912662152';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepnumbers-greenline&#47;SheepNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'sheep1973-2016&#47;SheepNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -184,19 +208,31 @@ $(function(){
 						var o_name_val = 'sheep1973-2030&#47;SheepNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599898757146';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'sheep1973-2040&#47;SheepNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903601515';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906317523';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'sheep1973-2060&#47;SheepNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1.png';
 					}
 				} else if (check_active == "true false true false") { // beef cattle & sheep - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599652366751';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912689002';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep&#47;BeefCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -206,19 +242,31 @@ $(function(){
 						var o_name_val = 'beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599899316416';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903797750';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906486538';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1.png';
 					}
 				} else if (check_active == "true true false false") { // beef & dairy cattle - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599662791854';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912787502';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleanddiarycattle&#47;BeefCattleandDairyCattleNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -228,19 +276,31 @@ $(function(){
 						var o_name_val = 'beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599899424475';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903878806';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906558615';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1.png';
 					}
 				} else if (check_active == "false true true false") { // dairy cattle & sheep - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599663014296';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912840034';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;di&#47;diarycattleandsheep&#47;DairyCattleandSheepNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -250,19 +310,31 @@ $(function(){
 						var o_name_val = 'dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599899518417';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903962332';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906664057';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1.png';
 					}
 				} else if (check_active == "false false false true") { // total numbers - working					
 					if (yearContent == '2016') {
-						var div_id = 'viz1599651273179';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912676914';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestocknumbers-greenline&#47;TotalLivestockNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -272,19 +344,31 @@ $(function(){
 						var o_name_val = 'totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599898921840';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599903730048';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906379873';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = 'totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1.png';
 					}
 				} else { // true true true false - beef & dairy cattle, & sheep - working
 					if (yearContent == '2016') {
-						var div_id = 'viz1599652501574';
-						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;mu&#47;multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016&#47;1_rss.png';
+						var div_id = 'viz1599912890804';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;li&#47;livestock1973-2016&#47;LivestockNumbersfrom1973to2016&#47;1_rss.png';
 						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						var o_name_val = 'multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016';
-						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;mu&#47;multiplelivestock&#47;LivestockNumbersinAustraliafrom1973to2016&#47;1.png';
+						var o_name_val = 'livestock1973-2016&#47;LivestockNumbersfrom1973to2016';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;li&#47;livestock1973-2016&#47;LivestockNumbersfrom1973to2016&#47;1.png';
 					} else if (yearContent == '2020') {
 						
 					} else if (yearContent == '2030') {
@@ -294,11 +378,23 @@ $(function(){
 						var o_name_val = '3livestock1973-2030&#47;LivestockNumbersfrom1973to2030';
 						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2030&#47;LivestockNumbersfrom1973to2030&#47;1.png';
 					} else if (yearContent == '2040') {
-						
+						var div_id = 'viz1599899633958';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = '3livestock1973-2040&#47;LivestockNumbersfrom1973to2040';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1.png';
 					} else if (yearContent == '2050') {
-						
+						var div_id = 'viz1599904032692';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = '3livestock1973-2050&#47;LivestockNumbersfrom1973to2050';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1.png';
 					} else { // 2060
-						
+						var div_id = 'viz1599906762820';
+						var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1_rss.png';
+						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
+						var o_name_val = '3livestock1973-2060&#47;LivestockNumbersfrom1973to2060';
+						var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1.png';
 					}
 				}
 			}
