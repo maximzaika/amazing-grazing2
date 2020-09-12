@@ -49,7 +49,7 @@ VALUES (3,
         'flaticon-statistics', 
         'Statistics', 
         'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 
-        'wip.php');
+        'statistics.php');
         
 INSERT INTO index_offerings
 VALUES (4, 

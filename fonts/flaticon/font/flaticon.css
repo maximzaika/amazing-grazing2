@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 11/09/2020 09:34
+  	Creation date: 12/09/2020 07:09
   	*/
 
 @font-face {
@@ -40,3 +40,5 @@ margin-left: 20px;
 .flaticon-livestock:before { content: "\f107"; }
 .flaticon-sheep:before { content: "\f108"; }
 .flaticon-region:before { content: "\f109"; }
+.flaticon-sheep-1:before { content: "\f10a"; }
+.flaticon-wool:before { content: "\f10b"; }
