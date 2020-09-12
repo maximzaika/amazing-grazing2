@@ -40,7 +40,7 @@
 		<!-- End Navigation Bar -->
 		
 		<!-- Error -->
-		<div class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div style="z-index:10001;" class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -85,7 +85,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:10000;">
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center heading-section">
