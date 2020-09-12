@@ -40,7 +40,7 @@
 		<!-- End Navigation Bar -->
 		
 		<!-- Error -->
-		<div class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div style="z-index:10001;" class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -85,7 +85,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" >
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center heading-section">
@@ -127,16 +127,16 @@
 							</div>
 							
 							
-								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select year to predict</h5>
-								<div class="dropdown">
-								  <button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</button>
-								  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a id="y_2030" class="dropdown-item lvstYearPrediction">2030</a>
-									<a id="y_2040" class="dropdown-item lvstYearPrediction">2040</a>
-									<a id="y_2050" class="dropdown-item lvstYearPrediction">2050</a>
-									<a id="y_2060" class="dropdown-item lvstYearPrediction">2060</a>
-								  </div>
-								</div>
+							<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select year to predict</h5>
+							<div class="dropdown" >
+							  <button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</button>
+							  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
+								<a id="y_2030" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2030</a>
+								<a id="y_2040" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2040</a>
+								<a id="y_2050" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2050</a>
+								<a id="y_2060" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2060</a>
+							  </div>
+							</div>
 							
 						</div>
 						
@@ -181,10 +181,10 @@
 						<span class="subheading">Our future is in danger!</span>
 					</div>
 				</div>
-			</div>
+			
 			
 			<!-- Card section -->
-			<div class="container" >
+			
 				<div class="row">
 					<div class="col-lg-12 services-wrap">
 						<div id="prediction-data" class="row pt-md-3"> 
@@ -193,6 +193,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<!-- End Card section -->
 		</section>
 		<!-- End Section: Facts About Future -->
@@ -286,16 +287,17 @@
 				var scriptElement = document.createElement('script');      
 				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-				
+			};
+			
+			$(document).ready(function(){
 				/* Trigger the card update based on the year selected */
 				var yearContent = document.getElementById("drop-year").textContent;
 				var selectedYear = "#y_"+yearContent;
-				console.log('selectedYear > ' + selectedYear)
 				$(selectedYear).trigger("click");
-			};
+			});
 		</script>
 		
-		<script type='text/javascript'> <!-- renames the filter button upon click -->
+		<script type='text/javascript'> <!-- renames the filter button upon click -->		
 			$("#show-filter").click(function() {
 				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
 				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
@@ -311,6 +313,8 @@
 		</script>
 		
 		<script type='text/javascript'> <!-- enables the counter script -->
+			
+			
 			$('[data-toggle="counter-up"]').counterUp({
 				delay: 10,
 				time: 500
