@@ -59,14 +59,14 @@ $(function(){
 			}
 		}
 		
-		
-		var content =   '<div id="animate-in" style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 d-flex align-items-stretch animated fadeInLeft">'+
+		var randomVal = 'random'+Math.floor(Math.random() * 1000);;
+		var content =   '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'+
 							'<div class="services text-center" style="padding-bottom: 10px;">'+
-								'<div class="icon d-flex justify-content-center align-items-center">'+
+								'<div class="icon justify-content-center align-items-center">'+
 									'<span class="'+icon+'"></span>'+
 								'</div>'+
 								
-								'<div class="text">'+
+								'<div class="text" style="padding-bottom:40px;">'+
 									'<h4><b>'+title+'</b></h4>'+
 									'<hr>'+
 									'<div class="container">'+
@@ -79,9 +79,32 @@ $(function(){
 												'<h4><b>' + year + '</b></h4>'+
 												'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal, title)[0] +'</span>'+readNumber(remainVal, title)[1]+'</h5>'+
 											'</div>'+
+											
+										'</div>'+
+										
+										
+									'</div>'+
+									'<hr>'+
+									'<div class="container">'+
+										'<div class="row">'+	
+												
+												
+											'<h5>text text text text text text</h5>'+
+											'<div class="collapse" id="'+randomVal+'">'+
+												'<h5 class="text-justify">text text text text text text text text text text text text text text text text text text text text text</h5>'+
+											'</div>'+
+													
+													
 										'</div>'+
 									'</div>'+
+									
+									
 								'</div>'+
+								
+								'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-expand" aria-hidden="true"></i> Read more</span></a>'+
+										
+										
+									
 							'</div>'+
 						 '</div>';
 		return content;
@@ -117,13 +140,14 @@ $(function(){
 			$('#prediction-data').removeClass('animated fadeOutRight');  // remove fade out animation class
 			$("#prediction-data").empty(); // clear the div container
 			
-			//var insertInDIV = document.getElementById("prediction-data").innerHTML;
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
 				dataType: 'json',
 				data: {selectedYear: year},
 				success: function (data) {
+					
+					
 					var current_beef_qty = data.current_beef_qty;
 					var current_dairy_qty = data.current_dairy_qty;
 					var current_sheep_qty = data.current_sheep_qty;
