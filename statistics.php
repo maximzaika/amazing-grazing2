@@ -60,7 +60,7 @@
 		</div>
 		
 		<!-- Section 1: Page header - Grazing Techniques -->
-		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/grazing_methods.jpg');" data-stellar-background-ratio="0.5">
+		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/livestock-statistics.jpg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
 				<div class="container">
 					<div class="row no-gutters slider-text align-items-end justify-content-center">
