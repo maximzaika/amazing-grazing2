@@ -85,7 +85,17 @@ img.techn-img{
 	color: red;
 }
 
+.fa-exclamation-circle {
+	font-size: 25px;
+	color: red;
+}
+
 .fa-arrow-circle-up {
+	font-size: 25px;
+	color: #4e9525;
+}
+
+.fa-check-circle {
 	font-size: 25px;
 	color: #4e9525;
 }
