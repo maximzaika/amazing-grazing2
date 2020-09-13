@@ -267,7 +267,7 @@
 		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
 			window.onload = function() {
-				var divElement = document.getElementById('viz1599895574623');                    
+				/*var divElement = document.getElementById('viz1599895574623');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
 				if (divElement.offsetWidth > 700) {
@@ -286,7 +286,7 @@
 							
 				var scriptElement = document.createElement('script');      
 				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);*/
 			};
 			
 			$(document).ready(function(){
