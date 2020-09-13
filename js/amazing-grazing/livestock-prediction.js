@@ -47,7 +47,6 @@ $(function(){
 		$("#tableau-chart").empty(); // remove active chart
 		
 		var yearContent = document.getElementById("drop-year").textContent; // Currently active year
-		console.log('current active year is > ' + yearContent);
 		
 		if (check_active == "true false false false") { // beef cattle - working
 			if (yearContent == '2016') {
@@ -448,15 +447,12 @@ $(function(){
 		if (divElement.offsetWidth > 700) {
 			vizElement.style.width='100%';
 			vizElement.style.height=(500*0.75)+'px';
-			console.log('size is more than 700');
 		} else if (divElement.offsetWidth > 320) {
-			console.log('size is more than 370');
 			vizElement.style.width='100%';
 			vizElement.style.height=(500)+'px';
 		} else {
 			vizElement.style.width='100%';
 			vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-			console.log('size is less than 370');
 		}
 					
 		var scriptElement = document.createElement('script');      
@@ -465,34 +461,52 @@ $(function(){
 	}
 	
 	/* This function decides what content needs to be sent to the client */
-	function contentHTML(icon, title, curVal, year, remainVal){
+	function contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText){
 		icon_same = "fa-dot-circle-o";
 		icon_good = "fa-arrow-circle-up";
 		icon_bad = "fa-arrow-circle-down";
+		
+		icon_reduced = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i>';
+		icon_improved = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
+		icon_unchanged = '<i class="fa fa-dot-circle-o" aria-hidden="true"></i>';
 
 		selectIcon = ""
 		if (title.includes("Sheep") || title.includes("Livestock") || title.includes("Wool") || title.includes("Yarn") || title.includes("Beef") || title.includes("Dairy") || title.includes("Milk") || title.includes("Meat")) {
 			if (remainVal < curVal) {
+				var changeVal = curVal - remainVal;
+				var changeText = icon_reduced + ' Decreased by&nbsp<span data-toggle="counter-up">' + readNumber(changeVal, title)[0] + "</span>" + readNumber(changeVal, title)[1];
 				selectIcon = icon_bad;
 			} else if (remainVal == curVal, title) {
 				selectIcon = icon_same;
+				var changeText = icon_unchanged + ' Unchanged';
 			} else { // good
 				selectIcon = icon_good;
+				var changeVal = curVal - remainVal;
+				var changeText = icon_improved + ' Improved by&nbsp<span data-toggle="counter-up">' + readNumber(changeVal, title)[0] + "</span>" + readNumber(changeVal, title)[1];
 			}
 		}
 		
 		if (title.includes("Land")) {
 			if (remainVal > curVal) {
 				selectIcon = icon_bad;
+				var changeVal = remainVal - curVal;
+				var changeText = icon_reduced + ' Reduced by&nbsp<span data-toggle="counter-up">' + readNumber(changeVal, title)[0] + "</span>" + readNumber(changeVal, title)[1];
 			} else if (remainVal == curVal) {
 				selectIcon = icon_same;
+				var changeText = icon_unchanged + ' Unchanged';
 			} else { // good
 				selectIcon = icon_good;
+				var changeVal = curVal - remainVal;
+				var changeText = icon_improved + ' Improved by&nbsp<span data-toggle="counter-up">' + readNumber(changeVal, title)[0] + "</span>" + readNumber(changeVal, title)[1];
 			}
 		}
 		
-		var randomVal = 'random'+Math.floor(Math.random() * 1000);;
-		var content =   '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'+
+		var randomVal = 'random'+Math.floor(Math.random() * 1000);
+		var openModal = randomVal+'_modal';
+		/* Added modal to expand the text */
+		
+		
+		var content = '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'+
 							'<div class="services text-center" style="padding-bottom: 10px;">'+
 								'<div class="icon justify-content-center align-items-center">'+
 									'<span class="'+icon+'"></span>'+
@@ -517,28 +531,61 @@ $(function(){
 										
 									'</div>'+
 									'<hr>'+
+									'<h5 class="text-center">'+changeText+'</h5>'+
+									'<hr>'+
 									'<div class="container">'+
-										'<div class="row">'+	
-												
-												
-											'<h5>text text text text text text</h5>'+
-											'<div class="collapse" id="'+randomVal+'">'+
-												'<h5 class="text-justify">text text text text text text text text text text text text text text text text text text text text text</h5>'+
-											'</div>'+
-													
-													
+										
+										'<div class="row">'+		
+											'<ul style="margin-bottom:0px;">'; 	
+		
+		randomArray = [];
+		for (i=0;i<modalTitle.length;i++) {
+			var randomVal_ = 'random'+Math.floor(Math.random() * 1000);
+			var openModal = randomVal_+'_modal';
+			randomArray.push(openModal);
+			if (i == 0) { // first small preview
+				var content = content + '<li><h5 class="text-justify">'+preview[i]+'</h5></li>';
+			}
+			if (modalTitle[i] != '') {
+				$('body').append('<div class="modal fade" id="'+randomArray[i]+'" tabindex="-1" role="dialog" aria-labelledby="'+randomArray[i]+'Label" aria-hidden="true">'+
+							'<div class="modal-dialog modal-dialog-centered" role="document">'+
+								'<div class="modal-content">'+
+									'<div class="modal-header">'+
+										'<h5 class="modal-title" id="'+randomArray[i]+'Label"><b>'+modalTitle[i]+'</b></h5>'+
+										'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+											'<span aria-hidden="true">&times;</span>'+
+										'</button>'+
+									'</div>'+
+									'<div class="modal-body">'+
+										modalText[i] +
+									'</div>'+
+									'<div class="modal-footer">'+
+										'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
+									'</div>'+
+								'</div>'+
+							'</div>'+
+						'</div>');
+			}
+		}
+		
+		var content = content + '</ul>'+
+					             '<div class="collapse" id="'+randomVal+'">'+
+									'<ul>';
+									
+		for (i=0;i<modalTitle.length;i++) {
+			if (modalTitle[i] != '') { // other large expanded previews
+				var content = content + '<li><h5 class="text-justify">'+preview[i]+" <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#"+randomArray[i]+"'><u>Learn more</u></a>"+'</h5></li>';
+			}
+		}
+		
+		var content = content + 				'</ul>'+
+											'</div>'+		
 										'</div>'+
 									'</div>'+
-									
-									
 								'</div>'+
-								
-								'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-expand" aria-hidden="true"></i> Read more</span></a>'+
-										
-										
-									
+								'<a id="'+randomVal+'-animal" class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-expand" aria-hidden="true"></i> View more</span></a>'+
 							'</div>'+
-						 '</div>';
+						'</div>';				 
 		return content;
 	}
 	
@@ -563,7 +610,6 @@ $(function(){
 			
 			for (i = 0; i < 4; i++) {
 				checkActive.push($(buttons[i]).hasClass(class_on));
-				console.log($(buttons[i]).hasClass(class_on));
 			}
 			
 			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
@@ -599,6 +645,123 @@ $(function(){
 					var icons = ['flaticon-livestock', 'flaticon-milk', 'flaticon-meat', 'flaticon-sheep', 'flaticon-region', 'flaticon-sheep-1', 'flaticon-wool'];
 					var title = ['Beef cattle QTY in', 'Dairy cattle QTY in', 'Sheep QTY in', 'Milk produced in', 'Beef produced in', 'Land used in', 'Wool produced in', 'Yarn produced in', 'Livestock QTY in'];
 					
+					
+					var preview_beef = ['Maintain balance between protecting grasslands and keeping your beef cattle numbers high',
+										'Burn grassland not only for the beef cattle. Grasslands require planned burning',
+										'Droughts and too much humid negatively affect grasslands and beef cattle',
+										'Just like grasslands, beef cattle is involved in the whole biomass and generates numerous by-products'];
+					var modal_beef_title = ['',
+									   'Burn grasslands and increase livestocks',
+									   'Keep grasslands fresh',
+									   'Beef cattle provides hundreds by-products'];
+					var modal_beef_text = ['',
+									  '<h5 class="text-justify">Conduct controlled dry season burning to stimulate fresh plant growth to restore calcium to the soil that builds up in the dry grasses. Some species of native plants need occasional fire to thrive, while blazes can also help remove invasive species.</h5><p></p><h5 class="text-justify">Fire is important for grasslands’ existence. They prevent woody plants from spreading and enable the grass to re-grow, becoming thicker, more resilient and healthier. How do grasses survive these fires? They have developed extensive underground systems during the course of evolution, which allow them to burst back to life, stronger than ever before, fairly quickly after a fire.</h5>',
+									  '<h5 class="text-justify">All grasslands get a specific amount of yearly rainfall, depending on their exact location in the world. What you didn not know is that if grasslands receive much less rain than ordinarily, it would become a desert, and if it got much more rain than usually, it would eventually turn into a forest. That is also the reason why grasslands are often located between deserts and forests – these nearby areas get less or more rain, and have thus developed into something else.</h5><p><p><h5>provide solution perhaps?</h5>',
+									  '<h5 class="text-justify">Over 98% of the beef animal is used when it is processed. Besides meat and milk, beef cattle provide us with hundreds of important by-products. About 45% of the animal is used for meat and the rest is used for other by-products including leather, china, glue, film, soap, pharmaceuticals, insulin, gelatines, etc. Almost the entire beef animal can be used in some way. From a typical 454-kilogram steer, slightly over 40% of the animal is used for retail beef and the remaining 60% is processed into by-products.</h5>'];
+					
+					var preview_dairy =    ['Protecting grasslands is important but lack of dairy cattle will lead to lack of milk supply',
+									        'Kangaroos negatively affect grasslands development and dairy cattle',
+											'Just like grasslands, dairy cattle need rest in their life cycle',
+											'Make sure the right grazing technique is used to provide enough food'];
+					var modal_dairy_title = ['',
+									        'Keep kangaroos away from grasslands',
+											'Provide enough rest for dairy cattle',
+											'Keep dairy cattle fed'];
+					var modal_dairy_text =  ['',
+									        "<h5 class='text-justify'>Kangaroo numbers need to be controlled due to threatening one of Australia's last remaining original grasslands and endangered livestock. Australian Department of Defence is currently culling hundreds of kangaroos on the outskirts of the capital Canberra that have produced heated discussions and hit international headlines. Australia's iconic animal has multiplied so much over recent years that Canberra has three times as many kangaroos as inhabitants. The situation is particularly critical at two enclosed military sites on the outskirts of the city, which form an ideal refuge for the eastern grey kangaroo (Macropus giganteus)</h5>",
+											'<h5 class="text-justify">Generally, a cow can produce milk in 9-10 months each year according to pregnancy. Many ranchers run cow-calf operations. The cows are bred to calve in the spring or fall that keeps a herd of cows to produce calves. The natural life expectancy of a cow is twenty years. Some get up to 25 years old. Cows, like our grassland that need certain time to rest and regrowth for healing and better productivity. Therefore, we recommend you take sustainable techniques like rotational grazing and patch-burn to rest the land.</h5>',
+											'<h5 class="text-justify">A cow, that is milking, eats about 45 kilograms of feed each day. Cows drink a whole bathtub of water in just one day. That’s why cows are considered as the competitive eater and ultimate recyclers. The feed is typically a combination of grass, grain, and a mixture of other ingredients like citrus pulp, almond hulls and cotton seeds. These are items that may otherwise be thrown away. The ingredients, that we cannot eat, can often be nutritious for them. Farmers employ professional animal nutritionists to develop scientifically formulated, balanced, and nutritious diets for their cows.</h5>'];
+					
+					var preview_milk =    ['Reduction of dairy livestock leads to extreme reduction of milk quantity',
+										   'Ensure that suitable grasslands are selected and appropriate grazing techniques are used',
+										   'Two-way effects! Estimate the value of environmental impacts of dairy farming'];
+					var modal_milk_title = ['',
+									        'Maintain grasslands well',
+											'Estimate the value of environmental impacts of dairy farming'];
+					var modal_milk_text =  ['',
+									        '<h5 class="text-justify">Although grass is without a doubt the most important feature of grasslands, it doesn’t grow all the time, at least not in temperate grasslands that are most common in Earth’s mid-latitude, such as America’s prairies and Europe’s steppes.</h5><p></p><h5 class="text-justify">Life in temperate grasslands is forced to survive in two very different seasons: the growing season and the dormant season. While the growing season allows the flora of the grasslands to thrive, the climate is too cold during the dormant season.</h5>',
+											'<h5 class="text-justify">The intensification and expansion of dairy farms have contributed to many environmental problems such as the contamination of ground and surface water, insufficient water for irrigation during droughts, excess nutrient losses from farms, larger emissions of greenhouse gases. Permanent grassland farms can generally keep up with fodder-crop farms, even in an intensive production setting. However, extensively operating farms, especially those on permanent grassland, significantly lag behind in productivity.</h5>'];
+					
+					var preview_sheep =    ['Sheep are the most dominate livestock in Australia and its reduction will negatively affect Australian economy',
+											'Rabbits can be a cause of decreasing number of sheep',
+											'Sheep are light eaters compared to cattle, but their density is much higher'];
+					var modal_sheep_title = ['',
+									        'Beware of rabbits',
+											'High density of sheeps negative affect grassland'];
+					var modal_sheep_text =  ['',
+									        '<h5 class="text-justify">Rabbits compete with native animals and domestic livestock for food and shelter, increasing grazing pressure and lowering the land’s carrying capacity.</h5><p></p><h5 class="text-justify">Rabbits act as a food source for introduced predators, which can lead to increased lamb losses and disease prevalence.</h5>',
+											'<h5 class="text-justify">Large density causes lots of damage to the grass and the plants in the area. Though, sheep are herbivores, which means their diet does not include meat. They typically eat seeds, grass and plants. Some sheep do not need much water. The desert bighorn sheep, for example, gets most of its water from eating plants. Like all ruminants, they have multi-chambered stomachs that are adapted to ferment cellulose before digestion. To completely digest their food, sheep will regurgitate their food into their mouths, rechew and swallow. This regurgitated food is called cud.</h5>'];
+					
+					var preview_wool =    ['Rapid increase in reduction of wool will eventually lead to depletion, loss of income, and reduction of cloths',
+										   'Ensure that grasslands gets enough water to provide nutrients to sheeps',
+										   'Wool is a treasure in Australia because it helps us to win Guinness World Record'];
+					var modal_wool_title = ['',
+									        'Keep grasslands moist',
+											'Aussie won the Guinness World Record'];
+					var modal_wool_text =  ['',
+									        '<h5 class="text-justify">Where there are plants, there also must be moisture in the soil, and grasslands with their various kinds of grasses, shrubbery and even occasional trees are no different. But the relationship of grasslands and rain is a complicated one. All types of grasslands need a certain amount of rain, but then again not too much rain, since that will cause them to transform into something else.</h5><p></p><h5 class="text-justify">How much rain is too much rain? How much is too little? That depends on the type of grassland and its location, but grasslands in general get around 50 to 90 centimetres of annual rainfall. Some grasslands also exist in areas where the annual rainfall exceeds 120 centimetres annually, and some exist in areas where there is as little as 25 centimetres of annual rainfall.</h5>',
+											'<h5 class="text-justify">Hilton Barrett who from Australian holds the Guinness World Record for the fastest time to shear a single mature sheep at an amazing 39.31 seconds. The record was set at the Wellington Show 2010 in Wellington, New South Wales on 1 May 2010. Wool fibres are very durable and flexible. Wool fibre can withstand being bent 20,000 times without breaking. In comparison, cotton breaks after 3,000 bends and silk after 2,000 bends. Also, Sheep wool has an incredible, natural UV protection built right in, which helps to keep sheep and lambs from getting sunburnt.</h5>'];
+					
+					var preview_land =    ['The less land is used - the better it is for Australian grasslands, though it negatively affects people',
+										   'Animals, just like humans, are involved in overgrazing the grasslands',
+										   'The right balanced is needed to preserve australian grasslands'];
+					var modal_land_title = ['',
+									        'Animals, just like humans, are cause of overgrazing',
+											'Maintain balance in the use of the land'];
+					var modal_land_text =  ['',
+									        '<h5 class="text-justify">Rabbit can cause overgrazing native and sown pastures, leading to loss of plant biodiversity and reduced crop yields. Because they are too much and eat too fast, they are preventing or inhibiting the regeneration of native shrubs and trees by grazing.</h5><p></p><h5 class="text-justify">Moreover, they build warrens and it causes land degradation and erosion, also increasing and spreading invasive weeds. they cause huge damage to our land; numbers need to be controlled.</h5>',
+											'<h5 class="text-justify">Australia has unique land, water, vegetation and biodiversity resources. Australia’s 7.7 million square kilometres support a wide range of agricultural and forestry industries. Production from natural resources earns over $38 billion a year in exports from agriculture, fisheries and forestry. Competitive pressures drive the need for improved productivity, which includes increased diversification and intensification. These trends are occurring against a background of increased climate variability.</h5><p></p><h5 class="text-justify">The way in which land is used has a profound effect on Australia’s social and ecological systems. There is a strong link between changes in land use and environmental, economic and social conditions. Information on land use and management is fundamental to understanding landscapes, agricultural production and the management of natural resources.</h5>'];
+					
+					var preview_meat =    ['Reduction of beef cattle negatively affects the quantity of the beef produced and will have a negative impact in a long run',
+										   'Grass fed or grain fed beef? The differences and impacts are significant',
+										   'People in the industry. The major group to make the changes!'];
+					var modal_meat_title = ['',
+									        'Grass fed or grain fed beef?',
+											'People make a difference'];
+					var modal_meat_text =  ['',
+									        '<h5 class="text-justify">Grass fed beef meat comes from cattle that have only grazed on grass. They feed on a range of different types of grasses, depending on climate and region. In Australia, cattle are predominantly grass fed and account for around 2/3 of whole beef production on average. Grain fed beef comes from cattle which are fed grass for most of their lives and then transition to grain-based diets for the remainder of their lives. The number of days during which they are fed a grain-based diet varies.</h5><p></p><h5 class="text-justify">Livestock are fed grain for several reasons, including to maintain a consistent meat supply, improve eating quality, meet specific needs for niche markets (e.g. for highly marbled meat), meet the energy needs of animals when pasture is limited (such as in drought conditions) and increase animal size.</h5>',
+											'<h5 class="text-justify">There are 41,800 agricultural businesses maintained in the cattle industry and 26.4 million head of cattle in Australia as of 2017-2018. Around 172,000 people are employed in the red meat industry, including on-farm production, processing and retail. In 2018-2019, Australia produced approximately 2.35 million tonnes carcase weight (cwt) of beef and veal. In 2018-2019, 3.14 million grain fed cattle were marketed 38% of all adult cattle slaughtered. On the other hand, the gross value of Australian cattle and calf production (including live cattle exports) in 2018-19 is estimated at A$10.9 billion. Cattle contributed 18% of the total farm value of A$61.4 billion in 2018-2019.</h5>'];
+					
+					var preview_yarn =    ['Reduction of sheep negatively affects the production of wool, which at the end negatively affect production of yarn',
+										   'Reduction of yarn will cause reduction of cloths',
+										   'Few other reasons behind yarn decline'];
+					var modal_yarn_title = ['',
+									        'Production of cloths is affected',
+											'Reasons behind yarn reduction'];
+					var modal_yarn_text =  ['',
+									        '<h5 class="text-justify">Even though wool represents only 1.2% of the virgin fibre supply, it represents about 5% of clothing donated to charity. Wool-made yarn is also one of the most sought after recycled textiles for converting into new long-lasting products, such as garments, mattresses and upholstery. In contrast to synthetics, wool-made yarn can absorb moisture vapour which means less sweat on your body.  Wool-made yarn even absorbs the odour molecules from sweat, which are only released upon washing. Wool-made yarn inherent chemical structure makes wool naturally flame resistant. It is a highly trusted natural fibre in public areas such as hotels, aircraft, hospitals and theatres.</h5>',
+											"<h5 class='text-justify'>The best wool goes to make suits and clothing, not yarn. There were several factors that contributed to the yarn industry decline.  Firstly, the Australian government began reducing the tariff protection in the footwear, clothing and textile industries in the 1970s, which opened the way for cheap imports to increasingly flood the Australian market. Now we all know that this affected all sectors of manufacturing. Prior to the removal of the tariffs, many larger towns in Australia had mills - it's important to remember not all of these mills made yarn for the hand knitter, again this was a small proportion of the mills - many made fabrics, carpets, and yarns specifically for the manufacturing sector. It was the tariff reductions coupled with the changing directions worldwide of trends, that put our yarn industry into serious damage control.  In the 1980s people began to turn their back on handicrafts viewing them as old fashioned; a bit daggy. Pattern and yarn sales slumped, and many local yarn stores closed. You could also, for the first time, buy a machine-knitted jumper for cheaper than you could knit one.</h5>"]
+					
+					var preview_total =     ['Beef and dairy cattle, and sheep livestock is reducing yearly and will eventually reach zero',
+											 'Burn grassland not only for the beef cattle. Grasslands require planned burning',
+											 'Droughts and too much humid negatively affect grasslands and beef cattle',
+										     'Just like grasslands, beef cattle is involved in the whole biomass and generates numerous by-products',
+											 'Kangaroos negatively affect grasslands development and dairy cattle',
+											 'Just like grasslands, dairy cattle need rest in their life cycle',
+											 'Make sure the right grazing technique is used to provide enough food',
+											 'Rabbits can be a cause of decreasing number of sheep',
+											 'Sheep are light eaters compared to cattle, but their density is much higher']
+					
+					var modal_total_title = ['',
+											 'Burn grasslands and increase livestocks',
+									         'Keep grasslands fresh',
+									         'Beef cattle provides hundreds by-products',
+									         'Keep kangaroos away from grasslands',
+										  	 'Provide enough rest for dairy cattle',
+										     'Keep dairy cattle fed',
+											 'Beware of rabbits',
+											 'High density of sheeps negative affect grassland']
+					
+					var modal_total_text =  ['',
+											 '<h5 class="text-justify">Conduct controlled dry season burning to stimulate fresh plant growth to restore calcium to the soil that builds up in the dry grasses. Some species of native plants need occasional fire to thrive, while blazes can also help remove invasive species.</h5><p></p><h5 class="text-justify">Fire is important for grasslands’ existence. They prevent woody plants from spreading and enable the grass to re-grow, becoming thicker, more resilient and healthier. How do grasses survive these fires? They have developed extensive underground systems during the course of evolution, which allow them to burst back to life, stronger than ever before, fairly quickly after a fire.</h5>',
+									         '<h5 class="text-justify">All grasslands get a specific amount of yearly rainfall, depending on their exact location in the world. What you didn not know is that if grasslands receive much less rain than ordinarily, it would become a desert, and if it got much more rain than usually, it would eventually turn into a forest. That is also the reason why grasslands are often located between deserts and forests – these nearby areas get less or more rain, and have thus developed into something else.</h5><p><p><h5>provide solution perhaps?</h5>',
+									         '<h5 class="text-justify">Over 98% of the beef animal is used when it is processed. Besides meat and milk, beef cattle provide us with hundreds of important by-products. About 45% of the animal is used for meat and the rest is used for other by-products including leather, china, glue, film, soap, pharmaceuticals, insulin, gelatines, etc. Almost the entire beef animal can be used in some way. From a typical 454-kilogram steer, slightly over 40% of the animal is used for retail beef and the remaining 60% is processed into by-products.</h5>',
+									         "<h5 class='text-justify'>Kangaroo numbers need to be controlled due to threatening one of Australia's last remaining original grasslands and endangered livestock. Australian Department of Defence is currently culling hundreds of kangaroos on the outskirts of the capital Canberra that have produced heated discussions and hit international headlines. Australia's iconic animal has multiplied so much over recent years that Canberra has three times as many kangaroos as inhabitants. The situation is particularly critical at two enclosed military sites on the outskirts of the city, which form an ideal refuge for the eastern grey kangaroo (Macropus giganteus)</h5>",
+											 '<h5 class="text-justify">Generally, a cow can produce milk in 9-10 months each year according to pregnancy. Many ranchers run cow-calf operations. The cows are bred to calve in the spring or fall that keeps a herd of cows to produce calves. The natural life expectancy of a cow is twenty years. Some get up to 25 years old. Cows, like our grassland that need certain time to rest and regrowth for healing and better productivity. Therefore, we recommend you take sustainable techniques like rotational grazing and patch-burn to rest the land.</h5>',
+											 '<h5 class="text-justify">A cow, that is milking, eats about 45 kilograms of feed each day. Cows drink a whole bathtub of water in just one day. That’s why cows are considered as the competitive eater and ultimate recyclers. The feed is typically a combination of grass, grain, and a mixture of other ingredients like citrus pulp, almond hulls and cotton seeds. These are items that may otherwise be thrown away. The ingredients, that we cannot eat, can often be nutritious for them. Farmers employ professional animal nutritionists to develop scientifically formulated, balanced, and nutritious diets for their cows.</h5>',
+											 '<h5 class="text-justify">Rabbits compete with native animals and domestic livestock for food and shelter, increasing grazing pressure and lowering the land’s carrying capacity.</h5><p></p><h5 class="text-justify">Rabbits act as a food source for introduced predators, which can lead to increased lamb losses and disease prevalence.</h5>',
+											 '<h5 class="text-justify">Large density causes lots of damage to the grass and the plants in the area. Though, sheep are herbivores, which means their diet does not include meat. They typically eat seeds, grass and plants. Some sheep do not need much water. The desert bighorn sheep, for example, gets most of its water from eating plants. Like all ruminants, they have multi-chambered stomachs that are adapted to ferment cellulose before digestion. To completely digest their food, sheep will regurgitate their food into their mouths, rechew and swallow. This regurgitated food is called cud.</h5>']
+					
 					/* HTML content */				 
 					if (check_active == "true false false false") {
 						triggerGraph(check_active);
@@ -611,9 +774,9 @@ $(function(){
 						var latestLandBeef = latestYr * 326.21; //latest year meat - in m^2
 						var remainLandBeef = selYr * 326.21; //latest year meat - in m^2
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr);
-						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef);
+						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr, preview_beef, modal_beef_title, modal_beef_text);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text);
+						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef, preview_land, modal_land_title, modal_land_text);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
 					} else if (check_active == "false true false false") {
 						triggerGraph(check_active);
@@ -626,9 +789,9 @@ $(function(){
 						var latestDairyBeef = latestYr * 43.24; //latest year meat - in m^2
 						var remainDairyBeef = selYr * 43.24; //latest year meat - in m^2
 						
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr); 
-						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef);
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr, preview_dairy, modal_dairy_title, modal_dairy_text); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text);
+						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef, preview_land, modal_land_title, modal_land_text);
 						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
 					} else if (check_active == "false false true false") {
 						triggerGraph(check_active);
@@ -644,10 +807,10 @@ $(function(){
 						var latestLandSheep = latestYr * 369.81; //current year land - in m^2
 						var remainLandSheep = selYr * 369.81; //selected year sheep - in m^2
 						
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr); 			 
-						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
-						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
-						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr, year, selYr, preview_sheep, modal_sheep_title, modal_sheep_text); 			 
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text);
+						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep, preview_land, modal_land_title, modal_land_text);
 						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
 					} else if (check_active == "true false true false") {
 						triggerGraph(check_active);
@@ -669,13 +832,13 @@ $(function(){
 						var totalLatestLand = (latestYr_beef * 326.21) + (latestYr_sheep * 369.81);
 						var totalRemainLand = (selYr_beef * 326.21) + (selYr_sheep * 369.81);
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
-						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep);
-						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
-						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
-						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef, preview_beef, modal_beef_title, modal_beef_text);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep, preview_sheep, modal_sheep_title, modal_sheep_text);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text);
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text);
+						document.getElementById("prediction-data").innerHTML = beefQTY+ + beefMeatQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 					} else if (check_active == "true true false false") {
@@ -695,11 +858,11 @@ $(function(){
 						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24);
 						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24);
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
-						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
-						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef, preview_beef, modal_beef_title, modal_beef_text);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text);
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy, preview_dairy, modal_dairy_title, modal_dairy_text); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text);
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
@@ -723,12 +886,12 @@ $(function(){
 						var totalLatestLand = (latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
 						var totalRemainLand = (selYr_dairy * 43.24)+(selYr_sheep * 369.81);
 						
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
-						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep);
-						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
-						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
-						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy, preview_dairy, modal_dairy_title, modal_dairy_text); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep, preview_sheep, modal_sheep_title, modal_sheep_text);
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text);
 						document.getElementById("prediction-data").innerHTML =  dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
@@ -761,15 +924,14 @@ $(function(){
 						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
 						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24)+(selYr_sheep * 369.81);
 						
-						var totalQTY = contentHTML(icons[0], title[8], latestYr, year, selYr); 
-						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						 			 
-						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
-						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
-						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
+						var totalQTY = contentHTML(icons[0], title[8], latestYr, year, selYr, preview_total, modal_total_title, modal_total_text); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text);	 
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text);
 						document.getElementById("prediction-data").innerHTML = totalQTY + milkQTY +
-																				 beefMeatQTY + woolProduction +
+																				beefMeatQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						
 					} else { // true true true false
@@ -798,14 +960,14 @@ $(function(){
 						var totalLatestLand = (latestYr_beef * 326.21)+(latestYr_dairy * 43.24)+(latestYr_sheep * 369.81);
 						var totalRemainLand = (selYr_beef * 326.21)+(selYr_dairy * 43.24)+(selYr_sheep * 369.81);
 						
-						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef);
-						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat);
-						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy); 
-						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk);
-						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep); 			 
-						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand);
-						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction);
-						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction);
+						var beefQTY = contentHTML(icons[0], title[0], latestYr_beef, year, selYr_beef, preview_beef, modal_beef_title, modal_beef_text);
+						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text);
+						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy, preview_dairy, modal_dairy_title, modal_dairy_text); 
+						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text);
+						var sheepQTY = contentHTML(icons[3], title[2], latestYr_sheep, year, selYr_sheep, preview_sheep, modal_sheep_title, modal_sheep_text); 			 
+						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text);
+						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text);
+						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +

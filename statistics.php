@@ -40,7 +40,7 @@
 		<!-- End Navigation Bar -->
 		
 		<!-- Error -->
-		<div style="z-index:10001;" class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -108,11 +108,11 @@
 								
 								<div class="row mb-3 ">
 									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
-										<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Beef cattle</button>
+										<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Beef cattle</button>
 									</div>
 									
 									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
-										<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">Dairy cattle</button>
+										<button id="livestock_dairy" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Dairy cattle</button>
 									</div>
 									
 									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
@@ -177,8 +177,8 @@
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
 					<div class="col-md-12 text-center heading-section coftco-animate">
-						<h2 class="mb-4">FACTS ABOUT FUTURE</h2>
-						<span class="subheading">Our future is in danger!</span>
+						<h2 class="mb-4">FACTS ABOUT FUTURE & POSSIBLE SOLUTIONS</h2>
+						<span class="subheading">Our future is in our hands! The following numbers are alarming!</span>
 					</div>
 				</div>
 			
