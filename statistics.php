@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Amazing Grazing - Grazing Techiques</title>
+		<title>Amazing Grazing - Livestock Statistics</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
@@ -39,7 +39,7 @@
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'statistics.php'));?>
 		<!-- End Navigation Bar -->
 		
-		<!-- Error -->
+		<!-- Error: When User Select <1 Graph -->
 		<div class="modal fade" id="selection-error" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
@@ -58,8 +58,9 @@
 			</div>
 		  </div>
 		</div>
+		<!-- End Error: When User Select <1 Graph -->
 		
-		<!-- Section 1: Page header - Grazing Techniques -->
+		<!-- Section 1: Page header - Livestock Statistics -->
 		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/livestock-statistics.jpg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
 				<div class="container">
@@ -70,7 +71,7 @@
 					</div>
 				</div>
 		</section>
-		<!-- End Section 1: Page header - Grazing Techniques -->
+		<!-- End Section 1: Page header - Livestock Statistics -->
 		
 		<!-- Breadcrumbs -->
 		<div class="container-fluid bg-light ftco-animate">
@@ -85,6 +86,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<!-- Section 1: Page header - Livestock is reducing -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
@@ -95,17 +97,13 @@
 				</div>
 			</div>
 			
-			<div class="container py-5 pt-md-5">
-				
-							
+			<div class="container py-5 pt-md-5">		
 				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 					<div class="row">
 						<div class="col-md-3">
 							<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>	
 							<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>
-							
 							<div class="collapse dont-collapse-sm" id="collapseExample">
-								
 								<div class="row mb-3 ">
 									<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">
 										<button id="livestock_beef" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">Beef cattle</button>
@@ -125,8 +123,6 @@
 									
 								</div> 
 							</div>
-							
-							
 							<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select year to predict</h5>
 							<div class="dropdown" >
 							  <button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</button>
@@ -137,7 +133,6 @@
 								<a id="y_2060" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2060</a>
 							  </div>
 							</div>
-							
 						</div>
 						
 						<div class="col-md-9">
@@ -167,12 +162,11 @@
 						</div>
 					</div>
 				</div>
-
-				
 			</div>
 		</section>
+		<!-- End Section 1: Page header - Livestock is reducing -->
 		
-		<!-- Section: Facts About Future -->
+		<!-- Section 2: Facts About Future -->
 		<section id="offerings" class="ftco-section ftco-no-pt ft-co-no-pb bg-light">
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
@@ -184,7 +178,6 @@
 			
 			
 			<!-- Card section -->
-			
 				<div class="row">
 					<div class="col-lg-12 services-wrap">
 						<div id="prediction-data" class="row pt-md-3"> 
@@ -193,7 +186,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<!-- End Card section -->
 		</section>
 		<!-- End Section: Facts About Future -->
@@ -202,7 +194,6 @@
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
-				
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
@@ -212,7 +203,6 @@
 							</ul>
 						</div>
 					</div>
-					
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
@@ -223,8 +213,6 @@
 													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
 						</div>
 					</div>
-					
-					
 				</div>
 				
 				<!-- License -->
@@ -266,8 +254,6 @@
 		<script src="js/amazing-grazing/livestock-prediction.js"></script>
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
-		
-		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
 			window.onload = function() {
 				/*var divElement = document.getElementById('viz1599895574623');                    
@@ -299,7 +285,6 @@
 				$(selectedYear).trigger("click");
 			});
 		</script>
-		
 		<script type='text/javascript'> <!-- renames the filter button upon click -->		
 			$("#show-filter").click(function() {
 				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
@@ -314,10 +299,7 @@
 				}
 			});
 		</script>
-		
 		<script type='text/javascript'> <!-- enables the counter script -->
-			
-			
 			$('[data-toggle="counter-up"]').counterUp({
 				delay: 10,
 				time: 500
