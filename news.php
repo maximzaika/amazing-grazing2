@@ -56,12 +56,13 @@
 		<!-- End Section 1: Page header - News -->
 	
 		<!-- Breadcrumbs -->
-		<div class="container" style="padding-top: 15px;">
-			<div class="row">
-				<div class="col-md-12 pull-left">
-					<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span><u><i>News </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
-					<hr>
-					<h5 class="text-justify">Usually news are ignored but we believe that news may contain latest information regarding various grazing techniques that farmers developed themselves. Often, there might not be related news in our country, so feel free to customize the search criteria below to meet your requirements. Who knows, you might find a thing or two in other countries.</h5>
+		<div class="container-fluid bg-light" style="padding-top: 15px;">
+			<div class="container" style="padding-top: 15px;">
+				<div class="row">
+					<div class="col-md-12 pull-left">
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span><u><i>News </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<hr>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -97,16 +98,19 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Australian livestock plays an important role in the Australian economy. Australia is known for its export of wool, lamb, beef, milk, etc. However, both dominate (sheep and cattle) and non-dominate (goats) livestock have been reducing yearly since the 1970s. This is caused due to ineffective grazing techniques, reduction of educated farmers, droughts, and other areas that should be paid attention. Grazing ruins our grassland. Unfortunately, it cannot be prevented but can be controlled.  Our objective is to educate farmers and bring awareness to everyone who has an interest in this area.</p>
-						</div>
+							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							                        However, its numbers have been reducing yearly since the 1970s.
+													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
+													It cannot be prevented but must be controlled.
+													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>						</div>
 					</div>
 					
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Reading <span>news is not enough</span></a></h2>
 							<ul class="list-unstyled">
-								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that the livestock numbers in Australia have reduced by 80 million since 1970s? <u>Click to find out more.</u></a></li>-->
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that unexperiened farmers tend to use continuous grazing, which is the most inefficient grazing techniques and damages soil? <u>Click to find out more.</u></a></li>
+								<li><a href="statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected. <u>Click to find out more.</u></a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
 								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Did you know that drought leads to wildfires and loss of wetland habitats? <u>Try out our drought prediction technique that might assist you.</u></a></li>-->
 							</ul>
 						</div>

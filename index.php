@@ -113,7 +113,11 @@
 					<div class="col-md-7">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Australian livestock plays an important role in the Australian economy. Australia is known for its export of wool, lamb, beef, milk, etc. However, both dominate (sheep and cattle) and non-dominate (goats) livestock have been reducing yearly since the 1970s. This is caused due to ineffective grazing techniques, reduction of educated farmers, droughts, and other areas that should be paid attention. Grazing ruins our grassland. Unfortunately, it cannot be prevented but can be controlled.  Our objective is to educate farmers and bring awareness to everyone who has an interest in this area.</p>
+							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							                        However, its numbers have been reducing yearly since the 1970s.
+													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
+													It cannot be prevented but must be controlled.
+													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
 						</div>
 					</div>
 			  
@@ -121,9 +125,9 @@
 						<div class="ftco-footer-widget mb-4 ml-md-5">
 							<h2 class="ftco-heading-2">Areas of interest</h2>
 							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various news related to drought, fire, grazing, and livestock.</a></li>
-								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected.</a></li>-->
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
+								<li><a href="statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected. <u>Click to find out more.</u></a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers. <u>Click to find out more.</u></a></li>
 								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>-->
 							</ul>
 						</div>
