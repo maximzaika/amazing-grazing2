@@ -64,7 +64,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
-						<h2 class="mb-4">Offerings</h2>
+						<h2 class="mb-4">OFFERINGS</h2>
 						<span class="subheading">We protect by providing</span>
 					</div>
 				</div>
@@ -85,7 +85,7 @@
 			<div class="container">
 				<div class="row justify-content-center pb-3">
 					<div class="col-md-7 heading-section text-center ftco-animate">
-					    <h2>News</h2>
+					    <h2>NEWS</h2>
 						<span class="subheading">Your personalised latest news</span>
 					</div>
 				</div>
