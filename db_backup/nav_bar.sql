@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2020 at 05:12 PM
+-- Generation Time: Sep 15, 2020 at 05:21 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `nav_bar` (
-  `nav_id` int(11) DEFAULT NULL,
-  `nav_link` varchar(255) DEFAULT NULL,
-  `nav_title` varchar(255) DEFAULT NULL
+  `nav_id` int(11) NOT NULL,
+  `nav_link` varchar(100) DEFAULT NULL,
+  `nav_title` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,7 +41,29 @@ CREATE TABLE `nav_bar` (
 INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`) VALUES
 (1, 'index.php', 'Home'),
 (2, 'news.php', 'News'),
-(3, 'techniques.php', 'Techniques');
+(3, 'techniques.php', 'Grazing Techniques'),
+(4, 'livestock-statistics.php', 'Livestock Statistics'),
+(5, 'employment-statistics.php', 'Employment Statistics');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `nav_bar`
+--
+ALTER TABLE `nav_bar`
+  ADD PRIMARY KEY (`nav_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `nav_bar`
+--
+ALTER TABLE `nav_bar`
+  MODIFY `nav_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
