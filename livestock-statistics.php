@@ -36,7 +36,7 @@
 	</head>
 	<body>
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'statistics.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'livestock-statistics.php'));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Error: When User Select <1 Graph -->

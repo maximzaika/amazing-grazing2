@@ -1,59 +1,65 @@
 <!-- Max: iteration 1 -->
 
 CREATE TABLE nav_bar (
-    nav_id int,
-    nav_link varchar(255),
-    nav_title varchar(255)
+    nav_id int NOT NULL AUTO_INCREMENT,
+    nav_link varchar(100),
+    nav_title varchar(100),
+    PRIMARY KEY (nav_id)
 );
 
-INSERT INTO nav_bar
-VALUES (1, 'index.php', 'Home');
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('index.php', 'Home');
 
-INSERT INTO nav_bar
-VALUES (2, 'news.php', 'News');
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('news.php', 'News');
 
-INSERT INTO nav_bar
-VALUES (3, 'techniques.php', 'Techniques');
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('techniques.php', 'Grazing Techniques');
 
-INSERT INTO nav_bar
-VALUES (4, 'wip.php', 'Statistics');
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('livestock-statistics.php', 'Livestock Statistics');
 
-INSERT INTO nav_bar
-VALUES (5, 'wip.php', 'Predict Drought');
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('employment-statistics.php', 'Employment Statistics');
 
+INSERT INTO nav_bar (nav_link, nav_title)
+VALUES ('wip.php', 'Predict Drought');
 
-CREATE TABLE index_offerings ( 
-    ofr_id int, 
-    ofr_icon varchar(255), 
-    ofr_title varchar(255), 
-    ofr_descr varchar(255), 
-    ofr_url varchar(255)
+CREATE TABLE index_offerings (
+    ofr_id int NOT NULL AUTO_INCREMENT,
+    ofr_icon varchar(255) NOT NULL, 
+    ofr_title varchar(255) NOT NULL, 
+    ofr_descr varchar(255) NOT NULL, 
+    ofr_url varchar(255) NOT NULL,
+    PRIMARY KEY (ofr_id)
 );
- 
-INSERT INTO index_offerings
-VALUES (1, 
-        'flaticon-news', 
-        'News', 
-        'Staying up to date with the news regarding grazing, fires, drought, and livestock is important for all of us.', 
-        'news.php');
 
-INSERT INTO index_offerings
-VALUES (2, 
-        'flaticon-horse-grazing-black-silhouette', 
+INSERT INTO index_offerings (ofr_icon, ofr_title, ofr_descr, ofr_url)
+VALUES ('flaticon-news',
+        'Latest News',
+	    'Stay up-tp-date with the latest news regarding grazing, wildfires, drought, and livestock. You might find something interesting.',
+	    'news.php');
+
+INSERT INTO index_offerings (ofr_icon, ofr_title, ofr_descr, ofr_url)
+VALUES ('flaticon-horse-grazing-black-silhouette', 
         'Grazing Techniques', 
-        'Preserving grassland''s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 
-        'techniques.php');
+        'Preserve grasslands''s nature, soil, and grass and increase your livestock numbers by the use of appropriate grazing techniques.', 
+        'techniques.php');		
 
-INSERT INTO index_offerings
-VALUES (3, 
-        'flaticon-statistics', 
-        'Statistics', 
-        'Dominants livestock has been reducing since 1970 up until now. Various graphs related to specific livestock provides some analysis regarding the current situation.', 
-        'statistics.php');
-        
-INSERT INTO index_offerings
-VALUES (4, 
-        'flaticon-drought', 
+INSERT INTO index_offerings (ofr_icon, ofr_title, ofr_descr, ofr_url)
+VALUES ('flaticon-chicken', 
+        'Livestock Statistics', 
+        'Dominant livestock has been reducing since 1970 up until now. Action needs to be taken! Various graphs and solutions are provided.', 
+        'livestock-statistics.php');
+
+INSERT INTO index_offerings (ofr_icon, ofr_title, ofr_descr, ofr_url)
+VALUES ('flaticon-teacher', 
+        'Employment Statistics', 
+        'The number of farmers, working with beef and dairy cattle and sheep, has been reducing. Various graphs and solutions are provided.', 
+        'employment-statistics.php');
+
+INSERT INTO index_offerings (ofr_icon, ofr_title, ofr_descr, ofr_url)
+VALUES ('flaticon-drought', 
         'Drought Prediction', 
         'Drought is one of the issues that prevent effective grazing, ruins the soil, causes fires, and leads to livestock reduction. We aim to predict drought seasons to assist you.', 
         'wip.php');

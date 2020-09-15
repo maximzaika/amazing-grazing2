@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2020 at 05:11 PM
+-- Generation Time: Sep 15, 2020 at 05:21 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `index_offerings` (
-  `ofr_id` int(11) DEFAULT NULL,
-  `ofr_icon` varchar(255) DEFAULT NULL,
-  `ofr_title` varchar(255) DEFAULT NULL,
-  `ofr_descr` varchar(255) DEFAULT NULL,
-  `ofr_url` varchar(255) DEFAULT NULL
+  `ofr_id` int(11) NOT NULL,
+  `ofr_icon` varchar(255) NOT NULL,
+  `ofr_title` varchar(255) NOT NULL,
+  `ofr_descr` varchar(255) NOT NULL,
+  `ofr_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,8 +41,30 @@ CREATE TABLE `index_offerings` (
 --
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
-(1, 'flaticon-news', 'News', 'Staying up to date with the news regarding grazing, fires, drought, and livestock is important for all of us.', 'news.php'),
-(3, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserving grassland\'s nature, soil, and grass is important to improve livestock and its safety. Various techniques are provided to guide you.', 'techniques.php');
+(1, 'flaticon-news', 'Latest News', 'Stay up-tp-date with the latest news regarding grazing, wildfires, drought, and livestock. You might find something interesting.', 'news.php'),
+(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserve grasslands\'s nature, soil, and grass and increase your livestock numbers by the use of appropriate grazing techniques.', 'techniques.php'),
+(3, 'flaticon-chicken', 'Livestock Statistics', 'Dominant livestock has been reducing since 1970 up until now. Action needs to be taken! Various graphs and solutions are provided.', 'livestock-statistics.php'),
+(4, 'flaticon-teacher', 'Employment Statistics', 'The number of farmers, working with beef and dairy cattle and sheep, has been reducing. Various graphs and solutions are provided.', 'employment-statistics.php');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `index_offerings`
+--
+ALTER TABLE `index_offerings`
+  ADD PRIMARY KEY (`ofr_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `index_offerings`
+--
+ALTER TABLE `index_offerings`
+  MODIFY `ofr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
