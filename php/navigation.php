@@ -25,7 +25,7 @@
 			}
 			
 			$fullNav = '<header class="sticky-top">'.
-							'<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">'.
+							'<nav style="border-bottom:3px solid #000;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">'.
 							 '<div class="container-fluid">'.
 							   '<a class="navbar-brand" style="margin-bottom:0" href="index.php">'.
 								 '<img src="images/amazing-grazing-logo_crop_100_39.png" alt="">'.
