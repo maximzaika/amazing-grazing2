@@ -32,6 +32,11 @@
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
 	<body>   
+		<!-- Iteration 2 - Floating share button -->
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>
+		<!-- End Iteration 2 - Floating share button -->
+		
 		<!-- Navigation Bar -->
 		<?php echo generateNavTabs($con, 'techniques.php');?>
 		<!-- End Navigation Bar -->

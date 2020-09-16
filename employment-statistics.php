@@ -36,8 +36,8 @@
 	</head>
 	<body>
 		<!-- Iteration 2 - Floating share button -->
-		<!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>-->
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>
 		<!-- End Iteration 2 - Floating share button -->
 		
 		<!-- Navigation Bar -->
@@ -98,28 +98,7 @@
 						
 						<div class="col-md-12">
 							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; padding-top: 20px;"> 
-								<!-- Table will be inserted here -->
-								
-								<!--<div class='tableauPlaceholder' id='viz1600264972873' style='position: relative; width:100%;'>
-									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
-									</noscript>
-									<object class='tableauViz'  style='display:none;'>
-										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-										<param name='embed_code_version' value='3' /> 
-										<param name='site_root' value='' />
-										<param name='name' value='farmer&#47;Dashboard2' />
-										<param name='tabs' value='no' />
-										<param name='toolbar' value='yes' />
-										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png' /> 
-										<param name='animate_transition' value='yes' />
-										<param name='display_static_image' value='yes' />
-										<param name='display_spinner' value='yes' />
-										<param name='display_overlay' value='yes' />
-										<param name='display_count' value='yes' />
-										<param name='language' value='en' />
-										<param name='filter' value='publish=yes' />
-									</object>
-								</div>-->
+								<!-- Graph will be inserted here -->
 							</div>
 						</div>
 					</div>
@@ -129,10 +108,10 @@
 		<!-- End Section 1: Page header - Livestock is reducing -->
 		
 		<!-- Section 2: Facts About Future -->
-		<section id="offerings" class="ftco-section ftco-no-pt ft-co-no-pb bg-light">
+		<section style="padding: 1em 0;" class="ftco-section ftco-no-pt ftco-no-pb bg-light">
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
-					<div class="col-md-12 text-center heading-section coftco-animate">
+					<div class="col-md-12 text-center heading-section ftco-animate">
 						<h2 class="mb-4">FARMERS MAKE A DIFFERENCE</h2>
 						<span class="subheading">Poor education and lack of young farmers is something to think about!</span>
 					</div>
@@ -140,7 +119,7 @@
 			
 			
 			<!-- Card section -->
-				<div class="row">
+				<div class="row pt-md-5">
 					<div class="col-lg-12 services-wrap">
 						<div id="cards-data" class="row pt-md-3"> 
 							<!-- Cards will be inserted here -->
@@ -151,6 +130,73 @@
 			<!-- End Card section -->
 		</section>
 		<!-- End Section: Facts About Future -->
+		
+		<!-- Section 2: Facts About Future -->
+		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt bg-light">
+			<div class="container">
+				<div class="row justify-content-center pt-md-4">
+					<div class="col-md-12 text-center heading-section ftco-animate">
+						<h2 class="mb-4">AGRICULTURAL COMMUNITIES</h2>
+						<span class="subheading">Keep in touch with your fellow farmers to stay up-to-date and educated</span>
+						<div class="services-wrap py-5 pt-md-5">
+							<li class="service-techniques services-color text-justify">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-2 text-center" style="margin: auto;">
+											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+										</div>
+										<div class="col-md-10" style="margin: auto;">
+											<h5><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Global Farmers</i></b></u></a> - join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="service-techniques services-color text-justify">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-2 text-center" style="margin: auto;">
+											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+										</div>
+										<div class="col-md-10" style="margin: auto;">
+											<h5><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Farmer Exchange</i></b></u></a> - an agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="service-techniques services-color text-justify">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-2 text-center" style="margin: auto;">
+											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+										</div>
+										<div class="col-md-10" style="margin: auto;">
+											<h5><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Friends of Grasslands</i></b></u></a> - an agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="service-techniques services-color text-justify">
+								<div class="container">
+									<div class="row">
+										<div class="col-md-2 text-center" style="margin: auto;">
+											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
+										</div>
+										<div class="col-md-10" style="margin: auto;">
+											<h5><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Farm4Trade</i></b></u></a> - helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
+										</div>
+									</div>
+								</div>
+							</li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Section: Facts About Future -->
+		
 		
 		<!-- Section 3: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -214,14 +260,12 @@
 		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
-		<!--<script src="js/amazing-grazing/livestock-prediction.js"></script>
-		<script src="js/amazing-grazing/livestock-picker.js"></script>-->
 		<script src="js/amazing-grazing/employment-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
 		
 		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
-			window.onload = function() {
+			/*window.onload = function() {
 				var divElement = document.getElementById('viz1600264972873');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
@@ -247,7 +291,7 @@
 				var scriptElement = document.createElement('script');      
 				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			};
+			};*/
 			
 			// Trigger map and cards when page is loaded
 			$(document).ready(function(){
