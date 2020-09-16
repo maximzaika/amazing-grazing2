@@ -2,7 +2,6 @@ CREATE TABLE farmer_info (
     farmer_id int NOT NULL AUTO_INCREMENT,
     farmer_url varchar(100) NOT NULL,
 	farmer_url2 varchar(100) NOT NULL,
-	farmer_type varchar(200) NOT NULL,
     farmer_card varchar(200) NOT NULL,
     farmer_text varchar(300) NOT NULL,
 	farmer_modal_title varchar(200),

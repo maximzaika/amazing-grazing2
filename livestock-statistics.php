@@ -256,29 +256,6 @@
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
-			window.onload = function() {
-				/*var divElement = document.getElementById('viz1599895574623');                    
-				var vizElement = divElement.getElementsByTagName('object')[0]; 
-				
-				if (divElement.offsetWidth > 700) {
-					vizElement.style.width='100%';
-					vizElement.style.height=(500*0.75)+'px';
-					console.log('size is more than 700');
-				} else if (divElement.offsetWidth > 320) {
-					console.log('size is more than 370');
-					vizElement.style.width='100%';
-					vizElement.style.height=(500)+'px';
-				} else {
-					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-					console.log('size is less than 370');
-				}
-							
-				var scriptElement = document.createElement('script');      
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);*/
-			};
-			
 			$(document).ready(function(){
 				/* Trigger the card update based on the year selected */
 				var yearContent = document.getElementById("drop-year").textContent;
