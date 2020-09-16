@@ -197,7 +197,7 @@ $(function(){
 				dataType: 'json',
 				data: {active: active_id},
 				success: function (data) {
-					console.log('PHP Return > ' + data.modal);
+					//console.log('PHP Return > ' + data.modal);
 					
 					$("#cards-data").empty();
 					document.getElementById('cards-data').innerHTML = data.card;

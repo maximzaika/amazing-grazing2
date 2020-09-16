@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2020 at 12:47 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Generation Time: Sep 16, 2020 at 04:32 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -48,13 +49,13 @@ INSERT INTO `emp_education` (`emp_educ_id`, `emp_educ_year`, `emp_educ_qual`, `e
 (5, 2011, 'Year 12', 'Beef Cattle Farmers', 4848.8, 15.2),
 (6, 2011, 'Year 11', 'Beef Cattle Farmers', 1977.8, 6.2),
 (7, 2011, 'Year 10 and below', 'Beef Cattle Farmers', 12409.1, 38.9),
-(8, 2016, 'Post Graduate/Graduate Diploma or Graduate Certificate', 'Beef Cattle Farmers', 988.9, 3.1),
-(9, 2016, 'Bachelor degree', 'Beef Cattle Farmers', 3221.9, 10.1),
-(10, 2016, 'Advanced Diploma/Diploma', 'Beef Cattle Farmers', 3349.5, 10.5),
-(11, 2016, 'Certificate III/IV', 'Beef Cattle Farmers', 5104, 16),
-(12, 2016, 'Year 12', 'Beef Cattle Farmers', 4848.8, 15.2),
-(13, 2016, 'Year 11', 'Beef Cattle Farmers', 1977.8, 6.2),
-(14, 2016, 'Year 10 and below', 'Beef Cattle Farmers', 12409.1, 38.9),
+(8, 2016, 'Post Graduate/Graduate Diploma or Graduate Certificate', 'Beef Cattle Farmers', 877.3, 3.1),
+(9, 2016, 'Bachelor degree', 'Beef Cattle Farmers', 2858.3, 10.1),
+(10, 2016, 'Advanced Diploma/Diploma', 'Beef Cattle Farmers', 2971.5, 10.5),
+(11, 2016, 'Certificate III/IV', 'Beef Cattle Farmers', 4528, 16),
+(12, 2016, 'Year 12', 'Beef Cattle Farmers', 4301.6, 15.2),
+(13, 2016, 'Year 11', 'Beef Cattle Farmers', 1754.6, 6.2),
+(14, 2016, 'Year 10 and below', 'Beef Cattle Farmers', 11008.7, 38.9),
 (15, 2011, 'Post Graduate/Graduate Diploma or Graduate Certificate', 'Beef Cattle Farmers', 170.3, 1.3),
 (16, 2011, 'Bachelor degree', 'Dairy Cattle Farmers', 956.3, 7.3),
 (17, 2011, 'Advanced Diploma/Diploma', 'Dairy Cattle Farmers', 1401.7, 10.7),
