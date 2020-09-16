@@ -113,7 +113,7 @@
 				<div class="row justify-content-center pt-md-4">
 					<div class="col-md-12 text-center heading-section ftco-animate">
 						<h2 class="mb-4">FARMERS MAKE A DIFFERENCE</h2>
-						<span class="subheading">Poor education and lack of young farmers is something to think about!</span>
+						<span class="subheading">Poor education and lack of young farmers is something to worry about!</span>
 					</div>
 				</div>
 			
