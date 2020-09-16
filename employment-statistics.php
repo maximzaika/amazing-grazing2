@@ -224,12 +224,20 @@
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
 				if (divElement.offsetWidth > 1000) {
+					console.log('size selected more than 1000 > ' + divElement.offsetWidth);
 					vizElement.style.width='100%';
 					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
 				} else if (divElement.offsetWidth > 800) {
+					console.log('size selected more than 800 > ' + divElement.offsetWidth);
 					vizElement.style.width='100%';
-					vizElement.style.height='827'+'px';
+					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+				} else if (divElement.offsetWidth > 500) {
+					console.log('size selected more than 500 > ' + divElement.offsetWidth);
+					vizElement.style.width='100%';
+					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+				
 				} else {
+					console.log('size selected less than 500 > ' + divElement.offsetWidth);
 					vizElement.style.width='100%';
 					vizElement.style.height='977'+'px';
 				}
