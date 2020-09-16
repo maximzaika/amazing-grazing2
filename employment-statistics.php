@@ -98,17 +98,17 @@
 						
 						<div class="col-md-12">
 							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; padding-top: 20px;"> 
-								<div class='tableauPlaceholder' id='viz1599895574623' style='position: relative; width:100%;'>
-									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png' style='border: none' /></a>
+								<div class='tableauPlaceholder' id='viz1600235662662' style='position: relative; width:100%;'>
+									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beef_cattle_farmers_v2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
 									</noscript>
 									<object class='tableauViz'  style='display:none;'>
 										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
 										<param name='embed_code_version' value='3' /> 
 										<param name='site_root' value='' />
-										<param name='name' value='sheep1973-2030&#47;SheepNumbersfrom1973to2030' />
+										<param name='name' value='beef_cattle_farmers_v2&#47;Dashboard1' />
 										<param name='tabs' value='no' />
 										<param name='toolbar' value='yes' />
-										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png' /> 
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beef_cattle_farmers_v2&#47;Dashboard1&#47;1.png' /> 
 										<param name='animate_transition' value='yes' />
 										<param name='display_static_image' value='yes' />
 										<param name='display_spinner' value='yes' />
@@ -220,15 +220,15 @@
 		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
 			window.onload = function() {
-				var divElement = document.getElementById('viz1599895574623');                    
+				var divElement = document.getElementById('viz1600235662662');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
 				if (divElement.offsetWidth > 700) {
 					vizElement.style.width='100%';
-					vizElement.style.height=(500*0.75)+'px';
+					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
 				} else if (divElement.offsetWidth > 320) {
 					vizElement.style.width='100%';
-					vizElement.style.height=(500)+'px';
+					vizElement.style.height=(divElement.offsetWidth)+'px';
 				} else {
 					vizElement.style.width='100%';
 					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
