@@ -1,0 +1,159 @@
+/* Fixed Scroll To Top Button */
+.scrollToTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.scrollToTop.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+.scrollToTop a {
+	width: 50px;
+	height: 50px;
+	display: table;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-align: center;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.scrollToTop a i {
+	height: 50px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.scrollToTop a:hover, .scrollToTop a:active, .scrollToTop a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+/* Animate GIF */
+img.animated-gif{
+	height: auto;
+	max-width: 80%;
+	padding-bottom: 20px;
+	border-radius: 40px;
+}
+
+/* Animate GIF */
+img.techn-img{
+	height: auto;
+	max-width: 100%;
+	padding-bottom: 20px;
+	border-radius: 40px;
+}
+
+/* Check and Cross Icons */
+.fa-check {
+	font-size: 100px;
+	color: #4e9525;
+}
+
+.fa-check-techniques {
+	font-size: 50px;;
+}
+
+.fa-times {
+	font-size: 100px;
+	color: red;
+}
+
+.fa-times-techniques {
+	font-size: 50px;
+}
+
+.fa-dot-circle-o {
+	font-size: 25px;
+	color: orange;
+}
+
+.fa-arrow-circle-down {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-exclamation-circle {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-arrow-circle-up {
+	font-size: 25px;
+	color: #4e9525;
+}
+
+.fa-check-circle {
+	font-size: 25px;
+	color: #4e9525;
+}
+
+.service-techniques {
+	padding: 10px 0px;
+	margin-bottom: 20px;
+	text-align: center;
+	background: #fff;
+	border-radius: 4px;
+	position: relative;
+	display: block;
+	box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+}
+
+/* Center based on the screen size */
+@media screen and (max-width: 767px) {
+  .mobile-left {
+    text-align: center;
+  }
+}
+
+/* Custom button for techniques page */
+.btn-amazing-techniques {
+	color: #fff;
+    background-color: #4e9525;
+    border-color: #fff; }
+  .btn-amazing-techniques:hover {
+    color: #fbd341;
+    background-color: #4e9525;
+    border-color: #fbd341; }
+	
+/* Custom button for livestock page - selected */
+.btn-amazing-livestock-on {
+	color: #fff;
+    background-color: #4e9525;
+    border-color: #fff; }
+  .btn-amazing-livestock-on:hover {
+    color: #fbd341;
+    background-color: #4e9525;
+    border-color: #fbd341; }
+	
+/* Custom button for livestock page - not selected */
+.btn-amazing-livestock-off {
+	color: black;
+    background-color: #fff;
+    border-color: #4e9525; 
+	border-width: 2px; }
+  .btn-amazing-livestock-off:hover {
+    color: #fbd341;
+    background-color: #fff;
+    border-color: #fbd341;}
+
+/* Mobile collaps filter */
+@media (min-width: 768px) {
+  .collapse.dont-collapse-sm {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
+}
