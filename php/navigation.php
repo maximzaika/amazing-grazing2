@@ -24,24 +24,26 @@
 				}
 			}
 			
-			$fullNav = '<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">'.
-			             '<div class="container-fluid">'.
-						   '<a class="navbar-brand" style="margin-bottom:0" href="index.php">'.
-						     '<img src="images/amazing-grazing-logo_crop_100_39.png" alt="">'.
-						   '</a>'.
-						 
-						   '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">'.
-						     '<span class="fa fa-bars"></span> Menu'.
-						   '</button>'.
-						 
-						   '<div class="collapse navbar-collapse" id="ftco-nav">'.
-						     '<ul class="navbar-nav m-auto">'.
-						        $fullTabHTML.
-						     '</ul>'.
-						   '</div>'.
-						  '</div>'.
-						 '</div>'.
-					    '</nav>';
+			$fullNav = '<header class="sticky-top">'.
+							'<nav style="border-bottom:3px solid #000;" class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">'.
+							 '<div class="container-fluid">'.
+							   '<a class="navbar-brand" style="margin-bottom:0" href="index.php">'.
+								 '<img src="images/amazing-grazing-logo_crop_100_39.png" alt="">'.
+							   '</a>'.
+							 
+							   '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">'.
+								 '<span class="fa fa-bars"></span> Menu'.
+							   '</button>'.
+							 
+							   '<div class="collapse navbar-collapse" id="ftco-nav">'.
+								 '<ul class="navbar-nav m-auto">'.
+									$fullTabHTML.
+								 '</ul>'.
+							   '</div>'.
+							  '</div>'.
+							 '</div>'.
+							'</nav>'.
+					    '</header>';
 			
 			return $fullNav;
 		}
