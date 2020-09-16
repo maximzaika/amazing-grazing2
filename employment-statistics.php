@@ -226,7 +226,7 @@
 				if (divElement.offsetWidth > 1000) {
 					console.log('size selected more than 1000 > ' + divElement.offsetWidth);
 					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+					vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
 				} else if (divElement.offsetWidth > 800) {
 					console.log('size selected more than 800 > ' + divElement.offsetWidth);
 					vizElement.style.width='100%';
