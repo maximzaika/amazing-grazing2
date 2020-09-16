@@ -20,10 +20,6 @@
 	$all_cards = "";
 	$modals = "";
 	
-	$modalTitle = "test title";
-	$modalText = "test text";
-	
-	
 	$URL = 'techniques.php';
 	if ($active == 'e-beef') {
 		$stock = 'Beef Cattle Farmers';
@@ -37,7 +33,7 @@
 		$stock = 'Sheep Farmers';
 	}
 	
-	// Number of Farmers in 2011
+	// --------------------------------- Number of Farmers in 2011 ---------------------------------
 	$sql_state_beef_2011 = "SELECT SUM(emp_state_numb) FROM emp_state WHERE emp_state_year = '2011' and emp_state_type = '".$stock."';";
 	$beef_state_2011_tb = $con -> query($sql_state_beef_2011);
 	
@@ -47,7 +43,6 @@
 		}
 	}
 	
-	// Number of Farmers in 2016
 	$sql_state_beef_2016 = "SELECT SUM(emp_state_numb) FROM emp_state WHERE emp_state_year = '2016' and emp_state_type = '".$stock."';";
 	$beef_state_2016_tb = $con -> query($sql_state_beef_2016);
 	
@@ -59,15 +54,15 @@
 	
 	if ($beef_state_2016 < $beef_state_2011) {
 		$icon = $icon_warning;
-		
+
 		$beef_state_2011 = round($beef_state_2011 / 1000, 0);
 		$beef_state_2016 = round($beef_state_2016 / 1000, 0);
 		$beef_state_diff = $beef_state_2011 - $beef_state_2016;
 	}
 	
-	$random_modal = '_' . rand(10,100) . '_modal';
+	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_farmer.'"></span>'.
@@ -80,11 +75,11 @@
 										'<div class="row">'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2011</b></h4>'.
-												'<h5><i class="fa '.$icon_same.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$beef_state_2011.'</span> '.$ext.'</h5>'.
+												'<h5><span data-toggle="counter-up">'.$beef_state_2011.'</span> '.$ext.'</h5>'.
 											'</div>'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2016</b></h4>'.
-												'<h5><i class="fa '.$icon.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$beef_state_2016.'</span> '.$ext.'</h5>'.
+												'<h5><span data-toggle="counter-up">'.$beef_state_2016.'</span> '.$ext.'</h5>'.
 											'</div>'.
 										'</div>'.
 									'</div>'.
@@ -93,40 +88,86 @@
 									'<hr>'.
 									'<div class="container">'.
 										'<div class="row">'.
-											'<ul style="margin-bottom:0px;">'.
-												'<li><h5 class="text-justify">'.$changeText." <a type='button' style='color:#4e9525;cursor:pointer;' href='".$URL."'><u><b><i>Show techniques</i></b></u></a>".'</h5></li>'.
-											'</ul>'.
-											'<div class="collapse" id="state-2011-2016">'.
-												'<ul>'.
-													'<li><h5 class="text-justify">'.$changeText." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>'.
-												'</ul>'.
+											'<ul style="margin-bottom:0px;">';
+	
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Farmer'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer == 0) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+			} 
+
+			if ($countFarmer == 1) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' href='".$farmer_url."'><u><b><i> Show statistics</i></b></u></a>".'</h5></li>';
+			}
+			$countFarmer++;
+		}
+	}										
+											
+	$all_cards = $all_cards .				'</ul>'.
+											'<div class="collapse" id="'.$random_button.'">'.
+												'<ul>';
+	
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Farmer'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$random_modal = '_' . rand(10,1000) . '_modal';
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer > 1) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
+										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+											'<div class="modal-content">'.
+												'<div class="modal-header">'.
+													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>'.$farmer_modal_title.'</b></h5>'.
+													'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'.
+													'<span aria-hidden="true">&times;</span>'.
+												'</button>'.
+											'</div>'.
+											'<div class="modal-body">'.
+												$farmer_modal_text.
+											'</div>'.
+											'<div class="modal-footer">'.
+												'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'.
+											'</div>'.
+										'</div>'.
+									'</div>'.
+								'</div>';
+			} else {
+				$countFarmer++;
+			}
+		}
+	}	
+													
+	$all_cards = $all_cards .                 '</ul>'.
 											'</div>'.
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  '<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#state-2011-2016" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
+								  '<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
 	
-	$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
-								'<div class="modal-dialog modal-dialog-centered" role="document">'.
-									'<div class="modal-content">'.
-										'<div class="modal-header">'.
-											'<h5 class="modal-title" id="'.$random_modal.'Label"><b>'.$modalTitle.'</b></h5>'.
-											'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'.
-											'<span aria-hidden="true">&times;</span>'.
-										'</button>'.
-									'</div>'.
-									'<div class="modal-body">'.
-										$modalText.
-									'</div>'.
-									'<div class="modal-footer">'.
-										'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'.
-									'</div>'.
-								'</div>'.
-							'</div>';
-	
-	// Highest qualification 2011
+	// --------------------------------- Highest qualification 2011 ---------------------------------
 	$sql_educ_beef_2011 = "SELECT emp_educ_qual, 
 	                              emp_educ_numb,
 								  emp_educ_perc 
@@ -146,7 +187,6 @@
 		}
 	}
 	
-	// Highest qualification 2016
 	$sql_educ_beef_2016 = "SELECT emp_educ_qual, 
 	                              emp_educ_numb,
 								  emp_educ_perc
@@ -165,16 +205,10 @@
 			$beef_educ_2016_perc = $row['emp_educ_perc']; // highest 2016 qualification
 		}
 	}
+
+	$random_button = '_' . rand(10,1000) . '_button';
 	
-	if ($beef_educ_2016_numb < $beef_educ_2011_numb) {
-		$icon = $icon_warning;
-		
-		$beef_state_2011 = round($beef_educ_2011_numb / 1000, 0);
-		$beef_educ_2016_numb = round($beef_educ_2016_numb / 1000, 0);
-		$beef_state_diff = $beef_educ_2011_numb - $beef_educ_2016_numb;
-	}
-	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_mortarboard.'"></span>'.
@@ -187,37 +221,104 @@
 										'<div class="row">'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2011</b></h4>'.
-												'<h5><i class="fa '.$icon_warning.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$beef_state_2011.'</span> '.$ext.'</h5>'.
+												'<h5>'.$beef_educ_2016_qual.'</h5>'.
 											'</div>'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2016</b></h4>'.
-												'<h5><i class="fa '.$icon_warning.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$beef_state_2016.'</span> '.$ext.'</h5>'.
+												'<h5>'.$beef_educ_2016_qual.'</h5>'.
 											'</div>'.
 										'</div>'.
 									'</div>'.
 									'<hr>'.
-									'<h5 class="text-center"><i class="fa '.$icon_warning.'" aria-hidden="true"></i> Reduced by <span data-toggle="counter-up">'.$beef_state_diff.'</span> '.$ext.'</h5>'.
+									'<h5 class="text-center"><i class="fa '.$icon_warning.'" aria-hidden="true"></i> Poor education</h5>'.
 									'<hr>'.
 									'<div class="container">'.
 										'<div class="row">'.
-											'<ul style="margin-bottom:0px;">'.
-												'<li><h5 class="text-justify">'.$changeText." <a type='button' style='color:#4e9525;cursor:pointer;' href='".$URL."'><u><b><i>Show techniques</i></b></u></a>".'</h5></li>'.
-											'</ul>'.
-											'<div class="collapse" id="state-2011-2016">'.
-												'<ul>'.
-													'<li><h5 class="text-justify">'.$changeText." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>'.
-												'</ul>'.
+											'<ul style="margin-bottom:0px;">';
+	
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Education'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$random_modal = '_' . rand(10,1000) . '_modal';
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer == 0) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+			} 
+
+			if ($countFarmer == 1) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' href='".$farmer_url."'><u><b><i> Show statistics</i></b></u></a>".'</h5></li>';
+				
+			}
+			
+			$countFarmer++;
+		}
+	}							
+	
+	$all_cards = $all_cards .			'</ul>'.
+											'<div class="collapse" id="'.$random_button.'">'.
+												'<ul>';
+												
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Education'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer > 1) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
+										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+											'<div class="modal-content">'.
+												'<div class="modal-header">'.
+													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>'.$farmer_modal_title.'</b></h5>'.
+													'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'.
+													'<span aria-hidden="true">&times;</span>'.
+												'</button>'.
+											'</div>'.
+											'<div class="modal-body">'.
+												$farmer_modal_text.
+											'</div>'.
+											'<div class="modal-footer">'.
+												'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'.
+											'</div>'.
+										'</div>'.
+									'</div>'.
+								'</div>';
+			} else {
+				$countFarmer++;
+			}
+		}
+	}		
+	
+													
+	$all_cards = $all_cards .					'</ul>'.
 											'</div>'.
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  '<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#state-2011-2016" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
+								  '<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
 							  
 							  
 							  
-	
+	// --------------------------------- Age group 2011 ---------------------------------
 	$sql_age_beef_2011 = "SELECT emp_age_age as '15-44', 
 	                             emp_age_numb,
 								 emp_age_perc
@@ -264,6 +365,7 @@
 		}
 	}
 	
+	// Age group 2016
 	$sql_age_beef_2016 = "SELECT emp_age_age as '15-44', 
 	                             emp_age_numb,
 								 emp_age_perc
@@ -310,61 +412,126 @@
 		}
 	}
 	
-
-
-	/*$all_cards = "";
-	if ($stateData->num_rows > 0) {
-		while($row = $stateData->fetch_assoc()) {
-			
-			$emp_state_id = $row['emp_state_id'];
-			$emp_state_year = $row['emp_state_year'];
-			$emp_state_state = $row['emp_state_state'];
-			$emp_state_type = $row['emp_state_type'];
-			$emp_state_numb = $row['emp_state_numb'];
-			$emp_state_perc = $row['emp_state_perc'];
-			
-			if (($active == "e-beef") && ($emp_state_type == "Beef Cattle Farmers")) {
-				
-				$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
+	if (strlen($beef_age_2016_44_65_perc) < 3) {
+		$beef_age_2016_44_65_perc = $beef_age_2016_44_65_perc . '.0';
+	}
+	
+	if (strlen($beef_age_2016_15_44_perc) < 3) {
+		$beef_age_2016_15_44_perc = $beef_age_2016_15_44_perc . '.0';
+	}
+	
+	if (strlen($beef_age_2011_15_44_perc) < 3) {
+		$beef_age_2011_15_44_perc = $beef_age_2011_15_44_perc . '.0';
+	}
+	
+	if (strlen($beef_age_2011_44_65_perc) < 3) {
+		$beef_age_2011_44_65_perc = $beef_age_2011_44_65_perc . '.0';
+	}
+	
+	$random_button = '_' . rand(10,1000) . '_button';
+	
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
-								   '<span class="'.$icon_farmer.'"></span>'.
+								   '<span class="'.$icon_age.'"></span>'.
 								 '</div>'.
 								 
 								 '<div class="text" style="padding-bottom:60px;">'.
-								   '<h4><b>'.$emp_state_type.' in</b></h4>'.
+								   '<h4><b>Age Group in</b></h4>'.
 								   '<hr>'.
 								   '<div class="container">'.
 										'<div class="row">'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2011</b></h4>'.
-												'<h5><i class="fa '.$icon_same.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$some_val.'</span> '.$ext.'</h5>'.
+												'<h5>15-44: '.$beef_age_2011_15_44_perc.'%</h5>'.
+												'<h5>45-65: '.$beef_age_2011_44_65_perc.'%</h5>'.
 											'</div>'.
 											'<div class="col-sm-12 col-md-6">'.
-												'<h4><b>'.$year.'</b></h4>'.
-												'<h5><i class="fa '.$icon_same.'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'.$some_val.'</span> '.$ext.'</h5>'.
+												'<h4><b>2016</b></h4>'.
+												'<h5>15-44: '.$beef_age_2016_15_44_perc.'%</h5>'.
+												'<h5>45-65: '.$beef_age_2016_44_65_perc.'%</h5>'.
 											'</div>'.
 										'</div>'.
 									'</div>'.
 									'<hr>'.
-									'<h5 class="text-center">'.$changeText.'</h5>'.
+									'<h5 class="text-center"><i class="fa '.$icon_warning.'" aria-hidden="true"></i> Lack of younger farmers</h5>'.
 									'<hr>'.
+									'<div class="container">'.
+										'<div class="row">'.
+											'<ul style="margin-bottom:0px;">';
+											
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Age'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$random_modal = '_' . rand(10,1000) . '_modal';
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer < 2) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+				$countFarmer++;
+			} 
+		}
+	}						
+						
+	$all_cards = $all_cards .				'</ul>'.
+											'<div class="collapse" id="'.$random_button.'">'.
+												'<ul>';
+	
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Age'";
+	$get_farmer_data = $con -> query($farmer_data);
+	
+	if ($get_farmer_data->num_rows > 0) {
+		$countFarmer = 0;
+		while($row = $get_farmer_data->fetch_assoc()) {
+			$farmer_url = $row['farmer_url'];
+			$farmer_url2 = $row['farmer_url2'];
+			$farmer_card = $row['farmer_card'];
+			$farmer_text = $row['farmer_text'];
+			$farmer_modal_title = $row['farmer_modal_title'];
+			$farmer_modal_text = $row['farmer_modal_text'];
+			
+			if ($countFarmer > 1) {
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
+										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+											'<div class="modal-content">'.
+												'<div class="modal-header">'.
+													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>'.$farmer_modal_title.'</b></h5>'.
+													'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'.
+													'<span aria-hidden="true">&times;</span>'.
+												'</button>'.
+											'</div>'.
+											'<div class="modal-body">'.
+												$farmer_modal_text.
+											'</div>'.
+											'<div class="modal-footer">'.
+												'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'.
+											'</div>'.
+										'</div>'.
+									'</div>'.
+								'</div>';
+			} else {
+				$countFarmer++;
+			}
+		}
+	}							
+	
+	$all_cards = $all_cards .				'</ul>'.
+											'</div>'.
+										'</div>'.
+									'</div>'.
 								  '</div>'.
+								  '<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
-								     
-			}
-			
-			if (($active == "e-dairy") && ($emp_state_type == "Dairy Cattle Farmers")) {
-				$all_cards = "e-dairy";
-			}
-			
-			if (($active == "e-sheep") && ($emp_state_type == "Sheep Farmers")) {
-				$all_cards = "e-sheep";
-			}
-			
-		}
-	}*/
 	
 	
 	echo json_encode(array("card"=>$all_cards,
