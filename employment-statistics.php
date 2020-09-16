@@ -223,15 +223,15 @@
 				var divElement = document.getElementById('viz1600235662662');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
-				if (divElement.offsetWidth > 700) {
+				if (divElement.offsetWidth > 1000) {
 					vizElement.style.width='100%';
 					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-				} else if (divElement.offsetWidth > 320) {
+				} else if (divElement.offsetWidth > 800) {
 					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth)+'px';
+					vizElement.style.height='827'+'px';
 				} else {
 					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+					vizElement.style.height='977'+'px';
 				}
 							
 				var scriptElement = document.createElement('script');      
