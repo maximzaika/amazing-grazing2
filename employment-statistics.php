@@ -70,7 +70,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<!-- Section 1: Page header - Australia Needs Farmers -->
+		<!-- Section 2: Australia Needs Farmers -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
@@ -105,9 +105,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 1: Page header - Livestock is reducing -->
+		<!-- End Section 2: Page header - Livestock is reducing -->
 		
-		<!-- Section 2: Facts About Future -->
+		<!-- Section 3: FARMERS MAKE A DIFFERENCE -->
 		<section style="padding: 1em 0;" class="ftco-section ftco-no-pt ftco-no-pb bg-light">
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
@@ -129,9 +129,9 @@
 			</div>
 			<!-- End Card section -->
 		</section>
-		<!-- End Section: Facts About Future -->
+		<!-- End Section 3: Facts About Future -->
 		
-		<!-- Section 2: Facts About Future -->
+		<!-- Section 4: AGRICULTURAL COMMUNITIES -->
 		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt bg-light">
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
@@ -195,10 +195,10 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section: Facts About Future -->
+		<!-- End Section 4: AGRICULTURAL COMMUNITIES -->
 		
 		
-		<!-- Section 3: Footer -->
+		<!-- Section 5: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
@@ -208,7 +208,7 @@
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
 								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
-								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected. <u>Click to find out more.</u></a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing. Attention is required! <u>Click to find out more.</u></a></li>
 							</ul>
 						</div>
 					</div>
@@ -237,7 +237,7 @@
 				</div>
 			</div>
 		</footer>
-		<!-- End Section 3: Footer -->
+		<!-- End Section 5: Footer -->
 		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -264,36 +264,7 @@
 		<script src="js/amazing-grazing/counterup.min.js"></script>
 		
 		
-		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
-			/*window.onload = function() {
-				var divElement = document.getElementById('viz1600264972873');                    
-				var vizElement = divElement.getElementsByTagName('object')[0]; 
-				
-				if (divElement.offsetWidth > 1000) {
-					console.log('size selected more than 1000 > ' + divElement.offsetWidth);
-					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
-				} else if (divElement.offsetWidth > 800) {
-					console.log('size selected more than 800 > ' + divElement.offsetWidth);
-					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-				} else if (divElement.offsetWidth > 500) {
-					console.log('size selected more than 500 > ' + divElement.offsetWidth);
-					vizElement.style.width='100%';
-					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-				
-				} else {
-					console.log('size selected less than 500 > ' + divElement.offsetWidth);
-					vizElement.style.width='100%';
-					vizElement.style.height='977'+'px';
-				}
-							
-				var scriptElement = document.createElement('script');      
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			};*/
-			
-			// Trigger map and cards when page is loaded
+		<script type='text/javascript'> // Trigger map and cards when page is loaded
 			$(document).ready(function(){
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
