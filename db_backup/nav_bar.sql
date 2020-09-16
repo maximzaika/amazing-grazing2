@@ -41,9 +41,9 @@ CREATE TABLE `nav_bar` (
 INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`) VALUES
 (1, 'index.php', 'Home'),
 (2, 'news.php', 'News'),
-(3, 'techniques.php', 'Grazing Techniques'),
-(4, 'livestock-statistics.php', 'Livestock Statistics'),
-(5, 'employment-statistics.php', 'Employment Statistics');
+(3, 'techniques.php', 'Techniques'),
+(4, 'livestock-statistics.php', 'Livestock'),
+(5, 'employment-statistics.php', 'Employment');
 
 --
 -- Indexes for dumped tables

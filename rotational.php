@@ -81,17 +81,19 @@
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
-					<div class="col-md-6">
+					<div class="col-md-7">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
 								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
-								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Statistics that show that livestock is affected. <u>Click to find out more.</u></a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers. <u>Click to find out more.</u></a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention. <u>Click to find out more.</u></a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate are reducing and require attention. <u>Click to find out more.</u></a></li>
 							</ul>
 						</div>
 					</div>
 					
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
 							<p class="text-justify">Livestock is playing an important role in the Australian economy.

@@ -1,2 +1,0 @@
-INSERT INTO nav_bar
-VALUES (4, 'statistics.php', 'Statistics');
