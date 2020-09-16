@@ -62,7 +62,7 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_farmer.'"></span>'.
@@ -133,7 +133,8 @@
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
 			if ($countFarmer > 1) {
-				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+				/*$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
 				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
 										'<div class="modal-dialog modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
@@ -151,7 +152,7 @@
 											'</div>'.
 										'</div>'.
 									'</div>'.
-								'</div>';
+								'</div>';*/
 			} else {
 				$countFarmer++;
 			}
@@ -208,7 +209,7 @@
 
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_mortarboard.'"></span>'.
@@ -281,7 +282,8 @@
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
 			if ($countFarmer > 1) {
-				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+				/*$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
 				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
 										'<div class="modal-dialog modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
@@ -299,7 +301,7 @@
 											'</div>'.
 										'</div>'.
 									'</div>'.
-								'</div>';
+								'</div>';*/
 			} else {
 				$countFarmer++;
 			}
@@ -430,7 +432,7 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-4 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-12 align-items-stretch animated fadeInLeft">'.
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_age.'"></span>'.
@@ -443,13 +445,35 @@
 										'<div class="row">'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2011</b></h4>'.
-												'<h5>15-44: '.$beef_age_2011_15_44_perc.'%</h5>'.
-												'<h5>45-65: '.$beef_age_2011_44_65_perc.'%</h5>'.
+												'<div class="container">'.
+													'<div class="row">'.
+														'<div class="col-sm-12 col-md-6">'.
+															'<h5>15-44: '.$beef_age_2011_15_44_perc.'%</h5>'.
+														'</div>'.
+														
+														'<div class="col-sm-12 col-md-6">'.
+															'<h5>45-65: '.$beef_age_2011_44_65_perc.'%</h5>'.
+														'</div>'.
+													'</div>'.
+												'</div>'.
+												
+												
 											'</div>'.
 											'<div class="col-sm-12 col-md-6">'.
 												'<h4><b>2016</b></h4>'.
-												'<h5>15-44: '.$beef_age_2016_15_44_perc.'%</h5>'.
-												'<h5>45-65: '.$beef_age_2016_44_65_perc.'%</h5>'.
+												'<div class="container">'.
+													'<div class="row">'.
+														'<div class="col-sm-12 col-md-6">'.
+															'<h5>15-44: '.$beef_age_2016_15_44_perc.'%</h5>'.
+														'</div>'.
+														
+														'<div class="col-sm-12 col-md-6">'.
+															'<h5>45-65: '.$beef_age_2016_44_65_perc.'%</h5>'.
+														'</div>'.
+													'</div>'.
+												'</div>'.
+												
+												
 											'</div>'.
 										'</div>'.
 									'</div>'.
@@ -499,8 +523,9 @@
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
 			if ($countFarmer > 1) {
-				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
-				$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
+				$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+				//$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
+				/*$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
 										'<div class="modal-dialog modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
 												'<div class="modal-header">'.
@@ -517,7 +542,7 @@
 											'</div>'.
 										'</div>'.
 									'</div>'.
-								'</div>';
+								'</div>';*/
 			} else {
 				$countFarmer++;
 			}

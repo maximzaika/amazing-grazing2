@@ -45,8 +45,8 @@ VALUES  ('livestock-statistics.php',
 		 'techniques.php',
 		 'Education',
 		 'Test education. Test education. Test education. Test education. Test education. Test education. Test education.',
-		 'Farmer title 2',
-		 'Farmer text 2'),
+		 '',
+		 ''),
 		 ('livestock-statistics.php',
 		 'techniques.php',
 		 'Age',
@@ -63,8 +63,8 @@ VALUES  ('livestock-statistics.php',
 		 'techniques.php',
 		 'Age',
 		 'Test age. Test age. Test age. Test age. Test age. Test age. Test age. Test age. ',
-		 'Farmer title 3',
-		 'Farmer text 3');
+		 '',
+		 '');
 		
 		
 		
