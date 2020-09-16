@@ -124,15 +124,23 @@ $(function(){
 		var divElement = document.getElementById(div_id);                    
 		var vizElement = divElement.getElementsByTagName('object')[0]; 
 		
-		if (divElement.offsetWidth > 700) {
+		if (divElement.offsetWidth > 1000) {
+			console.log('size selected more than 1000 > ' + divElement.offsetWidth);
 			vizElement.style.width='100%';
-			vizElement.style.height=(500*0.75)+'px';
-		} else if (divElement.offsetWidth > 320) {
-			vizElement.style.width='100%';
-			vizElement.style.height=(500)+'px';
-		} else {
+			vizElement.style.height=(divElement.offsetWidth*0.5)+'px';
+		} else if (divElement.offsetWidth > 800) {
+			console.log('size selected more than 800 > ' + divElement.offsetWidth);
 			vizElement.style.width='100%';
 			vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+		} else if (divElement.offsetWidth > 500) {
+			console.log('size selected more than 500 > ' + divElement.offsetWidth);
+			vizElement.style.width='100%';
+			vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+		
+		} else {
+			console.log('size selected less than 500 > ' + divElement.offsetWidth);
+			vizElement.style.width='100%';
+			vizElement.style.height='977'+'px';
 		}
 					
 		var scriptElement = document.createElement('script');      
@@ -142,30 +150,30 @@ $(function(){
 	
 	function selectEmploymentType(active_id, e_beef, e_dairy, e_sheep) {
 		if (active_id == e_beef) {
-			console.log('Active > e_beef');
-			var div_id = 'viz1599912357011';
-			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1_rss.png';
+			console.log('Graph Active > e_beef');
+			var div_id = 'viz1600264742712';
+			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard1&#47;1_rss.png';
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-			var o_name_val = 'beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016';
-			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1.png';
+			var o_name_val = 'farmer&#47;Dashboard1';
+			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard1&#47;1.png';
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
 		} else if (active_id == e_dairy) {
-			console.log('Active > e_dairy');
-			var div_id = 'viz1599912454818';
-			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1_rss.png';
+			console.log('Graph Active > e_dairy');
+			var div_id = 'viz1600264972873';
+			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1_rss.png';
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-			var o_name_val = 'dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016';
-			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1.png';
+			var o_name_val = 'farmer&#47;Dashboard2';
+			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png';
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
 		} else { //e-sheep
-			console.log('Active > e_sheep');
-			var div_id = 'viz1599912662152';
-			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1_rss.png';
+			console.log('Graph Active > e_sheep');
+			var div_id = 'viz1600265161856';
+			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1_rss.png';
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-			var o_name_val = 'sheep1973-2016&#47;SheepNumbersfrom1973to2016';
-			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1.png';
+			var o_name_val = 'farmer&#47;Dashboard3';
+			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1.png';
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
 		}
@@ -182,6 +190,29 @@ $(function(){
 		var e_sheep = 'e_sheep';
 		
 		selectEmploymentType(active_id, e_beef, e_dairy, e_sheep);
+		
+		$.ajax({
+				url: 'php/employment-card-POST.php',
+				type: "POST",
+				dataType: 'json',
+				data: {active: active_id},
+				success: function (data) {
+					//console.log('PHP Return > ' + data.modal);
+					
+					$("#cards-data").empty();
+					document.getElementById('cards-data').innerHTML = data.card;
+					$('body').append(data.modal);
+					
+					/* Enable number count */
+					$('[data-toggle="counter-up"]').counterUp({
+						delay: 10,
+						time: 500
+					});
+				},
+				error: (error) => {
+					console.log(JSON.stringify(error));
+				}
+		});
 		
 	}
 	

@@ -98,17 +98,19 @@
 						
 						<div class="col-md-12">
 							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; padding-top: 20px;"> 
-								<div class='tableauPlaceholder' id='viz1600235662662' style='position: relative; width:100%;'>
-									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beef_cattle_farmers_v2&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+								<!-- Table will be inserted here -->
+								
+								<!--<div class='tableauPlaceholder' id='viz1600264972873' style='position: relative; width:100%;'>
+									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a>
 									</noscript>
 									<object class='tableauViz'  style='display:none;'>
 										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
 										<param name='embed_code_version' value='3' /> 
 										<param name='site_root' value='' />
-										<param name='name' value='beef_cattle_farmers_v2&#47;Dashboard1' />
+										<param name='name' value='farmer&#47;Dashboard2' />
 										<param name='tabs' value='no' />
 										<param name='toolbar' value='yes' />
-										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beef_cattle_farmers_v2&#47;Dashboard1&#47;1.png' /> 
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png' /> 
 										<param name='animate_transition' value='yes' />
 										<param name='display_static_image' value='yes' />
 										<param name='display_spinner' value='yes' />
@@ -117,7 +119,7 @@
 										<param name='language' value='en' />
 										<param name='filter' value='publish=yes' />
 									</object>
-								</div>
+								</div>-->
 							</div>
 						</div>
 					</div>
@@ -140,8 +142,8 @@
 			<!-- Card section -->
 				<div class="row">
 					<div class="col-lg-12 services-wrap">
-						<div id="prediction-data" class="row pt-md-3"> 
-							cards will go here
+						<div id="cards-data" class="row pt-md-3"> 
+							<!-- Cards will be inserted here -->
 						</div>
 					</div>
 				</div>
@@ -220,7 +222,7 @@
 		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
 			window.onload = function() {
-				var divElement = document.getElementById('viz1600235662662');                    
+				var divElement = document.getElementById('viz1600264972873');                    
 				var vizElement = divElement.getElementsByTagName('object')[0]; 
 				
 				if (divElement.offsetWidth > 1000) {
@@ -247,12 +249,23 @@
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);
 			};
 			
-			/*$(document).ready(function(){
-				 Trigger the card update based on the year selected 
-				var yearContent = document.getElementById("drop-year").textContent;
-				var selectedYear = "#y_"+yearContent;
-				$(selectedYear).trigger("click");
-			});*/
+			// Trigger map and cards when page is loaded
+			$(document).ready(function(){
+				var emp_type = document.getElementById("drop-employment").textContent;
+				if (emp_type == 'Beef cattle employment rate') {
+					var emp_type_select = "#e-beef";
+				}
+				
+				if (emp_type == 'Dairy cattle employment rate') {
+					var emp_type_select = "#e-dairy";
+				}
+				
+				if (emp_type == 'Sheep employment rate') {
+					var emp_type_select = "#e-sheep";
+				}
+				
+				$(emp_type_select).trigger("click");
+			});
 		</script>
 		<script type='text/javascript'> <!-- Renames the drop down employment type button & triggers the graph-->		
 			$(".select-employment").click(function() {
