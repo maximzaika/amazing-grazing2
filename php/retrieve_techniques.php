@@ -1,4 +1,4 @@
-<?php  /* This file executes the offerings on the main page. */
+<?php  /* This file retrieves/creates the content of teh techniques page */
 	    function retrieveTechniques($con, $page) {
 			$get_techn = "SELECT techn_id, techn_title, techn_img, techn_ico, techn_continue, techn_brochure FROM techniques";
 			$techn_data = $con -> query($get_techn);
