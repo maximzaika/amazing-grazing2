@@ -506,7 +506,7 @@ $(function(){
 		/* Added modal to expand the text */
 		
 		
-		var content = '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'+
+		var content = '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+ //col-xs-12 col-sm-12 col-md-6
 							'<div class="services text-center" style="padding-bottom: 10px;">'+
 								'<div class="icon justify-content-center align-items-center">'+
 									'<span class="'+icon+'"></span>'+
