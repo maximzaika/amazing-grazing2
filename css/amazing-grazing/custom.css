@@ -159,7 +159,7 @@ img.techn-img{
 }
 
 /* Custom container sizes */
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {
     .container{
         max-width: 776px;
     }
@@ -193,4 +193,4 @@ img.techn-img{
     .container{
         max-width: 1600px;
     }
-}
+}*/
