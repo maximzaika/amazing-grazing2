@@ -5,7 +5,7 @@ $(function(){
 		return str.replaceAll("&#47;", "/");
 	}
 	
-	function placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url) {
+	function placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url) {
 		var div = document.createElement('div');
 		div.classList.add('tableauPlaceholder');
 		div.setAttribute('id', div_id);
@@ -120,6 +120,11 @@ $(function(){
 		
 		document.getElementById("tableau-chart").appendChild(div); // add to the webpage
 		
+		/* Licence content */
+		$("#reference").empty();
+		var licence_add = '<h5 class="text-center"><i><a href="'+licence_url+'">('+licence_text+')</a></i></h5>'
+		document.getElementById("reference").innerHTML += licence_add; // add to the webpage
+		
 		/* Trigger the year modification */ 
 		var divElement = document.getElementById(div_id);                    
 		var vizElement = divElement.getElementsByTagName('object')[0]; 
@@ -152,7 +157,10 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard1';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard1&#47;1.png';
 			
-			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
+			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_url = "https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312"
+			
+			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		} else if (active_id == e_dairy) {
 			var div_id = 'viz1600264972873';
 			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1_rss.png';
@@ -160,7 +168,10 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard2';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png';
 			
-			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
+			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_url = "https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313"
+			
+			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		} else { //e-sheep
 			var div_id = 'viz1600265161856';
 			var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1_rss.png';
@@ -168,7 +179,10 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard3';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1.png';
 			
-			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url);
+			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_url = "https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322"
+			
+			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		}
 	}
 	

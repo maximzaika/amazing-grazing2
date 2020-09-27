@@ -36,8 +36,8 @@
 	</head>
 	<body>
 		<!-- Iteration 2 - Floating share button -->
-		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>
+		<!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>-->
 		<!-- End Iteration 2 - Floating share button -->
 		
 		<!-- Navigation Bar -->
@@ -106,7 +106,7 @@
 				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 					<div class="row">
 						<div class="col-md-3">
-							<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter by livestock</h5>	
+							<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter page by livestock</h5>	
 							<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>
 							<div class="collapse dont-collapse-sm" id="collapseExample">
 								<div class="row mb-3 ">
@@ -164,17 +164,21 @@
 									</object>
 								</div>
 							</div>
+							<div id="reference">
+								<h5 class="text-center"><i><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">(Australian Agricultural Commodity Statistics, 2017)</a></i></h5>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</section>
 		<!-- End Section 1: Page header - Livestock is reducing -->
 		
 		<!-- Section 2: Facts About Future -->
 		<section id="offerings" class="ftco-section ftco-no-pt ft-co-no-pb bg-light">
 			<div class="container">
-				<div class="row justify-content-center pt-md-4">
+				<div class="row justify-content-center pt-md-1">
 					<div class="col-md-12 text-center heading-section coftco-animate">
 						<h2 class="mb-4">FACTS ABOUT FUTURE & POSSIBLE SOLUTIONS</h2>
 						<span class="subheading">Our future is in our hands! The following numbers are alarming!</span>
@@ -232,6 +236,8 @@
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
+				
+				<div id="snackbar">Entire page content is being updated.</div>
 			</div>
 		</footer>
 		<!-- End Section 3: Footer -->
@@ -260,15 +266,26 @@
 		<script src="js/amazing-grazing/livestock-prediction.js"></script>
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
-		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->                    
+		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->
+			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
+			
 			$(document).ready(function(){
 				/* Trigger the card update based on the year selected */
 				var yearContent = document.getElementById("drop-year").textContent;
 				var selectedYear = "#y_"+yearContent;
 				$(selectedYear).trigger("click");
+				execute_once++;
 			});
 		</script>
 		<script type='text/javascript'> <!-- renames the filter button upon click -->		
+			$(".lvstYearPrediction").click(function() {
+				if (execute_once > 0) {
+					var x = document.getElementById("snackbar");
+					x.className = "show";
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+				}
+			});
+			
 			$("#show-filter").click(function() {
 				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
 				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
