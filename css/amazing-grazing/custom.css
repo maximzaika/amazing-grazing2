@@ -157,3 +157,40 @@ img.techn-img{
     visibility: visible;
   }
 }
+
+/* Custom container sizes */
+@media (min-width: 576px) {
+    .container{
+        max-width: 776px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 968px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container{
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container{
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container{
+        max-width: 1600px;
+    }
+}
