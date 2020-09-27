@@ -62,7 +62,7 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. //col-xs-12 col-sm-12 col-md-6
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_farmer.'"></span>'.
@@ -209,7 +209,7 @@
 
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-6 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. // col-xs-12 col-sm-12 col-md-6
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_mortarboard.'"></span>'.
@@ -432,7 +432,7 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-xs-12 col-sm-12 col-md-12 align-items-stretch animated fadeInLeft">'.
+	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. //col-xs-12 col-sm-12 col-md-6
 							   '<div class="services text-center" style="padding-bottom: 10px;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_age.'"></span>'.
