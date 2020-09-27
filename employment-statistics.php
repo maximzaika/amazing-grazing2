@@ -36,8 +36,8 @@
 	</head>
 	<body>
 		<!-- Iteration 2 - Floating share button -->
-		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>
+		<!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>-->
 		<!-- End Iteration 2 - Floating share button -->
 		
 		<!-- Navigation Bar -->
@@ -70,8 +70,58 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex">
+    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
+    					
+						
+						<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
+						
+						
+						<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- allowfullscreen -->
+					    </div>
+						
+						<!--<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+    						
+    					</a>-->
+    				</div>
+    			</div>
+    			<div class="col-md-6 pl-md-5">
+    				<div class="row justify-content-start py-5">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	
+		            <h2>FARMERS CAN MAKE A DIFFERENCE</h2>
+					<span class="mb-4 subheading">Young farmers are required to preserve the future of our soil</span>
+		            <h5>Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
+		            <div class="services-wrap">
+		            	<a class="services-list services-color">Educated farmers minimise mechanical or chemical disturbance
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a class="services-list">Educated farmers avoid leaving the soil uncovered
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a class="services-list">Educated farmers tend to preserve the biodiversity of grasslands
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a class="services-list">Educated farmers leave living roots in the soil to feed soil biology
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            	<a class="services-list">Educated farmers release animals on to the grasslands
+		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
+		            	</a>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+		
 		<!-- Section 2: Australia Needs Farmers -->
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center heading-section">
@@ -100,6 +150,9 @@
 							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; padding-top: 20px;"> 
 								<!-- Graph will be inserted here -->
 							</div>
+							<div id="reference">
+								<!-- URL to dataset will be inserted here -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -110,7 +163,7 @@
 		<!-- Section 3: FARMERS MAKE A DIFFERENCE -->
 		<section style="padding: 1em 0;" class="ftco-section ftco-no-pt ftco-no-pb bg-light">
 			<div class="container">
-				<div class="row justify-content-center pt-md-4">
+				<div class="row justify-content-center pt-md-1">
 					<div class="col-md-12 text-center heading-section ftco-animate">
 						<h2 class="mb-4">FARMERS MAKE A DIFFERENCE</h2>
 						<span class="subheading">Poor education and lack of young farmers is something to worry about!</span>
@@ -132,7 +185,7 @@
 		<!-- End Section 3: Facts About Future -->
 		
 		<!-- Section 4: AGRICULTURAL COMMUNITIES -->
-		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt bg-light">
+		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt">
 			<div class="container">
 				<div class="row justify-content-center pt-md-4">
 					<div class="col-md-12 text-center heading-section ftco-animate">
@@ -265,6 +318,11 @@
 		
 		
 		<script type='text/javascript'> // Trigger map and cards when page is loaded
+			$('#headerVideoLink').magnificPopup({
+				type:'inline',
+				midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			  });
+			
 			$(document).ready(function(){
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
