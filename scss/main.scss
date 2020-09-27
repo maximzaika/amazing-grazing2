@@ -2,6 +2,7 @@
 @import "bootstrap/variables";
 
 $grid-breakpoints: (
+  xxxs: 220px,
   xxs: 320px,
   xs: 568px,
   sm: 667px,
@@ -13,6 +14,7 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
+  xxxs: 220px,
   xxs: 320px,
   xs: 568px,
   sm: 667px,
