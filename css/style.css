@@ -10570,13 +10570,67 @@ h1, h2, h3, h4, h5,
     .services-wrap .services-list:hover {
       background: #4e9525;
       color: #fff; }
-      .services-wrap .services-list:hover .btn-custom {
+      .services-wrap .services-list:hover .btn-custom { /* change background color when hover over */
         background: #fbd341; }
-        .services-wrap .services-list:hover .btn-custom span {
-          color: #4e9525; }
-		  .services-wrap .services-color:hover {
+		/*.services-wrap .services-list:hover .btn-custom { 
+			background: #4e9525; } */
+        .services-wrap .services-list:hover .btn-custom span { /* change the icon color when hover over */
+          color: #4e9525; }  
+		  .services-wrap .services-color:hover { /* change the background color of the list */
 		   background: #fff;
            color: black; }
+		  .services-wrap .services-color-green:hover {
+		   background: #4e9525;
+           color: #fff; }
+
+.employee-wrap {
+  width: 100%; }
+  .employee-wrap .employee-list {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    background: #fff;
+    color: #000000;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    -webkit-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15); }
+    @media (max-width: 767.98px) {
+      .employee-wrap .employee-list {
+        padding-right: 70px; } }
+    .employee-wrap .employee-list .btn-custom {
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+	  border: 3px solid #4e9525;
+      background: #fff; /* #4e9525 */
+      opacity: 1;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .employee-wrap .employee-list .btn-custom span {
+        color: #4e9525;
+		margin-bottom: -5px; }
+      @media (max-width: 767.98px) {
+        .employee-wrap .employee-list .btn-custom {
+          right: 15px; } }
+    /*.employee-wrap .employee-list:hover {
+      background: #4e9525;
+      color: #fff; }
+      .employee-wrap .employee-list:hover .btn-custom { 
+        background: #fbd341; }
+        .employee-wrap .employee-list:hover .btn-custom span {
+          color: #4e9525; }  */
 
 .ftco-intro {
   color: rgba(255, 255, 255, 0.9); }
@@ -10990,7 +11044,7 @@ textarea.form-control {
 .testimony-wrap {
   display: block;
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
+  background: #fff;
   padding: 0 20px;
   border: 1px solid rgba(0, 0, 0, 0.02);
   -webkit-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
