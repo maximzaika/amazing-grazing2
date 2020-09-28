@@ -140,6 +140,32 @@
 
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
+		
+		<!-- Added in Iteration 3 -->
+		<script type='text/javascript'> // Trigger map and cards when page is loaded
+			/* Owl-carousell settings so that when hover over, it would pause rotation */
+			var block = false;
+			var owl = $('.owl-carousel');
+			$(".owl-item").mouseenter(function(){
+				if(!block) {
+					block = true;
+					owl.trigger('stop.owl.autoplay');
+					block = false;
+				}
+			});
+			
+			$(".owl-item").mouseleave(function(){
+				if(!block) {
+					block = true;
+					owl.trigger('play.owl.autoplay',[4000]);
+					block = false;
+				}
+			});
+			
+			$(document).ready(function(){
+				owl.trigger('play.owl.autoplay',[4000]); // auto rotate carousel on load
+			});
+		</script>
 	</body>
 </html>
 

@@ -382,6 +382,7 @@
 		
 		
 		<script type='text/javascript'> // Trigger map and cards when page is loaded
+			/* Added in iteration 3 */
 			/* Owl-carousell settings so that when hover over, it would pause rotation */
 			var block = false;
 			var owl = $('.owl-carousel');
@@ -401,14 +402,15 @@
 				}
 			});
 			
-			$('#headerVideoLink').magnificPopup({ // pop-up to play the video
+			$('#headerVideoLink').magnificPopup({ // pop-up to play the video /* Added in iteration 3 */
 				type:'inline',
 				midClick: true 
 			  });
 			
 			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
+			                      /* Added in iteration 3 */
 			$(document).ready(function(){
-				owl.trigger('play.owl.autoplay',[4000]); // auto rotate carousel on load
+				owl.trigger('play.owl.autoplay',[4000]); /* Added in iteration 3 */
 				
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
