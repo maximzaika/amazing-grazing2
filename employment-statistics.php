@@ -354,6 +354,8 @@
 		</footer>
 		<!-- End Section 5: Footer -->
 		
+		<div id="snackbar">Entire page content is being updated.</div>
+		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 		
@@ -385,6 +387,8 @@
 				midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 			  });
 			
+			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
+			
 			$(document).ready(function(){
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
@@ -400,10 +404,18 @@
 				}
 				
 				$(emp_type_select).trigger("click");
+				
+				execute_once++;
 			});
 		</script>
-		<script type='text/javascript'> <!-- Renames the drop down employment type button & triggers the graph-->		
+		<script type='text/javascript'> <!-- Renames the drop down employment type button & triggers the graph-->					
 			$(".select-employment").click(function() {
+				if (execute_once > 0) {
+					var x = document.getElementById("snackbar");
+					x.className = "show";
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+				}
+				
 				var active_id = $(this).attr("id");
 				
 				var e_beef = 'Beef cattle employment rate';
