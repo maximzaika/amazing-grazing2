@@ -83,75 +83,90 @@
 						<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
 							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- allowfullscreen -->
 					    </div>
-						
-						<!--<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-    						
-    					</a>-->
     				</div>
     			</div>
     			<div class="col-md-6 pl-md-5">
     				<div class="row justify-content-start py-5">
-		          <div class="col-md-12 heading-section ftco-animate">
-		          	
-		            <h2>FARMERS CAN MAKE A DIFFERENCE</h2>
-					<span class="mb-4 subheading">Young farmers are required to preserve the future of our soil</span>
-		            <h5>Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
-		            <div class="services-wrap">
-		            	<a class="services-list services-color">Educated farmers minimise mechanical or chemical disturbance
-		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
-		            	</a>
-		            	<a class="services-list">Educated farmers avoid leaving the soil uncovered
-		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
-		            	</a>
-		            	<a class="services-list">Educated farmers tend to preserve the biodiversity of grasslands
-		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
-		            	</a>
-		            	<a class="services-list">Educated farmers leave living roots in the soil to feed soil biology
-		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
-		            	</a>
-		            	<a class="services-list">Educated farmers release animals on to the grasslands
-		            		<div class="btn-custom d-flex align-items-center justify-content-center"><span class="ion-ios-arrow-round-forward"></span></div>
-		            	</a>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
+						<div class="col-md-12 heading-section ftco-animate">
+							<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
+							<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
+							<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
+							
+							<div class="employee-wrap">
+								<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
+									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+								</a>
+								<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
+									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+								</a>
+								<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
+									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+								</a>
+								<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
+									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+								</a>
+								<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
+									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+								</a>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
     	</div>
     </section>
 		
 		<!-- Section 2: Australia Needs Farmers -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
-			<div class="container pt-md-4">
-				<div class="row justify-content-center">
-					<div class="col-md-12 text-center heading-section">
-						<h2 class="mb-4">AUSTRALIA NEEDS FARMERS</h2>
-						<span class="subheading">Farmers can make a difference in protecting grasslands</span>
+			<div class="container" style="padding: 4em 0;">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-12 text-center heading-section">
+							<h2>NUMBER OF EDUCATED & YOUNG FARMERS IS REDUCING</h2>
+							<span class="mb-4 subheading">Reduced beef & dairy cattle and sheep employment rates lead to livestock reduction. The following numbers are concerning!</span>
+						</div>
 					</div>
 				</div>
-			</div>
-			
-			<div class="container py-5 pt-md-5">		
-				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
-					<div class="row">
-						<div class="col-md-12">						
-							<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select employment type</h5>
-							<div class="dropdown" >
-							  <button id="drop-employment" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dairy cattle employment rate</button>
-							  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a id="e-beef" class="dropdown-item select-employment" style="cursor: pointer;">Beef cattle employment rate</a>
-								<a id="e-dairy" class="dropdown-item select-employment" style="cursor: pointer;">Dairy cattle employment rate</a>
-								<a id="e-sheep" class="dropdown-item select-employment" style="cursor: pointer;">Sheep employment rate</a>
-							  </div>
+				
+				<div class="container">
+					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
+						<div class="row">
+							<div class="col-md-12">		
+								
+								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select employment type</h5>
+								<div class="dropdown" >
+								  <button id="drop-employment" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dairy cattle employment rate</button>
+								  <div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a id="e-beef" class="dropdown-item select-employment" style="cursor: pointer;">Beef cattle employment rate</a>
+									<a id="e-dairy" class="dropdown-item select-employment" style="cursor: pointer;">Dairy cattle employment rate</a>
+									<a id="e-sheep" class="dropdown-item select-employment" style="cursor: pointer;">Sheep employment rate</a>
+								  </div>
+								</div>
+								<br>
+							</div>
+							
+							
+							<div class="col-md-12">
+								<div class="container" style="padding-right: 0px; padding-left: 0px; border: 3px solid #4e9525;">
+									<div id="tableau-chart" class="container" style="padding: 20px;"> 
+										<!-- Graph will be inserted here -->
+									</div>
+									
+								</div>
+								<div id="reference">
+									<!-- URL to dataset will be inserted here -->
+								</div>
 							</div>
 						</div>
-						
-						<div class="col-md-12">
-							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; padding-top: 20px;"> 
-								<!-- Graph will be inserted here -->
-							</div>
-							<div id="reference">
-								<!-- URL to dataset will be inserted here -->
+					</div>
+				</div>
+				
+				<div  class="container">
+					<div class="row">
+						<div class="col-lg-12 services-wrap">
+							<div id="cards-data" class="row pt-md-3"> 
+								<!-- Cards will be inserted here -->
 							</div>
 						</div>
 					</div>
@@ -160,38 +175,84 @@
 		</section>
 		<!-- End Section 2: Page header - Livestock is reducing -->
 		
-		<!-- Section 3: FARMERS MAKE A DIFFERENCE -->
-		<section style="padding: 1em 0;" class="ftco-section ftco-no-pt ftco-no-pb bg-light">
-			<div class="container">
-				<div class="row justify-content-center pt-md-1">
-					<div class="col-md-12 text-center heading-section ftco-animate">
-						<h2 class="mb-4">FARMERS MAKE A DIFFERENCE</h2>
-						<span class="subheading">Poor education and lack of young farmers is something to worry about!</span>
-					</div>
-				</div>
-			
-			
-			<!-- Card section -->
-				<div class="row pt-md-5">
-					<div class="col-lg-12 services-wrap">
-						<div id="cards-data" class="row pt-md-3"> 
-							<!-- Cards will be inserted here -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Card section -->
-		</section>
-		<!-- End Section 3: Facts About Future -->
-		
 		<!-- Section 4: AGRICULTURAL COMMUNITIES -->
-		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt">
-			<div class="container">
-				<div class="row justify-content-center pt-md-4">
-					<div class="col-md-12 text-center heading-section ftco-animate">
-						<h2 class="mb-4">AGRICULTURAL COMMUNITIES</h2>
-						<span class="subheading">Keep in touch with your fellow farmers to stay up-to-date and educated</span>
-						<div class="services-wrap py-5 pt-md-5">
+		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt ftco-animate bg-light">
+			<div class="container pt-4">
+				<div class="row justify-content-center pt-4">
+					<div class="col-md-12 text-center heading-section">
+						<h2>AGRICULTURAL COMMUNITIES</h2>
+						<span class="mb-4 subheading">Keep in touch with your fellow farmers to stay up-to-date and educated</span>
+						
+						<div class="row ftco-animate">
+						  <div class="col-md-12">
+							<div class="carousel-testimony owl-carousel ftco-owl text-justify">
+							  
+							  <div class="item">
+								<div class="testimony-wrap py-4">
+								  <div class="text">
+									<h5>Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/globalfarmers.png)"></div>
+										<div class="pl-3">
+											<p class="name">Global Farmers</p>
+											<span class="position"><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+										  </div>
+									  </div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  <div class="item">
+								<div class="testimony-wrap py-4">
+								  <div class="text">
+									<h5>An agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/farmerexchange.png)"></div>
+										<div class="pl-3">
+											<p class="name">Farmer Exchange</p>
+											<span class="position"><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+										  </div>
+									  </div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  <div class="item">
+								<div class="testimony-wrap py-4">
+								  <div class="text">
+									<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
+										<div class="pl-3">
+											<p class="name text-left">Friends of Grasslands</p>
+											<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+										  </div>
+									  </div>
+								  </div>
+								</div>
+							  </div>
+							  
+							  <div class="item">
+								<div class="testimony-wrap py-4">
+								  <div class="text">
+									<h5>Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
+									<div class="d-flex align-items-center">
+										<div class="user-img" style="background-image: url(images/farm4trade.png)"></div>
+										<div class="pl-3">
+											<p class="name">Farm 4 Trade</p>
+											<span class="position"><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+										  </div>
+									  </div>
+								  </div>
+								</div>
+							  </div>
+							  
+							</div>
+						  </div>
+						</div>
+						
+						<!-- 
+						<div class="services-wrap">
 							<li class="service-techniques services-color text-justify">
 								<div class="container">
 									<div class="row">
@@ -243,7 +304,8 @@
 									</div>
 								</div>
 							</li>
-						</div>
+						
+						</div> -->
 					</div>
 				</div>
 			</div>
