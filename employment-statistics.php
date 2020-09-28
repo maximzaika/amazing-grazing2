@@ -192,7 +192,7 @@
 								  <div class="text">
 									<h5>Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/globalfarmers.png)"></div>
+										<div class="user-img" style="background-image: url(images/globalfarmers.PNG)"></div>
 										<div class="pl-3">
 											<p class="name">Global Farmers</p>
 											<span class="position"><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
@@ -222,7 +222,7 @@
 								  <div class="text">
 									<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/friendofgrasslands.PNG)"></div>
+										<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
 										<div class="pl-3">
 											<p class="name text-left">Friends of Grasslands</p>
 											<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
