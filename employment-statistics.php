@@ -148,8 +148,8 @@
 							
 							
 							<div class="col-md-12">
-								<div class="container" style="padding-right: 0px; padding-left: 0px; border: 3px solid #4e9525;">
-									<div id="tableau-chart" class="container" style="padding: 20px;"> 
+								<div class="container" style="padding-right: 0px; padding-left: 0px;"> <!-- border: 3px solid #4e9525; -->
+									<div id="tableau-chart" class="container" style="padding: 0px;"> 
 										<!-- Graph will be inserted here -->
 									</div>
 									
@@ -222,7 +222,7 @@
 								  <div class="text">
 									<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
+										<div class="user-img" style="background-image: url(images/friendofgrasslands.PNG)"></div>
 										<div class="pl-3">
 											<p class="name text-left">Friends of Grasslands</p>
 											<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
@@ -237,7 +237,7 @@
 								  <div class="text">
 									<h5>Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
 									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/farm4trade.png)"></div>
+										<div class="user-img" style="background-image: url(images/farm4trade.PNG)"></div>
 										<div class="pl-3">
 											<p class="name">Farm 4 Trade</p>
 											<span class="position"><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
