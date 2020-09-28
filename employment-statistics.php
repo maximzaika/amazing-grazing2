@@ -388,7 +388,7 @@
 			$(".owl-item").mouseenter(function(){
 				if(!block) {
 					block = true;
-					owl.trigger('stop.owl.autoplay')
+					owl.trigger('stop.owl.autoplay');
 					block = false;
 				}
 			});
@@ -396,7 +396,7 @@
 			$(".owl-item").mouseleave(function(){
 				if(!block) {
 					block = true;
-					owl.trigger('play.owl.autoplay',[4000])
+					owl.trigger('play.owl.autoplay',[4000]);
 					block = false;
 				}
 			});
@@ -408,6 +408,8 @@
 			
 			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
 			$(document).ready(function(){
+				owl.trigger('play.owl.autoplay',[4000]); // auto rotate carousel on load
+				
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
 					var emp_type_select = "#e-beef";
