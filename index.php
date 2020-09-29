@@ -48,7 +48,7 @@
 		<!-- End Navigation Bar -->
 		
 		<!-- Header -->
-		<div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/test-graze-3.jpeg');" data-stellar-background-ratio="0.5">
+		<div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/index-header.jpeg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
 			<div class="container">
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
