@@ -432,7 +432,7 @@
 			
 		});
 		
-		/*
+		
 		setInterval(function(){
 			var dataTab= $('.itemDot.active').data("tab");
 			
@@ -458,7 +458,7 @@
 				"transition":"1s"
 			});
 			
-			}, 5000);*/
+			}, 5000);
 				
 			});
 		</script>
