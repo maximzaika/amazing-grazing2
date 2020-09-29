@@ -76,6 +76,11 @@ img.techn-img{
 	color: red;
 }
 
+.fa-times-small {
+	font-size: 30px;
+	color: red;
+}
+
 .fa-times-techniques {
 	font-size: 50px;
 }
@@ -91,6 +96,26 @@ img.techn-img{
 }
 
 .fa-exclamation-circle {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-exclamation-triangle {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-exclamation-triangle-small {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-exclamation {
+	font-size: 25px;
+	color: red;
+}
+
+.fa-exclamation-small {
 	font-size: 25px;
 	color: red;
 }

@@ -95,7 +95,7 @@
 			<div class="container">
 				<div class="row ">
 					
-					<div class="col-md-12 col-lg-12 col-xl-6 align-items-center overflow-hidden">
+					<div class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 align-items-center overflow-hidden">
 						
                
                   
@@ -164,29 +164,25 @@
 
 					</div> 
 					
-					<div class="col-md-12 col-lg-12 col-xl-6"> <!-- class = pl-md-5 -->
+					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7"> <!-- class = pl-md-5 -->
 						
 						<div class="row justify-content-start py-5">
 							<div class="col-md-12 heading-section ftco-animate">
-								<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
-								<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
-								<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
+								<h2 class="text-xxs-center text-sm-center text-md-left">LIVESTOCK REDUCTION IMPACTS GRASSLANDS</h2>
+								<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Livestock is required for food production and grazing to improve soil quality</span>
+								<h5 class="text-xxs-center text-sm-center text-md-left">Lack of younger and educated farmers is one of the causes that leads to livestock reduction. Refer to <i><u><a href="employment-statistics.php">employment statistics page</a></u></i> to gain insight knowledge.</h5>
 								
 								<div class="employee-wrap">
-									<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									<a class="employee-list"><h5>Livestock is drastically reducing and will lead to its extinction!</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center" style="border: 3px solid red;"><span><i class="fa fa-exclamation-small fa-exclamation" aria-hidden="true"></i></span></div>
 									</a>
-									<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									
+									<a class="employee-list"><h5>Livestock is directly affecting beef, milk, wool, and yarn production!</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center" style="border: 3px solid red;"><span><i class="fa fa-exclamation-small fa-exclamation" aria-hidden="true"></i></span></div>
 									</a>
-									<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									
+									<a class="employee-list"><h5>Our future is not looking safe. The following numbers prove it!</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center" style="border: 3px solid red;"><span><i class="fa fa-exclamation-small fa-exclamation" aria-hidden="true"></i></span></div>
 									</a>
 								</div>
 							
@@ -199,17 +195,17 @@
 		</section>
 		
 		<!-- Section 1: Page header - Livestock is reducing -->
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
-			<div class="container pt-md-4">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
+			<div class="container" style="padding-top: 4em;">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center heading-section">
-						<h2 class="mb-4">LIVESTOCK IS REDUCING</h2>
-						<span class="subheading">Grasslands and humans are in danger!</span>
+						<h2>DOMINANT LIFESTOCK IS DRASTICALLY REDUCING</h2>
+						<span class="mb-4 subheading">Lack of livestock will degrade the soil quality and lead to reduced quantities of food and material</span>
 					</div>
 				</div>
 			</div>
 			
-			<div class="container py-5 pt-md-5">		
+			<div class="container">		
 				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 					<div class="row">
 						<div class="col-md-3">
@@ -250,26 +246,7 @@
 						<div class="col-md-9">
 							<h5><i class="fa fa-line-chart" aria-hidden="true"></i> Prediction graph</h5>
 							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
-								<div class='tableauPlaceholder' id='viz1599895574623' style='position: relative; width:100%;'>
-									<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png' style='border: none' /></a>
-									</noscript>
-									<object class='tableauViz'  style='display:none;'>
-										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-										<param name='embed_code_version' value='3' /> 
-										<param name='site_root' value='' />
-										<param name='name' value='sheep1973-2030&#47;SheepNumbersfrom1973to2030' />
-										<param name='tabs' value='no' />
-										<param name='toolbar' value='yes' />
-										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png' /> 
-										<param name='animate_transition' value='yes' />
-										<param name='display_static_image' value='yes' />
-										<param name='display_spinner' value='yes' />
-										<param name='display_overlay' value='yes' />
-										<param name='display_count' value='yes' />
-										<param name='language' value='en' />
-										<param name='filter' value='publish=yes' />
-									</object>
-								</div>
+								<!-- Graph will be inserted here -->
 							</div>
 							<div id="reference">
 								<h5 class="text-center">Source: <i><u><b><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">ABARES, Agricultural Commodity Statistics 2017</a></b></u></i></h5>
@@ -279,21 +256,8 @@
 				</div>
 			</div>
 			
-		</section>
-		<!-- End Section 1: Page header - Livestock is reducing -->
-		
-		<!-- Section 2: Facts About Future -->
-		<section id="offerings" class="ftco-section ftco-no-pt ft-co-no-pb bg-light">
-			<div class="container">
-				<div class="row justify-content-center pt-md-1">
-					<div class="col-md-12 text-center heading-section coftco-animate">
-						<h2 class="mb-4">FACTS ABOUT FUTURE & POSSIBLE SOLUTIONS</h2>
-						<span class="subheading">Our future is in our hands! The following numbers are alarming!</span>
-					</div>
-				</div>
-			
-			
 			<!-- Card section -->
+			<div class="container" style="padding-bottom: 4em;">
 				<div class="row">
 					<div class="col-lg-12 services-wrap">
 						<div id="prediction-data" class="row pt-md-3"> 
@@ -303,8 +267,10 @@
 				</div>
 			</div>
 			<!-- End Card section -->
+			
 		</section>
-		<!-- End Section: Facts About Future -->
+		<!-- End Section 1: Page header - Livestock is reducing -->
+		
 		
 		<!-- Section 3: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">

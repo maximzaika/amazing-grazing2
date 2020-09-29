@@ -128,8 +128,7 @@
 				<div class="container">
 					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 						<div class="row">
-							<div class="col-md-12">		
-								
+							<div class="col-md-12">										
 								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select employment type</h5>
 								<div class="dropdown" >
 								  <button id="drop-employment" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dairy cattle employment rate</button>
