@@ -70,52 +70,48 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 d-flex">
-    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
-    					
-						
-						<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
-						
-						
-						<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- allowfullscreen -->
-					    </div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 pl-md-5">
-    				<div class="row justify-content-start py-5">
-						<div class="col-md-12 heading-section ftco-animate">
-							<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
-							<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
-							<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
-							
-							<div class="employee-wrap">
-								<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
-									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-								</a>
-								<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
-									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-								</a>
-								<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
-									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-								</a>
-								<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
-									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-								</a>
-								<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
-									<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-								</a>
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
+			<div class="container">
+				<div class="row d-flex">
+					<div class="col-md-6 d-flex">
+						<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
+							<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
+							<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
+								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- allowfullscreen -->
 							</div>
-						
+						</div>
+					</div>
+					<div class="col-md-6 pl-md-5">
+						<div class="row justify-content-start py-5">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
+								<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
+								<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
+								
+								<div class="employee-wrap">
+									<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+								</div>
+							
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-    	</div>
-    </section>
+		</section>
 		
 		<!-- Section 2: Australia Needs Farmers -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">

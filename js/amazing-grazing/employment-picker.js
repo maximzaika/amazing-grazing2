@@ -122,7 +122,7 @@ $(function(){
 		
 		/* Licence content */
 		$("#reference").empty();
-		var licence_add = '<h5 class="text-center"><i><a href="'+licence_url+'">('+licence_text+')</a></i></h5>'
+		var licence_add = '<h5 class="text-center">Source: <i><u><b><a href="'+licence_url+'">'+licence_text+'</a></u></b></i></h5>'
 		document.getElementById("reference").innerHTML += licence_add; // add to the webpage
 		
 		/* Trigger the year modification */ 
@@ -157,7 +157,7 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard1';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard1&#47;1.png';
 			
-			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_text = "The Commonwealth of Australia, Beef Cattle Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312"
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
@@ -168,7 +168,7 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard2';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png';
 			
-			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_text = "The Commonwealth of Australia, Dairy Cattle Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313"
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
@@ -179,7 +179,7 @@ $(function(){
 			var o_name_val = 'farmer&#47;Dashboard3';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1.png';
 			
-			var licence_text = "The Commonwealth of Australia, 2020"
+			var licence_text = "The Commonwealth of Australia, Sheep Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322"
 			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);

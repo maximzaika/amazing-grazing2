@@ -91,6 +91,113 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
+			<div class="container">
+				<div class="row ">
+					
+					<div class="col-md-12 col-lg-12 col-xl-6 align-items-center overflow-hidden">
+						
+               
+                  
+                  
+                     <div class="holderCircle">
+                        <div class="round"></div>
+                        <div class="dotCircle">
+                           
+                           <span class="itemDot active itemDot1 flaticon-livestock" data-tab="1">
+							
+							<span class="forActive"></span>
+                           </span>
+                           
+						   <span class="itemDot itemDot2 flaticon-meat" data-tab="2">
+							
+							<span class="forActive"></span>
+                           </span>
+                           
+						   <span class="itemDot itemDot3 flaticon-milk" data-tab="3">
+							
+							<span class="forActive"></span>
+                           </span>
+                           
+						   <span class="itemDot itemDot4 flaticon-sheep-1" data-tab="4">
+							
+							<span class="forActive"></span>
+                           </span>
+                           
+						   <span class="itemDot itemDot5 flaticon-region" data-tab="5">
+							
+							<span class="forActive"></span>
+                           </span>
+                        </div>
+                        <div class="contentCircle">
+                           
+                           <div class="CirItem title-box active CirItem1">
+                              <h2 class="title"><span>Livestock</span></h2>
+                              <p>The numbers are drastically reducing since 1970s and will extinct in 2060 if no action will be taken! The following numbers are alarming!</p>
+                              
+							  <i class="flaticon-livestock"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem2">
+                              <h2 class="title"><span>Beef</span></h2>
+                              <p>Production of beef is greatly impacted by the beef cattle numbers. Eventually there won't beef remain. The following numbers are alarming!</p>
+                              
+							  <i class="flaticon-meat"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem3">
+                              <h2 class="title"><span>Milk</span></h2>
+                              <p>Production of milk is greatly impacted by the dairy cattle numbers. Eventually there won't milk remain. The following numbers are alarming!</p>
+                              <i class="flaticon-milk"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem4">
+                              <h2 class="title"><span>Wool</span></h2>
+                              <p>Production of wool is greatly impacted by the sheep numbers. Wool is used for blankets, carpenting and yarn production. Eventually there won't wool remain!</p>
+                              <i class="flaticon-sheep-1"></i>
+                           </div>
+                           <div class="CirItem title-box CirItem5">
+                              <h2 class="title"><span>Land use</span></h2>
+                              <p>Livestock is important to preserve the grasslands, though, the right grazing techniques need to be utilized to achieve a large volume of production.</p>
+                              <i class="flaticon-region"></i>
+                           </div>
+                        </div>
+                     </div>
+                  
+
+					</div> 
+					
+					<div class="col-md-12 col-lg-12 col-xl-6"> <!-- class = pl-md-5 -->
+						
+						<div class="row justify-content-start py-5">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
+								<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
+								<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
+								
+								<div class="employee-wrap">
+									<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+									<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
+										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
+									</a>
+								</div>
+							
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		
 		<!-- Section 1: Page header - Livestock is reducing -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate" style="z-index:2;">
 			<div class="container pt-md-4">
@@ -165,7 +272,7 @@
 								</div>
 							</div>
 							<div id="reference">
-								<h5 class="text-center"><i><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">(Australian Agricultural Commodity Statistics, 2017)</a></i></h5>
+								<h5 class="text-center">Source: <i><u><b><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">ABARES, Agricultural Commodity Statistics 2017</a></b></u></i></h5>
 							</div>
 						</div>
 					</div>
@@ -265,9 +372,11 @@
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/livestock-prediction.js"></script>
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
-		<script src="js/amazing-grazing/counterup.min.js"></script>
+		<script src="js/amazing-grazing/counterup.min.js"></script>		
 		<script type='text/javascript'> <!-- initially triggers the tableau & updates the cards -->
 			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
+			
+			
 			
 			$(document).ready(function(){
 				/* Trigger the card update based on the year selected */
@@ -275,6 +384,82 @@
 				var selectedYear = "#y_"+yearContent;
 				$(selectedYear).trigger("click");
 				execute_once++;
+				
+				
+				let i=2;
+				
+				var radius = 200;
+		var fields = $('.itemDot');
+		var container = $('.dotCircle');
+		var width = container.width();
+ radius = width/2.5;
+ 
+		 var height = container.height();
+		var angle = 0, step = (2*Math.PI) / fields.length;
+		fields.each(function() {
+			var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+			var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+			if(window.console) {
+				console.log($(this).text(), x, y);
+			}
+			
+			$(this).css({
+				left: x + 'px',
+				top: y + 'px'
+			});
+			angle += step;
+		});
+		
+		
+		$('.itemDot').click(function(){
+			
+			var dataTab = $(this).data("tab");
+			$('.itemDot').removeClass('active');
+			$(this).addClass('active');
+			$('.CirItem').removeClass('active');
+			$( '.CirItem'+ dataTab).addClass('active');
+			i=dataTab;
+			
+			$('.dotCircle').css({
+				"transform":"rotate("+((i-1)*36)+"deg)",
+				"transition":"2s"
+			});
+			$('.itemDot').css({
+				"transform":"rotate("+((-1)*(i-1)*36)+"deg)",
+				"transition":"1s"
+			});
+			
+			
+		});
+		
+		/*
+		setInterval(function(){
+			var dataTab= $('.itemDot.active').data("tab");
+			
+			if(dataTab>5||i>5){
+				dataTab=1;
+				i=1;
+			}
+			
+			
+			$('.itemDot').removeClass('active');
+			$('[data-tab="'+i+'"]').addClass('active');
+			$('.CirItem').removeClass('active');
+			$( '.CirItem'+i).addClass('active');
+			i++;
+			
+			$('.dotCircle').css({
+				"transform":"rotate("+((i-2)*36)+"deg)",
+				"transition":"2s"
+			});
+			
+			$('.itemDot').css({
+				"transform":"rotate("+((-1)*(i-2)*36)+"deg)",
+				"transition":"1s"
+			});
+			
+			}, 5000);*/
+				
 			});
 		</script>
 		<script type='text/javascript'> <!-- renames the filter button upon click -->		
@@ -304,6 +489,14 @@
 				delay: 10,
 				time: 500
 			  });
+		</script>
+		
+		<!-- Added in Iteration 3 -->
+		<script type='text/javascript'>
+			
+
+	
+	
 		</script>
 	</body>
 </html>
