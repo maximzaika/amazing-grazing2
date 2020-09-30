@@ -147,7 +147,7 @@
 			}
 		}
 		$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
-										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+										'<div class="modal-dialog modal-xl modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
 												'<div class="modal-header">'.
 													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>'.$stock.'</b></h5>'.
@@ -173,8 +173,8 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
-									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
+								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
+									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
 	
@@ -302,7 +302,7 @@
 			}
 		}
 		$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
-										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+										'<div class="modal-dialog modal-xl modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
 												'<div class="modal-header">'.
 													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>Qualification</b></h5>'.
@@ -329,8 +329,8 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
-									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
+								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
+									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
 							  
@@ -548,7 +548,7 @@
 			}
 		}
 		$modals = $modals . '<div class="modal fade" id="'.$random_modal.'" tabindex="-1" role="dialog"  aria-labelledby="'.$random_modal.'Label" aria-hidden="true">'.
-										'<div class="modal-dialog modal-dialog-centered" role="document">'.
+										'<div class="modal-dialog modal-xl modal-dialog-centered" role="document">'.
 											'<div class="modal-content">'.
 												'<div class="modal-header">'.
 													'<h5 class="modal-title" id="'.$random_modal.'Label"><b>Age Group</b></h5>'.
@@ -574,8 +574,8 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
-									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'.
+								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
+									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>';
 	

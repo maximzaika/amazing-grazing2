@@ -1,0 +1,162 @@
+CREATE TABLE livestock_spinner (
+    livestock_spinner_id int NOT NULL AUTO_INCREMENT,
+    livestock_spinner_icon varchar(100) NOT NULL,
+    livestock_spinner_title varchar(50) NOT NULL,
+    livestock_spinner_text varchar(250) NOT NULL,
+    PRIMARY KEY (livestock_spinner_id)
+);
+
+INSERT INTO livestock_spinner (livestock_spinner_icon, livestock_spinner_title, livestock_spinner_text)
+VALUES ('flaticon-livestock',
+        'Livestock',
+		'The numbers are drastically reducing since 1970s and will extinct in 2060 if no action will be taken! The following numbers are alarming!'),
+	   ('flaticon-meat',
+		'Beef',
+		'Production of beef is greatly impacted by the beef cattle numbers. Eventually there won''t beef remain. The following numbers are alarming!'),
+	   ('flaticon-milk',
+		'Milk',
+		'Production of milk is greatly impacted by the dairy cattle numbers. Eventually there won''t milk remain. The following numbers are alarming!'),
+	   ('flaticon-sheep-1',
+		'Wool',
+		'Production of wool is greatly impacted by the sheep numbers. Wool is used for blankets, carpenting and yarn production. Eventually there won''t wool remain!'),
+	   ('flaticon-region',
+		'Land use',
+		'Livestock is important to preserve the grasslands, though, the right grazing techniques need to be utilized to achieve a large volume of production.');
+
+CREATE TABLE livestock_landing (
+    livestock_landing_id int NOT NULL AUTO_INCREMENT,
+    livestock_landing_title varchar(100),
+    livestock_landing_subheading varchar(150),
+    livestock_landing_description varchar(250),
+	livestock_landing_icon varchar(100) NOT NULL,
+	livestock_landing_content varchar(800) NOT NULL,
+    PRIMARY KEY (livestock_landing_id)
+);
+
+INSERT INTO livestock_landing (livestock_landing_title, livestock_landing_subheading, livestock_landing_description, livestock_landing_icon, livestock_landing_content)
+VALUES ('LIVESTOCK REDUCTION IMPACTS GRASSLANDS',
+        'Livestock is required for food production and grazing to improve soil quality',
+		'Lack of younger and educated farmers is one of the causes that leads to livestock reduction. Refer to <i><u><a href="employment-statistics.php">employment statistics page</a></u></i> to gain insight knowledge.',
+		'fa-exclamation-small fa-exclamation',
+		'Livestock is drastically reducing and will lead to its extinction!'),
+	   ('',
+        '',
+		'',
+		'fa-exclamation-small fa-exclamation',
+		'Livestock is directly affecting beef, milk, wool, and yarn production!'),
+	   ('',
+        '',
+		'',
+		'fa-exclamation-small fa-exclamation',
+		'Our future is not looking safe. The following numbers prove it!');
+
+CREATE TABLE livestock_control (
+    livestock_control_id int NOT NULL AUTO_INCREMENT,
+    livestock_control_type varchar(100) NOT NULL,
+	livestock_control_type_ext varchar(20) NOT NULL,
+    livestock_control_name varchar(100) NOT NULL,
+    PRIMARY KEY (livestock_control_id)
+);
+
+INSERT INTO livestock_control (livestock_control_type, livestock_control_type_ext, livestock_control_name)
+VALUES ('livestock_',
+        'beef',
+		'Beef cattle'),
+	   ('livestock_',
+        'dairy',
+		'Dairy cattle'),
+	   ('livestock_',
+        'sheep',
+		'Sheep'),
+	   ('livestock_',
+        'total',
+		'Total'),
+	   ('y_',
+        '2030',
+		'2030'),
+	   ('y_',
+        '2040',
+		'2040'),
+	   ('y_',
+        '2050',
+		'2050'),
+	   ('y_',
+        '2060',
+		'2060');
+	   
+
+CREATE TABLE emp_landing (
+    employee_landing_id int NOT NULL AUTO_INCREMENT,
+    employee_landing_img varchar(150),
+    employee_landing_video_url varchar(150),
+    employee_landing_title varchar(250),
+	employee_landing_subheading varchar(150),
+	employee_landing_description varchar(250),
+	employee_landing_icon varchar(100) NOT NULL,
+	employee_landing_content varchar(800) NOT NULL,
+    PRIMARY KEY (employee_landing_id)
+);
+
+INSERT INTO emp_landing (employee_landing_img, employee_landing_video_url, employee_landing_title, employee_landing_subheading, employee_landing_description, employee_landing_icon, employee_landing_content)
+VALUES ('images/farmers-make-a-difference.png',
+        'https://www.youtube-nocookie.com/embed/nSp7SuuP1R0',
+		'FARMERS CAN MAKE A DIFFERENCE',
+		'Young farmers are required to preserve the future of our soil',
+		'Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers',
+		'fa-check-small fa-check',
+		'Educated farmers minimise use of soil disturbance'),
+	   ('',
+        '',
+		'',
+		'',
+		'',
+		'fa-check-small fa-check',
+		'Educated farmers avoid leaving the soil uncovered'),
+	   ('',
+        '',
+		'',
+		'',
+		'',
+		'fa-check-small fa-check',
+		'Educated farmers preserve the biodiversity of grasslands'),
+	   ('',
+        '',
+		'',
+		'',
+		'',
+		'fa-check-small fa-check',
+		'Educated farmers leave living roots to feed soil biology'),
+	   ('',
+        '',
+		'',
+		'',
+		'',
+		'fa-check-small fa-check',
+		'Educated farmers release animals on to the grasslands');
+		
+CREATE TABLE emp_agri_comm (
+    employee_agri_id int NOT NULL AUTO_INCREMENT,
+    employee_agri_description varchar(400) NOT NULL,
+    employee_agri_img varchar(150) NOT NULL,
+    employee_agri_title varchar(250) NOT NULL,
+	employee_agri_url varchar(150) NOT NULL,
+    PRIMARY KEY (employee_agri_id)
+);
+
+INSERT INTO emp_agri_comm (employee_agri_description, employee_agri_img, employee_agri_title, employee_agri_url)
+VALUES ('Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.',
+        'images/globalfarmers.PNG',
+		'Global Farmers',
+		'https://www.globalfarmers.com/'),
+	   ('An agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional''s advice.',
+        'images/farmerexchange.png',
+		'Farmer Exchange',
+		'https://exchange.farmtable.com.au/home'),
+	   ('An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.',
+        'images/friendofgrasslands.png',
+		'Friends of Grasslands',
+		'https://www.fog.org.au/'),
+	   ('Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.',
+        'images/farm4trade.PNG',
+		'Farm 4 Trade',
+		'https://www.farm4trade.com/');
