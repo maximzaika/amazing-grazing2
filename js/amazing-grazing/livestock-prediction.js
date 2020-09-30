@@ -506,8 +506,8 @@ $(function(){
 		/* Added modal to expand the text */
 		
 		
-		var content = '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+ //col-xs-12 col-sm-12 col-md-6
-							'<div class="services text-center" style="padding-bottom: 10px;">'+
+		var content = '<div id="card-height-'+randomVal+'" style="padding-bottom:40px;" class="card-height col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+ //col-xs-12 col-sm-12 col-md-6
+							'<div class="services text-center card-height-replace" style="padding-bottom: 10px;">'+
 								'<div class="icon justify-content-center align-items-center">'+
 									'<span class="'+icon+'"></span>'+
 								'</div>'+
@@ -592,7 +592,7 @@ $(function(){
 										'</div>'+
 									'</div>'+
 								'</div>'+
-								'<a id="'+randomVal+'-animal" class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></a>'+
+								'<span onclick="removeHeight('+"'card-height-"+randomVal+"'"+')" id="'+randomVal+'-animal" class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></span>'+
 							'</div>'+
 						'</div>';
 		
@@ -904,6 +904,14 @@ $(function(){
 						delay: 10,
 						time: 500
 					});
+					
+					/* control the height of the cards 
+					   make the same height when the container is not expanded */
+					var maxHeight = 0;
+					$(".card-height").each(function(){
+						maxHeight = Math.max(maxHeight, $(this).height());     
+					});
+					$(".card-height-replace").height(maxHeight);
 				},
 				error: (error) => {
 					console.log(JSON.stringify(error));
