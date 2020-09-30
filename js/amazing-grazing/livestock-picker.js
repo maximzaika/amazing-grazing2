@@ -86,7 +86,10 @@ $(function(){
 				$(id).removeClass(class_off);
 				$(id).addClass(class_on);
 				
-				$("#selection-error").modal(); // trigger notification
+				//$("#selection-error").modal(); // trigger notification
+				var x = document.getElementById("update-notification-bad");
+				x.className = "show";
+				setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
 			} else { // if active buttons then proceed
 				for (i = 0; i < 4; i++) {
 					checkActive.push($(buttons[i]).hasClass(class_on));

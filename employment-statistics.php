@@ -74,7 +74,7 @@
 						<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
 							<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
 							<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
-								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- allowfullscreen -->
+								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
