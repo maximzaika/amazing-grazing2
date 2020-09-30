@@ -34,12 +34,7 @@
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 	</head>
-	<body>
-		<!-- Iteration 2 - Floating share button -->
-		<!--<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-		<div class="elfsight-app-031a3983-a9c9-406d-80d1-99d2ac0275a7"></div>-->
-		<!-- End Iteration 2 - Floating share button -->
-		
+	<body>		
 		<!-- Navigation Bar -->
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'employment-statistics.php'));?>
 		<!-- End Navigation Bar -->
@@ -47,13 +42,13 @@
 		<!-- Section 1: Page header - Employment Statistics -->
 		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/employment-statistics.jpg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
-				<div class="container">
-					<div class="row no-gutters slider-text align-items-end justify-content-center">
-						<div class="col-md-9 ftco-animate pb-5 text-center">
-							<h1 class="mb-3 bread">Employment Statistics</h1>
-						</div>
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-end justify-content-center">
+					<div class="col-md-9 ftco-animate pb-5 text-center">
+						<h1 class="mb-3 bread">Employment Statistics</h1>
 					</div>
 				</div>
+			</div>
 		</section>
 		<!-- End Section 1: Page header - Employment Statistics -->
 							
@@ -70,9 +65,11 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<!-- Section 2: FARMERS CAN MAKE A DIFFERENCE -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
 			<div class="container">
 				<div class="row d-flex">
+					<!-- Left side - image and video button -->
 					<div class="col-md-6 d-flex">
 						<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
 							<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
@@ -81,6 +78,9 @@
 							</div>
 						</div>
 					</div>
+					<!-- End Left side - image and video button -->
+					
+					<!-- Right side - title and points of interest -->
 					<div class="col-md-6 pl-md-5">
 						<div class="row justify-content-start py-5">
 							<div class="col-md-12 heading-section ftco-animate">
@@ -105,17 +105,19 @@
 										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
 									</a>
 								</div>
-							
 							</div>
 						</div>
 					</div>
+					<!-- End Right side - title and points of interest -->
 				</div>
 			</div>
 		</section>
+		<!-- End Section 2: FARMERS CAN MAKE A DIFFERENCE -->
 		
-		<!-- Section 2: Australia Needs Farmers -->
+		<!-- Section 3: NUMBER OF EDUCATED & YOUNG FARMERS IS REDUCING -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
 			<div class="container" style="padding: 4em 0;">
+				<!-- Title and subheading -->
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-12 text-center heading-section">
@@ -124,7 +126,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- End Title and subheading -->
 				
+				<!-- Buttons, graph & source-->
 				<div class="container">
 					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 						<div class="row">
@@ -156,7 +160,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- End Buttons, graph & source -->
 				
+				<!-- Card section-->
 				<div  class="container">
 					<div class="row">
 						<div class="col-lg-12 services-wrap">
@@ -166,9 +172,10 @@
 						</div>
 					</div>
 				</div>
+				<!-- End Card section-->
 			</div>
 		</section>
-		<!-- End Section 2: Page header - Livestock is reducing -->
+		<!-- End Section 3: NUMBER OF EDUCATED & YOUNG FARMERS IS REDUCING -->
 		
 		<!-- Section 4: AGRICULTURAL COMMUNITIES -->
 		<section style="padding: 4em 0;" class="ftco-section ftco-no-pt ftco-animate bg-light">
@@ -179,128 +186,74 @@
 						<span class="mb-4 subheading">Keep in touch with your fellow farmers to stay up-to-date and educated</span>
 						
 						<div class="row ftco-animate">
-						  <div class="col-md-12">
-							<div class="carousel-testimony owl-carousel ftco-owl text-justify">
-							  
-							  <div class="item">
-								<div class="testimony-wrap py-4">
-								  <div class="text">
-									<h5>Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/globalfarmers.PNG)"></div>
-										<div class="pl-3">
-											<p class="name">Global Farmers</p>
-											<span class="position"><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-										  </div>
-									  </div>
-								  </div>
+							<div class="col-md-12">
+								<!-- Start carousel -->
+								<div class="carousel-testimony owl-carousel ftco-owl text-justify">
+								  
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<h5>Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
+												<div class="d-flex align-items-center">
+													<div class="user-img" style="background-image: url(images/globalfarmers.PNG)"></div>
+													<div class="pl-3">
+														<p class="name">Global Farmers</p>
+														<span class="position"><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<h5>An agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
+												<div class="d-flex align-items-center">
+													<div class="user-img" style="background-image: url(images/farmerexchange.png)"></div>
+													<div class="pl-3">
+														<p class="name">Farmer Exchange</p>
+														<span class="position"><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
+												<div class="d-flex align-items-center">
+													<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
+													<div class="pl-3">
+														<p class="name text-left">Friends of Grasslands</p>
+														<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item">
+										<div class="testimony-wrap py-4">
+											<div class="text">
+												<h5>Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
+												<div class="d-flex align-items-center">
+													<div class="user-img" style="background-image: url(images/farm4trade.PNG)"></div>
+													<div class="pl-3">
+														<p class="name">Farm 4 Trade</p>
+														<span class="position"><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								  
 								</div>
-							  </div>
-							  
-							  <div class="item">
-								<div class="testimony-wrap py-4">
-								  <div class="text">
-									<h5>An agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/farmerexchange.png)"></div>
-										<div class="pl-3">
-											<p class="name">Farmer Exchange</p>
-											<span class="position"><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-										  </div>
-									  </div>
-								  </div>
-								</div>
-							  </div>
-							  
-							  <div class="item">
-								<div class="testimony-wrap py-4">
-								  <div class="text">
-									<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
-										<div class="pl-3">
-											<p class="name text-left">Friends of Grasslands</p>
-											<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-										  </div>
-									  </div>
-								  </div>
-								</div>
-							  </div>
-							  
-							  <div class="item">
-								<div class="testimony-wrap py-4">
-								  <div class="text">
-									<h5>Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/farm4trade.PNG)"></div>
-										<div class="pl-3">
-											<p class="name">Farm 4 Trade</p>
-											<span class="position"><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-										  </div>
-									  </div>
-								  </div>
-								</div>
-							  </div>
-							  
+								<!-- End Start carousel -->
 							</div>
-						  </div>
 						</div>
-						
-						<!-- 
-						<div class="services-wrap">
-							<li class="service-techniques services-color text-justify">
-								<div class="container">
-									<div class="row">
-										<div class="col-md-2 text-center" style="margin: auto;">
-											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-										</div>
-										<div class="col-md-10" style="margin: auto;">
-											<h5><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Global Farmers</i></b></u></a> - join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
-										</div>
-									</div>
-								</div>
-							</li>
-							
-							<li class="service-techniques services-color text-justify">
-								<div class="container">
-									<div class="row">
-										<div class="col-md-2 text-center" style="margin: auto;">
-											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-										</div>
-										<div class="col-md-10" style="margin: auto;">
-											<h5><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Farmer Exchange</i></b></u></a> - an agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
-										</div>
-									</div>
-								</div>
-							</li>
-							
-							<li class="service-techniques services-color text-justify">
-								<div class="container">
-									<div class="row">
-										<div class="col-md-2 text-center" style="margin: auto;">
-											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-										</div>
-										<div class="col-md-10" style="margin: auto;">
-											<h5><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Friends of Grasslands</i></b></u></a> - an agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
-										</div>
-									</div>
-								</div>
-							</li>
-							
-							<li class="service-techniques services-color text-justify">
-								<div class="container">
-									<div class="row">
-										<div class="col-md-2 text-center" style="margin: auto;">
-											<i class="fa fa-check fa-check-techniques" aria-hidden="true"></i>
-										</div>
-										<div class="col-md-10" style="margin: auto;">
-											<h5><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Farm4Trade</i></b></u></a> - helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
-										</div>
-									</div>
-								</div>
-							</li>
-						
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -349,7 +302,7 @@
 		</footer>
 		<!-- End Section 5: Footer -->
 		
-		<div id="snackbar">Entire page content is being updated.</div>
+		<div id="update-notification">Entire page content is being updated.</div>
 		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -374,11 +327,8 @@
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/employment-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
-		
-		
 		<script type='text/javascript'> // Trigger map and cards when page is loaded
-			/* Added in iteration 3 */
-			/* Owl-carousell settings so that when hover over, it would pause rotation */
+			/* Added in iteration 3 - Owl-carousell settings so that when hover over, it would pause rotation */
 			var block = false;
 			var owl = $('.owl-carousel');
 			$(".owl-item").mouseenter(function(){
@@ -397,16 +347,19 @@
 				}
 			});
 			
-			$('#headerVideoLink').magnificPopup({ // pop-up to play the video /* Added in iteration 3 */
+			/* Added in iteration 3 - pop-up to play the video */
+			$('#headerVideoLink').magnificPopup({ 
 				type:'inline',
 				midClick: true 
-			  });
+			});
 			
 			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
 			                      /* Added in iteration 3 */
 			$(document).ready(function(){
-				owl.trigger('play.owl.autoplay',[4000]); /* Added in iteration 3 */
+				/* Added in iteration 3 - Enables auto play on the carousel */
+				owl.trigger('play.owl.autoplay',[4000]); 
 				
+				/* Triggers a click on the drop down employment type selection */
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
 					var emp_type_select = "#e-beef";
@@ -425,10 +378,11 @@
 				execute_once++;
 			});
 		</script>
-		<script type='text/javascript'> <!-- Renames the drop down employment type button & triggers the graph-->					
+		<script type='text/javascript'>					
+			/* Renames the drop down employment type button & triggers the graph */
 			$(".select-employment").click(function() {
 				if (execute_once > 0) {
-					var x = document.getElementById("snackbar");
+					var x = document.getElementById("update-notification");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 				}
@@ -447,12 +401,6 @@
 					document.getElementById('drop-employment').innerHTML = e_sheep;
 				}
 			});
-		</script>
-		<script type='text/javascript'> <!-- enables the counter script -->
-			$('[data-toggle="counter-up"]').counterUp({
-				delay: 10,
-				time: 500
-			  });
 		</script>
 	</body>
 </html>
