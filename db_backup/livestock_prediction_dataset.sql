@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prediction_dataset`
+-- Table structure for table `livestock_prediction_dataset`
 --
 
-CREATE TABLE `prediction_dataset` (
+CREATE TABLE `livestock_prediction_dataset` (
   `predict_id` int(11) NOT NULL,
   `predict_year` int(11) NOT NULL,
   `predict_type` varchar(20) NOT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `prediction_dataset` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `prediction_dataset`
+-- Dumping data for table `livestock_prediction_dataset`
 --
 
-INSERT INTO `prediction_dataset` (`predict_id`, `predict_year`, `predict_type`, `predict_qty`) VALUES
+INSERT INTO `livestock_prediction_dataset` (`predict_id`, `predict_year`, `predict_type`, `predict_qty`) VALUES
 (1, 2017, 'Beef cattle', 21.72),
 (2, 2018, 'Beef cattle', 20.89),
 (3, 2019, 'Beef cattle', 20.78),
@@ -239,9 +239,9 @@ INSERT INTO `prediction_dataset` (`predict_id`, `predict_year`, `predict_type`, 
 --
 
 --
--- Indexes for table `prediction_dataset`
+-- Indexes for table `livestock_prediction_dataset`
 --
-ALTER TABLE `prediction_dataset`
+ALTER TABLE `livestock_prediction_dataset`
   ADD PRIMARY KEY (`predict_id`);
 
 --
@@ -249,9 +249,9 @@ ALTER TABLE `prediction_dataset`
 --
 
 --
--- AUTO_INCREMENT for table `prediction_dataset`
+-- AUTO_INCREMENT for table `livestock_prediction_dataset`
 --
-ALTER TABLE `prediction_dataset`
+ALTER TABLE `livestock_prediction_dataset`
   MODIFY `predict_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 COMMIT;
 

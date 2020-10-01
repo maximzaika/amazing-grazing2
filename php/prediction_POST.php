@@ -4,7 +4,7 @@
 	$year = $_POST['selectedYear'];
 	
 	/* Get the Token from the DB */
-	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM prediction_dataset";
+	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
 	$all_years = $con -> query($get_yrData);
 	
 	$selected_beef_qty = 0;
