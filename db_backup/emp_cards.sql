@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `farmer_info`
+-- Table structure for table `emp_cards`
 --
 
-CREATE TABLE `farmer_info` (
+CREATE TABLE `emp_cards` (
   `farmer_id` int(11) NOT NULL,
   `farmer_url` varchar(100) NOT NULL,
   `farmer_url2` varchar(100) NOT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `farmer_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `farmer_info`
+-- Dumping data for table `emp_cards`
 --
 
-INSERT INTO `farmer_info` (`farmer_id`, `farmer_url`, `farmer_url2`, `farmer_card`, `farmer_text`, `farmer_modal_title`, `farmer_modal_text`) VALUES
+INSERT INTO `emp_cards` (`farmer_id`, `farmer_url`, `farmer_url2`, `farmer_card`, `farmer_text`, `farmer_modal_title`, `farmer_modal_text`) VALUES
 (1, 'livestock-statistics.php', 'techniques.php', 'Farmer', 'Farmers are the ones who can make a difference in protecting Australian grasslands.', '', ''),
 (2, 'livestock-statistics.php', 'techniques.php', 'Farmer', 'The employment number negatively affects livestock numbers.', '', ''),
 (3, 'livestock-statistics.php', 'techniques.php', 'Farmer', 'Put out appeals via social media for fellow farmers to donate forage and straw to donate to desperate farmers, as well as pleas for haulage services.', '', ''),
@@ -66,9 +66,9 @@ INSERT INTO `farmer_info` (`farmer_id`, `farmer_url`, `farmer_url2`, `farmer_car
 --
 
 --
--- Indexes for table `farmer_info`
+-- Indexes for table `emp_cards`
 --
-ALTER TABLE `farmer_info`
+ALTER TABLE `emp_cards`
   ADD PRIMARY KEY (`farmer_id`);
 
 --
@@ -76,9 +76,9 @@ ALTER TABLE `farmer_info`
 --
 
 --
--- AUTO_INCREMENT for table `farmer_info`
+-- AUTO_INCREMENT for table `emp_cards`
 --
-ALTER TABLE `farmer_info`
+ALTER TABLE `emp_cards`
   MODIFY `farmer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
