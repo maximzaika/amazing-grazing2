@@ -3,7 +3,7 @@
     /* Server side files */
 	require_once "server_config.php"; // Accesses to the database
 	require_once "php/navigation.php"; // Updates the navigation bar
-	require_once "php/livestock-statistics-landing.php"; // Used to update the landing (spinner, intro, filter & year controls)
+	require_once "php/livestock-statistics-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
 ?>
 
 <!DOCTYPE html>
