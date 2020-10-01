@@ -141,7 +141,7 @@ $(function(){
 		
 		} else {
 			vizElement.style.width='100%';
-			vizElement.style.height='977'+'px';
+			vizElement.style.height=(divElement.offsetWidth*2.4)+'px';//'977'+'px';
 		}
 					
 		var scriptElement = document.createElement('script');      

@@ -3,12 +3,13 @@
     /* Server side files */
 	require_once "server_config.php";
 	require_once "php/navigation.php";
+	require_once "php/employee-statistics-content.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Amazing Grazing - Livestock Statistics</title>
+		<title>Amazing Grazing - Employment Statistics</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
@@ -69,46 +70,8 @@
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
 			<div class="container">
 				<div class="row d-flex">
-					<!-- Left side - image and video button -->
-					<div class="col-md-6 d-flex">
-						<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url(images/farmers-make-a-difference.png);">
-							<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>
-							<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9" >
-								<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nSp7SuuP1R0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
-						</div>
-					</div>
-					<!-- End Left side - image and video button -->
-					
-					<!-- Right side - title and points of interest -->
-					<div class="col-md-6 pl-md-5">
-						<div class="row justify-content-start py-5">
-							<div class="col-md-12 heading-section ftco-animate">
-								<h2 class="text-xxs-center text-sm-center text-md-left">FARMERS CAN MAKE A DIFFERENCE</h2>
-								<span class="mb-4 subheading text-xxs-center text-sm-center text-md-left">Young farmers are required to preserve the future of our soil</span>
-								<h5 class="text-xxs-center text-sm-center text-md-left">Large population of elderly farmers will lead to retirement and opening new opporutnities to younger farmers</h5>
-								
-								<div class="employee-wrap">
-									<a class="employee-list"><h5>Educated farmers minimise use of soil disturbance</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers avoid leaving the soil uncovered</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers preserve the biodiversity of grasslands</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers leave living roots to feed soil biology</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-									<a class="employee-list"><h5>Educated farmers release animals on to the grasslands</h5>
-										<div class="btn-custom service-color-green d-flex align-items-center justify-content-center"><span><i class="fa fa-check-small fa-check " aria-hidden="true"></i></span></div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Right side - title and points of interest -->
+					<!-- Left and right sides (video & content) retrieved from db -->
+					<?php echo htmlspecialchars_decode($emp_landing);?>					
 				</div>
 			</div>
 		</section>
@@ -189,67 +152,7 @@
 							<div class="col-md-12">
 								<!-- Start carousel -->
 								<div class="carousel-testimony owl-carousel ftco-owl text-justify">
-								  
-									<div class="item">
-										<div class="testimony-wrap py-4">
-											<div class="text">
-												<h5>Join a local & global network of leaders in agriculture. Get exclusive market & industry updates. Grow your business and your knowledge.</h5>
-												<div class="d-flex align-items-center">
-													<div class="user-img" style="background-image: url(images/globalfarmers.PNG)"></div>
-													<div class="pl-3">
-														<p class="name">Global Farmers</p>
-														<span class="position"><a href="https://www.globalfarmers.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								  
-									<div class="item">
-										<div class="testimony-wrap py-4">
-											<div class="text">
-												<h5>An agricultural community where Aussie farmers can connect and share their knowledge online. Additionally, you can get professional's advice.</h5>
-												<div class="d-flex align-items-center">
-													<div class="user-img" style="background-image: url(images/farmerexchange.png)"></div>
-													<div class="pl-3">
-														<p class="name">Farmer Exchange</p>
-														<span class="position"><a href="https://exchange.farmtable.com.au/home" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								  
-									<div class="item">
-										<div class="testimony-wrap py-4">
-											<div class="text">
-												<h5>An agricultural community that provides community activities, advocacy and resources that aim to protect Australian grasslands.</h5>
-												<div class="d-flex align-items-center">
-													<div class="user-img" style="background-image: url(images/friendofgrasslands.png)"></div>
-													<div class="pl-3">
-														<p class="name text-left">Friends of Grasslands</p>
-														<span class="position"><a href="https://www.fog.org.au/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								  
-									<div class="item">
-										<div class="testimony-wrap py-4">
-											<div class="text">
-												<h5>Helps farmers to keep track of their record information with the purpose to improve production, increase trading opportunities and connect with other farmers.</h5>
-												<div class="d-flex align-items-center">
-													<div class="user-img" style="background-image: url(images/farm4trade.PNG)"></div>
-													<div class="pl-3">
-														<p class="name">Farm 4 Trade</p>
-														<span class="position"><a href="https://www.farm4trade.com/" type='button' style='color:#4e9525;cursor:pointer;'><u><b><i>Learn more</i></b></u></a></span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								  
+									<?php echo htmlspecialchars_decode($emp_agri);?>									  
 								</div>
 								<!-- End Start carousel -->
 							</div>
