@@ -67,7 +67,7 @@
 	
 	
 	/* Get the Token from the DB */
-	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM card_information";
+	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM livestock_cards";
 	$card_Data = $con -> query($get_cardData);
 
 	$preview_beef = array();

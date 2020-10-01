@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `card_information`
+-- Table structure for table `livestock_cards`
 --
 
-CREATE TABLE `card_information` (
+CREATE TABLE `livestock_cards` (
   `card_id` int(11) NOT NULL,
   `card_type` varchar(500) NOT NULL,
   `card_preview` varchar(500) NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `card_information` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `card_information`
+-- Dumping data for table `livestock_cards`
 --
 
-INSERT INTO `card_information` (`card_id`, `card_type`, `card_preview`, `card_title`, `card_text`) VALUES
+INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_title`, `card_text`) VALUES
 (1, 'beef cattle', 'Maintain balance between protecting grasslands and keeping your beef cattle numbers high.', '', ''),
 (2, 'beef cattle', 'Patch-burn grazing technique is advised to be used.', '', ''),
 (3, 'beef cattle', 'Burn grassland not only for the beef cattle. Grasslands require planned burning.', 'Burn grasslands and increase livestock', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-1.jpeg\" alt=\"Burn grasslands and increase livestock\"><h5 class=\"text-justify\">Conduct controlled dry season burning to stimulate fresh plant growth to restore calcium to the soil that builds up in the dry grasses. Some species of native plants need occasional fire to thrive, while blazes can also help remove invasive species.</h5><p></p><h5 class=\"text-justify\">Fire is important for grasslands’ existence. They prevent woody plants from spreading and enable the grass to re-grow, becoming thicker, more resilient and healthier. How do grasses survive these fires? They have developed extensive underground systems during the course of evolution, which allow them to burst back to life, stronger than ever before, fairly quickly after a fire.</h5>'),
@@ -91,9 +91,9 @@ INSERT INTO `card_information` (`card_id`, `card_type`, `card_preview`, `card_ti
 --
 
 --
--- Indexes for table `card_information`
+-- Indexes for table `livestock_cards`
 --
-ALTER TABLE `card_information`
+ALTER TABLE `livestock_cards`
   ADD PRIMARY KEY (`card_id`);
 
 --
@@ -101,9 +101,9 @@ ALTER TABLE `card_information`
 --
 
 --
--- AUTO_INCREMENT for table `card_information`
+-- AUTO_INCREMENT for table `livestock_cards`
 --
-ALTER TABLE `card_information`
+ALTER TABLE `livestock_cards`
   MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
