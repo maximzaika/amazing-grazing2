@@ -90,7 +90,7 @@
 										'<div class="row">'.
 											'<ul style="margin-bottom:0px;">';
 	
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Farmer'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Farmer'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -118,7 +118,7 @@
 											'<div class="collapse" id="'.$random_button.'">'.
 												'<ul>';
 	
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Farmer'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Farmer'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -237,7 +237,7 @@
 										'<div class="row">'.
 											'<ul style="margin-bottom:0px;">';
 	
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Education'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -268,7 +268,7 @@
 											'<div class="collapse" id="'.$random_button.'">'.
 												'<ul>';
 												
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Education'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -484,7 +484,7 @@
 										'<div class="row">'.
 											'<ul style="margin-bottom:0px;">';
 											
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Age'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Age'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -509,7 +509,7 @@
 											'<div class="collapse" id="'.$random_button.'">'.
 												'<ul>';
 	
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM farmer_info WHERE farmer_card = 'Age'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Age'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
