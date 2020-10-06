@@ -273,6 +273,90 @@ img.techn-img{
 	}
 }
 
+#feedback-sent {
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: #4e9525; /* Black background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	border: 2px solid #369300;
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 999; /* Add a z-index if needed */
+	left: 50%; /* Center the update-notification */
+	top: 90px; /* 30px from the bottom */
+}
+
+#feedback-sent.show { /* Show the update-notification when clicking on a button (class added with JavaScript) */
+	visibility: visible; /* Show the update-notification */
+	/* Add animation: Take 0.5 seconds to fade in and out the update-notification.
+	However, delay the fade out process for 2.5 seconds */
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+	#feedback-sent {
+		visibility: hidden; /* Hidden by default. Visible on click */
+		min-width: 250px; /* Set a default minimum width */
+		margin-left: -165px; /* Divide value of min-width by 2 */
+		background-color: #4e9525; /* Black background color */
+		color: #fff; /* White text color */
+		text-align: center; /* Centered text */
+		border-radius: 2px; /* Rounded borders */
+		border: 2px solid #369300;
+		padding: 16px; /* Padding */
+		position: fixed; /* Sit on top of the screen */
+		z-index: 999; /* Add a z-index if needed */
+		left: 50%; /* Center the update-notification */
+		top: 90px; /* 30px from the bottom */
+	}
+}
+
+#feedback-not-sent {
+	visibility: hidden; /* Hidden by default. Visible on click */
+	min-width: 250px; /* Set a default minimum width */
+	margin-left: -125px; /* Divide value of min-width by 2 */
+	background-color: #FF6F6F; /* Black background color */
+	color: #fff; /* White text color */
+	text-align: center; /* Centered text */
+	border-radius: 2px; /* Rounded borders */
+	border: 2px solid #FF2020;
+	padding: 16px; /* Padding */
+	position: fixed; /* Sit on top of the screen */
+	z-index: 999; /* Add a z-index if needed */
+	left: 50%; /* Center the update-notification */
+	top: 90px; /* 30px from the bottom */
+}
+
+#feedback-not-sent.show { /* Show the update-notification when clicking on a button (class added with JavaScript) */
+	visibility: visible; /* Show the update-notification */
+	/* Add animation: Take 0.5 seconds to fade in and out the update-notification.
+	However, delay the fade out process for 2.5 seconds */
+	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+	#feedback-not-sent {
+		visibility: hidden; /* Hidden by default. Visible on click */
+		min-width: 250px; /* Set a default minimum width */
+		margin-left: -165px; /* Divide value of min-width by 2 */
+		background-color: #FF6F6F; /* Black background color */
+		color: #fff; /* White text color */
+		text-align: center; /* Centered text */
+		border-radius: 2px; /* Rounded borders */
+		border: 2px solid #FF2020;
+		padding: 16px; /* Padding */
+		position: fixed; /* Sit on top of the screen */
+		z-index: 999; /* Add a z-index if needed */
+		left: 50%; /* Center the update-notification */
+		top: 90px; /* 30px from the bottom */
+	}
+}
+
 @-webkit-keyframes fadein { /* Animations to fade the update-notification in and out */
   from {top: 0; opacity: 0;}
   to {top: 90px; opacity: 1;}
@@ -292,6 +376,8 @@ img.techn-img{
   from {top: 105px; opacity: 1;}
   to {top: 0; opacity: 0;}
 }
+
+
 
 /* A pop up for a video on the employment page */
 #headerPopup{
