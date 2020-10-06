@@ -25,11 +25,11 @@ $(function() {
 				   response: grecaptcha.getResponse()},
 			success: function(data) {
 				//console.log(data);
-				if (data == 'error-captcha') {
+				if (data.feedback == 'error-captcha') {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
-				} else if (data == 'Successful update') {
+				} else if (data.feedback == 'Successful update') {
 					var x = document.getElementById("feedback-sent");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
