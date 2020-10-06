@@ -93,17 +93,24 @@
 					  <textarea id="form-text" class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
 					</div>
 					
-					<div class="captcha_wrapper"><div class="g-recaptcha" data-sitekey="6LcxX9QZAAAAAB3B59tBl0Fud4a8CU_2Fu009i94"></div></div>
 					
-					<button class="btn btn-primary pull-right" style="margin-bottom: 10px;" type="submit">Send</button>
+					<div class="captcha_wrapper"><div class="g-recaptcha" data-sitekey="6LcxX9QZAAAAAB3B59tBl0Fud4a8CU_2Fu009i94"></div></div>
+					<br>
+					
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button class="btn btn-primary" type="submit" style="padding-left:43px; padding-right:50px;">Send</button>
+					</div>
+						
+				
+					
+					
+					
 				</form>
 			  
 			  
 			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-primary">Save changes</button>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  </div>
+			  
 			</div>
 		  </div>
 		</div>
