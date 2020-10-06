@@ -67,15 +67,15 @@
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 class="modal-title" style="color: #4e9525;">Feedback form</h5>
+				<h5 class="modal-title font-weight-bold" style="color: #4e9525;">Feedback</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
 			  </div>
 			  <div id="feedback-form" class="modal-body">
-				<p style="margin-top: 15px;">Did you find content useful and related to protecting Australian grasslands?</p>
-				<p class="text-center" style="margin-top: -8px;">1 star = not useful and unrelated</p>
-				<p class="text-center" style="margin-top: -8px;">5 stars = I found it useful</p>
+				<h4>Did you find content useful and related to protecting Australian grasslands?</h5>
+				<p style="color: black;">1 star = not useful and unrelated</p>
+				<p style="color: black; margin-top: -8px;">5 stars = I found it useful</p>
 
 				<form method="POST" action="" class="form panel-body" role="form">
 					<div class="form-group">
@@ -88,13 +88,14 @@
 						</div>
 					</div>
 					
-					<p style="margin-top: 30px;">Please tell us more about your time on the site.</p>
+					<p style="margin-top: 30px; color: black;">Please tell us more about your time on the site.</p>
 					<div class="form-group">
-					  <textarea id="form-text" class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
+					  <textarea id="form-text" maxlength="800" class="form-control" name="body" required placeholder="Please write your feedback here (maximum 800 characters)" rows="5"></textarea>
 					</div>
 					
+					<p id="count-characters">Characters: 0<p>
 					
-					<div class="captcha_wrapper"><div class="g-recaptcha" data-sitekey="6LcxX9QZAAAAAB3B59tBl0Fud4a8CU_2Fu009i94"></div></div>
+					<div class="captcha_wrapper"><div class="g-recaptcha" data-sitekey="6LcxX9QZAAAAAB3B59tBl0Fud4a8CU_2Fu009i94"></div></div> <!-- reCAPTCHA key -->
 					<br>
 					
 					<div class="modal-footer">
@@ -238,6 +239,11 @@
 		<!-- Added in Iteration 3 -->
 		<script src="js/amazing-grazing/feedback.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script type='text/javascript'> <!-- Executes pop-up when updating filter & rename the filter when changed -->		
+			$("#form-text").keyup(function(){
+			  $("#count-characters").text('Characters: ' + $(this).val().length);
+			});
+		</script>
 		
 	</body>
 </html>
