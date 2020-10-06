@@ -109,7 +109,8 @@
 					
 				</form>
 			  
-			  
+				<div id="feedback-sent">Feedback has been sent to our team.</div>
+				<div id="feedback-not-sent">Unknown problem sending your feedback, please try again.</div>
 			  </div>
 			  
 			</div>

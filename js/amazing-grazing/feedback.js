@@ -24,8 +24,20 @@ $(function() {
 				   feedback: form_text,
 				   response: grecaptcha.getResponse()},
 			success: function(data) {
-				console.log(data);
-				$('#form-text').val('');
+				//console.log(data);
+				if (data == 'error-captcha') {
+					var x = document.getElementById("feedback-not-sent");
+					x.className = "show";
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+				} else if (data == 'Successful update') {
+					var x = document.getElementById("feedback-sent");
+					x.className = "show";
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+				} else {
+					
+				}
+				
+				$('#form-text').val(''); // reset the #form-text
 			}, 
 			error: (error) => {
 				console.log(JSON.stringify(error));
@@ -35,7 +47,7 @@ $(function() {
 		
 	});
   
-	/* Star control */
+	/* Star/rating control */
 	var list=['rate-1','rate-2','rate-3','rate-4','rate-5'];
 	list.forEach(function(element) {
 		document.getElementById(element).addEventListener('click', function(){
