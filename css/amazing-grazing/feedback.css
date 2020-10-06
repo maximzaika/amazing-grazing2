@@ -1,0 +1,48 @@
+/* CSS file that contains feedback customization */
+#feedback {
+  
+}
+
+
+#feedback-tab {
+	position: fixed;
+  right: 0;
+  bottom: 45%;
+  height: 250px;
+  margin-right: -38px;
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  width: 120px;
+  height: 42px;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 60px;
+  margin-left: -25px;
+  padding-top: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.modal-open {
+  padding-right: 0px !important;
+}
+
+/* Stars */
+.checked {
+	font-size: 35px;
+	color: #4e9525;
+	cursor: pointer;
+}
+.unchecked {
+	font-size: 35px;
+	color: #D9DDDC;
+	cursor: pointer;
+}

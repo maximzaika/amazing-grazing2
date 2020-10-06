@@ -36,6 +36,9 @@
 		
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
+		
+		<!-- Added in iteration 3 -->
+		<link rel="stylesheet" href="css/amazing-grazing/feedback.css">
 	</head>
 	<body>		
 		<!-- Navigation Bar -->
@@ -57,6 +60,55 @@
 			</div>
 		</div>
 		<!-- End Header -->
+		
+		<div id="feedback-tab" data-toggle="modal" href="#exampleModal">Feedback</div>
+		
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" style="color: #4e9525;">Feedback form</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div id="feedback-form" class="modal-body">
+				<p style="margin-top: 15px;">Did you find content useful and related to protecting Australian grasslands?</p>
+				<p class="text-center" style="margin-top: -8px;">1 star = not useful and unrelated</p>
+				<p class="text-center" style="margin-top: -8px;">5 stars = I found it useful</p>
+
+				<form method="POST" action="" class="form panel-body" role="form">
+					<div class="form-group">
+						<div class='main text-center'>
+							<i class='fa fa-star checked' style="margin-right:10px;" id='rate-1'></i>
+							<i class='fa fa-star checked' style="margin-right:10px;" id='rate-2'></i>
+							<i class='fa fa-star checked' style="margin-right:10px;" id='rate-3'></i>
+							<i class='fa fa-star checked' style="margin-right:10px;" id='rate-4'></i>
+							<i class='fa fa-star checked' style="margin-right:10px;" id='rate-5'></i>
+						</div>
+					</div>
+					
+					<p style="margin-top: 30px;">Please tell us more about your time on the site.</p>
+					<div class="form-group">
+					  <textarea id="form-text" class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
+					</div>
+					
+					<div class="captcha_wrapper"><div class="g-recaptcha" data-sitekey="6LcxX9QZAAAAAB3B59tBl0Fud4a8CU_2Fu009i94"></div></div>
+					
+					<button class="btn btn-primary pull-right" style="margin-bottom: 10px;" type="submit">Send</button>
+				</form>
+			  
+			  
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
 		
 		<!-- Section 1: Offerings -->
 		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 4em;">
@@ -173,8 +225,13 @@
 		<script src="js/amazing-grazing/news-picker.js"></script>
 		<script src="js/bootstrap-datepicker.js"></script>
 		
-		<!-- Added in ITteration 2 -->
+		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
+		
+		<!-- Added in Iteration 3 -->
+		<script src="js/amazing-grazing/feedback.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		
 	</body>
 </html>
 
