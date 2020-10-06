@@ -10,11 +10,11 @@
 			VALUES (".$stars.",
 					'".$feedback."');";
 	
-	$response = $_POST["response"];
-	echo $response;
+	$response = $_POST["response"];	
+	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
+	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
 	
-	$url = 'https://www.google.com/recaptcha/api/siteverify';
-	$data = array(
+	/*$data = array(
 		'secret' => '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh',
 		'response' => $_POST["response"]
 	);
@@ -24,17 +24,16 @@
 			'method' => 'POST',
 			'content' => http_build_query($data)
 		)
-	);
-
-	$context  = stream_context_create($options);
-	$verify = file_get_contents($url, false, $context);
-	$captcha_success=json_decode($verify);
+	);*/
+	
+	
+	
+	//$context  = stream_context_create($options);
+	$verify = file_get_contents($url.$secret.'&response='.$response);
+	//$verify = file_get_contents($url, false, $context);
+	$captcha_success = json_decode($verify);
 	if ($captcha_success->success==false) {
-		?><script language="javascript" type="text/javascript">
-				alert('Please tick the reCAPTCHA above to prove that you are a person.');
-				history.go(-1);
-			</script>
-		<?php
+		$server_feedback = 'error-captcha';
 	} else if ($captcha_success->success==true) {
 		if ($con->query($sql) === TRUE) {
 			$server_feedback = 'Successful update';
