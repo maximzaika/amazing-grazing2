@@ -13,21 +13,7 @@
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
 	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
-	
-	/*$data = array(
-		'secret' => '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh',
-		'response' => $_POST["response"]
-	);
-
-	$options = array(
-		'http' => array (
-			'method' => 'POST',
-			'content' => http_build_query($data)
-		)
-	);*/
-	
-	
-	
+		
 	//$context  = stream_context_create($options);
 	$verify = file_get_contents($url.$secret.'&response='.$response);
 	//$verify = file_get_contents($url, false, $context);
