@@ -24,17 +24,20 @@ $(function() {
 				   feedback: form_text,
 				   response: grecaptcha.getResponse()},
 			success: function(data) {
-				//console.log(data);
-				if (data.feedback == 'error-captcha') {
+				if (data == '{"feedback":"Unsuccessful update"}') {
+					console.log('error');
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show";
-					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
-				} else if (data.feedback == 'Successful update') {
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+				} else if (data == '{"feedback":"Successful update"}') {
 					var x = document.getElementById("feedback-sent");
 					x.className = "show";
-					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				} else {
-					
+					console.log('error');
+					var x = document.getElementById("feedback-captcha");
+					x.className = "show";
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				}
 				
 				$('#form-text').val(''); // reset the #form-text

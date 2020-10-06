@@ -61,9 +61,14 @@
 		</div>
 		<!-- End Header -->
 		
-		<div id="feedback-tab" data-toggle="modal" href="#exampleModal">Feedback</div>
+		<!-- Feedback Section -->
+		<div id="feedback-sent">Feedback has been sent to our team.</div>
+		<div id="feedback-captcha">Please 'check' reCAPTCHA to verify that you are a person.</div>
+		<div id="feedback-not-sent">Unknown problem sending your feedback, please try again.</div>
+		<div id="feedback-tab" data-toggle="modal" href="#exampleModal">Feedback</div> <!-- attach feedback to right -->
 		
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  
 		  <div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -102,17 +107,8 @@
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 						<button class="btn btn-primary" type="submit" style="padding-left:43px; padding-right:50px;">Send</button>
 					</div>
-						
-				
-					
-					
-					
 				</form>
-			  
-				<div id="feedback-sent">Feedback has been sent to our team.</div>
-				<div id="feedback-not-sent">Unknown problem sending your feedback, please try again.</div>
 			  </div>
-			  
 			</div>
 		  </div>
 		</div>
