@@ -10,11 +10,13 @@
 			VALUES (".$stars.",
 					'".$feedback."');";
 	
-	$response = $_POST["g-recaptcha-response"];
+	$response = $_POST["response"];
+	echo $response;
+	
 	$url = 'https://www.google.com/recaptcha/api/siteverify';
 	$data = array(
 		'secret' => '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh',
-		'response' => $_POST["g-recaptcha-response"]
+		'response' => $_POST["response"]
 	);
 
 	$options = array(

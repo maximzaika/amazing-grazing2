@@ -4,7 +4,3 @@ CREATE TABLE user_feedback (
     feedback_text varchar(800) NOT NULL,
     PRIMARY KEY (feedback_id)
 );
-
-INSERT INTO user_feedback (feedback_rate, feedback_text)
-VALUES (,
-        '');

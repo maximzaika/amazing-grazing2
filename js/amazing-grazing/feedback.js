@@ -21,7 +21,8 @@ $(function() {
 			cache: false,
 			url: 'php/feedback.php',
 			data: {stars: cStars,
-				   feedback: form_text},
+				   feedback: form_text,
+				   response: grecaptcha.getResponse()},
 			success: function(data) {
 				console.log(data);
 				$('#form-text').val('');
