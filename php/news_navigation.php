@@ -16,7 +16,7 @@
 									'<div class="col-sm-12 col-md-4">' .
 									  '<h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Select topic</h5>'.
 									  '<button id="drop-topic" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Grazing</button>'.
-									  '<div class="dropdown-news-topic dropdown-menu">';
+									  '<div class="dropdown-news-topic dropdown-menu text-center">';
 									
 				while($row = $topic_Data->fetch_assoc()) {
 					$post_topicId = $row['news_topic_id'];
@@ -24,7 +24,7 @@
 					$post_topicTopic = $row['news_topic_topic'];
 					
 					$title_date_full = $title_date_full . 
-									  '<a id="'.$post_topicLabl.'" class="dropdown-item updateNews updateNewsJS">'.$post_topicTopic.'</a>';
+									  '<a id="'.$post_topicLabl.'" class="dropdown-item updateNews updateNewsJS" style="cursor: pointer;">'.$post_topicTopic.'</a>';
 				}
 				
 				$title_date_full = $title_date_full . 
@@ -39,14 +39,14 @@
 									'<div class="col-sm-12 col-md-4">' .
 									  '<h5><i class="fa fa-globe" aria-hidden="true"></i> Select country</h5>'.
 									  '<button id="drop-region" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Australia</button>'.
-									  '<div class="dropdown-news-topic dropdown-menu">';
+									  '<div class="dropdown-news-topic dropdown-menu text-center">';
 				while($row = $region_Data->fetch_assoc()) {
 					$post_regionId = $row['news_reg_id'];
 					$post_regionLabl = $row['news_reg_label'];
 					$post_regionTopic = $row['news_reg_topic'];
 					
 					$title_date_full = $title_date_full . 
-									  '<a id="'.$post_regionLabl.'" class="dropdown-item updateNews updateNewsJS">'.$post_regionTopic.'</a>';
+									  '<a id="'.$post_regionLabl.'" class="dropdown-item updateNews updateNewsJS" style="cursor: pointer;">'.$post_regionTopic.'</a>';
 				}
 				$title_date_full = $title_date_full . 
 									  '</div>'.
@@ -59,12 +59,13 @@
 			                     '<div class="col-sm-12 col-md-4">'.
 								   '<h5><i class="fa fa-sort" aria-hidden="true"></i> Sort by date</h5>'.
 								   '<button id="drop-sort" type="button" class="w-100 btn-news-topic btn btn-topic btn-primary dropdown-toggle" data-toggle="dropdown">Sort Newest to Oldest</button>'.
-								   '<div class="dropdown-news-topic dropdown-menu">'.
-								     '<a id="S_new-to-old" class="dropdown-item updateNews updateNewsJS">Sort Newest to Oldest</a>'.
-									 '<a id="S_old-to-new" class="dropdown-item updateNews updateNewsJS">Sort Oldest to Newest</a>'.
+								   '<div class="dropdown-news-topic dropdown-menu text-center">'.
+								     '<a id="S_new-to-old" class="dropdown-item updateNews updateNewsJS" style="cursor: pointer;">Sort Newest to Oldest</a>'.
+									 '<a id="S_old-to-new" class="dropdown-item updateNews updateNewsJS" style="cursor: pointer;">Sort Oldest to Newest</a>'.
 								   '</div>'.
 								 '</div>'.
 								 '</div>'.
+								 
 								 '</div>';
 			
 			/* End Sort */
