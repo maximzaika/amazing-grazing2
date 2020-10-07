@@ -4,6 +4,7 @@
 	require_once "server_config.php";
 	require_once "php/navigation.php";
 	require_once "php/employee-statistics-content.php";
+	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +35,9 @@
 		
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
+		
+		<!-- Added in iteration 3 -->
+		<link rel="stylesheet" href="css/amazing-grazing/feedback.css">
 	</head>
 	<body>		
 		<!-- Navigation Bar -->
@@ -52,6 +56,10 @@
 			</div>
 		</section>
 		<!-- End Section 1: Page header - Employment Statistics -->
+		
+		<!-- Feedback Section -->
+		<?php echo htmlspecialchars_decode($feedback_form);?>
+		<!-- End Feedback Section -->
 							
 		<!-- Breadcrumbs -->
 		<div class="container-fluid bg-light ftco-animate">
@@ -305,6 +313,10 @@
 				}
 			});
 		</script>
+		
+		<!-- Added in Iteration 3 -->
+		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
+		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 	</body>
 </html>
 

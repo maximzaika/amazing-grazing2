@@ -54,7 +54,7 @@
 					'</div>';
 			}
 		} else {
-			if (($data['articleCount'] == 0) && (isset($data['articleCount']) == 1)) {
+			if (isset($data['articleCount']) == 1) {
 				$full_news = "There are no news available based on your search criteria. Please, select another date.";
 			}
 			
