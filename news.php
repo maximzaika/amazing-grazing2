@@ -85,9 +85,7 @@
 				</div>
 				
 				<!-- News Navigation (Select topic, select start date, select region) -->
-				<div class="row">
-					 <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
-				</div>
+				<?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 		
 			    <hr> <!-- add horizonal line between the news and navigation -->
 				
@@ -170,5 +168,19 @@
 	<!-- Added in Iteration 3 -->
 	<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
+	<script type='text/javascript'> <!-- Changes the icon for the news filter in mobile version -->					
+			$("#show-filter").click(function() { // renames the filter button upon click
+				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
+				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
+				
+				var curr_text = document.getElementById("show-filter").innerHTML;
+				
+				if (curr_text == max_btn) {
+					document.getElementById("show-filter").innerHTML  = min_btn;
+				} else {
+					document.getElementById("show-filter").innerHTML  = max_btn;
+				}
+			});
+		</script>
   </body>
 </html>
