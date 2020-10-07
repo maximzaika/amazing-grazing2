@@ -35,7 +35,6 @@ $(function() {
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				} else {
-					console.log(data);
 					var x = document.getElementById("feedback-captcha");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
