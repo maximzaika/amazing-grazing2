@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 08:26 AM
+-- Generation Time: Oct 07, 2020 at 05:25 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -333,11 +333,11 @@ CREATE TABLE `g_news_api` (
 INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
 (1, 100, '2f43dc9d754f3008f68a7f50b670c208'),
 (2, 100, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
-(3, 53, 'c3fae1827597a016ef41d4fb9c4f95fe'),
-(4, 0, '9e0677170130c646c24d9d907974166c'),
-(5, 0, '1d5029e4a17729fbd82d52087fc2c85c'),
-(6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
-(7, 50, 'e7a575a4e5900bf0de75a73abf3e7d2b');
+(3, 100, 'c3fae1827597a016ef41d4fb9c4f95fe'),
+(4, 100, '9e0677170130c646c24d9d907974166c'),
+(5, 100, '1d5029e4a17729fbd82d52087fc2c85c'),
+(6, 100, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
+(7, 100, 'e7a575a4e5900bf0de75a73abf3e7d2b');
 
 -- --------------------------------------------------------
 
@@ -358,10 +358,12 @@ CREATE TABLE `index_offerings` (
 --
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
-(1, 'flaticon-news', 'Latest News', 'Stay up-tp-date with the latest news regarding grazing, wildfires, drought, and livestock. You might find something interesting.', 'news.php'),
-(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserve grasslands\'s nature, soil, and grass and increase your livestock numbers by the use of appropriate grazing techniques.', 'techniques.php'),
+(1, 'flaticon-news', 'Latest News', 'Stay up-tp-date with the latest news regarding grazing, wildfires, drought, and livestock. News from relevant countries are provided to protect our grasslands!', 'news.php'),
+(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserve grassland\'s nature, soil, and grass and increase your livestock numbers by the use of appropriate grazing techniques.', 'techniques.php'),
 (3, 'flaticon-chicken', 'Livestock Statistics', 'Dominant livestock has been reducing since 1970 up until now. Action needs to be taken! Various graphs and solutions are provided.', 'livestock-statistics.php'),
-(4, 'flaticon-teacher', 'Employment Statistics', 'The number of farmers, working with beef and dairy cattle and sheep, has been reducing. Various graphs and solutions are provided.', 'employment-statistics.php');
+(4, 'flaticon-teacher', 'Employment Statistics', 'The number of farmers, working with beef and dairy cattle and sheep, has been reducing. Lots of opportunities for younger farmers to showcase themselves.', 'employment-statistics.php'),
+(5, 'flaticon-drought', 'Drought', 'Drought has negative impact on grasslands, which leads to wildfires, loss of wetland, and reduction of livestock. Drought locations and water levels are provided.', 'drought.php'),
+(6, 'flaticon-bug', 'Invasive Species', 'Weeds and animals spread and multiplied to the point where they damage grasslands. Various species, their locations, and measures against them are provided.', 'invasive-species.php');
 
 -- --------------------------------------------------------
 
@@ -917,20 +919,24 @@ INSERT INTO `livestock_spinner` (`livestock_spinner_id`, `livestock_spinner_icon
 
 CREATE TABLE `nav_bar` (
   `nav_id` int(11) NOT NULL,
-  `nav_link` varchar(100) DEFAULT NULL,
-  `nav_title` varchar(100) DEFAULT NULL
+  `nav_link` varchar(100) NOT NULL,
+  `nav_title` varchar(100) NOT NULL,
+  `nav_drop` int(11) NOT NULL,
+  `nav_topic` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `nav_bar`
 --
 
-INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`) VALUES
-(1, 'index.php', 'Home'),
-(2, 'news.php', 'News'),
-(3, 'techniques.php', 'Techniques'),
-(4, 'livestock-statistics.php', 'Livestock'),
-(5, 'employment-statistics.php', 'Employment');
+INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`, `nav_drop`, `nav_topic`) VALUES
+(1, 'index.php', 'Home', 0, 'none'),
+(2, 'news.php', 'News', 0, 'none'),
+(3, 'techniques.php', 'Techniques', 0, 'none'),
+(4, 'livestock-statistics.php', 'Livestock', 1, 'Statistics'),
+(5, 'employment-statistics.php', 'Employment', 1, 'Statistics'),
+(6, 'drought.php', 'Drought', 0, 'none'),
+(7, 'invasive-species.php', 'Species', 0, 'none');
 
 -- --------------------------------------------------------
 
@@ -1240,6 +1246,54 @@ CREATE TABLE `pma__users` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `species_landing`
+--
+
+CREATE TABLE `species_landing` (
+  `species_landing_id` int(11) NOT NULL,
+  `species_landing_title` varchar(100) DEFAULT NULL,
+  `species_landing_subheading` varchar(150) DEFAULT NULL,
+  `species_landing_description` varchar(350) DEFAULT NULL,
+  `species_landing_icon` varchar(100) NOT NULL,
+  `species_landing_content` varchar(800) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `species_landing`
+--
+
+INSERT INTO `species_landing` (`species_landing_id`, `species_landing_title`, `species_landing_subheading`, `species_landing_description`, `species_landing_icon`, `species_landing_content`) VALUES
+(1, 'INVASIVE SPECIES IMPACT GRASSLANDS', 'In Australia, invasive species cause tremendous damage to soil', 'It is a challenge to control invasive species, especially if farmer\'s qualification in Australia is poor. Refer to <i><u><a href=\"employment-statistics.php\">employment</a></u></i> and <i><u><a href=\"livestock-statistics.php\">livestock</a></u></i> statistic pages to gain insight knowledge.', 'fa-exclamation-small fa-exclamation', 'Invasive species compete with native plants, water, and livestock!'),
+(2, '', '', '', 'fa-exclamation-small fa-exclamation', 'Invasive weeds are responsible for changing wildfire patterns!'),
+(3, '', '', '', 'fa-exclamation-small fa-exclamation', 'Invasive animals degrate soil by overgrazing the grasslands!');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `species_spinner`
+--
+
+CREATE TABLE `species_spinner` (
+  `species_spinner_id` int(11) NOT NULL,
+  `species_spinner_icon` varchar(100) NOT NULL,
+  `species_spinner_title` varchar(50) NOT NULL,
+  `species_spinner_text` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `species_spinner`
+--
+
+INSERT INTO `species_spinner` (`species_spinner_id`, `species_spinner_icon`, `species_spinner_title`, `species_spinner_text`) VALUES
+(1, 'flaticon-spreading', 'Dangerous', 'They have spread throughout Australia to the point where they cause damage to grasslands, threaten existence of native plants and animal, or affect grazing.'),
+(2, 'flaticon-bug', 'Species', 'Invasive animals, known as feral animals, and invasive plants known as weeds are one of the biggest concerns that Australian grasslands are facing today.'),
+(3, 'flaticon-investigate', 'Root cause', 'Most of the damaging invasive animal and weed species were introduced 200 years ago for sport, as pets or as livestock and pack animals.'),
+(4, 'flaticon-animal-kingdom', 'Animals', 'Various animals like rabbits, goats, cattle, buffaloes, pigs, donkeys and others, that can be found below, degrate grasslands soil by intense uncontrolled grazing.'),
+(5, 'flaticon-hunting', 'Management', 'Various species, like feral animals or weeds, have their own ways to control the infestation. Few methods are shooting, poisoning, fencing, biological, etc.');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `suggestion_tech`
 --
 
@@ -1354,6 +1408,21 @@ INSERT INTO `technique_selected` (`selected_id`, `selected_techn`, `selected_tit
 (1, 'ROTATIONAL GRAZING', 'WHY SHOULD I USE IT?', 'Rotational grazing can express much higher stocking rates of paddock-by-paddock than regular pre-set stocking. It enhances the nutritious level of the grazing plants in the best growth stage of their lifecycle, therefore enabling multiple livestock to be able to continue their thriving. Using this technique, you can maintain your land forage as high productive pasture which extends the period of balanced growth. At the same time, compared to continuous grazing, you can decrease the methane emissions from livestock by up to 22% (per unit of cattle gain). In this case, cows will have more energy to produce milk.', 'cow_life.png', 'management_intensive_grazing.jpeg;mod_grazing.jpeg;adaptive_high_stock_density_grazing.jpeg', 'DIFFERENT ROTATIONAL GRAZING METHODS', 'Slow Rotational;Mob;Adaptive High-Stock Density', 'Slow rotational grazing is pastures of 2 or more with standard moves from every 2 weeks to every few months in order to enable land recovery and rest.;Requires significantly higher stock densities between 75-300+ AU per acre. Multiple moves per day are required to maintain ideal stock densities. Temporary fencing is often used to create small paddocks.;Apply multiple of the previous methods of grazing to enable graziers to adjust herd density to achieve the nutritional needs of livestock and satisfy the conditions of the soil.'),
 (2, 'SEASONAL GRAZING', 'WHY SHOULD I USE IT?', 'Different season conditions provide different use of land for certain species. The benefits and disadvantages of seasonal grazing on the grassland can be very different based on the season you selected. Seasonal grazing offers a great chance to adjust your grazing regime of the year. It can benefit the targeted flora species in the habitat for better effectivity in the long-term.', '', 'autumn.jpeg;winter.jpeg;spring.jpeg;summer.jpeg', '', 'Autumn;Winter;Spring;Summer', 'The most suitable time to apply heavy grazing combined with a rotational or continuous technique.;It is a chance that you can adjust your whole year grazing regime.;Not the most appropriate time for effective grazing. It is better to keep relatively light grazing.;Not the best time. Light grazing is a more ideal option.'),
 (3, 'PATCH-BURN GRAZING', 'WHY SHOULD I USE IT?', 'Patch-burn is a good technique that you can apply in your sustainable grazing. It helps to manage the grassland through burning certain areas of the paddock in a certain year to attract the grazing livestock. Thus, livestock will focus on grazing in the specific burned patch across the whole paddock. The rest of the portion of the grassland will be shifted for the new burning. In this way, always using the most recent burned section enable the regrowth and recovery of those already burned and used patches.', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_feedback`
+--
+
+CREATE TABLE `user_feedback` (
+  `feedback_id` int(11) NOT NULL,
+  `feedback_page` varchar(100) NOT NULL,
+  `feedback_date` varchar(20) NOT NULL,
+  `feedback_time` varchar(20) NOT NULL,
+  `feedback_rate` int(11) NOT NULL,
+  `feedback_text` varchar(800) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -1564,6 +1633,18 @@ ALTER TABLE `pma__users`
   ADD PRIMARY KEY (`username`,`usergroup`);
 
 --
+-- Indexes for table `species_landing`
+--
+ALTER TABLE `species_landing`
+  ADD PRIMARY KEY (`species_landing_id`);
+
+--
+-- Indexes for table `species_spinner`
+--
+ALTER TABLE `species_spinner`
+  ADD PRIMARY KEY (`species_spinner_id`);
+
+--
 -- Indexes for table `suggestion_tech`
 --
 ALTER TABLE `suggestion_tech`
@@ -1586,6 +1667,12 @@ ALTER TABLE `techniques_content`
 --
 ALTER TABLE `technique_selected`
   ADD PRIMARY KEY (`selected_id`);
+
+--
+-- Indexes for table `user_feedback`
+--
+ALTER TABLE `user_feedback`
+  ADD PRIMARY KEY (`feedback_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -1631,7 +1718,7 @@ ALTER TABLE `emp_state`
 -- AUTO_INCREMENT for table `index_offerings`
 --
 ALTER TABLE `index_offerings`
-  MODIFY `ofr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ofr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `livestock_cards`
@@ -1673,7 +1760,7 @@ ALTER TABLE `livestock_spinner`
 -- AUTO_INCREMENT for table `nav_bar`
 --
 ALTER TABLE `nav_bar`
-  MODIFY `nav_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `nav_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pma__bookmark`
@@ -1712,6 +1799,18 @@ ALTER TABLE `pma__savedsearches`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `species_landing`
+--
+ALTER TABLE `species_landing`
+  MODIFY `species_landing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `species_spinner`
+--
+ALTER TABLE `species_spinner`
+  MODIFY `species_spinner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `suggestion_tech`
 --
 ALTER TABLE `suggestion_tech`
@@ -1734,6 +1833,12 @@ ALTER TABLE `techniques_content`
 --
 ALTER TABLE `technique_selected`
   MODIFY `selected_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `user_feedback`
+--
+ALTER TABLE `user_feedback`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

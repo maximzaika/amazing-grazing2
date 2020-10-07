@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 07/10/2020 11:56
+  	Creation date: 07/10/2020 14:25
   	*/
 
 @font-face {
@@ -50,3 +50,7 @@ margin-left: 20px;
 .flaticon-mortarboard:before { content: "\f111"; }
 .flaticon-age:before { content: "\f112"; }
 .flaticon-bug:before { content: "\f113"; }
+.flaticon-spreading:before { content: "\f114"; }
+.flaticon-investigate:before { content: "\f115"; }
+.flaticon-animal-kingdom:before { content: "\f116"; }
+.flaticon-hunting:before { content: "\f117"; }

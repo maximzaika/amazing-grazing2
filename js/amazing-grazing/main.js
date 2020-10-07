@@ -28,7 +28,6 @@
 		if (this.hash !== "") { // Make sure this.hash has a value before overriding default behavior
 			event.preventDefault(); // Prevent default anchor click behavior
 	  
-		
 			var hash = this.hash; // Store hash
 
 			// Using jQuery's animate() method to add smooth page scroll
