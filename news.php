@@ -51,7 +51,7 @@
 				<div class="container">
 					<div class="row no-gutters slider-text align-items-end justify-content-center">
 						<div class="col-md-9 ftco-animate pb-5 text-center">
-							<h1 class="mb-3 bread">News</h1>
+							<h1 class="mb-3 bread">Latest News</h1>
 						</div>
 					</div>
 				</div>

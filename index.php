@@ -2,10 +2,10 @@
 <?php 
     /* Server side files */
 	require_once "server_config.php";
-	require_once "php/gnewsAPI.php";
+	//require_once "php/gnewsAPI.php";
 	require_once "php/navigation.php";
 	require_once "php/home_offerings.php";
-	require_once "php/news_navigation.php";
+	//require_once "php/news_navigation.php";
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 
@@ -54,7 +54,7 @@
 					<div class="col-md-6 ftco-animate">
 						<h2 class="subheading"><i>Welcome to Amazing Grazing</i></h2>
 						<h1>Make a difference in protecting Australian grasslands</h1>
-						<p class="mb-4">By grazing and preserving your livestock</p>
+						<p class="mb-4">By effective grazing and preserving your livestock</p>
 						<p><a href="#offerings" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
 					</div>
 				</div>
@@ -71,8 +71,8 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
-						<h2 class="mb-4">OFFERINGS</h2>
-						<span class="subheading">We protect by providing</span>
+						<h2>SERVICES</h2>
+						<span class="mb-4 subheading">Thoroughly researched and narrowed down solutions are provided</span>
 					</div>
 				</div>
 				
@@ -88,7 +88,7 @@
 		<!-- End Section 1: We Protect by Providing -->
 		
 		<!-- Section 2: News -->
-		<section class="ftco-section bg-light">
+		<!--<section class="ftco-section bg-light">
 			<div class="container">
 				<div class="row justify-content-center pb-3">
 					<div class="col-md-7 heading-section text-center ftco-animate">
@@ -97,18 +97,18 @@
 					</div>
 				</div>
 				
-				<!-- News Navigation (Select topic, select start date, select region) -->
-				<?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
+				
+				<?php //echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 				
 		
-			    <hr> <!-- add horizonal line between the news and navigation -->
+			    <hr> 
 				
-				<!-- All The news are displayed here -->
+				
 				<div id="update-news" class="row pre-scrollable">
-					<?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
+					<?php //echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<!-- End Section 2: News -->
 		
 		<!-- Section 3: Footer -->
@@ -186,7 +186,7 @@
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 		<script type='text/javascript'> <!-- Changes the icon for the news filter in mobile version -->					
-			$("#show-filter").click(function() { // renames the filter button upon click
+			/*$("#show-filter").click(function() { // renames the filter button upon click
 				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
 				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
 				
@@ -197,7 +197,7 @@
 				} else {
 					document.getElementById("show-filter").innerHTML  = max_btn;
 				}
-			});
+			});*/
 		</script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 07/10/2020 11:56
+    Creation date: 07/10/2020 14:25
     */
 
     @font-face {
@@ -57,6 +57,10 @@
 .flaticon-mortarboard:before { content: "\f111"; }
 .flaticon-age:before { content: "\f112"; }
 .flaticon-bug:before { content: "\f113"; }
+.flaticon-spreading:before { content: "\f114"; }
+.flaticon-investigate:before { content: "\f115"; }
+.flaticon-animal-kingdom:before { content: "\f116"; }
+.flaticon-hunting:before { content: "\f117"; }
     
     $font-Flaticon-horse-grazing-black-silhouette: "\f100";
     $font-Flaticon-newspaper: "\f101";
@@ -78,3 +82,7 @@
     $font-Flaticon-mortarboard: "\f111";
     $font-Flaticon-age: "\f112";
     $font-Flaticon-bug: "\f113";
+    $font-Flaticon-spreading: "\f114";
+    $font-Flaticon-investigate: "\f115";
+    $font-Flaticon-animal-kingdom: "\f116";
+    $font-Flaticon-hunting: "\f117";

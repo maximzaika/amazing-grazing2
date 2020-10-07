@@ -64,7 +64,7 @@
 					<h5 class="breadcrumbs">
 						<span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a>
 						<span class="mr-2"><a href="techniques.php">Techniques <i class="ion-ios-arrow-forward"></i></a>
-						<span><u><i>Seasonal grazing</i> <i class="ion-ios-arrow-forward"></u></i></a>
+						<span><u><i>Seasonal</i> <i class="ion-ios-arrow-forward"></u></i></a>
 					</h5> 
 					<hr>
 				</div>

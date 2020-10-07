@@ -1,3 +1,55 @@
+CREATE TABLE species_spinner (
+    species_spinner_id int NOT NULL AUTO_INCREMENT,
+    species_spinner_icon varchar(100) NOT NULL,
+    species_spinner_title varchar(50) NOT NULL,
+    species_spinner_text varchar(250) NOT NULL,
+    PRIMARY KEY (species_spinner_id)
+);
+
+INSERT INTO species_spinner (species_spinner_icon, species_spinner_title, species_spinner_text)
+VALUES ('flaticon-spreading',
+        'Dangerous',
+		'They have spread throughout Australia to the point where they cause damage to grasslands, threaten existence of native plants and animal, or affect grazing.'),
+	   ('flaticon-bug',
+		'Species',
+		'Invasive animals, known as feral animals, and invasive plants known as weeds are one of the biggest concerns that Australian grasslands are facing today.'),
+	   ('flaticon-investigate',
+		'Root cause',
+		'Most of the damaging invasive animal and weed species were introduced 200 years ago for sport, as pets or as livestock and pack animals.'),
+	   ('flaticon-animal-kingdom',
+		'Animals',
+		'Various animals like rabbits, goats, cattle, buffaloes, pigs, donkeys and others, that can be found below, degrate grasslands soil by intense uncontrolled grazing.'),
+	   ('flaticon-hunting',
+		'Management',
+		'Various species, like feral animals or weeds, have their own ways to control the infestation. Few methods are shooting, poisoning, fencing, biological, etc.');
+
+CREATE TABLE species_landing (
+    species_landing_id int NOT NULL AUTO_INCREMENT,
+    species_landing_title varchar(100),
+    species_landing_subheading varchar(150),
+    species_landing_description varchar(350),
+	species_landing_icon varchar(100) NOT NULL,
+	species_landing_content varchar(800) NOT NULL,
+    PRIMARY KEY (species_landing_id)
+);
+
+INSERT INTO species_landing (species_landing_title, species_landing_subheading, species_landing_description, species_landing_icon, species_landing_content)
+VALUES ('INVASIVE SPECIES IMPACT GRASSLANDS',
+        'In Australia, invasive species cause tremendous damage to soil',
+		'It is a challenge to control invasive species, especially if farmer\'s qualification in Australia is poor. Refer to <i><u><a href="employment-statistics.php">employment</a></u></i> and <i><u><a href="livestock-statistics.php">livestock</a></u></i> statistic pages to gain insight knowledge.',
+		'fa-exclamation-small fa-exclamation',
+		'Invasive species compete with native plants, water, and livestock!'),
+	   ('',
+        '',
+		'',
+		'fa-exclamation-small fa-exclamation',
+		'Invasive weeds are responsible for changing wildfire patterns!'),
+	   ('',
+        '',
+		'',
+		'fa-exclamation-small fa-exclamation',
+		'Invasive animals degrate soil by overgrazing the grasslands!');
+
 CREATE TABLE livestock_spinner (
     livestock_spinner_id int NOT NULL AUTO_INCREMENT,
     livestock_spinner_icon varchar(100) NOT NULL,
