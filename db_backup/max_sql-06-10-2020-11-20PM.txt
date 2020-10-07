@@ -1,5 +1,6 @@
 CREATE TABLE user_feedback (
     feedback_id int NOT NULL AUTO_INCREMENT,
+	feedback_page varchar (100) NOT NULL,
 	feedback_date varchar(20) NOT NULL,
 	feedback_time varchar(20) NOT NULL,
     feedback_rate int NOT NULL,

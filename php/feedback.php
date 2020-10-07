@@ -3,14 +3,16 @@
 	
 	$stars = $_POST['stars'];
 	$feedback = $_POST['feedback'];
+	$page = $_POST['page'];
 	
 	$feedback = str_replace('"', "'", $feedback);
 	
-	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text)".
+	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
 		   "VALUES ('".date("d-m-Y")."',".
 			        "'".date("h:i:sa")."',".
 			        $stars.",".
-					'"'.$feedback.'");';
+					'"'.$feedback.'",'.
+					'"'.$page.'");';
 
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';

@@ -14,6 +14,7 @@ $(function() {
 		}
 		
 		var form_text = $('#form-text').val();
+		var page_received = $('#page-received').attr('class');
 
 		$.ajax({
 			type: $form.attr('method'),
@@ -21,7 +22,8 @@ $(function() {
 			url: 'php/feedback.php',
 			data: {stars: cStars,
 				   feedback: form_text,
-				   response: grecaptcha.getResponse()},
+				   response: grecaptcha.getResponse(),
+				   page: page_received},
 			success: function(data) {
 				if (data == '{"feedback":"Unsuccessful update"}') {
 					var x = document.getElementById("feedback-not-sent");
@@ -33,12 +35,11 @@ $(function() {
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				} else {
+					console.log(data);
 					var x = document.getElementById("feedback-captcha");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				}
-				
-				
 			}, 
 			error: (error) => {
 				console.log(JSON.stringify(error));

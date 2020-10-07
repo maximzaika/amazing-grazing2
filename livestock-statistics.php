@@ -58,7 +58,7 @@
 		<!-- End Section 1: Page header - Livestock Statistics -->
 		
 		<!-- Feedback Section -->
-		<?php echo htmlspecialchars_decode($feedback_form);?>
+		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 		
 		<!-- Breadcrumbs -->

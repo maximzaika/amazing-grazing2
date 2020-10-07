@@ -63,7 +63,7 @@
 		<!-- End Header -->
 		
 		<!-- Feedback Section -->
-		<?php echo htmlspecialchars_decode($feedback_form);?>
+		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 		
 		<!-- Section 1: Offerings -->
