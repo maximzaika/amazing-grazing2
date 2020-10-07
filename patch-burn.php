@@ -54,7 +54,7 @@
 		<!-- End Section 1: Page header - Grazing Techniques -->
 		
 		<!-- Feedback Section -->
-		<?php echo htmlspecialchars_decode($feedback_form);?>
+		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 	
 		<!-- Breadcrumbs -->
