@@ -409,17 +409,6 @@ img.techn-img{
   to {top: 90px; opacity: 1;}
 }
 
-@-webkit-keyframes fadeout { /* Animations to fade the update-notification in and out */
-  from {top: 105px; opacity: 1;}
-  to {top: 0; opacity: 0;}
-}
-
-@keyframes fadeout { /* Animations to fade the update-notification in and out */
-  from {top: 105px; opacity: 1;}
-  to {top: 0; opacity: 0;}
-}
-
-
 
 /* A pop up for a video on the employment page */
 #headerPopup{
