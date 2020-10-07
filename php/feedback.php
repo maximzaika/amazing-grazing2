@@ -16,9 +16,7 @@
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
 	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
 		
-	//$context  = stream_context_create($options);
 	$verify = file_get_contents($url.$secret.'&response='.$response);
-	//$verify = file_get_contents($url, false, $context);
 	$captcha_success = json_decode($verify);
 	if ($captcha_success->success==false) {
 		$server_feedback = 'error-captcha';
@@ -30,5 +28,5 @@
 		}
 	}
 	
-	echo json_encode(array("feedback"=>$sql));
+	echo json_encode(array("feedback"=>$server_feedback));
 ?>
