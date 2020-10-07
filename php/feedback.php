@@ -6,10 +6,12 @@
 	
 	$feedback = str_replace('"', "'", $feedback);
 	
-	$sql = "INSERT INTO user_feedback (feedback_rate, feedback_text)
-			VALUES (".$stars.",
-					'".$feedback."');";
-	
+	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text)".
+		   "VALUES ('".date("d-m-Y")."',".
+			        "'".date("h:i:sa")."',".
+			        $stars.",".
+					'"'.$feedback.'");';
+
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
 	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
@@ -28,5 +30,5 @@
 		}
 	}
 	
-	echo json_encode(array("feedback"=>$server_feedback));
+	echo json_encode(array("feedback"=>$sql));
 ?>
