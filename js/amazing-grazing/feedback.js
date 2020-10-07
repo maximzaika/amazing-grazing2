@@ -29,11 +29,13 @@ $(function() {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+					grecaptcha.reset();
 				} else if (data == '{"feedback":"Successful update"}') {
 					var x = document.getElementById("feedback-sent");
 					$('#form-text').val(''); // reset the #form-text
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+					grecaptcha.reset();
 				} else {
 					var x = document.getElementById("feedback-captcha");
 					x.className = "show";
