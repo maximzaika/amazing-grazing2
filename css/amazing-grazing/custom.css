@@ -690,3 +690,172 @@ img.techn-img{
 			line-height: 2em; 
 		}
 }
+
+/* Species page - Gallery arrows  */
+.owl-prev, .owl-next {
+	width: 15px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block !important;
+	border:0px solid black;
+}
+
+.owl-prev i, .owl-next i {transform : scale(7,9);}
+
+/* Species page - sorting of species by animals/plants */
+.sort-species .sort-species-item {
+  margin-bottom: 30px;
+}
+
+.sort-species #sort-species-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.sort-species #sort-species-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 40px;
+}
+
+.sort-species #sort-species-flters li:hover, .sort-species #sort-species-flters li.filter-active {
+  color: white;
+  border: 0px solid #444444;
+  background-color: #4e9525;
+  border-radius: 40px;
+}
+
+.sort-species #sort-species-flters li:last-child {
+  margin-right: 0;
+}
+
+.sort-species .sort-species-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.sort-species .sort-species-wrap::before {
+  content: "";
+  background: rgba(36, 135, 206, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.sort-species .sort-species-wrap .sort-species-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-species .sort-species-wrap .sort-species-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.sort-species .sort-species-wrap .sort-species-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.sort-species .sort-species-wrap .sort-species-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.sort-species .sort-species-wrap .sort-species-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-species .sort-species-wrap .sort-species-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.sort-species .sort-species-wrap .sort-species-links a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.sort-species .sort-species-wrap .sort-species-links a:hover {
+  color: #fff;
+}
+
+.sort-species .sort-species-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.sort-species .sort-species-wrap:hover .sort-species-info {
+  opacity: 1;
+}
+
+.sort-species .sort-species-wrap:hover .sort-species-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.sort-species .sort-species-wrap:hover .sort-species-info::after {
+  bottom: 15px;
+  right: 15px;
+}

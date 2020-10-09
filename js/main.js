@@ -65,7 +65,7 @@
 			margin: 30,
 			stagePadding: 0,
 			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
 			responsive:{
 				0:{
 					items: 1
@@ -78,8 +78,33 @@
 				}
 			}
 		});
-
-
+		
+			
+		
+		$('.carousel-species').owlCarousel({
+			center: true,
+			loop: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			mouseDrag: true,
+			nav: true,
+			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 2
+				},
+				1000:{
+					items: 3
+				},
+				1600:{
+					items: 4
+				}
+			}
+		});
 	};
 	carousel();
 

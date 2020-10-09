@@ -29,6 +29,8 @@
 		<link rel="stylesheet" href="css/flaticon.css">
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
+		<!--<link rel="stylesheet" href="css/venobox.css">
+		<link rel="stylesheet" href="css/aos.css">-->
 
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
@@ -93,56 +95,209 @@
 			</div>
 		</section>
 		
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body" style="z-index: 1000;">
+				<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
+					<div class='tableauPlaceholder' id='viz1599895574623'>
+						<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png' style='border: none' /></a>
+						</noscript>
+						<object class='tableauViz'  style='display:none;'>
+							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+							<param name='embed_code_version' value='3' /> 
+							<param name='site_root' value='' />
+							<param name='name' value='sheep1973-2030&#47;SheepNumbersfrom1973to2030' />
+							<param name='tabs' value='no' />
+							<param name='toolbar' value='yes' />
+							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png' /> 
+							<param name='animate_transition' value='yes' />
+							<param name='display_static_image' value='yes' />
+							<param name='display_spinner' value='yes' />
+							<param name='display_overlay' value='yes' />
+							<param name='display_count' value='yes' />
+							<param name='language' value='en' />
+							<param name='filter' value='publish=yes' />
+						</object>
+					</div>
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
 		<!-- Section 3: DOMINANT LIFESTOCK IS DRASTICALLY REDUCING -->
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
-			<!-- Title and subheading of this section -->
-			<div class="container" style="padding-top: 4em;">
-				<div class="row justify-content-center">
-					<div class="col-md-12 text-center heading-section">
-						<h2>DOMINANT LIFESTOCK IS DRASTICALLY REDUCING</h2>
-						<span class="mb-4 subheading">Lack of livestock will degrade the soil quality and lead to reduced quantities of food and material</span>
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+				<div class="container" style="padding-top: 4em;">
+					<div class="row justify-content-center">
+						<div class="col-md-12 text-center heading-section">
+							<h2>INVASIVE SPECIES & LOCATIONS</h2>
+							<span class="mb-4 subheading">Filter invasive species by type</span>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- End Title and subheading of this section -->
-			
-			<!-- Filter and year selection buttons and graph content -->
-			<div class="container">		
-				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
-					<div class="row">
-						<!-- Livestock filter & year section -->
-						<div class="col-md-3">
-							<?php echo htmlspecialchars_decode($live_control);?>
+				
+				<!-- Button trigger modal -->
+				
+
+				<div class="row" data-aos="fade-up" data-aos-delay="150">
+				  <div class="col-lg-12 d-flex justify-content-center">
+					<ul id="sort-species-flters">
+						<li data-filter=".filter-plants" class="filter-active">Plants</li>
+					    <li data-filter=".filter-animals">Animals</li>
+					</ul>
+				  </div>
+				</div>
+				
+				<div class="row sort-species-container" data-aos="fade-up" data-aos-delay="300">
+					<div class="col-md-12 sort-species-item filter-animals">
+		
+						<div class="carousel-species owl-carousel ftco-owl">
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Animals</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+									</button>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Animals</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+									</button>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/livestock-statistics.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
+						  
 						</div>
-						<!-- End Livestock filter & year section -->
+					</div>
+					
+					<div class="col-md-12 sort-species-item filter-plants">
 						
-						<!-- Graph Section -->
-						<div class="col-md-9">
-							<h5><i class="fa fa-line-chart" aria-hidden="true"></i> Prediction graph</h5>
-							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
-								<!-- Graph is updated by the javascript -->
+						<div class="carousel-species owl-carousel ftco-owl">
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Plants</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									
+									<button id="testmodal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+									</button>
+								</div>
 							</div>
-							<div id="reference">
-								<h5 class="text-center">Source: <i><u><b><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">ABARES, Agricultural Commodity Statistics 2017</a></b></u></i></h5>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/index-header.jpeg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Summer</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
 							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/invasive-species-header.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Winter</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/livestock-statistics.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
+						  
+						  <div class="item bg-light">
+							<div class="wrap">
+								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
+								</div>
+								<div class="text text-center px-4">
+									<h3><a href="#">Fall</a></h3>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								</div>
+							</div>
+						  </div>
 						</div>
-						<!-- End Graph Section -->
 					</div>
 				</div>
 			</div>
-			<!-- End Filter and year selection buttons and graph content -->
-			
-			<!-- Card section -->
-			<div class="container" style="padding-bottom: 4em;">
-				<div class="row">
-					<div class="col-lg-12 services-wrap">
-						<div id="prediction-data" class="row pt-md-3"> 
-							<!-- this part gets replaced by the javascript to update the year-->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Card section -->
 		</section>
 		<!-- End Section 3: Page header - Livestock is reducing -->
 		
@@ -210,139 +365,90 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 		
-		<!-- Added in Iteration 2/3 -->
+		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
-		<script src="js/amazing-grazing/livestock-prediction.js"></script>
-		<script src="js/amazing-grazing/livestock-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>		
-		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
-			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
-
-			$(document).ready(function(){
-				/* Trigger the card update based on the year selected */
-				var yearContent = document.getElementById("drop-year").textContent;
-				var selectedYear = "#y_"+yearContent;
-				$(selectedYear).trigger("click");
-				execute_once++;
-				
-				
-				/* Control the Animated Spinner that containes 5 items */
-				let i=2;
-
-				var radius = 200;
-				var fields = $('.itemDot');
-				var container = $('.dotCircle');
-				var width = container.width();
-				radius = width/2.5;
-				 
-				var height = container.height();
-				var angle = 0, step = (2*Math.PI) / fields.length;
-				fields.each(function() {
-					var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-					var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-
-					$(this).css({
-						left: x + 'px',
-						top: y + 'px'
-					});
-					
-					angle += step;
-				});
 		
-				$('.itemDot').click(function(){
-					var dataTab = $(this).data("tab");
-					$('.itemDot').removeClass('active');
-					$(this).addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+ dataTab).addClass('active');
-					i = dataTab;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-1)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-1)*36)+"deg)",
-						"transition":"1s"
-					});
-				});
-		
-				setInterval (function() { // Function that auto executes every 5 seconds to enable auto spin
-					var dataTab = $('.itemDot.active').data("tab");
-					
-					if (dataTab>5 || i>5) {
-						dataTab=1;
-						i=1;
-					};
-					
-					$('.itemDot').removeClass('active');
-					$('[data-tab="'+i+'"]').addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+i).addClass('active');
-					i++;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-2)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-2)*36)+"deg)",
-						"transition":"1s"
-					});
-				}, 5000); 
-		});
-		</script>
-		<script type='text/javascript'> <!-- Executes pop-up when updating filter & rename the filter when changed -->		
-			$(".lvstYearPrediction").click(function() { // controls the execution of the notification when user changes prediction year/filter
-				if (execute_once > 0) {
-					var x = document.getElementById("update-notification");
-					x.className = "show";
-					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
-				}
-			});
-			
-			$("#show-filter").click(function() { // renames the filter button upon click
-				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
-				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
-				
-				var curr_text = document.getElementById("show-filter").innerHTML;
-				
-				if (curr_text == max_btn) {
-					document.getElementById("show-filter").innerHTML  = min_btn;
-				} else {
-					document.getElementById("show-filter").innerHTML  = max_btn;
-				}
-			});
-		</script>
-		
-		<!-- Added in Iteration 3 -->
-		<script type='text/javascript'> <!-- Tracks the height of the card to make it same when the card is not expanded -->
-			var clickedCard = [];
-			var maximumHeight = '';
-			var countClick = 0;
-			
-			function removeHeight(cardID) {
-				if (countClick == 0) {
-					maximumHeight = ($('#'+cardID).height()); // get the original height
-					countClick++;
-				}
-				
-				if (clickedCard.includes(cardID)) { // need to hide it by including the original height
-					$('#'+cardID).find("div").eq(0).css('height',maximumHeight); // set original height back
-					const index = clickedCard.indexOf(cardID); // get index of the card in array
-					clickedCard.splice(index, 1); // remove the card from the array
-				} else { //remove the original height
-					$('#'+cardID).find("div").eq(0).css('height',''); // remove the original height
-					clickedCard.push(cardID); // add to currently open card list
-				};
-			};
-		</script>
 		
 		<!-- Added in Iteration 3 -->
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/venobox.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
+			
+			$("#testmodal").click(function() {
+				var divElement = document.getElementById('viz1599895574623');                    
+				var vizElement = divElement.getElementsByTagName('object')[0]; 
+				console.log(vizElement);
+				
+				vizElement.style.width='100%';
+				vizElement.style.height=(500)+'px';
+				
+				/*if (divElement.offsetWidth > 700) {
+					vizElement.style.width='100%';
+					vizElement.style.height=(500*0.75)+'px';
+					console.log('size is more than 700');
+				} else if (divElement.offsetWidth > 320) {
+					console.log('size is more than 370');
+					vizElement.style.width='100%';
+					vizElement.style.height=(500)+'px';
+				} else {
+					vizElement.style.width='100%';
+					vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+					console.log('size is less than 370');
+				}*/
+							
+				var scriptElement = document.createElement('script');      
+				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			});
+			
+			$(window).on('load', function() {
+				var portfolioIsotope = $('.sort-species-container').isotope({
+				  itemSelector: '.sort-species-item'
+				});
+
+				$('#sort-species-flters li').on('click', function() {
+				  $("#sort-species-flters li").removeClass('filter-active');
+				  $(this).addClass('filter-active');
+
+				  portfolioIsotope.isotope({
+					filter: $(this).data('filter')
+				  });
+				  aos_init();
+				});
+				
+				$('.filter-active').click(); // trigger the click of the filter
+
+				// Initiate venobox (lightbox feature used in portofilo)
+				$(document).ready(function() {
+				  $('.venobox').venobox({
+					'share': false
+				  });
+				});
+			  });
+			 
+			// Init AOS
+			  function aos_init() {
+				AOS.init({
+				  duration: 1000,
+				  once: true
+				});
+			  }
+			  $(window).on('load', function() {
+				aos_init();
+			  });
+			
+			$(document).ready(function(){
+				
+				
+				
+				
+				
+			});
+		</script>
 	</body>
 </html>
 
