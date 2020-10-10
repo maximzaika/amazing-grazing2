@@ -35,7 +35,7 @@
 								'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$species_img[0].');"></div>'.
 								'<div class="text text-center px-4">'.
 									'<h3><a href="#">'.$species_name.'</a></h3>'.
-									'<p>'.$species_description.'</p>'.
+									'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 									'<button id="plants_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
 										'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
 									'</button>'.
@@ -49,7 +49,7 @@
 								'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$species_img[0].');"></div>'.
 								'<div class="text text-center px-4">'.
 									'<h3><a href="#">'.$species_name.'</a></h3>'.
-									'<p>'.$species_description.'</p>'.
+									'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 									'<button id="animals_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
 										'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
 									'</button>'.

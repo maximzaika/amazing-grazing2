@@ -167,7 +167,49 @@
 					<div class="col-md-12 sort-species-item filter-animals">
 						<div id="animals-content" class="carousel-species owl-carousel ftco-owl">
 							
-							<!--
+						  
+						</div>
+					</div>
+					
+					<div class="col-md-12 sort-species-item filter-plants">
+						
+						<div id="plants-content" class="carousel-species owl-carousel ftco-owl">
+						  
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Section 3: Page header - Livestock is reducing -->
+		
+		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+				<div class="container" style="padding-top: 4em;">
+					<div class="row justify-content-center">
+						<div class="col-md-12 text-center heading-section">
+							<h2>INVASIVE SPECIES & LOCATIONS</h2>
+							<span class="mb-4 subheading">Filter invasive species by type</span>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+
+				<div class="row" data-aos="fade-up" data-aos-delay="150">
+				  <div class="col-lg-12 d-flex justify-content-center">
+					<ul id="sort-species-flters">
+						<li data-filter=".filter-plants" class="filter-active">Plants</li>
+					    <li data-filter=".filter-animals">Animals</li>
+					</ul>
+				  </div>
+				</div>
+				
+				<div class="row sort-species-container" data-aos="fade-up" data-aos-delay="300">
+					<div class="col-md-12 sort-species-item filter-animals">
+						<div id="animals-content22" class="carousel-species owl-carousel ftco-owl">
+							
+							
 						  <div class="item bg-light">
 							<div class="wrap">
 								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
@@ -229,7 +271,7 @@
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 								</div>
 							</div>
-						  </div>-->
+						  </div>
 						  
 						</div>
 					</div>
@@ -237,14 +279,16 @@
 					<div class="col-md-12 sort-species-item filter-plants">
 						
 						<div id="plants-content" class="carousel-species owl-carousel ftco-owl">
-						  <!--
+						  
 						  <div class="item bg-light">
 							<div class="wrap">
 								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
 								</div>
 								<div class="text text-center px-4">
 									<h3><a href="#">Plants</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									
+									<h5 class="dummy"><a>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<a></h5>
+									
 									
 									<button id="plants" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
 										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
@@ -295,13 +339,12 @@
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 								</div>
 							</div>
-						  </div>-->
+						  </div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End Section 3: Page header - Livestock is reducing -->
+		</section>-->
 		
 		
 		<!-- Section 4: Footer -->
@@ -335,9 +378,13 @@
 					<div class="col-md-12 text-center">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.</a> 
-						| Free icons are taken from the <a href="fonts/flaticon/license/license.html">Flaticon </a>
-						| Free images are taken from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, <a href="https://pixabay.com">Pixabay</a></p>
+						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a style="color: #4e9525;"  href="https://colorlib.com" target="_blank">Colorlib.</a>
+						<br>
+						Most of the images of plants retrieved from the <a style="color: #4e9525;"  href="https://www.anbg.gov.au/gardens/">Australian National Botanic Gardens.</a>
+						<br>
+						Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
+						<br>
+						Free images retrieved from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
@@ -379,6 +426,7 @@
 		<script src="js/venobox.min.js"></script>
 		<script src="js/aos.js"></script>
 		<!--<script src="js/amazing-grazing/invasive-species-gallery.js"></script>-->
+		<script src="js/readMoreJS.min.js"></script>
 		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
 			function aos_init() {
 				AOS.init({
@@ -396,10 +444,20 @@
 					url: 'php/invasive-species-gallery.php',
 					data: {},
 					success: function(data) {
-						//console.log(data.plants);
 						document.getElementById('animals-content').innerHTML = data.animals;
 						document.getElementById('plants-content').innerHTML = data.plants;
 						
+						/* Calls the readMore function to enable hide/show the of the images */
+						$(document).ready(function(){
+							$readMoreJS.init({
+								target: '.dummy a',
+								numOfWords: 10,
+								toggle: true,
+								moreLink: ' <i>read more</i>',
+								lessLink: ' <i>read less</i>'
+							});
+						});
+
 						/* Initiates owl carousel */
 						$('.carousel-species').owlCarousel({
 							center: true,
@@ -409,9 +467,9 @@
 							stagePadding: 0,
 							mouseDrag: true,
 							nav: true,
-							autoplay: true,
-							autoplayHoverPause: true,
-							autoplayTimeout: 7000,
+							//autoplay: true,
+							//autoplayHoverPause: true,
+							//autoplayTimeout: 7000,
 							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 							responsive:{
 								0:{
@@ -451,6 +509,8 @@
 						  });
 						
 						aos_init();
+						
+						
 						
 						function specialToHTML(str) {
 							return str.replaceAll("&#47;", "/");
@@ -592,29 +652,20 @@
 								table_object.appendChild(o_filter);
 							
 							$("#modal-title-id").text(title_name);
-							document.getElementById("tableau-chart").appendChild(div); // add to the webpage
+							document.getElementById("tableau-chart").appendChild(div); // add graph to the modal
 							
+							// Create the source link from the database
+							var create_Source = document.createElement('h5');
+							create_Source.classList.add('text-center');
+							var full_source = "<i><u><b><a href='"+graph_source_url+"'>"+graph_source_licence+"</a></b></u></i>";
+							create_Source.innerHTML = full_source;
+							document.getElementById("tableau-chart").appendChild(create_Source); // add graph to the modal
+							
+							// Execute the tableau graph
 							var divElement = document.getElementById(div_id);                    
 							var vizElement = divElement.getElementsByTagName('object')[0]; 
-							
-							
 							vizElement.style.width='100%';
-							vizElement.style.height=(500)+'px';
-							
-							/*if (divElement.offsetWidth > 700) {
-								vizElement.style.width='100%';
-								vizElement.style.height=(500*0.75)+'px';
-								console.log('size is more than 700');
-							} else if (divElement.offsetWidth > 320) {
-								console.log('size is more than 370');
-								vizElement.style.width='100%';
-								vizElement.style.height=(500)+'px';
-							} else {
-								vizElement.style.width='100%';
-								vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-								console.log('size is less than 370');
-							}*/
-										
+							vizElement.style.height=(500)+'px';		
 							var scriptElement = document.createElement('script');      
 							scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
 							vizElement.parentNode.insertBefore(scriptElement, vizElement);
@@ -624,9 +675,7 @@
 						console.log(JSON.stringify(error));
 					}
 				});
-			});
-			 
-			  
+			});  
 			
 			
 			/*$(window).on('load', function() {
@@ -667,6 +716,7 @@
 			
 			$(document).ready(function(){
 				/* Control the Animated Spinner that containes 5 items */
+				
 				let i=2;
 
 				var radius = 200;
@@ -734,6 +784,7 @@
 				}, 5000); 
 			});
 		</script>
+		
 	</body>
 </html>
 
