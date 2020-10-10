@@ -456,6 +456,8 @@
 								moreLink: ' <i>read more</i>',
 								lessLink: ' <i>read less</i>'
 							});
+							
+							$('.filter-active').click(); // trigger the click of the filter
 						});
 
 						/* Initiates owl carousel */
@@ -501,8 +503,6 @@
 						  });
 						  aos_init();
 						});
-						
-						$('.filter-active').click(); // trigger the click of the filter
 						
 						$('.venobox').venobox({
 							'share': false
