@@ -146,7 +146,7 @@
 					<div class="row justify-content-center">
 						<div class="col-md-12 text-center heading-section">
 							<h2>INVASIVE SPECIES & LOCATIONS</h2>
-							<span class="mb-4 subheading">Filter invasive species by type</span>
+							<span class="mb-4 subheading">Plants and feral animals are considered as invasive species</span>
 						</div>
 					</div>
 				</div>
