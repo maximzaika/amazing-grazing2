@@ -166,7 +166,7 @@
 				<div class="row sort-species-container" data-aos="fade-up" data-aos-delay="300">
 					<div class="col-md-12 sort-species-item filter-animals">
 						<div id="animals-content" class="carousel-species owl-carousel ftco-owl">
-							
+							<!-- animals content goes here -->
 						  
 						</div>
 					</div>
@@ -174,7 +174,7 @@
 					<div class="col-md-12 sort-species-item filter-plants">
 						
 						<div id="plants-content" class="carousel-species owl-carousel ftco-owl">
-						  
+						  <!-- plant content goes here -->
 						</div>
 					</div>
 				</div>
@@ -456,6 +456,33 @@
 								moreLink: ' <i>read more</i>',
 								lessLink: ' <i>read less</i>'
 							});
+							
+							
+							var maxHeight = -1
+				
+							$('.p_').each(function() {
+								maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
+							});
+							
+							maxHeight = maxHeight+25;
+							console.log(maxHeight);
+							
+							$('.p_').each(function() {
+							   $(this).height(maxHeight);
+							 });
+							 
+							 var maxHeight = -1
+							 
+							 $('.a_').each(function() {
+								maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
+							});
+							
+							maxHeight = maxHeight+25;
+							console.log(maxHeight);
+							
+							$('.a_').each(function() {
+							   $(this).height(maxHeight);
+							 });
 							
 							$('.filter-active').click(); // trigger the click of the filter
 						});
