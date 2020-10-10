@@ -102,7 +102,7 @@
 		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 id="modal-title-id" class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Modal title</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -158,7 +158,7 @@
 				  <div class="col-lg-12 d-flex justify-content-center">
 					<ul id="sort-species-flters">
 						<li data-filter=".filter-plants" class="filter-active">Plants</li>
-					    <li data-filter=".filter-animals">Animals</li>
+					    <li data-filter=".filter-animals">Feral Animals</li>
 					</ul>
 				  </div>
 				</div>

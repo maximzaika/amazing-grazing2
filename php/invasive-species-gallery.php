@@ -33,29 +33,42 @@
 						'<div class="item bg-light">'.
 							'<div class="wrap">'.
 								'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$species_img[0].');"></div>'.
-								'<div class="text text-center px-4">'.
-									'<h3><a href="#">'.$species_name.'</a></h3>'.
-									'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
-									'<button id="plants_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
-										'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
-									'</button>'.
-								'</div>'.
-							'</div>'.
-						'</div>';
+								'<div class="text text-center px-4">';
+					
+					/*if ($species_sci != '') {
+						$plants_content = $plants_content . '<h3><a href="#">'.$species_name.' '.'('.$species_sci.')'.'</a></h3>';
+					} else {
+						$plants_content = $plants_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+					}*/
+					$plants_content = $plants_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+									
+					$plants_content = $plants_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
+														'<button id="plants_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
+															'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
+														'</button>'.
+													'</div>'.
+												'</div>'.
+											'</div>';
 				} else {					
-					$animal_content = $animal_content . 
+					$animal_content = $animal_content .  
 						'<div class="item bg-light">'.
 							'<div class="wrap">'.
 								'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$species_img[0].');"></div>'.
-								'<div class="text text-center px-4">'.
-									'<h3><a href="#">'.$species_name.'</a></h3>'.
-									'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
-									'<button id="animals_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
-										'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
-									'</button>'.
-								'</div>'.
-							'</div>'.
-						'</div>';
+								'<div class="text text-center px-4">';
+					
+					/*if ($species_sci != '') {
+						$animal_content = $animal_content . '<h3><a href="#">'.$species_name.' '.'('.$species_sci.')'.'</a></h3>';
+					} else {
+						$animal_content = $animal_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+					}	*/				
+					$animal_content = $animal_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+					$animal_content = $animal_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
+														'<button id="animals_'.$species_id.'" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
+															'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
+														'</button>'.
+													'</div>'.
+												'</div>'.
+											'</div>';
 				}	
 			}
 		}
