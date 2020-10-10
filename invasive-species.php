@@ -433,10 +433,8 @@
 				  duration: 1000,
 				  once: true
 				});
-			  }
-			  
-			
-			
+			}
+
 			$(window).on('load', function() {
 				$.ajax({
 					type: "POST",
@@ -444,12 +442,11 @@
 					url: 'php/invasive-species-gallery.php',
 					data: {},
 					success: function(data) {
-						document.getElementById('animals-content').innerHTML = data.animals;
-						document.getElementById('plants-content').innerHTML = data.plants;
+						document.getElementById('animals-content').innerHTML = data.animals; // replace the contant of the animals gallery with the content retrieved from the db
+						document.getElementById('plants-content').innerHTML = data.plants; // replace the contant of the plants gallery with the content retrieved from the db
 						
-						/* Calls the readMore function to enable hide/show the of the images */
 						$(document).ready(function(){
-							$readMoreJS.init({
+							$readMoreJS.init({ /* Calls the readMore function to enable hide/show the of the images */
 								target: '.dummy a',
 								numOfWords: 10,
 								toggle: true,
@@ -457,34 +454,33 @@
 								lessLink: ' <i>read less</i>'
 							});
 							
-							
+							// Start resize the gallery container on initial load
 							var maxHeight = -1
 				
-							$('.p_').each(function() {
+							$('.p_').each(function() { // get the max height out of all plants containers
 								maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 							});
 							
-							maxHeight = maxHeight+25;
-							console.log(maxHeight);
+							maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
 							
-							$('.p_').each(function() {
+							$('.p_').each(function() { // change the height of all plants containers to max
 							   $(this).height(maxHeight);
 							 });
 							 
 							 var maxHeight = -1
 							 
-							 $('.a_').each(function() {
+							 $('.a_').each(function() { // get the max height out of all animals containers
 								maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 							});
 							
-							maxHeight = maxHeight+25;
-							console.log(maxHeight);
+							maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
 							
-							$('.a_').each(function() {
+							$('.a_').each(function() { // change the height of all animals containers to max
 							   $(this).height(maxHeight);
 							 });
+							// End resize the gallery
 							
-							$('.filter-active').click(); // trigger the click of the filter
+							$('.filter-active').click(); // trigger the click of the filter just to resize the whole gallery container
 						});
 
 						/* Initiates owl carousel */
@@ -494,7 +490,7 @@
 							items:1,
 							margin: 30,
 							stagePadding: 0,
-							mouseDrag: true,
+							mouseDrag: false,
 							nav: true,
 							//autoplay: true,
 							//autoplayHoverPause: true,
