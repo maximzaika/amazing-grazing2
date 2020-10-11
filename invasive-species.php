@@ -63,7 +63,7 @@
 		</div>
 		<!-- End: Modal pops up when user clicks "Show affected areas" -->
 		
-		<!-- Section 1: Page header - Livestock Statistics -->
+		<!-- Section 1: Page header - Invasive Species -->
 		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/invasive-species-header.jpg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
 				<div class="container">
@@ -74,7 +74,7 @@
 					</div>
 				</div>
 		</section>
-		<!-- End Section 1: Page header - Livestock Statistics -->
+		<!-- End Section 1: Page header - Invasive Species -->
 		
 		<!-- Feedback Section -->
 		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
@@ -85,7 +85,7 @@
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
-						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Livestock Statistics </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Invasive Species </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
 						<hr>
 					</div>
 				</div>
