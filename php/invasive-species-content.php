@@ -81,4 +81,37 @@
 		}
 		
 		$live_intro = $live_intro . '</div></div></div>';
+		
+		/* ------------- 3) Preventative Masures ------------- */		
+		$get_measures = "SELECT measures_icon, measures_type, measures_desc FROM species_measures";
+		$measure_data = $con -> query($get_measures);
+		
+		$plants_measures = "";
+		$animal_measures = "";
+		
+		if ($measure_data->num_rows > 0) {
+			while($row = $measure_data->fetch_assoc()) {
+				$measures_icon = $row['measures_icon'];
+				$measures_type = $row['measures_type'];
+				$measures_desc = $row['measures_desc'];
+				
+				if ($measures_type == "plants") {
+					$plants_measures = $plants_measures . 
+						'<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 128px; padding-right: 20px;">'.
+							'<div class="icon d-flex align-items-center justify-content-center">'.
+								'<span class="'.$measures_icon.'"></span>'.
+							'</div>'.
+							'<div class="d2"><h5><a>'.$measures_desc.'</a></h5></div>'.
+						'</div>';
+				} else {
+					$animal_measures = $animal_measures . 
+						'<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 128px; padding-right: 20px;">'.
+							'<div class="icon d-flex align-items-center justify-content-center">'.
+								'<span class="'.$measures_icon.'"></span>'.
+							'</div>'.
+							'<div class="d2"><h5><a>'.$measures_desc.'</a></h5></div>'.
+						'</div>';
+				}
+			}
+		}
 ?>

@@ -864,8 +864,8 @@ img.techn-img{
 .measures-wrap {
   width: 100%; }
   .measures-wrap .measures-list .icon {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     /*margin: 0 auto;*/
     background: rgba(0, 0, 0, 0.05);
@@ -883,7 +883,9 @@ img.techn-img{
 	}
     .measures-wrap .measures-list .icon span {
       color: #4e9525;
-      font-size: 70px; }
+      font-size: 59px; 
+	  margin-left: 2px;
+	  margin-top: 2px; }
   .measures-wrap .measures-list {
     font-size: 18px;
     margin-bottom: 20px;
