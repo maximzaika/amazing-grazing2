@@ -934,19 +934,31 @@ img.techn-img{
   overflow-y: scroll;
 }
 
-.custom-scrollbar-css::-webkit-scrollbar {
-  width: 5px;
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.custom-scrollbar-css::-webkit-scrollbar-track {
-  background: #eee;
+html {
+    overflow-y: auto;
+    background-color: transparent;
 }
 
-.custom-scrollbar-css::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background-color: #4e9525;
+::-webkit-scrollbar {
+    width: 7px;
 }
 
+::-webkit-scrollbar-track {
+    background: #eee;
+    -webkit-border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #4e9525;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+}
 
 /* Prevent Measures Image Headers */
 .prevent-measures-header {
@@ -966,3 +978,4 @@ img.techn-img{
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
