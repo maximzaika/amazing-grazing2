@@ -158,118 +158,54 @@
 					<div class="row justify-content-center">
 						<div class="col-md-12 text-center heading-section">
 							<h2>PREVENTATIVE MEASURES</h2>
-							<span class="mb-4 subheading">Some description goes here</span>
+							<span class="mb-4 subheading">The following methods need to be used wisely to ensure that other aspects are not affected</span>
 						</div>
 					</div>
 				</div>
 				
-				<div class="row">
+				<div class="row" style="padding-bottom: 2em;">
 					<div class="col-lg-12 services-wrap px-4">
 						<div class="row pt-md-3">
 							<div class="col-md-6">
-								
 								<div class="container measures-wrap">
-										
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/plants-header.jpg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center">
-															<h1 class="bread" style="line-height: 2.2;">Plants</h1>
-														</div>
+									<div class="row">
+										<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+											<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/plants-header.jpg);">
+												<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+												<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+													<div class="col-md-12 text-center">
+														<h1 class="bread" style="line-height: 2.2;">Plants</h1>
 													</div>
-												</div>
-												
-											</div>
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
 												</div>
 											</div>
 										</div>
 										
-									
+										<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
+											<?php echo htmlspecialchars_decode($plants_measures);?>
+										</div>
+									</div>
 								</div>
 							</div>
 							
 							<div class="col-md-6">
-								
 								<div class="container measures-wrap">
-										
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/animals-header.jpg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center">
-															<h1 class="bread" style="line-height: 2.2;">Animals</h1>
-														</div>
+									<div class="row">
+										<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+											<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/animals-header.jpg);">
+												<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+												<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+													<div class="col-md-12 text-center">
+														<h1 class="bread" style="line-height: 2.2;">Animals</h1>
 													</div>
-												</div>
-												
-											</div>
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
-												</div>
-												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center">
-														<span class="flaticon-meat"></span>
-													</div>
-													
-													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
 												</div>
 											</div>
 										</div>
-										
-									
+										<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
+											<?php echo htmlspecialchars_decode($animal_measures);?>
+										</div>
+									</div>
 								</div>
 							</div>
-							
 						</div>
 					</div>
 				</div>
@@ -286,9 +222,11 @@
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
-								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing. Attention is required! <u>Click to find out more.</u></a></li>
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought.</a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate are reducing and require attention.</a></li>
+								<li><a href="drought.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought.</a></li>
 							</ul>
 						</div>
 					</div>
@@ -310,12 +248,9 @@
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
 						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a style="color: #4e9525;"  href="https://colorlib.com" target="_blank">Colorlib.</a>
-						<br>
-						Images of the plants retrieved from the <a style="color: #4e9525;"  href="https://www.anbg.gov.au/gardens/">Australian National Botanic Gardens.</a>
-						<br>
-						Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
-						<br>
-						Free images retrieved from the <a style="color: #4e9525;" href="https://unsplash.com">Unsplash</a>, <a style="color: #4e9525;" href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
+						| Images of the plants retrieved from the <a style="color: #4e9525;"  href="https://www.anbg.gov.au/gardens/">Australian National Botanic Gardens.</a>
+						| Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
+						| Free images retrieved from the <a style="color: #4e9525;" href="https://unsplash.com">Unsplash</a>, <a style="color: #4e9525;" href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
