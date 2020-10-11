@@ -204,6 +204,13 @@
 													
 													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
 												</div>
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
 											</div>
 										</div>
 										
@@ -228,6 +235,13 @@
 												
 											</div>
 											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
 												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center">
 														<span class="flaticon-meat"></span>
