@@ -30,22 +30,38 @@
 		<link rel="stylesheet" href="css/flaticon.css">
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
-		<!--<link rel="stylesheet" href="css/venobox.css">
-		<link rel="stylesheet" href="css/aos.css">-->
 
-		<!-- Added in iteration 2 -->
-		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
-		
-		<!-- Added in iteration 2 -->
-		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
-		
 		<!-- Added in iteration 3 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 		<link rel="stylesheet" href="css/amazing-grazing/feedback.css">
 	</head>
 	<body>	
 		<!-- Navigation Bar -->
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'invasive-species.php'));?>
 		<!-- End Navigation Bar -->
+		
+		<!-- Start: Modal pops up when user clicks "Show affected areas" -->
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body" style="z-index: 1000;">
+				<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;">
+					<!--Graph content goes here. It gets updated based on user selection choice -->
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- End: Modal pops up when user clicks "Show affected areas" -->
 		
 		<!-- Section 1: Page header - Livestock Statistics -->
 		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/invasive-species-header.jpg');" data-stellar-background-ratio="0.5">
@@ -77,69 +93,26 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<!-- Section 2: Livestock reduction impacts grasslands -->
+		<!-- Section 1: Invasive species impact grasslands -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
 			<div class="container">
 				<div class="row ">
-					<!-- Spinner containing livestock, beef, milk, wool, land use -->
+					<!-- Spinner containing root cause, animals, management, dangerous, species -->
 					<div class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 align-items-center overflow-hidden">
 						<?php echo htmlspecialchars_decode($spinner_full);?>
 					</div> 
-					<!-- End Spinner containing livestock, beef, milk, wool, land use -->
+					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
 					
-					<!-- Livestock reducting impacts grasslands section -->
+					<!-- Invasive species impact grasslands section -->
 					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7">
 						<?php echo htmlspecialchars_decode($live_intro);?>
 					</div>
-					<!-- End Livestock reducting impacts grasslands section -->
+					<!-- End Invasive species impact grasslands section -->
 				</div>
 			</div>
 		</section>
 		
-		
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Modal title</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
-				</button>
-			  </div>
-			  <div class="modal-body" style="z-index: 1000;">
-				<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
-					<!--<div class='tableauPlaceholder' id='viz1599895574623'>
-						<noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png' style='border: none' /></a>
-						</noscript>
-						<object class='tableauViz'  style='display:none;'>
-							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-							<param name='embed_code_version' value='3' /> 
-							<param name='site_root' value='' />
-							<param name='name' value='sheep1973-2030&#47;SheepNumbersfrom1973to2030' />
-							<param name='tabs' value='no' />
-							<param name='toolbar' value='yes' />
-							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png' /> 
-							<param name='animate_transition' value='yes' />
-							<param name='display_static_image' value='yes' />
-							<param name='display_spinner' value='yes' />
-							<param name='display_overlay' value='yes' />
-							<param name='display_count' value='yes' />
-							<param name='language' value='en' />
-							<param name='filter' value='publish=yes' />
-						</object>
-					</div>-->
-				</div>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		
-		
-		<!-- Section 3: DOMINANT LIFESTOCK IS DRASTICALLY REDUCING -->
+		<!-- Section 2: INVASIVE SPECIES & LOCATIONS -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
@@ -151,9 +124,7 @@
 					</div>
 				</div>
 				
-				<!-- Button trigger modal -->
-				
-
+				<!-- Sort -->
 				<div class="row" data-aos="fade-up" data-aos-delay="150">
 				  <div class="col-lg-12 d-flex justify-content-center">
 					<ul id="sort-species-flters">
@@ -162,189 +133,135 @@
 					</ul>
 				  </div>
 				</div>
+				<!-- /Sort -->
 				
+				<!-- Gallery -->
 				<div class="row sort-species-container" data-aos="fade-up" data-aos-delay="300">
 					<div class="col-md-12 sort-species-item filter-animals">
 						<div id="animals-content" class="carousel-species owl-carousel ftco-owl">
 							<!-- animals content goes here -->
-						  
 						</div>
 					</div>
-					
 					<div class="col-md-12 sort-species-item filter-plants">
-						
 						<div id="plants-content" class="carousel-species owl-carousel ftco-owl">
 						  <!-- plant content goes here -->
 						</div>
 					</div>
 				</div>
+				<!-- /Gallery -->
 			</div>
 		</section>
-		<!-- End Section 3: Page header - Livestock is reducing -->
 		
-		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
 					<div class="row justify-content-center">
 						<div class="col-md-12 text-center heading-section">
-							<h2>INVASIVE SPECIES & LOCATIONS</h2>
-							<span class="mb-4 subheading">Filter invasive species by type</span>
+							<h2>PREVENTATIVE MEASURES</h2>
+							<span class="mb-4 subheading">Some description goes here</span>
 						</div>
 					</div>
 				</div>
 				
-				
-				
-
-				<div class="row" data-aos="fade-up" data-aos-delay="150">
-				  <div class="col-lg-12 d-flex justify-content-center">
-					<ul id="sort-species-flters">
-						<li data-filter=".filter-plants" class="filter-active">Plants</li>
-					    <li data-filter=".filter-animals">Animals</li>
-					</ul>
-				  </div>
-				</div>
-				
-				<div class="row sort-species-container" data-aos="fade-up" data-aos-delay="300">
-					<div class="col-md-12 sort-species-item filter-animals">
-						<div id="animals-content22" class="carousel-species owl-carousel ftco-owl">
+				<div class="row">
+					<div class="col-lg-12 services-wrap px-4">
+						<div class="row pt-md-3">
+							<div class="col-md-6">
+								
+								<div class="container measures-wrap">
+										
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/plants-header.jpg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center">
+															<h1 class="bread" style="line-height: 2.2;">Plants</h1>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+											</div>
+										</div>
+										
+									
+								</div>
+							</div>
 							
+							<div class="col-md-6">
+								
+								<div class="container measures-wrap">
+										
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/invasive-species/headers/animals-header.jpg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center">
+															<h1 class="bread" style="line-height: 2.2;">Animals</h1>
+														</div>
+													</div>
+												</div>
+												
+											</div>
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px;">
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+												<div class="col-md-12" style="padding-top: 20px; padding-bottom: 20px; padding-left: 142px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center">
+														<span class="flaticon-meat"></span>
+													</div>
+													
+													<div class="d2"><h5><a>Invasive species compete with native plants, water, and livestock! Invasive species compete with native plants, water, and livestock!</a></h5></div>
+												</div>
+											</div>
+										</div>
+										
+									
+								</div>
+							</div>
 							
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Animals</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									
-									<button id="animals" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-									</button>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Animals</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-									</button>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/livestock-statistics.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						</div>
-					</div>
-					
-					<div class="col-md-12 sort-species-item filter-plants">
-						
-						<div id="plants-content" class="carousel-species owl-carousel ftco-owl">
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/employment-statistics.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Plants</a></h3>
-									
-									<h5 class="dummy"><a>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.<a></h5>
-									
-									
-									<button id="plants" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-										<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-									</button>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/index-header.jpeg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Summer</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/invasive-species-header.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Winter</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/livestock-statistics.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
-						  
-						  <div class="item bg-light">
-							<div class="wrap">
-								<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/news-php-header.jpg);">
-								</div>
-								<div class="text text-center px-4">
-									<h3><a href="#">Fall</a></h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						  </div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>-->
+		</section>
+		
 		
 		
 		<!-- Section 4: Footer -->
@@ -380,17 +297,14 @@
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
 						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a style="color: #4e9525;"  href="https://colorlib.com" target="_blank">Colorlib.</a>
 						<br>
-						Most of the images of plants retrieved from the <a style="color: #4e9525;"  href="https://www.anbg.gov.au/gardens/">Australian National Botanic Gardens.</a>
+						Images of the plants retrieved from the <a style="color: #4e9525;"  href="https://www.anbg.gov.au/gardens/">Australian National Botanic Gardens.</a>
 						<br>
 						Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
 						<br>
-						Free images retrieved from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
+						Free images retrieved from the <a style="color: #4e9525;" href="https://unsplash.com">Unsplash</a>, <a style="color: #4e9525;" href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
-				
-				<div id="update-notification">Entire page content is being updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
-				<div id="update-notification-bad">At least one graph must be selected.</div> <!-- show error when user tries to select <1 graph -->
 			</div>
 		</footer>
 		<!-- End Section 4: Footer -->
@@ -398,8 +312,8 @@
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 		
-		<!-- Added in Iteration 2 -->
-		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> <!-- jQuery to scroll up -->
+		<!-- jQuery to scroll up -->
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> 
 		
 		<!-- Original Scripts -->
 		<script src="js/jquery.min.js"></script>
@@ -414,29 +328,27 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 		
-		<!-- Added in Iteration 2 -->
-		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
-		<script src="js/amazing-grazing/counterup.min.js"></script>		
-		
-		
 		<!-- Added in Iteration 3 -->
+		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 		<script src="js/isotope.pkgd.min.js"></script>
 		<script src="js/venobox.min.js"></script>
 		<script src="js/aos.js"></script>
-		<!--<script src="js/amazing-grazing/invasive-species-gallery.js"></script>-->
 		<script src="js/readMoreJS.min.js"></script>
-		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
+		<script src="js/readMoreJS2.min.js"></script>
+		<script type='text/javascript'>
 			function aos_init() {
 				AOS.init({
 				  duration: 1000,
 				  once: true
 				});
 			}
-
+			
+			
+			
 			$(window).on('load', function() {
-				$.ajax({
+				$.ajax({ // receive the gallery content from the database
 					type: "POST",
 					dataType: 'json',
 					url: 'php/invasive-species-gallery.php',
@@ -446,15 +358,17 @@
 						document.getElementById('plants-content').innerHTML = data.plants; // replace the contant of the plants gallery with the content retrieved from the db
 						
 						$(document).ready(function(){
-							$readMoreJS.init({ /* Calls the readMore function to enable hide/show the of the images */
+							//----- Start readMore function to enable hide/show the of the images -----//
+							$readMoreJS.init({
 								target: '.dummy a',
 								numOfWords: 10,
 								toggle: true,
 								moreLink: ' <i>read more</i>',
 								lessLink: ' <i>read less</i>'
 							});
+							//----- End readMore function to enable hide/show the of the images -----//
 							
-							// Start resize the gallery container on initial load
+							//----- Start resize the gallery container on initial load -----//
 							var maxHeight = -1
 				
 							$('.p_').each(function() { // get the max height out of all plants containers
@@ -478,12 +392,12 @@
 							$('.a_').each(function() { // change the height of all animals containers to max
 							   $(this).height(maxHeight);
 							 });
-							// End resize the gallery
+							//----- End resize the gallery container on initial load -----//
 							
 							$('.filter-active').click(); // trigger the click of the filter just to resize the whole gallery container
 						});
 
-						/* Initiates owl carousel */
+						//----- Start initiate owl carousel -----//
 						$('.carousel-species').owlCarousel({
 							center: true,
 							loop: true,
@@ -511,8 +425,9 @@
 								}
 							}
 						});
+						//----- End initiate owl carousel -----//
 						
-						/* Initiates the animations required for the sort */
+						//----- Start initiates the animations required for the filter (Plants/Feral Animals) -----//
 						var portfolioIsotope = $('.sort-species-container').isotope({
 						  itemSelector: '.sort-species-item'
 						});
@@ -532,36 +447,23 @@
 						  });
 						
 						aos_init();
+						//----- End initiates the animations required for the filter (Plants/Feral Animals) -----//
 						
 						
 						
+						//----- Start converts the species characters like $#47 to /
+						//      It is required because the tableau links contain special characters that browser cannot read for some reason if received from js -----//
 						function specialToHTML(str) {
 							return str.replaceAll("&#47;", "/");
 						}
+						//----- End converts the species characters like $#47 to /
 						
 						$(".location-button").click(function() {
-							$("#tableau-chart").empty();
+							$("#tableau-chart").empty(); // clear the char just in case there is something inside there (usually after user clicks the button 2nd time)
 							
-							console.log(this.id);
+							<?php echo htmlspecialchars_decode($if_statement);?> // if statatements that push the graph content to the page
 							
-							<?php echo htmlspecialchars_decode($if_statement);?>
-							
-							/*if (this.id == 'plants') {
-								console.log('clicked button id > ' + this.id);
-								var div_id = 'viz1599912357011';
-								var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1_rss.png';
-								var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-								var o_name_val = 'beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016';
-								var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1.png';
-							} else {
-								console.log('clicked button id > ' + this.id);
-								var div_id = 'viz1599895069661';
-								var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png';
-								var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-								var o_name_val = 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030';
-								var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png';
-							}*/
-							
+							//----- Start Container for the tableau graph -----//
 							var div = document.createElement('div');
 							div.classList.add('tableauPlaceholder');
 							div.setAttribute('id', div_id);
@@ -676,15 +578,17 @@
 							
 							$("#modal-title-id").text(title_name);
 							document.getElementById("tableau-chart").appendChild(div); // add graph to the modal
+							//----- End Container for the tableau graph -----//
 							
-							// Create the source link from the database
+							//----- Start create the source link from the database -----//
 							var create_Source = document.createElement('h5');
 							create_Source.classList.add('text-center');
 							var full_source = "<i><u><b><a href='"+graph_source_url+"'>"+graph_source_licence+"</a></b></u></i>";
 							create_Source.innerHTML = full_source;
 							document.getElementById("tableau-chart").appendChild(create_Source); // add graph to the modal
+							//----- End create the source link from the database -----//
 							
-							// Execute the tableau graph
+							//----- Start Execute the tableau graph -----//
 							var divElement = document.getElementById(div_id);                    
 							var vizElement = divElement.getElementsByTagName('object')[0]; 
 							vizElement.style.width='100%';
@@ -692,54 +596,25 @@
 							var scriptElement = document.createElement('script');      
 							scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
 							vizElement.parentNode.insertBefore(scriptElement, vizElement);
+							//----- End Execute the tableau graph -----//
 						});
 					}, 
-					error: (error) => {
+					error: (error) => { // receive error from the server if any error with receiving php content
 						console.log(JSON.stringify(error));
 					}
 				});
 			});  
 			
-			
-			/*$(window).on('load', function() {
-				var portfolioIsotope = $('.sort-species-container').isotope({
-				  itemSelector: '.sort-species-item'
-				});
-
-				$('#sort-species-flters li').on('click', function() {
-				  $("#sort-species-flters li").removeClass('filter-active');
-				  $(this).addClass('filter-active');
-
-				  portfolioIsotope.isotope({
-					filter: $(this).data('filter')
-				  });
-				  aos_init();
-				});
-				
-				$('.filter-active').click(); // trigger the click of the filter
-
-				// Initiate venobox (lightbox feature used in portofilo)
-				$(document).ready(function() {
-				  $('.venobox').venobox({
-					'share': false
-				  });
-				});
-			  });
-			 
-			// Init AOS
-			  function aos_init() {
-				AOS.init({
-				  duration: 1000,
-				  once: true
-				});
-			  }
-			  $(window).on('load', function() {
-				aos_init();
-			  });*/
-			
 			$(document).ready(function(){
-				/* Control the Animated Spinner that containes 5 items */
-				
+				$readMoreJS2.init({
+					target: '.d2 a',
+					numOfWords: 10,
+					toggle: true,
+					moreLink: ' <i>read more</i>',
+					lessLink: ' <i>read less</i>'
+				});
+			
+				//----- Start control the Animated Spinner that containes 5 items -----//
 				let i=2;
 
 				var radius = 200;
@@ -805,9 +680,9 @@
 						"transition":"1s"
 					});
 				}, 5000); 
+				//----- End control the Animated Spinner that containes 5 items -----//
 			});
 		</script>
-		
 	</body>
 </html>
 

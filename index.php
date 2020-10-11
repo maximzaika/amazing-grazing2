@@ -66,7 +66,7 @@
 		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 		
-		<!-- Section 1: Offerings -->
+		<!-- Section 1: SERVICES -->
 		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 4em;">
 			<div class="container">
 				<div class="row justify-content-center">
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 1: We Protect by Providing -->
+		<!-- End Section 1: SERVICES -->
 		
 		<!-- Section 2: News -->
 		<!--<section class="ftco-section bg-light">
