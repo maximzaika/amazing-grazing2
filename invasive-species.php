@@ -175,7 +175,10 @@
 												<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
 													<div class="col-md-12 text-center">
 														<h1 class="bread" style="line-height: 2.2;">Plants</h1>
+														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-large-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-small-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i></a>
 													</div>
+													
 												</div>
 											</div>
 										</div>
@@ -196,6 +199,8 @@
 												<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
 													<div class="col-md-12 text-center">
 														<h1 class="bread" style="line-height: 2.2;">Animals</h1>
+														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-large-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
+														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-small-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i></a>
 													</div>
 												</div>
 											</div>
@@ -532,7 +537,7 @@
 							//----- Start create the source link from the database -----//
 							var create_Source = document.createElement('h5');
 							create_Source.classList.add('text-center');
-							var full_source = "<i><u><b><a href='"+graph_source_url+"'>"+graph_source_licence+"</a></b></u></i>";
+							var full_source = "Source: <i><u><b><a href='"+graph_source_url+"'>"+graph_source_licence+"</a></b></u></i>";
 							create_Source.innerHTML = full_source;
 							document.getElementById("tableau-chart").appendChild(create_Source); // add graph to the modal
 							//----- End create the source link from the database -----//
