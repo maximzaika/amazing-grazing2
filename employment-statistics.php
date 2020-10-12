@@ -41,7 +41,7 @@
 	</head>
 	<body>		
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'employment-statistics.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'Statistics', 'employment-statistics.php'));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Section 1: Page header - Employment Statistics -->

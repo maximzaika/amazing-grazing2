@@ -1,8 +1,8 @@
-<?php   /* This file is called by the livestock-statistics.php file.
+<?php   /* This file is called by the invasive-species.php file.
            1) It is updating the spinner content on the page by retrieving it from db
               and creating it.
            2) Retrieves intro content 
-		   3) Filter & year control */
+		   3) Preventative measures */
 	    
 		/* ------------- 1) Spinner ------------- */
 		$get_live_spinner = "SELECT species_spinner_id, species_spinner_icon, species_spinner_title, species_spinner_text FROM species_spinner";

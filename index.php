@@ -43,7 +43,7 @@
 	</head>
 	<body>		
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'index.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'index.php', ''));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Header -->

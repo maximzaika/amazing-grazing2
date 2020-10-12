@@ -38,7 +38,7 @@
 	</head>
 	<body>		
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'techniques.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'techniques.php', ''));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Section 1: Page header - Grazing Techniques -->

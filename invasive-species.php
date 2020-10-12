@@ -37,7 +37,7 @@
 	</head>
 	<body>	
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'invasive-species.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'invasive-species.php', ''));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Start: Modal pops up when user clicks "Show affected areas" -->
