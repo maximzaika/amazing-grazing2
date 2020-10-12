@@ -1007,3 +1007,8 @@ body {
     visibility: hidden;
   }
 }
+
+/* Lists on the right to describe the pages - remove the margin from the last item */
+.employee-list:last-child {
+  margin-bottom: 0px;
+}

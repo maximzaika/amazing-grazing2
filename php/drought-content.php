@@ -55,7 +55,7 @@
 		$drought_intro_data = $con -> query($get_drought_intro);
 
 		$drought_intro = '<div class="row justify-content-start py-5">'.
-						'<div class="col-md-12 heading-section ftco-animate">';
+						'<div id="right-side-intro" class="col-md-12 heading-section ftco-animate"  style="padding-bottom: 0px;">';
 		
 		if ($drought_intro_data->num_rows > 0) {
 			while($row = $drought_intro_data->fetch_assoc()) {
