@@ -5,7 +5,7 @@
 	require_once "php/navigation.php"; // Updates the navigation bar
 	require_once "php/invasive-species-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
-	require_once "php/invasive-species-gallery-get-js.php";
+	require_once "php/invasive-species-gallery-get-js.php"; // Returns the javascript code to the bottom of the page that stores the maps from the db
 ?>
 
 <!DOCTYPE html>
@@ -105,12 +105,13 @@
 					
 					<!-- Invasive species impact grasslands section -->
 					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7">
-						<?php echo htmlspecialchars_decode($live_intro);?>
+						<?php echo htmlspecialchars_decode($species_intro);?>
 					</div>
 					<!-- End Invasive species impact grasslands section -->
 				</div>
 			</div>
 		</section>
+		<!-- End Section 1: Invasive species impact grasslands -->
 		
 		<!-- Section 2: INVASIVE SPECIES & LOCATIONS -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
@@ -151,7 +152,9 @@
 				<!-- /Gallery -->
 			</div>
 		</section>
+		<!-- End Section 2: INVASIVE SPECIES & LOCATIONS -->
 		
+		<!-- Section 3: PREVENTATIVE MEASURES -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
@@ -216,8 +219,7 @@
 				</div>
 			</div>
 		</section>
-		
-		
+		<!-- eND Section 3: PREVENTATIVE MEASURES -->
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
