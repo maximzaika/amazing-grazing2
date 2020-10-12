@@ -941,10 +941,10 @@ body {
     overflow-x: hidden;
 }
 
-html {
+/*html {
     overflow-y: auto;
     background-color: transparent;
-}
+}*/
 
 ::-webkit-scrollbar {
     width: 7px;
