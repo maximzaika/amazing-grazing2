@@ -3229,9 +3229,9 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #f8f9fa; }
   .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
+    color: #fbd341;
     text-decoration: none;
-    background-color: #007bff; }
+    /*background-color: #fff; */}
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
     pointer-events: none;
@@ -10055,6 +10055,11 @@ h1, h2, h3, h4, h5,
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400; }
 
+.nav-bar-dropdown {
+	top: 80%;
+	padding: 0px;
+}
+
 .ftco-navbar-light {
   background: #252525;
   background: #4e9525 !important;
@@ -10114,22 +10119,22 @@ h1, h2, h3, h4, h5,
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
     background: #fff;
-    -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+   /* -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
-    box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);*/
     border-radius: 4px; }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
-      font-size: 12px;
-      color: #000000; }
+      font-size: 17px;
+       } /* color: #000000; */
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
         background: #4e9525;
-        color: #fff; }
+        color: #fbd341; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
         display: block !important;
-        background: #000000; }
+        background: #4e9525; }
         .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
-          color: rgba(255, 255, 255, 0.8); } }
+          /* color: rgba(255, 255, 255, 0.8); */} }
   .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
     color: #fff;
     background: #4e9525;

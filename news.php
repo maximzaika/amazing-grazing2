@@ -42,7 +42,7 @@
 	</head>
 	<body>	
 		<!-- Navigation Bar -->
-		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'news.php'));?>
+		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'news.php', ""));?>
 		<!-- End Navigation Bar -->
 		
 		<!-- Section 1: Page header - News -->
