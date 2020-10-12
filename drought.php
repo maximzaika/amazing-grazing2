@@ -4,6 +4,7 @@
 	require_once "server_config.php"; // Accesses to the database
 	require_once "php/navigation.php"; // Updates the navigation bar
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
+	require_once "php/drought-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
 ?>
 
 <!DOCTYPE html>
@@ -29,13 +30,8 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 
-		<!-- Added in iteration 2 -->
-		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
-		
-		<!-- Added in iteration 2 -->
-		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
-		
 		<!-- Added in iteration 3 -->
+		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 		<link rel="stylesheet" href="css/amazing-grazing/feedback.css">
 	</head>
 	<body>	
@@ -73,6 +69,25 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<!-- Section 1: Drought species impact grasslands -->
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
+			<div class="container">
+				<div class="row ">
+					<!-- Spinner containing root cause, animals, management, dangerous, species -->
+					<div class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 align-items-center overflow-hidden">
+						<?php echo htmlspecialchars_decode($spinner_full);?>
+					</div> 
+					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
+					
+					<!-- Invasive species impact grasslands section -->
+					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7">
+						<?php echo htmlspecialchars_decode($drought_intro);?>
+					</div>
+					<!-- End Invasive species impact grasslands section -->
+				</div>
+			</div>
+		</section>
+		<!-- End Section 1: Invasive species impact grasslands -->
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -82,9 +97,11 @@
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
 							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
-								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing. Attention is required! <u>Click to find out more.</u></a></li>
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought.</a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate are reducing and require attention.</a></li>
+								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Species.</a></li>
 							</ul>
 						</div>
 					</div>
@@ -105,15 +122,12 @@
 					<div class="col-md-12 text-center">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.</a> 
-						| Free icons are taken from the <a href="fonts/flaticon/license/license.html">Flaticon </a>
-						| Free images are taken from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, <a href="https://pixabay.com">Pixabay</a></p>
+						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a style="color: #4e9525;"  href="https://colorlib.com" target="_blank">Colorlib.</a>
+						| Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
+						| Free images retrieved from the <a style="color: #4e9525;" href="https://unsplash.com">Unsplash</a>, <a style="color: #4e9525;" href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
-				
-				<div id="update-notification">Entire page content is being updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
-				<div id="update-notification-bad">At least one graph must be selected.</div> <!-- show error when user tries to select <1 graph -->
 			</div>
 		</footer>
 		<!-- End Section 4: Footer -->
@@ -137,23 +151,13 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 		
-		<!-- Added in Iteration 2/3 -->
+		<!-- Added in Iteration 3 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
-		<script src="js/amazing-grazing/livestock-prediction.js"></script>
-		<script src="js/amazing-grazing/livestock-picker.js"></script>
-		<script src="js/amazing-grazing/counterup.min.js"></script>		
-		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
-			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
-
+		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
+		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
+		<script type="text/javascript">
 			$(document).ready(function(){
-				/* Trigger the card update based on the year selected */
-				var yearContent = document.getElementById("drop-year").textContent;
-				var selectedYear = "#y_"+yearContent;
-				$(selectedYear).trigger("click");
-				execute_once++;
-				
-				
-				/* Control the Animated Spinner that containes 5 items */
+				//----- Start control the Animated Spinner that containes 5 items -----//
 				let i=2;
 
 				var radius = 200;
@@ -219,57 +223,9 @@
 						"transition":"1s"
 					});
 				}, 5000); 
-		});
-		</script>
-		<script type='text/javascript'> <!-- Executes pop-up when updating filter & rename the filter when changed -->		
-			$(".lvstYearPrediction").click(function() { // controls the execution of the notification when user changes prediction year/filter
-				if (execute_once > 0) {
-					var x = document.getElementById("update-notification");
-					x.className = "show";
-					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
-				}
-			});
-			
-			$("#show-filter").click(function() { // renames the filter button upon click
-				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
-				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
-				
-				var curr_text = document.getElementById("show-filter").innerHTML;
-				
-				if (curr_text == max_btn) {
-					document.getElementById("show-filter").innerHTML  = min_btn;
-				} else {
-					document.getElementById("show-filter").innerHTML  = max_btn;
-				}
+				//----- End control the Animated Spinner that containes 5 items -----//
 			});
 		</script>
-		
-		<!-- Added in Iteration 3 -->
-		<script type='text/javascript'> <!-- Tracks the height of the card to make it same when the card is not expanded -->
-			var clickedCard = [];
-			var maximumHeight = '';
-			var countClick = 0;
-			
-			function removeHeight(cardID) {
-				if (countClick == 0) {
-					maximumHeight = ($('#'+cardID).height()); // get the original height
-					countClick++;
-				}
-				
-				if (clickedCard.includes(cardID)) { // need to hide it by including the original height
-					$('#'+cardID).find("div").eq(0).css('height',maximumHeight); // set original height back
-					const index = clickedCard.indexOf(cardID); // get index of the card in array
-					clickedCard.splice(index, 1); // remove the card from the array
-				} else { //remove the original height
-					$('#'+cardID).find("div").eq(0).css('height',''); // remove the original height
-					clickedCard.push(cardID); // add to currently open card list
-				};
-			};
-		</script>
-		
-		<!-- Added in Iteration 3 -->
-		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
-		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 	</body>
 </html>
 

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 07, 2020 at 05:25 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Host: localhost
+-- Generation Time: Oct 12, 2020 at 06:06 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `amazing-grazing`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `drought_landing`
+--
+
+CREATE TABLE `drought_landing` (
+  `drought_landing_id` int(11) NOT NULL,
+  `drought_landing_title` varchar(100) DEFAULT NULL,
+  `drought_landing_subheading` varchar(150) DEFAULT NULL,
+  `drought_landing_description` varchar(350) DEFAULT NULL,
+  `drought_landing_icon` varchar(100) NOT NULL,
+  `drought_landing_content` varchar(800) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `drought_landing`
+--
+
+INSERT INTO `drought_landing` (`drought_landing_id`, `drought_landing_title`, `drought_landing_subheading`, `drought_landing_description`, `drought_landing_icon`, `drought_landing_content`) VALUES
+(1, 'DROUGHT IMPACTS GRASSLANDS', 'Droughts are one of the main natural hazards, which reduce grassland productivity', 'Droughts cannot be prevented and accurately predicted, but the damage that it causes can be reduced. Drought directly affects <i><u><a href=\"livestock-statistics.php\">livestock numbers</a></u></i>.', 'fa-exclamation-small fa-exclamation', 'Restricts the geographical distribution of grassland species!'),
+(2, '', '', '', 'fa-exclamation-small fa-exclamation', 'Leads to local loss of production by impacting the employment!'),
+(3, '', '', '', 'fa-exclamation-small fa-exclamation', 'Increases the chances of wildfires and grassland habitat loss!');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `drought_spinner`
+--
+
+CREATE TABLE `drought_spinner` (
+  `drought_spinner_id` int(11) NOT NULL,
+  `drought_spinner_icon` varchar(100) NOT NULL,
+  `drought_spinner_title` varchar(50) NOT NULL,
+  `drought_spinner_text` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `drought_spinner`
+--
+
+INSERT INTO `drought_spinner` (`drought_spinner_id`, `drought_spinner_icon`, `drought_spinner_title`, `drought_spinner_text`) VALUES
+(1, 'flaticon-ecosystem', 'Ecosystem', 'Grassland ecosystem provides a huge number of ecological services and other economic products, it is essential for livestock and floral species to maintain balance condition.'),
+(2, 'flaticon-loss', 'Economy', 'The drought destroys crops, reduces livestock numbers, and other resources. It has managed to reduce national GDP by 0.75% between 2006 and 2009.'),
+(3, 'flaticon-climate-change', 'Climate', 'Climate change is likely to have drought conditions worse in the SW and SE Australia. It influences the fluxes of carbon, water, etc. within the grassland.'),
+(4, 'flaticon-rain', 'Rainfall', 'In southeast Australia, late autumn and early winter rainfall have declined by 15% from the 1970s. Also, Western Australia has experienced a 15% decrease in cool season rainfall.'),
+(5, 'flaticon-region', 'Regions', 'Queensland and New South Wales are experiencing severe drought nowadays. With drought declared for 57.6% of QLD and 16.4 percent of NSW.');
 
 -- --------------------------------------------------------
 
@@ -332,12 +379,12 @@ CREATE TABLE `g_news_api` (
 
 INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
 (1, 100, '2f43dc9d754f3008f68a7f50b670c208'),
-(2, 100, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
-(3, 100, 'c3fae1827597a016ef41d4fb9c4f95fe'),
-(4, 100, '9e0677170130c646c24d9d907974166c'),
-(5, 100, '1d5029e4a17729fbd82d52087fc2c85c'),
-(6, 100, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
-(7, 100, 'e7a575a4e5900bf0de75a73abf3e7d2b');
+(2, 11, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
+(3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe'),
+(4, 0, '9e0677170130c646c24d9d907974166c'),
+(5, 0, '1d5029e4a17729fbd82d52087fc2c85c'),
+(6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
+(7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');
 
 -- --------------------------------------------------------
 
@@ -1270,6 +1317,34 @@ INSERT INTO `species_landing` (`species_landing_id`, `species_landing_title`, `s
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `species_measures`
+--
+
+CREATE TABLE `species_measures` (
+  `measures_id` int(11) NOT NULL,
+  `measures_icon` varchar(70) NOT NULL,
+  `measures_type` varchar(15) NOT NULL,
+  `measures_desc` varchar(800) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `species_measures`
+--
+
+INSERT INTO `species_measures` (`measures_id`, `measures_icon`, `measures_type`, `measures_desc`) VALUES
+(1, 'flaticon-biology', 'plants', '<b>Biological methods</b> are effective against many of the plants mentioned above; however, this method needs to be controlled to ensure that it does not cause damage to other areas. </b>For example:</b> Cactoblastis moth is used to control prickly pear.'),
+(2, 'flaticon-clean-clothes', 'plants', 'It is important to <b>clean shoes, clothes, machinery, and livestock</b> thoroughly before approaching grassland to prevent the spread as much as possible. Humans, animals, or any type of equipment can transport invasive seeds.'),
+(3, 'flaticon-poison', 'plants', '<b>Poisoning</b> with herbicides is not just the easiest but also the most dangerous method. There is <i>a high chance of polluting creeks, streams, killing native insects, animals, vegetation, and livestock.</i>'),
+(4, 'flaticon-plow', 'plants', '<b>Manual removal</b> and <b>ploughing in</b> are the methods that can be used on the daily basis. While manual removal is suitable against small areas, ploughing is useful against wide areas. However, <i>ploughing cannot be done during the wet weather and can cause soil erosion.</i>'),
+(5, 'flaticon-biology', 'animals', '<b>Biological control</b> can be used to control various pests usings natural predators, disease-carrying bacteria or viruses, and parasites. <b>For example:</b> myxomatosis and rabbit calicivirus disease are used to control feral rabbits.'),
+(6, 'flaticon-aim', 'animals', '<b>Shooting</b> feral animals are one of the solutions that can be taken into a consideration. To ensure that this method is successful, hunters need to be hired to eliminate half of the animal population every year.'),
+(7, 'flaticon-fence', 'animals', 'Large areas can be covered with <b>fences</b> to prevent feral animals, like cattle, goats, buffaloes, etc., from accessing pastures. <b>Electric fences</b> can be used to protect small areas of high conservation value. However, this method has a <i>high cost of building and maintaining.</i>'),
+(8, 'flaticon-trap', 'animals', '<b>Traps</b> can be used to catch animals. It is advised to use grain as a bait to attract animals or place them around watering holes. This method is effective against feral pigs and goats. Traps need to be checked daily, so they are <i>ineffective against wide areas.</i>'),
+(9, 'flaticon-poison', 'animals', '<b>Poison</b> can be used to control feral pigs, rabbits, and foxes. This method needs to be used with caution because <i>there are risks of poisoning non-targeted animals, livestock or plants.</i>');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `species_spinner`
 --
 
@@ -1290,6 +1365,49 @@ INSERT INTO `species_spinner` (`species_spinner_id`, `species_spinner_icon`, `sp
 (3, 'flaticon-investigate', 'Root cause', 'Most of the damaging invasive animal and weed species were introduced 200 years ago for sport, as pets or as livestock and pack animals.'),
 (4, 'flaticon-animal-kingdom', 'Animals', 'Various animals like rabbits, goats, cattle, buffaloes, pigs, donkeys and others, that can be found below, degrate grasslands soil by intense uncontrolled grazing.'),
 (5, 'flaticon-hunting', 'Management', 'Various species, like feral animals or weeds, have their own ways to control the infestation. Few methods are shooting, poisoning, fencing, biological, etc.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `species_types`
+--
+
+CREATE TABLE `species_types` (
+  `species_id` int(11) NOT NULL,
+  `species_type` varchar(15) NOT NULL,
+  `species_img` varchar(500) NOT NULL,
+  `species_name` varchar(100) NOT NULL,
+  `species_sci` varchar(100) DEFAULT NULL,
+  `species_description` varchar(350) NOT NULL,
+  `spec_graph_id` varchar(100) NOT NULL,
+  `spec_img_src` varchar(250) NOT NULL,
+  `spec_o_h_url` varchar(250) NOT NULL,
+  `spec_o_name_val` varchar(250) NOT NULL,
+  `spec_o_static_url` varchar(250) NOT NULL,
+  `graph_source_licence` varchar(250) NOT NULL,
+  `graph_source_url` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `species_types`
+--
+
+INSERT INTO `species_types` (`species_id`, `species_type`, `species_img`, `species_name`, `species_sci`, `species_description`, `spec_graph_id`, `spec_img_src`, `spec_o_h_url`, `spec_o_name_val`, `spec_o_static_url`, `graph_source_licence`, `graph_source_url`) VALUES
+(1, 'plants', 'invasive-species/plants/acacia-nilotica.jpg;invasive-species/plants/acacia-nilotica2.jpg', 'Prickly Acacia', 'Acacia nilotica', 'It usually infests areas with native vegetation and cleared paddocks. It is a long term-threat to grasslands by converting them to shrubland. <b>Measures:</b> chemical spray or cutting at or below ground level.', 'viz1602374076365', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prickly_Acacia&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'Prickly_Acacia&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prickly_Acacia&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(2, 'plants', 'invasive-species/plants/cenchrus-ciliaris.jpg;invasive-species/plants/cenchrus-ciliaris1.jpg', 'Buffel Grass', 'Cenchrus ciliaris', 'Due to its nature to spread easily, it invades pastures and changes the fire regime in the invaded areas. In result causing extremely hot fires, which impact livestock and grasslands. <b>Measures:</b> cultivate and herbicide, or spot spray.', 'viz1602375018303', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuffelGrass&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'BuffelGrass&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;BuffelGrass&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(3, 'plants', 'invasive-species/plants/glyceria-maxima.jpg', 'Reed Sweetgrass', 'Glyceria Maxima', 'By infesting creeks and rivers, livestock have become bogged trying to access water. Causes cyanide poisoning in livestock, which leads to its reduction. Leads to floods and reduction of farm dams. <b>Measures:</b> glyphosate in late summer and autumn.', 'viz1602375726423', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReedSweetgrass&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'ReedSweetgrass&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;ReedSweetgrass&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(4, 'plants', 'invasive-species/plants/pennisetum-polystachion.jpg', 'Mission Grass', 'Pennisetum polystachion', 'Due to its nature to spread easily, it invades pastures and changes the fire regime in the invaded areas. In result causing extremely hot fires, which impact livestock and grasslands. <b>Measures:</b> cultivate and herbicide, or spot spray.', 'viz1602383676261', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MissionGrass&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'MissionGrass&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MissionGrass&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(5, 'plants', 'invasive-species/plants/prosopis-limensis.jpg;invasive-species/plants/prosopis-limensis2.jpg', 'Mesquite', 'Prosopis spp.', 'One of the worst weeds due to being easily spread by the animals. Causes land degradation and loss of soil moisture. Expensive to control and leads to extinction of grassland habitat. <b>Measures:</b> spray foliar herbicide, manually remove its roots, or burn.', 'viz1602384150290', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;Mesquite&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'Mesquite&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Me&#47;Mesquite&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(6, 'plants', 'invasive-species/plants/athel-pine.jpg', 'Athel Pine', 'Tamarix aphylla', 'One of the worst weeds due to its potential to spread. It takes dominance over the ground by displacing native vegetation. It decreases pasture production by lowering water tables. <b>Measures:</b> stem injection or physical control by bulldozing.', 'viz1602384526800', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;At&#47;AthelPine&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'AthelPine&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;At&#47;AthelPine&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(7, 'animals', 'invasive-species/animals/wild-rabbits.jpg', 'Rabbits', '', 'The most widely distributed of mammals causing severe damage to the grassland. 0.5 rabbits per hectare can prevent the regeneration of endangered plant species and compete with native livestock. <b>Measures:</b> destruction of warrens and above-ground harbours.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(8, 'animals', 'invasive-species/animals/wild-goat.jpg', 'Goats', '', 'Compete with native fauna and cause grassland degradation, threatening plants, other animal species, and ecological communities. <b>Measures:</b> trapping, shooting, mustering or fencing.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(9, 'animals', 'invasive-species/animals/wild-cattle.jpg', 'Cattle', '', 'Affect grassland by over-consumption and competing with domestic cattle for grazing resources. Cause trouble in mustering, handling and population control of domestic cattle. <b>Measures:</b> shooting, yard trapping, mustering, or poisoning.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(10, 'animals', 'invasive-species/animals/wild-buffalo.jpg', 'Buffalos', '', 'They are an environmental disaster in the grasslands. With its trails, dung, trampling and disturbance, they cause soil erosion and destruction of grassland vegetation. <b>Measures:</b> shooting from helicopters and large-scale poisoning.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(11, 'animals', 'invasive-species/animals/wild-pig.jpg', 'Pigs', '', 'Considered as  environmental and grassland pests. They cause damage through wallowing, rooting for food and selective feeding. Also destroy crops and pastures, as well as habitat of native plants and animals. <b>Measures:</b> trapping, shooting from the ground and strategic poisoning.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(12, 'animals', 'invasive-species/animals/wild-donkey.jpg', 'Donkeys', '', 'Millions of them cause erosion, reduction of grasslands, spreading weeds and compete for pasture with native animals and livestock. <b>Measures:</b> aerial culling and accredited shooters using approved procedures.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(13, 'animals', 'invasive-species/animals/wild-horse.jpg', 'Horses', '', 'They damage grassland vegetation with their hard hoofs,  introduce weeds through carrying seeds in their dung, manes and tails. Also, compete for food and water with native animals. <b>Measures:</b> fertility control is a non-lethal approach to management but still limited use.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(14, 'animals', 'invasive-species/animals/wild-camel.jpg', 'Camels', '', 'Cause damage to grassland vegetation through foraging behaviour and trampling. Also compete with native animals for food and shelter and loss of sequestered carbon in grassland vegetation. <b>Measures:</b> shooting, mustering, or poisoning.', 'viz1602483659415', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;Camels&#47;Sheet1&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'Camels&#47;Sheet1', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;Camels&#47;Sheet1&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/'),
+(15, 'animals', 'invasive-species/animals/kangaroo.jpg', 'Kangaroos', '', 'Population becomes out of control with large numbers, it affects grassland use for livestocks like the way of cattle farming. They will overpopulate unless culled. <b>Measures:</b> execution or commercial harvest and cluster fencing.', 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png', 'Australian Government: Department of Agriculture, Water and the Environment 2020', 'https://weeds.org.au/');
 
 -- --------------------------------------------------------
 
@@ -1425,8 +1543,27 @@ CREATE TABLE `user_feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `user_feedback`
+--
+
+INSERT INTO `user_feedback` (`feedback_id`, `feedback_page`, `feedback_date`, `feedback_time`, `feedback_rate`, `feedback_text`) VALUES
+(23, 'index.php', '07-10-2020', '01:16:49pm', 5, 'The website is very useful for the farmers, by visiting the web they can know what is the latest news, grazing tech, etc');
+
+--
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `drought_landing`
+--
+ALTER TABLE `drought_landing`
+  ADD PRIMARY KEY (`drought_landing_id`);
+
+--
+-- Indexes for table `drought_spinner`
+--
+ALTER TABLE `drought_spinner`
+  ADD PRIMARY KEY (`drought_spinner_id`);
 
 --
 -- Indexes for table `emp_age`
@@ -1639,10 +1776,22 @@ ALTER TABLE `species_landing`
   ADD PRIMARY KEY (`species_landing_id`);
 
 --
+-- Indexes for table `species_measures`
+--
+ALTER TABLE `species_measures`
+  ADD PRIMARY KEY (`measures_id`);
+
+--
 -- Indexes for table `species_spinner`
 --
 ALTER TABLE `species_spinner`
   ADD PRIMARY KEY (`species_spinner_id`);
+
+--
+-- Indexes for table `species_types`
+--
+ALTER TABLE `species_types`
+  ADD PRIMARY KEY (`species_id`);
 
 --
 -- Indexes for table `suggestion_tech`
@@ -1677,6 +1826,18 @@ ALTER TABLE `user_feedback`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `drought_landing`
+--
+ALTER TABLE `drought_landing`
+  MODIFY `drought_landing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `drought_spinner`
+--
+ALTER TABLE `drought_spinner`
+  MODIFY `drought_spinner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `emp_age`
@@ -1805,10 +1966,22 @@ ALTER TABLE `species_landing`
   MODIFY `species_landing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `species_measures`
+--
+ALTER TABLE `species_measures`
+  MODIFY `measures_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
 -- AUTO_INCREMENT for table `species_spinner`
 --
 ALTER TABLE `species_spinner`
   MODIFY `species_spinner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `species_types`
+--
+ALTER TABLE `species_types`
+  MODIFY `species_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `suggestion_tech`
@@ -1838,7 +2011,7 @@ ALTER TABLE `technique_selected`
 -- AUTO_INCREMENT for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
