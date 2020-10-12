@@ -962,7 +962,7 @@ body {
     -webkit-border-radius: 1rem;
 }
 
-/* Prevent Measures Image Headers */
+/* Preventative Measures Image Headers */
 .prevent-measures-header {
 	padding: 0px;
 	
@@ -981,3 +981,29 @@ body {
 	background-position: center center;
 }
 
+/* Preventative measures download button different screen sizes */
+.btn-download-large-screen {
+    visibility: visible;
+	position: absolute;
+	z-index: 1;
+	left: 22px;
+	top: 27px;
+  }
+  
+.btn-download-small-screen {
+    visibility: hidden;
+	position: absolute;
+	z-index: 1;
+	left: 22px;
+	top: 27px;
+  }
+
+@media screen and (max-width: 1199px) {
+  .btn-download-small-screen {
+    visibility: visible;
+  }
+  
+  .btn-download-large-screen {
+    visibility: hidden;
+  }
+}

@@ -44,9 +44,11 @@
 									
 					$plants_content = $plants_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 													'</div>'.
-													'<button id="plants_'.$species_id.'" style="position: absolute; bottom: 18px; margin-left: 22%" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
-														'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
-													'</button>'.
+													'<a class="d-flex justify-content-center">'.
+														'<button id="plants_'.$species_id.'" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
+															'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
+														'</button>'.
+													'</a>'.
 												'</div>'.
 											'</div>';
 				} else {					
@@ -65,9 +67,11 @@
 					$animal_content = $animal_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 														
 													'</div>'.
-													'<button id="animals_'.$species_id.'" style="position: absolute; bottom: 18px; margin-left: 22%" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
-														'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
-													'</button>'.
+													'<a class="d-flex justify-content-center">'.
+														'<button id="animals_'.$species_id.'" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">'.
+															'<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas'.
+														'</button>'.
+													'</a>'.
 												'</div>'.
 											'</div>';
 				}	

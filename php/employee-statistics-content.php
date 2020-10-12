@@ -31,8 +31,8 @@
 				
 				if ($employee_landing_id == 1) { // contains both title and the video content
 					$emp_vid = $emp_vid . '<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url('.$employee_landing_img.');">'.
-											'<a href="#headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>'.
-											'<div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">'.
+											'<a href="#xxx_headerPopup" id="headerVideoLink" target="_blank" class="icon-video d-flex justify-content-center align-items-center"><span class="icon-play"></span></a>'.
+											'<div id="xxx_headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">'.
 												'<iframe width="560" height="315" src="'.$employee_landing_video_url.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'.
 										    '</div>'.
 										  '</div>';
