@@ -111,7 +111,7 @@
 		</section>
 		<!-- End Section 1: Invasive species impact grasslands -->
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
 					<div class="row justify-content-center">
@@ -122,7 +122,7 @@
 					</div>
 				</div>
 
-				<!-- Gallery -->
+				
 				<div class="row">
 					<div class="col-md-12">
 						<div class="carousel-species owl-carousel ftco-owl">
@@ -205,9 +205,9 @@
 						
 					</div>
 				</div>
-				<!-- /Gallery -->
+				
 			</div>
-		</section>
+		</section> -->
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
