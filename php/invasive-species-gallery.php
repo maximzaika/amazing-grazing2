@@ -40,7 +40,7 @@
 					} else {
 						$plants_content = $plants_content . '<h3><a href="#">'.$species_name.'</a></h3>';
 					}*/
-					$plants_content = $plants_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+					$plants_content = $plants_content . '<h3>'.$species_name.'</h3>';
 									
 					$plants_content = $plants_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 													'</div>'.
@@ -63,7 +63,7 @@
 					} else {
 						$animal_content = $animal_content . '<h3><a href="#">'.$species_name.'</a></h3>';
 					}	*/				
-					$animal_content = $animal_content . '<h3><a href="#">'.$species_name.'</a></h3>';
+					$animal_content = $animal_content . '<h3>'.$species_name.'</h3>';
 					$animal_content = $animal_content .'<h5 class="dummy"><a>'.$species_description.'<a></h5>'.
 														
 													'</div>'.
