@@ -32,9 +32,6 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		
-		<!-- Added in iteration 1 -->
-		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-		
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 		
@@ -46,8 +43,8 @@
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'index.php', ''));?>
 		<!-- End Navigation Bar -->
 		
-		<!-- Header -->
-		<div class="mb-5 hero-wrap js-fullheight" style="background-image: url('images/index-header.jpeg');" data-stellar-background-ratio="0.5">
+		<!-- Section 1: Page header - Home -->
+		<div class="hero-wrap js-fullheight" style="background-image: url('images/index-header.jpeg');" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div> <!-- add the darkness to the photo -->
 			<div class="container">
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
@@ -60,14 +57,15 @@
 				</div>
 			</div>
 		</div>
-		<!-- End Header -->
+		<!-- End Section 1: Page header - Home -->
 		
 		<!-- Feedback Section -->
 		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
+
 		
-		<!-- Section 1: SERVICES -->
-		<section id="offerings" class="ftco-section ftco-no-pt" style="padding-bottom: 4em;">
+		<!-- Section 2: SERVICES -->
+		<section id="offerings" class="ftco-section bg-light" style="padding-bottom: 4em; padding-top: 4em;"">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-10 justify-content-center text-center heading-section ftco-animate">
@@ -75,42 +73,19 @@
 						<span class="mb-4 subheading">Thoroughly researched and narrowed down solutions are provided</span>
 					</div>
 				</div>
-				
-				<div class="row">
-					<div class="col-lg-12 services-wrap px-4">
-						<div class="row pt-md-3">
-						    <?php echo htmlspecialchars_decode(generateOfferings($con));?>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="carousel-services owl-carousel ftco-owl">
+								<?php echo htmlspecialchars_decode(generateOfferings2($con));?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End Section 1: SERVICES -->
-		
-		<!-- Section 2: News -->
-		<!--<section class="ftco-section bg-light">
-			<div class="container">
-				<div class="row justify-content-center pb-3">
-					<div class="col-md-7 heading-section text-center ftco-animate">
-					    <h2>NEWS</h2>
-						<span class="subheading">Your personalised latest news</span>
-					</div>
-				</div>
-				
-				
-				<?php //echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
-				
-		
-			    <hr> 
-				
-				
-				<div id="update-news" class="row pre-scrollable">
-					<?php //echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
-				</div>
-			</div>
-		</section>-->
-		<!-- End Section 2: News -->
-		
+		<!-- End Section 2: SERVICES -->
+
 		<!-- Section 3: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
@@ -147,9 +122,9 @@
 					<div class="col-md-12 text-center">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						<p>Copyright &copy;<script>document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.</a> 
-						| Free icons are taken from the <a href="fonts/flaticon/license/license.html">Flaticon </a>
-						| Free images are taken from the <a href="https://unsplash.com">Unsplash</a>, <a href="https://stockfreeimages.com">StockFreeImages</a>, <a href="https://pixabay.com">Pixabay</a></p>
+						</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a style="color: #4e9525;"  href="https://colorlib.com" target="_blank">Colorlib.</a>
+						| Free icons retrieved from the <a style="color: #4e9525;"  href="fonts/flaticon/license/license.html">Flaticon.</a>
+						| Free images retrieved from the <a style="color: #4e9525;" href="https://unsplash.com">Unsplash</a>, <a style="color: #4e9525;" href="https://stockfreeimages.com">StockFreeImages</a>, & <a style="color: #4e9525;"  href="https://pixabay.com">Pixabay.</a></p> 
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</div>
 				</div>
@@ -176,30 +151,61 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 	  
-		<!-- Added in Iteration 1 -->
-		<script src="js/amazing-grazing/news-picker-detection.js"></script>
-		<script src="js/amazing-grazing/news-picker.js"></script>
-		<script src="js/bootstrap-datepicker.js"></script>
-		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		
 		<!-- Added in Iteration 3 -->
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
-		<script type='text/javascript'> <!-- Changes the icon for the news filter in mobile version -->					
-			/*$("#show-filter").click(function() { // renames the filter button upon click
-				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
-				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
+		<script type="text/javascript">
+			$(document).ready(function(){		
+				//----- Start: Initiate carousel -----
+				$('.carousel-services').owlCarousel({
+					center: true,
+					loop: true,
+					items:1,
+					margin: 30,
+					stagePadding: 0,
+					mouseDrag: false,
+					nav: true,
+					autoplay: true,
+					autoplayHoverPause: true,
+					autoplayTimeout: 5000,
+					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+					responsive:{
+						0:{
+							items: 1
+						},
+						600:{
+							items: 2
+						},
+						1000:{
+							items: 3
+						},
+						1600:{
+							items: 4
+						}
+					}
+				});
+				//----- End: Initiate carousel -----
 				
-				var curr_text = document.getElementById("show-filter").innerHTML;
+				//----- Start: Initiate resizing the service containers to make sure the size of these containers is the same -----
+				var maxHeight = -1
 				
-				if (curr_text == max_btn) {
-					document.getElementById("show-filter").innerHTML  = min_btn;
-				} else {
-					document.getElementById("show-filter").innerHTML  = max_btn;
-				}
-			});*/
+				console.log($('.p_'));
+				$('.p_').each(function() { // get the max height out of all plants containers
+					maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
+				});
+				
+				console.log(maxHeight);
+				//maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
+				
+				$('.p_').each(function() { // change the height of all plants containers to max
+				   $(this).height(maxHeight);
+				 });
+				//----- End: Initiate resizing the service containers to make sure the size of these containers is the same -----
+			});
+				
 		</script>
 	</body>
 </html>

@@ -73,7 +73,7 @@
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
 			<div class="container">
 				<div class="row ">
-					<!-- Spinner containing root cause, animals, management, dangerous, species -->
+					<!-- Graph containing drought information -->
 					<div id="tableau-graph" class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 d-flex align-items-center align-content-center " style="padding: 0px;">
 						<?php //echo htmlspecialchars_decode($spinner_full);?> <!-- just in case the spinner needs to be used -->
 						<div class='tableauPlaceholder' id='viz1602565901745' style='position: relative'>
@@ -110,6 +110,104 @@
 			</div>
 		</section>
 		<!-- End Section 1: Invasive species impact grasslands -->
+		
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+				<div class="container" style="padding-top: 4em;">
+					<div class="row justify-content-center">
+						<div class="col-md-12 text-center heading-section">
+							<h2>PREPARE FARM FOR DROUGHT</h2>
+							<span class="mb-4 subheading">The following actions need to be taken to prepare for drought</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Gallery -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="carousel-species owl-carousel ftco-owl">
+							<div class="item bg-light p_ d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/employment-statistics.jpg');"></div>
+									<div class="text text-center px-4">
+										<h3>test test 1</h3>
+										<h5 class="dummy"><a>test test 1<a></h5>
+										
+										
+									</div>
+										
+									
+									<a class="d-flex justify-content-center">
+										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
+											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+										</button>
+									</a>
+								</div>
+							</div>
+							
+							<div class="item bg-light p_ d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
+									<div class="text text-center px-4">
+										<h3>test test 2</h3>
+										<h5 class="dummy"><a>test test 2<a></h5>
+										
+										
+									</div>
+									<a class="d-flex justify-content-center">
+										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
+											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+										</button>
+									</a>
+									
+								
+								</div>
+							</div>
+							
+							<div class="item bg-light p_ d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
+									<div class="text text-center px-4">
+										<h3>test test3 </h3>
+										<h5 class="dummy"><a>test test test test test test test test test test test test test test test test test test test test test <a></h5>
+										
+										
+									</div>
+									<a class="d-flex justify-content-center">
+										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
+											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+										</button>
+									</a>
+									
+								
+								</div>
+							</div>
+							
+							<div class="item bg-light p_ d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
+									<div class="text text-center px-4">
+										<h3>test test4 </h3>
+										<h5 class="dummy"><a>test test 4<a></h5>
+										
+										
+									</div>
+									<a class="d-flex justify-content-center">
+										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
+											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
+										</button>
+									</a>
+									
+								
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- /Gallery -->
+			</div>
+		</section>
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -177,6 +275,11 @@
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/venobox.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/readMoreJS.min.js"></script>
+		<script src="js/readMoreJS2.min.js"></script>
 		<script type='text/javascript'>                    
 			var divElement = document.getElementById('viz1602565901745');                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
@@ -255,6 +358,42 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function(){
+				$readMoreJS.init({
+					target: '.dummy a',
+					numOfWords: 10,
+					toggle: true,
+					moreLink: ' <i>read more</i>',
+					lessLink: ' <i>read less</i>'
+				});
+							
+				$('.carousel-species').owlCarousel({
+							center: true,
+							loop: true,
+							items:1,
+							margin: 30,
+							stagePadding: 0,
+							mouseDrag: false,
+							nav: true,
+							//autoplay: true,
+							//autoplayHoverPause: true,
+							//autoplayTimeout: 7000,
+							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+							responsive:{
+								0:{
+									items: 1
+								},
+								600:{
+									items: 2
+								},
+								1000:{
+									items: 3
+								},
+								1600:{
+									items: 3
+								}
+							}
+						});
+				
 				//----- Start control the Animated Spinner that containes 5 items -----//
 				let i=2;
 

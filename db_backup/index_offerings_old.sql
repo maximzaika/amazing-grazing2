@@ -41,12 +41,12 @@ CREATE TABLE `index_offerings` (
 --
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
-(1, 'flaticon-news', 'Latest News', 'Today\'s news regarding grazing, livestock, drought & wildfires', 'news.php'),
-(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Various grazing techniques required to preserve grassland\'s nature', 'techniques.php'),
-(3, 'flaticon-chicken', 'Livestock Statistics', 'Livestock situation and affect on grassland and economy', 'livestock-statistics.php'),
-(4, 'flaticon-teacher', 'Employment Statistics', 'The employment situation, agricultural communities, and promotion of the farming profession', 'employment-statistics.php'),
-(5, 'flaticon-drought', 'Drought', 'Drought locations, impacts, action plan, and government support', 'drought.php'),
-(6, 'flaticon-bug', 'Invasive Species', 'Invasive species locations, impacts, and preventative measures', 'invasive-species.php');
+(1, 'flaticon-news', 'Latest News', 'Stay up-tp-date with the latest news regarding grazing, wildfires, drought, and livestock. News from relevant countries are provided to protect our grasslands!', 'news.php'),
+(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Preserve grassland\'s nature, soil, and grass and increase your livestock numbers by the use of appropriate grazing techniques.', 'techniques.php'),
+(3, 'flaticon-chicken', 'Livestock Statistics', 'Dominant livestock has been reducing since 1970 up until now. Action needs to be taken! Various graphs and solutions are provided.', 'livestock-statistics.php'),
+(4, 'flaticon-teacher', 'Employment Statistics', 'The number of farmers, working with beef and dairy cattle and sheep, has been reducing. Lots of opportunities for younger farmers to showcase themselves.', 'employment-statistics.php'),
+(5, 'flaticon-drought', 'Drought', 'Drought has negative impact on grasslands, which leads to wildfires, loss of wetland, and reduction of livestock. Drought locations and water levels are provided.', 'drought.php'),
+(6, 'flaticon-bug', 'Invasive Species', 'Weeds and animals spread and multiplied to the point where they damage grasslands. Various species, their locations, and measures against them are provided.', 'invasive-species.php');
 
 --
 -- Indexes for dumped tables
