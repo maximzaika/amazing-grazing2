@@ -76,27 +76,27 @@
 					<!-- Spinner containing root cause, animals, management, dangerous, species -->
 					<div id="tableau-graph" class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 d-flex align-items-center align-content-center " style="padding: 0px;">
 						<?php //echo htmlspecialchars_decode($spinner_full);?> <!-- just in case the spinner needs to be used -->
-						<div class='tableauPlaceholder' id='viz1602518779964' style='position: relative;'>
-			<noscript>
-				<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;Drought_16025186744150&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
-			</noscript>
-			<object class='tableauViz'  style='display:none;'>
-				<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-				<param name='embed_code_version' value='3' /> 
-				<param name='site_root' value='' />
-				<param name='name' value='Drought_16025186744150&#47;Dashboard1' />
-				<param name='tabs' value='no' />
-				<param name='toolbar' value='yes' />
-				<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;Drought_16025186744150&#47;Dashboard1&#47;1.png' /> 
-				<param name='animate_transition' value='yes' />
-				<param name='display_static_image' value='yes' />
-				<param name='display_spinner' value='yes' />
-				<param name='display_overlay' value='yes' />
-				<param name='display_count' value='yes' />
-				<param name='language' value='en' />
-				<param name='filter' value='publish=yes' />
-			</object>
-		</div>                
+						<div class='tableauPlaceholder' id='viz1602565901745' style='position: relative'>
+							<noscript>
+								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;DroughtinAU&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+							</noscript>
+							<object class='tableauViz'  style='display:none;'>
+								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+								<param name='embed_code_version' value='3' /> 
+								<param name='site_root' value='' />
+								<param name='name' value='DroughtinAU&#47;Dashboard1' />
+								<param name='tabs' value='no' />
+								<param name='toolbar' value='yes' />
+								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;DroughtinAU&#47;Dashboard1&#47;1.png' /> 
+								<param name='animate_transition' value='yes' />
+								<param name='display_static_image' value='yes' />
+								<param name='display_spinner' value='yes' />
+								<param name='display_overlay' value='yes' />
+								<param name='display_count' value='yes' />
+								<param name='language' value='en' />
+								<param name='filter' value='publish=yes' />
+							</object>
+						</div>                
 		
 					</div> 
 					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
@@ -178,7 +178,7 @@
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 		<script type='text/javascript'>                    
-			var divElement = document.getElementById('viz1602518779964');                    
+			var divElement = document.getElementById('viz1602565901745');                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
 			
 			var heightIntroRightSide = $('#right-side-intro').height();
@@ -192,10 +192,13 @@
 			if (window.innerWidth > 1599) {
 				console.log('Screen size 1599 > ' + graphDiv.offsetWidth);
 				
-				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = widthIntroRightSide*0.7;
 				console.log('Set height > ' + setHeight);
-				vizElement.style.height=(setHeight)+'px';
+				vizElement.style.height=(heightIntroRightSide)+'px';
+				
+				/*var setHeight = widthIntroRightSide*0.7;
+				console.log('Set height > ' + setHeight);
+				vizElement.style.height=(setHeight)+'px';*/
 			} else if (window.innerWidth > 1439) {
 				console.log('Screen size 1439 > ' + graphDiv.offsetWidth);
 				
