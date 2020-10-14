@@ -181,7 +181,6 @@
 														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-large-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i> Download</a>
 														<a href="download/AG-preventative-measures-brochure.pdf" class="btn-download-small-screen btn btn-primary" type="button" download><i class="fa fa-download" aria-hidden="true"></i></a>
 													</div>
-													
 												</div>
 											</div>
 										</div>
@@ -300,8 +299,6 @@
 				  once: true
 				});
 			}
-			
-			
 			
 			$(window).on('load', function() {
 				$.ajax({ // receive the gallery content from the database
