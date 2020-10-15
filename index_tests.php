@@ -89,7 +89,7 @@
 				
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-6 d-flex align-items-stretch pt-3">
 							<div class="card card-flip h-100">
 								<div class="card-front text-white">
 									<div class="services text-center">
@@ -120,7 +120,7 @@
 						</div>
 						
 						
-						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-6 d-flex align-items-stretch pt-3">
 							<div class="card card-flip h-100">
 								<div class="card-front text-white">
 									<div class="services text-center">
@@ -151,7 +151,7 @@
 						</div>
 						
 						
-						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-6 d-flex align-items-stretch pt-3">
 							<div class="card card-flip">
 								<div class="card-front text-white">
 									<div class="services text-center">
@@ -195,7 +195,7 @@
 							</div>
 						</div>
 						
-						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-6 d-flex align-items-stretch pt-3">
 							<div class="card card-flip h-100">
 								<div class="card-front text-white">
 									<div class="services text-center">
