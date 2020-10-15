@@ -54,8 +54,8 @@
 		$get_drought_intro = "SELECT drought_landing_id, drought_landing_title, drought_landing_subheading, drought_landing_description, drought_landing_icon, drought_landing_content FROM drought_landing";
 		$drought_intro_data = $con -> query($get_drought_intro);
 
-		$drought_intro = '<div class="row justify-content-start py-5">'.
-						'<div id="right-side-intro" class="col-md-12 heading-section ftco-animate"  style="padding-bottom: 0px;">';
+		$drought_intro = '<div class="py-5">'.
+						'<div id="right-side-intro" class="heading-section ftco-animate"  style="padding-bottom: 0px;">';
 		
 		if ($drought_intro_data->num_rows > 0) {
 			while($row = $drought_intro_data->fetch_assoc()) {

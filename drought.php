@@ -102,7 +102,7 @@
 					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
 					
 					<!-- Invasive species impact grasslands section -->
-					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7">
+					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7 justify-content-center">
 						<?php echo htmlspecialchars_decode($drought_intro);?>
 					</div>
 					<!-- End Invasive species impact grasslands section -->
@@ -289,63 +289,64 @@
 			vizElement.style.width = '100%';
 			//tableau-graph
 			
-			var graphDiv = document.getElementById('tableau-graph');    
+			
+			var graphDivHeight = $('#tableau-graph').height()
 			//console.log(graphDiv);
 			/*console.log('screen size > ' + window.innerWidth);*/
 			if (window.innerWidth > 1599) {
-				console.log('Screen size 1599 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 1599 > ' + graphDiv.offsetWidth);
 				
 				var setHeight = widthIntroRightSide*0.7;
 				console.log('Set height > ' + setHeight);
-				vizElement.style.height=(heightIntroRightSide)+'px';
+				vizElement.style.height=(graphDivHeight)+'px';
 				
 				/*var setHeight = widthIntroRightSide*0.7;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';*/
 			} else if (window.innerWidth > 1439) {
-				console.log('Screen size 1439 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 1439 > ' + graphDiv.offsetWidth);
 				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = widthIntroRightSide*0.77;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 1199) {
-				console.log('Screen size 1200 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 1200 > ' + graphDiv.offsetWidth);
 				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 992) {
-				console.log('Screen size 992 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 992 > ' + graphDiv.offsetWidth);
 				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 767) {
-				console.log('Screen size 767 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 767 > ' + graphDiv.offsetWidth);
 				var setHeight = widthIntroRightSide*0.85;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 666) {
 				console.log(widthIntroRightSide);
 				console.log(widthIntroRightSide*0.75);
-				console.log('Screen size 666 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 666 > ' + graphDiv.offsetWidth);
 				var setHeight = widthIntroRightSide*1.0;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 574) {
 				console.log(widthIntroRightSide);
 				console.log(widthIntroRightSide*0.75);
-				console.log('Screen size 574 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 574 > ' + graphDiv.offsetWidth);
 				var setHeight = widthIntroRightSide*1.1;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 374) {
 				console.log(widthIntroRightSide);
 				console.log(widthIntroRightSide*2);
-				console.log('Screen size 374 > ' + graphDiv.offsetWidth);
+				//console.log('Screen size 374 > ' + graphDiv.offsetWidth);
 				var setHeight = window.innerWidth*2.3;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
