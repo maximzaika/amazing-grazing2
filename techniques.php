@@ -71,8 +71,423 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
+		<!-- Start: Modal pops up when user clicks "Show affected areas" -->
+		<div class="modal fade" id="seasonal-grazing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Seasonal Grazing</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body" style="z-index: 1000;">
+				<?php echo retrieveTechniquePage($con, "SEASONAL GRAZING", "Carousel");?>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="rotational-grazing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Rotational Grazing</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body" style="z-index: 1000;">
+				<?php echo retrieveTechniquePage($con, "ROTATIONAL GRAZING", "Methods");?>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="modal fade" id="patch-burn-grazing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Patch-burn Grazing</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body" style="z-index: 1000;">
+				<?php echo retrieveTechniquePage($con, "PATCH-BURN GRAZING", "No");?>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+				
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="carousel-farmer-actions owl-carousel ftco-owl">
+							
+							<div class="item bg-light"><!--d-flex align-items-stretch-->
+								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
+									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal_animation.gif);"></div>
+									<div class="text text-center px-4 t_">
+										<h3>Seasonal</h3>
+										
+										<div class="services-wrap">
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Advised to be used</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Longer regrowth time for the grassland</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+											
+											<div class="d2">
+												<a>	
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Easily combined with other techniques</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Great chance to adjust the grazing regime of the year</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Limited time consumption and less farming infrastructure management</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+												</a>
+											</div>
+											
+											
+										</div>
+										<a class="d-flex justify-content-center">
+											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#seasonal-grazing">
+												Learn more
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item bg-light">
+								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
+									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/continuous-grazing.gif);"></div>
+									<div class="text text-center px-4 t_">
+										<h3>Continuous</h3>
+										
+										<div class="services-wrap">
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Not advised to be used</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Damages soil, stream banks, and native vegetation</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+											
+											<div class="d2">
+												<a>	
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Low productivity and unsustainable development in the long-term</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Most simple, popular, and low effort on labour</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Temporary fencing is used</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item bg-light"><!--d-flex align-items-stretch-->
+								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
+									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/rotational-grazing.gif);"></div>
+									<div class="text text-center px-4 t_">
+										<h3>Rotational</h3>
+										
+										<div class="services-wrap">
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Advised to be used</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Enhances nutritious level of grassland</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+											
+											<div class="d2">
+												<a>	
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Can be implemented immediately</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Express higher stocking rates of paddock-by-paddock</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Decrease the methane emissions from livestock</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+												</a>
+											</div>
+											
+											
+										</div>
+										<a class="d-flex justify-content-center">
+											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#rotational-grazing">
+												Learn more
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="item bg-light"><!--d-flex align-items-stretch-->
+								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
+									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/patch-burn.gif);"></div>
+									<div class="text text-center px-4 t_">
+										<h3>Patch-burn</h3>
+										
+										<div class="services-wrap">
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Advised to be used</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+												
+												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+													<div class="container" style="padding-right: 0px; padding-left: 0px;">
+														<div class="row">
+															<div class="testxx">
+																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+															</div>
+															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																<h5>Enable recovery of used patches of grassland</h5>
+															</div>
+														</div>
+													</div>
+												</li>
+											
+											<div class="d2">
+												<a>	
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Cost-saving technology requires less costly infrastructure or fencing</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>Only suitable for paddock larger than 20 acres</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+													
+													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
+														<div class="container" style="padding-right: 0px; padding-left: 0px;">
+															<div class="row">
+																<div class="testxx">
+																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
+																</div>
+																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
+																	<h5>May takes longer time to burn all patches (3 years)</h5>
+																</div>
+															</div>
+														</div>
+													</li>
+												</a>
+											</div>
+											
+											
+										</div>
+										<a class="d-flex justify-content-center">
+											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#patch-burn-grazing">
+												Learn more
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
 		<!-- Section 2: Grazing Technqiues-->
-		<?php echo htmlspecialchars_decode(retrieveTechniques($con, "ALL"));?>
+		<?php //echo htmlspecialchars_decode(retrieveTechniques($con, "ALL"));?>
 		<!-- End Section 2: Grazing Techniques-->
 		
 		<!-- Section 3: Footer -->
@@ -141,7 +556,76 @@
 		
 		<!-- Added in Iteration 3 -->
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
-		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
+		<script src="https://www.google.com/recaptcha/api.js"></script> <!-- used for feedback section -->
+		
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/venobox.min.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/readMoreJS3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$readMoreJS3.init({
+					target: '.d2 a',
+					numOfWords: 10,
+					toggle: true,
+					moreLink: ' <i>show more facts</i>',
+					lessLink: ' <i>show less facts</i>'
+				});
+							
+				$('.carousel-farmer-actions').owlCarousel({
+					center: true,
+					loop: false,
+					rewind: true,
+					startPosition: 1,
+					items:4,
+					margin: 30,
+					stagePadding: 0,
+					mouseDrag: false,
+					nav: true,
+					autoplay: true,
+					autoplayHoverPause: true,
+					autoplayTimeout: 7000,
+					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+					responsive:{
+						0:{
+							items: 1
+						},
+						600:{
+							items: 2
+						},
+						1000:{
+							items: 3
+						},
+						1440:{
+							items: 3
+						},
+						1600:{
+							items: 3
+						}
+					}
+				});
+				
+				
+				
+				//----- Start resize the gallery container on initial load -----//
+				var maxHeight = -1
+	
+				$('.t_').each(function() { // get the max height out of all plants containers
+					maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
+				});
+				
+				maxHeight = maxHeight+70; // increase height to provide enough space for the bottom button
+				
+				$('.t_').each(function() { // change the height of all plants containers to max
+				   $(this).height(maxHeight);
+				 });
+				 
+				
+				//----- End resize the gallery container on initial load -----//
+				
+				
+			});
+		</script>
 	</body>
 </html>
 

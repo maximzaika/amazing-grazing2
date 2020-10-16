@@ -1,55 +1,3 @@
-
-
-/*
-flip card
-*/
-
-.card-custom {
-	position: absolute;
-	color: black;
-	left: 0;
-	right: 0;
-	bottom: 6px;
-	font-size: 10px;
-	font-style: normal;
-	color: black;
-	font-weight: bold;
-}
-
-.card-flip {
-	border: 0px solid black;
-}
-
-.card-flip > div {
-  backface-visibility: hidden;
-  transition: transform 300ms;
-  transition-timing-function: linear;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  display: flex;
-  
-}
-
-.card-front {
-  transform: rotateY(0deg);
-}
-
-.card-back {
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  border: 2px solid #4e9525;
-}
-
-.card-flip:hover .card-front {
-  transform: rotateY(-180deg);
-}
-  
-.card-flip:hover .card-back {
-  transform: rotateY(0deg);
-}
-
 /* Fixed Scroll To Top Button */
 .scrollToTop {
 	position: fixed;
@@ -1063,4 +1011,14 @@ body {
 /* Lists on the right to describe the pages - remove the margin from the last item */
 .employee-list:last-child {
   margin-bottom: 0px;
+}
+
+.testxx {
+	
+	left: 11px;
+}
+
+.testxx2 {
+	position: absolute;
+	left: 63px;
 }
