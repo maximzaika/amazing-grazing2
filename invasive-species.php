@@ -407,7 +407,7 @@
 						//----- Start converts the species characters like $#47 to /
 						//      It is required because the tableau links contain special characters that browser cannot read for some reason if received from js -----//
 						function specialToHTML(str) {
-							return str.replace("&#47;", "/");
+							return str.replaceAll("&#47;", "/");
 						}
 						//----- End converts the species characters like $#47 to /
 						
