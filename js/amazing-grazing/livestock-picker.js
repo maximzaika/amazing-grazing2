@@ -2,7 +2,7 @@ $(function(){
 	/* Converts special characters into HTML readable format 
 	   Returns: converted string */
 	function specialToHTML(str) {
-		return str.replaceAll("&#47;", "/");
+		return str.replace("&#47;", "/");
 	}
 	
 	/* Counts active / intective buttons. 
