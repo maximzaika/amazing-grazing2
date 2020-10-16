@@ -158,7 +158,7 @@
 												</div>
 											</div>
 											
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -200,7 +200,7 @@
 												</div>
 											</div>
 											
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -249,7 +249,7 @@
 												</div>
 											</div>
 											
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -291,7 +291,7 @@
 												</div>
 											</div>
 											
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -335,7 +335,7 @@
 												</div>
 											</div>
 											
-											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -444,7 +444,7 @@
 		<script src="js/isotope.pkgd.min.js"></script>
 		<script src="js/venobox.min.js"></script>
 		<script src="js/aos.js"></script>
-		<script src="js/readMoreJS.min.js"></script>
+		<!--<script src="js/readMoreJS.min.js"></script>-->
 		<script src="js/readMoreJS2.min.js"></script>
 		<script type='text/javascript'>                    
 			var divElement = document.getElementById('viz1602816114213');                    

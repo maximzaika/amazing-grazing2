@@ -65,7 +65,12 @@
 			margin: 30,
 			stagePadding: 0,
 			nav: false,
-			navText: ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+			autoplay: true,
+			autoplayHoverPause: true,
+			autoplayTimeout: 7000,
+			nav: true,
+			mouseDrag: false,
+			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 			responsive:{
 				0:{
 					items: 1
