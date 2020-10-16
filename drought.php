@@ -74,20 +74,20 @@
 			<div class="container">
 				<div class="row ">
 					<!-- Graph containing drought information -->
-					<div id="tableau-graph" class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 d-flex align-items-center align-content-center " style="padding: 0px;">
+					<div id="tableau-graph" class="col-md-12 col-lg-6 col-xl-6 col-xxl-5 order-xxs-2 order-lg-1 d-flex align-items-center align-content-center" style="padding: 0px;">
 						<?php //echo htmlspecialchars_decode($spinner_full);?> <!-- just in case the spinner needs to be used -->
-						<div class='tableauPlaceholder' id='viz1602565901745' style='position: relative'>
+						<div class='tableauPlaceholder' id='viz1602816114213' style='position: relative'>
 							<noscript>
-								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;DroughtinAU&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
 							</noscript>
 							<object class='tableauViz'  style='display:none;'>
 								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
 								<param name='embed_code_version' value='3' /> 
 								<param name='site_root' value='' />
-								<param name='name' value='DroughtinAU&#47;Dashboard1' />
+								<param name='name' value='AUDrought&#47;Dashboard1' />
 								<param name='tabs' value='no' />
 								<param name='toolbar' value='yes' />
-								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Dr&#47;DroughtinAU&#47;Dashboard1&#47;1.png' /> 
+								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1.png' /> 
 								<param name='animate_transition' value='yes' />
 								<param name='display_static_image' value='yes' />
 								<param name='display_spinner' value='yes' />
@@ -102,7 +102,7 @@
 					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
 					
 					<!-- Invasive species impact grasslands section -->
-					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7 justify-content-center">
+					<div class="col-md-12 col-lg-6 col-xl-6 col-xxl-7 order-xxs-1 order-lg-2 justify-content-center">
 						<?php echo htmlspecialchars_decode($drought_intro);?>
 					</div>
 					<!-- End Invasive species impact grasslands section -->
@@ -111,23 +111,7 @@
 		</section>
 		<!-- End Section 1: Invasive species impact grasslands -->
 		
-		<!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
-			<div class="container">
-				<div class="container" style="padding-top: 4em;">
-					<div class="row justify-content-center">
-						<div class="col-md-12 text-center heading-section">
-							<h2>PREPARE FARM FOR DROUGHT</h2>
-							<span class="mb-4 subheading">The following actions need to be taken to prepare for drought</span>
-						</div>
-					</div>
-				</div>
-
-				
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel-species owl-carousel ftco-owl">
-							<div class="item bg-light p_ d-flex align-items-stretch">
-								<div class="wrap">
+		<!--<div class="wrap">
 									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/employment-statistics.jpg');"></div>
 									<div class="text text-center px-4">
 										<h3>test test 1</h3>
@@ -142,72 +126,254 @@
 											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
 										</button>
 									</a>
-								</div>
-							</div>
-							
-							<div class="item bg-light p_ d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
-									<div class="text text-center px-4">
-										<h3>test test 2</h3>
-										<h5 class="dummy"><a>test test 2<a></h5>
-										
-										
-									</div>
-									<a class="d-flex justify-content-center">
-										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-										</button>
-									</a>
-									
+								</div>-->
 								
-								</div>
-							</div>
-							
-							<div class="item bg-light p_ d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
-									<div class="text text-center px-4">
-										<h3>test test3 </h3>
-										<h5 class="dummy"><a>test test test test test test test test test test test test test test test test test test test test test <a></h5>
-										
-										
-									</div>
-									<a class="d-flex justify-content-center">
-										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-										</button>
-									</a>
-									
-								
-								</div>
-							</div>
-							
-							<div class="item bg-light p_ d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/autumn.jpeg');"></div>
-									<div class="text text-center px-4">
-										<h3>test test4 </h3>
-										<h5 class="dummy"><a>test test 4<a></h5>
-										
-										
-									</div>
-									<a class="d-flex justify-content-center">
-										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-										</button>
-									</a>
-									
-								
-								</div>
-							</div>
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+				<div class="container" style="padding-top: 4em;">
+					<div class="row justify-content-center">
+						<div class="col-md-12 text-center heading-section">
+							<h2>PREPARE YOURSELF FOR DROUGHT</h2>
+							<span class="mb-4 subheading">The following actions need to be taken to prepare for drought</span>
 						</div>
-						
 					</div>
 				</div>
-				
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="carousel-farmer-actions owl-carousel ftco-owl">
+							
+							<div class="item d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="container measures-wrap">
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-livestock.jpeg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+															<h1 class="bread" style=" font-size: 30px;">Livestock Situation</h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a>Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a>Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.</a></h5></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="container measures-wrap">
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-mental.jpg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+															<h1 class="bread" style=" font-size: 30px;">Health Situation</h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Drought is not the end of the world.</b> It is important to keep yourself safe and avoid stressing out.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Have a place, where you and your family members can bond together</b>, forget about the business for a second, and relax.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Read books, watch TV, enjoy your free time</b> even if it is not the best time, and most importantly do not keep thoughts to yourself - always discuss them with someone.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a>Most importantly, <b>the Australian government is here to help</b> and to support you. Read below what the government does.</a></h5></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="container measures-wrap">
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-strategy.jpg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+															<h1 class="bread" style=" font-size: 30px;">Effective Strategy</h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>, try to remove <span onclick="window.location.href='invasive-species.php';" style="cursor: pointer; color: #4e9525;"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span> to allow grassland to heal.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.</a></h5></div>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+							
+							<div class="item d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="container measures-wrap">
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-finance.jpg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+															<h1 class="bread" style=" font-size: 30px;">Financial Situation</h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>List out</b> all <b>physical and financial resources of the farm</b> to consider possible effects on both short- and long-term strategies.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Prepare at least 6 months of cash flow budget</b> against possible financial difficulties. It is a good practice to overestimate just to stay safe.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider reducing the livestock numbers</b> by selling them to minimise the maintenance because there is no exact way to predict the duration of drought.</a></h5></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="item d-flex align-items-stretch">
+								<div class="wrap">
+									<div class="container measures-wrap">
+										<div class="row">
+											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/grassland-header.jpeg);">
+													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+															<h1 class="bread" style=" font-size: 30px;">Grassland Situation</h1>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider the effects of the strategy on the grassland pastures</b> and soil in a long run. It is important to ensure that soil heals well before using it for grazing.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a>During the drought, <b>livestock</b>, like cattle, <b>may cause more damage to soil, native vegetation, and flora species.</b> It is advised to keep the situation under control.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a>Give at least few weeks to <b>allow grassland to regrow and recover</b>, during the autumn break, by the use of effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>.</a></h5></div>
+												</div>
+												
+												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+													</div>
+													<div class="d2" style="padding-top: 5px;"><h5><a><b>Plant more trees</b> to allow its roots to keep the soil moist for a longer period of time.</a></h5></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</section> -->
+		</section>
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -281,74 +447,42 @@
 		<script src="js/readMoreJS.min.js"></script>
 		<script src="js/readMoreJS2.min.js"></script>
 		<script type='text/javascript'>                    
-			var divElement = document.getElementById('viz1602565901745');                    
+			var divElement = document.getElementById('viz1602816114213');                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
-			
 			var heightIntroRightSide = $('#right-side-intro').height();
 			var widthIntroRightSide = $('#right-side-intro').width();
 			vizElement.style.width = '100%';
-			//tableau-graph
-			
-			
+
 			var graphDivHeight = $('#tableau-graph').height()
-			//console.log(graphDiv);
-			/*console.log('screen size > ' + window.innerWidth);*/
 			if (window.innerWidth > 1599) {
-				//console.log('Screen size 1599 > ' + graphDiv.offsetWidth);
-				
 				var setHeight = widthIntroRightSide*0.7;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(graphDivHeight)+'px';
-				
-				/*var setHeight = widthIntroRightSide*0.7;
-				console.log('Set height > ' + setHeight);
-				vizElement.style.height=(setHeight)+'px';*/
 			} else if (window.innerWidth > 1439) {
-				//console.log('Screen size 1439 > ' + graphDiv.offsetWidth);
-				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = widthIntroRightSide*0.77;
-				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 1199) {
-				//console.log('Screen size 1200 > ' + graphDiv.offsetWidth);
-				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
-				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 992) {
-				//console.log('Screen size 992 > ' + graphDiv.offsetWidth);
-				
 				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
-				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 767) {
-				//console.log('Screen size 767 > ' + graphDiv.offsetWidth);
-				var setHeight = widthIntroRightSide*0.85;
+				console.log('Screen size 767');
+				var setHeight = 480;//widthIntroRightSide*0.85;
 				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 666) {
-				console.log(widthIntroRightSide);
-				console.log(widthIntroRightSide*0.75);
-				//console.log('Screen size 666 > ' + graphDiv.offsetWidth);
-				var setHeight = widthIntroRightSide*1.0;
-				console.log('Set height > ' + setHeight);
+				var setHeight = 480;//widthIntroRightSide*1.0;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 574) {
-				console.log(widthIntroRightSide);
-				console.log(widthIntroRightSide*0.75);
-				//console.log('Screen size 574 > ' + graphDiv.offsetWidth);
 				var setHeight = widthIntroRightSide*1.1;
-				console.log('Set height > ' + setHeight);
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 374) {
-				console.log(widthIntroRightSide);
-				console.log(widthIntroRightSide*2);
-				//console.log('Screen size 374 > ' + graphDiv.offsetWidth);
-				var setHeight = window.innerWidth*2.3;
-				console.log('Set height > ' + setHeight);
+				var setHeight = 600;//window.innerWidth*2.3;
 				vizElement.style.height=(setHeight)+'px';
 			}
 
@@ -359,109 +493,45 @@
 		
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$readMoreJS.init({
-					target: '.dummy a',
+				$readMoreJS2.init({
+					target: '.d2 a',
 					numOfWords: 10,
 					toggle: true,
 					moreLink: ' <i>read more</i>',
 					lessLink: ' <i>read less</i>'
 				});
 							
-				$('.carousel-species').owlCarousel({
-							center: true,
-							loop: true,
-							items:1,
-							margin: 30,
-							stagePadding: 0,
-							mouseDrag: false,
-							nav: true,
-							//autoplay: true,
-							//autoplayHoverPause: true,
-							//autoplayTimeout: 7000,
-							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-							responsive:{
-								0:{
-									items: 1
-								},
-								600:{
-									items: 2
-								},
-								1000:{
-									items: 3
-								},
-								1600:{
-									items: 3
-								}
-							}
-						});
+				$('.carousel-farmer-actions').owlCarousel({
+					center: true,
+					loop: false,
+					rewind: true,
+					startPosition: 2,
+					items:5,
+					margin: 30,
+					stagePadding: 0,
+					mouseDrag: false,
+					nav: true,
+					//autoplay: true,
+					//autoplayHoverPause: true,
+					//autoplayTimeout: 7000,
+					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+					responsive:{
+						0:{
+							items: 1
+						},
+						600:{
+							items: 2
+						},
+						1000:{
+							items: 3
+						},
+						1600:{
+							items: 4
+						}
+					}
+				});
 				
-				//----- Start control the Animated Spinner that containes 5 items -----//
-				let i=2;
-
-				var radius = 200;
-				var fields = $('.itemDot');
-				var container = $('.dotCircle');
-				var width = container.width();
-				radius = width/2.5;
-				 
-				var height = container.height();
-				var angle = 0, step = (2*Math.PI) / fields.length;
-				fields.each(function() {
-					var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-					var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-
-					$(this).css({
-						left: x + 'px',
-						top: y + 'px'
-					});
-					
-					angle += step;
-				});
-		
-				$('.itemDot').click(function(){
-					var dataTab = $(this).data("tab");
-					$('.itemDot').removeClass('active');
-					$(this).addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+ dataTab).addClass('active');
-					i = dataTab;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-1)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-1)*36)+"deg)",
-						"transition":"1s"
-					});
-				});
-		
-				setInterval (function() { // Function that auto executes every 5 seconds to enable auto spin
-					var dataTab = $('.itemDot.active').data("tab");
-					
-					if (dataTab>5 || i>5) {
-						dataTab=1;
-						i=1;
-					};
-					
-					$('.itemDot').removeClass('active');
-					$('[data-tab="'+i+'"]').addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+i).addClass('active');
-					i++;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-2)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-2)*36)+"deg)",
-						"transition":"1s"
-					});
-				}, 5000); 
-				//----- End control the Animated Spinner that containes 5 items -----//
+				
 			});
 		</script>
 	</body>

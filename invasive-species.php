@@ -353,8 +353,10 @@
 						//----- Start initiate owl carousel -----//
 						$('.carousel-species').owlCarousel({
 							center: true,
-							loop: true,
-							items:1,
+							loop: false,
+							rewind: true,
+							startPosition: 2,
+							items:5,
 							margin: 30,
 							stagePadding: 0,
 							mouseDrag: false,
