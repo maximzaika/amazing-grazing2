@@ -1,5 +1,8 @@
 <?php  /* This file executes the offerings on the main page. */
-	    function generateOfferings($con) {
+	    
+		/* This is original code. It is outdated but kept here just in case it is needed.
+		
+		function generateOfferings($con) {
 			$get_Ofr = "SELECT ofr_id, ofr_icon, ofr_title, ofr_descr, ofr_url FROM index_offerings";
 			$ofr_Data = $con -> query($get_Ofr);
 			
@@ -30,7 +33,7 @@
 			}
 			
 			return $ofrContent;
-		}
+		}*/
 		
 		function generateOfferings2($con) {
 			$get_Ofr = "SELECT ofr_id, ofr_icon, ofr_title, ofr_descr, ofr_url FROM index_offerings";

@@ -43,29 +43,6 @@
 		<!-- Navigation Bar -->
 		<?php echo htmlspecialchars_decode(generateNavTabs($con, 'Statistics', 'livestock-statistics.php'));?>
 		<!-- End Navigation Bar -->
-
-		<!-- Start: Modal pops up when user clicks "Display Graph" -->
-		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Graph</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				  <span aria-hidden="true">&times;</span>
-				</button>
-			  </div>
-			  <div class="modal-body" style="z-index: 1000;">
-				<div id="tableau-chart2" class="container" style="padding-left: 0px; padding-right: 0px;">
-					<!--Graph content goes here. It gets updated based on user selection choice -->
-				</div>
-			  </div>
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<!-- End: Modal pops up when user clicks "Display Graph" -->
 		
 		<!-- Section 1: Page header - Livestock Statistics -->
 		<section class="hero-wrap hero-wrap-2" style="background-image: url('images/livestock-statistics.jpg');" data-stellar-background-ratio="0.5">
@@ -116,51 +93,53 @@
 			</div>
 		</section>
 		
-		
 		<!-- Section 3: DOMINANT LIFESTOCK IS DRASTICALLY REDUCING -->
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-livestock" style="z-index:2;">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate" style="z-index:2;">
 			<!-- Title and subheading of this section -->
 			<div class="container" style="padding-top: 4em;">
 				<div class="row justify-content-center">
 					<div class="col-md-12 text-center heading-section">
-						<h2>CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE</h2>
-						<span class="mb-4 subheading">View the graph and analysis based on livestock and year selected</span>
+						<h2>DOMINANT LIFESTOCK IS DRASTICALLY REDUCING</h2>
+						<span class="mb-4 subheading">Lack of livestock will degrade the soil quality and lead to reduced quantities of food and material</span>
 					</div>
 				</div>
 			</div>
 			<!-- End Title and subheading of this section -->
 			
-			<div class="container">
-				<div class="row">
-					   <div class="col-xxs-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2 col-xxxl-2 order-xxs-2 order-md-1 order-lg-1">
-							<ul id="sort-livestock-flters">
-								<li id="hide-graph" type="button" class="btn-amazing-livestock-off" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-line-chart"></i> Display graph</li>
-							</ul>
-					   </div>
-					   
-					   <div class="col-xxs-12 col-md-7 col-lg-8 col-xl-7 col-xxl-8 col-xxxl-8 order-xxs-1 order-md-2 order-lg-2 d-flex justify-content-center">
-							<ul id="sort-livestock-flters">
-								<li id="livestock_beef" class="btn-amazing-livestock-on update-livestock">Beef cattle</li>
-								<li id="livestock_dairy" class="btn-amazing-livestock-on update-livestock">Dairy cattle</li>
-								<li id="livestock_sheep" class="btn-amazing-livestock-on update-livestock">Sheep</li>
-								<li id="livestock_total" class="btn-amazing-livestock-off update-livestock">Total</li>
-								
-								<li id="drop-year" data-filter=".filter-total" class="dropdown dropdown-toggle" style="color: white; background-color: #4e9525" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</li>
-								<div class="text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
-									<a id="y_2030" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2030</a>
-									<a id="y_2040" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2040</a>
-									<a id="y_2050" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2050</a>
-									<a id="y_2060" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2060</a>
-								</div>
-							</ul>
-					  </div>
+			<!-- Filter and year selection buttons and graph content -->
+			<div class="container">		
+				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
+					<div class="row">
+						<!-- Livestock filter & year section -->
+						<div class="col-md-3">
+							<?php echo htmlspecialchars_decode($live_control);?>
+						</div>
+						<!-- End Livestock filter & year section -->
+						
+						<!-- Graph Section -->
+						<div class="col-md-9">
+							<h5><i class="fa fa-line-chart" aria-hidden="true"></i> Prediction graph</h5>
+							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px;"> <!-- added -->
+								<!-- Graph is updated by the javascript -->
+							</div>
+							<div id="reference">
+								<h5 class="text-center">Source: <i><u><b><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">ABARES, Agricultural Commodity Statistics 2017</a></b></u></i></h5>
+							</div>
+						</div>
+						<!-- End Graph Section -->
+					</div>
 				</div>
 			</div>
+			<!-- End Filter and year selection buttons and graph content -->
 			
 			<!-- Card section -->
-			<div class="container" style="padding-bottom: 3em;">
-				<div id="prediction-data" class="carousel-services owl-carousel ftco-owl pt-md-3"> 
-					<!-- this part gets replaced by the javascript to update the year-->
+			<div class="container" style="padding-bottom: 4em;">
+				<div class="row">
+					<div class="col-lg-12 services-wrap">
+						<div id="prediction-data" class="row pt-md-3"> 
+							<!-- this part gets replaced by the javascript to update the year-->
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- End Card section -->
@@ -206,7 +185,7 @@
 					</div>
 				</div>
 				
-				<div id="update-notification">Graph & page content are updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
+				<div id="update-notification">Entire page content is being updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
 				<div id="update-notification-bad">At least one graph must be selected.</div> <!-- show error when user tries to select <1 graph -->
 			</div>
 		</footer>
@@ -346,215 +325,19 @@
 			
 			function removeHeight(cardID) {
 				if (countClick == 0) {
-					maximumHeight = ($('#'+cardID).css('height').substr(0,3)); // get the original height
-					console.log(maximumHeight);
+					maximumHeight = ($('#'+cardID).height()); // get the original height
 					countClick++;
 				}
 				
 				if (clickedCard.includes(cardID)) { // need to hide it by including the original height
-					setTimeout(function() { // delay the exucution to let the animation to go through
-						$('#'+cardID).css('height',maximumHeight); // set original height back
-					}, 200);
-					
+					$('#'+cardID).find("div").eq(0).css('height',maximumHeight); // set original height back
 					const index = clickedCard.indexOf(cardID); // get index of the card in array
 					clickedCard.splice(index, 1); // remove the card from the array
 				} else { //remove the original height
-					$('#'+cardID).css('height',''); // remove the original height
+					$('#'+cardID).find("div").eq(0).css('height',''); // remove the original height
 					clickedCard.push(cardID); // add to currently open card list
 				};
 			};
-		</script>
-		
-		<script type='text/javascript'> // Receive the graph selected by the user
-			function specialToHTML(str) {
-				return str.replaceAll("&#47;", "/");
-			}
-			
-			$("#hide-graph").click(function() {
-				$("#tableau-chart2").empty();
-				
-				var class_on  = 'btn-amazing-livestock-on';
-				var checkActive = [];
-				var buttons = ['#livestock_beef', '#livestock_dairy', '#livestock_sheep', '#livestock_total'];
-				
-				for (i = 0; i < 4; i++) {
-					checkActive.push($(buttons[i]).hasClass(class_on));
-				}
-				
-				/* Explanation of check_active
-				
-				false false false false
-				 - shows error preventing the user from deselecting all the graphs
-
-				(beef) (dairy) (sheep) (total)
-				true   false   false    false
-				false  true    false    false
-				false  false   true     false
-				true   false   true     false
-				true   true    false    false
-				false  true    true     false
-				
-				true   true    true     false 
-				
-				false  false   false    true
-				 - No other options allowed together with total
-				*/
-				
-				check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
-				console.log('currently active >' + check_active);
-				
-				var yearContent = document.getElementById("drop-year").textContent;
-				console.log('year active > ' + yearContent);
-				
-				$.ajax({ // receive the gallery content from the database
-					type: "POST",
-					dataType: 'json',
-					url: 'php/livestock-graph.php',
-					data: {activeYear: yearContent,
-					       activeLivestock: check_active},
-					success: function(data) {
-						var div_id = data.div_id;
-						var img_src = data.img_src;
-						var o_name_val = data.o_name_val;
-						var o_static_url = data.o_static_url;
-						var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-						
-						// add div
-						var div = document.createElement('div');
-						div.classList.add('tableauPlaceholder');
-						div.setAttribute('id', div_id);
-						div.setAttribute('style', 'position: relative; width:100%;');
-						
-						// add noscript
-						var noscript = document.createElement('noscript');
-						div.appendChild(noscript); // add to element
-						
-							// add a href
-							var noscript_a = document.createElement('a');
-							noscript_a.setAttribute('href', '#');
-							noscript.appendChild(noscript_a);
-						
-								// add img
-								var noscript_img = document.createElement('img');
-								noscript_img.setAttribute('alt', ' ');
-								noscript_img.setAttribute('src', specialToHTML(img_src));
-								noscript_img.setAttribute('style', 'border: none');
-								noscript_a.appendChild(noscript_img);
-						
-						// add object
-						var table_object = document.createElement('object');
-						table_object.classList.add('tableauViz');
-						table_object.setAttribute('style', 'display:none;');
-						div.appendChild(table_object);
-						
-							// add params - host_url
-							var o_host_url = document.createElement('param');
-							o_host_url.setAttribute('name', 'host_url');
-							o_host_url.setAttribute('value', o_h_url);
-							table_object.appendChild(o_host_url);
-							
-							// add params - embed_code_version
-							var o_embed_code_version = document.createElement('param');
-							o_embed_code_version.setAttribute('name', 'embed_code_version');
-							o_embed_code_version.setAttribute('value', '3');
-							table_object.appendChild(o_embed_code_version);
-							
-							// add params - site_root
-							var o_site_root = document.createElement('param');
-							o_site_root.setAttribute('name', 'site_root');
-							o_site_root.setAttribute('value', '');
-							table_object.appendChild(o_site_root);
-							
-							// add params - name
-							var o_name = document.createElement('param');
-							o_name.setAttribute('name', 'name');
-							o_name.setAttribute('value', specialToHTML(o_name_val));
-							table_object.appendChild(o_name);
-							
-							// add params - tabs
-							var o_tabs = document.createElement('param');
-							o_tabs.setAttribute('name', 'tabs');
-							o_tabs.setAttribute('value', 'no');
-							table_object.appendChild(o_tabs);
-							
-							// add params - toolbar
-							var o_toolbar = document.createElement('param');
-							o_toolbar.setAttribute('name', 'toolbar');
-							o_toolbar.setAttribute('value', 'yes');
-							table_object.appendChild(o_toolbar);
-							
-							// add params - static_image
-							var o_static_image = document.createElement('param');
-							
-							o_static_image.setAttribute('name', 'static_image');
-							o_static_image.setAttribute('value', specialToHTML(o_static_url));
-							table_object.appendChild(o_static_image);
-							
-							// add params - animate_transition
-							var o_animate_transition = document.createElement('param');
-							o_animate_transition.setAttribute('name', 'animate_transition');
-							o_animate_transition.setAttribute('value', 'yes');
-							table_object.appendChild(o_animate_transition);
-							
-							// add params - display_static_image
-							var o_display_static_image = document.createElement('param');
-							o_display_static_image.setAttribute('name', 'display_static_image');
-							o_display_static_image.setAttribute('value', 'yes');
-							table_object.appendChild(o_display_static_image);
-							
-							// add params - display_spinner
-							var o_display_spinner = document.createElement('param');
-							o_display_spinner.setAttribute('name', 'display_spinner');
-							o_display_spinner.setAttribute('value', 'yes');
-							table_object.appendChild(o_display_spinner);
-							
-							// add params - display_overlay
-							var o_display_overlay = document.createElement('param');
-							o_display_overlay.setAttribute('name', 'display_overlay');
-							o_display_overlay.setAttribute('value', 'yes');
-							table_object.appendChild(o_display_overlay);
-							
-							// add params - display_count
-							var o_display_count = document.createElement('param');
-							o_display_count.setAttribute('name', 'display_count');
-							o_display_count.setAttribute('value', 'yes');
-							table_object.appendChild(o_display_count);
-							
-							// add params - language
-							var o_language = document.createElement('param');
-							o_language.setAttribute('name', 'language');
-							o_language.setAttribute('value', 'en');
-							table_object.appendChild(o_language);
-							
-							// add params - filter
-							var o_filter = document.createElement('param');
-							o_filter.setAttribute('name', 'filter');
-							o_filter.setAttribute('value', 'publish=yes');
-							table_object.appendChild(o_filter);
-						
-						document.getElementById("tableau-chart2").appendChild(div); // add to the webpage
-						
-						//----- Start create the source link from the database -----//
-						var create_Source = document.createElement('h5');
-						create_Source.classList.add('text-center');
-						var full_source = "Source: <i><u><b><a href='https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details'>ABARES, Agricultural Commodity Statistics 2017</a></b></u></i>";
-						create_Source.innerHTML = full_source;
-						document.getElementById("tableau-chart2").appendChild(create_Source); // add graph to the modal
-						//----- End create the source link from the database -----//
-						
-						var divElement = document.getElementById(div_id);                    
-						var vizElement = divElement.getElementsByTagName('object')[0]; 
-						vizElement.style.width='100%';
-						vizElement.style.height=(500)+'px';		
-						var scriptElement = document.createElement('script');      
-						scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
-						vizElement.parentNode.insertBefore(scriptElement, vizElement);
-					}, 
-					error: (error) => { // receive error from the server if any error with receiving php content
-						console.log(JSON.stringify(error));
-					}
-				});
-			});
 		</script>
 		
 		<!-- Added in Iteration 3 -->

@@ -81,48 +81,4 @@
 		}
 		
 		$live_intro = $live_intro . '</div></div></div>';
-		
-		/* ------------- 3) Controls ------------- */		
-		$get_live_control = "SELECT livestock_control_type, livestock_control_type_ext, livestock_control_name FROM livestock_control";
-		$live_control_data = $con -> query($get_live_control);
-		
-		$live_control_livestock = "";
-		$live_control_year = "";
-		
-		if ($live_control_data->num_rows > 0) {
-			while($row = $live_control_data->fetch_assoc()) {
-				$livestock_control_type = $row['livestock_control_type'];
-				$livestock_control_type_ext = $row['livestock_control_type_ext'];
-				$livestock_control_name = $row['livestock_control_name'];
-				
-				if ($livestock_control_type == "livestock_") { // livestock control
-					$live_control_livestock = $live_control_livestock . '<div class="col-xs-12 col-md-12" style="padding-bottom: 5px; padding-top: 5px;">';
-					
-					if ($livestock_control_type_ext != 'total') { // other livestocks are enabled by default so need to make it 'on'
-						$live_control_livestock = $live_control_livestock . '<button id="'.$livestock_control_type.$livestock_control_type_ext.'" type="button" class="w-100 btn btn-topic btn-amazing-livestock-on update-livestock">'.$livestock_control_name.'</button>';
-					} else { // total is disabled so need to make it 'off'
-						$live_control_livestock = $live_control_livestock . '<button id="'.$livestock_control_type.$livestock_control_type_ext.'" type="button" class="w-100 btn btn-topic btn-amazing-livestock-off update-livestock">'.$livestock_control_name.'</button>';
-					}
-					
-					$live_control_livestock = $live_control_livestock . '</div>';
-				} else { // year control
-					$live_control_year = $live_control_year . '<a id="'.$livestock_control_type.$livestock_control_type_ext.'" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">'.$livestock_control_name.'</a>';
-				}
-			}
-		}
-		
-		$live_control = '<h5><i class="fa fa-filter" aria-hidden="true"></i> Filter page by livestock</h5>'.
-						'<button id="show-filter" class="w-100 btn btn-topic btn-amazing-livestock-on hidden d-md-none" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus" aria-hidden="true"></i> Open filter</button>'.
-						'<div class="collapse dont-collapse-sm" id="collapseExample">'.
-							'<div class="row mb-3">'.
-								$live_control_livestock.
-							'</div>'.
-						'</div>'.
-						'<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select year to predict</h5>'.
-						'<div class="dropdown" >'.
-							'<button id="drop-year" class="w-100 btn btn-topic btn-amazing-grazing dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</button>'.
-							'<div class="w-100 text-center dropdown-menu" aria-labelledby="dropdownMenuButton">'.
-								$live_control_year.
-							'</div>'.
-						'</div>';
 ?>
