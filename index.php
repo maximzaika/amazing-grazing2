@@ -192,12 +192,10 @@
 				//----- Start: Initiate resizing the service containers to make sure the size of these containers is the same -----
 				var maxHeight = -1
 				
-				console.log($('.p_'));
 				$('.p_').each(function() { // get the max height out of all plants containers
 					maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 				});
 				
-				console.log(maxHeight);
 				//maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
 				
 				$('.p_').each(function() { // change the height of all plants containers to max
