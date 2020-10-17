@@ -38,428 +38,6 @@ $(function(){
 		return str.replaceAll("&#47;", "/");
 	}
 	
-	/* Kind of redundant use of this function because it is partially a copy of selectLivestock()
-	   function from livestock-picker.js; Originall plan was not make it work this way, but it
-	   had to be done and due to time constraint, there is no time to rework another function.
-	   This way is literally 5 min compared to another long way.
-	   Returns: triggers graph when year is selected */
-	function triggerGraph(check_active) {
-		$("#tableau-chart").empty(); // remove active chart
-		
-		var yearContent = document.getElementById("drop-year").textContent; // Currently active year
-		
-		if (check_active == "true false false false") { // beef cattle - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912357011';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2016&#47;BeefCattleNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599895069661';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599898084840';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903442274';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906080745';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1.png';
-			}
-		} else if (check_active == "false true false false") { // dairy cattle - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912454818';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2016&#47;DairyCattleNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599895311682';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599898453024';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903542905';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906250101';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1.png';
-			}
-			
-		} else if (check_active == "false false true false") { // sheep - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912662152';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'sheep1973-2016&#47;SheepNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2016&#47;SheepNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599895574623';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'sheep1973-2030&#47;SheepNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599898757146';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'sheep1973-2040&#47;SheepNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903601515';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906317523';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'sheep1973-2060&#47;SheepNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1.png';
-			}
-		} else if (check_active == "true false true false") { // beef cattle & sheep - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912689002';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2016&#47;BeefCattleandSheepNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599896086683';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599899316416';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903797750';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906486538';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1.png';
-			}
-		} else if (check_active == "true true false false") { // beef & dairy cattle - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912787502';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2016&#47;BeefandDairyCattleNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599896367479';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599899424475';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903878806';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906558615';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1.png';
-			}
-		} else if (check_active == "false true true false") { // dairy cattle & sheep - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912840034';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2016&#47;DairyCattleandSheepNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599896654921';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599899518417';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903962332';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906664057';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1.png';
-			}
-		} else if (check_active == "false false false true") { // total numbers - working					
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912676914';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2016&#47;TotalLivestockNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599895762335';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599898921840';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599903730048';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906379873';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1.png';
-			}
-		} else { // true true true false - beef & dairy cattle, & sheep - working
-			if (yearContent == '2016') {
-				var div_id = 'viz1599912890804';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;li&#47;livestock1973-2016&#47;LivestockNumbersfrom1973to2016&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = 'livestock1973-2016&#47;LivestockNumbersfrom1973to2016';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;li&#47;livestock1973-2016&#47;LivestockNumbersfrom1973to2016&#47;1.png';
-			} else if (yearContent == '2020') {
-				
-			} else if (yearContent == '2030') {
-				var div_id = 'viz1599896886527';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2030&#47;LivestockNumbersfrom1973to2030&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = '3livestock1973-2030&#47;LivestockNumbersfrom1973to2030';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2030&#47;LivestockNumbersfrom1973to2030&#47;1.png';
-			} else if (yearContent == '2040') {
-				var div_id = 'viz1599899633958';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = '3livestock1973-2040&#47;LivestockNumbersfrom1973to2040';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1.png';
-			} else if (yearContent == '2050') {
-				var div_id = 'viz1599904032692';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = '3livestock1973-2050&#47;LivestockNumbersfrom1973to2050';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1.png';
-			} else { // 2060
-				var div_id = 'viz1599906762820';
-				var img_src = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1_rss.png';
-				var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
-				var o_name_val = '3livestock1973-2060&#47;LivestockNumbersfrom1973to2060';
-				var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1.png';
-			}
-		}
-	
-	
-		/* Add custom graph to the webpage based on user selection */
-		// add div
-		var div = document.createElement('div');
-		div.classList.add('tableauPlaceholder');
-		div.setAttribute('id', div_id);
-		div.setAttribute('style', 'position: relative; width:100%;');
-		
-		// add noscript
-		var noscript = document.createElement('noscript');
-		div.appendChild(noscript); // add to element
-		
-			// add a href
-			var noscript_a = document.createElement('a');
-			noscript_a.setAttribute('href', '#');
-			noscript.appendChild(noscript_a);
-		
-				// add img
-				var noscript_img = document.createElement('img');
-				noscript_img.setAttribute('alt', ' ');
-				noscript_img.setAttribute('src', specialToHTML(img_src));
-				noscript_img.setAttribute('style', 'border: none');
-				noscript_a.appendChild(noscript_img);
-		
-		// add object
-		var table_object = document.createElement('object');
-		table_object.classList.add('tableauViz');
-		table_object.setAttribute('style', 'display:none;');
-		div.appendChild(table_object);
-		
-			// add params - host_url
-			var o_host_url = document.createElement('param');
-			o_host_url.setAttribute('name', 'host_url');
-			o_host_url.setAttribute('value', o_h_url);
-			table_object.appendChild(o_host_url);
-			
-			// add params - embed_code_version
-			var o_embed_code_version = document.createElement('param');
-			o_embed_code_version.setAttribute('name', 'embed_code_version');
-			o_embed_code_version.setAttribute('value', '3');
-			table_object.appendChild(o_embed_code_version);
-			
-			// add params - site_root
-			var o_site_root = document.createElement('param');
-			o_site_root.setAttribute('name', 'site_root');
-			o_site_root.setAttribute('value', '');
-			table_object.appendChild(o_site_root);
-			
-			// add params - name
-			var o_name = document.createElement('param');
-			o_name.setAttribute('name', 'name');
-			o_name.setAttribute('value', specialToHTML(o_name_val));
-			table_object.appendChild(o_name);
-			
-			// add params - tabs
-			var o_tabs = document.createElement('param');
-			o_tabs.setAttribute('name', 'tabs');
-			o_tabs.setAttribute('value', 'no');
-			table_object.appendChild(o_tabs);
-			
-			// add params - toolbar
-			var o_toolbar = document.createElement('param');
-			o_toolbar.setAttribute('name', 'toolbar');
-			o_toolbar.setAttribute('value', 'yes');
-			table_object.appendChild(o_toolbar);
-			
-			// add params - static_image
-			var o_static_image = document.createElement('param');
-			
-			o_static_image.setAttribute('name', 'static_image');
-			o_static_image.setAttribute('value', specialToHTML(o_static_url));
-			table_object.appendChild(o_static_image);
-			
-			// add params - animate_transition
-			var o_animate_transition = document.createElement('param');
-			o_animate_transition.setAttribute('name', 'animate_transition');
-			o_animate_transition.setAttribute('value', 'yes');
-			table_object.appendChild(o_animate_transition);
-			
-			// add params - display_static_image
-			var o_display_static_image = document.createElement('param');
-			o_display_static_image.setAttribute('name', 'display_static_image');
-			o_display_static_image.setAttribute('value', 'yes');
-			table_object.appendChild(o_display_static_image);
-			
-			// add params - display_spinner
-			var o_display_spinner = document.createElement('param');
-			o_display_spinner.setAttribute('name', 'display_spinner');
-			o_display_spinner.setAttribute('value', 'yes');
-			table_object.appendChild(o_display_spinner);
-			
-			// add params - display_overlay
-			var o_display_overlay = document.createElement('param');
-			o_display_overlay.setAttribute('name', 'display_overlay');
-			o_display_overlay.setAttribute('value', 'yes');
-			table_object.appendChild(o_display_overlay);
-			
-			// add params - display_count
-			var o_display_count = document.createElement('param');
-			o_display_count.setAttribute('name', 'display_count');
-			o_display_count.setAttribute('value', 'yes');
-			table_object.appendChild(o_display_count);
-			
-			// add params - language
-			var o_language = document.createElement('param');
-			o_language.setAttribute('name', 'language');
-			o_language.setAttribute('value', 'en');
-			table_object.appendChild(o_language);
-			
-			// add params - filter
-			var o_filter = document.createElement('param');
-			o_filter.setAttribute('name', 'filter');
-			o_filter.setAttribute('value', 'publish=yes');
-			table_object.appendChild(o_filter);
-		
-		document.getElementById("tableau-chart").appendChild(div); // add to the webpage
-		
-		/* Trigger the year modification */ 
-		var divElement = document.getElementById(div_id);                    
-		var vizElement = divElement.getElementsByTagName('object')[0]; 
-		
-		if (divElement.offsetWidth > 700) {
-			vizElement.style.width='100%';
-			vizElement.style.height=(500*0.75)+'px';
-		} else if (divElement.offsetWidth > 320) {
-			vizElement.style.width='100%';
-			vizElement.style.height=(500)+'px';
-		} else {
-			vizElement.style.width='100%';
-			vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-		}
-					
-		var scriptElement = document.createElement('script');      
-		scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';   
-		vizElement.parentNode.insertBefore(scriptElement, vizElement);
-	}
-	
 	/* This function decides what content needs to be sent to the client */
 	function contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText, URL){
 		icon_same = "fa-dot-circle-o";
@@ -505,38 +83,39 @@ $(function(){
 		var openModal = randomVal+'_modal';
 		/* Added modal to expand the text */
 		
-		
-		var content = '<div id="card-height-'+randomVal+'" style="padding-bottom:40px;" class="card-height col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+ //col-xs-12 col-sm-12 col-md-6
-							'<div class="services text-center card-height-replace" style="padding-bottom: 10px;">'+
-								'<div class="icon justify-content-center align-items-center">'+
-									'<span class="'+icon+'"></span>'+
-								'</div>'+
-								
-								'<div class="text" style="padding-bottom:60px;">'+
-									'<h4><b>'+title+'</b></h4>'+
-									'<hr>'+
-									'<div class="container">'+
-										'<div class="row">'+
-											'<div class="col-sm-12 col-md-6">'+
-												'<h4><b>2020</b></h4>'+
-												'<h5><i class="fa '+icon_same+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(curVal, title)[0] +'</span>'+readNumber(curVal, title)[1]+'</h5>'+
-											'</div>'+
-											'<div class="col-sm-12 col-md-6">'+
-												'<h4><b>' + year + '</b></h4>'+
-												'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal, title)[0] +'</span>'+readNumber(remainVal, title)[1]+'</h5>'+
+		var content = //'<div id="card-height-'+randomVal+'" style="padding-bottom:40px;" class="card-height col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+
+						'<div class="item d-flex align-items-stretch">'+
+							'<div class="wrap">'+
+								'<div id="card-height-'+randomVal+'" class="bg-light services card-height text-center card-height-replace" style="padding-bottom: 10px;">'+
+									'<div class="icon justify-content-center align-items-center">'+
+										'<span class="'+icon+'"></span>'+
+									'</div>'+
+									
+									'<div class="text" style="padding-bottom:60px;">'+
+										'<h4><b>'+title+'</b></h4>'+
+										'<hr>'+
+										'<div class="container">'+
+											'<div class="row">'+
+												'<div class="col-sm-12 col-md-6">'+
+													'<h4><b>2020</b></h4>'+
+													'<h5><i class="fa '+icon_same+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(curVal, title)[0] +'</span>'+readNumber(curVal, title)[1]+'</h5>'+
+												'</div>'+
+												'<div class="col-sm-12 col-md-6">'+
+													'<h4><b>' + year + '</b></h4>'+
+													'<h5><i class="fa '+selectIcon+'" aria-hidden="true"></i>&nbsp<span data-toggle="counter-up">'+ readNumber(remainVal, title)[0] +'</span>'+readNumber(remainVal, title)[1]+'</h5>'+
+												'</div>'+
+												
 											'</div>'+
 											
+											
 										'</div>'+
-										
-										
-									'</div>'+
-									'<hr>'+
-									'<h5 class="text-center">'+changeText+'</h5>'+
-									'<hr>'+
-									'<div class="container">'+
-										
-										'<div class="row">'+		
-											'<ul style="margin-bottom:0px;">'; 	
+										'<hr>'+
+										'<h5 class="text-center">'+changeText+'</h5>'+
+										'<hr>'+
+										'<div class="container">'+
+											
+											'<div class="row">'+		
+												'<ul style="margin-bottom:0px;">'; 	
 		
 		randomArray = [];
 		for (i=0;i<modalTitle.length;i++) {
@@ -594,15 +173,18 @@ $(function(){
 								'</div>'+
 								'<span onclick="removeHeight('+"'card-height-"+randomVal+"'"+')" id="'+randomVal+'-animal" class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'+randomVal+'" aria-expanded="false" aria-controls="'+randomVal+'"><span><i class="fa fa-plus" aria-hidden="true"></i> View suggestions</span></span>'+
 							'</div>'+
-						'</div>';
+						'</div>'+
+					'</div>';
+						//'</div>';
 		
 		return content;
 	}
 	
+	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
+	var owl = $('.carousel-services');
 	/* This function 1) changes the value of the year selection button, 
-	                 2) retrieves the right data from the database 
-					 3) calculates facts based on the formulas
-					 4) decides what cards to show based on the filter selection */
+					 2) calculates facts based on the formulas
+					 3) decides what cards to show based on the filter selection */
 	var yearSelection = function() {
 		var year_id = $(this).attr("id");
 		var prefix_id = year_id.substr(0,2); // get the y_ prefix
@@ -624,8 +206,17 @@ $(function(){
 			
 			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
 
-			$('#prediction-data').addClass('animated fadeOutRight');  // add fade out animation class
-			$('#prediction-data').removeClass('animated fadeOutRight');  // remove fade out animation class
+			$('#prediction-data').addClass('animated fadeOutDown');  // add fade out animation class
+			setTimeout(function() { // delay the executing of the fade effects just to give them time to execute
+				$('#prediction-data').removeClass('animated fadeOutDown');  // remove fade out animation class
+				$('#prediction-data').addClass('animated fadeInDown');  // add fade out animation class
+			}, 500);
+
+			if (executeCarousel == 1) {	//execute carousel after updating the fulters
+				owl.data('owl.carousel').destroy(); 
+				console.log('attempt to destroy owl');
+			}
+			
 			$("#prediction-data").empty(); // clear the div container
 			
 			$.ajax({
@@ -682,14 +273,13 @@ $(function(){
 					var icons = ['flaticon-livestock', 'flaticon-milk', 'flaticon-meat', 'flaticon-sheep', 'flaticon-region', 'flaticon-sheep-1', 'flaticon-wool'];
 					var title = ['Beef cattle QTY in', 'Dairy cattle QTY in', 'Sheep QTY in', 'Milk produced in', 'Beef produced in', 'Land used in', 'Wool produced in', 'Yarn produced in', 'Livestock QTY in'];
 					
-					var patch_burn = "patch-burn.php";
-					var rotational = "rotational.php";
-					var seasonal = "seasonal.php";
+					var patch_burn = "techniques.php";
+					var rotational = "techniques.php";
+					var seasonal = "techniques.php";
 					var techniques = "techniques.php"
 					
 					/* HTML content */				 
 					if (check_active == "true false false false") {
-						triggerGraph(check_active);
 						var latestYr = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_beef_qty * 1000000; // selected livestock number - qty
 						
@@ -704,7 +294,6 @@ $(function(){
 						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
 					} else if (check_active == "false true false false") {
-						triggerGraph(check_active);
 						var latestYr = current_dairy_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_dairy_qty * 1000000; // selected livestock number - qty
 						
@@ -719,7 +308,6 @@ $(function(){
 						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
 					} else if (check_active == "false false true false") {
-						triggerGraph(check_active);
 						var latestYr = current_sheep_qty * 1000000; //current year sheep - qty
 						var selYr = selected_sheep_qty * 1000000; //selected year sheep - qty
 						
@@ -738,7 +326,6 @@ $(function(){
 						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
 					} else if (check_active == "true false true false") {
-						triggerGraph(check_active);
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
 						
@@ -767,7 +354,6 @@ $(function(){
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 					} else if (check_active == "true true false false") {
-						triggerGraph(check_active);
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
 						
@@ -792,7 +378,6 @@ $(function(){
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
 					} else if (check_active == "false true true false") { 
-						triggerGraph(check_active);
 						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
 						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
 						
@@ -821,7 +406,6 @@ $(function(){
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 					} else if (check_active == "false false false true") {
-						triggerGraph(check_active);
 						var latestYr = current_total_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_total_qty * 1000000; // selected livestock number - qty
 						
@@ -860,7 +444,6 @@ $(function(){
 																				yarnProduction + totalLAndUse;
 						
 					} else { // true true true false
-						triggerGraph(check_active);
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
 						
@@ -905,6 +488,36 @@ $(function(){
 						time: 500
 					});
 					
+					owl.owlCarousel({
+						center: true,
+						loop: true,
+						items:1,
+						margin: 30,
+						stagePadding: 0,
+						mouseDrag: false,
+						nav: true,
+						//autoplay: true,
+						//autoplayHoverPause: true,
+						//autoplayTimeout: 5000,
+						navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+						responsive:{
+							0:{
+								items: 1
+							},
+							600:{
+								items: 2
+							},
+							1000:{
+								items: 3
+							},
+							1600:{
+								items: 4
+							}
+						}
+					});
+
+					executeCarousel = 1; // enable executing of more than 2 carousels after selecting filters
+
 					/* control the height of the cards 
 					   make the same height when the container is not expanded */
 					var maxHeight = 0;

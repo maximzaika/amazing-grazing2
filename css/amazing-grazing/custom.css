@@ -880,10 +880,17 @@ img.techn-img{
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #444444;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
   border-radius: 40px;
+}
+
+.btn-amazing-livestock-on {
+  color: white;
+}
+
+.btn-amazing-livestock-off {
+  color: black;
 }
 
 .sort-livestock #sort-livestock-flters li:hover, .sort-livestock #sort-livestock-flters li.filter-active {

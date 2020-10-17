@@ -49,7 +49,7 @@
 		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
 			<div class="modal-content">
 			  <div class="modal-header">
-				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Modal title</h5>
+				<h5 id="modal-title-id" class="modal-title font-weight-bold" id="exampleModalLongTitle">Graph</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				  <span aria-hidden="true">&times;</span>
 				</button>
@@ -132,19 +132,20 @@
 			
 			<div class="container">
 				<div class="row">
-					   <div class="col-xxs-12 order-xxs-2 order-md-1 col-md-4 col-lg-3 col-xl-3 order-lg-1">
+					   <div class="col-xxs-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2 col-xxxl-2 order-xxs-2 order-md-1 order-lg-1">
 							<ul id="sort-livestock-flters">
-								<li id="hide-graph" type="button" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-line-chart"></i> Display graph</li>
+								<li id="hide-graph" type="button" class="btn-amazing-livestock-off" data-toggle="modal" data-target="#exampleModalLong"><i class="fa fa-line-chart"></i> Display graph</li>
 							</ul>
 					   </div>
-					   <div class="col-xxs-12 order-xxs-1 order-md-2 col-md-7 col-lg-8 col-xl-7 order-lg-2 d-flex justify-content-center">
+					   
+					   <div class="col-xxs-12 col-md-7 col-lg-8 col-xl-7 col-xxl-8 col-xxxl-8 order-xxs-1 order-md-2 order-lg-2 d-flex justify-content-center">
 							<ul id="sort-livestock-flters">
-								<li id="livestock_beef" data-filter=".filter-beef" class="btn-amazing-livestock-on update-livestock">Beef cattle</li>
-								<li id="livestock_dairy" data-filter=".filter-dairy" class="btn-amazing-livestock-on update-livestock">Dairy cattle</li>
-								<li id="livestock_sheep" data-filter=".filter-sheep" class="btn-amazing-livestock-on update-livestock">Sheep</li>
-								<li id="livestock_total" data-filter=".filter-total" class="btn-amazing-livestock-off update-livestock">Total</li>
+								<li id="livestock_beef" class="btn-amazing-livestock-on update-livestock">Beef cattle</li>
+								<li id="livestock_dairy" class="btn-amazing-livestock-on update-livestock">Dairy cattle</li>
+								<li id="livestock_sheep" class="btn-amazing-livestock-on update-livestock">Sheep</li>
+								<li id="livestock_total" class="btn-amazing-livestock-off update-livestock">Total</li>
 								
-								<li id="drop-year" data-filter=".filter-total" class="dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</li>
+								<li id="drop-year" data-filter=".filter-total" class="dropdown dropdown-toggle" style="color: white; background-color: #4e9525" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">2030</li>
 								<div class="text-center dropdown-menu" aria-labelledby="dropdownMenuButton">
 									<a id="y_2030" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2030</a>
 									<a id="y_2040" class="dropdown-item lvstYearPrediction" style="cursor: pointer;">2040</a>
@@ -156,33 +157,10 @@
 				</div>
 			</div>
 			
-			<!-- Filter and year selection buttons and graph content -->
-			<div class="container">		
-				<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
-					<div class="row">
-						<!-- Graph Section -->
-						<div class="col-md-12">
-							<div id="tableau-chart" class="container" style="padding-left: 0px; padding-right: 0px; display: none;"> <!-- added -->
-								<!-- Graph is updated by the javascript -->
-							</div>
-							<div id="reference">
-								<h5 class="text-center" style="display: none;">Source: <i><u><b><a href="https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details">ABARES, Agricultural Commodity Statistics 2017</a></b></u></i></h5>
-							</div>
-						</div>
-						<!-- End Graph Section -->
-					</div>
-				</div>
-			</div>
-			<!-- End Filter and year selection buttons and graph content -->
-			
 			<!-- Card section -->
-			<div class="container" style="padding-bottom: 4em;">
-				<div class="row">
-					<div class="col-lg-12 services-wrap">
-						<div id="prediction-data" class="row pt-md-3"> 
-							<!-- this part gets replaced by the javascript to update the year-->
-						</div>
-					</div>
+			<div class="container" style="padding-bottom: 3em;">
+				<div id="prediction-data" class="carousel-services owl-carousel ftco-owl pt-md-3"> 
+					<!-- this part gets replaced by the javascript to update the year-->
 				</div>
 			</div>
 			<!-- End Card section -->
@@ -228,7 +206,7 @@
 					</div>
 				</div>
 				
-				<div id="update-notification">Entire page content is being updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
+				<div id="update-notification">Graph & page content are updated.</div> <!-- show a notification when user changes the filter/prediction to let them know of the update -->
 				<div id="update-notification-bad">At least one graph must be selected.</div> <!-- show error when user tries to select <1 graph -->
 			</div>
 		</footer>
@@ -368,16 +346,20 @@
 			
 			function removeHeight(cardID) {
 				if (countClick == 0) {
-					maximumHeight = ($('#'+cardID).height()); // get the original height
+					maximumHeight = ($('#'+cardID).css('height').substr(0,3)); // get the original height
+					console.log(maximumHeight);
 					countClick++;
 				}
 				
 				if (clickedCard.includes(cardID)) { // need to hide it by including the original height
-					$('#'+cardID).find("div").eq(0).css('height',maximumHeight); // set original height back
+					setTimeout(function() { // delay the exucution to let the animation to go through
+						$('#'+cardID).css('height',maximumHeight); // set original height back
+					}, 200);
+					
 					const index = clickedCard.indexOf(cardID); // get index of the card in array
 					clickedCard.splice(index, 1); // remove the card from the array
 				} else { //remove the original height
-					$('#'+cardID).find("div").eq(0).css('height',''); // remove the original height
+					$('#'+cardID).css('height',''); // remove the original height
 					clickedCard.push(cardID); // add to currently open card list
 				};
 			};
@@ -552,7 +534,14 @@
 						
 						document.getElementById("tableau-chart2").appendChild(div); // add to the webpage
 						
-						 
+						//----- Start create the source link from the database -----//
+						var create_Source = document.createElement('h5');
+						create_Source.classList.add('text-center');
+						var full_source = "Source: <i><u><b><a href='https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details'>ABARES, Agricultural Commodity Statistics 2017</a></b></u></i>";
+						create_Source.innerHTML = full_source;
+						document.getElementById("tableau-chart2").appendChild(create_Source); // add graph to the modal
+						//----- End create the source link from the database -----//
+						
 						var divElement = document.getElementById(div_id);                    
 						var vizElement = divElement.getElementsByTagName('object')[0]; 
 						vizElement.style.width='100%';

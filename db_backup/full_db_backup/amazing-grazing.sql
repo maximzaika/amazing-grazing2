@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2020 at 02:43 PM
+-- Generation Time: Oct 17, 2020 at 07:09 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -45,30 +45,6 @@ INSERT INTO `drought_landing` (`drought_landing_id`, `drought_landing_title`, `d
 (1, 'DROUGHT IMPACTS GRASSLANDS', 'Droughts are one of the main natural hazards, which reduce grassland productivity', 'Droughts cannot be prevented and accurately predicted, but the damage that it causes can be reduced. Drought directly affects <i><u><a href=\"livestock-statistics.php\">livestock numbers</a></u></i>.', 'fa-exclamation-small fa-exclamation', 'Restricts the geographical distribution of grassland species!'),
 (2, '', '', '', 'fa-exclamation-small fa-exclamation', 'Leads to local loss of production by impacting the employment!'),
 (3, '', '', '', 'fa-exclamation-small fa-exclamation', 'Increases the chances of wildfires and grassland habitat loss!');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `drought_spinner`
---
-
-CREATE TABLE `drought_spinner` (
-  `drought_spinner_id` int(11) NOT NULL,
-  `drought_spinner_icon` varchar(100) NOT NULL,
-  `drought_spinner_title` varchar(50) NOT NULL,
-  `drought_spinner_text` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `drought_spinner`
---
-
-INSERT INTO `drought_spinner` (`drought_spinner_id`, `drought_spinner_icon`, `drought_spinner_title`, `drought_spinner_text`) VALUES
-(1, 'flaticon-ecosystem', 'Ecosystem', 'Grassland ecosystem provides a huge number of ecological services and other economic products, it is essential for livestock and floral species to maintain balance condition.'),
-(2, 'flaticon-loss', 'Economy', 'The drought destroys crops, reduces livestock numbers, and other resources. It has managed to reduce national GDP by 0.75% between 2006 and 2009.'),
-(3, 'flaticon-climate-change', 'Climate', 'Climate change is likely to have drought conditions worse in the SW and SE Australia. It influences the fluxes of carbon, water, etc. within the grassland.'),
-(4, 'flaticon-rain', 'Rainfall', 'In southeast Australia, late autumn and early winter rainfall have declined by 15% from the 1970s. Also, Western Australia has experienced a 15% decrease in cool season rainfall.'),
-(5, 'flaticon-region', 'Regions', 'Queensland and New South Wales are experiencing severe drought nowadays. With drought declared for 57.6% of QLD and 16.4 percent of NSW.');
 
 -- --------------------------------------------------------
 
@@ -435,7 +411,7 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (1, 'beef cattle', 'Maintain balance between protecting grasslands and keeping your beef cattle numbers high.', '', ''),
 (2, 'beef cattle', 'Patch-burn grazing technique is advised to be used.', '', ''),
 (3, 'beef cattle', 'Burn grassland not only for the beef cattle. Grasslands require planned burning.', 'Burn grasslands and increase livestock', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-1.jpeg\" alt=\"Burn grasslands and increase livestock\"><h5 class=\"text-justify\">Conduct controlled dry season burning to stimulate fresh plant growth to restore calcium to the soil that builds up in the dry grasses. Some species of native plants need occasional fire to thrive, while blazes can also help remove invasive species.</h5><p></p><h5 class=\"text-justify\">Fire is important for grasslands’ existence. They prevent woody plants from spreading and enable the grass to re-grow, becoming thicker, more resilient and healthier. How do grasses survive these fires? They have developed extensive underground systems during the course of evolution, which allow them to burst back to life, stronger than ever before, fairly quickly after a fire.</h5>'),
-(4, 'beef cattle', 'Droughts and too much humid negatively affect grasslands and beef cattle.', 'Keep grasslands fresh', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-2.jpeg\" alt=\"Keep grasslands fresh\"><h5 class=\"text-justify\">All grasslands get a specific amount of yearly rainfall, depending on their exact location in the world. What you did not know is that if grasslands receive much less rain than ordinarily, it would become a desert, and if it got much more rain than usually, it would eventually turn into a forest. That is also the reason why grasslands are often located between deserts and forests – these nearby areas get less or more rain, and have thus developed into something else.</h5><p><p><h5>provide solution perhaps?</h5>'),
+(4, 'beef cattle', 'Droughts and too much humid negatively affect grasslands and beef cattle.', 'Keep grasslands fresh', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-2.jpeg\" alt=\"Keep grasslands fresh\"><h5 class=\"text-justify\">All grasslands get a specific amount of yearly rainfall, depending on their exact location in the world. What you did not know is that if grasslands receive much less rain than ordinarily, it would become a desert, and if it got much more rain than usually, it would eventually turn into a forest. That is also the reason why grasslands are often located between deserts and forests – these nearby areas get less or more rain, and have thus developed into something else.</h5>'),
 (5, 'beef cattle', 'Just like grasslands, beef cattle is involved in the whole biomass and generates numerous by-products.', 'Beef cattle provides hundreds by-products', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-3.jpg\" alt=\"Beef cattle provides hundreds by-products\"><h5 class=\"text-justify\">Over 98% of the beef animal is used when it is processed. Besides meat and milk, beef cattle provide us with hundreds of important by-products. About 45% of the animal is used for meat and the rest is used for other by-products including leather, china, glue, film, soap, pharmaceuticals, insulin, gelatins, etc. Almost the entire beef animal can be used in some way. From a typical 454-kilogram steer, slightly over 40% of the animal is used for retail beef and the remaining 60% is processed into by-products.</h5>'),
 (6, 'Dairy cattle', 'Protecting grasslands is important but lack of dairy cattle will lead to lack of milk supply.', '', ''),
 (7, 'Dairy cattle', 'Rotational grazing technique is advised to be used.', '', ''),
@@ -444,7 +420,7 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (10, 'Dairy cattle', 'Make sure the right grazing technique is used to provide enough food.', 'Keep dairy cattle fed', '<img style=\"width: 100%;\" src=\"images/livestock_stats/dairy-card-3.jpeg\" alt=\"Keep dairy cattle fed\"><h5 class=\"text-justify\">A cow, that is milking, eats about 45 kilograms of feed each day. Cows drink a whole bathtub of water in just one day. That’s why cows are considered as the competitive eater and ultimate recyclers. The feed is typically a combination of grass, grain, and a mixture of other ingredients like citrus pulp, almond hulls and cotton seeds. These are items that may otherwise be thrown away. The ingredients, that we cannot eat, can often be nutritious for them. Farmers employ professional animal nutritionists to develop scientifically formulated, balanced, and nutritious diets for their cows.</h5>'),
 (11, 'Milk', 'Reduction of dairy livestock leads to extreme reduction of milk quantity.', '', ''),
 (12, 'Milk', 'Rotational grazing technique is advised to be used.', '', ''),
-(13, 'Milk', 'Ensure that suitable grasslands are selected, and appropriate grazing techniques are used.', 'Maintain grasslands well', '<img style=\"width: 100%;\" src=\"images/livestock_stats/milk-card-1.jpeg\" alt=\"Maintain grasslands well\"><h5 class=\"text-justify\">Although grass is without a doubt the most important feature of grasslands, it doesn’t grow all the time, at least not in temperate grasslands that are most common in Earth’s mid-latitude, such as America’s prairies and Europe’s steppes.</h5><p></p><h5 class=\"text-justify\">Life in temperate grasslands is forced to survive in two very different seasons: the growing season and the dormant season. While the growing season allows the flora of the grasslands to thrive, the climate is too cold during the dormant season.</h5>'),
+(13, 'Milk', 'Ensure that suitable grasslands are selected, and appropriate Effective grazing techniques are used.', 'Maintain grasslands well', '<img style=\"width: 100%;\" src=\"images/livestock_stats/milk-card-1.jpeg\" alt=\"Maintain grasslands well\"><h5 class=\"text-justify\">Although grass is without a doubt the most important feature of grasslands, it doesn’t grow all the time, at least not in temperate grasslands that are most common in Earth’s mid-latitude, such as America’s prairies and Europe’s steppes.</h5><p></p><h5 class=\"text-justify\">Life in temperate grasslands is forced to survive in two very different seasons: the growing season and the dormant season. While the growing season allows the flora of the grasslands to thrive, the climate is too cold during the dormant season.</h5>'),
 (14, 'Milk', 'Two-way effects! Estimate the value of environmental impacts of dairy farming.', 'Estimate the value of environmental impacts of dairy farming', '<img style=\"width: 100%;\" src=\"images/livestock_stats/milk-card-2.jpeg\" alt=\"Estimate the value of environmental impacts of dairy farming\"><h5 class=\"text-justify\">The intensification and expansion of dairy farms have contributed to many environmental problems such as the contamination of ground and surface water, insufficient water for irrigation during droughts, excess nutrient losses from farms, larger emissions of greenhouse gases. Permanent grassland farms can generally keep up with fodder-crop farms, even in an intensive production setting. However, extensively operating farms, especially those on permanent grassland, significantly lag behind in productivity.</h5>'),
 (15, 'Sheep', 'Sheep are the most dominate livestock in Australia and its reduction will negatively affect Australian economy.', '', ''),
 (16, 'Sheep', 'Seasonal grazing technique is adviced to be used.', '', ''),
@@ -455,7 +431,7 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (21, 'Wool', 'Ensure that grasslands gets enough water to provide nutrients to sheep.', 'Keep grasslands moist', '<img style=\"width: 100%;\" src=\"images/livestock_stats/wool-card-1.jpeg\" alt=\"Keep grasslands moist\"><h5 class=\"text-justify\">Where there are plants, there also must be moisture in the soil, and grasslands with their various kinds of grasses, shrubbery and even occasional trees are no different. But the relationship of grasslands and rain is a complicated one. All types of grasslands need a certain amount of rain, but then again not too much rain, since that will cause them to transform into something else.</h5><p></p><h5 class=\"text-justify\">How much rain is too much rain? How much is too little? That depends on the type of grassland and its location, but grasslands in general get around 50 to 90 centimeters of annual rainfall. Some grasslands also exist in areas where the annual rainfall exceeds 120 centimeters annually, and some exist in areas where there is as little as 25 centimeters of annual rainfall.</h5>'),
 (22, 'Wool', 'Wool is a treasure in Australia because it helps us to win Guinness World Record.', 'Aussie won the Guinness World Record', '<img style=\"width: 100%;\" src=\"images/livestock_stats/wool-card-2.jpeg\" alt=\"Aussie won the Guinness World Record\"><h5 class=\"text-justify\">Hilton Barrett who from Australian holds the Guinness World Record for the fastest time to shear a single mature sheep at an amazing 39.31 seconds. The record was set at the Wellington Show 2010 in Wellington, New South Wales on 1 May 2010. Wool fibers are very durable and flexible. Wool fiber can withstand being bent 20,000 times without breaking. In comparison, cotton breaks after 3,000 bends and silk after 2,000 bends. Also, Sheep wool has an incredible, natural UV protection built right in, which helps to keep sheep and lambs from getting sunburnt.</h5>'),
 (23, 'Land', 'The less land is used - the better it is for Australian grasslands, though it negatively affects people.', '', ''),
-(24, 'Land', 'Grazing techniques are advised to be used.', '', ''),
+(24, 'Land', 'Effective grazing techniques are advised to be used.', '', ''),
 (25, 'Land', 'Animals, just like humans, are involved in overgrazing the grasslands.', 'Animals, just like humans, are cause of overgrazing', '<img style=\"width: 100%;\" src=\"images/livestock_stats/land-card-1.jpeg\" alt=\"Animals, just like humans, are cause of overgrazing\"><h5 class=\"text-justify\">Rabbit can cause overgrazing native and sown pastures, leading to loss of plant biodiversity and reduced crop yields. Because they are too much and eat too fast, they are preventing or inhibiting the regeneration of native shrubs and trees by grazing.</h5><p></p><h5 class=\"text-justify\">Moreover, they build warrens and it causes land degradation and erosion, also increasing and spreading invasive weeds. they cause huge damage to our land; numbers need to be controlled.</h5>'),
 (26, 'Land', 'The right balanced is needed to preserve Australian grasslands.', 'Maintain balance in the use of the land', '<img style=\"width: 100%;\" src=\"images/livestock_stats/land-card-2.jpeg\" alt=\"Maintain balance in the use of the land\"><h5 class=\"text-justify\">Australia has unique land, water, vegetation and biodiversity resources. Australia’s 7.7 million square kilometres support a wide range of agricultural and forestry industries. Production from natural resources earns over $38 billion a year in exports from agriculture, fisheries and forestry. Competitive pressures drive the need for improved productivity, which includes increased diversification and intensification. These trends are occurring against a background of increased climate variability.</h5><p></p><h5 class=\"text-justify\">The way in which land is used has a profound effect on Australia’s social and ecological systems. There is a strong link between changes in land use and environmental, economic and social conditions. Information on land use and management is fundamental to understanding landscapes, agricultural production and the management of natural resources.</h5>'),
 (27, 'Meat', 'Reduction of beef cattle negatively affects the quantity of the beef produced and will have a negative impact in a long run.', '', ''),
@@ -467,7 +443,7 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (33, 'Yarn', 'Reduction of yarn will cause reduction of cloths.', 'Production of cloths is affected', '<img style=\"width: 100%;\" src=\"images/livestock_stats/yarn-card-1.jpg\" alt=\"\"><h5 class=\"text-justify\">Even though wool represents only 1.2% of the virgin fibre supply, it represents about 5% of clothing donated to charity. Wool-made yarn is also one of the most sought after recycled textiles for converting into new long-lasting products, such as garments, mattresses and upholstery. In contrast to synthetics, wool-made yarn can absorb moisture vapour which means less sweat on your body.  Wool-made yarn even absorbs the odour molecules from sweat, which are only released upon washing. Wool-made yarn inherent chemical structure makes wool naturally flame resistant. It is a highly trusted natural fibre in public areas such as hotels, aircraft, hospitals and theatres.</h5>'),
 (34, 'Yarn', 'Few other reasons behind yarn decline.', 'Reasons behind yarn reduction', '<img style=\"width: 100%;\" src=\"images/livestock_stats/yarn-card-2.jpg\" alt=\"\"><h5 class=\"text-justify\">The best wool goes to make suits and clothing, not yarn. There were several factors that contributed to the yarn industry decline.  Firstly, the Australian government began reducing the tariff protection in the footwear, clothing and textile industries in the 1970s, which opened the way for cheap imports to increasingly flood the Australian market. Now we all know that this affected all sectors of manufacturing. Prior to the removal of the tariffs, many larger towns in Australia had mills - it’s important to remember not all of these mills made yarn for the hand knitter, again this was a small proportion of the mills - many made fabrics, carpets, and yarns specifically for the manufacturing sector. It was the tariff reductions coupled with the changing directions worldwide of trends, that put our yarn industry into serious damage control.  In the 1980s people began to turn their back on handicrafts viewing them as old fashioned; a bit daggy. Pattern and yarn sales slumped, and many local yarn stores closed. You could also, for the first time, buy a machine-knitted jumper for cheaper than you could knit one.</h5>'),
 (35, 'Total', 'Beef and dairy cattle, and sheep livestock is reducing yearly and will eventually reach zero.', '', ''),
-(36, 'Total', 'Grazing techniques are adviced to be used.', '', ''),
+(36, 'Total', 'Effective grazing techniques are adviced to be used.', '', ''),
 (37, 'Total', 'Burn grassland not only for the beef cattle. Grasslands require planned burning.', 'Burn grasslands and increase livestocks', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-1.jpeg\" alt=\"Burn grasslands and increase livestocks\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Conduct controlled dry season burning to stimulate fresh plant growth to restore calcium to the soil that builds up in the dry grasses. Some species of native plants need occasional fire to thrive, while blazes can also help remove invasive species.</h5><p></p><h5 class=\"text-justify\">Fire is important for grasslands’ existence. They prevent woody plants from spreading and enable the grass to re-grow, becoming thicker, more resilient and healthier. How do grasses survive these fires? They have developed extensive underground systems during the course of evolution, which allow them to burst back to life, stronger than ever before, fairly quickly after a fire.'),
 (38, 'Total', 'Droughts and too much humid negatively affect grasslands and beef cattle.', 'Keep grasslands fresh', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-2.jpeg\" alt=\"Keep grasslands fresh\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">All grasslands get a specific amount of yearly rainfall, depending on their exact location in the world. What you didn not know is that if grasslands receive much less rain than ordinarily, it would become a desert, and if it got much more rain than usually, it would eventually turn into a forest. That is also the reason why grasslands are often located between deserts and forests – these nearby areas get less or more rain, and have thus developed into something else.</h5>'),
 (39, 'Total', 'Just like grasslands, beef cattle is involved in the whole biomass and generates numerous by-products.', 'Beef cattle provides hundreds by-products', '<img style=\"width: 100%;\" src=\"images/livestock_stats/beef-card-3.jpg\" alt=\"Beef cattle provides hundreds by-products\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Over 98% of the beef animal is used when it is processed. Besides meat and milk, beef cattle provide us with hundreds of important by-products. About 45% of the animal is used for meat and the rest is used for other by-products including leather, china, glue, film, soap, pharmaceuticals, insulin, gelatines, etc. Almost the entire beef animal can be used in some way. From a typical 454-kilogram steer, slightly over 40% of the animal is used for retail beef and the remaining 60% is processed into by-products.</h5>'),
@@ -476,33 +452,6 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (42, 'Total', 'Make sure the right grazing technique is used to provide enough food.', 'Keep dairy cattle fed', '<img style=\"width: 100%;\" src=\"images/livestock_stats/dairy-card-3.jpeg\" alt=\"Keep dairy cattle fed\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">A cow, that is milking, eats about 45 kilograms of feed each day. Cows drink a whole bathtub of water in just one day. That’s why cows are considered as the competitive eater and ultimate recyclers. The feed is typically a combination of grass, grain, and a mixture of other ingredients like citrus pulp, almond hulls and cotton seeds. These are items that may otherwise be thrown away. The ingredients, that we cannot eat, can often be nutritious for them. Farmers employ professional animal nutritionists to develop scientifically formulated, balanced, and nutritious diets for their cows.</h5>'),
 (43, 'Total', 'Rabbits can be a cause of decreasing number of sheep.', 'Beware of rabbits', '<img style=\"width: 100%;\" src=\"images/livestock_stats/sheep-card-1.jpeg\" alt=\"Beware of rabbits\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Rabbits compete with native animals and domestic livestock for food and shelter, increasing grazing pressure and lowering the land’s carrying capacity.</h5><p></p><h5 class=\"text-justify\">Rabbits act as a food source for introduced predators, which can lead to increased lamb losses and disease prevalence.</h5>'),
 (44, 'Total', 'Sheep are light eaters compared to cattle, but their density is much higher.', 'High density of sheeps negative affect grassland', '<img style=\"width: 100%;\" src=\"images/livestock_stats/sheep-card-2.jpeg\" alt=\"High density of sheeps negative affect grassland\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Large density causes lots of damage to the grass and the plants in the area. Though, sheep are herbivores, which means their diet does not include meat. They typically eat seeds, grass and plants. Some sheep do not need much water. The desert bighorn sheep, for example, gets most of its water from eating plants. Like all ruminants, they have multi-chambered stomachs that are adapted to ferment cellulose before digestion. To completely digest their food, sheep will regurgitate their food into their mouths, rechew and swallow. This regurgitated food is called cud.</h5>');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `livestock_control`
---
-
-CREATE TABLE `livestock_control` (
-  `livestock_control_id` int(11) NOT NULL,
-  `livestock_control_type` varchar(100) NOT NULL,
-  `livestock_control_type_ext` varchar(20) NOT NULL,
-  `livestock_control_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `livestock_control`
---
-
-INSERT INTO `livestock_control` (`livestock_control_id`, `livestock_control_type`, `livestock_control_type_ext`, `livestock_control_name`) VALUES
-(1, 'livestock_', 'beef', 'Beef cattle'),
-(2, 'livestock_', 'dairy', 'Dairy cattle'),
-(3, 'livestock_', 'sheep', 'Sheep'),
-(4, 'livestock_', 'total', 'Total'),
-(5, 'y_', '2030', '2030'),
-(6, 'y_', '2040', '2040'),
-(7, 'y_', '2050', '2050'),
-(8, 'y_', '2060', '2060');
 
 -- --------------------------------------------------------
 
@@ -698,6 +647,60 @@ INSERT INTO `livestock_dataset` (`stock_id`, `stock_year`, `stock_type`, `stock_
 (174, 2014, 'Total', 98.3),
 (175, 2015, 'Total', 92.5),
 (176, 2016, 'Total', 96.1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `livestock_graph`
+--
+
+CREATE TABLE `livestock_graph` (
+  `graph_id` int(11) NOT NULL,
+  `graph_cond` varchar(35) NOT NULL,
+  `graph_year` int(11) NOT NULL,
+  `graph_div_id` varchar(18) NOT NULL,
+  `graph_img_src` varchar(200) NOT NULL,
+  `graph_o_name_val` varchar(100) NOT NULL,
+  `graph_o_static_url` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `livestock_graph`
+--
+
+INSERT INTO `livestock_graph` (`graph_id`, `graph_cond`, `graph_year`, `graph_div_id`, `graph_img_src`, `graph_o_name_val`, `graph_o_static_url`) VALUES
+(1, 'true false false false', 2030, 'viz1599895069661', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1_rss.png', 'beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to203', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2030&#47;BeefCattleNumbersfrom1973to2030&#47;1.png'),
+(2, 'true false false false', 2040, 'viz1599898084840', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1_rss.png', 'beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2040&#47;BeefCattleNumbersfrom1973to2040&#47;1.png'),
+(3, 'true false false false', 2050, 'viz1599903442274', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1_rss.png', 'beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2050&#47;BeefCattleNumbersfrom1973to2050&#47;1.png'),
+(4, 'true false false false', 2060, 'viz1599906080745', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1_rss.png', 'beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattle1973-2060&#47;BeefCattleNumbersfrom1973to2060&#47;1.png'),
+(5, 'false true false false', 2030, 'viz1599895311682', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030&#47;1_rss.png', 'dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2030&#47;DairyCattleNumbersfrom1973to2030&#47;1.png'),
+(6, 'false true false false', 2040, 'viz1599898453024', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1_rss.png', 'dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2040&#47;DairyCattleNumbersfrom1973to2040&#47;1.png'),
+(7, 'false true false false', 2050, 'viz1599903542905', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1_rss.png', 'dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2050&#47;DairyCattleNumbersfrom1973to2050&#47;1.png'),
+(8, 'false true false false', 2060, 'viz1599906250101', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1_rss.png', 'dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattle1973-2060&#47;DairyCattleNumbersfrom1973to2060&#47;1.png'),
+(9, 'false false true false', 2030, 'viz1599895574623', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1_rss.png', 'sheep1973-2030&#47;SheepNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2030&#47;SheepNumbersfrom1973to2030&#47;1.png'),
+(10, 'false false true false', 2040, 'viz1599898757146', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1_rss.png', 'sheep1973-2040&#47;SheepNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2040&#47;SheepNumbersfrom1973to2040&#47;1.png'),
+(11, 'false false true false', 2050, 'viz1599903601515', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1_rss.png', 'sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheepcattle1973-2050&#47;SheepNumbersfrom1973to2050&#47;1.png'),
+(12, 'false false true false', 2060, 'viz1599906317523', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1_rss.png', 'sheep1973-2060&#47;SheepNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;sh&#47;sheep1973-2060&#47;SheepNumbersfrom1973to2060&#47;1.png'),
+(13, 'true false true false', 2030, 'viz1599896086683', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030&#47;1_rss.png', 'beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2030&#47;BeefCattleandSheepNumbersfrom1973to2030&#47;1.png'),
+(14, 'true false true false', 2040, 'viz1599899316416', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1_rss.png', 'beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2040&#47;BeefCattleandSheepNumbersfrom1973to2040&#47;1.png'),
+(15, 'true false true false', 2050, 'viz1599903797750', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1_rss.png', 'beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2050&#47;BeefCattleandSheepNumbersfrom1973to2050&#47;1.png'),
+(16, 'true false true false', 2060, 'viz1599906486538', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1_rss.png', 'beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefcattleandsheep1973-2060&#47;BeefCattleandSheepNumbersfrom1973to2060&#47;1.png'),
+(17, 'true true false false', 2030, 'viz1599896367479', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030&#47;1_rss.png', 'beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2030&#47;BeefandDairyCattleNumbersfrom1973to2030&#47;1.png'),
+(18, 'true true false false', 2040, 'viz1599899424475', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1_rss.png', 'beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2040&#47;BeefandDairyCattleNumbersfrom1973to2040&#47;1.png'),
+(19, 'true true false false', 2050, 'viz1599903878806', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1_rss.png', 'beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2050&#47;BeefandDairyCattleNumbersfrom1973to2050&#47;1.png'),
+(20, 'true true false false', 2060, 'viz1599906558615', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1_rss.png', 'beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;be&#47;beefanddairycattle1973-2060&#47;BeefandDairyCattleNumbersfrom1973to2060&#47;1.png'),
+(21, 'false true true false', 2030, 'viz1599896654921', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030&#47;1_rss.png', 'dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2030&#47;DairyCattleandSheepNumbersfrom1973to2030&#47;1.png'),
+(22, 'false true true false', 2040, 'viz1599899518417', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1_rss.png', 'dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2040&#47;DairyCattleandSheepNumbersfrom1973to2040&#47;1.png'),
+(23, 'false true true false', 2050, 'viz1599903962332', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050&#47;1_rss.png', 'https%3A%2F%2Fpublic.tableau.com%2F', 'dairycattleandsheep1973-2050&#47;DairyCattleandSheepNumbersfrom1973to2050'),
+(24, 'false true true false', 2060, 'viz1599906664057', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1_rss.png', 'dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dairycattleandsheep1973-2060&#47;DairyCattleandSheepNumbersfrom1973to2060&#47;1.png'),
+(25, 'false false false true', 2030, 'viz1599895762335', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030&#47;1_rss.png', 'totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2030&#47;TotalLivestockNumbersfrom1973to2030&#47;1.png'),
+(26, 'false false false true', 2040, 'viz1599898921840', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1_rss.png', 'totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to204', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2040&#47;TotalLivestockNumbersfrom1973to2040&#47;1.png'),
+(27, 'false false false true', 2050, 'viz1599903730048', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1_rss.png', 'totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2050&#47;TotalLivestockNumbersfrom1973to2050&#47;1.png'),
+(28, 'false false false true', 2060, 'viz1599906379873', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1_rss.png', 'totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;to&#47;totallivestock1973-2060&#47;TotalLivestockNumbersfrom1973to2060&#47;1.png'),
+(29, 'true true true false', 2030, 'viz1599896886527', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2030&#47;LivestockNumbersfrom1973to2030&#47;1_rss.png', '3livestock1973-2030&#47;LivestockNumbersfrom1973to2030', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2030&#47;LivestockNumbersfrom1973to2030&#47;1.png'),
+(30, 'true true true false', 2040, 'viz1599899633958', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1_rss.png', '3livestock1973-2040&#47;LivestockNumbersfrom1973to2040', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2040&#47;LivestockNumbersfrom1973to2040&#47;1.png'),
+(31, 'true true true false', 2050, 'viz1599904032692', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1_rss.png', '3livestock1973-2050&#47;LivestockNumbersfrom1973to2050', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2050&#47;LivestockNumbersfrom1973to2050&#47;1.png'),
+(32, 'true true true false', 2060, 'viz1599906762820', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1_rss.png', '3livestock1973-2060&#47;LivestockNumbersfrom1973to2060', 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3l&#47;3livestock1973-2060&#47;LivestockNumbersfrom1973to2060&#47;1.png');
 
 -- --------------------------------------------------------
 
@@ -1445,61 +1448,44 @@ INSERT INTO `suggestion_tech` (`suggestion_id`, `suggestion_techn`, `suggestion_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `techniques`
+-- Table structure for table `techniques_landing`
 --
 
-CREATE TABLE `techniques` (
+CREATE TABLE `techniques_landing` (
   `techn_id` int(11) NOT NULL,
-  `techn_title` varchar(25) NOT NULL,
-  `techn_img` varchar(45) NOT NULL,
-  `techn_ico` varchar(255) NOT NULL,
-  `techn_continue` varchar(50) DEFAULT NULL,
-  `techn_brochure` varchar(50) DEFAULT NULL
+  `techn_img` varchar(100) DEFAULT NULL,
+  `techn_title` varchar(50) NOT NULL,
+  `techn_ico` varchar(250) NOT NULL,
+  `techn_fact` varchar(250) NOT NULL,
+  `techn_target` varchar(100) DEFAULT NULL,
+  `tech_downl` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `techniques`
+-- Dumping data for table `techniques_landing`
 --
 
-INSERT INTO `techniques` (`techn_id`, `techn_title`, `techn_img`, `techn_ico`, `techn_continue`, `techn_brochure`) VALUES
-(1, 'CONTINUOUS GRAZING', 'continuous-grazing.gif', 'fa-check;fa-check;fa-times;fa-times', '', ''),
-(2, 'ROTATIONAL GRAZING', 'rotational-grazing.gif', 'fa-check;fa-check;fa-check;fa-check', 'rotational.php', 'rotational_grazing_brochure.pdf'),
-(3, 'SEASONAL GRAZING', 'seasonal_animation.gif', 'fa-check;fa-check;fa-check;fa-check', 'seasonal.php', 'seasonal_grazing_brochure.pdf'),
-(4, 'PATCH-BURN GRAZING', 'patch-burn.gif', 'fa-check;fa-check;fa-times;fa-times', 'patch-burn.php', 'patch-burn_grazing_brochure.pdf');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `techniques_content`
---
-
-CREATE TABLE `techniques_content` (
-  `techn_cont_id` int(11) NOT NULL,
-  `techn_cont_title2` varchar(25) NOT NULL,
-  `techn_cont_content` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `techniques_content`
---
-
-INSERT INTO `techniques_content` (`techn_cont_id`, `techn_cont_title2`, `techn_cont_content`) VALUES
-(1, 'CONTINUOUS GRAZING', 'Most simple, popular, and low effort on labour'),
-(2, 'CONTINUOUS GRAZING', 'Temporary fencing is used'),
-(3, 'CONTINUOUS GRAZING', 'Damages soil, stream banks, and native vegetation'),
-(4, 'CONTINUOUS GRAZING', 'Low productivity and unsustainable development in the long-term'),
-(5, 'ROTATIONAL GRAZING', 'Can be implemented immediately'),
-(6, 'ROTATIONAL GRAZING', 'Enhances nutritious level of grassland'),
-(7, 'ROTATIONAL GRAZING', 'Express higher stocking rates of paddock-by-paddock'),
-(8, 'ROTATIONAL GRAZING', 'Decrease the methane emissions from livestock'),
-(9, 'SEASONAL GRAZING', 'Longer regrowth time for the grassland'),
-(10, 'SEASONAL GRAZING', 'Easily combined with other techniques'),
-(11, 'SEASONAL GRAZING', 'Great chance to adjust the grazing regime of the year'),
-(12, 'SEASONAL GRAZING', 'Limited time consumption and less farming infrastructure management'),
-(13, 'PATCH-BURN GRAZING', 'Enable recovery of used patches of grassland'),
-(14, 'PATCH-BURN GRAZING', 'Cost-saving technology requires less costly infrastructure or fencing'),
-(15, 'PATCH-BURN GRAZING', 'Only suitable for paddock larger than 20 acres'),
-(16, 'PATCH-BURN GRAZING', 'May takes longer time to burn all patches (3 years)');
+INSERT INTO `techniques_landing` (`techn_id`, `techn_img`, `techn_title`, `techn_ico`, `techn_fact`, `techn_target`, `tech_downl`) VALUES
+(1, 'images/seasonal_animation.gif', 'Seasonal', 'fa-check fa-check-techniques', 'Advised to be used', '', ''),
+(2, '', 'Seasonal', 'fa-check fa-check-techniques', 'Longer regrowth time for the grassland', '', ''),
+(3, '', 'Seasonal', 'fa-check fa-check-techniques', 'Easily combined with other techniques', '', ''),
+(4, '', 'Seasonal', 'fa-check fa-check-techniques', 'Great chance to adjust the grazing regime of the year', '', ''),
+(5, '', 'Seasonal', 'fa-check fa-check-techniques', 'Limited time consumption and less farming infrastructure management', 'seasonal-grazing', 'download/seasonal_grazing_brochure.pdf'),
+(6, 'images/continuous-grazing.gif', 'Continuous', 'fa-times fa-times-techniques', 'Not advised to be used', '', ''),
+(7, '', 'Continuous', 'fa-times fa-times-techniques', 'Damages soil, stream banks, and native vegetation', '', ''),
+(8, '', 'Continuous', 'fa-times fa-times-techniques', 'Low productivity and unsustainable development in the long-term', '', ''),
+(9, '', 'Continuous', 'fa-check fa-check-techniques', 'Most simple, popular, and low effort on labour', '', ''),
+(10, '', 'Continuous', 'fa-check fa-check-techniques', 'Temporary fencing is used', '', ''),
+(11, 'images/rotational-grazing.gif', 'Rotational', 'fa-check fa-check-techniques', 'Advised to be used', '', ''),
+(12, '', 'Rotational', 'fa-check fa-check-techniques', 'Enhances nutritious level of grassland', '', ''),
+(13, '', 'Rotational', 'fa-check fa-check-techniques', 'Can be implemented immediately', '', ''),
+(14, '', 'Rotational', 'fa-check fa-check-techniques', 'Express higher stocking rates of paddock-by-paddock', '', ''),
+(15, '', 'Rotational', 'fa-check fa-check-techniques', 'Decrease the methane emissions from livestock', 'rotational-grazing', 'download/rotational_grazing_brochure.pdf'),
+(16, 'images/patch-burn.gif', 'Patch-burn', 'fa-check fa-check-techniques', 'Advised to be used', '', ''),
+(17, '', 'Patch-burn', 'fa-check fa-check-techniques', 'Enable recovery of used patches of grassland', '', ''),
+(18, '', 'Patch-burn', 'fa-check fa-check-techniques', 'Cost-saving technology requires less costly infrastructure or fencing', '', ''),
+(19, '', 'Patch-burn', 'fa-times fa-times-techniques', 'Only suitable for paddock larger than 20 acres', '', ''),
+(20, '', 'Patch-burn', 'fa-times fa-times-techniques', 'May takes longer time to burn all patches (3 years)', 'patch-burn-grazing', 'download/patch-burn_grazing_brochure.pdf');
 
 -- --------------------------------------------------------
 
@@ -1554,12 +1540,6 @@ ALTER TABLE `drought_landing`
   ADD PRIMARY KEY (`drought_landing_id`);
 
 --
--- Indexes for table `drought_spinner`
---
-ALTER TABLE `drought_spinner`
-  ADD PRIMARY KEY (`drought_spinner_id`);
-
---
 -- Indexes for table `emp_age`
 --
 ALTER TABLE `emp_age`
@@ -1608,16 +1588,16 @@ ALTER TABLE `livestock_cards`
   ADD PRIMARY KEY (`card_id`);
 
 --
--- Indexes for table `livestock_control`
---
-ALTER TABLE `livestock_control`
-  ADD PRIMARY KEY (`livestock_control_id`);
-
---
 -- Indexes for table `livestock_dataset`
 --
 ALTER TABLE `livestock_dataset`
   ADD PRIMARY KEY (`stock_id`);
+
+--
+-- Indexes for table `livestock_graph`
+--
+ALTER TABLE `livestock_graph`
+  ADD PRIMARY KEY (`graph_id`);
 
 --
 -- Indexes for table `livestock_landing`
@@ -1794,16 +1774,10 @@ ALTER TABLE `suggestion_tech`
   ADD PRIMARY KEY (`suggestion_id`);
 
 --
--- Indexes for table `techniques`
+-- Indexes for table `techniques_landing`
 --
-ALTER TABLE `techniques`
+ALTER TABLE `techniques_landing`
   ADD PRIMARY KEY (`techn_id`);
-
---
--- Indexes for table `techniques_content`
---
-ALTER TABLE `techniques_content`
-  ADD PRIMARY KEY (`techn_cont_id`);
 
 --
 -- Indexes for table `technique_selected`
@@ -1826,12 +1800,6 @@ ALTER TABLE `user_feedback`
 --
 ALTER TABLE `drought_landing`
   MODIFY `drought_landing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `drought_spinner`
---
-ALTER TABLE `drought_spinner`
-  MODIFY `drought_spinner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `emp_age`
@@ -1882,16 +1850,16 @@ ALTER TABLE `livestock_cards`
   MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `livestock_control`
---
-ALTER TABLE `livestock_control`
-  MODIFY `livestock_control_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
 -- AUTO_INCREMENT for table `livestock_dataset`
 --
 ALTER TABLE `livestock_dataset`
   MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
+
+--
+-- AUTO_INCREMENT for table `livestock_graph`
+--
+ALTER TABLE `livestock_graph`
+  MODIFY `graph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `livestock_landing`
@@ -1984,16 +1952,10 @@ ALTER TABLE `suggestion_tech`
   MODIFY `suggestion_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `techniques`
+-- AUTO_INCREMENT for table `techniques_landing`
 --
-ALTER TABLE `techniques`
-  MODIFY `techn_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `techniques_content`
---
-ALTER TABLE `techniques_content`
-  MODIFY `techn_cont_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+ALTER TABLE `techniques_landing`
+  MODIFY `techn_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `technique_selected`

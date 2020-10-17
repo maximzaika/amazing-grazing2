@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2020 at 08:22 PM
+-- Generation Time: Oct 17, 2020 at 07:07 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -66,7 +66,7 @@ ALTER TABLE `index_offerings`
 -- AUTO_INCREMENT for table `index_offerings`
 --
 ALTER TABLE `index_offerings`
-  MODIFY `ofr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ofr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
