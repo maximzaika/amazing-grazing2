@@ -137,7 +137,7 @@
 					<div class="col-md-12">
 						<div class="carousel-farmer-actions owl-carousel ftco-owl">
 							
-							<div class="item bg-light"><!--d-flex align-items-stretch-->
+							<div class="item bg-light">
 								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
 									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/seasonal_animation.gif);"></div>
 									<div class="text text-center px-4 t_">
@@ -147,7 +147,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -160,7 +160,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -175,7 +175,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -188,7 +188,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -201,7 +201,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -212,14 +212,22 @@
 													</li>
 												</a>
 											</div>
-											
-											
 										</div>
-										<a class="d-flex justify-content-center">
-											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#seasonal-grazing">
-												Learn more
-											</button>
-										</a>
+										
+										<div class="d-flex justify-content-center" >
+											<div class="container">
+												<div style="position: absolute; bottom: 42px; left: 0; right: 0;">
+													<button class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#seasonal-grazing">
+														<i class="fa fa-book" aria-hidden="true"></i> Read more
+													</button>
+													
+													<a href="download/seasonal_grazing_brochure.pdf" class="btn btn-primary location-button">
+														<i class="fa fa-download" aria-hidden="true"></i> Download
+													</a>
+												</div>
+											</div>
+										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -234,7 +242,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -247,7 +255,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -262,7 +270,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -275,7 +283,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -288,7 +296,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -304,7 +312,7 @@
 								</div>
 							</div>
 							
-							<div class="item bg-light"><!--d-flex align-items-stretch-->
+							<div class="item bg-light">
 								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
 									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/rotational-grazing.gif);"></div>
 									<div class="text text-center px-4 t_">
@@ -314,7 +322,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -327,7 +335,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -342,7 +350,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -355,7 +363,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -368,7 +376,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -379,21 +387,28 @@
 													</li>
 												</a>
 											</div>
-											
-											
 										</div>
-										<a class="d-flex justify-content-center">
-											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#rotational-grazing">
-												Learn more
-											</button>
-										</a>
+										
+										<div class="d-flex justify-content-center" >
+											<div class="container">
+												<div style="position: absolute; bottom: 42px; left: 0; right: 0;">
+													<button id="" class="btn btn-primary location-button"  type="button" data-toggle="modal" data-target="#rotational-grazing">
+														<i class="fa fa-book" aria-hidden="true"></i> Read more
+													</button>
+													
+													<a href="download/rotational_grazing_brochure.pdf" class="btn btn-primary location-button">
+														<i class="fa fa-download" aria-hidden="true"></i> Download
+													</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							
 							
 							
-							<div class="item bg-light"><!--d-flex align-items-stretch-->
+							<div class="item bg-light">
 								<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">
 									<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url(images/patch-burn.gif);"></div>
 									<div class="text text-center px-4 t_">
@@ -403,7 +418,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -416,7 +431,7 @@
 												<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 													<div class="container" style="padding-right: 0px; padding-left: 0px;">
 														<div class="row">
-															<div class="testxx">
+															<div class="technique-icon-position">
 																<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 															</div>
 															<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -431,7 +446,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-check fa-check-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -444,7 +459,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -457,7 +472,7 @@
 													<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">
 														<div class="container" style="padding-right: 0px; padding-left: 0px;">
 															<div class="row">
-																<div class="testxx">
+																<div class="technique-icon-position">
 																	<i class="fa fa-times fa-times-techniques" style="font-size: 30px;" aria-hidden="true"></i>
 																</div>
 																<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">
@@ -468,17 +483,25 @@
 													</li>
 												</a>
 											</div>
-											
-											
 										</div>
-										<a class="d-flex justify-content-center">
-											<button id="" style="position: absolute; bottom: 42px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#patch-burn-grazing">
-												Learn more
-											</button>
-										</a>
+										
+										<div class="d-flex justify-content-center" >
+											<div class="container">
+												<div style="position: absolute; bottom: 42px; left: 0; right: 0;">
+													<button class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#patch-burn-grazing">
+														<i class="fa fa-book" aria-hidden="true"></i> Read more
+													</button>
+													
+													<a href="download/patch-burn_grazing_brochure.pdf" class="btn btn-primary location-button">
+														<i class="fa fa-download" aria-hidden="true"></i> Download
+													</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+						
 						
 						</div>
 					</div>
@@ -582,9 +605,9 @@
 					stagePadding: 0,
 					mouseDrag: false,
 					nav: true,
-					autoplay: true,
-					autoplayHoverPause: true,
-					autoplayTimeout: 7000,
+					//-autoplay: true,
+					//autoplayHoverPause: true,
+					//autoplayTimeout: 7000,
 					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 					responsive:{
 						0:{

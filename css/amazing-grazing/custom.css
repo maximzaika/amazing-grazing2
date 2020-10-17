@@ -1013,12 +1013,7 @@ body {
   margin-bottom: 0px;
 }
 
-.testxx {
+.technique-icon-position {
+  left: 11px;
+}
 	
-	left: 11px;
-}
-
-.testxx2 {
-	position: absolute;
-	left: 63px;
-}
