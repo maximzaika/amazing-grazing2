@@ -1,108 +1,132 @@
-CREATE TABLE techniques (
+CREATE TABLE techniques_landing (
     techn_id int NOT NULL AUTO_INCREMENT,
-    techn_title varchar(25) NOT NULL,
-    techn_img varchar(45) NOT NULL,
-    techn_ico varchar(255) NOT NULL,
-    techn_continue varchar(50),
-    techn_brochure varchar(50),
+    techn_img varchar(100),
+    techn_title varchar(50) NOT NULL,
+    techn_ico varchar(250) NOT NULL,
+	techn_fact varchar(250) NOT NULL,
+	techn_target varchar(100),
+	tech_downl varchar(100),
     PRIMARY KEY (techn_id)
 );
 
-INSERT INTO techniques (techn_title, techn_img, techn_ico, techn_continue, techn_brochure)
-VALUES ('CONTINUOUS GRAZING',
-        'continuous-grazing.gif',
-	'fa-check;fa-check;fa-times;fa-times',
-	'',
-	'');
-
-INSERT INTO techniques (techn_title, techn_img, techn_ico, techn_continue, techn_brochure)
-VALUES ('ROTATIONAL GRAZING',
-        'rotational-grazing.gif',
-	'fa-check;fa-check;fa-check;fa-check',
-	'rotational.php',
-	'rotational_grazing_brochure.pdf');
-
-INSERT INTO techniques (techn_title, techn_img, techn_ico, techn_continue, techn_brochure)
-VALUES ('SEASONAL GRAZING',
-        'seasonal_animation.gif',
-	'fa-check;fa-check;fa-check;fa-check',
-	'seasonal.php',
-	'seasonal_grazing_brochure.pdf');
-
-INSERT INTO techniques (techn_title, techn_img, techn_ico, techn_continue, techn_brochure)
-VALUES ('PATCH-BURN GRAZING',
-        'patch-burn.gif',
-	'fa-check;fa-check;fa-times;fa-times',
-	'patch-burn.php',
-	'patch-burn_grazing_brochure.pdf');
-
-CREATE TABLE techniques_content (
-    techn_cont_id int NOT NULL AUTO_INCREMENT,
-    techn_cont_title2 varchar(25) NOT NULL,
-    techn_cont_content varchar(255) NOT NULL,
-    PRIMARY KEY (techn_cont_id)
-);
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('CONTINUOUS GRAZING',
-        'Most simple, popular, and low effort on labour');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('CONTINUOUS GRAZING',
-        'Temporary fencing is used');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('CONTINUOUS GRAZING',
-        'Damages soil, stream banks, and native vegetation');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('CONTINUOUS GRAZING',
-        'Low productivity and unsustainable development in the long-term');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('ROTATIONAL GRAZING',
-        'Can be implemented immediately');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('ROTATIONAL GRAZING',
-        'Enhances nutritious level of grassland');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('ROTATIONAL GRAZING',
-        'Express higher stocking rates of paddock-by-paddock');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('ROTATIONAL GRAZING',
-        'Decrease the methane emissions from livestock');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('SEASONAL GRAZING',
-        'Longer regrowth time for the grassland');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('SEASONAL GRAZING',
-        'Easily combined with other techniques');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('SEASONAL GRAZING',
-        'Great chance to adjust the grazing regime of the year');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('SEASONAL GRAZING',
-        'Limited time consumption and less farming infrastructure management');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('PATCH-BURN GRAZING',
-        'Enable recovery of used patches of grassland');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('PATCH-BURN GRAZING',
-        'Cost-saving technology requires less costly infrastructure or fencing');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('PATCH-BURN GRAZING',
-        'Only suitable for paddock larger than 20 acres');
-
-INSERT INTO techniques_content (techn_cont_title2, techn_cont_content)
-VALUES ('PATCH-BURN GRAZING',
-        'May takes longer time to burn all patches (3 years)');
+INSERT INTO techniques_landing (techn_img, techn_title, techn_ico, techn_fact, techn_target, tech_downl)
+VALUES ('images/seasonal_animation.gif',
+        'Seasonal',
+		'fa-check fa-check-techniques',
+		'Advised to be used',
+        '',
+		''),
+	   ('',
+	    'Seasonal',
+	    'fa-check fa-check-techniques',
+	    'Longer regrowth time for the grassland',
+	    '',
+	    ''),
+	   ('',
+	    'Seasonal',
+	    'fa-check fa-check-techniques',
+	    'Easily combined with other techniques',
+	    '',
+	    ''),
+		('',
+	    'Seasonal',
+	    'fa-check fa-check-techniques',
+	    'Great chance to adjust the grazing regime of the year',
+	    '',
+	    ''),
+		('',
+	    'Seasonal',
+	    'fa-check fa-check-techniques',
+	    'Limited time consumption and less farming infrastructure management',
+	    'seasonal-grazing',
+	    'download/seasonal_grazing_brochure.pdf'),
+		('images/continuous-grazing.gif',
+	    'Continuous',
+	    'fa-times fa-times-techniques',
+	    'Not advised to be used',
+	    '',
+	    ''),
+		('',
+	    'Continuous',
+	    'fa-times fa-times-techniques',
+	    'Damages soil, stream banks, and native vegetation',
+	    '',
+	    ''),
+		('',
+	    'Continuous',
+	    'fa-times fa-times-techniques',
+	    'Low productivity and unsustainable development in the long-term',
+	    '',
+	    ''),
+		('',
+	    'Continuous',
+	    'fa-check fa-check-techniques',
+	    'Most simple, popular, and low effort on labour',
+	    '',
+	    ''),
+		('',
+	    'Continuous',
+	    'fa-check fa-check-techniques',
+	    'Temporary fencing is used',
+	    '',
+	    ''),
+		('images/rotational-grazing.gif',
+	    'Rotational',
+	    'fa-check fa-check-techniques',
+	    'Advised to be used',
+	    '',
+	    ''),
+		('',
+	    'Rotational',
+	    'fa-check fa-check-techniques',
+	    'Enhances nutritious level of grassland',
+	    '',
+	    ''),
+		('',
+	    'Rotational',
+	    'fa-check fa-check-techniques',
+	    'Can be implemented immediately',
+	    '',
+	    ''),
+		('',
+	    'Rotational',
+	    'fa-check fa-check-techniques',
+	    'Express higher stocking rates of paddock-by-paddock',
+	    '',
+	    ''),
+		('',
+	    'Rotational',
+	    'fa-check fa-check-techniques',
+	    'Decrease the methane emissions from livestock',
+	    'rotational-grazing',
+	    'download/rotational_grazing_brochure.pdf'),
+		('images/patch-burn.gif',
+		'Patch-burn',
+	    'fa-check fa-check-techniques',
+	    'Advised to be used',
+	    '',
+	    ''),
+		('',
+		'Patch-burn',
+	    'fa-check fa-check-techniques',
+	    'Enable recovery of used patches of grassland',
+	    '',
+	    ''),
+		('',
+		'Patch-burn',
+	    'fa-check fa-check-techniques',
+	    'Cost-saving technology requires less costly infrastructure or fencing',
+	    '',
+	    ''),
+		('',
+		'Patch-burn',
+	    'fa-times fa-times-techniques',
+	    'Only suitable for paddock larger than 20 acres',
+	    '',
+	    ''),
+		('',
+		'Patch-burn',
+	    'fa-times fa-times-techniques',
+	    'May takes longer time to burn all patches (3 years)',
+	    'patch-burn-grazing',
+	    'download/patch-burn_grazing_brochure.pdf');

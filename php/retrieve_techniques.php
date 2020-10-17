@@ -1,178 +1,92 @@
 <?php  /* This file retrieves/creates the content of teh techniques page */
-	    function retrieveTechniques($con, $page) {
-			$get_techn = "SELECT techn_id, techn_title, techn_img, techn_ico, techn_continue, techn_brochure FROM techniques";
+	    
+		/* Prints the facts below the gif image within the technique container */
+		function factContent($techn_ico, $techn_fact) {
+			$factContent = 
+				'<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">'.
+					'<div class="container" style="padding-right: 0px; padding-left: 0px;">'.
+						'<div class="row">'.
+							'<div class="technique-icon-position">'.
+								'<i class="fa '.$techn_ico.'" style="font-size: 30px;" aria-hidden="true"></i>'.
+							'</div>'.
+							'<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto; padding-right: 0px; padding-left: 0px;">'.
+								'<h5>'.$techn_fact.'</h5>'.
+							'</div>'.
+						'</div>'.
+					'</div>'.
+				'</li>';
+											
+			return $factContent;
+		}
+		
+		function retrieveTechniques($con) {
+			$get_techn = "SELECT techn_id, techn_img, techn_title, techn_ico, techn_fact, techn_target, tech_downl FROM techniques_landing";
 			$techn_data = $con -> query($get_techn);
 			
-			
-			
 			$technContent = '';
-			$iCount = 0; /* count icons */
-			$secCount = 0; /* count section */
+			$factCount = 1;
 			if ($techn_data->num_rows > 0) {
 				while($row = $techn_data->fetch_assoc()) {
 					$techn_id = $row['techn_id'];
-					$techn_title = $row['techn_title'];
 					$techn_img = $row['techn_img'];
+					$techn_title = $row['techn_title'];
 					$techn_ico = $row['techn_ico'];
-					$techn_continue = $row['techn_continue'];
-					$techn_brochure = $row['techn_brochure'];
-					$techn_icons = explode(";", $techn_ico);
+					$techn_fact = $row['techn_fact'];
+					$techn_target = $row['techn_target'];
+					$tech_downl = $row['tech_downl'];
 					
-					if ($page == 'ALL') { /* Print all the techniques on techniques.php page */
-						if ($secCount % 2 == 0) { /* every 1st/3rd technique has white background */
-							$technContent = $technContent .   '<section class="ftco-section ftco-no-pt ftco-no-pb bg-light">';
-						} else { /* every 2nd technique has grey background */
-							$technContent = $technContent .   '<section class="ftco-section ftco-no-pt ftco-no-pb">';
-						}
+					if ($factCount == 1) {
+						$technContent = $technContent .
+							'<div class="item bg-light">'.
+								'<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">'.
+									'<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url('.$techn_img.');"></div>'.
+									'<div class="text text-center px-4 t_">'.
+										'<h3>'.$techn_title.'</h3>'.
+										'<div class="services-wrap">';
 						
-						$technContent = $technContent .    '<div class="container">'.
-															'<div class="row justify-content-center mb-5">'.
-															  '<div class="col-md-12 py-5 text-center heading-section coftco-animate">'.
-																'<h2 class="mb-4 text-center" style=" color: #228B22;">'.$techn_title.'</h2>'.
-																
-																'<div class="row">'.
-																  '<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
-																	'<img src="images/'.$techn_img.'" class="animated-gif" style="border-radius:40px;">'.
-																  '</div>'.
-																
-																  '<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
-																	'<div class="services-wrap">';
+						$technContent = $technContent . factContent($techn_ico, $techn_fact);
+					} else if ($factCount == 2 || $factCount == 4 || $factCount == 5) {
+						$technContent = $technContent . factContent($techn_ico, $techn_fact);
+					} else { // $factCount == 3
+						$technContent = $technContent . '<div class="d2"><a>';
+						$technContent = $technContent . factContent($techn_ico, $techn_fact);
 						
-						$get_techn_cont = "SELECT techn_cont_id, techn_cont_title2, techn_cont_content FROM techniques_content";
-						$techn_cont_data = $con -> query($get_techn_cont);
+					} 
+					
+					if ($factCount < 5) {
+						$factCount++;
+					} else { // $factCount == 5
+						$technContent = $technContent . '</a></div></div>';
 						
-						if ($techn_cont_data->num_rows > 0) {
-							while($row_ = $techn_cont_data->fetch_assoc()) {
-								$techn_cont_id = $row_['techn_cont_id'];
-								$techn_cont_title = $row_['techn_cont_title2'];
-								$techn_cont_content = $row_['techn_cont_content'];
-								
-								if ($techn_title == $techn_cont_title) {
-									$technContent = $technContent . '<li class="service-techniques services-color">'.
-																		'<div class="container">'.
-																		  '<div class="row">'.
-																			'<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">'.
-																			  '<i class="fa '.$techn_icons[$iCount].' '.$techn_icons[$iCount].'-techniques" aria-hidden="true"></i>'.
-																			'</div>'.
-																		  
-																			'<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">'.
-																			  '<h5>'.$techn_cont_content.'</h5>'.
-																			'</div>'.
-																		  '</div>'.
-																		'</div>'.
-																	  '</li>';
-																	  
-									$iCount++;
-									if ($iCount == 4) {
-										$iCount = 0;
-									}
-								}
-							}
-						}
-						
-						$technContent = $technContent .			'</div>';
-						
-						if ($techn_continue != '') {
-							$technContent = $technContent .		  '<button onclick="location.href='."'".$techn_continue."'".'" type="button" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px;">Continue reading <i class="fa fa-arrow-right" aria-hidden="true"></i></button>'.
-																  '<div class="row">'.
-																	'<div class="col-md-6">'.
-																	  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>'.
-																	'</div>'.
-																	
-																	'<div class="col-md-6">'.
-																	  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Download brochure</a>'.
-																	'</div>'.
-																  '</div>';
-						}
-						
-						$technContent = $technContent .       '</div>'.
-															'</div>'.
-														'</div>'.
+						if ($techn_target != '') {
+							$technContent = $technContent . 
+											'<div class="d-flex justify-content-center">'.
+												'<div class="container">'.
+													'<div style="position: absolute; bottom: 42px; left: 0; right: 0;">'.
+														'<button class="btn btn-primary location-button" type="button" data-toggle="modal" style="margin-right:10px;" data-target="#'.$techn_target.'">'.
+															'<i class="fa fa-book" aria-hidden="true"></i> Read more'.
+														'</button>'.
+														
+														'<a href="'.$tech_downl.'" class="btn btn-primary location-button">'.
+															'<i class="fa fa-download" aria-hidden="true"></i> Download'.
+														'</a>'.
 													'</div>'.
 												'</div>'.
-											'</section>';
-											
-						$secCount++;
-					} else { /* Print the content of the Specific technique only - dedicated to its own page */
-						if ($page == $techn_title) {
-							$technContent = $technContent .   '<section class="ftco-section ftco-no-pt ftco-no-pb">'; /* in this case background is always white */
-							
-							$technContent = $technContent .    '<div class="container">'.
-																'<div class="row justify-content-center mb-5">'.
-																  '<div class="col-md-12 py-5 text-sm-center text-md-center text-lg-left text-center heading-section coftco-animate">'.
-																	'<h2 class="mb-4 text-center" style=" color: #228B22;">'.$techn_title.'</h2>'.
-																	
-																	'<div class="row">'.
-																	  '<div class="col-xxs-12 col-xs-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
-																		'<img src="images/'.$techn_img.'" class="animated-gif">'.
-																	  '</div>'.
-																	
-																	  '<div class="col-xxs-12 col-sx-12 col-sm-12 col-md-12 col-lg-6" style="margin:auto;">'.
-																		'<div class="services-wrap">';
-							
-							$get_techn_cont = "SELECT techn_cont_id, techn_cont_title2, techn_cont_content FROM techniques_content";
-							$techn_cont_data = $con -> query($get_techn_cont);
-							
-							if ($techn_cont_data->num_rows > 0) {
-								while($row_ = $techn_cont_data->fetch_assoc()) {
-									$techn_cont_id = $row_['techn_cont_id'];
-									$techn_cont_title = $row_['techn_cont_title2'];
-									$techn_cont_content = $row_['techn_cont_content'];
-									
-									if ($techn_title == $techn_cont_title) {
-										$technContent = $technContent . '<li class="service-techniques services-color">'.
-																			'<div class="container">'.
-																			  '<div class="row">'.
-																				'<div class="col-xxs-4 col-xs-4 col-sm-1 col-md-2 col-lg-2 text-center" style="margin: auto;">'.
-																				  '<i class="fa '.$techn_icons[$iCount].' '.$techn_icons[$iCount].'-techniques" aria-hidden="true"></i>'.
-																				'</div>'.
-																			  
-																				'<div class="col-xxs-8 col-xs-8 col-sm-11 col-md-10 col-lg-10" style="margin: auto;">'.
-																				  '<h5>'.$techn_cont_content.'</h5>'.
-																				'</div>'.
-																			  '</div>'.
-																			'</div>'.
-																		  '</li>';
-																		  
-										$iCount++;
-										if ($iCount == 4) {
-											$iCount = 0;
-										}
-									}
-								}
-							}
-							
-							$technContent = $technContent .			'</div>';
-							
-							if ($techn_continue != '') {
-								$technContent = $technContent .       '<div class="row">'.
-																		'<div class="col-md-6">'.
-																		  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px;  padding-top: 13px;"><i class="fa fa-eye" aria-hidden="true"></i> View brochure</a>'.
-																		'</div>'.
-																		
-																		'<div class="col-md-6">'.
-																		  '<a href="download/'.$techn_brochure.'" class="w-100 btn btn-topic btn-amazing-techniques" style="margin-top: 10px; padding-top: 13px;" download><i class="fa fa-download" aria-hidden="true"></i> Download brochure</a>'.
-																		'</div>'.
-																	  '</div>';
-							}
-							
-							$technContent = $technContent .       '</div>'.
-																'</div>'.
-															'</div>'.
-														'</div>'.
-													'</div>'.
-												'</section>';
-												
-							$secCount++;
-							
-							if ($page == $techn_title) {
-								break;
-							}
+											'</div>';
 						}
+						
+						$technContent = $technContent .
+										'</div>'.
+									'</div>'.
+								'</div>';
+														
+						$factCount = 1;
 					}
+					
+					
 				}
 			}
-
+			
 			return $technContent;
 		}
 		
