@@ -186,6 +186,8 @@ $(function(){
 		}
 	}
 	
+	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
+	var owl = $('.carousel-services');
 	var selectEmployment = function() {
 		var active_id = $(this).attr("id");
 		
@@ -205,13 +207,62 @@ $(function(){
 				success: function (data) {					
 					$("#cards-data").empty();
 					document.getElementById('cards-data').innerHTML = data.card;
-					$('body').append(data.modal);
+					
+					if (executeCarousel == 1) {
+						owl.data('owl.carousel').destroy(); 
+					}
+					
+					owl.owlCarousel({
+						center: true,
+						loop: true,
+						items:1,
+						margin: 30,
+						stagePadding: 0,
+						mouseDrag: false,
+						nav: true,
+						autoplay: false,
+						//autoplayHoverPause: true,
+						//autoplayTimeout: 5000,
+						navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+						responsive:{
+							0:{
+								items: 1
+							},
+							600:{
+								items: 2
+							},
+							1000:{
+								items: 2
+							},
+							1600:{
+								items: 2
+							}
+						}
+					});
+					
+					$('body').append(data.modal); // append modals which execute when user clicks 'view suggestions'
+					executeCarousel=1; //checks the first carousel execution
 					
 					/* Enable number count */
 					$('[data-toggle="counter-up"]').counterUp({
 						delay: 10,
 						time: 500
 					});
+					
+					/* Resize card containers */
+					var maxHeight = 0;
+					$(".community-text").each(function(){
+						maxHeight = Math.max(maxHeight, $(this).height());  
+					});
+					$(".community-text").height(maxHeight);
+					
+					/*var maxHeight = 0;
+					$(".card-height").each(function(){
+						maxHeight = Math.max(maxHeight, $(this).height());  
+					});
+					$(".card-height").height(maxHeight);*/
+					
+					
 				},
 				error: (error) => {
 					console.log(JSON.stringify(error));

@@ -74,30 +74,38 @@
 			<div class="container">
 				<div class="row ">
 					<!-- Graph containing drought information -->
-					<div id="tableau-graph" class="col-md-12 col-lg-6 col-xl-6 col-xxl-5 order-xxs-2 order-lg-1 d-flex align-items-center align-content-center" style="padding: 0px;">
-						<?php //echo htmlspecialchars_decode($spinner_full);?> <!-- just in case the spinner needs to be used -->
-						<div class='tableauPlaceholder' id='viz1602816114213' style='position: relative'>
-							<noscript>
-								<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
-							</noscript>
-							<object class='tableauViz'  style='display:none;'>
-								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-								<param name='embed_code_version' value='3' /> 
-								<param name='site_root' value='' />
-								<param name='name' value='AUDrought&#47;Dashboard1' />
-								<param name='tabs' value='no' />
-								<param name='toolbar' value='yes' />
-								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1.png' /> 
-								<param name='animate_transition' value='yes' />
-								<param name='display_static_image' value='yes' />
-								<param name='display_spinner' value='yes' />
-								<param name='display_overlay' value='yes' />
-								<param name='display_count' value='yes' />
-								<param name='language' value='en' />
-								<param name='filter' value='publish=yes' />
-							</object>
-						</div>                
-		
+					<div id="tableau-graph" class="col-md-12 col-lg-6 col-xl-6 col-xxl-5 order-xxs-2 order-lg-1 d-flex align-items-center align-content-center">
+						
+						<div class="row">
+							<div class="col-md-12">
+								<div class='tableauPlaceholder' id='viz1602816114213' style='position: relative'>
+									<noscript>
+										<a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a>
+									</noscript>
+									<object class='tableauViz'  style='display:none;'>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+										<param name='embed_code_version' value='3' /> 
+										<param name='site_root' value='' />
+										<param name='name' value='AUDrought&#47;Dashboard1' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AU&#47;AUDrought&#47;Dashboard1&#47;1.png' /> 
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='language' value='en' />
+										<param name='filter' value='publish=yes' />
+									</object>
+								</div>
+							</div>
+							
+							<div class="col-md-12 text-center">
+								<h5>Source: <b><u><i><a href="http://www.bom.gov.au/climate/data/">Commonwealth of Australia, Bureau of Meteorology, 2020</i></u></b></a></h5>
+							</div>
+							
+						</div>
 					</div> 
 					<!-- End Spinner containing root cause, animals, management, dangerous, species -->
 					
@@ -111,7 +119,7 @@
 		</section>
 		<!-- End Section 1: Invasive species impact grasslands -->
 
-		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate sort-species">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
 			<div class="container" style="padding-bottom: 4em;">
 				<div class="container" style="padding-top: 4em;">
 					<div class="row justify-content-center">
@@ -122,12 +130,12 @@
 					</div>
 				</div>
 				
-				<div class="container">
+				<div class="container" style="padding-left: 0px; padding-right: 0px;">
 					<div class="row">
 						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
-							<div class="card card-flip h-100 w-100 bg-light">
+							<div class="card card-flip h-100 w-100">
 								<div class="card-front text-white">
-									<div class="services text-center">
+									<div class="services text-center bg-light">
 										<div class="icon d-flex justify-content-center align-items-center">
 											<span class="flaticon-mortgage-loan"></span>
 										</div>
@@ -143,7 +151,7 @@
 									</div>
 								</div>
 								
-								<div class="card-back">
+								<div class="card-back bg-light">
 									<div class="card-body">
 										<h4 class="card-title"><b>Drought Loans</b></h4>
 										<h5 class="card-text">Government can provide up to $2 million loan any time during drought seasons. Refer to Australian government website to learn more.</h5>
@@ -156,9 +164,9 @@
 						
 						
 						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
-							<div class="card card-flip h-100 w-100 bg-light">
+							<div class="card card-flip h-100 w-100">
 								<div class="card-front text-white">
-									<div class="services text-center">
+									<div class="services text-center bg-light">
 										<div class="icon d-flex justify-content-center align-items-center">
 											<span class="flaticon-eco-friendly"></span>
 										</div>
@@ -174,7 +182,7 @@
 									</div>
 								</div>
 								
-								<div class="card-back">
+								<div class="card-back bg-light">
 									<div class="card-body">
 										<h4 class="card-title"><b>Community Support</b></h4>
 										<h5 class="card-text">Support can be provided after evaluating the severity, economic impact, and the damage done. Refer to Australian government website to learn more.</h5>
@@ -187,9 +195,9 @@
 						
 						
 						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
-							<div class="card card-flip h-100 w-100 bg-light">
+							<div class="card card-flip h-100 w-100">
 								<div class="card-front text-white">
-									<div class="services text-center">
+									<div class="services text-center bg-light">
 										<div class="icon d-flex justify-content-center align-items-center">
 											<span class="flaticon-mental-health"></span>
 										</div>
@@ -205,10 +213,10 @@
 									</div>
 								</div>
 								
-								<div class="card-back">
+								<div class="card-back bg-light">
 									<div class="card-body">
 										<h4 class="card-title"><b>Health Support</b></h4>
-										<h5 class="card-text">Various hotlines are provided to get immediate support. Drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.</h5>
+										<h5 class="card-text">Hotlines are provided to get immediate support. Drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.</h5>
 										
 										<button onclick="location.href='https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
 									</div>
@@ -217,9 +225,9 @@
 						</div>
 						
 						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
-							<div class="card card-flip h-100 w-100 bg-light">
+							<div class="card card-flip h-100 w-100">
 								<div class="card-front text-white">
-									<div class="services text-center">
+									<div class="services text-center bg-light">
 										<div class="icon d-flex justify-content-center align-items-center">
 											<span class="flaticon-water-tank"></span>
 										</div>
@@ -235,7 +243,7 @@
 									</div>
 								</div>
 								
-								<div class="card-back">
+								<div class="card-back bg-light">
 									<div class="card-body">
 										<h4 class="card-title"><b>Water Infrastructure</b></h4>
 										<h5 class="card-text">Up to additional $50 million of funding are provided to farmers to support the expansion. Visit Australian government website now, to learn more.</h5>
@@ -245,15 +253,13 @@
 								</div>
 							</div>
 						</div>
-						
-						
 					</div>
 					<h5 class="pull-right"><u><i><a href="https://www.agriculture.gov.au/ag-farm-food/drought">Learn more</i></u></a></h5>
 				</div>
 			</div>
 		</section>
 		
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species bg-light">
 			<div class="container">
 						<div class="container" style="padding-top: 4em;">
 							<div class="row justify-content-center">
@@ -283,7 +289,7 @@
 														</div>
 													</div>
 													
-													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+													<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -325,7 +331,7 @@
 														</div>
 													</div>
 													
-													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+													<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -374,7 +380,7 @@
 														</div>
 													</div>
 													
-													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+													<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -416,7 +422,7 @@
 														</div>
 													</div>
 													
-													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+													<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -460,7 +466,7 @@
 														</div>
 													</div>
 													
-													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+													<div class="col-md-12 measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
 														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
 															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
 																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
@@ -506,24 +512,25 @@
 				<div class="row mb-5">
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
-							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought.</a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
-								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
-								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate are reducing and require attention.</a></li>
-								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Species.</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
 							<p class="text-justify">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
-													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
-													It cannot be prevented but must be controlled.
-													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
+													These impacts cannot be prevented but can be controlled.
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+						</div>
+					</div>
+			  
+					<div class="col-md-6">
+						<div class="ftco-footer-widget mb-4 ml-md-5">
+							<h2 class="logo"><a href="#">Our <span>services</span></a></h2>
+							<ul class="list-unstyled">
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news.</a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing and requires attention.</a></li>
+								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Invasive species overgraze the land and compete with livestock.</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>

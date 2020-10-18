@@ -10337,7 +10337,7 @@ h1, h2, h3, h4, h5,
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       margin-top: -10px;
-      color: black !important;
+      color: black!important;
       -moz-transition: all 0.7s ease;
       -o-transition: all 0.7s ease;
       -webkit-transition: all 0.7s ease;
@@ -10347,6 +10347,12 @@ h1, h2, h3, h4, h5,
 	  /*background: rgba(52, 102, 23, 0.5);
 	  width: 50px;
 	  height:20%;*/}
+	  @media only screen and (min-width:300px) and (max-width:599px) {
+		  .owl-carousel .owl-nav .owl-prev,
+		  .owl-carousel .owl-nav .owl-next {
+			  opacity: 1;
+		  }
+	  }
       .owl-carousel .owl-nav .owl-prev span:before,
       .owl-carousel .owl-nav .owl-next span:before {
         font-size: 30px; }
@@ -10354,6 +10360,7 @@ h1, h2, h3, h4, h5,
       left: 25px; }
     .owl-carousel .owl-nav .owl-next {
       right: 25px; }
+	
   .owl-carousel .owl-dots {
     text-align: center; }
     .owl-carousel .owl-dots .owl-dot {
@@ -10386,6 +10393,31 @@ h1, h2, h3, h4, h5,
     left: 15px; }
   .owl-carousel:hover .owl-nav .owl-next {
     right: 15px; }
+	
+	@media only screen and (min-width:300px) and (max-width:599px) {
+		  .owl-carousel .owl-nav .owl-prev,
+		  .owl-carousel .owl-nav .owl-next {
+			  opacity: 1;
+			  color: rgba(0,0,0,0.4) !important;
+		  }
+		  
+		  .owl-carousel .owl-nav .owl-prev {
+			left: 0px; 
+		  }
+		  
+		  .owl-carousel .owl-nav .owl-next {
+			right: 0px; 
+		  }
+		  
+		  .owl-carousel:hover .owl-nav .owl-prev {
+			  left: -1px; 
+		  }
+		  .owl-carousel:hover .owl-nav .owl-next {
+			  right: -1px; 
+		  }
+	}
+	
+	
 
 .owl-custom-nav {
   float: right;
