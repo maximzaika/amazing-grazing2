@@ -110,268 +110,393 @@
 			</div>
 		</section>
 		<!-- End Section 1: Invasive species impact grasslands -->
-		
-		<!--<div class="wrap">
-									<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url('images/employment-statistics.jpg');"></div>
-									<div class="text text-center px-4">
-										<h3>test test 1</h3>
-										<h5 class="dummy"><a>test test 1<a></h5>
-										
-										
-									</div>
-										
-									
-									<a class="d-flex justify-content-center">
-										<button id="" style="position: absolute; bottom: 18px;" class="btn btn-primary location-button" type="button" data-toggle="modal" data-target="#exampleModalLong">
-											<i class="fa fa-map-marker" aria-hidden="true"></i> Show affected areas
-										</button>
-									</a>
-								</div>-->
-								
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
-			<div class="container">
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate sort-species">
+			<div class="container" style="padding-bottom: 4em;">
 				<div class="container" style="padding-top: 4em;">
 					<div class="row justify-content-center">
 						<div class="col-md-12 text-center heading-section">
-							<h2>PREPARE YOURSELF FOR DROUGHT</h2>
-							<span class="mb-4 subheading">The following actions need to be taken to prepare for drought</span>
+							<h2>WHAT THE GOVERNMENT DOES</h2>
+							<span class="mb-4 subheading">Australian government is taking the following actions to provide support to farmers</span>
 						</div>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="carousel-farmer-actions owl-carousel ftco-owl">
-							
-							<div class="item d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="container measures-wrap">
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-livestock.jpeg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
-															<h1 class="bread" style=" font-size: 30px;">Livestock Situation</h1>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a>Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a>Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.</a></h5></div>
-												</div>
-											</div>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+							<div class="card card-flip h-100 w-100 bg-light">
+								<div class="card-front text-white">
+									<div class="services text-center">
+										<div class="icon d-flex justify-content-center align-items-center">
+											<span class="flaticon-mortgage-loan"></span>
 										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="item d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="container measures-wrap">
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-mental.jpg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
-															<h1 class="bread" style=" font-size: 30px;">Health Situation</h1>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Drought is not the end of the world.</b> It is important to keep yourself safe and avoid stressing out.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Have a place, where you and your family members can bond together</b>, forget about the business for a second, and relax.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Read books, watch TV, enjoy your free time</b> even if it is not the best time, and most importantly do not keep thoughts to yourself - always discuss them with someone.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a>Most importantly, <b>the Australian government is here to help</b> and to support you. Read below what the government does.</a></h5></div>
-												</div>
-											</div>
+										
+										<div class="text" style="padding-bottom:25px;">
+											<h4><b>Drought Loans</b></h4>
+											<h5>All eligible farm owners can get a loan</h5>
 										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="item d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="container measures-wrap">
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-strategy.jpg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
-															<h1 class="bread" style=" font-size: 30px;">Effective Strategy</h1>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>, try to remove <span onclick="window.location.href='invasive-species.php';" style="cursor: pointer; color: #4e9525;"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span> to allow grassland to heal.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.</a></h5></div>
-												</div>
-											</div>
-										</div>
-									</div>	
-								</div>
-							</div>
-							
-							<div class="item d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="container measures-wrap">
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-finance.jpg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
-															<h1 class="bread" style=" font-size: 30px;">Financial Situation</h1>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>List out</b> all <b>physical and financial resources of the farm</b> to consider possible effects on both short- and long-term strategies.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Prepare at least 6 months of cash flow budget</b> against possible financial difficulties. It is a good practice to overestimate just to stay safe.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider reducing the livestock numbers</b> by selling them to minimise the maintenance because there is no exact way to predict the duration of drought.</a></h5></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							
-							
-							<div class="item d-flex align-items-stretch">
-								<div class="wrap">
-									<div class="container measures-wrap">
-										<div class="row">
-											<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
-												<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/grassland-header.jpeg);">
-													<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
-													<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
-														<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
-															<h1 class="bread" style=" font-size: 30px;">Grassland Situation</h1>
-														</div>
-													</div>
-												</div>
-											</div>
-											
-											<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider the effects of the strategy on the grassland pastures</b> and soil in a long run. It is important to ensure that soil heals well before using it for grazing.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a>During the drought, <b>livestock</b>, like cattle, <b>may cause more damage to soil, native vegetation, and flora species.</b> It is advised to keep the situation under control.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a>Give at least few weeks to <b>allow grassland to regrow and recover</b>, during the autumn break, by the use of effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>.</a></h5></div>
-												</div>
-												
-												<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
-													<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
-														<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
-													</div>
-													<div class="d2" style="padding-top: 5px;"><h5><a><b>Plant more trees</b> to allow its roots to keep the soil moist for a longer period of time.</a></h5></div>
-												</div>
-											</div>
+										
+										<div class="card-custom d-flex align-items-center justify-content-center">
+											TAP TO VIEW
 										</div>
 									</div>
 								</div>
 								
+								<div class="card-back">
+									<div class="card-body">
+										<h4 class="card-title"><b>Drought Loans</b></h4>
+										<h5 class="card-text">Government can provide up to $2 million loan any time during drought seasons. Refer to Australian government website to learn more.</h5>
+										
+										<button onclick="location.href='https://www.ric.gov.au/drought'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
+									</div>
+								</div>
 							</div>
 						</div>
+						
+						
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+							<div class="card card-flip h-100 w-100 bg-light">
+								<div class="card-front text-white">
+									<div class="services text-center">
+										<div class="icon d-flex justify-content-center align-items-center">
+											<span class="flaticon-eco-friendly"></span>
+										</div>
+										
+										<div class="text" style="padding-bottom:25px;">
+											<h4><b>Community Support</b></h4>
+											<h5>All eligible farm owners can get support from charities</h5>
+										</div>
+										
+										<div class="card-custom d-flex align-items-center justify-content-center">
+											TAP TO VIEW
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-back">
+									<div class="card-body">
+										<h4 class="card-title"><b>Community Support</b></h4>
+										<h5 class="card-text">Support can be provided after evaluating the severity, economic impact, and the damage done. Refer to Australian government website to learn more.</h5>
+										
+										<button onclick="location.href='https://www.regional.gov.au/regional/programs/drought-communities.aspx'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+							<div class="card card-flip h-100 w-100 bg-light">
+								<div class="card-front text-white">
+									<div class="services text-center">
+										<div class="icon d-flex justify-content-center align-items-center">
+											<span class="flaticon-mental-health"></span>
+										</div>
+										
+										<div class="text" style="padding-bottom:25px;">
+											<h4><b>Health Support</b></h4>
+											<h5>Government's priority is the wellbeing of Australian farmers</h5>
+										</div>
+										
+										<div class="card-custom d-flex align-items-center justify-content-center">
+											TAP TO VIEW
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-back">
+									<div class="card-body">
+										<h4 class="card-title"><b>Health Support</b></h4>
+										<h5 class="card-text">Various hotlines are provided to get immediate support. Drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.</h5>
+										
+										<button onclick="location.href='https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-3 col-xxxl-3 d-flex align-items-stretch pt-3">
+							<div class="card card-flip h-100 w-100 bg-light">
+								<div class="card-front text-white">
+									<div class="services text-center">
+										<div class="icon d-flex justify-content-center align-items-center">
+											<span class="flaticon-water-tank"></span>
+										</div>
+										
+										<div class="text" style="padding-bottom:25px;">
+											<h4><b>Water Infrastructure</b></h4>
+											<h5>Government provides rebates for water infrastructure utilised by the farms</h5>
+										</div>
+										
+										<div class="card-custom d-flex align-items-center justify-content-center">
+											TAP TO VIEW
+										</div>
+									</div>
+								</div>
+								
+								<div class="card-back">
+									<div class="card-body">
+										<h4 class="card-title"><b>Water Infrastructure</b></h4>
+										<h5 class="card-text">Up to additional $50 million of funding are provided to farmers to support the expansion. Visit Australian government website now, to learn more.</h5>
+										
+										<button onclick="location.href='https://www.agriculture.gov.au/water/national/on-farm-infrastructure-rebate'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
 					</div>
+					<h5 class="pull-right"><u><i><a href="https://www.agriculture.gov.au/ag-farm-food/drought">Learn more</i></u></a></h5>
 				</div>
+			</div>
+		</section>
+		
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+			<div class="container">
+						<div class="container" style="padding-top: 4em;">
+							<div class="row justify-content-center">
+								<div class="col-md-12 text-center heading-section">
+									<h2>PREPARE YOURSELF FOR DROUGHT</h2>
+									<span class="mb-4 subheading">The following actions need to be taken to prepare for drought</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="carousel-farmer-actions owl-carousel ftco-owl">
+									
+									<div class="item d-flex align-items-stretch">
+										<div class="wrap">
+											<div class="container measures-wrap">
+												<div class="row">
+													<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+														<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-livestock.jpeg);">
+															<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+															<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+																<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+																	<h1 class="bread" style=" font-size: 30px;">Livestock Situation</h1>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a>Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a>Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.</a></h5></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="item d-flex align-items-stretch">
+										<div class="wrap">
+											<div class="container measures-wrap">
+												<div class="row">
+													<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+														<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-mental.jpg);">
+															<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+															<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+																<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+																	<h1 class="bread" style=" font-size: 30px;">Health Situation</h1>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Drought is not the end of the world.</b> It is important to keep yourself safe and avoid stressing out.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Have a place, where you and your family members can bond together</b>, forget about the business for a second, and relax.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Read books, watch TV, enjoy your free time</b> even if it is not the best time, and most importantly do not keep thoughts to yourself - always discuss them with someone.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a>Most importantly, <b>the Australian government is here to help</b> and to support you. Read below what the government does.</a></h5></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<div class="item d-flex align-items-stretch">
+										<div class="wrap">
+											<div class="container measures-wrap">
+												<div class="row">
+													<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+														<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-strategy.jpg);">
+															<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+															<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+																<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+																	<h1 class="bread" style=" font-size: 30px;">Effective Strategy</h1>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>, try to remove <span onclick="window.location.href='invasive-species.php';" style="cursor: pointer; color: #4e9525;"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span> to allow grassland to heal.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.</a></h5></div>
+														</div>
+													</div>
+												</div>
+											</div>	
+										</div>
+									</div>
+									
+									<div class="item d-flex align-items-stretch">
+										<div class="wrap">
+											<div class="container measures-wrap">
+												<div class="row">
+													<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+														<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/header-finance.jpg);">
+															<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+															<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+																<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+																	<h1 class="bread" style=" font-size: 30px;">Financial Situation</h1>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>List out</b> all <b>physical and financial resources of the farm</b> to consider possible effects on both short- and long-term strategies.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Prepare at least 6 months of cash flow budget</b> against possible financial difficulties. It is a good practice to overestimate just to stay safe.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider reducing the livestock numbers</b> by selling them to minimise the maintenance because there is no exact way to predict the duration of drought.</a></h5></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+									
+									<div class="item d-flex align-items-stretch">
+										<div class="wrap">
+											<div class="container measures-wrap">
+												<div class="row">
+													<div class="col-md-12 prevent-measures-header align-items-center justify-content-center">
+														<div class="hero-wrap hero-wrap2 prevent-measures-img prevent-measures-round-corners" style="background-image: url(images/drought/action-plan/grassland-header.jpeg);">
+															<div class="overlay prevent-measures-round-corners" style="opacity: 0.2;"></div>
+															<div class="prevent-measures-round-corners no-gutters slider-text align-items-end justify-content-center" style="padding:0px;">
+																<div class="col-md-12 text-center" style="position: absolute; bottom: 18px; right: 0; left: 0;">
+																	<h1 class="bread" style=" font-size: 30px;">Grassland Situation</h1>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													<div class="col-md-12 bg-light measures-list custom-scrollbar-css" style="height: 350px; padding: 0px; padding-top: 20px;">
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Consider the effects of the strategy on the grassland pastures</b> and soil in a long run. It is important to ensure that soil heals well before using it for grazing.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a>During the drought, <b>livestock</b>, like cattle, <b>may cause more damage to soil, native vegetation, and flora species.</b> It is advised to keep the situation under control.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a>Give at least few weeks to <b>allow grassland to regrow and recover</b>, during the autumn break, by the use of effective <span onclick="window.location.href='techniques.php';" style="cursor: pointer; color: #4e9525;"><u><i>grazing techniques</u></i></span>.</a></h5></div>
+														</div>
+														
+														<div class="col-md-12" style="padding-bottom: 20px; padding-left: 86px; padding-right: 20px;">
+															<div class="icon d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+																<i class="fa fa-check" style="font-size: 35px;" aria-hidden="true"></i>
+															</div>
+															<div class="d2" style="padding-top: 5px;"><h5><a><b>Plant more trees</b> to allow its roots to keep the soil moist for a longer period of time.</a></h5></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
 			</div>
 		</section>
 		
