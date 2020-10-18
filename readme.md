@@ -8,6 +8,24 @@
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)
 **Audience:** English speaking farmers age 30-45  
 
+# Team members
+- **Maxim Zaika**
+  - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
+  - *Role in the team: leader, project manager, researcher, and web developer*
+  - *Linkedin: to-be-added*
+- **Minjia Ji**
+  - *Education: Masters in Business Information Systems*
+  - *Role in the team: business analyst and researcher*
+  - *Linkedin: to-be-added*
+- **Chongyang Liu**
+  - *Education: Masters in Data Science*
+  - *Role in the team: network & security and web developer*
+  - *Linkedin: to-be-added*
+- **ChiHang Li**
+  - *Education: Masters in Information Systems*
+  - *Role in the team: web developer and data analyst*
+  - *Linkedin: to-be-added*
+  
 ## Programming languages
 
 * HTML, PHP, JavaScript, jQuery, CSS, SCSS
@@ -20,7 +38,7 @@ Responsive mobile website developed by the Monash University students for 'FIT51
  Developers tried their best to utilise copyright/royalty free resources. No help was provided by anyone since this problem is relatively new in Australia. 
  In total, project consisted of 3 iterations in the span of 3 months.
 	
-## Project itererations
+## Project iterations
 
 ### [Iteration 1](https://amazing-grazing.ml/iteration1)
 
@@ -55,9 +73,9 @@ On top of that, users can download brochures of the prevantative measures for th
 
 ## Licence / Copyright
 
-1. HTML5/Bootstrap 4 template provided by [Colorlib](https://colorlib.com/wp/templates/)
-2. Icons retrieved from the [Flaticon](https://www.flaticon.com/)
-3. Images retrieved from:
-  * [Unsplash](https://unsplash.com/)
-  * [Stockfreeimages](https://www.stockfreeimages.com/)
-  * [Pibxabay](https://pixabay.com/)
+- HTML5/Bootstrap 4 template provided by [Colorlib](https://colorlib.com/wp/templates/)
+- Icons retrieved from the [Flaticon](https://www.flaticon.com/)
+- Images retrieved from:
+  - [Unsplash](https://unsplash.com/)
+  - [Stockfreeimages](https://www.stockfreeimages.com/)
+  - [Pibxabay](https://pixabay.com/)
