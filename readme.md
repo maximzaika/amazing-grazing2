@@ -7,21 +7,23 @@
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)  
 
+## Programming languages
+
+* HTML, PHP, JavaScript, jQuery, CSS, SCSS
+* SQL (phpMyAdmin)
+
 ## Project description
 
 Responsive mobile website developed by the Monash University students for 'FIT5120 Industry Experience Studio Project' unit based on Bootstrap 4 platform.
  The root cause of the problem has been researched from scratch based on the information provided online.
- Developerstried their best to utilise copyright/royalty free resources. No helps was provided by anyone since this problem is relatively new in Australia.
+ Developers tried their best to utilise copyright/royalty free resources. No help was provided by anyone since this problem is relatively new in Australia. 
+ In total, project consisted of 3 iterations in the span of 3 months.
 	
-The website utilises the following languages:
-  - PHP, HTML, JavaScript, jQuery, CSS, SCSS
+## Project itererations
 
-Database:
-  - SQL developed on the phpMyAdmin platform.
+### [Iteration 1](https://amazing-grazing.ml/iteration1)
 
-The project is based on 3 iterations:
-  - Iteration 1:
-    - Description:
+
 	    - Latest news regarding grazing, wildfires, drought, and livestock. These news are the latest possible and can be filtered
 	      based on the coutnry and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3.
 	    - Grazing techniques that need to be avoided/utilised by the farmers. Animated images, developed by us, are provided with the quick
