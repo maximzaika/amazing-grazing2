@@ -23,24 +23,23 @@ Responsive mobile website developed by the Monash University students for 'FIT51
 
 ### [Iteration 1](https://amazing-grazing.ml/iteration1)
 
+* Latest news regarding grazing, wildfires, drought, and livestock. These news are the latest possible and can be filtered based on the coutnry 
+and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3.
+* Grazing techniques that need to be avoided/utilised by the farmers. Animated images, developed by us, are provided with the quick 
+bullet point information. User can read additional information regarding these techniques and is able to download brouchers.
 
-	    - Latest news regarding grazing, wildfires, drought, and livestock. These news are the latest possible and can be filtered
-	      based on the coutnry and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3.
-	    - Grazing techniques that need to be avoided/utilised by the farmers. Animated images, developed by us, are provided with the quick
-		  bullet point information. User can read additional information regarding these techniques and is able to download
-		  brouchers.
-    - URL: https://amazing-grazing.ml/iteration1
-  - Iteration 2:
-    - Description:
-	    - Improvements: bug fixes of iteration 1. Iteration 1 content has no visible change due to not keeping track of this change.
-		- Livestock statistics page cotnains the facts regarding current livestock situation in Australia based on the dataset retrieved from https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details
-		  Users are given option to sort the analysis based on the livestock. Additionally, we have provided predictions of what is going to happen in the future (like years 2030-2060).
-		  On top of that, various fact calculations are done based on the data (like beef, milk, wool, etc. remaining). Additionally, user is able to view the graph.
-		- Employment statistics shows the current employment situation of farmers responsible for dairy or beef cattles, or sheep livestock. Employment numbers are shown by state. Highest qualification
-		  and age groups are provided. The datasets retrieved from: https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313 , https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312 ,
-		  https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322 .
-		  Additionally, analysis is provided & URLs to various agricultural communities, where farmers can communicate with other farmers, are provided.
-    - URL: https://amazing-grazing.ml/iteration2
+### [Iteration 2](https://amazing-grazing.ml/iteration2)
+
+* Improvements: bug fixes of iteration 1. Iteration 1 content has no visible change due to not keeping track of this change.
+* Livestock statistics page cotnains the facts regarding current livestock situation in Australia based on the dataset retrieved 
+from [Australian government data.gov.au website](https://data.gov.au/dataset/ds-dga-1f3da692-f0cf-4de4-a7d3-bae52d600bae/details). Users are 
+given option to sort the analysis based on the livestock. Additionally, we have provided predictions of what is going to happen in the future (like years 2030-2060).
+On top of that, various fact calculations are done based on the data (like beef, milk, wool, etc. remaining). Additionally, user is able to view the graph.
+* Employment statistics shows the current employment situation of farmers responsible for dairy or beef cattles, or sheep livestock. Employment numbers are shown by state. Highest qualification
+and age groups are provided. The datasets retrieved from: [Australian government joboutlook 1](https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313),
+[Australian government joboutlook 2](https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312), 
+[Australian government joboutlook 3](https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322). Additionally, 
+analysis is provided & URLs to various agricultural communities, where farmers can communicate with other farmers, are provided.
 
 ------------- Licence / Copyright -------------
 1) HTML5/Bootstrap 4 template provided by https://colorlib.com/wp/templates/
