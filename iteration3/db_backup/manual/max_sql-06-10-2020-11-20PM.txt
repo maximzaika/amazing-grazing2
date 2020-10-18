@@ -1,0 +1,27 @@
+CREATE TABLE user_feedback (
+    feedback_id int NOT NULL AUTO_INCREMENT,
+	feedback_page varchar (100) NOT NULL,
+	feedback_date varchar(20) NOT NULL,
+	feedback_time varchar(20) NOT NULL,
+    feedback_rate int NOT NULL,
+    feedback_text varchar(800) NOT NULL,
+    PRIMARY KEY (feedback_id)
+);
+
+CREATE TABLE nav_bar (
+    nav_id int NOT NULL AUTO_INCREMENT,
+    nav_link varchar(100) NOT NULL,
+    nav_title varchar(100) NOT NULL,
+	nav_drop int NOT NULL,
+	nav_topic varchar(50) NOT NULL,
+    PRIMARY KEY (nav_id)
+);
+
+INSERT INTO nav_bar (nav_link, nav_title, nav_drop, nav_topic)
+VALUES ('index.php','Home', 0,'none'),
+	   ('news.php', 'News', 0,'none'),
+	   ('techniques.php', 'Techniques', 0,'none'),
+	   ('livestock-statistics.php', 'Livestock', 1, 'Statistics'),
+	   ('employment-statistics.php', 'Employment', 1, 'Statistics'),
+	   ('drought.php', 'Drought', 0, 'none'),
+	   ('invasive-species.php', 'Species', 0, 'none');

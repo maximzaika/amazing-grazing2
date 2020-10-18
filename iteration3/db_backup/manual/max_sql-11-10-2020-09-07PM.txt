@@ -1,0 +1,36 @@
+CREATE TABLE species_measures (
+    measures_id int NOT NULL AUTO_INCREMENT,
+	measures_icon varchar(70) NOT NULL,
+	measures_type varchar(15) NOT NULL,
+    measures_desc varchar(800) NOT NULL,
+    PRIMARY KEY (measures_id)
+);
+
+INSERT INTO species_measures (measures_icon, measures_type, measures_desc)
+VALUES ("flaticon-biology",
+		"plants",
+		"<b>Biological methods</b> are effective against many of the plants mentioned above; however, this method needs to be controlled to ensure that it does not cause damage to other areas. </b>For example:</b> Cactoblastis moth is used to control prickly pear."),
+	   ("flaticon-clean-clothes",
+	    "plants",
+		"It is important to <b>clean shoes, clothes, machinery, and livestock</b> thoroughly before approaching grassland to prevent the spread as much as possible. Humans, animals, or any type of equipment can transport invasive seeds."),
+	   ("flaticon-poison",
+	    "plants",
+		"<b>Poisoning</b> with herbicides is not just the easiest but also the most dangerous method. There is <i>a high chance of polluting creeks, streams, killing native insects, animals, vegetation, and livestock.</i>"),
+	   ("flaticon-plow",
+	    "plants",
+		"<b>Manual removal</b> and <b>ploughing in</b> are the methods that can be used on the daily basis. While manual removal is suitable against small areas, ploughing is useful against wide areas. However, <i>ploughing cannot be done during the wet weather and can cause soil erosion.</i>"),
+	   ("flaticon-biology",
+	    "animals",
+		"<b>Biological control</b> can be used to control various pests usings natural predators, disease-carrying bacteria or viruses, and parasites. <b>For example:</b> myxomatosis and rabbit calicivirus disease are used to control feral rabbits."),
+	   ("flaticon-aim",
+	    "animals",
+		"<b>Shooting</b> feral animals are one of the solutions that can be taken into a consideration. To ensure that this method is successful, hunters need to be hired to eliminate half of the animal population every year."),
+	   ("flaticon-fence",
+	    "animals",
+		"Large areas can be covered with <b>fences</b> to prevent feral animals, like cattle, goats, buffaloes, etc., from accessing pastures. <b>Electric fences</b> can be used to protect small areas of high conservation value. However, this method has a <i>high cost of building and maintaining.</i>"),
+	   ("flaticon-trap",
+	    "animals",
+		"<b>Traps</b> can be used to catch animals. It is advised to use grain as a bait to attract animals or place them around watering holes. This method is effective against feral pigs and goats. Traps need to be checked daily, so they are <i>ineffective against wide areas.</i>"),
+	   ("flaticon-poison",
+	    "animals",
+		"<b>Poison</b> can be used to control feral pigs, rabbits, and foxes. This method needs to be used with caution because <i>there are risks of poisoning non-targeted animals, livestock or plants.</i>");
