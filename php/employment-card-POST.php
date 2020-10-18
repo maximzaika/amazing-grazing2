@@ -63,8 +63,10 @@
 	$random_button = '_' . rand(10,1000) . '_button'; // Creates the ID of each button to make it unique
 	
 	// Initializes the card creation
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'.
-							   '<div class="services text-center" style="padding-bottom: 10px; height:100%;">'.
+	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'.
+							   '<div class="item d-flex align-items-stretch">'.
+							   '<div class="wrap">'.
+							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_farmer.'"></span>'.
 								 '</div>'.
@@ -176,7 +178,8 @@
 								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
-							  '</div>';
+							  '</div>'.
+							 '</div>';
 	
 	// --------------------------------- Highest qualification 2011 ---------------------------------
 	$sql_educ_beef_2011 = "SELECT emp_educ_qual, 
@@ -219,8 +222,10 @@
 
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. // col-xs-12 col-sm-12 col-md-6
-							   '<div class="services text-center" style="padding-bottom: 10px; height:100%;">'.
+	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. // col-xs-12 col-sm-12 col-md-6
+							   '<div class="item d-flex align-items-stretch">'.
+							   '<div class="wrap">'.
+							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_mortarboard.'"></span>'.
 								 '</div>'.
@@ -332,7 +337,8 @@
 								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
-							  '</div>';
+							  '</div>'.
+							 '</div>';
 							  
 							  
 							  
@@ -448,8 +454,10 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . '<div style="padding-bottom:40px;" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. //col-xs-12 col-sm-12 col-md-6
-							   '<div class="services text-center" style="padding-bottom: 10px; height:100%;">'.
+	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. //col-xs-12 col-sm-12 col-md-6
+							   '<div class="item d-flex align-items-stretch">'.
+							   '<div class="wrap">'.
+							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_age.'"></span>'.
 								 '</div>'.
@@ -577,7 +585,8 @@
 								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
-							  '</div>';
+							  '</div>'.
+							 '</div>';
 	
 	
 	echo json_encode(array("card"=>$all_cards,

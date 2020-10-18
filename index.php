@@ -90,28 +90,27 @@
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
-					<div class="col-md-5">
+					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
 							<p class="text-justify">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
-													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
-													It cannot be prevented but must be controlled.
-													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
+													These impacts cannot be prevented but can be controlled.
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
 						</div>
 					</div>
 			  
-					<div class="col-md-7">
+					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4 ml-md-5">
-							<h2 class="ftco-heading-2">Areas of interest</h2>
+							<h2 class="logo"><a href="#">Our <span>services</span></a></h2>
 							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought.</a></li>
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news.</a></li>
 								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
 								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
-								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate are reducing and require attention.</a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing and requires attention.</a></li>
+								<li><a href="drought.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Learn drought locations, impacts, and solutions.</a></li>
 								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Invasive species overgraze the land and compete with livestock.</a></li>
-								<li><a href="drought.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought.</a></li>
-								<!--<li><a href="wip.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Drought tracking to predict upcoming drought seasons to preserve soil and grasslands.</a></li>-->
 							</ul>
 						</div>
 					</div>

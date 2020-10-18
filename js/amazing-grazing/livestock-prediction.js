@@ -180,6 +180,36 @@ $(function(){
 		return content;
 	}
 	
+	function enableCarousel(owl, number2, number) {
+		owl.owlCarousel({
+			center: true,
+			loop: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			mouseDrag: false,
+			nav: true,
+			//autoplay: true,
+			//autoplayHoverPause: true,
+			//autoplayTimeout: 5000,
+			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 2
+				},
+				1000:{
+					items: number2
+				},
+				1600:{
+					items: number
+				}
+			}
+		});
+	}
+	
 	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
 	var owl = $('.carousel-services');
 	/* This function 1) changes the value of the year selection button, 
@@ -214,7 +244,6 @@ $(function(){
 
 			if (executeCarousel == 1) {	//execute carousel after updating the fulters
 				owl.data('owl.carousel').destroy(); 
-				console.log('attempt to destroy owl');
 			}
 			
 			$("#prediction-data").empty(); // clear the div container
@@ -293,6 +322,7 @@ $(function(){
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text, patch_burn);
 						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
+						enableCarousel(owl, 2, 3);
 					} else if (check_active == "false true false false") {
 						var latestYr = current_dairy_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_dairy_qty * 1000000; // selected livestock number - qty
@@ -307,6 +337,7 @@ $(function(){
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text, rotational);
 						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
+						enableCarousel(owl, 2, 3);
 					} else if (check_active == "false false true false") {
 						var latestYr = current_sheep_qty * 1000000; //current year sheep - qty
 						var selYr = selected_sheep_qty * 1000000; //selected year sheep - qty
@@ -325,6 +356,7 @@ $(function(){
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
 						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep, preview_land, modal_land_title, modal_land_text, techniques);
 						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
+						enableCarousel(owl, 3, 3);
 					} else if (check_active == "true false true false") {
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
@@ -353,6 +385,7 @@ $(function(){
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
+						enableCarousel(owl, 3, 4);
 					} else if (check_active == "true true false false") {
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr_beef = selected_beef_qty * 1000000; // selected livestock number - qty
@@ -377,6 +410,7 @@ $(function(){
 						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
+						enableCarousel(owl, 3, 4);
 					} else if (check_active == "false true true false") { 
 						var latestYr_dairy = current_dairy_qty * 1000000; // latest livestock number - qty
 						var selYr_dairy = selected_dairy_qty * 1000000; // selected livestock number - qty
@@ -405,6 +439,7 @@ $(function(){
 						document.getElementById("prediction-data").innerHTML =  dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
+						enableCarousel(owl, 3, 4);
 					} else if (check_active == "false false false true") {
 						var latestYr = current_total_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_total_qty * 1000000; // selected livestock number - qty
@@ -442,6 +477,7 @@ $(function(){
 						document.getElementById("prediction-data").innerHTML = totalQTY + milkQTY +
 																				beefMeatQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
+						enableCarousel(owl, 3, 4);
 						
 					} else { // true true true false
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
@@ -480,6 +516,7 @@ $(function(){
 																				dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
+						enableCarousel(owl, 3, 4);
 					}
 					
 					/* Enable number count */
@@ -488,34 +525,6 @@ $(function(){
 						time: 500
 					});
 					
-					owl.owlCarousel({
-						center: true,
-						loop: true,
-						items:1,
-						margin: 30,
-						stagePadding: 0,
-						mouseDrag: false,
-						nav: true,
-						//autoplay: true,
-						//autoplayHoverPause: true,
-						//autoplayTimeout: 5000,
-						navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-						responsive:{
-							0:{
-								items: 1
-							},
-							600:{
-								items: 2
-							},
-							1000:{
-								items: 3
-							},
-							1600:{
-								items: 4
-							}
-						}
-					});
-
 					executeCarousel = 1; // enable executing of more than 2 carousels after selecting filters
 
 					/* control the height of the cards 

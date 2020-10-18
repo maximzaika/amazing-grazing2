@@ -55,6 +55,7 @@
 				</button>
 			  </div>
 			  <div class="modal-body" style="z-index: 1000;">
+				<h5><i>Note: livestock selection is based on the options selected before</i></h5>
 				<div id="tableau-chart2" class="container" style="padding-left: 0px; padding-right: 0px;">
 					<!--Graph content goes here. It gets updated based on user selection choice -->
 				</div>
@@ -89,7 +90,7 @@
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
-						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Livestock Statistics </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Livestock Stats </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
 						<hr>
 					</div>
 				</div>
@@ -102,13 +103,13 @@
 			<div class="container">
 				<div class="row ">
 					<!-- Spinner containing livestock, beef, milk, wool, land use -->
-					<div class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 align-items-center overflow-hidden">
+					<div class="col-md-12 col-lg-7 col-xl-6 col-xxl-5 order-xxs-2 order-lg-1 align-items-center overflow-hidden hide-circle">
 						<?php echo htmlspecialchars_decode($spinner_full);?>
 					</div> 
 					<!-- End Spinner containing livestock, beef, milk, wool, land use -->
 					
 					<!-- Livestock reducting impacts grasslands section -->
-					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7">
+					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7 order-xxs-1 order-lg-2">
 						<?php echo htmlspecialchars_decode($live_intro);?>
 					</div>
 					<!-- End Livestock reducting impacts grasslands section -->
@@ -174,22 +175,25 @@
 				<div class="row mb-5">
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
-							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
-								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing. Attention is required! <u>Click to find out more.</u></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
 							<p class="text-justify">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
-													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
-													It cannot be prevented but must be controlled.
-													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
+													These impacts cannot be prevented but can be controlled.
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+						</div>
+					</div>
+			  
+					<div class="col-md-6">
+						<div class="ftco-footer-widget mb-4 ml-md-5">
+							<h2 class="logo"><a href="#">Our <span>services</span></a></h2>
+							<ul class="list-unstyled">
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news.</a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="employment-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Employment rate is reducing and requires attention.</a></li>
+								<li><a href="drought.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Learn drought locations, impacts, and solutions.</a></li>
+								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Invasive species overgraze the land and compete with livestock.</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>

@@ -640,16 +640,25 @@ img.techn-img{
 	  line-height: 2em;
   }
 
+.hide-circle {
+	  display: inline;
+}
+
 @media only screen and (min-width:600px) and (max-width:767px) { }
 @media only screen and (min-width:768px) and (max-width:991px) { }
 @media only screen and (min-width:992px) and (max-width:1199px) { }
 @media only screen and (min-width:1200px) and (max-width:1499px) { }	
 @media only screen and (min-width:300px) and (max-width:599px) {
+	.hide-circle {
+		  display: none;
+	}
+
 	.holderCircle {
 		width: 350px;
 		height: 350px;
-		margin: 110px auto;
+		margin: 0px;
 	}
+
 	.holderCircle::after {
 		width: 100%;
 		height: 100%;
@@ -713,7 +722,7 @@ img.techn-img{
 	.CirItem.active {
 		z-index: 1;
 		opacity: 1;
-		transform: scale(0.9);
+		transform: scale(0.85);
 		transition: 0.5s;
 	}
 	.contentCircle .CirItem i {

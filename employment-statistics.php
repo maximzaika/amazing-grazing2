@@ -66,7 +66,7 @@
 			<div class="container" style="padding-top: 15px;">
 				<div class="row">
 					<div class="col-md-12 pull-left">
-						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Employment Statistics </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
+						<h5 class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span><span><u><i>Employment Stats </i><i class="ion-ios-arrow-forward"></i></u></span></h5>
 						<hr>
 					</div>
 				</div>
@@ -134,13 +134,9 @@
 				<!-- End Buttons, graph & source -->
 				
 				<!-- Card section-->
-				<div  class="container">
-					<div class="row">
-						<div class="col-lg-12 services-wrap">
-							<div id="cards-data" class="row pt-md-3"> 
-								<!-- Cards will be inserted here -->
-							</div>
-						</div>
+				<div class="container">
+					<div id="cards-data" class="carousel-services owl-carousel ftco-owl pt-md-3"> 
+						<!-- Cards will be inserted here -->
 					</div>
 				</div>
 				<!-- End Card section-->
@@ -171,29 +167,31 @@
 		</section>
 		<!-- End Section 4: AGRICULTURAL COMMUNITIES -->
 		
-		
 		<!-- Section 5: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="logo"><a href="#"><span>Educate</span> yourself <span>more</span></a></h2>
-							<ul class="list-unstyled">
-								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news regarding grazing, wildfires, livestock, and drought. <u>Click to find out more.</u></a></li>
-								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Use appropriate grazing techniques to keep grasslands safe. <u>Click to find out more.</u></a></li>
-								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing. Attention is required! <u>Click to find out more.</u></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
 							<p class="text-justify">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
-													The cause of it are ineffective grazing techniques, reduction of educated farmers, and droughts.
-													It cannot be prevented but must be controlled.
-													Objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
+													These impacts cannot be prevented but can be controlled.
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+						</div>
+					</div>
+			  
+					<div class="col-md-6">
+						<div class="ftco-footer-widget mb-4 ml-md-5">
+							<h2 class="logo"><a href="#">Our <span>services</span></a></h2>
+							<ul class="list-unstyled">
+								<li><a href="news.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Stay up-to-date with recent news.</a></li>
+								<li><a href="techniques.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Various grazing techniques that should be practiced by the farmers.</a></li>
+								<li><a href="livestock-statistics.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Livestock numbers are reducing and require attention.</a></li>
+								<li><a href="drought.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Learn drought locations, impacts, and solutions.</a></li>
+								<li><a href="invasive-species.php" class="py-1 d-block text-justify"><span class="ion-ios-arrow-forward mr-3"></span>Invasive species overgraze the land and compete with livestock.</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -241,11 +239,11 @@
 		<script type='text/javascript'> // Trigger map and cards when page is loaded
 			/* Added in iteration 3 - Owl-carousell settings so that when hover over, it would pause rotation */
 			var block = false;
-			var owl = $('.owl-carousel');
+			var owl1 = $('.carousel-testimony');
 			$(".owl-item").mouseenter(function(){
 				if(!block) {
 					block = true;
-					owl.trigger('stop.owl.autoplay');
+					owl1.trigger('stop.owl.autoplay');
 					block = false;
 				}
 			});
@@ -253,7 +251,7 @@
 			$(".owl-item").mouseleave(function(){
 				if(!block) {
 					block = true;
-					owl.trigger('play.owl.autoplay',[4000]);
+					owl1.trigger('play.owl.autoplay',[4000]);
 					block = false;
 				}
 			});
@@ -268,7 +266,7 @@
 			                      /* Added in iteration 3 */
 			$(document).ready(function(){
 				/* Added in iteration 3 - Enables auto play on the carousel */
-				owl.trigger('play.owl.autoplay',[4000]); 
+				owl1.trigger('play.owl.autoplay',[4000]); 
 				
 				/* Triggers a click on the drop down employment type selection */
 				var emp_type = document.getElementById("drop-employment").textContent;
@@ -287,6 +285,12 @@
 				$(emp_type_select).trigger("click");
 				
 				execute_once++;
+				
+				var maxHeight = 0;
+				$(".testimony-wrap").each(function(){
+					maxHeight = Math.max(maxHeight, $(this).height());  
+				});
+				$(".testimony-wrap").height(maxHeight);
 			});
 		</script>
 		<script type='text/javascript'>					

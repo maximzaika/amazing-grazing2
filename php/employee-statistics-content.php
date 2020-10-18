@@ -48,10 +48,10 @@
 			}
 		}
 		
-		$emp_landing = '<div class="col-md-6 d-flex">'.
+		$emp_landing = '<div class="col-md-6 d-flex order-xxs-2 order-lg-1">'.
 						$emp_vid.
 					   '</div>'.
-					   '<div class="col-md-6 pl-md-5">'.
+					   '<div class="col-md-6 pl-md-5 order-xxs-1 order-lg-2">'.
 						'<div class="row justify-content-start py-5">'.
 							'<div class="col-md-12 heading-section ftco-animate">'.
 								$emp_cont.
@@ -82,7 +82,7 @@
 				$emp_agri = $emp_agri . '<div class="item">'.
 											'<div class="testimony-wrap py-4">'.
 												'<div class="text">'.
-													'<h5>'.$employee_agri_description.'</h5>'.
+													'<h5 class="community-text">'.$employee_agri_description.'</h5>'.
 													'<div class="d-flex align-items-center">'.
 														'<div class="user-img" style="background-image: url('.$employee_agri_img.')"></div>'.
 														'<div class="pl-3">'.
