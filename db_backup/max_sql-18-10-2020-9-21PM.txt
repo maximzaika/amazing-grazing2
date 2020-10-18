@@ -1,0 +1,31 @@
+CREATE TABLE drought_government (
+    govern_id int NOT NULL AUTO_INCREMENT,
+    govern_ico varchar(50),
+    govern_title varchar(100) NOT NULL,
+    govern_fron_descr varchar(150) NOT NULL,
+	govern_back_descr varchar(250) NOT NULL,
+	govern_url varchar(150) NOT NULL,
+    PRIMARY KEY (govern_id)
+);
+
+INSERT INTO drought_government (govern_ico, govern_title, govern_fron_descr, govern_back_descr, govern_url)
+VALUES ('flaticon-mortgage-loan',
+        'Drought Loans',
+		'All eligible farm owners can get a loan',
+		'The government can provide up to $2 million in loans at any time during drought seasons. Refer to the Australian government website to learn more.',
+        'https://www.ric.gov.au/drought'),
+	   ('flaticon-eco-friendly',
+	    'Community Support',
+		'All eligible farm owners can get support from charities',
+		'Support can be provided after evaluating the severity, economic impact, and the damage was done. Refer to the Australian government website to learn more.',
+		'https://www.regional.gov.au/regional/programs/drought-communities.aspx'),
+	   ('flaticon-mental-health',
+	    'Health Support',
+		'The overnment\'e provided to get immediate support. Drought sis priority is the wellbeing of Australian farmers',
+		'Hotlines are provided to get immediate support. The drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.',
+		'https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'),	
+	   ('flaticon-water-tank',
+	    'Water Infrastructure',
+		'The government provides rebates for water infrastructure utilised by the farms',
+		'Up to an additional $50 million of funding is provided to farmers to support the expansion. Visit the Australian government website now, to learn more.',
+		'https://www.agriculture.gov.au/water/national/on-farm-infrastructure-rebate');
