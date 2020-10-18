@@ -41,7 +41,8 @@ CREATE TABLE `news_region_content` (
 INSERT INTO `news_region_content` (`news_reg_id`, `news_reg_label`, `news_reg_topic`) VALUES
 (1, 'R_au_Australia', 'Australia'),
 (2, 'R_ca_Canada', 'Canada'),
-(3, 'R_eu_Europe', 'Europe'),
+(3, 'R_nz_New Zealand', 'New Zealand'),
+(4, 'R_uk_United Kingdom', 'United Kingdom'),
 (4, 'R_us_United States', 'United States');
 COMMIT;
 
