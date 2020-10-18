@@ -81,6 +81,7 @@
 					</div>
 				</div>
 				
+				<h5><b>Note: </b>News are generated based on the ranking in each country. There is a chance for them to be repeated.</h5>
 				<!-- News Navigation (Select topic, select start date, select region) -->
 				<?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 		
