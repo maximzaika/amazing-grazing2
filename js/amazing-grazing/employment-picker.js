@@ -256,11 +256,11 @@ $(function(){
 					});
 					$(".community-text").height(maxHeight);
 					
-					/*var maxHeight = 0;
+					var maxHeight = 0;
 					$(".card-height").each(function(){
 						maxHeight = Math.max(maxHeight, $(this).height());  
 					});
-					$(".card-height").height(maxHeight);*/
+					$(".card-height").height(maxHeight);
 					
 					
 				},
