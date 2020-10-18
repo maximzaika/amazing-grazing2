@@ -351,7 +351,6 @@
 			function removeHeight(cardID) {
 				if (countClick == 0) {
 					maximumHeight = ($('#'+cardID).css('height').substr(0,3)); // get the original height
-					console.log(maximumHeight);
 					countClick++;
 				}
 				
@@ -405,10 +404,8 @@
 				*/
 				
 				check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
-				console.log('currently active >' + check_active);
 				
 				var yearContent = document.getElementById("drop-year").textContent;
-				console.log('year active > ' + yearContent);
 				
 				$.ajax({ // receive the gallery content from the database
 					type: "POST",

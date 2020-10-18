@@ -216,7 +216,7 @@
 								<div class="card-back bg-light">
 									<div class="card-body">
 										<h4 class="card-title"><b>Health Support</b></h4>
-										<h5 class="card-text">Various hotlines are provided to get immediate support. Drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.</h5>
+										<h5 class="card-text">Hotlines are provided to get immediate support. Drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.</h5>
 										
 										<button onclick="location.href='https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'" type="button" class="btn btn-topic text-center btn-amazing-techniques" style="padding-left: 30px; padding-right: 30px;">Learn more</button>
 									</div>

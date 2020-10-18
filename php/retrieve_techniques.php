@@ -63,7 +63,7 @@
 											'<div class="d-flex justify-content-center">'.
 												'<div class="container">'.
 													'<div style="position: absolute; bottom: 42px; left: 0; right: 0;">'.
-														'<button class="btn btn-primary location-button" type="button" data-toggle="modal" style="margin-right:10px;" data-target="#'.$techn_target.'">'.
+														'<button class="btn '.$techn_target.' btn-primary location-button" type="button" data-toggle="modal" style="margin-right:10px;" data-target="#'.$techn_target.'">'.
 															'<i class="fa fa-book" aria-hidden="true"></i> Read more'.
 														'</button>'.
 														
@@ -194,12 +194,12 @@
 												'<div class="container">'.
 													'<div class="row">'.
 														'<div class="col-md-12">'.
-															'<div class="carousel-seasonal owl-carousel ftco-owl">';
+															'<div class="carousel-seasons owl-carousel ftco-owl">';
 							
 							for ($i=0;$i<$countContent;$i++) {
 								$technContent = $technContent .
 																'<div class="item">'.
-																	'<div class="wrap">'.
+																	'<div class="wrap bg-light ">'.
 																		'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$selected_indiv_images[$i].');"></div>'.
 																		'<div class="text text-center px-4">'.
 																			'<h3>'.$selected_indiv_titles[$i].'</h3>'.
