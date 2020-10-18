@@ -1,11 +1,11 @@
 # Protecting Australian Grassland
 
-**Start date:** August 6th, 2020
-**End date:** November 6th, 2020
+**Start date:** August 6th, 2020  
+**End date:** November 6th, 2020  
 
-**Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters
-**Website:** [amazing grazing website](https://amazing-grazing.ml/)
-**Product video:** [Amazing Grazing Youtube Product Video](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)
+**Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
+**Website:** [amazing grazing website](https://amazing-grazing.ml/)  
+**Product video:** [Amazing Grazing Youtube Product Video](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)  
 
 Project description:
   - Responsive mobile website developed by the Monash University students for 'FIT5120 Industry Experience Studio Project' unit based on Bootstrap 4 platform.
