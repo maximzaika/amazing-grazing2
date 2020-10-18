@@ -8,12 +8,11 @@
 	function newsGenerator($data, $total, $sort) {
 		$newsMonth = array('January','February','March','April','May','June','July','August','September','October','November','December');
 		$total--;
-		
 		$full_news = '';
 		
 		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
-			/* Loop through the number of articles available based on teh sort method */
+			/* Loop through the number of articles available based on the sort method */
 			if ($sort == "old-to-new") {
 				for ($i=$data['articleCount']-1; $i>-1; $i--) {
 					$articleTitle = $data['articles'][$i]['title'];
@@ -55,7 +54,8 @@
 						'</div>';
 				}
 			} else {
-				for ($i=0; $i<$data['articleCount']-1; $i++) {
+				if ($data['articleCount'] > 0) {
+					for ($i=0; $i<=$data['articleCount']-1; $i++) {
 					$articleTitle = $data['articles'][$i]['title'];
 					$articleDescr = $data['articles'][$i]['description'];
 					$articleUrl = $data['articles'][$i]['url'];
@@ -93,11 +93,13 @@
 							'</div>'.
 						  '</div>'.
 						'</div>';
+					}
 				}
+				
 			}
 		} else {
 			if (($data['articleCount'] == 0) && (isset($data['articleCount']) == 1)) {
-				$full_news = "There are no news available based on your search criteria. Please, select another date.";
+				$full_news = "There are no news available based on your search criteria. Please, change your options.";
 			}
 			
 			if (isset($data['articleCount']) == 0) {
@@ -135,7 +137,6 @@
 		}
 	}
 	
-	
 	$totalNews = 10;
 	$topicName = $_POST['receivedNewsTopic'];
 	$regionName = $_POST['receivedNewsRegion'];
@@ -163,5 +164,6 @@
     
 	$newsData = json_decode($newsData, true); /* Decode the json format into a readable table */
 	$newsHTML = newsGenerator($newsData, $totalNews, $sortDate); /* Execute the function to scan through the news and create HTMLK readable format */
-	echo json_encode(array("newsHTML"=>$newsHTML)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
+	echo json_encode(array("newsHTML"=>$newsHTML,
+							"api"=>$googleAPIurl)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
 ?>

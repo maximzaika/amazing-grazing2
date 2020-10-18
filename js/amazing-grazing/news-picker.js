@@ -26,7 +26,6 @@ $(function(){
 			if (startDate == "Sort Oldest to Newest") { startDatexxx = "old-to-new" }
 		}
 		
-		
 		if (receivedNewsData.substr(0, 2) == "S_") {
 			var length = receivedNewsData.length; /* Get the length of the text so that we know where it ends */
 			var sortName = receivedNewsData.substr(2, length); /* Select the string up to the end of length ignoring S_ */
@@ -44,35 +43,25 @@ $(function(){
 		if (receivedNewsData.substr(0, 5) == "enter") {
 			var topicName = document.querySelector('#drop-topic').textContent;
 			var regionName = document.querySelector('#drop-region').textContent;
-			
-			
-			
-			/*var startDate = sortName;*/
 		}
 		
 		if (regionName == "Australia") { regionName = "au" }
 		if (regionName == "Canada") { regionName = "ca" }
-		if (regionName == "Europe") { regionName = "eu" }
-		if (regionName == "Russia") { regionName = "ru" }
+		if (regionName == "United Kingdom") { regionName = "uk" }
+		if (regionName == "New Zealand") { regionName = "nz" }
 		if (regionName == "United States") { regionName = "us" }
-		
-		/*var startDate = document.getElementById("enter-start-date").value;*/
-		/*var endDate = document.getElementById("enter-end-date").value;*/
 			
 		$("#update-news").empty(); /*reset the news div*/
-		
-		/*$("#drop-topic").empty();*/
-		/*$("#drop-region").empty(); */
-		
+
 		$.ajax({
 			url: 'php/gnewsAPI_POST.php',
 			type: "POST",
 			dataType: 'json',
-			data: {receivedNewsTopic: topicName, /* receivedNewsData */
+			data: {receivedNewsTopic: topicName,
 			       receivedNewsRegion: regionName,
-				   receivedNewsStart: startDate
-				   /*receivedNewsEnd: endDate*/},
+				   receivedNewsStart: startDate},
 			success: function (data) {
+				console.log(data.api);
 				var newsDiv = document.getElementById('update-news');
 				newsDiv.innerHTML = data.newsHTML;
 			},
@@ -80,8 +69,6 @@ $(function(){
 				console.log(JSON.stringify(error));
 		    }
 		});
-		
-		
 	};
 	
 	$(".updateNewsJS").click(updateNewsFunc);

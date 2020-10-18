@@ -31,9 +31,6 @@
 		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/style.css">
 		
-		<!-- Added in teration 1 -->
-		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-		
 		<!-- Added in iteration 2 -->
 		<link rel="stylesheet" href="css/amazing-grazing/custom.css">
 		
@@ -160,9 +157,7 @@
 	<script src="js/main.js"></script>
   
 	<!-- Added in Iteration 1 -->
-	<script src="js/amazing-grazing/news-picker-detection.js"></script>
 	<script src="js/amazing-grazing/news-picker.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
   
 	<!-- Added in ITteration 2 -->
 	<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
@@ -171,18 +166,18 @@
 	<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 	<script type='text/javascript'> <!-- Changes the icon for the news filter in mobile version -->					
-			$("#show-filter").click(function() { // renames the filter button upon click
-				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
-				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
-				
-				var curr_text = document.getElementById("show-filter").innerHTML;
-				
-				if (curr_text == max_btn) {
-					document.getElementById("show-filter").innerHTML  = min_btn;
-				} else {
-					document.getElementById("show-filter").innerHTML  = max_btn;
-				}
-			});
-		</script>
+		$("#show-filter").click(function() { // renames the filter button upon click
+			var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
+			var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
+			
+			var curr_text = document.getElementById("show-filter").innerHTML;
+			
+			if (curr_text == max_btn) {
+				document.getElementById("show-filter").innerHTML  = min_btn;
+			} else {
+				document.getElementById("show-filter").innerHTML  = max_btn;
+			}
+		});
+	</script>
   </body>
 </html>
