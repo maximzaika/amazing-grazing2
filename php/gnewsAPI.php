@@ -14,7 +14,7 @@
 		/* Skip searching through the loop if there are no news for the criteria selected */
 		if ((isset($data['articleCount']) == 1) && ($data['articleCount'] != 0)) {
 			/* Loop through the number of articles available */
-			for ($i=0; $i<$data['articleCount']-1; $i++) {
+			for ($i=0; $i<=$data['articleCount']-1; $i++) {
 				$articleTitle = $data['articles'][$i]['title'];
 				$articleDescr = $data['articles'][$i]['description'];
 				$articleUrl = $data['articles'][$i]['url'];
@@ -55,7 +55,7 @@
 			}
 		} else {
 			if (isset($data['articleCount']) == 1) {
-				$full_news = "There are no news available based on your search criteria. Please, select another date.";
+				$full_news = "There are no news available based on your search criteria. Please, change your options.";
 			}
 			
 			if (isset($data['articleCount']) == 0) {

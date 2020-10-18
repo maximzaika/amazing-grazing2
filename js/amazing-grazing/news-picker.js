@@ -61,7 +61,7 @@ $(function(){
 			       receivedNewsRegion: regionName,
 				   receivedNewsStart: startDate},
 			success: function (data) {
-				console.log(data.api);
+				//console.log(data.api);
 				var newsDiv = document.getElementById('update-news');
 				newsDiv.innerHTML = data.newsHTML;
 			},
