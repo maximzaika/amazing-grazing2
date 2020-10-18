@@ -9,7 +9,7 @@
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)  
 **Audience:** English speaking farmers age 30-45  
 
-# Team members
+## Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
   - *Role in the team: leader, project manager, researcher, and web developer*
