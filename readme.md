@@ -65,7 +65,7 @@ analysis & URLs to various agricultural communities, where farmers can communica
 
 ### [Iteration 3](https://amazing-grazing.ml/iteration3)
 
-* Lots of improvements to iterations 1 and 2. Various bug fixes and UX improvements. Mobile is completely user friendly now on both mobile and desktop devices.
+* Lots of improvements to iterations 1 and 2. Various bug fixes and UX improvements. Mobile version is completely user friendly now on both mobile and desktop devices.
 * The drought page contains locations of drought based on the rainfall (mm). Users can learn what seasons are usually affected by drought. The dataset was retrieved from 
 [Australian Governement Bureau of Meteorology](http://www.bom.gov.au/climate/data/). Additionally, farmers can learn how drought impacts grassland, what the government does to assist them (with URLs to government 
 dedicated websites), and what they can do to protect themselves. 
