@@ -1,0 +1,126 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 18/10/2020 07:42
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-horse-grazing-black-silhouette:before { content: "\f100"; }
+.flaticon-newspaper:before { content: "\f101"; }
+.flaticon-news:before { content: "\f102"; }
+.flaticon-statistics:before { content: "\f103"; }
+.flaticon-drought:before { content: "\f104"; }
+.flaticon-milk:before { content: "\f105"; }
+.flaticon-meat:before { content: "\f106"; }
+.flaticon-livestock:before { content: "\f107"; }
+.flaticon-sheep:before { content: "\f108"; }
+.flaticon-region:before { content: "\f109"; }
+.flaticon-sheep-1:before { content: "\f10a"; }
+.flaticon-wool:before { content: "\f10b"; }
+.flaticon-teacher:before { content: "\f10c"; }
+.flaticon-chicken:before { content: "\f10d"; }
+.flaticon-man:before { content: "\f10e"; }
+.flaticon-farmer:before { content: "\f10f"; }
+.flaticon-agriculture:before { content: "\f110"; }
+.flaticon-mortarboard:before { content: "\f111"; }
+.flaticon-age:before { content: "\f112"; }
+.flaticon-bug:before { content: "\f113"; }
+.flaticon-spreading:before { content: "\f114"; }
+.flaticon-investigate:before { content: "\f115"; }
+.flaticon-animal-kingdom:before { content: "\f116"; }
+.flaticon-hunting:before { content: "\f117"; }
+.flaticon-biology:before { content: "\f118"; }
+.flaticon-aim:before { content: "\f119"; }
+.flaticon-clean-clothes:before { content: "\f11a"; }
+.flaticon-fence:before { content: "\f11b"; }
+.flaticon-trap:before { content: "\f11c"; }
+.flaticon-poison:before { content: "\f11d"; }
+.flaticon-plow:before { content: "\f11e"; }
+.flaticon-ecosystem:before { content: "\f11f"; }
+.flaticon-loss:before { content: "\f120"; }
+.flaticon-climate-change:before { content: "\f121"; }
+.flaticon-rain:before { content: "\f122"; }
+.flaticon-mortgage-loan:before { content: "\f123"; }
+.flaticon-behavior:before { content: "\f124"; }
+.flaticon-listen:before { content: "\f125"; }
+.flaticon-technology:before { content: "\f126"; }
+.flaticon-job-search:before { content: "\f127"; }
+.flaticon-eco-friendly:before { content: "\f128"; }
+.flaticon-mental-health:before { content: "\f129"; }
+.flaticon-water-tank:before { content: "\f12a"; }
+    
+    $font-Flaticon-horse-grazing-black-silhouette: "\f100";
+    $font-Flaticon-newspaper: "\f101";
+    $font-Flaticon-news: "\f102";
+    $font-Flaticon-statistics: "\f103";
+    $font-Flaticon-drought: "\f104";
+    $font-Flaticon-milk: "\f105";
+    $font-Flaticon-meat: "\f106";
+    $font-Flaticon-livestock: "\f107";
+    $font-Flaticon-sheep: "\f108";
+    $font-Flaticon-region: "\f109";
+    $font-Flaticon-sheep-1: "\f10a";
+    $font-Flaticon-wool: "\f10b";
+    $font-Flaticon-teacher: "\f10c";
+    $font-Flaticon-chicken: "\f10d";
+    $font-Flaticon-man: "\f10e";
+    $font-Flaticon-farmer: "\f10f";
+    $font-Flaticon-agriculture: "\f110";
+    $font-Flaticon-mortarboard: "\f111";
+    $font-Flaticon-age: "\f112";
+    $font-Flaticon-bug: "\f113";
+    $font-Flaticon-spreading: "\f114";
+    $font-Flaticon-investigate: "\f115";
+    $font-Flaticon-animal-kingdom: "\f116";
+    $font-Flaticon-hunting: "\f117";
+    $font-Flaticon-biology: "\f118";
+    $font-Flaticon-aim: "\f119";
+    $font-Flaticon-clean-clothes: "\f11a";
+    $font-Flaticon-fence: "\f11b";
+    $font-Flaticon-trap: "\f11c";
+    $font-Flaticon-poison: "\f11d";
+    $font-Flaticon-plow: "\f11e";
+    $font-Flaticon-ecosystem: "\f11f";
+    $font-Flaticon-loss: "\f120";
+    $font-Flaticon-climate-change: "\f121";
+    $font-Flaticon-rain: "\f122";
+    $font-Flaticon-mortgage-loan: "\f123";
+    $font-Flaticon-behavior: "\f124";
+    $font-Flaticon-listen: "\f125";
+    $font-Flaticon-technology: "\f126";
+    $font-Flaticon-job-search: "\f127";
+    $font-Flaticon-eco-friendly: "\f128";
+    $font-Flaticon-mental-health: "\f129";
+    $font-Flaticon-water-tank: "\f12a";
