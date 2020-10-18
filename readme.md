@@ -5,7 +5,7 @@
 
 **Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
-**Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)
+**Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)  
 **Audience:** English speaking farmers age 30-45  
 
 # Team members
