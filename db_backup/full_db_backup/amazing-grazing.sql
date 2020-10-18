@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2020 at 12:22 PM
+-- Generation Time: Oct 18, 2020 at 04:44 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.33
 
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `amazing-grazing`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `drought_government`
+--
+
+CREATE TABLE `drought_government` (
+  `govern_id` int(11) NOT NULL,
+  `govern_ico` varchar(50) NOT NULL,
+  `govern_title` varchar(100) NOT NULL,
+  `govern_fron_descr` varchar(150) NOT NULL,
+  `govern_back_descr` varchar(250) NOT NULL,
+  `govern_url` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `drought_government`
+--
+
+INSERT INTO `drought_government` (`govern_id`, `govern_ico`, `govern_title`, `govern_fron_descr`, `govern_back_descr`, `govern_url`) VALUES
+(1, 'flaticon-mortgage-loan', 'Drought Loans', 'All eligible farm owners can get a loan', 'The government can provide up to $2 million in loans at any time during drought seasons. Refer to the Australian government website to learn more.', 'https://www.ric.gov.au/drought'),
+(2, 'flaticon-eco-friendly', 'Community Support', 'All eligible farm owners can get support from charities', 'Support can be provided after evaluating the severity, economic impact, and the damage was done. Refer to the Australian government website to learn more.', 'https://www.regional.gov.au/regional/programs/drought-communities.aspx'),
+(3, 'flaticon-mental-health', 'Health Support', 'The overnment\'e provided to get immediate support. Drought sis priority is the wellbeing of Australian farmers', 'Hotlines are provided to get immediate support. The drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.', 'https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'),
+(4, 'flaticon-water-tank', 'Water Infrastructure', 'The government provides rebates for water infrastructure utilised by the farms', 'Up to an additional $50 million of funding is provided to farmers to support the expansion. Visit the Australian government website now, to learn more.', 'https://www.agriculture.gov.au/water/national/on-farm-infrastructure-rebate');
 
 -- --------------------------------------------------------
 
@@ -45,6 +70,43 @@ INSERT INTO `drought_landing` (`drought_landing_id`, `drought_landing_title`, `d
 (1, 'DROUGHT IMPACTS GRASSLANDS', 'Droughts are one of the main natural hazards, which reduce grassland productivity', 'Droughts cannot be prevented and accurately predicted, but the damage that it causes can be reduced. Drought directly affects <i><u><a href=\"livestock-statistics.php\">livestock numbers</a></u></i>.', 'fa-exclamation-small fa-exclamation', 'Restricts the geographical distribution of grassland species!'),
 (2, '', '', '', 'fa-exclamation-small fa-exclamation', 'Leads to local loss of production by impacting the employment!'),
 (3, '', '', '', 'fa-exclamation-small fa-exclamation', 'Increases the chances of wildfires and grassland habitat loss!');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `drought_prepare`
+--
+
+CREATE TABLE `drought_prepare` (
+  `prepare_id` int(11) NOT NULL,
+  `prepare_img` varchar(100) DEFAULT NULL,
+  `prepare_title` varchar(50) NOT NULL,
+  `prepare_ico` varchar(50) NOT NULL,
+  `prepare_text` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `drought_prepare`
+--
+
+INSERT INTO `drought_prepare` (`prepare_id`, `prepare_img`, `prepare_title`, `prepare_ico`, `prepare_text`) VALUES
+(1, 'drought/action-plan/header-livestock.jpeg', 'Livestock Situation', 'fa fa-check', '<b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.'),
+(2, '', 'Livestock Situation', 'fa fa-check', 'Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.'),
+(3, '', 'Livestock Situation', 'fa fa-check', 'Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.'),
+(4, 'drought/action-plan/header-mental.jpg', 'Health Situation', 'fa fa-check', '<b>Drought is not the end of the world.</b> It is important to keep yourself safe and avoid stressing out.'),
+(5, '', 'Health Situation', 'fa fa-check', '<b>Have a place, where you and your family members can bond together</b>, forget about the business for a second, and relax.'),
+(6, '', 'Health Situation', 'fa fa-check', '<b>Read books, watch TV, enjoy your free time</b> even if it is not the best time, and most importantly do not keep thoughts to yourself - always discuss them with someone.'),
+(7, '', 'Health Situation', 'fa fa-check', 'Most importantly, <b>the Australian government is here to help</b> and to support you. Read below what the government does.'),
+(8, 'drought/action-plan/header-strategy.jpg', 'Effective Strategy', 'fa fa-check', '<b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span>, try to remove <span onclick=\"window.location.href=\'invasive-species.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.'),
+(9, '', 'Effective Strategy', 'fa fa-check', '<b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span> to allow grassland to heal.'),
+(10, '', 'Effective Strategy', 'fa fa-check', '<b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.'),
+(11, 'drought/action-plan/header-finance.jpg', 'Financial Situation', 'fa fa-check', '<b>List out</b> all <b>physical and financial resources of the farm</b> to consider possible effects on both short- and long-term strategies.'),
+(12, '', 'Financial Situation', 'fa fa-check', '<b>Prepare at least 6 months of cash flow budget</b> against possible financial difficulties. It is a good practice to overestimate just to stay safe.'),
+(13, '', 'Financial Situation', 'fa fa-check', '<b>Consider reducing the livestock numbers</b> by selling them to minimise the maintenance because there is no exact way to predict the duration of drought.'),
+(14, 'drought/action-plan/grassland-header.jpeg', 'Grassland Situation', 'fa fa-check', '<b>Consider the effects of the strategy on the grassland pastures</b> and soil in a long run. It is important to ensure that soil heals well before using it for grazing.'),
+(15, '', 'Grassland Situation', 'fa fa-check', 'During the drought, <b>livestock</b>, like cattle, <b>may cause more damage to soil, native vegetation, and flora species.</b> It is advised to keep the situation under control.'),
+(16, '', 'Grassland Situation', 'fa fa-check', 'Give at least few weeks to <b>allow grassland to regrow and recover</b>, during the autumn break, by the use of effective <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span>.'),
+(17, '', 'Grassland Situation', 'fa fa-check', '<b>Plant more trees</b> to allow its roots to keep the soil moist for a longer period of time.');
 
 -- --------------------------------------------------------
 
@@ -358,10 +420,10 @@ INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
 (1, 100, '2f43dc9d754f3008f68a7f50b670c208'),
 (2, 100, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
 (3, 100, 'c3fae1827597a016ef41d4fb9c4f95fe'),
-(4, 100, '9e0677170130c646c24d9d907974166c'),
-(5, 100, '1d5029e4a17729fbd82d52087fc2c85c'),
-(6, 100, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
-(7, 100, 'e7a575a4e5900bf0de75a73abf3e7d2b');
+(4, 77, '9e0677170130c646c24d9d907974166c'),
+(5, 0, '1d5029e4a17729fbd82d52087fc2c85c'),
+(6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
+(7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');
 
 -- --------------------------------------------------------
 
@@ -1008,7 +1070,8 @@ CREATE TABLE `news_region_content` (
 INSERT INTO `news_region_content` (`news_reg_id`, `news_reg_label`, `news_reg_topic`) VALUES
 (1, 'R_au_Australia', 'Australia'),
 (2, 'R_ca_Canada', 'Canada'),
-(3, 'R_eu_Europe', 'Europe'),
+(3, 'R_nz_New Zealand', 'New Zealand'),
+(4, 'R_uk_United Kingdom', 'United Kingdom'),
 (4, 'R_us_United States', 'United States');
 
 -- --------------------------------------------------------
@@ -1534,10 +1597,22 @@ CREATE TABLE `user_feedback` (
 --
 
 --
+-- Indexes for table `drought_government`
+--
+ALTER TABLE `drought_government`
+  ADD PRIMARY KEY (`govern_id`);
+
+--
 -- Indexes for table `drought_landing`
 --
 ALTER TABLE `drought_landing`
   ADD PRIMARY KEY (`drought_landing_id`);
+
+--
+-- Indexes for table `drought_prepare`
+--
+ALTER TABLE `drought_prepare`
+  ADD PRIMARY KEY (`prepare_id`);
 
 --
 -- Indexes for table `emp_age`
@@ -1796,10 +1871,22 @@ ALTER TABLE `user_feedback`
 --
 
 --
+-- AUTO_INCREMENT for table `drought_government`
+--
+ALTER TABLE `drought_government`
+  MODIFY `govern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `drought_landing`
 --
 ALTER TABLE `drought_landing`
   MODIFY `drought_landing_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `drought_prepare`
+--
+ALTER TABLE `drought_prepare`
+  MODIFY `prepare_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `emp_age`
