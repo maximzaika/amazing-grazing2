@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.0918.1727                               -->
+<workbook original-version='18.1' source-build='2020.3.1 (20203.20.0918.1727)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='Kangaroos' path='/workbooks' revision='1.4' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (Camels)' inline='true' name='federated.0h00z151f0q5s117xu2sw0mp7hj0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Camels' name='excel-direct.19s7dvf0vdo9bn13iruf21oof6zs'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/s0652/Desktop/IE/invasive_species/animal/Kangaroos/Kangaroos.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.19s7dvf0vdo9bn13iruf21oof6zs' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C9:no:A1:C9:0' header='yes' outcome='6'>
+            <column datatype='string' name='Affected area' ordinal='0' />
+            <column datatype='integer' name='Affected level' ordinal='1' />
+            <column datatype='string' name='Impact' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.19s7dvf0vdo9bn13iruf21oof6zs' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C9:no:A1:C9:0' header='yes' outcome='6'>
+            <column datatype='string' name='Affected area' ordinal='0' />
+            <column datatype='integer' name='Affected level' ordinal='1' />
+            <column datatype='string' name='Impact' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C9:no:A1:C9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Affected area</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Affected area]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Affected area</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Affected level</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Affected level]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Affected level</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Impact</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Impact]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Impact</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RAU_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Affected area]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/s0652/Desktop/IE/invasive_species/animal/Kangaroos/Sheet1 (Kangaroos).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/15/2020 02:14:35 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Sheet1 (Camels)' increment-value='%null%' refresh-type='create' rows-inserted='8' timestamp-start='2020-10-15 02:14:35.057' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Affected area</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Affected area]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Affected area</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Affected level</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Affected level]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Affected level</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Sheet1</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Impact</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Impact]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Impact</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Sheet1</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RAU_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_42CBC053191C4D2E9BA25FC2B8FADEA8'>
+            <properties context=''>
+              <relation connection='excel-direct.19s7dvf0vdo9bn13iruf21oof6zs' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:C9:no:A1:C9:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Affected area' ordinal='0' />
+                  <column datatype='integer' name='Affected level' ordinal='1' />
+                  <column datatype='string' name='Impact' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Impact' />
+        <param name='target' value='Sheet 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Camels)' name='federated.0h00z151f0q5s117xu2sw0mp7hj0' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0h00z151f0q5s117xu2sw0mp7hj0'>
+            <column datatype='string' name='[Affected area]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='integer' name='[Affected level]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Impact]' role='dimension' type='nominal' />
+            <column-instance column='[Affected area]' derivation='None' name='[none:Affected area:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Impact]' derivation='None' name='[none:Impact:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Affected level]' derivation='Sum' name='[sum:Affected level:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]' value='72' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]' value='bold' />
+            <format attr='color' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]' value='#9d7660' />
+            <format attr='font-size' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]' value='36' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='in-tooltip' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[sum:Affected level:qk]' value='false' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-size' field='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]' value='8' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='fill-color' id='annotation_0' value='#ffffff' />
+            <format attr='border-color' id='annotation_0' value='#000000' />
+            <format attr='border-style' id='annotation_0' value='solid' />
+            <format attr='fill-color' id='annotation_2' value='#2c5985e6' />
+            <format attr='fill-color' id='annotation_3' value='#00000000' />
+            <format attr='fill-color' id='annotation_4' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_5' value='#fafafa00' />
+            <format attr='fill-color' id='annotation_6' value='#c8e6dbe6' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='hillshade_highlight_bright' value='false' />
+            <format attr='enabled' id='hillshade_highlight_med' value='false' />
+            <format attr='enabled' id='hillshade_shadow_faint' value='false' />
+            <format attr='enabled' id='hillshade_shadow_med' value='false' />
+            <format attr='enabled' id='hillshade_shadow_dark' value='false' />
+            <format attr='enabled' id='hillshade_shadow_extreme' value='false' />
+            <format attr='enabled' id='admin-3-4-boundaries-bg' value='false' />
+            <format attr='enabled' id='admin-3-4-boundaries' value='false' />
+            <format attr='enabled' id='admin-2-boundaries-bg' value='false' />
+            <format attr='enabled' id='admin-2-boundaries' value='false' />
+            <format attr='enabled' id='admin-2-boundaries-dispute' value='false' />
+            <format attr='enabled' id='water-label-sm' value='false' />
+            <format attr='enabled' id='water-label' value='false' />
+            <format attr='enabled' id='waterway-label' value='false' />
+            <format attr='enabled' id='marine-label-sm-ln' value='false' />
+            <format attr='enabled' id='marine-label-sm-pt' value='false' />
+            <format attr='enabled' id='marine-label-md-ln' value='false' />
+            <format attr='enabled' id='marine-label-md-pt' value='false' />
+            <format attr='enabled' id='marine-label-lg-ln' value='false' />
+            <format attr='enabled' id='marine-label-lg-pt' value='false' />
+            <format attr='enabled' id='place-hamlet' value='false' />
+            <format attr='enabled' id='place-village' value='false' />
+            <format attr='enabled' id='place-town' value='false' />
+            <format attr='enabled' id='place-city-sm' value='false' />
+            <format attr='enabled' id='place-islet-archipelago-aboriginal' value='false' />
+            <format attr='enabled' id='place-city-md-s' value='false' />
+            <format attr='enabled' id='place-city-md-n' value='false' />
+            <format attr='enabled' id='place-city-lg-s' value='false' />
+            <format attr='enabled' id='place-city-lg-n' value='false' />
+            <format attr='enabled' id='place-island' value='false' />
+            <format attr='enabled' id='state-label-sm' value='false' />
+            <format attr='enabled' id='state-label-md' value='false' />
+            <format attr='enabled' id='state-label-lg' value='false' />
+            <format attr='enabled' id='country-label-sm' value='false' />
+            <format attr='enabled' id='country-label-md' value='false' />
+            <format attr='enabled' id='country-label-lg' value='false' />
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.43999999761581421' />
+            <format attr='map-style' value='outdoors' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[sum:Affected level:qk]' />
+              <text column='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[none:Affected area:nk]' />
+              <lod column='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[none:Impact:nk]' />
+              <geometry column='[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='text-orientation' value='0' />
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='on' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='7' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.2193922996520996' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</rows>
+        <cols>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</cols>
+        <annotations>
+          <annotation class='area' id='0' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='16747639.94031376'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1265463.556862297'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='150.44660931314402' v='-11.293995430096389' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='18800663.652038064'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2448183.7556964722'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='168.88923510216134' v='-21.471451573512784' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='2' text-pinx='0' text-piny='0' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='16851778.824241806'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1793596.4782861518'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='151.38210482418111' v='-15.903899657757423' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17097249.050643623'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2046505.1995159858'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='153.58720138591144' v='-18.07650443172497' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='63' y='96' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontsize='12'>Legend</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17238580.393117398'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1280340.5404954315'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='154.85680243660468' v='-11.425019648784518' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='18369231.132907595'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1734088.5413060267'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='165.01361084215046' v='-15.389141804416905' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='4' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>significant impact</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17104687.54235277'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-1719211.5576728927'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='153.65402249384266' v='-15.260251455415856' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='18689086.276400872'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2165521.0666669207'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='167.886918483193' v='-19.089883181356758' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='5' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>insignificant impact</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17149318.492607646'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2061382.1812349814'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='154.05494914143003' v='-18.203504393997139' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='18778348.176910624'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2492814.7065958753'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='168.68877177836765' v='-21.844073901400925' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='6' text-pinx='1' text-piny='0' text-width-delta='-18'>
+            <formatted-text />
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='16844340.332532659'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2135767.0994006526'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='151.31528371624989' v='-18.837105643543715' />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='17112126.034061916'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Longitude (generated)]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-2396114.3129805024'>
+                  <node-reference>
+                    <axis>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[Latitude (generated)]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+                <projection name='EPSG:3857' u='153.72084360177391' v='-21.035518660607661' />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='-297' y='566' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{DE46309F-A86F-4C79-9708-85844B512841}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[none:Affected area:nk]</field>
+            <field>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[none:Impact:nk]</field>
+            <field>[federated.0h00z151f0q5s117xu2sw0mp7hj0].[sum:Affected level:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{FEAF1761-7B67-42BC-A03B-E541CD4E890D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAfzUlEQVR4nO2d+XMbR5bnP5lVhRsEb1IiRUnUZUmWLcluXz3jHve4z42J3u3YHyb2X9sf
+      NuaHnejpjZ2Y3fFOHz66225btmXL1mFZNymRIinxJnHVmfsDQBIAARKkQJAi8sNQCEdVoVB4
+      38z3Ml++El+Oz6ksJvuFhOFhiYC49AgZHiYBYcOv2EoAsuS5AoKKbYyanyEAoQxA8MgOM+9Z
+      jTj1luZ4dBEfyUgu2dTPNbOYLLF/fsAlv+S7KJBC0WNlGY4uY8mCkfuqYNwSCJRAIJBCAX7B
+      ujGAAIFAoQCKjwOEMhAYKHxA0CNcZrMh0r6BEGCgSBo+6cDAVaUie76RKASKNsPBEDDjRQpv
+      qML1QYjtHVgpOk2beMhhJN/WVFuMCG8fNf3VEAUzfuLGeerGSBgeQilyyiRQAkso8oHEEIqE
+      4dFuuvSH8kSkhxKqaPw+BakICr2EROGhhA8oYobHK0mbZd/EFAFR6aMAT0nu5pJMu5FdvAAN
+      QimORZcIF3vUcbukla7T8MPFa7PgVxi4EPSF88x7Ucbz8WID1AwUp2JpxJ/Hl9R+6gGeFYGi
+      P2RzMJQmbrpQ7AEKv4xCFNsMhUehpyi6V6r4ywlR3EcxYScYy8exA0mb6QKCJc/a/EdWYIig
+      IFC1Ir6KU9kmRlHWQbWDKIUhFL4S5Yatyq9BVaNXCkso3Mp9V/dURGRALih3LSUKUygcJWii
+      9TMYyjMcnd/nPcA2UAgmnQiTdpiI4YOCmOGRMl1ihs+yZxGRPinTISID7MBk0olhIRgI20g8
+      lPBACZzA4GJyDlcpwtJHIhjLtzFqRwHoD+VIGB4TdoxsYBYcLgXthkd3KM9AOMfNTBuGULhK
+      YitJuiLeECh6LBtfFYx6wQuhahqSImW6dFs2y55JXkkiAiadEJ2mQ9z0OBjK4SOYc8M8yCeK
+      ohNrtqkEKIUQa31iPYarEOuMfwUnkM20fVCK/lAehaEFUBMhyAeFy5P3TOa89a6MgSKAVYMb
+      s6P0h3L0hnIkjUKscWmph6ThcDK6hBSCXFCICzoMj5OxRQDm3DAp02UoskTeN3GUye1sG/Ne
+      iOFomlgxiM/7Bl8sdxEWPo6S9IfyHAovFYRaxA0kE3aCOS8MCpKmSz4wmPPCHAln6LYcppwo
+      T90wA6Ecj50oUoCPYNKOMpaPlbTgioTpIVVAzAgIyYAO08NXkDId0r7JjUwKn0Kr75YKpU6C
+      bezzzAjBV8spAC2AZ8Gv+OVcJGNOnDEnhikUB0M2EsWyH+K7bAdesPJjCzotF6Es3ECy7Fu8
+      GH+KEi4h6SIwMABPCR7nYxwMZ/GUJOubhEWAoySWUKQMF19JnABUUYYhGXA4usSBYmsbKMmC
+      F6bddJh2Iozm46sG/siJr577oh8qPCh+pZRhczY+jykrR8dg0Qszko/zxIng85wG+sVroGOA
+      XSIqC6YTAPlA8mpyGr/oa0+7MebcCL6S5Is9xobBZnE/CfSFbZY8g4xfaNukUARbNFITn5cT
+      s8RNr+wjxvIJHGUx6UQ2cLOeL7QANEDBneswHdpMh/5wGlMo/MBgwQuz6IVZ8CzSwf5zGPbf
+      N9rHmAR0WA4x6SGLTs+SbzHnhp5hHB56QzmORpYJS2/VBVr2wtzJpsjsQ6MvZX9/u32GJRVH
+      wlmipsvK8GugBHez7Sx4IWxVe/a6Fl1WnlOxBYRQq6/5gcmtbIrcPjd+0AJ4rsj5BpfTHUgg
+      Ij3OxheIGi6n4vPk/BBXlju3FpQqSBpumfF7gcn1dAc532j+6Mwu8JyG8C1KcQQpQJANLL5e
+      7mbaiYASRKXHC7HlrR1OKKQAkARK4gYm1zMdLAfW9l2q5wzdAzzHBAhuZzuYMAqzzJkaE01V
+      UYpDYZt20+dRLskjO1Z9dnifowXwnBMg1sbw16FIyYDFKsIIS8VjJ8wjZx/kKj0D2gXa14h1
+      xi9QDFh5DobsdQngrYjuAVoMSyhmPYv8NkaMms3840dE21IIKQnFEohtxiVuPos0TAxrfU+p
+      BdBiOHtgjYKbzzHzaJT+46dQSrEw9RgpJe0HBnly5zuePnqIm8+yPL/A+Xd/viqA7aCUYvTK
+      5xx99YdV39cC0DSVwPf56o+/Z+LBA/r6L7NgCxYX0lgG/OIffw1C8PDuPXyvsOBofmqShdlZ
+      Xv5xP9mFOWIdXVv6vKWpx8Q7uzFD4arvawFomkp+eZG5iccIIXjw1CYQEmSYoYMposkUia5e
+      3orECEWj3Ltymb9++i2+Mujou0pudopTP/o5bi5LKBYvO65SCuX7SNNc/ZzJW9eIJFP0nziD
+      59hVRaBzgTRNZfLuLZbnZkgv5zANePBggqEjB3npb97GDJcb6NL0FO/99j0cZWIojzbLJ9He
+      jvBtzr7+Or3DJ0AIVBDgOTbSMDCsENmFOUa/+iuHL77J0tRjzHCYnmOnq8YQWgCaXWV5eoqF
+      iUe09RwgdfAQUGjNM3PTTI2O8Pml66ys3BWrK+MUYZWjqzNBe28vs+NjvPDiSfrPnGfk2lUe
+      X7vM8Vdfx3Mcbl69yQ/+/h2SXd0kunrXfb4WgGZXWGm1H177hitfXiOZStDV00UmaxOPR3n0
+      4CFZzyAQNUarShfjK0V7zMD00sw6YTriJsrN88pbr/DFpesIL0dHdzdv//q/YJjltq5jAE3T
+      UUHAk3vf8+2fPsLxArK0kV30eLL4pLjFAhDaOBep1J0RgoVcAMRAwFxWIQPJjW9vkfUk0hWc
+      OzyANNabuxaApumk52b47L33cEUYR0bB2G4KRu0qAYG0mFr0MJTHkcFOjr/2ZtUYQAtA01Ts
+      bJpvPv6EJasHxNqchKgwYoWq3LWCzd4vYCiXAwP9CFF9/kMLQNNUZkfvMTE1D6IisK2gtCjZ
+      djCUT4IMIcOn/4VzNbfTAtA0DSeXpf3gEPHYDfJpb8NtNzf+lfpL1d4RDHaFGBoepu/4GWLt
+      nTWPogWgqQtVHHURQhQfK0BsKT/n+y8+59b3o+S86sWzto4oebTWYyil6D44gDQspGkx/eA2
+      bX0HsSIxpFE+qqQFoNmQFcP3XRc7vYgZjmKnF7n8/gccPnWSgydOEU11bCqEIAiYnZkn5zeu
+      CFYt9wkB3129yelTg8xNfcT4yCOOn32BMz/+xbpNtQA0GxL4Pr5jMzN6l7ErlwjMKMmOduZm
+      l5j6/Abmlzd49Y2XGL74Wk0R+J7HnUsfM/V0kZUM/JrG2yAOHRnkpZ/9iq/f/yPLIkn/8Imq
+      22kBaKqilCK7MIvvusyNjxJra2c2Cwu2i3w6gW20AeApuHTpO5AWxy5crHqsJyP3+PrqCF5J
+      yfnSqttboZ7tk5bi2ItnEULQ1d3O0PISd69c5tWBoXX5QFoAmnUopZi4+S3ZxXnspQVmJidp
+      7+lj2o4Uhi5FeV69j8HlT7+irbODnsNH1x1PSEnYUCjXxZf1ZR2s+PRbEYhAIPF55fWX6T9W
+      aPGPXnydoxdfr7nP7ieHa/YWqlDzLZJM8d3X17l6Z5rxZYvbo3Nl4/aV2CrER7/7Mw+vXSE9
+      N4OdSaOCwpqz/uET/OC1s4SUjVAFQ135W/fxJX/Vnm927of6khx68aW6v67uATRlOLksy9NT
+      gCIWEizZJkqaVN5jZx1C4Lgevp3j03/+H8yLDjrbQgwe6mNudgnTXkA+4yLMenqEcDRKZm6G
+      RHcfUm7evutkOA1QcHsCz8VzbB5/9y23PvuEcLKdp8sBjln7tkWlvrzlZ2mXaWaDFL4RwvRy
+      xKRDXkRJyDwLQQJVK7mt4ni12EwAgoDuNos3f/IOHf0HNx1u1QLQAIUFJKNffcqT+7dZzrqE
+      hccEBzZ0e6BcAJEgQ8RbYtHqJRAS08uhhCQwIoXszTrG/msJYKvBcsRUnD17lNNv/hBpGDVH
+      qLQL1IIopfBdp2xEJJJMkegd4Pr1+2REO7FgmVCQxrHa6j6upwyWrJ6io1JhcHVOfK3sVymE
+      rQbEeU/w9bcPCEfCSN8h8BwOnDlPorO7bDsdBLcgQoj1ywOVIrO4iBQSSUDOSG3o+sD6oUzP
+      iBAIc9Neo65zbMQ8gZB8+cVNbl+9jmGFGPn2q3WbaAG0KG4+x+LUONmF2eIKrBl6h4ZIhgPU
+      ynh9na123aM0W0RU/G0HD4NZJ8Lly7d4NDbL9NjDsve1C9SCKKVwcxnGvv2Ch7fvMnjsKKmB
+      I9g5m0WnPpPYzOCdQEAgieyB8kOBMMljkl/2+MO/fUB/T4IXX3uF/uHjWgCtRm5pgTuf/omD
+      J09jhiI4yuTO3Qn8h0t0G8uYXkA0yJGzOmq6MpsZv1KF2ztFRCFhbi/hC5PHM3kWPviUn/7n
+      hBZAK6GU4usPP8L3A04fOMTc+EP8cIqsHwIFE24HyhBgVjfajQy/7KbiQhAzAgy1cuey9cfZ
+      6Vygzcg48OFvf6tjgFbBcxw++1//zMOxGR5NLrH0dIqTb/+Ut979W2JBoay6EnJLacql/vlO
+      xAA7Td5+bm/xp9kKge/x2Xv/zoMneTwZJhAG31z6Cs+xGblyGU/Wqi5dTiOC0r0mFO0CtQBT
+      9+8x8nhpdRkiwNRMmlt/+SMTszaBat69enfb9alEC6AFyC0vUWnhgTD5/vY4rjLxZPW6mfXS
+      qFa92nF2WjBaAC1AW1cXAh9V8XPnRHwbLf/Ga3EbTako3EBiCLX9KipV0DFAC2CFwyRDK+t4
+      G0sjffoNBaTAVWK1IFyj0AJoAaKpDtraU6DK8+u3N4NbfWy/Ua1/zUBbQEwGmDUsth5hVPu+
+      2gXaxyilWJgc59JHf+Xpgt3AQHfNiNaMVKx7rxGUJcfVmFjzFeQDSUwGWy42oQWwj0nPTvO7
+      //07HFHfMGd9CNbigOYNaW7Uw0ggWjR+JyhsF5L1BdRaAPsUpRRXP/kEt4bxP7vLUrr/Wp2g
+      jYLkzY9XuV99vYooGcUNKMQKIgCriggq0QLYpyzPPGXs8TxgUd1lKTwrp9TgahlPpbFDeVyw
+      VeMvPU61z9kaJoVRIinq21cLYB+igoAbX1zGUSaIaq19pd9eSTXDLvsEyiszr0SmW1nzWy2a
+      rfzcbQhAruxf5/Zb/gTNnkYpxa0vv+D+6HQxm7NWC7sZG7XMG+2z0fPNXq98vzLWqN3LlC7O
+      UWU93so1qN6jaAHsE4IgYOr+Ha5/+Q1Tc/mGrMqqzkaCqiYAWfy33aB57fMCL4/jKgwR4Hs5
+      7FyOSKKLcHSju91X9mLl10UL4DnC91w828YIhTAMk/TcDNnFeeamnjJy/yGzi07hlkKrLT9s
+      r/XfSbbbI4Ezf5+7D5bpSph0HDvF1IMrDF/8UZVPqDx+qWtWLggtgOeIB1e/5cpnVzBDYTo7
+      E0xMzeFjoiimMa+WHNmL85vbN/xS2jrbWJyapOdsHCscw7Ks4tG35+ZpATQZz85jhsu7bKUU
+      np3HikTLXndyWZaeTpFZmMe2Xb7+6nscEQMX0k8yIMKsDxb3WovfOIxoOx3RDoz8EhJo6+7f
+      4hHWi1DXBWoyCxNjpA4MrtapyS8vMTN6l9zCLEMX3yQUSwCF24d+/P8+YCHt4q/8cGWuTWlg
+      WOpf753W3/Cya3WBnplaMUS1wLjaKNb6hiFkz+oeoJnMjI0SjsZWjd/3XGbHHvDNx5/SeXCQ
+      W//zN5x48QXmZxcZf/iYLLGyHP7yH3Gj8fz9yFbmGeqPf7QAmkh2fpb23n58z8PNZbj03ntM
+      zTs4QTtzjzNAhC++HikuS4wV96rXuPerCFYC2Mqh0UqqTeJpAewpDp27iBCC5ZmnfPCv/8GS
+      LQotfFljvl8N+VmpZfTVeob6YyItgCaglFotFT79aJSP//AxGc/cv432rrH1lAwtgB1ipf4m
+      CoQstPoj169z7+442SCsjX9TKoP8SipHdLY3zKoFsAO4uSzLczPE2zvIpdN89ZfPmJ5eLOTm
+      ENHGXxfPmmpd30XeO2Nm+4ivPviA3PIyQgg+/sOfGH+SwVEWrWj5waZ2rCgEuqrieXPQAmgw
+      dnqZ8YcTxNpSTNy7y+yiu6V76e4XlAK3LuOvNPyNdiqdB2kM2gVqMA+uXyOroox/f52nc9li
+      NmJr4QZgK7CUwGAzI6tcWLMZjUmpWEELoIF4jsN31+4ABle/n8RTBmLHsjL3Jkqxej8xAZuU
+      MNloQc7K/zvbe7bWr7PDGKbJ0FAhP8XHajnjh8I0RkRCwoCo3G4Nn5VWvnQ9w84IofV+oR1E
+      SMnA8OHdPg3NFtACaDBLc/O7fQobsvmoTGuhBdBCBAoyQaGOjqaAFkADWZp+wo1r9/fscL+g
+      MOqxR09vV9ACaCDXP7/MvC1Qaru1cXYWISBqgGwZBdRaQ7D2uhZAg/Acm7GJWRxVqMPc7Mpp
+      mmpsVttIC6Bh2Jk0jquwxMpNRlummd3D6PUATUWgCAtaMvXh+UGVPdQ9QAMIfJ9YeyfnXzqG
+      2AtuT+Dh2DZ2ZgkVeDi2g5NZwPOal2RWD54q/Ns5KifQSss6FkxfC6ABzIzcRgUBx86dJYRd
+      fHUXYwARMHXvBlPf/Ym5qVHm5xZ4OvINTx6N7s751MCgMCS7s8OyQcm/9UsltQAagJPNIKQk
+      0tZOd0877HYQLEKIIE2k9zgzD+4QjwmyGUVmbnwv9E+rCAFhuVm+0E5QvApCC6AhtPUNACAN
+      gzfe/RGm8nb5jCCe6iHedZhEVy8GHoMv/ZC+gSGClpkKLnV3aqOD4GfEzqQJivfnycxNk+zu
+      pbc7wcSszW4Og3YOnQEgcfrVtRejR3bnZJpOfb2vQvcAz4ybz/H4+xu4uSyX/s+/YWfSnHv9
+      Iqbw0UOhu4Uuj940YqkOsgvzmKEw0a5+vvnoQ05eeJkLF45z+crIbp/eriMCDyHcXfjkar1A
+      eXsvlK8F8KxI02To3Hm++M1/Z/DFV5kZe0Rmfh7Pzu32qe0JTD9PoPzyF+u97UBD5lNKC2uV
+      H08ZYS2ARtA7fJK7n37I8uw07QcGmJ6YRIYaUQ/z+ce1Eg2qDbpdAjZaUKNjgAYgpOTU2z/j
+      yb07tHV28HDkMXduj+/2aWnqQFeHbiCPb17j0gd/JiPb2OmlfM8Dja0OvV02HgrVPUADOXj6
+      HEMnT6LU2j2rdEbobrNxA6QF0ECEELz45utEjELQp1an3zerd6PZLbQAGkws1cHps8Or9q6K
+      f5q9iRbADnDs3DnCsmLoT4tgT6IFsAPEO7pIRtcurVhX8KmV2NvfWc8D7ACB5+EFosqdC+u/
+      c4mmsXgKnABMAZZYm2PTPUADUcWkOMOyOHriSKFOoGbP4CuBrURZ0V4tgAYSeC6enQfgpb99
+      myMDqSoi0Ivld4NSQ7eDtQJhWgANRJoWgV8IfoWU/ODHf1clGAYtguZTtuqsxAPVAmggQggM
+      K7TqCkVT7STjoRpbawE0EwVld1vae3dV3icYlrVaFUIIwclzpxE1V4htTwSBWvunqQ8pwEAR
+      NRSCtZt3aAHsMMcvvsKxI70NO54bQMaHfKDHkraCKSAqCwYfFhDSo0DNQQjB0PBQjRGhrccC
+      hoCQLNTgfz7KD+2dk/QUZHyBx9pZaQE0gY6+Axiq1qqo0lyhjcRQeF+KQmu2d8zq+cEQEDMU
+      UannAZpKPrOML4xNttqolEr5e4Z4Xlr/ncfJzPH00T38QLE4+QB3gyJDUqwvwaIF0ARMK4RQ
+      9VZlK02jriYKHfmWMnX3W6JtnRDYLD59wOzE5Jb21wJoAkYovMWS5KUu0eY9Qitz4PQbLD26
+      yvT4fVwSZOYe1a4JrdaHYjoXqAnEOzoJyYBcQ+y16urxLe5fmpMkKp4/XzjpOaz2Q8STSboP
+      nSG/+HTDRWC5oFCNTlJwI7UAmoCQBsm2OLnFnagYV2q8NaY7y7at5k5ttt/eJd41SLxr7Xmi
+      s6/mtqKYCJf1BZZURHRpxOZQGAo9vMPJcZUxQ3XXqfSv8rVWcKlMAVIo3GJRXi2AJjF87hyJ
+      yE61rtWMt97ygM9v678dVu5jTDErVAugSUTbUrxwZngXU6R3u3VfEeRmAf6z4QWbX2IBCKHw
+      tACay9ALL2DKoMIR2Wm3qLw2vij5W0+jeoByV6zwFxT/lT+u7rZtXSArIzwKyAaFYHdlSiCo
+      GP1ZC/2FFkAzSXR2c+rE4K41xs1bnF9p1GtzIEIppPIRqvCeoTwGusKYymF9DwH1CiFXNHpL
+      FozbU2L17jO5insjr0wiGig9CtRMCmVT3uDO7d/gUCtNunEoBa4SSKEwiz96LRGI1VGk7fYC
+      FSNKShEJSbq6UsTb24lGIyRSSWLxONK08F2bwPOJd3bT1ttHemaa7y5/zf2RJ3hKVhxz5fHK
+      ua0/x4hcezUiIeMrHFUY9YlWNPNKFbaNSD0M2nTCiSTdnXEmZ3MoabCTgaeiIICYWHN/Nu4F
+      NpsPqGNfpYgYPqfPHuPEhQtE21J1nWuyp483fvlLjo4+4K/vf0I6D5LCsHEgVq5TqcjKxVA6
+      0SgFxAzI+qx7bwVLFF7XAmgige+Tnpki5GdpxoiLAGIyKMsbWvH9qwlh5bXq8cEGrohSmLj0
+      dCU5fOwwh8+cJZJs29Y59x0Z5uf/NcW9azfoH+jDikT55tMvGX+aRiofQwS4Isyz9FYr8wGg
+      dG3QZuPaeX7/T//ErFPqAtUKShtDqbFv3guAYCVxb61Vj4cC+vo6SS8tk8naSCkwpSCeTDB4
+      ZICB4yeId3QhZOPDysDzGLt1k8DOkJmf4d7IDIt26edUXjtRCHxZm/GtcWTdAzQbMxTGjCbB
+      Wbmb5F4bexeo1aBVIZXi2JFuXv3xO4TjCZRSeHYeISWGFWrKPZGlaTL4wmns9DJCnsbNvc/D
+      J2kWcytpsesFLTc5Lxk4BNLUAmg28+OjZOeegNG++lojWv+N3JfK1zZyg1ZTrpVHX3eS0+fP
+      MvjC2bJlnlYk+sznu1VUEBCKxjHDYU6/8zNOA+//9l+Zy9bco+Tx+mvSLtPMqZQWQLNxbZss
+      sYYes2HDm0ohCUjFLX747rt0Dh5Cys3WMTQHMxRefRyJJ7n2we9IZz2o6r5vnjBoxtuwlm0t
+      gGYTb++AMj9ZFcO5Z+sFnnX/kFScf/kE/YcHaes5gBkOb77TbiEE3UOHCW4+BKOe+HUlgC9M
+      gaWicPbVC9y9eUcLoNlY0RgGimrVgp4FhdqyCFYCYqHg/IWTnHnzhw0+q53jwMkzXHwywfz0
+      HI8mFrBFPTfhUBiBy9s//wmGFSZ/+VstgGYz9eA+ToMv+7O0/gKBgcvA8HADz2jnEUJw+u2f
+      EAQ+nV9+yReXb9e1TjQZt2jvO8jCkwnm0p4WQDMIfJ/RK5/T1nuAK19eq/ihdnsUSDF4oJ1k
+      d88un8f2kELS3tm20pdtvLEKOHX2FNI0iaU6CDe8KdJUJZ9e4tLn3+Fzi0DsUPpVMbdGECAB
+      ywAnkIUqdUIWjKNKmmRbOOCt//TLnTmnHcZ3XWbHHtAzfJIXT09y4/sxVJXrK5RPT0eUE2dO
+      MPzyeTzb5pP3fk9OxLQAmkHge4U0XaOBxq8UyVBAT383vu+TSMbpGzhALJnADEWIxOJM3r+N
+      73o8vDeCtMLEEjESiSjheII7V7+jb+AAJy5eIBSN4bsO7I0Bn7rxPYfe4VMAnH/nHZaX/p3R
+      icWybSw8Xv/b8xw9dx5pFL7gg6tXmZjOgBBaAM0gFI1j4uNuMGS31ZGg44c7eeMXv8Cwqo+C
+      KKUYOncBN5+j5/BhwrEE4UQbSil8x6Z3cJBEd9/q+L5h7XxyXqMJReOrj6VhMHj0EKOPF8pc
+      zLd+9AOOnHtp9Xng+4zcugtCEDICnQ7dDKxIlONHexnqLQihFqXrA6quFygmvYeDHGdeOV/T
+      +KEQJErDJBxP0tZ7kHCibfV1Mxwh2dOP79irhXz3A4MnTmIpe/V5V9Ji4OTJsm2ElGTSWVCK
+      wQMdugdoBkIIXvuHXwMwO/6QD//jT+TWFYqrnYmpUEQtycnjB3Fdj/6BfhLd9dUbDQIfIWTV
+      lAUjFG5KKkMz8F2H2x//ESvI4coIUcPnxZfOYFb0bEtTj1EqQKJ48QevaAE0ixVD6z50hJ/8
+      w0/54/99n7xXPRWh7FWlSITg5VfPcPziK2XHqoeNZnL3i/EDSMNk+PW3GXv0L2TcgIEOg6GX
+      LuI5dlnqRurAICHLQjguZjikXaDdoPPgAG+8dZ5DvYlCxbjiCE7BxQlWXR2hApKmy+s/vMCJ
+      V15FCLGvjLaRCClJdPXwd//43ziQhOziAnZ6adX4Pddh/OZ1Ht24Sjrn0NUeJdHZo9Ohd5ux
+      m9d5Ovmk+Exg2Is8nponZglSqTin/ubviXV0acPfAm4+R355kezCHB0DhwnF4jwZuc8f3vsL
+      hlAYQnHq1BAX3v2pFsBeQymF77qowMcwLaSpvdTt4tl5PNchHE9y7aP3cTzF0dOniLd3YFgh
+      QtGoFoCmNfA9F8Ncb+e6edHse5QKcDJp5qcmGbl9D0sqLv7053iOrXsAzf7Gdx0+/JffMruY
+      xw0kShiYymEgpXBERPcAmn2OkETiMcRilpglSCZDuLbitV/9Cjef1z2AZv/ju05hgbyQCClx
+      7TyhaGFVnu4BNPueyjynFeMHXRtU0+JoAWhaGi0ATUujBaBpabQANC2NFoCmpdEC0LQ0WgCa
+      lkYLQNPSaAFoWhotAE1LowWgaWm0ADQtjRaApqXRAtC0NFoAmpZGC0DT0mgBaFoaLQBNS6MF
+      oGlptAA0LY0WgKal0QLQtDRaAJqWRgtA09JoAWhaGi0ATUujBaBpabQANC2NFoCmpdEC0LQ0
+      WgCalkYLQNPSaAFoWhotAE1LowWgaWm0ADQtjRaApqXRAtC0NFoAmpZGC0DT0mgBaFoaLQBN
+      S6MFoGlptAA0LY0WgKal0QLQtDRaAJqWRgtA09JoAWhaGjOGt9vnoNHsGv8f0gyjFdbHP4YA
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
