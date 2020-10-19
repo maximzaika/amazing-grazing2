@@ -3,7 +3,7 @@
 		/* Prints the facts below the gif image within the technique container */
 		function factContent($techn_ico, $techn_fact) {
 			$factContent = 
-				'<li class="service-techniques services-color bg-light" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">'.
+				'<li class="service-techniques services-color" style="padding-top: 0px; margin-bottom: 0px; box-shadow: 0px 0px 0px;">'.
 					'<div class="container" style="padding-right: 0px; padding-left: 0px;">'.
 						'<div class="row">'.
 							'<div class="technique-icon-position">'.
@@ -37,7 +37,7 @@
 					
 					if ($factCount == 1) {
 						$technContent = $technContent .
-							'<div class="item bg-light">'.
+							'<div class="item" style="background-color: white;">'.
 								'<div class="wrap" style="box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.15);">'.
 									'<div class="techniques img d-flex align-items-center justify-content-center" style="background-image: url('.$techn_img.');"></div>'.
 									'<div class="text text-center px-4 t_">'.
@@ -199,7 +199,7 @@
 							for ($i=0;$i<$countContent;$i++) {
 								$technContent = $technContent .
 																'<div class="item">'.
-																	'<div class="wrap bg-light ">'.
+																	'<div class="wrap">'.
 																		'<div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(images/'.$selected_indiv_images[$i].');"></div>'.
 																		'<div class="text text-center px-4">'.
 																			'<h3>'.$selected_indiv_titles[$i].'</h3>'.

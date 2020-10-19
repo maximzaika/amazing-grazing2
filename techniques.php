@@ -72,7 +72,7 @@
 		<!-- End Breadcrumb -->
 		
 		<!-- Section 2: Grazing Technqiues-->
-		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
+		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate bg-light sort-species">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -251,6 +251,9 @@
 							items: 1
 						},
 						600:{
+							items: 1
+						},
+						768:{
 							items: 2
 						},
 						1000:{
