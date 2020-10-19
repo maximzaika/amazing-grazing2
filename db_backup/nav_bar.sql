@@ -42,12 +42,12 @@ CREATE TABLE `nav_bar` (
 
 INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`, `nav_drop`, `nav_topic`) VALUES
 (1, 'index.php', 'Home', 0, 'none'),
-(2, 'news.php', 'News', 0, 'none'),
-(3, 'techniques.php', 'Techniques', 0, 'none'),
-(4, 'livestock-statistics.php', 'Livestock', 1, 'Statistics'),
-(5, 'employment-statistics.php', 'Employment', 1, 'Statistics'),
-(6, 'drought.php', 'Drought', 0, 'none'),
-(7, 'invasive-species.php', 'Species', 0, 'none');
+(2, 'livestock-statistics.php', 'Livestock', 1, 'Statistics'),
+(3, 'employment-statistics.php', 'Employment', 1, 'Statistics'),
+(4, 'techniques.php', 'Techniques', 0, 'none'),
+(5, 'drought.php', 'Drought', 0, 'none'),
+(6, 'invasive-species.php', 'Species', 0, 'none'),
+(7, 'news.php', 'News', 0, 'none');
 
 --
 -- Indexes for dumped tables
