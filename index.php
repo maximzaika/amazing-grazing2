@@ -50,8 +50,8 @@
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h2 class="subheading"><i>Welcome to Amazing Grazing</i></h2>
-						<h1>Make a difference in protecting Australian grasslands</h1>
-						<p class="mb-4">By effective grazing and preserving your livestock</p>
+						<h1>Farmers make a difference in protecting Australian grasslands</h1>
+						<p class="mb-4">By effective grazing, keeping track of drought, and removing invasive species</p>
 						<p><a href="#offerings" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
 					</div>
 				</div>
