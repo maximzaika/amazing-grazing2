@@ -93,11 +93,11 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							<h5 class="text-justify" style="color: rgba(255, 255, 255, 0.7);">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
 													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
 													These impacts cannot be prevented but can be controlled.
-													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</h5>
 						</div>
 					</div>
 			  

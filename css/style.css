@@ -3231,7 +3231,7 @@ input[type="button"].btn-block {
   .dropdown-item.active, .dropdown-item:active {
     color: #fbd341;
     text-decoration: none;
-    /*background-color: #fff; */}
+    background-color: #4e9525; }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
     pointer-events: none;
@@ -10127,7 +10127,7 @@ h1, h2, h3, h4, h5,
       font-size: 17px;
        } /* color: #000000; */
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-        background: #4e9525;
+        /*background: white;*/
         color: #fbd341; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
