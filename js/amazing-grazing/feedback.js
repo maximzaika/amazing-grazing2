@@ -36,7 +36,8 @@ $(function() {
 		
 		var form_text = $('#form-text').val();
 		var page_received = $('#page-received').attr('class');
-
+		console.log('current token > ' + $('meta[name="csrf-token"]').attr('content'));
+		
 		$.ajax({
 			type: $form.attr('method'),
 			cache: false,
@@ -49,13 +50,14 @@ $(function() {
 				   response: grecaptcha.getResponse(),
 				   page: page_received},
 			success: function(data) {
-				console.log(data);
-				if (data == '{"feedback":"Unsuccessful update"}') {
+				console.log(data.feedback);
+				onsole.log(data.token);
+				if (data.feedback == "Unsuccessful update") {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 					grecaptcha.reset();
-				} else if (data == '{"feedback":"Successful update"}') {
+				} else if (data.feedback == "Successful update") {
 					var x = document.getElementById("feedback-sent");
 					$('#form-text').val(''); // reset the #form-text
 					x.className = "show";
