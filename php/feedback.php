@@ -42,7 +42,7 @@
 			        '$todayTime',
 					 $stars,
 					'$feedback',
-					'$page');"
+					'$page');";
 
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
