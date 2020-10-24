@@ -30,7 +30,12 @@
 	$todayTime = date("h:i:sa");
 	$feedback = str_replace('"', "'", $feedback);
 	
+	/* SQL Injection Protection - take care of special characters so that they cannot be manipulated */
 	$feedback = $con->real_escape_string($feedback);
+	$todayDate = $con->real_escape_string($todayDate);
+	$todayTime = $con->real_escape_string($todayTime);
+	$page = $con->real_escape_string($page);
+	
 	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
 		   "VALUES ('$todayDate','$todayTime',$stars,'$feedback','$page');";
 					
@@ -53,6 +58,5 @@
 	}
 	/* End writing to the server if the CSRF tests pass */
 	
-	echo json_encode(array("feedback"=>$server_feedback,
-						   "sql"=>$sql)); // send server feedback to the ajax/client
+	echo json_encode(array("feedback"=>$server_feedback)); // send server feedback to the ajax/client
 ?>
