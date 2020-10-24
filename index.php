@@ -17,6 +17,7 @@
 	<head>
 		<title>Amazing Grazing - Protecting Australian Grasslands</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -153,7 +154,7 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 		
-		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; ?>">
+		
 		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
