@@ -48,6 +48,5 @@
 		}
 	}
 	
-	echo json_encode(array("feedback"=>$server_feedback,
-							"token"=>$headers['CsrfToken']));
+	echo json_encode(array("feedback"=>$server_feedback));
 ?>
