@@ -36,7 +36,7 @@
 					
 	
 
-	/*$response = $_POST["response"];	
+	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
 	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
 		
@@ -50,8 +50,9 @@
 		} else {
 			$server_feedback = 'Unsuccessful update';
 		}
-	}*/
+	}
 	/* End writing to the server if the CSRF tests pass */
 	
-	echo json_encode(array("feedback"=>$sql)); // send server feedback to the ajax/client
+	echo json_encode(array("feedback"=>$server_feedback,
+						   "sql"=>$sql)); // send server feedback to the ajax/client
 ?>
