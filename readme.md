@@ -6,26 +6,25 @@
 **End date:** November 6th, 2020  
 
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
-**Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=xa2i_jTEjSA&feature=emb_title)  
+**Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
 **Audience:** English speaking farmers age 30-45  
 
 ## Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
-  - *Role in the team: leader, project manager, researcher, and web developer*
-  - *Linkedin: to-be-added*
+  - *Role in the team: leader, project manager, front-end & Back-end web developer, UX Designer*
+  - *Linkedin: https://www.linkedin.com/in/maxim-zaika*
 - **Minjia Ji**
   - *Education: Masters in Business Information Systems*
   - *Role in the team: business analyst and researcher*
-  - *Linkedin: to-be-added*
 - **Chongyang Liu**
-  - *Education: Masters in Data Science*
+  - *Education: Masters in Network & Security*
   - *Role in the team: network & security and web developer*
-  - *Linkedin: to-be-added*
+  - *Linkedin: https://www.linkedin.com/in/chongyang-liu/*
 - **ChiHang Li**
   - *Education: Masters in Information Systems*
   - *Role in the team: web developer and data analyst*
-  - *Linkedin: to-be-added*
+  - *Linkedin: https://www.linkedin.com/in/eric-li-02a2361ba*
   
 ## Programming languages
 
