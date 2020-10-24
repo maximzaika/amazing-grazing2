@@ -37,6 +37,7 @@
 					'"'.$feedback.'",'.
 					'"'.$page.'");';*/
 	
+	$feedback = $con->real_escape_string($feedback);
 	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
 		   "VALUES ('$todayDate',
 			        '$todayTime',
