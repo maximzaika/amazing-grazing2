@@ -36,7 +36,7 @@ $(function() {
 		
 		var form_text = $('#form-text').val();
 		var page_received = $('#page-received').attr('class');
-		console.log('current token > ' + $('meta[name="csrf-token"]').attr('content'));
+		console.log($('meta[name="csrf-token"]').attr('content'));
 		
 		$.ajax({
 			type: $form.attr('method'),
@@ -51,7 +51,7 @@ $(function() {
 				   page: page_received},
 			success: function(data) {
 				console.log(data.feedback);
-				onsole.log(data.token);
+				console.log(data.token);
 				if (data.feedback == "Unsuccessful update") {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show";
