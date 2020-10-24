@@ -1,4 +1,33 @@
 <?php
+	/*
+	 * Last Edited: 25/10/2020
+	 *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+	 *
+	 * Description::
+	 *  - generates the feedback html code to be displayed on the page
+	 *
+	 * Attributes:
+	 *  - $page_received: file page name
+	 *
+	 * Pre-condition:
+	 *  - called by any of the following web pages:
+	 *    * index.php
+	 *    * employment-statistics.php
+	 *    * livestock-statistics.php
+	 *    * techniques.php
+	 *    * drought.php
+	 *    * invasive-species.php
+	 *  - must be called within the page itself
+	 * Post-condition
+	 *  - generate full HTML code into $feedback_form variable
+	 * Return:
+	 *  - $feedback_form HTML code
+	*/
+	
 	function feedbackRead($page_received) {
 		$page_received = $page_received.'.php';
 		$feedback_form = 
