@@ -1,7 +1,25 @@
 <?php
+	session_start();
+	
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
+	header('Content-Type: application/json');
+	
+	$headers = apache_request_headers();
+	
+	if (isset($headers['CsrfToken'])) {
+		if ($headers['CsrfToken'] !== $_SESSION['csrf_token']) {
+			exit(json_encode(['error' => 'Wrong CSRF token.']));
+		}
+	} else {
+		exit(json_encode(['error' => 'No CSRF token.']));
+	}
+	
 	require_once "../server_config.php";
 	
-	$stars = $_POST['stars'];
+	/*$stars = $_POST['stars'];
 	$feedback = $_POST['feedback'];
 	$page = $_POST['page'];
 	
@@ -30,5 +48,6 @@
 		}
 	}
 	
-	echo json_encode(array("feedback"=>$server_feedback));
+	echo json_encode(array("feedback"=>$server_feedback));*/
+	echo json_encode(array("feedback"=>$_SESSION['csrf_token']));
 ?>

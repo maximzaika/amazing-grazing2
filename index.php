@@ -1,11 +1,14 @@
 
 <?php 
-    /* Server side files */
+    session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
+	/* Server side files */
 	require_once "server_config.php";
-	//require_once "php/gnewsAPI.php";
 	require_once "php/navigation.php";
 	require_once "php/home_offerings.php";
-	//require_once "php/news_navigation.php";
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 
@@ -149,7 +152,9 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
-	  
+		
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; ?>">
+		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		
