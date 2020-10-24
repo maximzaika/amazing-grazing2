@@ -30,14 +30,7 @@
 	$todayTime = date("h:i:sa");
 	$feedback = str_replace('"', "'", $feedback);
 	
-	/*$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
-		   "VALUES ('".date("d-m-Y")."',".
-			        "'".date("h:i:sa")."',".
-			        $stars.",".
-					'"'.$feedback.'",'.
-					'"'.$page.'");';*/
-	
-	$feedback = $con->real_escape_string($feedback);
+	//$feedback = $con->real_escape_string($feedback);
 	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
 		   "VALUES ('$todayDate',
 			        '$todayTime',
