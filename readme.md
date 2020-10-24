@@ -3,7 +3,7 @@
 **Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
 
 **Start date:** August 6th, 2020  
-**End date:** November 6th, 2020  
+**End date:** October 26th, 2020  
 
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
