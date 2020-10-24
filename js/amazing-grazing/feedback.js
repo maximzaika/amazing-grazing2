@@ -1,4 +1,25 @@
-/* JavasScript contains feedback feature settings */
+/* Usage:
+    - "Feedback" button that appears on the right side of every page
+
+Description:
+    - Controls stars/rating clicks: 
+	  * checks the star that user clicks 
+	  * checks all the start before users star
+	  * unchecks all the star after users star
+	- Counts how many characters inside the user feedback input form
+	- [MOBILE DEVICE ONLY] Hides the feedback button when scrolled down
+	- Sends users feedback to database using ajax through 'feedback.php' file
+
+	This file is called by every website page:
+    - index.php
+	- employment-statistics.php
+	- livestock-statistics.php
+	- techniques.php
+	- drought.php
+	- invasive-species.php
+	
+	JavasScript contains feedback feature settings 
+*/
 
 $(function() {
 	$("#feedback-form form").on('submit', function(event) {
@@ -20,6 +41,9 @@ $(function() {
 			type: $form.attr('method'),
 			cache: false,
 			url: 'php/feedback.php',
+			headers: {
+				'CsrfToken': $('meta[name="csrf-token"]').attr('content')
+			},
 			data: {stars: cStars,
 				   feedback: form_text,
 				   response: grecaptcha.getResponse(),
@@ -88,8 +112,6 @@ $(function() {
 			}
 		});
 	}
-	
-
 });
 
 
