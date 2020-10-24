@@ -19,7 +19,7 @@
 	
 	require_once "../server_config.php";
 	
-	/*$stars = $_POST['stars'];
+	$stars = $_POST['stars'];
 	$feedback = $_POST['feedback'];
 	$page = $_POST['page'];
 	
@@ -48,6 +48,5 @@
 		}
 	}
 	
-	echo json_encode(array("feedback"=>$server_feedback));*/
-	echo json_encode(array("feedback"=>$_SESSION['csrf_token']));
+	echo json_encode(array("feedback"=>$server_feedback));
 ?>
