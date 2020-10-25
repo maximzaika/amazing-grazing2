@@ -15,7 +15,7 @@
 	 *  - none
 	 *
 	 * Pre-condition:
-	 *  - livestock-statistics.php web page on load
+	 *  - livestock-statistics.php web page executes this file on load
 	 *
 	 * Post-condition
 	 *  - access db tables: livestock_spinner & livestock_landing to retrieve spinner content and introduction content

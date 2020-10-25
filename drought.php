@@ -1,10 +1,27 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the drought page by typing drought.php in the browser
+-->
 
 <?php 
+	/* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
     /* Server side files */
-	require_once "server_config.php"; // Accesses to the database
-	require_once "php/navigation.php"; // Updates the navigation bar
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
-	require_once "php/drought-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
+	require_once "php/drought-content.php"; // Used to update the landing (intro, What the government does, Prepare yourself for drought)
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +29,7 @@
 	<head>
 		<title>Amazing Grazing - Drought</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -236,9 +254,18 @@
 		<script src="js/isotope.pkgd.min.js"></script>
 		<script src="js/venobox.min.js"></script>
 		<script src="js/aos.js"></script>
-		<!--<script src="js/readMoreJS.min.js"></script>-->
 		<script src="js/readMoreJS2.min.js"></script>
-		<script type='text/javascript'>                    
+		<script type='text/javascript'>
+			/* 
+				Description: executes teh drought page graph
+				Pre-condition:
+				  - the container with the id "tableau-graph" must be on the page
+				  - uses the size of the right container to determine the height on large screens
+				Post-condition
+				  - resizes the graph based on the size of the screen
+				Return:
+				  - none, but visually shows/hides a notification
+			*/
 			var divElement = document.getElementById('viz1602816114213');                    
 			var vizElement = divElement.getElementsByTagName('object')[0];                    
 			var heightIntroRightSide = $('#right-side-intro').height();
@@ -250,38 +277,45 @@
 				var setHeight = widthIntroRightSide*0.7;
 				vizElement.style.height=(graphDivHeight)+'px';
 			} else if (window.innerWidth > 1439) {
-				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = widthIntroRightSide*0.77;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 1199) {
-				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 992) {
-				//vizElement.style.height = heightIntroRightSide + 'px';
 				var setHeight = heightIntroRightSide;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 767) {
-				var setHeight = 480;//widthIntroRightSide*0.85;
+				var setHeight = 480;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 666) {
-				var setHeight = 480;//widthIntroRightSide*1.0;
+				var setHeight = 480;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 574) {
 				var setHeight = widthIntroRightSide*1.1;
 				vizElement.style.height=(setHeight)+'px';
 			} else if (window.innerWidth > 374) {
-				var setHeight = 600;//window.innerWidth*2.3;
+				var setHeight = 600;
 				vizElement.style.height=(setHeight)+'px';
 			}
 
 			var scriptElement = document.createElement('script');                    
 			scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
 			vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-		</script>
-		
-		<script type="text/javascript">
+			
+			/* Execute when page is fully loaded */
 			$(document).ready(function(){
+				/* 
+					Description: calls readMoreJS2.min.js file to add hide/show button to long/short text
+					Pre-condition:
+					  - readMoreJS2.min.js needs to be called (it is custom modified to work with our website
+					    any other readMoreJS.min.js version is not going to function)
+					  - every text that needs to be hidden/shown must contain 'd2' id and '<a>' inside this id
+					Post-condition
+					  - adds hide/show button to long/short text
+					Return:
+					  - none, but renames the button
+				*/
 				$readMoreJS2.init({
 					target: '.d2 a',
 					numOfWords: 10,
@@ -289,7 +323,17 @@
 					moreLink: ' <i>read more</i>',
 					lessLink: ' <i>read less</i>'
 				});
-							
+				
+				/* 
+					Description: executes the carousel on the main page for all the techniques
+					Pre-condition:
+					  - carousel must have class 'carousel-farmer-actions'
+					  - js/owl.carousel.min.js file MUST BE executed
+					Post-condition
+					  - send the attributes to the owl.carousel.min.js
+					Return:
+					  - none, but carousel needs to be functional
+				*/
 				$('.carousel-farmer-actions').owlCarousel({
 					center: true,
 					loop: false,
@@ -300,9 +344,6 @@
 					stagePadding: 0,
 					mouseDrag: false,
 					nav: true,
-					//autoplay: true,
-					//autoplayHoverPause: true,
-					//autoplayTimeout: 7000,
 					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 					responsive:{
 						0:{
@@ -319,8 +360,6 @@
 						}
 					}
 				});
-				
-				
 			});
 		</script>
 	</body>
