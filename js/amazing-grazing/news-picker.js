@@ -86,8 +86,10 @@ $(function(){
 			       receivedNewsRegion: regionName,
 				   receivedNewsStart: startDate},
 			success: function (data) {
-				var newsDiv = document.getElementById('update-news');
-				newsDiv.innerHTML = data.newsHTML;
+				setTimeout(function() {
+					var newsDiv = document.getElementById('update-news');
+					newsDiv.innerHTML = data.newsHTML;
+				}, 250);
 			},
 			error: (error) => {
 				console.log(JSON.stringify(error));
