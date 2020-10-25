@@ -240,7 +240,9 @@ $(function(){
 	function enableCarousel(owl, number2, number) {
 		owl.owlCarousel({
 			center: true,
-			loop: true,
+			loop: false,
+			rewind: true,
+		    startPosition: 1,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
@@ -391,7 +393,7 @@ $(function(){
 						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr, preview_beef, modal_beef_title, modal_beef_text, patch_burn);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text, patch_burn);
 						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY + beefLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "false true false false") {
 						var latestYr = current_dairy_qty * 1000000; // latest livestock number - qty
@@ -406,7 +408,7 @@ $(function(){
 						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr, preview_dairy, modal_dairy_title, modal_dairy_text, rotational); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text, rotational);
 						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
+						document.getElementById("prediction-data").innerHTML = milkQTY + dairyQTY + dairyLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "false false true false") {
 						var latestYr = current_sheep_qty * 1000000; //current year sheep - qty
@@ -425,7 +427,7 @@ $(function(){
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
 						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
+						document.getElementById("prediction-data").innerHTML = woolProduction + sheepQTY + yarnProduction + sheepLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "true false true false") {
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
@@ -452,7 +454,7 @@ $(function(){
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML =  beefMeatQTY + beefQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -477,7 +479,7 @@ $(function(){
 						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy, preview_dairy, modal_dairy_title, modal_dairy_text, rotational); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text, rotational);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY +
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -506,7 +508,7 @@ $(function(){
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML =  dairyQTY + milkQTY +
+						document.getElementById("prediction-data").innerHTML =  milkQTY + dairyQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -544,7 +546,7 @@ $(function(){
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text, patch_burn);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML = totalQTY + milkQTY +
+						document.getElementById("prediction-data").innerHTML = milkQTY + totalQTY +
 																				beefMeatQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -582,7 +584,7 @@ $(function(){
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY +
 																				dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
