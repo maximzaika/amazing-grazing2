@@ -37,7 +37,6 @@ $(function(){
 			var startDate = document.querySelector('#drop-sort').textContent;
 			if (startDate == "Sort Newest to Oldest") { startDate = "new-to-old" } 
 			if (startDate == "Sort Oldest to Newest") { startDate = "old-to-new" }
-			console.log('T_ >' + startDate);
 		} 
 		
 		if (receivedNewsData.substr(0, 2) == "R_") {
@@ -50,7 +49,6 @@ $(function(){
 			var startDate = document.querySelector('#drop-sort').textContent;
 			if (startDate == "Sort Newest to Oldest") { startDate = "new-to-old" } 
 			if (startDate == "Sort Oldest to Newest") { startDate = "old-to-new" }
-			console.log('R_ >' + startDate);
 		}
 		
 		if (receivedNewsData.substr(0, 2) == "S_") {
