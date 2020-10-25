@@ -1,4 +1,35 @@
 <?php
+	
+	/*
+	 * Last Edited: 25/10/2020
+     *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+     *
+	 * Description::
+	 *  - called by the .ajax() in the employment-picker.js file
+     *
+	 * Attributes:
+	 *  - none
+	 *
+	 * Pre-condition:
+	 *  - must be called when user decides to update the employment type
+     *  - server_config.php must be available
+	 *
+	 * Post-condition
+	 *  - Receives 'the number of farmers' in 2011 & 2016 from the emp_state table
+     *    * based on this data receives the card content for the number of farmers from the emp_cards table & converts it to HTML readable format which also include pop up modal when user clicks on 'Vies Suggestions'
+     *  - Receives 'Highest qualification' in 2011 & 2016 from the emp_education table
+     *    * based on this data receives the card content for highest qualification from the emp_cards table & converts it to HTML readable format which also include pop up modal when user clicks on 'Vies Suggestions'
+     *  - Receives 'Age Group' in 2011 & 2016 from the emp_age table
+     *    * based on this data receives the card content for age group from the emp_cards table & converts it to HTML readable format which also include pop up modal when user clicks on 'Vies Suggestions'
+     *
+	 * Return:
+	 *  - JSON array containing: $all_cards (listed above) and $modals related to each card listed above
+	*/
+
  	require_once "../server_config.php";
 	
 	$active = $_POST['active'];
@@ -63,8 +94,7 @@
 	$random_button = '_' . rand(10,1000) . '_button'; // Creates the ID of each button to make it unique
 	
 	// Initializes the card creation
-	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'.
-							   '<div class="item d-flex align-items-stretch">'.
+	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
 							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
@@ -122,13 +152,12 @@
 											'<div class="collapse" id="'.$random_button.'">'.
 												'<ul>';
 	
-	$modal_content = "";
-	
 	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Farmer'";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
 		$countFarmer = 0;
+        $modal_content = '';
 		while($row = $get_farmer_data->fetch_assoc()) {
 			$random_modal = '_' . rand(10,1000) . '_modal';
 			$farmer_url = $row['farmer_url'];
@@ -138,12 +167,8 @@
 			$farmer_modal_title = $row['farmer_modal_title'];
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
-			if ($countFarmer > 1) {
-				//$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
+			if ($countFarmer > 1 && $farmer_card == "Farmer") {
 				$modal_content = $modal_content . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
-				
-				/*$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';*/
-				
 			} else {
 				$countFarmer++;
 			}
@@ -175,7 +200,6 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>'.
@@ -222,8 +246,7 @@
 
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. // col-xs-12 col-sm-12 col-md-6
-							   '<div class="item d-flex align-items-stretch">'.
+	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
 							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
@@ -254,7 +277,7 @@
 										'<div class="row">'.
 											'<ul style="margin-bottom:0px;">';
 	
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education';";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
@@ -285,11 +308,12 @@
 											'<div class="collapse" id="'.$random_button.'">'.
 												'<ul>';
 												
-	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education'";
+	$farmer_data = "SELECT farmer_url, farmer_url2,  farmer_card, farmer_text, farmer_modal_title, farmer_modal_text FROM emp_cards WHERE farmer_card = 'Education';";
 	$get_farmer_data = $con -> query($farmer_data);
 	
 	if ($get_farmer_data->num_rows > 0) {
 		$countFarmer = 0;
+		$modal_content = '';
 		while($row = $get_farmer_data->fetch_assoc()) {
 			$farmer_url = $row['farmer_url'];
 			$farmer_url2 = $row['farmer_url2'];
@@ -298,10 +322,8 @@
 			$farmer_modal_title = $row['farmer_modal_title'];
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
-			if ($countFarmer > 1) {
-				/*$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';*/
+			if ($countFarmer > 1 && $farmer_card == "Education") {
 				$modal_content = $modal_content . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
-				/*$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';*/
 			} else {
 				$countFarmer++;
 			}
@@ -334,7 +356,6 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>'.
@@ -454,8 +475,7 @@
 	
 	$random_button = '_' . rand(10,1000) . '_button';
 	
-	$all_cards = $all_cards . //'<div style="padding-bottom:40px;" class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 col-xxxl-4 align-items-stretch animated fadeInLeft">'. //col-xs-12 col-sm-12 col-md-6
-							   '<div class="item d-flex align-items-stretch">'.
+	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
 							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
@@ -481,23 +501,6 @@
 													'</div>'.
 												'</div>'.
 											'</div>'.
-											
-											/*'<div class="col-sm-12 col-md-6">'.
-												'<h4><b>2016</b></h4>'.
-												'<div class="container">'.
-													'<div class="row">'.
-														'<div class="col-sm-12 col-md-6">'.
-															'<h5>15-44: '.$beef_age_2016_15_44_perc.'%</h5>'.
-														'</div>'.
-														
-														'<div class="col-sm-12 col-md-6">'.
-															'<h5>45-65: '.$beef_age_2016_44_65_perc.'%</h5>'.
-														'</div>'.
-													'</div>'.
-												'</div>'.
-												
-												
-											'</div>'.*/
 										'</div>'.
 									'</div>'.
 									'<hr>'.
@@ -538,6 +541,7 @@
 	
 	if ($get_farmer_data->num_rows > 0) {
 		$countFarmer = 0;
+        $modal_content = '';
 		while($row = $get_farmer_data->fetch_assoc()) {
 			$farmer_url = $row['farmer_url'];
 			$farmer_url2 = $row['farmer_url2'];
@@ -547,10 +551,7 @@
 			$farmer_modal_text = $row['farmer_modal_text'];
 			
 			if ($countFarmer > 1) {
-				//$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
 				$modal_content = $modal_content . '<li><h5 class="text-justify">'.$farmer_text.'</h5></li>';
-				
-				//$all_cards = $all_cards . '<li><h5 class="text-justify">'.$farmer_text." <a type='button' style='color:#4e9525;cursor:pointer;' data-toggle='modal' data-target='#".$random_modal."'><u><b><i>Learn more</i></b></u></a>".'</h5></li>';
 			} else {
 				$countFarmer++;
 			}
@@ -582,7 +583,6 @@
 										'</div>'.
 									'</div>'.
 								  '</div>'.
-								  //'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="collapse" data-target="#'.$random_button.'" aria-expanded="false" aria-controls="state-2011-2016"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 									'<a class="btn-custom align-items-center justify-content-center" style="width: 180px; cursor: pointer;" data-toggle="modal" data-target="#'.$random_modal.'"><span><i class="fa fa-expand" aria-hidden="true"></i> View suggestions</span></a>'.
 								'</div>'.
 							  '</div>'.
