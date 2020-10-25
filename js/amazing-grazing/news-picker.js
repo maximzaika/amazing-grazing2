@@ -34,10 +34,10 @@ $(function(){
 			document.querySelector('#drop-topic').textContent = topicName; /* Rename the sort button with the selected topic */
 			var regionName = document.querySelector('#drop-region').textContent; /* Get info of region name button */
 			
-			var sortID = $('#drop-sort').attr('id');
-			var sortIDlength = sortID.length;
-			var sortName = sortID.substr(2, sortIDlength);
-			var startDate = sortName;
+			var startDate = document.querySelector('#drop-sort').textContent;
+			if (startDate == "Sort Newest to Oldest") { startDate = "new-to-old" } 
+			if (startDate == "Sort Oldest to Newest") { startDate = "old-to-new" }
+			console.log('T_ >' + startDate);
 		} 
 		
 		if (receivedNewsData.substr(0, 2) == "R_") {
@@ -49,7 +49,8 @@ $(function(){
 		    
 			var startDate = document.querySelector('#drop-sort').textContent;
 			if (startDate == "Sort Newest to Oldest") { startDate = "new-to-old" } 
-			if (startDate == "Sort Oldest to Newest") { startDatexxx = "old-to-new" }
+			if (startDate == "Sort Oldest to Newest") { startDate = "old-to-new" }
+			console.log('R_ >' + startDate);
 		}
 		
 		if (receivedNewsData.substr(0, 2) == "S_") {
