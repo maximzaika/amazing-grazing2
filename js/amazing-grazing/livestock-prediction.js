@@ -1,6 +1,41 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - called by livestock-statistics.php when year is selected (class "lvstYearPrediction" clicked)
+ *
+ * Description:
+ *  - retrieves the prediction dataset from the database
+ *  - contains functions:
+ *    * readNumber(nStr, title) : converts calculations of large number to human readable format example: 1 thousand,
+ *    * contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText, URL) : decides what content goes to yearSelection()
+ *    * enableCarousel(owl, number2, number) : restarts the carousel on load or after user selects other filters
+ *    * yearSelection() : decies what cards send to the client (livestock-statistics.php) by sending a request to contentHTML() function
+ *
+ * This file is called by the following web page:
+ *  - livestock-statistics.php
+*/
+
 $(function(){
-	/* This function rounds large values and added bil, mil, etc. 
-	   based on the value */
+	/* 
+		Description: rounds large values and added bil, mil, etc. based on the value
+        Attributes:
+          - nStr: calculated value to be displayed on the page
+          - title: title of the card
+		Pre-condition:
+		  - must be called by contentHTML() with the value and title of the card
+          - Math must be available
+		Post-condition
+		  - convert numbers to human readable format, example '1,000' convert to '1 thousand'
+            by calculating
+		Return:
+		  - nStr, word: new value and the word
+	*/
 	function readNumber(nStr, title) {
 		if (title.includes("QTY")) {
 			word = "";
@@ -32,13 +67,25 @@ $(function(){
 		}
 	}
 	
-	/* Converts special characters into HTML readable format 
-	   Returns: converted string */
-	function specialToHTML(str) {
-		return str.replaceAll("&#47;", "/");
-	}
-	
-	/* This function decides what content needs to be sent to the client */
+	/* 
+		Description: decides what content needs to be sent to the client (livestock-statistics.php)
+        Attributes:
+          - icon: icon of the card from the database
+          - title: title of teh card
+          - curVal: latest year (2020,2030,2040, etc)
+          - year: lowest year for comparison (2016)
+          - remainVal: remaining value after the calculation
+          - modalTitle: title of the modal after it is clicked
+          - modalText: the text that goes inside the modal
+          - URL: link to the page of the related grazing technique
+		Pre-condition:
+		  - must be called by yearSelection()
+          - Math must be available
+		Post-condition
+		  - creates HTML content that is sent to the client (livestock-statistics.php) based on the filters selected
+		Return:
+		  - content: html content
+	*/
 	function contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText, URL){
 		icon_same = "fa-dot-circle-o";
 		icon_good = "fa-arrow-circle-up";
@@ -81,10 +128,8 @@ $(function(){
 		
 		var randomVal = 'random'+Math.floor(Math.random() * 1000);
 		var openModal = randomVal+'_modal';
-		/* Added modal to expand the text */
 		
-		var content = //'<div id="card-height-'+randomVal+'" style="padding-bottom:40px;" class="card-height col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+
-						'<div class="item d-flex align-items-stretch">'+
+		var content = '<div class="item d-flex align-items-stretch">'+
 							'<div class="wrap">'+
 								'<div id="card-height-'+randomVal+'" class="bg-light services card-height text-center card-height-replace" style="padding-bottom: 10px;">'+
 									'<div class="icon justify-content-center align-items-center">'+
@@ -175,11 +220,23 @@ $(function(){
 							'</div>'+
 						'</div>'+
 					'</div>';
-						//'</div>';
-		
 		return content;
 	}
 	
+	/* 
+		Description: restart the carousel after user selected new filters
+        Attributes:
+          - owl: class of the carousel on the page (carousel-services)
+          - number2: how many card to show when the size of the screen is more than or equal 1000
+          - number: how many card to show when the size of the screen is more than or equal 1600
+		Pre-condition:
+		  - must be called by yearSelection()
+          - carousel needs to be initially executed on page load, otherwise there is an error
+		Post-condition
+		  - send the attrbitues to the carousel for execution
+		Return:
+		  - none: visually enables carousel
+	*/
 	function enableCarousel(owl, number2, number) {
 		owl.owlCarousel({
 			center: true,
@@ -189,9 +246,6 @@ $(function(){
 			stagePadding: 0,
 			mouseDrag: false,
 			nav: true,
-			//autoplay: true,
-			//autoplayHoverPause: true,
-			//autoplayTimeout: 5000,
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 			responsive:{
 				0:{
@@ -212,6 +266,22 @@ $(function(){
 	
 	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
 	var owl = $('.carousel-services');
+	
+	/* 
+		Description: change year based on selection, calculate facts using formulas, decide what cards to show based on the filters
+        Attributes:
+          - none
+		Pre-condition:
+		  - year selector with the class "lvstYearPrediction" must be clicked
+		Post-condition
+          - makes a request to the server's file 'prediction_POST.php' that retrieves all the content
+		  - change the year based on the user selection
+          - calculate facts using formulas (shown below)
+          - decides what cards to show based on the filters:
+            * true true true false (meaning that BEEF CATTLE DAIRY CATTLE SHEEP are active and TOTAL is inactive)
+		Return:
+		  - none: visually updates the clients page (livestock-statistics.php)
+	*/
 	/* This function 1) changes the value of the year selection button, 
 					 2) calculates facts based on the formulas
 					 3) decides what cards to show based on the filter selection */
@@ -234,7 +304,7 @@ $(function(){
 				checkActive.push($(buttons[i]).hasClass(class_on));
 			}
 			
-			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
+			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3]; // makes the string true true true false (or any other)
 
 			$('#prediction-data').addClass('animated fadeOutDown');  // add fade out animation class
 			setTimeout(function() { // delay the executing of the fade effects just to give them time to execute

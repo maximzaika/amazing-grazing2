@@ -1,8 +1,14 @@
 
 <?php 
-    /* Server side files */
-	require_once "server_config.php"; // Accesses to the database
-	require_once "php/navigation.php"; // Updates the navigation bar
+    /* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+
+	/* Server side files */
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
 	require_once "php/livestock-statistics-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
@@ -12,6 +18,7 @@
 	<head>
 		<title>Amazing Grazing - Livestock Statistics</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -118,7 +125,7 @@
 		</section>
 		
 		
-		<!-- Section 3: DOMINANT LIFESTOCK IS DRASTICALLY REDUCING -->
+		<!-- Section 3: CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-livestock" style="z-index:2;">
 			<!-- Title and subheading of this section -->
 			<div class="container" style="padding-top: 4em;">
@@ -166,7 +173,7 @@
 			</div>
 			<!-- End Card section -->
 		</section>
-		<!-- End Section 3: Page header - Livestock is reducing -->
+		<!-- End Section 3: Page header - CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE -->
 		
 		
 		<!-- Section 4: Footer -->
@@ -239,115 +246,65 @@
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		<script src="js/amazing-grazing/livestock-prediction.js"></script>
 		<script src="js/amazing-grazing/livestock-picker.js"></script>
-		<script src="js/amazing-grazing/counterup.min.js"></script>		
+		<script src="js/amazing-grazing/counterup.min.js"></script>
+		<script src="js/amazing-grazing/animated-spinner.js"></script><!-- triggers spinner when the page is fully loaded -->	
 		<script type='text/javascript'> <!-- triggers changes when the page is fully loaded only -->
 			var execute_once = 0; // make sure that the upper notification bar is not appearring when user makes changes to the filter
-
+			
+			/* 
+				Description: trigger card update when year is selected (only after page is fully loaded)
+				Pre-condition:
+				  - the year drop down menu must have an id "drop-year"
+				Post-condition
+				  - takes the year selected (its text), added extension "y_" infront
+                    and triggers item with id "#y_XXXX" for it to execute.
+                  - changes the execute_once to 1 to enable the notification of the page update (by default it is disabled)
+				Return:
+				  - none, but resizes visually
+			*/
 			$(document).ready(function(){
-				/* Trigger the card update based on the year selected */
 				var yearContent = document.getElementById("drop-year").textContent;
 				var selectedYear = "#y_"+yearContent;
 				$(selectedYear).trigger("click");
 				execute_once++;
-				
-				
-				/* Control the Animated Spinner that containes 5 items */
-				let i=2;
-
-				var radius = 200;
-				var fields = $('.itemDot');
-				var container = $('.dotCircle');
-				var width = container.width();
-				radius = width/2.5;
-				 
-				var height = container.height();
-				var angle = 0, step = (2*Math.PI) / fields.length;
-				fields.each(function() {
-					var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-					var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-
-					$(this).css({
-						left: x + 'px',
-						top: y + 'px'
-					});
-					
-					angle += step;
-				});
+			});
 		
-				$('.itemDot').click(function(){
-					var dataTab = $(this).data("tab");
-					$('.itemDot').removeClass('active');
-					$(this).addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+ dataTab).addClass('active');
-					i = dataTab;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-1)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-1)*36)+"deg)",
-						"transition":"1s"
-					});
-				});
-		
-				setInterval (function() { // Function that auto executes every 5 seconds to enable auto spin
-					var dataTab = $('.itemDot.active').data("tab");
-					
-					if (dataTab>5 || i>5) {
-						dataTab=1;
-						i=1;
-					};
-					
-					$('.itemDot').removeClass('active');
-					$('[data-tab="'+i+'"]').addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+i).addClass('active');
-					i++;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-2)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-2)*36)+"deg)",
-						"transition":"1s"
-					});
-				}, 5000); 
-		});
-		</script>
-		<script type='text/javascript'> <!-- Executes pop-up when updating filter & rename the filter when changed -->		
-			$(".lvstYearPrediction").click(function() { // controls the execution of the notification when user changes prediction year/filter
+			/* 
+				Description: controls the execution of the notification when user changes prediction year/filter
+				Pre-condition:
+				  - the notification bar must have an id "update-notification"
+				Post-condition
+				  - adds class "show" to display it on the page
+                  - removes the class "show" 2 seconds after to hide the notification
+				Return:
+				  - none, but visually shows/hides a notification
+			*/
+			$(".lvstYearPrediction").click(function() {
 				if (execute_once > 0) {
 					var x = document.getElementById("update-notification");
 					x.className = "show";
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
 				}
 			});
-			
-			$("#show-filter").click(function() { // renames the filter button upon click
-				var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
-				var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
-				
-				var curr_text = document.getElementById("show-filter").innerHTML;
-				
-				if (curr_text == max_btn) {
-					document.getElementById("show-filter").innerHTML  = min_btn;
-				} else {
-					document.getElementById("show-filter").innerHTML  = max_btn;
-				}
-			});
-		</script>
 		
-		<!-- Added in Iteration 3 -->
-		<script type='text/javascript'> <!-- Tracks the height of the card to make it same when the card is not expanded -->
 			var clickedCard = [];
 			var maximumHeight = '';
 			var countClick = 0;
 			
+			/* 
+				Description: Tracks the height of the card to make it same when the card is not expanded
+				Pre-condition:
+				  - called by the invisible span button within each container that has a unique ID
+				Attributes:
+                  - cardID: unique id of the card coming from the invisible <span> button within the card
+				Post-condition
+				  - gets the maximum height of all the cards
+                  - sets the height of all the cards to maximum height
+                  - removes the height of the card where "+ View Suggestion" button is clicked, and 
+                    then adds back the maximum high if "+ View Suggestion" is clicked the second time
+				Return:
+				  - none, but visually shows/hides a notification
+			*/
 			function removeHeight(cardID) {
 				if (countClick == 0) {
 					maximumHeight = ($('#'+cardID).css('height').substr(0,3)); // get the original height
@@ -366,13 +323,43 @@
 					clickedCard.push(cardID); // add to currently open card list
 				};
 			};
-		</script>
 		
-		<script type='text/javascript'> // Receive the graph selected by the user
+			/* 
+				Description: converts special chars "&#47" to "/" to make it a tableau URL
+				Pre-condition:
+				  - must be called the .ajax() triggered by the button "SHOW GRAPH" with id "hide-graph"
+				Attributes:
+                  - str: string sent by the .ajax() retrieved from the database table
+				Post-condition
+				  - replaces "&#47" withj "/"
+				Return:
+				  - clean URL string back to $("#hide-graph").click(function())
+			*/
 			function specialToHTML(str) {
 				return str.replaceAll("&#47;", "/");
 			}
 			
+			/* 
+				Description: Receive the graph selected by the user
+				Pre-condition:
+				  - the button "SHOW GRAPH" with id "hide-graph" must be clicked
+                  - all the filters must have btn-amazing-livestock-on or btn-amazing-livestock-off classes
+                    that indicate whether filter is active or not
+				Attributes:
+                  - none
+				Post-condition
+				 - calls php/livestock-graph.php file to generate the graph on the page
+				 - classifies clicked button by true, while unclicked button by false:
+                    * example if BEEF CATTLE DAIRY CATTLE SHEEP are active and TOTAL is inactive:
+                      -- true true true false
+                  - usues .ajax() to send the above true/false condition to the database, which
+                    contains the graphs and the conditions for comparison as well. If condition match
+                    then db sends the record to .ajax() and then .ajax() converts this data to
+                    HTML readable graph and sends back to the client (livestock-statisics.php)
+				Return:
+				  - graph
+				  - server error
+			*/
 			$("#hide-graph").click(function() {
 				$("#tableau-chart2").empty();
 				

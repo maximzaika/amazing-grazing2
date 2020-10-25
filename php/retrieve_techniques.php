@@ -188,7 +188,6 @@
 				$selected_indiv_titles = explode(";", $selected_indiv_title);
 				$selected_indiv_texts = explode(";", $selected_indiv_text);
 				
-
 				if ($page == $selected_techn) { /* Check the received page */
 					$technContent = $technContent . 
 								'<section class="ftco-section ftco-no-pt ftco-no-pb">'.
