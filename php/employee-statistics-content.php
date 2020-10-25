@@ -16,13 +16,13 @@
 	 *  - none
 	 *
 	 * Pre-condition:
-	 *  - employment-statistics.php web page on load
+	 *  - employment-statistics.php web page executes this file on load
 	 *
 	 * Post-condition
-	 *  - access db tables: emp_landing & emp_agri_comm to retrieve spinner content and introduction content
+	 *  - access db tables: emp_landing & emp_agri_comm to retrieve landing image, video, and agricultural communities content
 	 *
 	 * Return:
-	 *  - $emp_landing & $emp_agri can be requested by the client (employment-statistics-conent.php)
+	 *  - $emp_landing & $emp_agri can be requested by the client (employment-statistics.php)
 	*/
 
 	/* ------------- 1) Landing ------------- */
