@@ -1,10 +1,64 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Description:
+ *  - requested by employment-statistics.php upon load and when user selected the employment type
+ *  - contains functions:
+ *    * specialToHTML(str): converts special chars "&#47" to "/" to make it a tableau URL
+ *    * placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url): receives from selectEmploymentType()
+ *                 the graph content and its license, and creates the graph in HTML format, resizes it, and insert the source
+ *    * selectEmploymentType(): identifies which type of employment user selected and sends it to placeGraph()
+ *    * selectEmployment: uses .ajax() that calls php/employment-card-POST.php server file to receive card content from the database
+ *
+ * Pre-condition:
+ *  - page must be loading OR user must select different employment type
+ *
+ *
+ * Return:
+ *  - updates graph & card content
+*/
+
 $(function(){
-	/* Converts special characters into HTML readable format 
-	   Returns: converted string */
+	/* 
+		Description: converts special chars "&#47" to "/" to make it a tableau URL
+		Pre-condition:
+          - must be called by placeGraph()
+		  - must be called the .ajax() triggered by the button "SHOW GRAPH" with id "hide-graph"
+		Attributes:
+		  - str: string sent by the .ajax() retrieved from the database table
+		Post-condition
+		  - replaces "&#47" withj "/"
+		Return:
+		  - str.replaceAll("&#47;", "/")
+	*/
 	function specialToHTML(str) {
 		return str.replaceAll("&#47;", "/");
 	}
 	
+    /* 
+		Description: converts special chars "&#47" to "/" to make it a tableau URL
+		Pre-condition:
+          - must be called by placeGraph()
+		  - must be called the .ajax() triggered by the button "SHOW GRAPH" with id "hide-graph"
+		Attributes:
+		  - div_id: id of the tableau graph
+		  - img_src: img source of the tableau graph
+		  - o_h_url: URL of the tableau graph
+		  - o_name_val: name value of the tableau graph
+		  - o_name_val: static url of the tableau graph
+		  - licence_text: text of the license that goes below the graph
+		  - licence_url: url of the license that goes inside the licence_text
+		Post-condition
+		  - must be called by selectEmploymentType()
+          - container with id "tableau-chart" where graph goes must be on the page
+		Return:
+		  - none, visually replaces "tableau-chart" and "reference" ids
+	*/
 	function placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url) {
 		var div = document.createElement('div');
 		div.classList.add('tableauPlaceholder');
@@ -149,6 +203,22 @@ $(function(){
 		vizElement.parentNode.insertBefore(scriptElement, vizElement);
 	}
 	
+	/* 
+		Description: stores the content of the tableau graph & send this content to placeGraph()
+		Pre-condition:
+          - must be called by placeGraph()
+		  - must be called the .ajax() triggered by the button "SHOW GRAPH" with id "hide-graph"
+		Attributes:
+		  - active_id: currently active id
+		  - e_beef: str of e-beef
+		  - e_dairy: str of e-dairy
+		  - e_sheep: str of e-sheep
+		Post-condition
+		  - compare active_id with the e_beef, e_dairy, or e_sheep to decide which employment is selected
+          - sened requst with the data to placeGraph() to initiate graph creation
+		Return:
+		  - none
+	*/
 	function selectEmploymentType(active_id, e_beef, e_dairy, e_sheep) {
 		if (active_id == e_beef) {
 			var div_id = 'viz1600264742712';
@@ -156,10 +226,8 @@ $(function(){
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 			var o_name_val = 'farmer&#47;Dashboard1';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard1&#47;1.png';
-			
 			var licence_text = "The Commonwealth of Australia, Beef Cattle Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312"
-			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		} else if (active_id == e_dairy) {
 			var div_id = 'viz1600264972873';
@@ -167,10 +235,8 @@ $(function(){
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 			var o_name_val = 'farmer&#47;Dashboard2';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard2&#47;1.png';
-			
 			var licence_text = "The Commonwealth of Australia, Dairy Cattle Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313"
-			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		} else { //e-sheep
 			var div_id = 'viz1600265161856';
@@ -178,16 +244,33 @@ $(function(){
 			var o_h_url = 'https%3A%2F%2Fpublic.tableau.com%2F';
 			var o_name_val = 'farmer&#47;Dashboard3';
 			var o_static_url = 'https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fa&#47;farmer&#47;Dashboard3&#47;1.png';
-			
 			var licence_text = "The Commonwealth of Australia, Sheep Farmers 2016"
 			var licence_url = "https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322"
-			
 			placeGraph(div_id,img_src,o_h_url,o_name_val,o_static_url,licence_text,licence_url);
 		}
 	}
 	
 	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
 	var owl = $('.carousel-services');
+	
+	/* 
+		Description: uses .ajax() that calls php/employment-card-POST.php server file to receive card content from the database
+		Pre-condition:
+          - employment type with the class "select-employment" must be selected to trigger this function
+	      - container with id "tableau-chart" must be on the page (this is where graph will go)
+		Attributes:
+		  - none
+		Post-condition
+		  - identifies the id of the clicked employment
+          - calls a request to selectEmploymentType() to initiate graph creation with selected graph content
+          - resize card containers to match the height of all the containers
+          - executes/restarts owlCarousel each time user makes an upda
+		Return:
+		  - server error
+          - card content
+        Improvement can be done:
+          - store the graphs in the db instead
+	*/
 	var selectEmployment = function() {
 		var active_id = $(this).attr("id");
 		
@@ -208,7 +291,7 @@ $(function(){
 					$("#cards-data").empty();
 					document.getElementById('cards-data').innerHTML = data.card;
 					
-					if (executeCarousel == 1) {
+					if (executeCarousel == 1) { // initiate carouse removal after users request to update the data
 						owl.data('owl.carousel').destroy(); 
 					}
 					
@@ -221,8 +304,6 @@ $(function(){
 						mouseDrag: false,
 						nav: true,
 						autoplay: false,
-						//autoplayHoverPause: true,
-						//autoplayTimeout: 5000,
 						navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 						responsive:{
 							0:{
