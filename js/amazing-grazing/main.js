@@ -1,5 +1,28 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Description:
+ *  - contains 2 functions:
+ *    * scrollToTop: called by all the pages - scrolls back to top by clicking the button on the lower right corner of the screen
+ *    * smoothScroll: called by index.php - when "Learn more" button is clicked, it allows to automatically scrool to achhor smoothly
+ *
+ * Pre-condition:
+ *  - Learn More or Scroll to top button must be clicked to execute these functions
+ *
+ * Post-condition:
+ *  - When Learn more is clicked, it smoothly scrools to the achor (SERVICES)
+ *  - When scroll to top button is clicked, it is used to scroll all the way to top by calling scrollToTop (contains class 'js-gotop')
+ *
+ * Return:
+ *  - updates the div id "update-news" with the latest news
+*/
+
 ;(function () {
-	
 	// Function rsponsible for the functionalities of the scroll to top button
 	var scrollToTop = function() {
 		$('.js-gotop').on('click', function(event){ /* Detect the click of the js-gotop class */
@@ -20,7 +43,6 @@
 			}
 		});
 	};
-	
 	
 	// Smooth Scrolling to anchor
 	var smoothScroll = function() {
@@ -44,7 +66,6 @@
 		});
 	};
 	  
-	
 	$(function(){
 		scrollToTop();
 		smoothScroll();
