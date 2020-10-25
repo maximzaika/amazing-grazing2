@@ -1,3 +1,29 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Description:
+ *  - requested by news.php page only if user clicks the following buttons: topic, country, sort
+ *
+ * Pre-condition:
+ *  - user needs to press topic, country, or sort buttons. All have this class and it is listening: "updateNewsJS"
+ *  - buttons must have names, for example: Australia, Grazing, Sort Newest to Oldest, for this function to work
+ *
+ * Post-condition:
+ *  - receive the id of the clicked button. Country has "R_", topic has "T_", sort has "S_". These extensions used
+ *    to identify what action needs to be taken. Actions mostly the same, but different at the same time.
+ *  - Received country like "Australia" gets converted to "au" because that's what gnewsAPI understands.
+ *    * list of countries need to be manually modified or short name needs to be set in database (this is not done)
+ *  - Clears current news after user's click, and sends a request via .ajax() to gnewsAPI_POST.php to receive new news.
+ *
+ * Return:
+ *  - updates the div id "update-news" with the latest news
+*/
+
 $(function(){
 	var updateNewsFunc = function() {
 		var receivedNewsData = $(this).attr("id"); /* get the id of the clicked button */
@@ -61,7 +87,6 @@ $(function(){
 			       receivedNewsRegion: regionName,
 				   receivedNewsStart: startDate},
 			success: function (data) {
-				//console.log(data.api);
 				var newsDiv = document.getElementById('update-news');
 				newsDiv.innerHTML = data.newsHTML;
 			},

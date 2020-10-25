@@ -1,9 +1,20 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the techniques page by typing techniques.php in the browser
+-->
 
 <?php 
     /* Server side files */
-	require_once "server_config.php";
-	require_once "php/navigation.php";
-	require_once "php/retrieve_techniques.php";
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/retrieve_techniques.php"; // Generates the Techniques received from the database
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 

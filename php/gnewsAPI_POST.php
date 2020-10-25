@@ -1,10 +1,47 @@
 <?php
-    /* This is another file specifically used for the updating the criterias.
+    /*
+	 * Last Edited: 25/10/2020
+     *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+     *
+	 * Description::
+	 *  - similar to gnewsAPI.php (but works with .ajax() and has sorting method)
+	 *  - gets called by the by news-picker.js file (by the .ajax())
+	 *  - it checks whether the News Token provided by the GnewsAPI has ran out of 
+	 *    available transactions - 100 max. If it does, it goes on to another token.
+	 *    The count is stored in the database. Database stores 7 tokens in total, giving us
+	 *    700 transactions. Manual refresh of the table g_news_api is advised every 24 hours.
+     *  - then it sends a request to GnewsAPI to receive the news in JSON format - 10 max news 
+	 *    due to a free version. 
+	 *  - then it creates an HTML code with the news data and sends to the client's browser
+     *
+	 * Attributes:
+	 *  - $data: JSON received from GnewsAPI
+	 *  - $total: QTY of news received
+	 *  - $sort: default sorting method (old-to-new or new-to-old) set by the user (.ajax() sends this request)
+	 *
+	 * Pre-condition:
+	 *  - neews to receive original sorting method
+	 *  - at least one of the News Tokens in the table g_news_api needs to have less than 100 transactions available
+	 *  - database must be open for updates to update the count (g_news_count) for the used token
+	 *
+	 * Post-condition
+	 *  - sorts news old-to-new or new-to-old 
+	 *  - request 3 days old news, meaning that the latest news within 3 days
+	 *  - receive token & count (g_news_token & g_news_count) from the table g_news_api
+	 *  - used next token if 100 counts reached for the selected token
+	 *  - update the count of the used token to keep track for other users
+	 *
+	 * Return:
+	 *  - $full_news:
+	 *    * news: at least 1, maximum 10 (sorted)
+	 *    * error notifying the user that there are no news (less than 1)
+	 *    * server error displayed on the website letting the user know that all tokens has ran out of transactions
+	*/
 	
-	   Reads in the array converted from json. 
-	   Identifies the data of each news.
-	   Identifies the right month.
-	   Loops to create html for all the news */
 	function newsGenerator($data, $total, $sort) {
 		$newsMonth = array('January','February','March','April','May','June','July','August','September','October','November','December');
 		$total--;
@@ -141,20 +178,20 @@
 	$topicName = $_POST['receivedNewsTopic'];
 	$regionName = $_POST['receivedNewsRegion'];
 	$sortDate = $_POST['receivedNewsStart']; 
-	$days_ago_1 = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d'))));
+	$days_ago_1 = date('Y-m-d', strtotime('-3 days', strtotime(date('Y-m-d')))); // request latest news available in 3 days
 	$startDate_1 = $days_ago_1;
-	
-	/*$startDateWrong = $_POST['receivedNewsStart']; 
-	  $startDate_1 = substr($startDateWrong,6,4) . '-' . substr($startDateWrong,3,2) . '-' . substr($startDateWrong,0,2); */
 
+	/* URL Required to be sent to gnewsAPI */
 	$googleAPIurl = 'https://gnews.io/api/v3/search?q='.$topicName.'&max='.$totalNews.'&country='.$regionName.'&image=required&mindate='.$startDate_1.'&in=title&token='.$post_apiToken_2;
 
-	/* Gnews API code 
+	/* Gnews API Tokens: 
 	     token 1 (100 per day max) = 2f43dc9d754f3008f68a7f50b670c208
 	     token 2 (100 per day max) = c29b556f2f1ddd7ada7f2d7b6834b2c7 
 		 token 3 (100 per day max) = c3fae1827597a016ef41d4fb9c4f95fe 
-		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c */
-	
+		 token 4 (100 per day max) = 9e0677170130c646c24d9d907974166c 
+		 token 5 (100 per day max) = 1d5029e4a17729fbd82d52087fc2c85c 
+		 token 6 (100 per day max) = 0e5efcba3b5a2d1d78b5eb243ebb8ce2
+		 token 7 (100 per day max) = e7a575a4e5900bf0de75a73abf3e7d2b */
 	$ch = curl_init(); 
 	curl_setopt($ch, CURLOPT_URL, $googleAPIurl); 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
@@ -164,6 +201,5 @@
     
 	$newsData = json_decode($newsData, true); /* Decode the json format into a readable table */
 	$newsHTML = newsGenerator($newsData, $totalNews, $sortDate); /* Execute the function to scan through the news and create HTMLK readable format */
-	echo json_encode(array("newsHTML"=>$newsHTML,
-							"api"=>$googleAPIurl)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
+	echo json_encode(array("newsHTML"=>$newsHTML)); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
 ?>

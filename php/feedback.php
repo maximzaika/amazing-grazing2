@@ -8,7 +8,8 @@
 	 *                      encouraging farmer education
      *
 	 * Description::
-	 *  - gets called by the by feedback.js file (.ajax function inside it)
+	 *  - gets called by the feedback.js file (.ajax function inside it)
+	 *  - receives user feedback, verifies the user, and sends the feedback to the database
      *
 	 * Pre-condition:
 	 *  - session token needs to be on the website for it to work to prevent CSRF attacks
