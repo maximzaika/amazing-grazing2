@@ -11,6 +11,12 @@
 -->
 
 <?php 
+	/* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+		
     /* Server side files */
 	require_once "server_config.php"; // Accesses the database
 	require_once "php/gnewsAPI.php"; // retrieves the content from gnews API
@@ -24,6 +30,7 @@
 	<head>
 		<title>Amazing Grazing - News</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 		<!-- Browser tab logo -->
