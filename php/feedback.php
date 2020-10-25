@@ -1,4 +1,28 @@
 <?php
+	/*
+	 * Last Edited: 25/10/2020
+     *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+     *
+	 * Description::
+	 *  - gets called by the feedback.js file (.ajax function inside it)
+	 *  - receives user feedback, verifies the user, and sends the feedback to the database
+     *
+	 * Pre-condition:
+	 *  - session token needs to be on the website for it to work to prevent CSRF attacks
+	 *  - google capcha response needs to be inside the HTML code
+	 *  - server_config.php file needs to be in the main directory to allow access to the database
+	 * Post-condition
+	 *  - receive session to verify the user's session to prevent CSRF attacks
+	 *  - access phpMyAdmin using server_config.php
+	 *  - use real_escape_string() to prevent SQL Injections
+	 * Return:
+	 *  - json array "feedback"=>$server_feedback back to .ajax
+	*/
+
 	/* Initiate a session to protect the website & database from CSRF attacks */
 	session_start();
 	
@@ -38,8 +62,6 @@
 	
 	$sql = "INSERT INTO user_feedback (feedback_date, feedback_time, feedback_rate, feedback_text, feedback_page)".
 		   "VALUES ('$todayDate','$todayTime',$stars,'$feedback','$page');";
-					
-	$server_feedback = 'Unsuccessful update';
 
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';

@@ -1,15 +1,27 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the main page by typing index.php in the browser
+-->
 
 <?php 
-    session_start();
+    /* Generate Unique Session & Unique Token */
+	session_start();
 	if (empty($_SESSION['csrf_token'])) {
 		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 	}
 	
 	/* Server side files */
-	require_once "server_config.php";
-	require_once "php/navigation.php";
-	require_once "php/home_offerings.php";
-	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/home_offerings.php"; // Generates 'SERVICES' section of the website
+	require_once "php/generate-feedback-tab.php"; // Generates the 'Feedback' tab
 ?>
 
 <!DOCTYPE html>
@@ -67,7 +79,6 @@
 		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 
-		
 		<!-- Section 2: SERVICES -->
 		<section id="offerings" class="ftco-section bg-light" style="padding-bottom: 4em; padding-top: 4em;"">
 			<div class="container">
@@ -154,8 +165,6 @@
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
 		
-		
-		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		
@@ -163,8 +172,28 @@
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 		<script type="text/javascript">
+			/* 
+				Description: executes the carousel and resizes SERVICES cards to the same height
+				Pre-condition:
+				  - the page is fully loaded
+				  - all the cards must have class 'p_' to identify 
+				Post-condition
+				  - enable .owlCarousel() execution
+				  - Resize the cards with class 'p_' by looping through all of them
+				    and getting the maximum height of all the cards
+				Return:
+				  - none, but carousel needs to be functional, and cards must be the same height
+			*/
 			$(document).ready(function(){		
-				//----- Start: Initiate carousel -----
+				/* 
+					Description: executes the carousel
+					Pre-condition:
+					  - js/owl.carousel.min.js file MUST BE executed
+					Post-condition
+					  - send the attributes to the owl.carousel.min.js
+					Return:
+					  - none, but carousel needs to be functional
+				*/
 				$('.carousel-services').owlCarousel({
 					center: true,
 					loop: true,
@@ -194,21 +223,28 @@
 				});
 				//----- End: Initiate carousel -----
 				
-				//----- Start: Initiate resizing the service containers to make sure the size of these containers is the same -----
+				/* 
+					Description: scan through each SERVICES card and resize based on the maximum height
+					Pre-condition:
+					  - card must have 'p_' class
+					  - page must be refreshed each time if the screen size changes
+					Post-condition
+					  - scan throught 'p_' class
+					  - find max height
+					  - resize all the max height
+					Return:
+					  - none, visually change the height of each card
+				*/
 				var maxHeight = -1
 				
 				$('.p_').each(function() { // get the max height out of all plants containers
 					maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 				});
 				
-				//maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
-				
 				$('.p_').each(function() { // change the height of all plants containers to max
 				   $(this).height(maxHeight);
 				 });
-				//----- End: Initiate resizing the service containers to make sure the size of these containers is the same -----
 			});
-				
 		</script>
 	</body>
 </html>
