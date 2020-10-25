@@ -1,3 +1,14 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the livestock statistics page by typing livestock-statistics.php in the browser
+-->
 
 <?php 
     /* Generate Unique Session & Unique Token */
