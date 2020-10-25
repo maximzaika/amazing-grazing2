@@ -188,6 +188,7 @@
 				/* 
 					Description: executes the carousel
 					Pre-condition:
+					  - carousel must have class 'carousel-services'
 					  - js/owl.carousel.min.js file MUST BE executed
 					Post-condition
 					  - send the attributes to the owl.carousel.min.js
@@ -221,11 +222,11 @@
 						}
 					}
 				});
-				//----- End: Initiate carousel -----
 				
 				/* 
 					Description: scan through each SERVICES card and resize based on the maximum height
 					Pre-condition:
+					  - origin max height must be -1 (anything below 0)
 					  - card must have 'p_' class
 					  - page must be refreshed each time if the screen size changes
 					Post-condition

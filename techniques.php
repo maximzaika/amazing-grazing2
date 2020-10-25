@@ -11,7 +11,13 @@
 -->
 
 <?php 
-    /* Server side files */
+    /* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
+	/* Server side files */
 	require_once "server_config.php"; // Accesses the database
 	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
 	require_once "php/retrieve_techniques.php"; // Generates the Techniques received from the database
@@ -23,6 +29,7 @@
 	<head>
 		<title>Amazing Grazing - Grazing Techiques</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -234,7 +241,19 @@
 		<script src="js/aos.js"></script>
 		<script src="js/readMoreJS3.min.js"></script>
 		<script type="text/javascript">
+			/* Executes when page is ready ONLY */
 			$(document).ready(function(){
+				/* 
+					Description: calls readMoreJS3.min.js file to add hide/show button to long/short text
+					Pre-condition:
+					  - readMoreJS3.min.js needs to be called (it is custom modified to work with our website
+					    any other readMoreJS.min.js version is not going to function)
+					  - every text that needs to be hidden/shown must contain 'd2' id and '<a>' inside this id
+					Post-condition
+					  - adds hide/show button to long/short text
+					Return:
+					  - none, but renames the button
+				*/
 				$readMoreJS3.init({
 					target: '.d2 a',
 					numOfWords: 10,
@@ -242,7 +261,17 @@
 					moreLink: ' <i>show more facts</i>',
 					lessLink: ' <i>show less facts</i>'
 				});
-							
+					
+				/* 
+					Description: executes the carousel on the main page for all the techniques
+					Pre-condition:
+					  - carousel must have class 'carousel-farmer-actions'
+					  - js/owl.carousel.min.js file MUST BE executed
+					Post-condition
+					  - send the attributes to the owl.carousel.min.js
+					Return:
+					  - none, but carousel needs to be functional
+				*/
 				$('.carousel-farmer-actions').owlCarousel({
 					center: true,
 					loop: false,
@@ -279,7 +308,16 @@
 					}
 				});
 				
-				
+				/* 
+					Description: executes the carousel for the seasonal grazing technique page ONLY
+					Pre-condition:
+					  - carousel must have class 'seasonal-grazing'
+					  - js/owl.carousel.min.js file MUST BE executed
+					Post-condition
+					  - send the attributes to the owl.carousel.min.js
+					Return:
+					  - none, but carousel needs to be functional
+				*/
 				$(".seasonal-grazing").click(function() {
 					setTimeout(function(){
 						$('.carousel-seasons').owlCarousel({
@@ -291,9 +329,6 @@
 							nav: false,
 							autoplay: true,
 							autoplayHoverPause: true,
-							/*autoplayTimeout: 7000,
-							nav: true,
-							mouseDrag: false,*/
 							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 							responsive:{
 								0:{
@@ -310,7 +345,19 @@
 					}, 250);
 				});
 				
-				//----- Start resize the gallery container on initial load -----//
+				/* 
+					Description: scan through each TECHNIQUE card and resize based on the maximum height
+					Pre-condition:
+					  - origin max height must be -1 (anything below 0)
+					  - card must have 't_' class
+					  - page must be refreshed each time if the screen size changes
+					Post-condition
+					  - scan throught 't_' class
+					  - find max height
+					  - resize all the max height
+					Return:
+					  - none, visually change the height of each card
+				*/
 				var maxHeight = -1
 	
 				$('.t_').each(function() { // get the max height out of all plants containers
@@ -322,7 +369,6 @@
 				$('.t_').each(function() { // change the height of all plants containers to max
 				   $(this).height(maxHeight);
 				 });
-				//----- End resize the gallery container on initial load -----//
 			});
 		</script>
 	</body>
