@@ -11,18 +11,18 @@
 
 ## Table of Contents
 
-- [1.0 Team members](#heading)
-- [Heading](#heading-1)
-- [Heading](#heading-2)
-- [Heading](#heading-3)
-  * [Sub-heading](#sub-heading)
-  * [Sub-heading](#sub-heading-1)
-  * [Sub-heading](#sub-heading-2)
-- [Heading](#heading-4)
-- [Heading](#heading-5)
-  * [Sub-heading](#sub-heading-3)
-    + [Sub-sub-heading](#sub-sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading-1)
+- [1.0 Team members](#10-team-members)
+- [2.0 Programming languages](#20-programming-languages)
+- [3.0 Project description](#30-project-description)
+- [4.0 Project iterations](#40-project-iterations)
+  * [4.1 Iteration 1](#41-iteration-1)
+  * [4.2 Iteration 2](#42-iteration-2)
+  * [4.3 Iteration 3](#43-iteration-3)
+- [5.0 Set up](#50-set-up)
+- [6.0 Configure web pages](#60-configure-web-pages)
+  * [6.1 Configure the navigation bar](#s61-configure-the-navigation-bar)
+    + [6.1.1 Edit content](#611-edit-content)
+    + [6.1.2 Make direct changes to HTML/PHP code](#612-make-direct-changes-to-htmlphp-code)
 
 ## 1.0 Team members
 - **Maxim Zaika**
@@ -108,14 +108,14 @@ On top of that, users can download brochures of the preventative measures for th
 
 ### 6.1 Configure the navigation bar
 
-#### 6.1.1 Edit content
+	#### 6.1.1 Edit content
   
-- Option 1: directly modify the table `nav_bar` in the MySQL
-- Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
+	- Option 1: directly modify the table `nav_bar` in the MySQL
+	- Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
 
-#### 6.1.2 Make direct changes to HTML/PHP code
+	#### 6.1.2 Make direct changes to HTML/PHP code
   
-- Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
+	- Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
 	  
 ### Configure the headers of every page
 
