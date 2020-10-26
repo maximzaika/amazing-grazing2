@@ -141,9 +141,65 @@ On top of that, users can download brochures of the preventative measures for th
     - Download from [Google Drive](https://bit.ly/3jv8sEd)
 4. Following actions need to be taken to launch the website:
     - Create the table `amazing-grazing` in your database
-    - Add the [server_config.php](https://bit.ly/3onLDWG) file to the main folder *(if it is not there yet)*:
-      - Open it and modify `db_server` (server name), `db_username` (username to access the database), `db_password` (password to access the database), and `db_name` (table name)
+    - Add the server_config.php file to the main directory *(if it is not there yet)*:
+	  ```php
+	  <?php
+		define("DB_SERVER", "add-server-ip-here");
+		define('DB_USERNAME', 'add-MySQL-username-here');
+		define('DB_PASSWORD', 'add-MySQL-password-here');
+		define('DB_NAME', 'add-table-from-MySQL-here');
+	
+		$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+	
+		if ($con -> connect_error) {
+			die("Connection failed: " . $con->connect_error);
+		}
+	  ?>
+	  ```
+      - Modify `DB_SERVER` (server name), `DB_USERNAME` (username to access the database), `DB_PASSWORD` (password to access the database), and `DB_NAME` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
+5. When server is fully configured, add `.htaccess` file to main directory *(if it is not there yet)*:
+	```apacheconf
+	# Prevent access to Directory Listing
+	Options -Indexes
+
+	Options +FollowSymLinks -MultiViews
+	# Turn mod_rewrite on
+	RewriteEngine On
+	RewriteBase /
+
+	# X-XSS-Protection, X-Frame-Options, X-Content-Type nosniff, HSTS Strict Transport Security (HSTS)
+	<IfModule mod_headers.c>
+		Header set X-XSS-Protection "1; mode=block"
+		Header always append X-Frame-Options SAMEORIGIN
+		Header set X-Content-Type-Options nosniff
+		Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+	</IfModule>
+
+	# Session cookies HTTP & SEcure Flag
+	php_value session.cookie_httponly 1
+	php_value session.cookie_secure 1
+
+	# Rewrite everything to access to https except http
+	RewriteCond %{HTTPS} !=on
+	#RewriteCond %{HTTP_HOST} !^(localhost|127.0.0.1)
+	RewriteRule ^/(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+	# To externally redirect /dir/foo.php to /dir/foo excluding POST requests
+	RewriteCond %{REQUEST_METHOD} !POST
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+	RewriteRule ^ %1 [R=302,L,NE]
+
+	## To internally redirect /dir/foo to /dir/foo.php
+	RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+	RewriteRule ^ %{REQUEST_URI}.php [L]
+
+	### Website password protection
+	#AuthUserFile /opt/lampp/htdocs/.htpasswd
+	#AuthType Basic
+	#AuthName "Restricted Access to AG"
+	#Require valid-user
+	```
 
 ## 6.0 Configure identical parts of every page
 
