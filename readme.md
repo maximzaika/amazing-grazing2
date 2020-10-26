@@ -9,7 +9,22 @@
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
 **Audience:** English speaking farmers age 30-45  
 
-## Team members
+## Table of Contents
+
+- [Heading](#heading)
+- [Heading](#heading-1)
+- [Heading](#heading-2)
+- [Heading](#heading-3)
+  * [Sub-heading](#sub-heading)
+  * [Sub-heading](#sub-heading-1)
+  * [Sub-heading](#sub-heading-2)
+- [Heading](#heading-4)
+- [Heading](#heading-5)
+  * [Sub-heading](#sub-heading-3)
+    + [Sub-sub-heading](#sub-sub-heading)
+    + [Sub-sub-heading](#sub-sub-heading)-1
+
+## 1.0 Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
   - *Role in the team: leader, project manager, front-end & Back-end web developer, UX Designer*
@@ -26,12 +41,12 @@
   - *Role in the team: web developer and data analyst*
   - *Linkedin: https://www.linkedin.com/in/eric-li-02a2361ba*
   
-## Programming languages
+## 2.0 Programming languages
 
 * HTML, PHP, JavaScript, jQuery, CSS, SCSS
 * SQL (phpMyAdmin)
 
-## Project description
+## 3.0 Project description
 
 Responsive mobile website developed by the Monash University students for the 'FIT5120 Industry Experience 
 Studio Project' unit based on the Bootstrap 4 platform. The root cause of the problem has been researched 
@@ -39,16 +54,16 @@ from scratch based on the information provided online. Developers tried their be
 resources. No help was provided by anyone since this problem is relatively new in Australia. In total, the project consisted 
 of 3 iterations in 3 months.
 	
-## Project iterations
+## 4.0 Project iterations
 
-### [Iteration 1](https://amazing-grazing.ml/iteration1)
+### 4.1 [Iteration 1](https://amazing-grazing.ml/iteration1)
 
 * Latest news regarding grazing, wildfires, drought, and livestock. These news’ are the latest possible and can be 
 filtered based on the country and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3.
 * Grazing techniques that need to be avoided/utilized by the farmers. Animated images, developed by us, are provided with 
 the quick bullet-point information. Users can read additional information regarding these techniques and can download brochures.
 
-### [Iteration 2](https://amazing-grazing.ml/iteration2)
+### 4.2 [Iteration 2](https://amazing-grazing.ml/iteration2)
 
 * Improvements: bug fixes of iteration 1. Iteration 1 content has no visible change due to not keeping track of this change.
 * Livestock statistics page contains the facts regarding the current livestock situation in Australia based on the dataset retrieved 
@@ -62,7 +77,7 @@ The highest qualification and age groups are provided. The datasets were retriev
 [Australian Government Joboutlook 3](https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322). Additionally, 
 analysis & URLs to various agricultural communities, where farmers can communicate with other farmers, are provided.
 
-### [Iteration 3](https://amazing-grazing.ml/iteration3)
+### 4.3 [Iteration 3](https://amazing-grazing.ml/iteration3)
 
 * Lots of improvements to iterations 1 and 2. Various bug fixes and UX improvements. Mobile version is completely user friendly now on both mobile and desktop devices.
 * The drought page contains locations of drought based on the rainfall (mm). Users can learn what seasons are usually affected by drought. The dataset was retrieved from 
@@ -73,7 +88,7 @@ Additionally, farmers can learn preventative measures against them and what stat
 retrieved from [WeedsAustralia](https://weeds.org.au/) and [Australian Government Department of Agriculture, Water and the Environment](https://www.environment.gov.au/biodiversity/invasive-species/feral-animals-australia). 
 On top of that, users can download brochures of the preventative measures for their convenience.
 
-## Set up
+## 5.0 Set up
 
 1. [Locally] Configure [XAMPP Control Panel v3.2.4](https://www.apachefriends.org/index.html) (or any other alternative):
     - Apache & MySQL must be configured within the XAMPP
@@ -89,16 +104,16 @@ On top of that, users can download brochures of the preventative measures for th
       - Open it and modify `db_server` (server name), `db_username` (username to access the database), `db_password` (password to access the database), and `db_name` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
 
-## Configure web pages
+## 6.0 Configure web pages
 
-### Configure the navigation bar
+### 6.1 Configure the navigation bar
 
-#### Edit content
+#### 6.1.1 Edit content
   
 - Option 1: directly modify the table `nav_bar` in the MySQL
 - Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
 
-#### Make direct changes to HTML/PHP code
+#### 6.1.2 Make direct changes to HTML/PHP code
   
 - Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
 	  
