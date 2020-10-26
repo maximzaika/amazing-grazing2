@@ -47,6 +47,9 @@
     + [8.4.1 Livestock datasets](#841-livestock-datasets)
     + [8.4.2 Livestock tableau graphs](#842-livestock-tableau-graphs)
 - [9.0 Configure employment-statistics.php page](#90-configure-employment-statisticsphp-page)
+  * [9.1 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image content](#91-modify-farmers-can-make-a-difference-video-and-image-content)
+  * [9.2 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image in HTML](#92-modify-farmers-can-make-a-difference-video-and-image-in-html)
+  * [9.3 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section](#92-modify-farmers-can-make-a-difference-video-and-image-in-html)
 
 ## 1.0 Team members
 - **Maxim Zaika**
@@ -338,13 +341,15 @@ It is not stored in database
 
 ## 9.0 Configure employment-statistics.php page
 
-### 9.1 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image content
+### 9.1 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image section
+
+### 9.1.1 Modify content
 
 Both headers, subheaders, content, image, and video can be modified through MySQL database:
 - Option 1: directly modify `emp_landing` table in MySQL
 - Option 2: open `../db_backup/emp_landing.sql` in notepad, modify the content, and import it to MySQL
 
-### 9.2 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image in HTML
+### 9.1.2 Modify in HTML
 
 **Perform operations if necessary ONLY** 
 - `employment-statstics.php` contains `"Left and right sides (video & content) retrieved from db"` section that stores the following code (used to access the database and create HTML content):
@@ -354,9 +359,9 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
 - Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section 1) Landing, perform changes, save, ane reload the page
   - Section 1) Landing retrives the content directly from the database's table `emp_landing` and converts it to HTML
 
-### 9.3 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section
+### 9.2 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section
 
-#### 9.3.1 How does it work?
+#### 9.2.1 How does it work?
 
 - On load:
   1. Click of the sort button `$(emp_type_select).trigger("click");` is simulated in the `<script>` section of the bottom of the `employment-statistics.php` page based on the `id` of the button selected by 
@@ -373,14 +378,14 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
 - On sort button click:
   - Refer to 'On load step b (or 2)'
 
-#### 9.3.3 Modify the HEADER and SUBHEADER
+#### 9.2.3 Modify the HEADER and SUBHEADER
 
 It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
 2. Scroll down to "Section 3: NUMBER OF EDUCATED..." section
 3. Modify directly
 
-#### 9.3.2 Modify SORT options
+#### 9.2.2 Modify SORT options
 
 It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
@@ -389,7 +394,7 @@ It is not stored in database
 
 Additionally, if more sorting options have been added to HTML, then the function `$(".select-employment").click(function()` in the `<script>` at the bottom of the page needs to be modified.
 
-#### 9.3.3 Add/modify/remove tableau graphs
+#### 9.2.3 Add/modify/remove tableau graphs
 
 It is not stored in the database - **suggested improvement**
 1. Open `../js/amazing-grazing/employment-picker.js` in notepad
@@ -397,14 +402,14 @@ It is not stored in the database - **suggested improvement**
 3. Replace content where necessary, save, and reload page
 **Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
 
-#### 9.3.4 Add/modify/remove card content
+#### 9.2.4 Add/modify/remove card content
 
 - Option 1: directly modify `emp_cards` table in MySQL 
 - Option 2: open `../db_backup/emp_cards.sql` in notepad, modify the content, and import it to MySQL
 **Note:** tables `emp_age`, `emp_education`, and `emp_state` are related to each card. This data can be modified, but it is related to datasets used. Refer to 
 section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
-#### 9.3.5 Modify cards in HTML
+#### 9.2.5 Modify cards in HTML
 
 **Perform operations if necessary ONLY** 
 1. Open `../php/employment-card-POST.php`
@@ -416,9 +421,9 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
   - Then it converts all the content to HTML and sends to file `../js/amazing-grazing/employment-picker.js` using function `.ajax()`. Refer to section [9.3.1 How does it work?](#931-how-does-it-work) to learn more
 2. Perform direct manipulations, save, and reload the page
 
-### 9.4 Employment tableau graphs and datasets
+### 9.3 Employment tableau graphs and datasets
 
-#### 9.4.1 Employment datasets 
+#### 9.3.1 Employment datasets 
 
 1. Accessed by going to `../dataset_and_tableau/datasets-employment-statistics/`:
   - File 1: `livestock_farmers.xlsx` is the original datasets. It is not in database and not used.
@@ -428,7 +433,7 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 	- `emp_age`, and 
 	- `emp_cards`
 
-#### 9.4.2 Employment tableau graphs
+#### 9.3.2 Employment tableau graphs
 
 - Website has three graphs generated in tableau. 
 - Tableau server is required to be installed on your local machine to modify the tableau files.
@@ -436,21 +441,21 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 - Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. 
   Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more.
 
-### 9.5 Modify AGRICULTURAL COMMUNITIES section
+### 9.4 Modify AGRICULTURAL COMMUNITIES section
 
-#### 9.5.1 Modify the HEADER and SUBHEADER
+#### 9.4.1 Modify the HEADER and SUBHEADER
 
 It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
 2. Scroll down to "Section 4: AGRICULTURAL COMMUNITIES" section
 3. Modify directly
 
-#### 9.5.2 Modify Carousel content
+#### 9.4.2 Modify Carousel content
 
 - Option 1: directly modify `emp_agri_comm` table in MySQL
 - Option 2: open `../db_backup/emp_agri_comm.sql` in notepad, modify the content, and import it to MySQL
 
-#### 9.5.3 Modify Carousel in HTML
+#### 9.4.3 Modify Carousel in HTML
 
 **Perform operations if necessary ONLY** 
 - `employment-statstics.php` contains `"Start carousel"` section that stores the following code (used to access the database and create HTML content):
