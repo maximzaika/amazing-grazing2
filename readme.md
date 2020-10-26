@@ -93,8 +93,8 @@ On top of that, users can download brochures of the preventative measures for th
 
 1. Configure **the navigation bar**:
     - Edit content:
-	  - Option 1: Directly modify the table *nav_bar* in the MySQL
-      - Option 2: Go to *../db_backup* folder, open *nav_bar.sql* in notepad, modify the content, and import it to MySQL
+	  - Option 1: directly modify the table *nav_bar* in the MySQL
+      - Option 2: go to *../db_backup* folder, open *nav_bar.sql* in notepad, modify the content, and import it to MySQL
 	- Make direct changes to HTML/PHP code:
 	  - Go to *../php* folder, open *navigation.php* in notepad, read comments, modify the content, save it, and reload the page
 2. Configure **the headers** of every page:
@@ -108,7 +108,7 @@ On top of that, users can download brochures of the preventative measures for th
 4. Configure **breadcrumbs** of *techniques.php, livestock-statistics.php, employment-statistics.php, drought.php, invasive-species.php,* or *news.php*:
     - Open any of the files mentioned above in notepad
 	- Go to commented out section called "Breadcrumbs", make direct modifications, save them, and reload the page
-5. Configure & Description of **the Feedback floating button**:
+5. Configure & set up **the Feedback floating button**:
     - Where does feedback go to?
 	  - It goes directly to MySQL database table called *user_feedback*
 	- How does it work? Do the following actions when new pages are created ONLY.
@@ -134,8 +134,8 @@ On top of that, users can download brochures of the preventative measures for th
 			<script src="js/amazing-grazing/feedback.js"></script>
 			<script src='https://www.google.com/recaptcha/api.js'></script>
 		```
-	  - Feedback is generated via .PHP file, to modify it go to *../php* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
-6. Configure & Set up floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
+	  - Feedback is generated via .PHP file. To modify it go to *../php* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
+6. Configure & set up floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
 	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
 	```html
 		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
@@ -144,7 +144,16 @@ On top of that, users can download brochures of the preventative measures for th
 	```html
 		<script src="js/amazing-grazing/main.js"></script>
 	```
-7. 
+7. **Index.php page**:
+    - Modify 'SERVICES' section
+	  - To modify the HEADER and SUBHEADER: 1) directly access *index.php* file via notepad, 2) scroll down to "SERVICES" section 3) modify directly
+	  - To modify cards (services):
+	    - Content can be modified via the database:
+		  - Option 1: directly modify *index_offerings* table in MySQL
+		  - Option 2: go to *../db_backup* folder, open *index_offerings.sql* in notepad, modify the content, and import it to MySQL
+		- Make direct changes to HTML/PHP code:
+		  - Go to *../php* folder, open *home_offerings.php* in notepad, read comments, modify the content, save it, and reload the page
+
 
 ## Licence / Copyright
 
