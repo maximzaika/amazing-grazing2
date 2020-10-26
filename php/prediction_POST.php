@@ -27,10 +27,10 @@
 	*/
 	
  	require_once "../server_config.php";
-
+	
 	$year = $_POST['selectedYear'];
 	
-	/* Get the Token from the DB */
+	/* Get the predicted values from the database */
 	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
 	$all_years = $con -> query($get_yrData);
 	
@@ -90,6 +90,7 @@
 		}
 	}
 	
+	/* Get the livestock card content from the database */
 	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM livestock_cards";
 	$card_Data = $con -> query($get_cardData);
 
