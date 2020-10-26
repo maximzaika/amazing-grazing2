@@ -92,7 +92,9 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="carousel-services owl-carousel ftco-owl">
+							    <!-- SERVICES CARDS SECTION -->
 								<?php echo htmlspecialchars_decode(generateOfferings2($con));?>
+								<!-- /SERVICES CARDS SECTION -->
 							</div>
 						</div>
 					</div>

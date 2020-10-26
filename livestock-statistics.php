@@ -126,11 +126,11 @@
 					</div> 
 					<!-- End Spinner containing livestock, beef, milk, wool, land use -->
 					
-					<!-- Livestock reducting impacts grasslands section -->
+					<!-- Livestock reduction impacts grasslands section -->
 					<div class="col-md-12 col-lg-5 col-xl-6 col-xxl-7 order-xxs-1 order-lg-2">
 						<?php echo htmlspecialchars_decode($live_intro);?>
 					</div>
-					<!-- End Livestock reducting impacts grasslands section -->
+					<!-- End Livestock reduction impacts grasslands section -->
 				</div>
 			</div>
 		</section>
