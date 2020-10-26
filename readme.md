@@ -91,29 +91,32 @@ On top of that, users can download brochures of the preventative measures for th
 
 ## Configure web pages
 
-1. Configure the navigation bar:
+1. Configure **the navigation bar**:
     - Edit content:
 	  - Option 1: Directly modify the table *nav_bar* in the MySQL
       - Option 2: Go to *../db_backup* folder, open *nav_bar.sql* in notepad, modify the content, and import it to MySQL
 	- Make direct changes to HTML/PHP code:
 	  - Go to *../php* folder, open *navigation.php* in notepad, read comments, modify the content, save it, and reload the page
-2. Configure the headers of every page:
+2. Configure **the headers** of every page:
     - Headers are not stored in the database. To modify the images or text, open any of the web page file using notepad:
 	  - eg: *index.php, livestock-statistics.php,* etc.
 	- Go to commented out section called "Page header", make direct modifications, save them, and reload the page
-3. Configure the footers/license of every page:
+3. Configure **the footers/license** of every page:
 	- Footers are not stored in the database. To modify the content, open any of the web page file using notepad:
 	  - eg:*index.php, livestock-statistics.php,* etc.
 	- Go to commented out section called "Footer" or "License", make direct modifications, save them, and reload the page
-4. Configure <u>breadcrumbs</u> of *techniques.php, livestock-statistics.php, employment-statistics.php, drought.php, invasive-species.php,* or *news.php*:
+4. Configure **breadcrumbs** of *techniques.php, livestock-statistics.php, employment-statistics.php, drought.php, invasive-species.php,* or *news.php*:
     - Open any of the files mentioned above in notepad
 	- Go to commented out section called "Breadcrumbs", make direct modifications, save them, and reload the page
-5. Configure & Description of the Feedback floating button:
+5. Configure & Description of **the Feedback floating button**:
     - Where does feedback go to?
 	  - It goes directly to MySQL database table called *user_feedback*
-	- How does it work?
-	  - Add the following line to the webpage: `<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>`
-	  - Webpage must contain on top:
+	- How does it work? Do the following actions when new pages are created ONLY.
+	  - Add the following line to the `<body>` of the webpage: 
+	  ```php
+	    <?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
+	  ```
+	  - Add the following code to the top of the webpage before `<html>`:
 	    ```php
 		<?php 
 			session_start();
@@ -122,11 +125,26 @@ On top of that, users can download brochures of the preventative measures for th
 			}
 		?>
 		```
-	  - Webpage must contain in <head> section (used for sending tokens between the client and server to verify the identity):
-		```HTML
+	  - Add the following code to the top of the webpage inside the <head> section (used for sending tokens between the client and server to verify the identity):
+		```html
 			<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		```
-	  - Feedback is generated via .PHP file, to modify it go to *../php* folder, open *feedback.php* using a notebad, read comments, perform direct manipulations, save the file, and reload the page
+	  - Add the following scripts to the bottom of the `<body>` section:
+	    ```html
+			<script src="js/amazing-grazing/feedback.js"></script>
+			<script src='https://www.google.com/recaptcha/api.js'></script>
+		```
+	  - Feedback is generated via .PHP file, to modify it go to *../php* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
+6. Configure & Set up floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
+	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
+	```html
+		<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
+	```
+	- Add the following script to the bottom of the `<body` section:
+	```html
+		<script src="js/amazing-grazing/main.js"></script>
+	```
+7. 
 
 ## Licence / Copyright
 
