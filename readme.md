@@ -159,7 +159,7 @@ On top of that, users can download brochures of the preventative measures for th
       - Modify `DB_SERVER` (server name), `DB_USERNAME` (username to access the database), `DB_PASSWORD` (password to access the database), and `DB_NAME` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
 5. When server is fully configured, add `.htaccess` file to main directory *(if it is not there yet)*:
-	```
+	```apacheconf
 	# Prevent access to Directory Listing
 	Options -Indexes
 
