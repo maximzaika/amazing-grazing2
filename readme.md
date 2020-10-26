@@ -92,6 +92,7 @@ On top of that, users can download brochures of the preventative measures for th
 ## Configure web pages
 
 ### Configure the navigation bar
+
     - Edit content:
 	  - Option 1: directly modify the table *nav_bar* in the MySQL
       - Option 2: open *../db_backup/nav_bar.sql* in notepad, modify the content, and import it to MySQL
@@ -99,17 +100,22 @@ On top of that, users can download brochures of the preventative measures for th
 	  - Open *../php/navigation.php* in notepad, read comments, modify the content, save it, and reload the page
 	  
 ### Configure the headers of every page
+
     1. Headers are not stored in the database. To modify the images or text, open any of the web page file using notepad.
 	2. Go to commented out section called "Page header", make direct modifications, save them, and reload the page
+	
 ### Configure the footers/license** of every page
+
 	1. Footers are not stored in the database. To modify the content, open any of the web page file using notepad.
 	2. Go to commented out section called "Footer" or "License", make direct modifications, save them, and reload the page
 
 ### Configure breadcrumbs
+
     1. Open any of the webpages other than *index.php* (it is not on this page)
 	2. Go to commented out section called "Breadcrumbs", make direct modifications, save them, and reload the page
 	
 ### Configure & set up the Feedback floating button:
+
     - How does it work and where does it go?
 	  - HTML generation of the interface is explained below.
 	  - When user clicks send, javascript *../js/amazing-grazing/feedback.js* catches the click of a *feedback-form form*, then uses function `.ajax()` to access *../php/feedback.php* server file, which then compares
@@ -140,6 +146,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  - The HTML is generated via .PHP file. To modify it, open *../php/generate-feedback-tab.php* in notepad, read comments, perform direct manipulations, save the file, and reload the page
 	  
 ### Configure & set up the floating back to top button located on every page. 
+
     - **Perform these actions when creating a new page ONLY**
 	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
 	```html
@@ -152,6 +159,7 @@ On top of that, users can download brochures of the preventative measures for th
 	- *Scroll to top button* section of *../js/amazing-grazing/main.js* file is responsible for the back to top button
 
 ### Index.php page
+
     - Modify the "SERVICES" section:
 	  - To modify the HEADER and SUBHEADER: 1) directly access *index.php* file via notepad, 2) scroll down to "SERVICES" section 3) modify directly
 	  - To modify cards (services):
@@ -166,6 +174,7 @@ On top of that, users can download brochures of the preventative measures for th
 		  - Go to *../php/* folder, open *home_offerings.php* in notepad, read comments, modify the content, save it, and reload the page
 
 ### Livestock-statistics.php page
+
 	- Modify the spinner to the left side of the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS":
 	  - Ensure that the the following line is inside the "Spinner containing livestock, beef..." section (it is used to retrieve content from the database):
 	    ```php
