@@ -134,8 +134,8 @@ On top of that, users can download brochures of the preventative measures for th
 		<script src="js/amazing-grazing/feedback.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		```
-	  - Feedback is generated via .PHP file. To modify it go to *../php/* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
-6. Configure & set up floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
+	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
+6. Configure & set up the floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
 	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
 	```html
 	<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
@@ -145,15 +145,41 @@ On top of that, users can download brochures of the preventative measures for th
 	<script src="js/amazing-grazing/main.js"></script>
 	```
 7. **Index.php page**:
-    - Modify 'SERVICES' section
+    - Modify the "SERVICES" section:
 	  - To modify the HEADER and SUBHEADER: 1) directly access *index.php* file via notepad, 2) scroll down to "SERVICES" section 3) modify directly
 	  - To modify cards (services):
+	    - Ensure that the the following line is inside the "SERVICES CARDS" section (it is used to retrieved content from the database):
+		```php
+		<?php echo htmlspecialchars_decode(generateOfferings2($con));?>
+		```
 	    - Content can be modified via the database:
 		  - Option 1: directly modify *index_offerings* table in MySQL
 		  - Option 2: go to *../db_backup/* folder, open *index_offerings.sql* in notepad, modify the content, and import it to MySQL
 		- Make direct changes to HTML/PHP code:
 		  - Go to *../php/* folder, open *home_offerings.php* in notepad, read comments, modify the content, save it, and reload the page
-
+8. **Livestock-statistics.php page**
+	- Modify the spinner to the left side of the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS":
+	  - Ensure that the the following line is inside the "Spinner containing livestock, beef..." section (it is used to retrieved content from the database):
+	  ```php
+	  <?php echo htmlspecialchars_decode($spinner_full);?>
+	  ```
+	  - Javascript file is responsible for rotations and calculations must be added to the bottom of the `<body>` section:
+	    ```javascript
+		<script src="js/amazing-grazing/animated-spinner.js"></script>
+		```
+	  - Content can be modified via the database:
+	    - Option 1: directly modify *livestock_spinner* table in MySQL
+		- Option 2: go to *../db_backup/* folder, open *livestock_spinner.sql* in notepad, modify the content, and import it to MySQL
+	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *livestock-statistics-content.php*, read comments, refer to section 1) Spinner, perform manipulations, save the file, and reload the page
+	- Modify the the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS" section:
+	  - Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieved content from the database):
+	  ```php
+	  <?php echo htmlspecialchars_decode($live_intro);?>
+	  ```
+	  - To modify HEADER, SUBHEADER, and CONTENT:
+	    - Option 1: directly modify *livestock_landing* table in MySQL
+		- Option 2: go to *../db_backup/* folder, open *livestock_landing.sql* in notepad, modify the content, and import it to MySQL
+	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *livestock-statistics-content.php*, read comments, refer to section 2) Intro, perform manipulations, save the file, and reload the page
 
 ## Licence / Copyright
 
