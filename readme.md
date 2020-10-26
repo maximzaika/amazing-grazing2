@@ -1,6 +1,7 @@
 # Protecting Australian Grassland
 
 **Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
+**Product name:** Amazing Grazing  
 
 **Start date:** August 6th, 2020  
 **End date:** October 26th, 2020  
@@ -118,12 +119,12 @@ On top of that, users can download brochures of the preventative measures for th
 2. [Externally] Configure [Amazon Web Server EC2](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23compute&trk=ps_a134p000003yHreAAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_MY&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=MY&sc_geo=APAC&sc_outcome=acq&sc_detail=aws%20ec2&sc_content=EC2_e&sc_segment=444351555594&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|Product|MY|EN|Text&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xY8mxb7H2tB-ejFW8v85-wPynxciO11EWIbKO0-_aFFzP_uLUQgnD4aAtONEALw_wcB:G:s&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2)
 (or any other alternative) with LAMPP (or any other alternative):
     - Apache & MySQL must be configured within the LAMPP
-3. Website files in this must be stored in any of the methods mentioned above
+3. Website files must be stored in any of the methods mentioned above:
     - Download from [GitHub](https://github.com/maximzaika/amazing-grazing2): contact maximzaika@hotmail.com to get access
     - Download from [Google Drive](https://bit.ly/3jv8sEd)
 4. Following actions need to be taken to launch the website:
-    - Create the table "amazing-grazing" in your database
-    - Add the [server_config.php](https://bit.ly/3onLDWG) file to the main folder (if it is not there):
+    - Create the table `amazing-grazing` in your database
+    - Add the [server_config.php](https://bit.ly/3onLDWG) file to the main folder *(if it is not there yet)*:
       - Open it and modify `db_server` (server name), `db_username` (username to access the database), `db_password` (password to access the database), and `db_name` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
 
@@ -206,20 +207,20 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 ### 6.7 Configure tableau graphs
 
 **Perform these actions if necessary ONLY**
-- Tableau graphs are located on the `livestock-statistics.php`, `employment-statistics.php`, `drought.php`, and `invasive-species.php`
+- Tableau graphs are located on the `livestock-statistics.php`, `employment-statistics.php`, `drought.php`, and `invasive-species.php` pages
 - Tableau server needs to be installed on the local machine to perform modifications (refer to [Tableau documentation](https://www.tableau.com/) to learn more)
 
 Instructions:
 
 1. Go to the folder `dataset_and_tableau` and select any of the folders related to your page:
-  - Folder `tableau-drought`
-  - Folder `tableau-employment-statistics`
-  - Folder `tableau-invasive-species`
-  - Folder `tableau-livestock-statistics`
+    - Folder `tableau-drought`
+    - Folder `tableau-employment-statistics`
+    - Folder `tableau-invasive-species`
+    - Folder `tableau-livestock-statistics`
 2. Open any of the tableau files (with `.twb` extension) in any of the folders mentioned above, modify, and publish as public
 3. Open the tableau page where your public graph is located, click on the "share" button, copy and paste "Embed Code" in some other `.txt` editor
-4. Retrieve `id` of the first `<div>` container, retrieve `src` of the `<img>` container, `value` of the `<param name='name'>`, and `value` of the `<param name='static_image'>`
-5. Refer to the following sections related to the webpages to learn where to insert content retrieved in step 4.
+4. Retrieve `id` of the first `<div>` container, retrieve `src` of the `<img>` container, `value` of the `<param name='name'>` container, and `value` of the `<param name='static_image'>` container
+5. Refer to the following sections related to the dedicated webpages to learn where to insert content retrieved in step 4
 
 ## 7.0 Configure index.php page
 
@@ -287,14 +288,16 @@ Instructions:
 	 related to tableau, then uses this data to create a graph.
 	  -  `../php/livestock-graph.php` accesses the `livestock_graph` table in MySQL database
 		  
-#### 8.3.2 Modify the HEADER and SUBHEADER:
+#### 8.3.2 Modify the HEADER and SUBHEADER
 
+It is not stored in database
 1. Directly access `livestock-statistics.php` file in notepad
 2. Scroll down to "CONSEQUENCES OF LIVESTOCK..." section
-3. modify directly
+3. Modify directly
 
-#### 8.3.3 Modify SORT options:
+#### 8.3.3 Modify SORT options
 
+It is not stored in database
 1. Directly access `livestock-statistics.php` file in notepad
 2. Scroll down to "Sorting" section
 3. Modify directly
@@ -303,8 +306,9 @@ Instructions:
 
 - Option 1: directly modify `livestock_graph` table in MySQL
 - Option 2: open `../db_backup/livestock_graph.sql` in notepad, modify the content, and import it to MySQL
+**Note:** Refer to section * [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
 
-#### 8.3.5 Add/modify/remove card content:
+#### 8.3.5 Add/modify/remove card content
 
 - Option 1: directly modify `livestock_cards` table in MySQL 
 - Option 2: open `../db_backup/livestock_cards.sql` in notepad, modify the content, and import it to MySQL
@@ -313,14 +317,14 @@ Instructions:
 
 **Perform operations if necessary ONLY** 
 - Open `../js/amazing-grazing/livestock-prediction.js`
-- Scroll down to function `contentHTML()`
+- Find function `contentHTML()`
 - Perform modifications, save, and refresh the page
 
 ### 8.4 Livestock tableau graphs and datasets
 
 #### 8.4.1 Livestock datasets 
 
-1. Accessed by going to `../dataset_and_tablleau/datasets-livestock-statistics/`:
+1. Accessed by going to `../dataset_and_tableau/datasets-livestock-statistics/`:
   - File 1: `livestock_year_1973_2016.xlsx` is the original datasets. It is not in database and not used.
   - File 2: `livestock_year_2017_2060.xlsx` is the predicted dataset based on the previous dataset. It is stored in `livestock_prediction_dataset` database table.
 
@@ -329,11 +333,132 @@ Instructions:
 - Website has many graphs related to various filters for years. Tableau is used to generated these line graphs. 
 - Tableau server is required to be installed on your local machine to modify the tableau files.
 - Go to `../dataset_and_tableau/tableau-livestock-statistics/` folder, and select the graph needed for modifications.
-- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. Refer to **"How to post graphs?"** of this section to learn more.
+- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. 
+  Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more.
 
 ## 9.0 Configure employment-statistics.php page
 
+### 9.1 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image content
 
+Both headers, subheaders, content, image, and video can be modified through MySQL database:
+- Option 1: directly modify `emp_landing` table in MySQL
+- Option 2: open `../db_backup/emp_landing.sql` in notepad, modify the content, and import it to MySQL
+
+### 9.2 Modify FARMERS CAN MAKE A DIFFERENCE, video, and image in HTML
+
+**Perform operations if necessary ONLY** 
+- `employment-statstics.php` contains `"Left and right sides (video & content) retrieved from db"` section that stores the following code (used to access the database and create HTML content):
+  ```php
+  <?php echo htmlspecialchars_decode($emp_landing);?>	
+  ```
+- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section 1) Landing, perform changes, save, ane reload the page
+  - Section 1) Landing retrives the content directly from the database's table `emp_landing` and converts it to HTML
+
+### 9.3 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section
+
+#### 9.3.1 How does it work?
+
+- On load:
+  1. Click of the sort button `$(emp_type_select).trigger("click");` is simulated in the `<script>` section of the bottom of the `employment-statistics.php` page based on the `id` of the button selected by 
+     default. Examples of ids: `#e-beef`, `#e-dairy`, and `#e-sheep`.
+  2. These buttons have `select-employment` class. Function `selectEmployment()` in the `../js/amazing-grazing/employment-picker.js` is listening for a click of this class, which is simulated in step 1.
+  3. Once this function is triggered, it receives the `id` of step 1, and sends this `id` to function `selectEmploymentType()` in the same file.
+  4. This function compares the `received id` with the `clicked id` and retrieves the content of the graph and its license (graph data and license are not stored in database - **suggested improvement**).
+  5. Then this function sends all the content of step 4 to the function `placeGraph()` in the same file, which generates the graph. This function inserts the graph into `employment-statistics.php` section that has 
+     `id` set as `#tableau-chart`. Addtitionally sets license to a text box with `id` `#reference`
+  6. Function `selectEmployment()` from step 2 continues execution and sends a request using function `.ajax()` to the server file `../php/employment-card-POST.php` to retrieve the content of all the cards in HTML format.
+  7. It inserts HTML content directly to `employment-statistics.php` section that has `id` `cards-data`.
+  **Note:** refer to `../js/amazing-grazing/employment-picker.js` to learn more in the comments.
+
+- On sort button click:
+  - Refer to 'On load step b (or 2)'
+
+#### 9.3.3 Modify the HEADER and SUBHEADER
+
+It is not stored in database
+1. Directly access `employment-statistics.php` file in notepad
+2. Scroll down to "Section 3: NUMBER OF EDUCATED..." section
+3. Modify directly
+
+#### 9.3.2 Modify SORT options
+
+It is not stored in database
+1. Directly access `employment-statistics.php` file in notepad
+2. Scroll down to "Sorting" section
+3. Modify directly
+
+Additionally, if more sorting options have been added to HTML, then the function `$(".select-employment").click(function()` in the `<script>` at the bottom of the page needs to be modified.
+
+#### 9.3.3 Add/modify/remove tableau graphs
+
+It is not stored in the database - **suggested improvement**
+1. Open `../js/amazing-grazing/employment-picker.js` in notepad
+2. Find function `selectEmploymentType()`
+3. Replace content where necessary, save, and reload page
+**Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
+
+#### 9.3.4 Add/modify/remove card content
+
+- Option 1: directly modify `emp_cards` table in MySQL 
+- Option 2: open `../db_backup/emp_cards.sql` in notepad, modify the content, and import it to MySQL
+**Note:** tables `emp_age`, `emp_education`, and `emp_state` are related to each card. This data can be modified, but it is related to datasets used. Refer to 
+section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
+
+#### 9.3.5 Modify cards in HTML
+
+**Perform operations if necessary ONLY** 
+1. Open `../php/employment-card-POST.php`
+  - This file retrieves card, employee age, employee education, and employee region affect content from MySQL database from the following tables:
+    - `emp_state`,
+	- `emp_education`,
+	- `emp_age`, and 
+	- `emp_cards`
+  - Then it converts all the content to HTML and sends to file `../js/amazing-grazing/employment-picker.js` using function `.ajax()`. Refer to section [9.3.1 How does it work?](#931-how-does-it-work) to learn more
+2. Perform direct manipulations, save, and reload the page
+
+### 9.4 Employment tableau graphs and datasets
+
+#### 9.4.1 Employment datasets 
+
+1. Accessed by going to `../dataset_and_tableau/datasets-employment-statistics/`:
+  - File 1: `livestock_farmers.xlsx` is the original datasets. It is not in database and not used.
+  - File 2: `farmers_data.xlsx`. Data wrangling has been performed on this file. It is stored in the following tables: 
+    - `emp_state`,
+	- `emp_education`,
+	- `emp_age`, and 
+	- `emp_cards`
+
+#### 9.4.2 Employment tableau graphs
+
+- Website has three graphs generated in tableau. 
+- Tableau server is required to be installed on your local machine to modify the tableau files.
+- Go to `../dataset_and_tableau/tableau-employment-statistics/` folder, and select the graph `farmer123.twbx`
+- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. 
+  Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more.
+
+### 9.5 Modify AGRICULTURAL COMMUNITIES section
+
+#### 9.5.1 Modify the HEADER and SUBHEADER
+
+It is not stored in database
+1. Directly access `employment-statistics.php` file in notepad
+2. Scroll down to "Section 4: AGRICULTURAL COMMUNITIES" section
+3. Modify directly
+
+#### 9.5.2 Modify Carousel content
+
+- Option 1: directly modify `emp_agri_comm` table in MySQL
+- Option 2: open `../db_backup/emp_agri_comm.sql` in notepad, modify the content, and import it to MySQL
+
+#### 9.5.3 Modify Carousel in HTML
+
+**Perform operations if necessary ONLY** 
+- `employment-statstics.php` contains `"Start carousel"` section that stores the following code (used to access the database and create HTML content):
+  ```php
+  <?php echo htmlspecialchars_decode($emp_agri);?>
+  ```
+- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section "2) Agricultural communities", perform changes, save, ane reload the page
+  - Section "2) Agricultural communities" the content directly from the database's table `emp_agri_comm` and converts it to HTML
 
 ## Licence / Copyright
 

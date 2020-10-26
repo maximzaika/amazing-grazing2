@@ -121,6 +121,7 @@
 				<div class="container">
 					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 						<div class="row">
+							<!-- Sorting -->
 							<div class="col-md-12">										
 								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select employment type</h5>
 								<div class="dropdown" >
@@ -133,6 +134,7 @@
 								</div>
 								<br>
 							</div>
+							<!-- Sorting -->
 							
 							
 							<div class="col-md-12">
