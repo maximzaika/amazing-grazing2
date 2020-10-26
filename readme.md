@@ -109,9 +109,11 @@ On top of that, users can download brochures of the preventative measures for th
     - Open any of the files mentioned above in notepad
 	- Go to commented out section called "Breadcrumbs", make direct modifications, save them, and reload the page
 5. Configure & set up **the Feedback floating button**:
-    - Where does feedback go to?
-	  - It goes directly to MySQL database table called *user_feedback*
-	- How does it work? Do the following actions when new pages are created ONLY.
+    - How does it work and where does it go?
+	  - HTML generation of the interface is explained below.
+	  - When user clicks send, javascript inside *../js/amazing/grazing* catches the click of a *feedback-form form*, then uses function `.ajax()` to access *../php/feedback.php* server fill, which then compares
+        the tokens (read more below) to ensure that the sender is authorized, and uses sql query to write to MySQL database table called *user_feedback*
+	- The following code needs to be inside the page. Add the following code when creating a new page ONLY.
 	  - Add the following line to the `<body>` of the webpage: 
 	  ```php
 	  <?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
@@ -134,7 +136,7 @@ On top of that, users can download brochures of the preventative measures for th
 		<script src="js/amazing-grazing/feedback.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		```
-	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *feedback.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
+	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *generate-feedback-tab.php* using a notepad, read comments, perform direct manipulations, save the file, and reload the page
 6. Configure & set up the floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
 	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
 	```html
@@ -159,10 +161,10 @@ On top of that, users can download brochures of the preventative measures for th
 		  - Go to *../php/* folder, open *home_offerings.php* in notepad, read comments, modify the content, save it, and reload the page
 8. **Livestock-statistics.php page**
 	- Modify the spinner to the left side of the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS":
-	  - Ensure that the the following line is inside the "Spinner containing livestock, beef..." section (it is used to retrieved content from the database):
-	  ```php
-	  <?php echo htmlspecialchars_decode($spinner_full);?>
-	  ```
+	  - Ensure that the the following line is inside the "Spinner containing livestock, beef..." section (it is used to retrieve content from the database):
+	    ```php
+	    <?php echo htmlspecialchars_decode($spinner_full);?>
+	    ```
 	  - Javascript file is responsible for rotations and calculations must be added to the bottom of the `<body>` section:
 	    ```javascript
 		<script src="js/amazing-grazing/animated-spinner.js"></script>
@@ -171,16 +173,34 @@ On top of that, users can download brochures of the preventative measures for th
 	    - Option 1: directly modify *livestock_spinner* table in MySQL
 		- Option 2: go to *../db_backup/* folder, open *livestock_spinner.sql* in notepad, modify the content, and import it to MySQL
 	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *livestock-statistics-content.php*, read comments, refer to section 1) Spinner, perform manipulations, save the file, and reload the page
-	- Modify the the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS" section:
-	  - Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieved content from the database):
-	  ```php
-	  <?php echo htmlspecialchars_decode($live_intro);?>
-	  ```
+	- Modify the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS" section:
+	  - Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieve content from the database):
+	    ```php
+	    <?php echo htmlspecialchars_decode($live_intro);?>
+	    ```
 	  - To modify HEADER, SUBHEADER, and CONTENT:
 	    - Option 1: directly modify *livestock_landing* table in MySQL
 		- Option 2: go to *../db_backup/* folder, open *livestock_landing.sql* in notepad, modify the content, and import it to MySQL
 	  - The HTML is generated via .PHP file. To modify it, go to *../php/* folder, open *livestock-statistics-content.php*, read comments, refer to section 2) Intro, perform manipulations, save the file, and reload the page
-
+    - Modify the "CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE":
+	  - How does it work?
+	    - On page load:
+	      1. The script at the bottom of the page (refer to comments) automatically simulates the click on the year set by default.
+		  2. This click triggers javascript function `yearSelection` in *js/amazing-grazing/livestock-prediction.js* file. 
+		  3. This function calls function `.ajax()` to access *../php/prediction_POST.php* file to receive cards content from MySQL database, updates the data base on the year & filters selected, calculates
+		     facts using fomulas, decides what cards to show.
+		    - *../php/prediction_POST.php* accesses the following tables in MySQL database: *livestock_prediction_dataset* and *livestock_cards*
+		- Click on year selection:
+		  1. Year selection triggers javascript function `yearSelection` in *js/amazing-grazing/livestock-prediction.js* file. 
+		  2. Same as number 3 above
+		- Click on filter selection:
+		  1. Filter selection options trigger javascript function `selectLivestock` in *js/amazing-grazing/livestock-picker.js* file.
+		  2. This function identifies active/inactive buttons, unchecks all other buttons if TOTAL button is clicked, sends error if all buttons are inactive, and simulates click on the year (Refer to above section On page load #2-3).
+		- Click on display graph:
+		  1. Triggers function at the bottom of the webpage related to the "display graph" id `hide-graph`.
+		  2. This function clears the place where graph is supposed to go,  identifies filter parameters and year, calls function `.ajax()` to access *../php/livestock-graph.php* file to receive various urls, ids, etc. related to tableau, then uses this data to create a graph.
+	        -  *../php/livestock-graph.php* accesses the *livestock_graph* table in MySQL database
+	  - 
 ## Licence / Copyright
 
 - HTML5/Bootstrap 4 template is provided by [Colorlib](https://colorlib.com/wp/templates/)

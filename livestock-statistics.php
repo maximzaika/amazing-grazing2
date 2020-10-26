@@ -149,6 +149,7 @@
 			</div>
 			<!-- End Title and subheading of this section -->
 			
+			<!-- Sorting Section -->
 			<div class="container">
 				<div class="row">
 					   <div class="col-xxs-12 col-md-4 col-lg-3 col-xl-3 col-xxl-2 col-xxxl-2 order-xxs-2 order-md-1 order-lg-1">
@@ -175,6 +176,7 @@
 					  </div>
 				</div>
 			</div>
+			<!-- End Sorting Section -->
 			
 			<!-- Card section -->
 			<div class="container" style="padding-bottom: 3em;">

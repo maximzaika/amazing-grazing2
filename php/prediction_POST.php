@@ -16,7 +16,7 @@
      * Pre-condition:
 	 *  - server_config.php file must be available
      *  - must be called by livestock-prediction.js's .ajax()
-	 *  - db table must be available: livestock_prediction_dataset & livestock_prediction_dataset
+	 *  - db table must be available: livestock_prediction_dataset & livestock_cards
      *
 	 * Post-condition:
 	 *  - access livestock_prediction_dataset table to retrieve the predict values of all the livestock

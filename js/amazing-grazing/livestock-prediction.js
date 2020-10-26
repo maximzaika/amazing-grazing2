@@ -284,9 +284,6 @@ $(function(){
 		Return:
 		  - none: visually updates the clients page (livestock-statistics.php)
 	*/
-	/* This function 1) changes the value of the year selection button, 
-					 2) calculates facts based on the formulas
-					 3) decides what cards to show based on the filter selection */
 	var yearSelection = function() {
 		var year_id = $(this).attr("id");
 		var prefix_id = year_id.substr(0,2); // get the y_ prefix
