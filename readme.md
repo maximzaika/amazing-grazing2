@@ -94,10 +94,10 @@ On top of that, users can download brochures of the preventative measures for th
 ### Configure the navigation bar
 
 - Edit content:
-  - Option 1: directly modify the table *nav_bar* in the MySQL
-  - Option 2: open *../db_backup/nav_bar.sql* in notepad, modify the content, and import it to MySQL
+  - Option 1: directly modify the table `nav_bar` in the MySQL
+  - Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
 - Make direct changes to HTML/PHP code:
-  - Open *../php/navigation.php* in notepad, read comments, modify the content, save it, and reload the page
+  - Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
 	  
 ### Configure the headers of every page
 
