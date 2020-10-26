@@ -23,6 +23,28 @@
   * [6.1 Configure the navigation bar](#61-configure-the-navigation-bar)
     + [6.1.1 Edit content](#611-edit-content)
     + [6.1.2 Make direct changes to HTML/PHP code](#612-make-direct-changes-to-htmlphp-code)
+  * [6.2 Configure the headers of every page](#62-configure-the-headers-of-every-page)
+  * [6.3 Configure the footers/license of every page](#63-configure-the-footerslicense-of-every-page)
+  * [6.4 Configure breadcrumbs](#64-configure-breadcrumbs)
+  * [6.5 Configure & set up the Feedback floating button](#65-configure--set-up-the-feedback-floating-button)
+    + [6.5.1 How does it work and where does it go?](#651-how-does-it-work-and-where-does)
+	+ [6.5.2 The following code needs to be inside the page](#652-the-following-code-needs-to-be-inside-the-page)
+  * [6.6 Configure & set up the floating back to top button](#66-configure--set-up-the-floating-back-to-top-button)
+- [7.0 Configure index.php page](#70-configure-indexphp-page)
+  * [7.1 Modify the SERVICES section](#71-modify-the-services-section)
+- [8.0 Configure livestock-statistics.php page](#80-configure-livestock-statisticsphp-page)
+  * [8.1 Modify the spinner](#81-modify-the-spinner)
+  * [8.2 Modify the LIVESTOCK REDUCTION IMPACTS GRASSLANDS section](#82-modify-the-livestock-reduction-impacts-grasslands-section)
+    + [8.3.1 How does it work?](#831-how-does-it-work)
+	+ [8.3.2 Modify the HEADER and SUBHEADER](#832-modify-the-header-and-subheader)
+	+ [8.3.3 Modify SORT options](#833-modify-sort-options)
+	+ [8.3.4 Add/modify/remove tableau graphs](#834-addmodifyremove-tableau-graphs)
+	+ [8.3.5 Add/modify/remove card content](#835-addmodifyremove-card-content)
+	+ [8.3.6 Modify cards in HTML](#836-modify-cards-in-html)
+  * [8.4 Livestock tableau graphs and datasets](#84-livestock-tableau-graphs-and-datasets)
+    + [8.4.1 Livestock datasets](#841-livestock-datasets)
+    + [8.4.2 Livestock tableau graphs](#842-livestock-tableau-graphs)
+- [9.0 Configure employment-statistics.php page](#90-configure-employment-statisticsphp-page)
 
 ## 1.0 Team members
 - **Maxim Zaika**
@@ -167,7 +189,7 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 ```
 - The HTML is generated via .PHP file. To modify it, open `../php/generate-feedback-tab.php` in notepad, read comments, perform direct manipulations, save the file, and reload the page
 	  
-### 6.6 Configure & set up the floating back to top button located on every page. 
+### 6.6 Configure & set up the floating back to top button
 
 **Perform these actions when creating a new page ONLY** 
 - Add the following line to the bottom of the `<body>` section before `<scripts>`:
@@ -275,13 +297,13 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 
 ### 8.4 Livestock tableau graphs and datasets
 
-### 8.4.1 Livestock datasets 
+#### 8.4.1 Livestock datasets 
 
 1. Accessed by going to `../dataset_and_tablleau/datasets-livestock-statistics/`:
   - File 1: `livestock_year_1973_2016.xlsx` is the original datasets. It is not in database and not used.
   - File 2: `livestock_year_2017_2060.xlsx` is the predicted dataset based on the previous dataset. It is stored in `livestock_prediction_dataset` database table.
 
-### 8.4.2 Livestock tableau graphs
+#### 8.4.2 Livestock tableau graphs
 
 - Website has many graphs related to various filters for years. Tableau is used to generated these line graphs. 
 - Tableau server is required to be installed on your local machine to modify the tableau files.
