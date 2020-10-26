@@ -30,6 +30,7 @@
     + [6.5.1 How does it work and where does it go?](#651-how-does-it-work-and-where-does)
 	+ [6.5.2 The following code needs to be inside the page](#652-the-following-code-needs-to-be-inside-the-page)
   * [6.6 Configure & set up the floating back to top button](#66-configure--set-up-the-floating-back-to-top-button)
+  * [6.7 Configure tableau graphs](#67-configure-tableau-graphs)
 - [7.0 Configure index.php page](#70-configure-indexphp-page)
   * [7.1 Modify the SERVICES section](#71-modify-the-services-section)
 - [8.0 Configure livestock-statistics.php page](#80-configure-livestock-statisticsphp-page)
@@ -202,6 +203,24 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 ```
 - `Scroll to top button...` section of `../js/amazing-grazing/main.js` file is responsible for the back to top button
 
+### 6.7 Configure tableau graphs
+
+**Perform these actions if necessary ONLY**
+- Tableau graphs are located on the `livestock-statistics.php`, `employment-statistics.php`, `drought.php`, and `invasive-species.php`
+- Tableau server needs to be installed on the local machine to perform modifications (refer to [Tableau documentation](https://www.tableau.com/) to learn more)
+
+Instructions:
+
+1. Go to the folder `dataset_and_tableau` and select any of the folders related to your page:
+  - Folder `tableau-drought`
+  - Folder `tableau-employment-statistics`
+  - Folder `tableau-invasive-species`
+  - Folder `tableau-livestock-statistics`
+2. Open any of the tableau files (with `.twb` extension) in any of the folders mentioned above, modify, and publish as public
+3. Open the tableau page where your public graph is located, click on the "share" button, copy and paste "Embed Code" in some other `.txt` editor
+4. Retrieve `id` of the first `<div>` container, retrieve `src` of the `<img>` container, `value` of the `<param name='name'>`, and `value` of the `<param name='static_image'>`
+5. Refer to the following sections related to the webpages to learn where to insert content retrieved in step 4.
+
 ## 7.0 Configure index.php page
 
 ### 7.1 Modify the SERVICES section
@@ -293,7 +312,9 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 #### 8.3.6 Modify cards in HTML
 
 **Perform operations if necessary ONLY** 
-- Open `../js/amazing-grazing/livestock-prediction.js`, scroll down to function `contentHTML()`, perform modifications, save, and refresh the page.
+- Open `../js/amazing-grazing/livestock-prediction.js`
+- Scroll down to function `contentHTML()`
+- Perform modifications, save, and refresh the page
 
 ### 8.4 Livestock tableau graphs and datasets
 
