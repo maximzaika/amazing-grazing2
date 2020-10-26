@@ -69,7 +69,7 @@ analysis & URLs to various agricultural communities, where farmers can communica
 [Australian Governement Bureau of Meteorology](http://www.bom.gov.au/climate/data/). Additionally, farmers can learn how drought impacts grassland, what the government does to assist them (with URLs to government 
 dedicated websites), and what they can do to protect themselves. 
 * The invasive species page contains various species (plants & animals). Farmers can know what impact do these species have on grassland and their livestock. 
-Additionally, farmers can learn preventative measures against them and what states in Australia are infested by these species. Plant and animal datasets ware 
+Additionally, farmers can learn preventative measures against them and what states in Australia are infested by these species. Plant and animal datasets were 
 retrieved from [WeedsAustralia](https://weeds.org.au/) and [Australian Government Department of Agriculture, Water and the Environment](https://www.environment.gov.au/biodiversity/invasive-species/feral-animals-australia). 
 On top of that, users can download brochures of the preventative measures for their convenience.
 
