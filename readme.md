@@ -84,20 +84,23 @@ On top of that, users can download brochures of the preventative measures for th
     - Download from [GitHub](https://github.com/maximzaika/amazing-grazing2): contact maximzaika@hotmail.com to get access
     - Download from [Google Drive](https://bit.ly/3jv8sEd)
 4. Following actions need to be taken to launch the website:
-    - Create the table ‘amazing-grazing’ in your database
+    - Create the table "amazing-grazing" in your database
     - Add the [server_config.php](https://bit.ly/3onLDWG) file to the main folder (if it is not there):
-      - Open it and modify *db_server* (server name), *db_username* (username to access the database), *db_password* (password to access the database), and *db_name* (table name)
-    - Go to *../db_backup/full_db_backup*. Import *amazing-grazing.sql* file to MySQL database
+      - Open it and modify `db_server` (server name), `db_username` (username to access the database), `db_password` (password to access the database), and `db_name` (table name)
+    - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
 
 ## Configure web pages
 
 ### Configure the navigation bar
 
-- Edit content:
-  - Option 1: directly modify the table `nav_bar` in the MySQL
-  - Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
-- Make direct changes to HTML/PHP code:
-  - Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
+#### Edit content
+  
+- Option 1: directly modify the table `nav_bar` in the MySQL
+- Option 2: open `../db_backup/nav_bar.sql` in notepad, modify the content, and import it to MySQL
+
+#### Make direct changes to HTML/PHP code
+  
+- Open `../php/navigation.php` in notepad, read comments, modify the content, save it, and reload the page
 	  
 ### Configure the headers of every page
 
@@ -171,7 +174,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  - Option 1: directly modify `index_offerings` table in MySQL
 	  - Option 2: open `../db_backup/index_offerings.sql` in notepad, modify the content, and import it to MySQL
 	- Make direct changes to HTML/PHP code:
-	  - Go to `../php/` folder, open `home_offerings.php` in notepad, read comments, modify the content, save it, and reload the page
+	  - Open`../php/home_offerings.php` in notepad, read comments, modify the content, save it, and reload the page
 
 ### Livestock-statistics.php page
 
@@ -224,6 +227,8 @@ On top of that, users can download brochures of the preventative measures for th
   - Add/modify/remove card content:
 	- Option 1: directly modify `livestock_cards` table in MySQL 
 	- Option 2: open `../db_backup/livestock_cards.sql` in notepad, modify the content, and import it to MySQL
+  - To modify card HTML (*If necessary ONLY*):
+    - Open `../js/amazing-grazing/livestock-prediction.js`, scroll down to function `contentHTML()`, perform modifications, save, and refresh the page.
   - Livestock tableau graphs and datasets:
 	- Livestock datasets can be accessed by going to `../dataset_and_tablleau/datasets-livestock-statistics/`:
 	  - File 1: `livestock_year_1973_2016.xlsx` is the original datasets. It is not in database and not used.
@@ -233,6 +238,10 @@ On top of that, users can download brochures of the preventative measures for th
 	  - Tableau server is required to be installed on your local machine to modify the tableau files.
 	  - Go to `../dataset_and_tableau/tableau-livestock-statistics/` folder, and select the graph needed for modifications.
 	  - Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. Refer to **"How to post graphs?"** of this section to learn more.
+
+### Employment-statistics.php
+
+
 
 ## Licence / Copyright
 
