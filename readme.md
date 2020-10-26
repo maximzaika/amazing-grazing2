@@ -91,22 +91,25 @@ On top of that, users can download brochures of the preventative measures for th
 
 ## Configure web pages
 
-1. Configure **the navigation bar**:
+### Configure the navigation bar
     - Edit content:
 	  - Option 1: directly modify the table *nav_bar* in the MySQL
       - Option 2: open *../db_backup/nav_bar.sql* in notepad, modify the content, and import it to MySQL
 	- Make direct changes to HTML/PHP code:
 	  - Open *../php/navigation.php* in notepad, read comments, modify the content, save it, and reload the page
-2. Configure **the headers** of every page:
+	  
+### Configure the headers of every page
     1. Headers are not stored in the database. To modify the images or text, open any of the web page file using notepad.
 	2. Go to commented out section called "Page header", make direct modifications, save them, and reload the page
-3. Configure **the footers/license** of every page:
+### Configure the footers/license** of every page
 	1. Footers are not stored in the database. To modify the content, open any of the web page file using notepad.
 	2. Go to commented out section called "Footer" or "License", make direct modifications, save them, and reload the page
-4. Configure **breadcrumbs** (located on all the pages except *index.php*):
-    1. Open any of the webpages other than *index.php*
+
+### Configure breadcrumbs
+    1. Open any of the webpages other than *index.php* (it is not on this page)
 	2. Go to commented out section called "Breadcrumbs", make direct modifications, save them, and reload the page
-5. Configure & set up **the Feedback floating button**:
+	
+### Configure & set up the Feedback floating button:
     - How does it work and where does it go?
 	  - HTML generation of the interface is explained below.
 	  - When user clicks send, javascript *../js/amazing-grazing/feedback.js* catches the click of a *feedback-form form*, then uses function `.ajax()` to access *../php/feedback.php* server file, which then compares
@@ -119,7 +122,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  - Add the following code to the top of the webpage before `<html>`:
 	    ```php
 		<?php 
-		session_start();
+		  session_start();
 		  if (empty($_SESSION['csrf_token'])) {
 		    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 		  }
@@ -135,7 +138,9 @@ On top of that, users can download brochures of the preventative measures for th
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		```
 	  - The HTML is generated via .PHP file. To modify it, open *../php/generate-feedback-tab.php* in notepad, read comments, perform direct manipulations, save the file, and reload the page
-6. Configure & set up the floating **back to top button** located on every page. Perform these actions when creating a new page ONLY:
+	  
+### Configure & set up the floating back to top button located on every page. 
+    - **Perform these actions when creating a new page ONLY**
 	- Add the following line to the bottom of the `<body>` section before `<scripts>`:
 	```html
 	<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
@@ -145,7 +150,8 @@ On top of that, users can download brochures of the preventative measures for th
 	<script src="js/amazing-grazing/main.js"></script>
 	```
 	- *Scroll to top button* section of *../js/amazing-grazing/main.js* file is responsible for the back to top button
-7. **Index.php page**:
+
+### Index.php page
     - Modify the "SERVICES" section:
 	  - To modify the HEADER and SUBHEADER: 1) directly access *index.php* file via notepad, 2) scroll down to "SERVICES" section 3) modify directly
 	  - To modify cards (services):
@@ -158,7 +164,8 @@ On top of that, users can download brochures of the preventative measures for th
 		  - Option 2: open *../db_backup/index_offerings.sql* in notepad, modify the content, and import it to MySQL
 		- Make direct changes to HTML/PHP code:
 		  - Go to *../php/* folder, open *home_offerings.php* in notepad, read comments, modify the content, save it, and reload the page
-8. **Livestock-statistics.php page**
+
+### Livestock-statistics.php page
 	- Modify the spinner to the left side of the "LIVESTOCK REDUCTION IMPACTS GRASSLANDS":
 	  - Ensure that the the following line is inside the "Spinner containing livestock, beef..." section (it is used to retrieve content from the database):
 	    ```php
@@ -188,19 +195,36 @@ On top of that, users can download brochures of the preventative measures for th
 		  2. This click triggers javascript function `yearSelection` in *js/amazing-grazing/livestock-prediction.js* file. 
 		  3. This function calls function `.ajax()` to access the *../php/prediction_POST.php* file to receive cards content from MySQL database, updates the data base on the year & filters selected, calculates
 		     facts using fomulas, decides what cards to show.
-		    - *../php/prediction_POST.php* accesses the following tables in MySQL database: *livestock_prediction_dataset* and *livestock_cards*
+		      - *../php/prediction_POST.php* accesses the following tables in MySQL database: *livestock_prediction_dataset* and *livestock_cards*
 		- Click on year selection:
 		  1. Year selection triggers javascript function `yearSelection` in *js/amazing-grazing/livestock-prediction.js* file. 
-		  2. Same as number 3 above
+		  2. Same as point (c or 3) above
 		- Click on filter selection:
 		  1. Filter selection options trigger javascript function `selectLivestock` in *js/amazing-grazing/livestock-picker.js* file.
-		  2. This function identifies active/inactive buttons, unchecks all other buttons if TOTAL button is clicked, sends error if all buttons are inactive, and simulates click on the year (Refer to above section On page load #2-3).
+		  2. This function identifies active/inactive buttons, unchecks all other buttons if TOTAL button is clicked, sends error if all buttons are inactive, and simulates click on the year (Refer to above section On page load b-c (or 2-3)).
 		- Click on display graph:
 		  1. Triggers function at the bottom of the webpage related to the "display graph" id `hide-graph`.
 		  2. This function clears the place where graph is supposed to go,  identifies filter parameters and year, calls function `.ajax()` to access *../php/livestock-graph.php* file to receive various urls, ids, etc. 
 		     related to tableau, then uses this data to create a graph.
-	        -  *../php/livestock-graph.php* accesses the *livestock_graph* table in MySQL database
-	  - 
+	          -  *../php/livestock-graph.php* accesses the *livestock_graph* table in MySQL database
+	  - Modify the HEADER and SUBHEADER: 1) directly access *livestock-statistics.php* file in notepad, 2) scroll down to "CONSEQUENCES OF LIVESTOCK..." section, and 3) modify directly
+	  - Modify SORT options: 1) directly access *livestock-statistics.php* file in notepad, 2) scroll down to "Sorting" section, and 3) modify directly
+	  - Add/modify/remove tableau graphs:
+	    - Option 1: directly modify *livestock_graph* table in MySQL
+		- Option 2: open *../db_backup/livestock_graph.sql* in notepad, modify the content, and import it to MySQL
+	  - Add/modify/remove card content:
+	    - Option 1: directly modify *livestock_cards* table in MySQL 
+		- Option 2: open *../db_backup/livestock_cards.sql* in notepad, modify the content, and import it to MySQL
+	  - Livestock tableau graphs and datasets:
+	    - Livestock datasets can be accessed by going to *../dataset_and_tablleau/datasets-livestock-statistics/*:
+		  - File 1: *livestock_year_1973_2016.xlsx* is the original datasets. It is not in database and not used.
+		  - File 2: *livestock_year_2017_2060.xlsx* is the predicted dataset based on the previous dataset. It is stored in *livestock_prediction_dataset* database table.
+		- Livestock tableau graphs:
+		  - Website has many graphs related to various filters for years. Tableau is used to generated these line graphs. 
+		  - Tableau server is required to be installed on your local machine to modify the tableau files.
+		  - Go to *../dataset_and_tableau/tableau-livestock-statistics/* folder, and select the graph needed for modifications.
+		  - Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. Refer to **"How to post graphs?"** of this section to learn more.
+
 ## Licence / Copyright
 
 - HTML5/Bootstrap 4 template is provided by [Colorlib](https://colorlib.com/wp/templates/)
