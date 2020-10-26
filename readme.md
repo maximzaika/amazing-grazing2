@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [Heading](#heading)
+- [1.0 Team members](#heading)
 - [Heading](#heading-1)
 - [Heading](#heading-2)
 - [Heading](#heading-3)
@@ -22,7 +22,7 @@
 - [Heading](#heading-5)
   * [Sub-heading](#sub-heading-3)
     + [Sub-sub-heading](#sub-sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)-1
+    + [Sub-sub-heading](#sub-sub-heading-1)
 
 ## 1.0 Team members
 - **Maxim Zaika**
