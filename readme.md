@@ -20,7 +20,7 @@
   * [4.2 Iteration 2](#42-iteration-2)
   * [4.3 Iteration 3](#43-iteration-3)
 - [5.0 Set up](#50-set-up)
-- [6.0 Configure web pages](#60-configure-web-pages)
+- [6.0 Configure identical parts of every page](#60-configure-identical-parts-of-every-page)
   * [6.1 Configure the navigation bar](#61-configure-the-navigation-bar)
     + [6.1.1 Edit content](#611-edit-content)
     + [6.1.2 Make direct changes to HTML/PHP code](#612-make-direct-changes-to-htmlphp-code)
@@ -52,8 +52,19 @@
 	+ [9.1.2 Modify in HTML](#912-modify-in-html)
   * [9.2 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section](#92-modify-numbers-of-educated--young-farmers-is-reducing-section)
     + [9.2.1 How does it work?](#921-how-does-it-work)
+	+ [9.2.2 Modify the HEADER and SUBHEADER](#922-modify-the-header-and-subheader)
+	+ [9.2.3 Modify SORT options](#923-modify-sort-options)
+	+ [9.2.4 Add/modify/remove tableau graphs](#924-addmodifyremove-tableau-graphs)
+	+ [9.2.5 Add/modify/remove card content](#925-addmodifyremove-card-content)
+	+ [9.2.6 Modify cards in HTML](#926-modify-cards-in-html)
+  * [9.3 Employment tableau graphs and datasets](#93-employment-tableau-graphs-and-datasets)
+    + [9.3.1 Employment datasets](#931-employment-datasets)
+	+ [9.3.2 Employment tableau graphs](#932-employment-tableau-graphs)
+  * [9.4 Modify AGRICULTURAL COMMUNITIES section](#94-modify-agricultural-communities-section)
+    + [9.4.1 Modify the HEADER and SUBHEADER](#941-modify-the-header-and-subheader)
+	+ [9.4.2 Modify Carousel content](#942-modify-carousel-content)
+	+ [9.4.3 Modify Carousel in HTML](#943-modify-carousel-in-html)
 	
-
 ## 1.0 Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
@@ -339,7 +350,7 @@ It is not stored in database
 - Website has many graphs related to various filters for years. Tableau is used to generated these line graphs. 
 - Tableau server is required to be installed on your local machine to modify the tableau files.
 - Go to `../dataset_and_tableau/tableau-livestock-statistics/` folder, and select the graph needed for modifications.
-- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. 
+- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publicly, and retrieve required content. 
   Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more.
 
 ## 9.0 Configure employment-statistics.php page
@@ -359,69 +370,69 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
   ```php
   <?php echo htmlspecialchars_decode($emp_landing);?>	
   ```
-- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section 1) Landing, perform changes, save, ane reload the page
-  - Section 1) Landing retrives the content directly from the database's table `emp_landing` and converts it to HTML
+- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section `1) Landing`, perform changes, save, ane reload the page
+  - Section `1) Landing` retrives the content directly from the database's table `emp_landing` and converts it to HTML
 
 ### 9.2 Modify NUMBERS OF EDUCATED & YOUNG FARMERS IS REDUCING section
 
 #### 9.2.1 How does it work?
 
 - On load:
-  1. Click of the sort button `$(emp_type_select).trigger("click");` is simulated in the `<script>` section of the bottom of the `employment-statistics.php` page based on the `id` of the button selected by 
+  1. Click of the sort button `$(emp_type_select).trigger("click");` is simulated in the `<script>` section at the bottom of the `employment-statistics.php` page based on the `id` of the button selected by 
      default. Examples of ids: `#e-beef`, `#e-dairy`, and `#e-sheep`.
-  2. These buttons have `select-employment` class. Function `selectEmployment()` in the `../js/amazing-grazing/employment-picker.js` is listening for a click of this class, which is simulated in step 1.
+  2. These buttons have `.select-employment` class. Function `selectEmployment()` in the `../js/amazing-grazing/employment-picker.js` is listening for a click of this class, which is simulated in step 1.
   3. Once this function is triggered, it receives the `id` of step 1, and sends this `id` to function `selectEmploymentType()` in the same file.
-  4. This function compares the `received id` with the `clicked id` and retrieves the content of the graph and its license (graph data and license are not stored in database - **suggested improvement**).
+  4. This function compares the `received id` with the `clicked id` and retrieves the content of the graph and its license (graph data and license are not stored in database - ***suggested improvement***).
   5. Then this function sends all the content of step 4 to the function `placeGraph()` in the same file, which generates the graph. This function inserts the graph into `employment-statistics.php` section that has 
      `id` set as `#tableau-chart`. Addtitionally sets license to a text box with `id` `#reference`
   6. Function `selectEmployment()` from step 2 continues execution and sends a request using function `.ajax()` to the server file `../php/employment-card-POST.php` to retrieve the content of all the cards in HTML format.
-  7. It inserts HTML content directly to `employment-statistics.php` section that has `id` `cards-data`.
-  **Note:** refer to `../js/amazing-grazing/employment-picker.js` to learn more in the comments.
+  7. It inserts HTML content directly to `employment-statistics.php` section that has `id` `cards-data`.  
+  **Note:** refer to `../js/amazing-grazing/employment-picker.js` file to learn more in the commented out section.
 
 - On sort button click:
   - Refer to 'On load step b (or 2)'
 
 #### 9.2.2 Modify the HEADER and SUBHEADER
 
-It is not stored in database
+**Note:** It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
-2. Scroll down to "Section 3: NUMBER OF EDUCATED..." section
+2. Find "Section 3: NUMBER OF EDUCATED..." section
 3. Modify directly
 
 #### 9.2.3 Modify SORT options
 
-It is not stored in database
+**Note:** It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
-2. Scroll down to "Sorting" section
+2. Find "Sorting" section
 3. Modify directly
 
 Additionally, if more sorting options have been added to HTML, then the function `$(".select-employment").click(function()` in the `<script>` at the bottom of the page needs to be modified.
 
 #### 9.2.4 Add/modify/remove tableau graphs
 
-It is not stored in the database - **suggested improvement**
+**Note:** It is not stored in the database - ***suggested improvement***
 1. Open `../js/amazing-grazing/employment-picker.js` in notepad
 2. Find function `selectEmploymentType()`
-3. Replace content where necessary, save, and reload page
-**Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
+3. Replace content where necessary, save, and reload page  
+**Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it from.
 
 #### 9.2.5 Add/modify/remove card content
 
 - Option 1: directly modify `emp_cards` table in MySQL 
-- Option 2: open `../db_backup/emp_cards.sql` in notepad, modify the content, and import it to MySQL
-**Note:** tables `emp_age`, `emp_education`, and `emp_state` are related to each card. This data can be modified, but it is related to datasets used. Refer to 
+- Option 2: open `../db_backup/emp_cards.sql` in notepad, modify the content, and import it to MySQL  
+**Note:** tables `emp_age`, `emp_education`, and `emp_state` are related to each card. This data can be modified, but it is related to datasets used in this project. Refer to 
 section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
 #### 9.2.6 Modify cards in HTML
 
 **Perform operations if necessary ONLY** 
 1. Open `../php/employment-card-POST.php`
-  - This file retrieves card, employee age, employee education, and employee region affect content from MySQL database from the following tables:
-    - `emp_state`,
-	- `emp_education`,
-	- `emp_age`, and 
-	- `emp_cards`
-  - Then it converts all the content to HTML and sends to file `../js/amazing-grazing/employment-picker.js` using function `.ajax()`. Refer to section [9.3.1 How does it work?](#931-how-does-it-work) to learn more
+    - This file retrieves card, employee age, employee education, and employee region affected content from MySQL database from the following tables:
+      - `emp_state`,
+	  - `emp_education`,
+	  - `emp_age`, and 
+	  - `emp_cards`
+    - Then it converts all the content to HTML and sends to file `../js/amazing-grazing/employment-picker.js` using function `.ajax()`. Refer to section [9.3.1 How does it work?](#931-how-does-it-work) to learn more
 2. Perform direct manipulations, save, and reload the page
 
 ### 9.3 Employment tableau graphs and datasets
@@ -429,28 +440,28 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 #### 9.3.1 Employment datasets 
 
 1. Accessed by going to `../dataset_and_tableau/datasets-employment-statistics/`:
-  - File 1: `livestock_farmers.xlsx` is the original datasets. It is not in database and not used.
-  - File 2: `farmers_data.xlsx`. Data wrangling has been performed on this file. It is stored in the following tables: 
-    - `emp_state`,
-	- `emp_education`,
-	- `emp_age`, and 
-	- `emp_cards`
+    - File 1: `livestock_farmers.xlsx` is the original datasets. It is not in database and not used.
+    - File 2: `farmers_data.xlsx`. Data wrangling has been performed on this file. It is stored in the following tables: 
+      - `emp_state`,
+	  - `emp_education`,
+	  - `emp_age`, and 
+	  - `emp_cards`
 
 #### 9.3.2 Employment tableau graphs
 
 - Website has three graphs generated in tableau. 
 - Tableau server is required to be installed on your local machine to modify the tableau files.
 - Go to `../dataset_and_tableau/tableau-employment-statistics/` folder, and select the graph `farmer123.twbx`
-- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publickly, and retrieve required content. 
+- Perform modifications to the graphs referring to [Tableau Documentation](https://www.tableau.com/), then publish this graph publicly, and retrieve required content. 
   Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more.
 
 ### 9.4 Modify AGRICULTURAL COMMUNITIES section
 
 #### 9.4.1 Modify the HEADER and SUBHEADER
 
-It is not stored in database
+**Note:** It is not stored in database
 1. Directly access `employment-statistics.php` file in notepad
-2. Scroll down to "Section 4: AGRICULTURAL COMMUNITIES" section
+2. Find "Section 4: AGRICULTURAL COMMUNITIES" section
 3. Modify directly
 
 #### 9.4.2 Modify Carousel content
@@ -461,12 +472,12 @@ It is not stored in database
 #### 9.4.3 Modify Carousel in HTML
 
 **Perform operations if necessary ONLY** 
-- `employment-statstics.php` contains `"Start carousel"` section that stores the following code (used to access the database and create HTML content):
+- `employment-statistics.php` contains `Start carousel` section that stores the following code (used to access the database and create HTML content):
   ```php
   <?php echo htmlspecialchars_decode($emp_agri);?>
   ```
-- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section "2) Agricultural communities", perform changes, save, ane reload the page
-  - Section "2) Agricultural communities" the content directly from the database's table `emp_agri_comm` and converts it to HTML
+- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section '2) Agricultural communities', perform changes, save, ane reload the page
+  - Section '2) Agricultural communities' retrieves content directly from the database's table `emp_agri_comm` and converts it to HTML
 
 ## Licence / Copyright
 
