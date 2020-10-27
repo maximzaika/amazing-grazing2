@@ -446,10 +446,9 @@
 							  - none, but carousel needs to be functional
 						*/
 						$('.carousel-species').owlCarousel({
-							center: true,
+							center: false,
 							loop: false,
 							rewind: true,
-							startPosition: 2,
 							items:5,
 							margin: 30,
 							stagePadding: 0,
@@ -458,16 +457,20 @@
 							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 							responsive:{
 								0:{
-									items: 1
+									items: 1,
+									startPosition: 1
 								},
 								600:{
-									items: 2
+									items: 2,
+									startPosition: 0
 								},
 								1000:{
-									items: 3
+									items: 3,
+									startPosition: 0
 								},
 								1600:{
-									items: 4
+									items: 4,
+									startPosition: 0
 								}
 							}
 						});
