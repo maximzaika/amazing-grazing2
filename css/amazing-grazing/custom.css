@@ -326,7 +326,7 @@ img.techn-img{
 #feedback-sent {
 	visibility: hidden; /* Hidden by default. Visible on click */
 	min-width: 250px; /* Set a default minimum width */
-	margin-left: -175px; /* Divide value of min-width by 2 */
+	margin-left: -235px; /* Divide value of min-width by 2 */
 	background-color: #4e9525; /* Black background color */
 	color: #fff; /* White text color */
 	text-align: center; /* Centered text */
@@ -351,7 +351,7 @@ img.techn-img{
 	#feedback-sent {
 		visibility: hidden; /* Hidden by default. Visible on click */
 		min-width: 250px; /* Set a default minimum width */
-		margin-left: -165px; /* Divide value of min-width by 2 */
+		margin-left: -190px; /* Divide value of min-width by 2 */
 		background-color: #4e9525; /* Black background color */
 		color: #fff; /* White text color */
 		text-align: center; /* Centered text */
@@ -452,7 +452,7 @@ img.techn-img{
 #feedback-bracket-character {
 	visibility: hidden; /* Hidden by default. Visible on click */
 	min-width: 250px; /* Set a default minimum width */
-	margin-left: -252px; /* Divide value of min-width by 2 */
+	margin-left: -220px; /* Divide value of min-width by 2 */
 	background-color: #FF6F6F; /* Black background color */
 	color: #fff; /* White text color */
 	text-align: center; /* Centered text */
