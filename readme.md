@@ -1,14 +1,14 @@
 # Protecting Australian Grassland
 
-- **Objective:** Provide Support & Useful Information to Farmers Regarding - Grazing, Livestock, and Natural Disasters  
-- **Product name:** Amazing Grazing  
+**Objective:** Provide Support & Useful Information to Farmers Regarding - Grazing, Livestock, and Natural Disasters  
+**Product name:** Amazing Grazing  
 
-- **Start date:** August 6th, 2020  
-- **End date:** November 1st, 2020  
+**Start date:** August 6th, 2020  
+**End date:** November 1st, 2020  
 
-- **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
-- **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
-- **Audience:** English speaking farmers age 30-45  
+**Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
+**Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
+**Audience:** Australian English speaking farmers age 30-45  
 
 ## Table of Contents
 
