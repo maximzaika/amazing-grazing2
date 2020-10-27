@@ -1,6 +1,6 @@
 # Protecting Australian Grassland
 
-**Root cause of the title:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
+**Objective:** Farmer Education Regarding - Grazing, Livestock, and Natural Disasters  
 **Product name:** Amazing Grazing  
 
 **Start date:** August 6th, 2020  
