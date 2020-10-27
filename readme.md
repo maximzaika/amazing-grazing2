@@ -74,7 +74,46 @@
     + [10.1.6 Modify rotational grazing content](#1016-modify-rotational-grazing-content)
     + [10.1.7 Modify patch-burn grazing content](#1017-modify-patch-burn-grazing-content)
     + [10.1.8 Modify grazing techniques in HTML](#1018-modify-grazing-techniques-in-html)
-	
+- [11.0 Configure drought.php page](#110-configure-droughtphp-page)
+  * [11.1 How does it work?](#111-how-does-it-work)
+  * [11.2 Modify DROUGHT IMPACTS GRASSLANDS section](#112-modify-drought-impacts-grasslands-section)
+    + [11.2.1 Modify content](#1121-modify-content)
+	+ [11.2.2 Modify content in HTML](#1122-modify-content-in-html)
+  * [11.3 Drought tableau map](#113-drought-tableau-map)
+    + [11.3.1 Add/modify/remove tableau map](#1131-addmodifyremove-tableau-map)
+	+ [11.3.2 Drought tableau datasets](#1132-drought-tableau-datasets)
+	+ [11.3.3 Drought tableau graphs](#1133-drought-tableau-graphs)
+  * [11.4 Modify WHAT THE GOVERNMENT DOES](#114-modify-what-the-government-does)
+    + [11.4.1 Modify HEADER and SUBHEADER](#1141-modify-header-and-subheader)
+	+ [11.4.2 Modify flip cards content](#1142-modify-flip-cards-content)
+	+ [11.4.3 Modify flip cards content in HTML](#1143-modify-flip-cards-content-in-html)
+	+ [11.4.4 Modify URL of source](#1144-modify-url-of-source)
+  * [11.5 Modify PREPARE YOURSELF FOR DROUGHT](#115-modify-prepare-yourself-for-drought)
+	+ [11.5.1 HEADER and SUBHEADER](#1151-header-and-subheader)
+	+ [11.5.2 Scrollable cards content](#1152-scrollable-cards-content)
+	+ [11.5.3 Scrollable cards content in HTML](#1153-scrollable-cards-content-in-html)
+- [12.0 Configure invasive-species.php page](#120-configure-invasive-speciesphp-page)
+  * [12.1 Modify the spinner](#121-modify-the-spinner)
+    + [12.1.1 Spinner content](#1211-spinner-content)
+	+ [12.1.2 Spinner content in HTML](#1212-spinner-content-in-html)
+	+ [12.1.3 Javascript spinner animated-spinner.js](#1213-javascript-spinner-animated-spinnerjs)
+  * [12.2 Modify INVASIVE SPECIES IMPACT GRASSLANDS](#122-modify-invasive-species-impact-grasslands)
+    + [12.2.1 Modify content](#1221-modify-content)
+	+ [12.2.2 Modify content in HTML](#1222-modify-content-in-html)
+  * [12.3 Modify INVASIVE SPECIES & LOCATIONS (GALLERY)](#123-modify-invasive-species--locations-gallery)
+    + [12.3.1 How does it work?](#1231-how-does-it-work)
+	+ [12.3.2 Modify filter items](#1232-modify-filter-items)
+	+ [12.3.3 HEADER and SUBHEADER](#1233-header-and-subheader)
+	+ [12.3.4 Gallery cards content](#1234-gallery-cards-content)
+	+ [12.3.5 Gallery cards in HTML](#1235-gallery-cards-in-html)
+  * [12.4 PREVENTATIVE MEASURES](#124-preventative-measures)
+    + [12.4.1 HEADER, SUBHEADER, and HEADERS of Plants & Animal cards](#1241-header-subheader-and-headers-of-plants--animal-cards)
+	+ [12.4.2 Plants & Animal card content](#1242-plants--animal-card-content)
+	+ [12.4.3 Plants & Animal card in HTML](#1243-plants--animal-card-in-html)
+  * [12.5 Invasive species tableau graphs and datasets](#125-invasive-species-tableau-graphs-and-datasets)
+    + [12.5.1 Invasive species datasets](#1251-invasive-species-datasets)
+	+ [12.5.2 Invasive species tableau graphs](#1252-invasive-species-tableau-graphs)
+
 ## 1.0 Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
@@ -674,7 +713,7 @@ To modify the suggestions content:
 - Option 1: directly modify `drought_landing` table in MySQL
 - Option 2: open `../db_backup/drought_landing.sql` in notepad, modify the content, and import it to MySQL
 
-### 11.2.1 Modify content in HTML
+### 11.2.2 Modify content in HTML
 
 **Note**: Perform operations if necessary ONLY
 1. Directly access `../php/drought-content.php` file in notepad
@@ -740,19 +779,19 @@ To modify the suggestions content:
 
 ### 11.5 Modify PREPARE YOURSELF FOR DROUGHT
 
-### 11.4.1 HEADER and SUBHEADER
+### 11.5.1 HEADER and SUBHEADER
 
 **Note:** It is not stored in database
 1. Directly access `drought.php` file in notepad
 2. Find "Section 4: PREPARE YOURSELF FOR DROUGHT" section
 3. Modify directly
 
-### 11.4.2 Scrollable cards content
+### 11.5.2 Scrollable cards content
 
 - Option 1: directly modify `drought_prepare` table in MySQL
 - Option 2: open `../db_backup/drought_prepare.sql` in notepad, modify the content, and import it to MySQL
 
-### 11.4.3 Scrollable cards content in HTML
+### 11.5.3 Scrollable cards content in HTML
 
 **Note**: Perform operations if necessary ONLY
 1. The following line must be within the `Actions that farmers can take` section of the `drought.php` webpage (it retrieves database content from a `../php/drought-content.php` file)
@@ -796,7 +835,7 @@ To modify the suggestions content:
 - Option 1: directly modify `species_landing` table in MySQL
 - Option 2: open `../db_backup/species_landing.sql` in notepad, modify the content, and import it to MySQL
 
-### 12.2.3 Modify content in HTML
+### 12.2.2 Modify content in HTML
 
 **Note:** Perform operations if necessary ONLY
 1. The following line must be within the `Invasive species impact grasslands` section of the `invasive-species.php` webpage (it retrieves database content from a `../php/invasive-species-content.php` file)
@@ -851,19 +890,19 @@ To modify the suggestions content:
 2) Find "Sort" section
 3) Add/remove/replace items referring to [12.3.1 How does it work?](1231-how-does-it-work) section.
 
-#### 12.3.2 HEADER and SUBHEADER
+#### 12.3.3 HEADER and SUBHEADER
 
 **Note:** It is not stored in database
 1. Directly access `invasive-species.php` file in notepad
 2. Find "3: INVASIVE SPECIES & LOCATIONS" section
 3. Modify directly
 
-#### 12.3.3 Gallery cards content
+#### 12.3.4 Gallery cards content
 
 - Option 1: directly modify `species_types` table in MySQL
 - Option 2: open `../db_backup/species_types.sql` in notepad, modify the content, and import it to MySQL
 
-#### 12.3.4 Gallery cards in HTML
+#### 12.3.5 Gallery cards in HTML
 
 **Note:** Perform operations if necessary ONLY
 - It is retrieved by the system using `.ajax()` from the `../php/invasive-species-gallery.php` file and `species_type` database table. Refer to [12.3.1 How does it work?](1231-how-does-it-work) to learn more.
@@ -886,7 +925,7 @@ Instructions:
 - Option 1: directly modify `species_measures` table in MySQL
 - Option 2: open `../db_backup/species_measures.sql` in notepad, modify the content, and import it to MySQL
 
-#### 12.4.2 Plants & Animal card in HTML
+#### 12.4.3 Plants & Animal card in HTML
 
 **Note:** Perform operations if necessary ONLY
 1. The following lines must be within the `Invasive species impact grasslands` section of the `invasive-species.php` webpage (it retrieves database content from a `../php/invasive-species-content.php` file)
