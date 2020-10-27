@@ -72,10 +72,14 @@
 	if ($captcha_success->success==false) {
 		$server_feedback = 'error-captcha';
 	} else if ($captcha_success->success==true) {
-		if ($con->query($sql) === TRUE) {
-			$server_feedback = 'Successful update';
-		} else {
-			$server_feedback = 'Unsuccessful update';
+		if ((strpos($feedback, '<') !== false) || (strpos($feedback, '>') !== false)) { // if feedback contains characters < > notify user to remove
+			$server_feedback = 'feedback-bracket-character';
+		} else { // no < > found so continue writing
+			if ($con->query($sql) === TRUE) {
+				$server_feedback = 'Successful update';
+			} else {
+				$server_feedback = 'Unsuccessful update';
+			}
 		}
 	}
 	/* End writing to the server if the CSRF tests pass */
