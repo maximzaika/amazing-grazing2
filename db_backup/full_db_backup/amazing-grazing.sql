@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 18, 2020 at 07:01 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.1.33
+-- Host: localhost
+-- Generation Time: Oct 27, 2020 at 08:04 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -90,16 +89,16 @@ CREATE TABLE `drought_prepare` (
 --
 
 INSERT INTO `drought_prepare` (`prepare_id`, `prepare_img`, `prepare_title`, `prepare_ico`, `prepare_text`) VALUES
-(1, 'drought/action-plan/header-livestock.jpeg', 'Livestock Situation', 'fa fa-check', '<b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.'),
-(2, '', 'Livestock Situation', 'fa fa-check', 'Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.'),
-(3, '', 'Livestock Situation', 'fa fa-check', 'Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.'),
+(1, 'drought/action-plan/header-strategy.jpg', 'Effective Strategy', 'fa fa-check', '<b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span>, try to remove <span onclick=\"window.location.href=\'invasive-species.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.'),
+(2, '', 'Effective Strategy', 'fa fa-check', '<b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span> to allow grassland to heal.'),
+(3, '', 'Effective Strategy', 'fa fa-check', '<b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.'),
 (4, 'drought/action-plan/header-mental.jpg', 'Health Situation', 'fa fa-check', '<b>Drought is not the end of the world.</b> It is important to keep yourself safe and avoid stressing out.'),
 (5, '', 'Health Situation', 'fa fa-check', '<b>Have a place, where you and your family members can bond together</b>, forget about the business for a second, and relax.'),
 (6, '', 'Health Situation', 'fa fa-check', '<b>Read books, watch TV, enjoy your free time</b> even if it is not the best time, and most importantly do not keep thoughts to yourself - always discuss them with someone.'),
 (7, '', 'Health Situation', 'fa fa-check', 'Most importantly, <b>the Australian government is here to help</b> and to support you. Read below what the government does.'),
-(8, 'drought/action-plan/header-strategy.jpg', 'Effective Strategy', 'fa fa-check', '<b>Preparing for a drought:</b> build ecological capital, practice effective <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span>, try to remove <span onclick=\"window.location.href=\'invasive-species.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>invasive weeds</u></i></span>, develop water infrastructure for sufficient water supply, and consider selling some of your livestock.'),
-(9, '', 'Effective Strategy', 'fa fa-check', '<b>Managing during a drought:</b> make use of the preparation phase, decide the right rotation method to feed livestock to lower the budget, reduce the number of mobs on the pastures, and make use of <span onclick=\"window.location.href=\'techniques.php\';\" style=\"cursor: pointer; color: #4e9525;\"><u><i>grazing techniques</u></i></span> to allow grassland to heal.'),
-(10, '', 'Effective Strategy', 'fa fa-check', '<b>Recovering from drought:</b> analyse the current state, manage cashflow effectively, slowly match the stocking rate to carrying capacity, and finally reflect on what has been done and what can be improved.'),
+(8, 'drought/action-plan/header-livestock.jpeg', 'Livestock Situation', 'fa fa-check', '<b>Use the map above to estimate the possible weather pattern</b>, which is likely to change, and plan forward to avoid livestock starving and becoming distressed during drought.'),
+(9, '', 'Livestock Situation', 'fa fa-check', 'Planning is the key - take time to <b>perform calculations</b> to prepare the amount, time, and cost of feeding the livestock.'),
+(10, '', 'Livestock Situation', 'fa fa-check', 'Do not be afraid to <b>overestimate the resources</b>, even if your area is less affected by drought.'),
 (11, 'drought/action-plan/header-finance.jpg', 'Financial Situation', 'fa fa-check', '<b>List out</b> all <b>physical and financial resources of the farm</b> to consider possible effects on both short- and long-term strategies.'),
 (12, '', 'Financial Situation', 'fa fa-check', '<b>Prepare at least 6 months of cash flow budget</b> against possible financial difficulties. It is a good practice to overestimate just to stay safe.'),
 (13, '', 'Financial Situation', 'fa fa-check', '<b>Consider reducing the livestock numbers</b> by selling them to minimise the maintenance because there is no exact way to predict the duration of drought.'),
@@ -417,10 +416,10 @@ CREATE TABLE `g_news_api` (
 --
 
 INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
-(1, 100, '2f43dc9d754f3008f68a7f50b670c208'),
-(2, 100, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
-(3, 100, 'c3fae1827597a016ef41d4fb9c4f95fe'),
-(4, 78, '9e0677170130c646c24d9d907974166c'),
+(1, 0, '2f43dc9d754f3008f68a7f50b670c208'),
+(2, 0, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
+(3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe'),
+(4, 0, '9e0677170130c646c24d9d907974166c'),
 (5, 0, '1d5029e4a17729fbd82d52087fc2c85c'),
 (6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
 (7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');
@@ -444,12 +443,12 @@ CREATE TABLE `index_offerings` (
 --
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
-(1, 'flaticon-news', 'Latest News', 'Today\'s news regarding grazing, livestock, drought & wildfires', 'news.php'),
-(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Various grazing techniques required to preserve grassland\'s nature', 'techniques.php'),
-(3, 'flaticon-chicken', 'Livestock Statistics', 'Livestock situation and affect on grassland and economy', 'livestock-statistics.php'),
-(4, 'flaticon-teacher', 'Employment Statistics', 'The employment situation, agricultural communities, and promotion of the farming profession', 'employment-statistics.php'),
-(5, 'flaticon-drought', 'Drought', 'Drought locations, impacts, action plan, and government support', 'drought.php'),
-(6, 'flaticon-bug', 'Invasive Species', 'Invasive species locations, impacts, and preventative measures', 'invasive-species.php');
+(1, 'flaticon-chicken', 'Livestock Statistics', 'Livestock situation and affect on grassland and economy', 'livestock-statistics.php'),
+(2, 'flaticon-teacher', 'Employment Statistics', 'The employment situation, agricultural communities, and promotion of the farming profession', 'employment-statistics.php'),
+(3, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Various grazing techniques required to preserve grassland\'s nature', 'techniques.php'),
+(4, 'flaticon-drought', 'Drought', 'Drought locations, impacts, action plan, and government support', 'drought.php'),
+(5, 'flaticon-bug', 'Invasive Species', 'Invasive species locations, impacts, and preventative measures', 'invasive-species.php'),
+(6, 'flaticon-news', 'Latest News', 'Today\'s news regarding grazing, livestock, drought & wildfires', 'news.php');
 
 -- --------------------------------------------------------
 
@@ -514,201 +513,6 @@ INSERT INTO `livestock_cards` (`card_id`, `card_type`, `card_preview`, `card_tit
 (42, 'Total', 'Make sure the right grazing technique is used to provide enough food.', 'Keep dairy cattle fed', '<img style=\"width: 100%;\" src=\"images/livestock_stats/dairy-card-3.jpeg\" alt=\"Keep dairy cattle fed\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">A cow, that is milking, eats about 45 kilograms of feed each day. Cows drink a whole bathtub of water in just one day. That’s why cows are considered as the competitive eater and ultimate recyclers. The feed is typically a combination of grass, grain, and a mixture of other ingredients like citrus pulp, almond hulls and cotton seeds. These are items that may otherwise be thrown away. The ingredients, that we cannot eat, can often be nutritious for them. Farmers employ professional animal nutritionists to develop scientifically formulated, balanced, and nutritious diets for their cows.</h5>'),
 (43, 'Total', 'Rabbits can be a cause of decreasing number of sheep.', 'Beware of rabbits', '<img style=\"width: 100%;\" src=\"images/livestock_stats/sheep-card-1.jpeg\" alt=\"Beware of rabbits\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Rabbits compete with native animals and domestic livestock for food and shelter, increasing grazing pressure and lowering the land’s carrying capacity.</h5><p></p><h5 class=\"text-justify\">Rabbits act as a food source for introduced predators, which can lead to increased lamb losses and disease prevalence.</h5>'),
 (44, 'Total', 'Sheep are light eaters compared to cattle, but their density is much higher.', 'High density of sheeps negative affect grassland', '<img style=\"width: 100%;\" src=\"images/livestock_stats/sheep-card-2.jpeg\" alt=\"High density of sheeps negative affect grassland\"><h5 class=\"text-justify\"><h5 class=\"text-justify\">Large density causes lots of damage to the grass and the plants in the area. Though, sheep are herbivores, which means their diet does not include meat. They typically eat seeds, grass and plants. Some sheep do not need much water. The desert bighorn sheep, for example, gets most of its water from eating plants. Like all ruminants, they have multi-chambered stomachs that are adapted to ferment cellulose before digestion. To completely digest their food, sheep will regurgitate their food into their mouths, rechew and swallow. This regurgitated food is called cud.</h5>');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `livestock_dataset`
---
-
-CREATE TABLE `livestock_dataset` (
-  `stock_id` int(11) NOT NULL,
-  `stock_year` int(11) NOT NULL,
-  `stock_type` varchar(20) NOT NULL,
-  `stock_qty` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `livestock_dataset`
---
-
-INSERT INTO `livestock_dataset` (`stock_id`, `stock_year`, `stock_type`, `stock_qty`) VALUES
-(1, 1973, 'Beef cattle', 26.6),
-(2, 1974, 'Beef cattle', 28.5),
-(3, 1975, 'Beef cattle', 29.3),
-(4, 1976, 'Beef cattle', 28.3),
-(5, 1977, 'Beef cattle', 26.3),
-(6, 1978, 'Beef cattle', 24.2),
-(7, 1979, 'Beef cattle', 23.4),
-(8, 1980, 'Beef cattle', 22.4),
-(9, 1981, 'Beef cattle', 21.7),
-(10, 1982, 'Beef cattle', 19.7),
-(11, 1983, 'Beef cattle', 19.4),
-(12, 1984, 'Beef cattle', 20),
-(13, 1985, 'Beef cattle', 20.7),
-(14, 1986, 'Beef cattle', 19.3),
-(15, 1987, 'Beef cattle', 19.3),
-(16, 1988, 'Beef cattle', 19.9),
-(17, 1989, 'Beef cattle', 20.7),
-(18, 1990, 'Beef cattle', 21.2),
-(19, 1991, 'Beef cattle', 21.4),
-(20, 1992, 'Beef cattle', 21.6),
-(21, 1993, 'Beef cattle', 23.1),
-(22, 1994, 'Beef cattle', 23),
-(23, 1995, 'Beef cattle', 23.6),
-(24, 1996, 'Beef cattle', 23.7),
-(25, 1997, 'Beef cattle', 23.8),
-(26, 1998, 'Beef cattle', 23.4),
-(27, 1999, 'Beef cattle', 24.4),
-(28, 2000, 'Beef cattle', 24.5),
-(29, 2001, 'Beef cattle', 24.7),
-(30, 2002, 'Beef cattle', 23.6),
-(31, 2003, 'Beef cattle', 24.4),
-(32, 2004, 'Beef cattle', 24.7),
-(33, 2005, 'Beef cattle', 25.6),
-(34, 2006, 'Beef cattle', 25.4),
-(35, 2007, 'Beef cattle', 24.8),
-(36, 2008, 'Beef cattle', 25.3),
-(37, 2009, 'Beef cattle', 24),
-(38, 2010, 'Beef cattle', 25.9),
-(39, 2011, 'Beef cattle', 25.7),
-(40, 2012, 'Beef cattle', 26.5),
-(41, 2013, 'Beef cattle', 26.3),
-(42, 2014, 'Beef cattle', 24.6),
-(43, 2015, 'Beef cattle', 22.3),
-(44, 2016, 'Beef cattle', 23.1),
-(45, 1973, 'Dairy cattle', 3.7),
-(46, 1974, 'Dairy cattle', 3.6),
-(47, 1975, 'Dairy cattle', 3.5),
-(48, 1976, 'Dairy cattle', 3.3),
-(49, 1977, 'Dairy cattle', 3.1),
-(50, 1978, 'Dairy cattle', 2.9),
-(51, 1979, 'Dairy cattle', 2.8),
-(52, 1980, 'Dairy cattle', 2.8),
-(53, 1981, 'Dairy cattle', 2.8),
-(54, 1982, 'Dairy cattle', 2.8),
-(55, 1983, 'Dairy cattle', 2.8),
-(56, 1984, 'Dairy cattle', 2.8),
-(57, 1985, 'Dairy cattle', 2.8),
-(58, 1986, 'Dairy cattle', 2.6),
-(59, 1987, 'Dairy cattle', 2.6),
-(60, 1988, 'Dairy cattle', 2.5),
-(61, 1989, 'Dairy cattle', 2.5),
-(62, 1990, 'Dairy cattle', 2.4),
-(63, 1991, 'Dairy cattle', 2.4),
-(64, 1992, 'Dairy cattle', 2.5),
-(65, 1993, 'Dairy cattle', 2.7),
-(66, 1994, 'Dairy cattle', 2.7),
-(67, 1995, 'Dairy cattle', 2.8),
-(68, 1996, 'Dairy cattle', 3),
-(69, 1997, 'Dairy cattle', 3.1),
-(70, 1998, 'Dairy cattle', 3.2),
-(71, 1999, 'Dairy cattle', 3.1),
-(72, 2000, 'Dairy cattle', 3.2),
-(73, 2001, 'Dairy cattle', 3.1),
-(74, 2002, 'Dairy cattle', 3),
-(75, 2003, 'Dairy cattle', 3.1),
-(76, 2004, 'Dairy cattle', 3.1),
-(77, 2005, 'Dairy cattle', 2.8),
-(78, 2006, 'Dairy cattle', 2.7),
-(79, 2007, 'Dairy cattle', 2.5),
-(80, 2008, 'Dairy cattle', 2.6),
-(81, 2009, 'Dairy cattle', 2.5),
-(82, 2010, 'Dairy cattle', 2.6),
-(83, 2011, 'Dairy cattle', 2.7),
-(84, 2012, 'Dairy cattle', 2.8),
-(85, 2013, 'Dairy cattle', 2.8),
-(86, 2014, 'Dairy cattle', 2.8),
-(87, 2015, 'Dairy cattle', 2.7),
-(88, 2016, 'Dairy cattle', 2.6),
-(89, 1973, 'Sheep', 145),
-(90, 1974, 'Sheep', 152),
-(91, 1975, 'Sheep', 148),
-(92, 1976, 'Sheep', 135),
-(93, 1977, 'Sheep', 131),
-(94, 1978, 'Sheep', 134),
-(95, 1979, 'Sheep', 136),
-(96, 1980, 'Sheep', 134),
-(97, 1981, 'Sheep', 138),
-(98, 1982, 'Sheep', 131),
-(99, 1983, 'Sheep', 135),
-(100, 1984, 'Sheep', 146),
-(101, 1985, 'Sheep', 150),
-(102, 1986, 'Sheep', 149),
-(103, 1987, 'Sheep', 152),
-(104, 1988, 'Sheep', 162),
-(105, 1989, 'Sheep', 170),
-(106, 1990, 'Sheep', 163),
-(107, 1991, 'Sheep', 148),
-(108, 1992, 'Sheep', 138),
-(109, 1993, 'Sheep', 133),
-(110, 1994, 'Sheep', 121),
-(111, 1995, 'Sheep', 121),
-(112, 1996, 'Sheep', 120),
-(113, 1997, 'Sheep', 117),
-(114, 1998, 'Sheep', 115),
-(115, 1999, 'Sheep', 119),
-(116, 2000, 'Sheep', 111),
-(117, 2001, 'Sheep', 106),
-(118, 2002, 'Sheep', 99.3),
-(119, 2003, 'Sheep', 101),
-(120, 2004, 'Sheep', 101),
-(121, 2005, 'Sheep', 91),
-(122, 2006, 'Sheep', 85.7),
-(123, 2007, 'Sheep', 76.9),
-(124, 2008, 'Sheep', 72.7),
-(125, 2009, 'Sheep', 68.1),
-(126, 2010, 'Sheep', 73.1),
-(127, 2011, 'Sheep', 74.7),
-(128, 2012, 'Sheep', 75.5),
-(129, 2013, 'Sheep', 72.6),
-(130, 2014, 'Sheep', 70.9),
-(131, 2015, 'Sheep', 67.5),
-(132, 2016, 'Sheep', 70.4),
-(133, 1973, 'Total', 175.3),
-(134, 1974, 'Total', 184.1),
-(135, 1975, 'Total', 180.8),
-(136, 1976, 'Total', 166.6),
-(137, 1977, 'Total', 160.4),
-(138, 1978, 'Total', 161.1),
-(139, 1979, 'Total', 162.2),
-(140, 1980, 'Total', 159.2),
-(141, 1981, 'Total', 162.5),
-(142, 1982, 'Total', 153.5),
-(143, 1983, 'Total', 157.2),
-(144, 1984, 'Total', 168.8),
-(145, 1985, 'Total', 173.5),
-(146, 1986, 'Total', 170.9),
-(147, 1987, 'Total', 173.9),
-(148, 1988, 'Total', 184.4),
-(149, 1989, 'Total', 193.2),
-(150, 1990, 'Total', 186.6),
-(151, 1991, 'Total', 171.8),
-(152, 1992, 'Total', 162.1),
-(153, 1993, 'Total', 158.8),
-(154, 1994, 'Total', 146.7),
-(155, 1995, 'Total', 147.4),
-(156, 1996, 'Total', 146.7),
-(157, 1997, 'Total', 143.9),
-(158, 1998, 'Total', 141.6),
-(159, 1999, 'Total', 146.5),
-(160, 2000, 'Total', 138.7),
-(161, 2001, 'Total', 133.8),
-(162, 2002, 'Total', 125.9),
-(163, 2003, 'Total', 128.5),
-(164, 2004, 'Total', 128.8),
-(165, 2005, 'Total', 119.4),
-(166, 2006, 'Total', 113.8),
-(167, 2007, 'Total', 104.2),
-(168, 2008, 'Total', 100.6),
-(169, 2009, 'Total', 94.6),
-(170, 2010, 'Total', 101.6),
-(171, 2011, 'Total', 103.1),
-(172, 2012, 'Total', 104.8),
-(173, 2013, 'Total', 101.7),
-(174, 2014, 'Total', 98.3),
-(175, 2015, 'Total', 92.5),
-(176, 2016, 'Total', 96.1);
 
 -- --------------------------------------------------------
 
@@ -1044,12 +848,12 @@ CREATE TABLE `nav_bar` (
 
 INSERT INTO `nav_bar` (`nav_id`, `nav_link`, `nav_title`, `nav_drop`, `nav_topic`) VALUES
 (1, 'index.php', 'Home', 0, 'none'),
-(2, 'news.php', 'News', 0, 'none'),
-(3, 'techniques.php', 'Techniques', 0, 'none'),
-(4, 'livestock-statistics.php', 'Livestock', 1, 'Statistics'),
-(5, 'employment-statistics.php', 'Employment', 1, 'Statistics'),
-(6, 'drought.php', 'Drought', 0, 'none'),
-(7, 'invasive-species.php', 'Species', 0, 'none');
+(2, 'livestock-statistics.php', 'Livestock', 1, 'Statistics'),
+(3, 'employment-statistics.php', 'Employment', 1, 'Statistics'),
+(4, 'techniques.php', 'Techniques', 0, 'none'),
+(5, 'drought.php', 'Drought', 0, 'none'),
+(6, 'invasive-species.php', 'Species', 0, 'none'),
+(7, 'news.php', 'News', 0, 'none');
 
 -- --------------------------------------------------------
 
@@ -1593,6 +1397,17 @@ CREATE TABLE `user_feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `user_feedback`
+--
+
+INSERT INTO `user_feedback` (`feedback_id`, `feedback_page`, `feedback_date`, `feedback_time`, `feedback_rate`, `feedback_text`) VALUES
+(27, 'news.php', '25-10-2020', '01:04:15pm', 5, ';--'),
+(28, 'techniques.php', '25-10-2020', '01:15:17pm', 3, 'test'),
+(29, 'news.php', '25-10-2020', '01:18:09pm', 5, 'test test'),
+(30, 'index.php', '25-10-2020', '01:25:59pm', 5, 'tettetetet'),
+(31, 'index.php', '26-10-2020', '06:48:44pm', 5, '\'<>slq');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -1661,12 +1476,6 @@ ALTER TABLE `index_offerings`
 --
 ALTER TABLE `livestock_cards`
   ADD PRIMARY KEY (`card_id`);
-
---
--- Indexes for table `livestock_dataset`
---
-ALTER TABLE `livestock_dataset`
-  ADD PRIMARY KEY (`stock_id`);
 
 --
 -- Indexes for table `livestock_graph`
@@ -1937,12 +1746,6 @@ ALTER TABLE `livestock_cards`
   MODIFY `card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `livestock_dataset`
---
-ALTER TABLE `livestock_dataset`
-  MODIFY `stock_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
-
---
 -- AUTO_INCREMENT for table `livestock_graph`
 --
 ALTER TABLE `livestock_graph`
@@ -2054,7 +1857,7 @@ ALTER TABLE `technique_selected`
 -- AUTO_INCREMENT for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -96,7 +96,7 @@
 	// Initializes the card creation
 	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
-							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
+							   '<div class="bg-light services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_farmer.'"></span>'.
 								 '</div>'.
@@ -248,7 +248,7 @@
 	
 	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
-							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
+							   '<div class="bg-light services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_mortarboard.'"></span>'.
 								 '</div>'.
@@ -477,7 +477,7 @@
 	
 	$all_cards = $all_cards . '<div class="item d-flex align-items-stretch">'.
 							   '<div class="wrap">'.
-							   '<div class="services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
+							   '<div class="bg-light services card-height text-center" style="padding-bottom: 10px; height:100%;">'.
 							     '<div class="icon justify-content-center align-items-center">'.
 								   '<span class="'.$icon_age.'"></span>'.
 								 '</div>'.

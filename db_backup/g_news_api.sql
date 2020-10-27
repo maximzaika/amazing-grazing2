@@ -39,13 +39,13 @@ CREATE TABLE `g_news_api` (
 --
 
 INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
-(1, 100, '2f43dc9d754f3008f68a7f50b670c208'),
-(2, 89, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
+(1, 0, '2f43dc9d754f3008f68a7f50b670c208'),
+(2, 0, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
 (3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe'),
-(4, 100, '9e0677170130c646c24d9d907974166c'),
-(5, 100, '1d5029e4a17729fbd82d52087fc2c85c'),
-(6, 100, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
-(7, 42, 'e7a575a4e5900bf0de75a73abf3e7d2b');
+(4, 0, '9e0677170130c646c24d9d907974166c'),
+(5, 0, '1d5029e4a17729fbd82d52087fc2c85c'),
+(6, 0, '0e5efcba3b5a2d1d78b5eb243ebb8ce2'),
+(7, 0, 'e7a575a4e5900bf0de75a73abf3e7d2b');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

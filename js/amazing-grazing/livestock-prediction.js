@@ -239,7 +239,7 @@ $(function(){
 	*/
 	function enableCarousel(owl, number2, number) {
 		owl.owlCarousel({
-			center: true,
+			center: false,
 			loop: false,
 			rewind: true,
 		    startPosition: 1,
@@ -251,16 +251,20 @@ $(function(){
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 			responsive:{
 				0:{
-					items: 1
+					items: 1,
+					startPosition: 1
 				},
 				600:{
-					items: 2
+					items: 2,
+					startPosition: 0
 				},
 				1000:{
-					items: number2
+					items: number2,
+					startPosition: 0
 				},
 				1600:{
-					items: number
+					items: number,
+					startPosition: 0
 				}
 			}
 		});
