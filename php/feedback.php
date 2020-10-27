@@ -86,6 +86,5 @@
 	}
 	/* End writing to the server if the CSRF tests pass */
 	
-	echo json_encode(array("feedback"=>$server_feedback,
-						  "test"=>$test)); // send server feedback to the ajax/client
+	echo json_encode(array("feedback"=>$server_feedback)); // send server feedback to the ajax/client
 ?>
