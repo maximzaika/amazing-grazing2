@@ -87,7 +87,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<!-- Section 1: Drought species impact grasslands -->
+		<!-- Section 2: Drought species impact grasslands -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
 			<div class="container">
 				<div class="row ">
@@ -133,9 +133,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 1: Invasive species impact grasslands -->
+		<!-- End Section 2: Invasive species impact grasslands -->
 
-		<!-- Section 2: What the government does -->
+		<!-- Section 3: What the government does -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
 			<div class="container" style="padding-bottom: 4em;">
 				<div class="container" style="padding-top: 4em;">
@@ -157,9 +157,9 @@
 				<!-- End: Flip cards get inserted here -->
 			</div>
 		</section>
-		<!-- End: Section 2: What the government does -->
+		<!-- End: Section 3: What the government does -->
 		
-		<!-- Section 3: PREPARE YOURSELF FOR DROUGHT -->
+		<!-- Section 4: PREPARE YOURSELF FOR DROUGHT -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species bg-light">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
@@ -182,9 +182,9 @@
 				<!-- End: Actions that farmers can take -->
 			</div>
 		</section>
-		<!-- End Section 3: PREPARE YOURSELF FOR DROUGHT -->
+		<!-- End Section 4: PREPARE YOURSELF FOR DROUGHT -->
 		
-		<!-- Section 4: Footer -->
+		<!-- Section 5: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
 			<div class="container">
 				<div class="row mb-5">
@@ -226,7 +226,7 @@
 				</div>
 			</div>
 		</footer>
-		<!-- End Section 4: Footer -->
+		<!-- End Section 5: Footer -->
 		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
@@ -257,7 +257,7 @@
 		<script src="js/readMoreJS2.min.js"></script>
 		<script type='text/javascript'>
 			/* 
-				Description: executes teh drought page graph
+				Description: executes the drought page graph
 				Pre-condition:
 				  - the container with the id "tableau-graph" must be on the page
 				  - uses the size of the right container to determine the height on large screens
