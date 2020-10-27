@@ -598,12 +598,12 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
 - On load:
   1. Section `Section 2: Grazing Technqiues` of the webpage contains the following line, which connects to the server file called `../php/retrieve_techniques.php`:
-    ```php
-    <?php echo htmlspecialchars_decode(retrieveTechniques($con));?>
-    ```
+      ```php
+      <?php echo htmlspecialchars_decode(retrieveTechniques($con));?>
+      ```
   2. The line above connects to the database table `techniques_landing` to retrieve all 4 techniques
   3. Sections `Pop up seasonal grazing modal`, `Pop up rotational grazing modal`, and `Pop up patch-burn grazing modal` contain the following lines of code, 
-     which also connects to the server file called `../php/retrieve_techniques.php`::
+     which also connects to the server file called `../php/retrieve_techniques.php`:
      - `Pop up seasonal grazing modal`:
 	   ```php
 	   <?php echo retrieveTechniquePage($con, "SEASONAL GRAZING", "Carousel");?>
@@ -616,7 +616,7 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 	   ```php
 	   <?php echo retrieveTechniquePage($con, "PATCH-BURN GRAZING", "No");?>
 	   ```
-  4. Above lines connect to the database table `technique_selected` to retrieve the content of all the pages, that can be accessed by clicking `Read more` buttons
+  4. Above lines connect to the database table `technique_selected` to retrieve the content of all the pages that can be accessed by clicking `Read more` buttons  
 **Note:** refer to commented out sections of `../php/retrieve_techniques.php` to learn more.
 
 #### 10.1.2 Modify carousel in HTML
