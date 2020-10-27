@@ -43,6 +43,9 @@
     + [8.1.2 Spinner content in HTML](#812-spinner-content-in-html)
 	+ [8.1.3 Javascript spinner animated-spinner.js](#813-javascript-spinner-animated-spinnerjs)
   * [8.2 Modify the LIVESTOCK REDUCTION IMPACTS GRASSLANDS section](#82-modify-the-livestock-reduction-impacts-grasslands-section)
+    + [8.2.1 Modify the HEADER, SUBHEADER, and CONTENT](#821-modify-the-header-subheader-and-content)
+	+ [8.2.2 Modify the HEADER, SUBHEADER, and CONTENT in HTML](#822-modify-the-header-subheader-and-content-in-html)
+  * [8.3 Modify the CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE section](#83-modify-the-consequences-of-livestock-reduction-in-the-future-section)
     + [8.3.1 How does it work?](#831-how-does-it-work)
 	+ [8.3.2 Modify the HEADER and SUBHEADER](#832-modify-the-header-and-subheader)
 	+ [8.3.3 Modify SORT options](#833-modify-sort-options)
@@ -213,7 +216,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  ```
       - Modify `DB_SERVER` (server name), `DB_USERNAME` (username to access the database), `DB_PASSWORD` (password to access the database), and `DB_NAME` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
-5. When the server is fully configured, add `.htaccess` file to main directory **(if it is not there yet)**:
+5. [Website can run without this step, but the website becomes vulnerable] When the server is fully configured, add `.htaccess` file to main directory **(if it is not there yet)**:
 	```apacheconf
 	# Prevent access to Directory Listing
 	Options -Indexes
