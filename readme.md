@@ -683,28 +683,28 @@ To modify the suggestions content:
 	    - This section executes tableau graph together with the javascript `Description: executes the drought page graph` at the bottom of the page. Refer to 
 	      [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more. 
 	 2. `Invasive species impact grasslands section`
-	    - This section executes the "DROUGHT IMPACTS GRASSLANDS" section, the subheader, and the content using the following line:
+	    - This section executes the "DROUGHT IMPACTS GRASSLANDS" section, the subheader, and the content using the following line
 	      ```php
 		  <?php echo htmlspecialchars_decode($drought_intro);?>
 		  ```
 	      which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
 	    - Section `1) Intro` of this file retrieves the information from the `drought_landing` table and generates HTML that is sent to the client
   2. Executes section `3: What the government does`:
-    1. The HEADER and SUBHEADER are executed in the HTML itself
-	2. Section `Flip cards` contains the following line of code:
-	   ```php
-	   <?php echo htmlspecialchars_decode($governmentInfo);?>
-	   ```
-	   which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
-	   + Section `2) what the government does` of this file retrieves the information from the `drought_government` table and generates HTML that is sent to the client
+     1. The HEADER and SUBHEADER are executed in the HTML itself
+	 2. Section `Flip cards` contains the following line of code:
+	    ```php
+	    <?php echo htmlspecialchars_decode($governmentInfo);?>
+	    ```
+	    which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
+	    - Section `2) what the government does` of this file retrieves the information from the `drought_government` table and generates HTML that is sent to the client
   3. Executes section `4: PREPARE YOURSELF FOR DROUGHT`
-    1. The HEADER and SUBHEADER are executed in the HTML itself
-	2. Section `Actions that farmers can take` contains the following line of code:
-	   ```php
-       <?php echo htmlspecialchars_decode($prepareInfo);?>
-       ```
-	   which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
-	   + Section `3) Prepare yourself for drought` of this file retrieves the information from the `drought_prepare` table and generates HTML that is sent to the client
+     1. The HEADER and SUBHEADER are executed in the HTML itself
+	 2. Section `Actions that farmers can take` contains the following line of code:
+	    ```php
+        <?php echo htmlspecialchars_decode($prepareInfo);?>
+        ```
+	    which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
+	    - Section `3) Prepare yourself for drought` of this file retrieves the information from the `drought_prepare` table and generates HTML that is sent to the client
 
 ### 11.2 Modify DROUGHT IMPACTS GRASSLANDS section
 
