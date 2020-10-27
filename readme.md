@@ -64,6 +64,16 @@
     + [9.4.1 Modify the HEADER and SUBHEADER](#941-modify-the-header-and-subheader)
 	+ [9.4.2 Modify Carousel content](#942-modify-carousel-content)
 	+ [9.4.3 Modify Carousel in HTML](#943-modify-carousel-in-html)
+- [10.0 Configure techniques.php page](#100-configure-techniquesphp-page)
+  * [10.1 Modify Carousel section](#101-modify-carousel-section)
+  * [10.1.1 How does it work?](#1011-how-does-it-work)
+  * [10.1.2 Modify carousel in HTML](#1012-modify-carousel-in-html)
+  * [10.1.3 Modify carousel content](#1013-modify-carousel-content)
+  * [10.1.4 Modify seasonal grazing content](#1014-modify-seasonal-grazing-content)
+  * [10.1.5 Modify continuous grazing content](#1015-modify-continuous-grazing-content)
+  * [10.1.6 Modify rotational grazing content](#1016-modify-rotational-grazing-content)
+  * [10.1.7 Modify patch-burn grazing content](#1017-modify-patch-burn-grazing-content)
+  * [10.1.8 Modify grazing techniques in HTML](#1018-modify-grazing-techniques-in-html)
 	
 ## 1.0 Team members
 - **Maxim Zaika**
@@ -598,7 +608,7 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
   - Column `selected-techn` contains the title of the techniques, for example `PATCH-BURN GRAZING`. The row related to this content needs to be modified.
 - Option 2: open `../db_backup/technique_selected.sql` in notepad, modify the content, and import it to MySQL
 
-#### 10.1.2 Modify grazing techniques in HTML
+#### 10.1.8 Modify grazing techniques in HTML
 
 **Note**: Perform operations if necessary ONLY
 1. Directly access `../php/retrieve_techniques.php` file in notepad
