@@ -28,7 +28,7 @@
   * [6.3 Configure the footers/license of every page](#63-configure-the-footerslicense-of-every-page)
   * [6.4 Configure breadcrumbs](#64-configure-breadcrumbs)
   * [6.5 Configure & set up the Feedback floating button](#65-configure--set-up-the-feedback-floating-button)
-    + [6.5.1 How does it work and where does it go?](#651-how-does-it-work-and-where-does)
+    + [6.5.1 How does it work and where does it go?](#651-how-does-it-work-and-where-does-it-go)
 	+ [6.5.2 The following code needs to be inside the page](#652-the-following-code-needs-to-be-inside-the-page)
   * [6.6 Configure & set up the floating back to top button](#66-configure--set-up-the-floating-back-to-top-button)
   * [6.7 Configure tableau graphs](#67-configure-tableau-graphs)
@@ -141,7 +141,7 @@ On top of that, users can download brochures of the preventative measures for th
     - Download from [Google Drive](https://bit.ly/3jv8sEd)
 4. Following actions need to be taken to launch the website:
     - Create the table `amazing-grazing` in your database
-    - Add the server_config.php file to the main directory *(if it is not there yet)*:
+    - Add the `server_config.php` file to the main directory **(if it is not there yet)**:
 	  ```php
 	  <?php
 		define("DB_SERVER", "add-server-ip-here");
@@ -158,7 +158,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  ```
       - Modify `DB_SERVER` (server name), `DB_USERNAME` (username to access the database), `DB_PASSWORD` (password to access the database), and `DB_NAME` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
-5. When server is fully configured, add `.htaccess` file to main directory *(if it is not there yet)*:
+5. When the server is fully configured, add `.htaccess` file to main directory **(if it is not there yet)**:
 	```apacheconf
 	# Prevent access to Directory Listing
 	Options -Indexes

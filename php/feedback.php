@@ -66,19 +66,26 @@
 	$response = $_POST["response"];	
 	$url = 'https://www.google.com/recaptcha/api/siteverify?secret=';
 	$secret = '6LcxX9QZAAAAAMlmIhKdoJssgr4ZOuU3SY0ddZwh';
-		
+	
+	$test = '';
 	$verify = file_get_contents($url.$secret.'&response='.$response);
 	$captcha_success = json_decode($verify);
 	if ($captcha_success->success==false) {
 		$server_feedback = 'error-captcha';
 	} else if ($captcha_success->success==true) {
-		if ($con->query($sql) === TRUE) {
-			$server_feedback = 'Successful update';
-		} else {
-			$server_feedback = 'Unsuccessful update';
+		if ((str_contains($feedback, '<') !== false) || (str_contains($feedback, '>') !== false)) { // if feedback contains characters < > notify user to remove
+			$server_feedback = 'feedback-bracket-character';
+			$test = 'errrrrro';
+		} else { // no < > found so continue writing
+			if ($con->query($sql) === TRUE) {
+				$server_feedback = 'Successful update';
+			} else {
+				$server_feedback = 'Unsuccessful update';
+			}
 		}
 	}
 	/* End writing to the server if the CSRF tests pass */
 	
-	echo json_encode(array("feedback"=>$server_feedback)); // send server feedback to the ajax/client
+	echo json_encode(array("feedback"=>$server_feedback,
+						  "test"=>$test)); // send server feedback to the ajax/client
 ?>

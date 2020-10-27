@@ -72,6 +72,7 @@ $(function() {
 				   response: grecaptcha.getResponse(),
 				   page: page_received},
 			success: function(data) {
+				console.log(test);
 				if (data.feedback == "Unsuccessful update") {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show"; // trigger notification update
@@ -80,6 +81,11 @@ $(function() {
 				} else if (data.feedback == "Successful update") {
 					var x = document.getElementById("feedback-sent");
 					$('#form-text').val(''); // reset the #form-text
+					x.className = "show"; // trigger notification update
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
+					grecaptcha.reset();
+				} else if (data.feedback == "feedback-bracket-character") {
+					var x = document.getElementById("feedback-bracket-character");
 					x.className = "show"; // trigger notification update
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 					grecaptcha.reset();
