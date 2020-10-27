@@ -34,8 +34,14 @@
   * [6.7 Configure tableau graphs](#67-configure-tableau-graphs)
 - [7.0 Configure index.php page](#70-configure-indexphp-page)
   * [7.1 Modify the SERVICES section](#71-modify-the-services-section)
+    + [7.1.1 Modify the HEADER and SUBHEADER](#711-modify-the-header-and-subheader)
+	+ [7.1.2 Modify cards content](#712-modify-cards-content)
+	+ [7.1.3 Modify cards in HTML](#713-modify-cards-in-html)
 - [8.0 Configure livestock-statistics.php page](#80-configure-livestock-statisticsphp-page)
   * [8.1 Modify the spinner](#81-modify-the-spinner)
+    + [8.1.1 Spinner content](#811-spinner-content)
+    + [8.1.2 Spinner content in HTML](#812-spinner-content-in-html)
+	+ [8.1.3 Javascript spinner animated-spinner.js](#813-javascript-spinner-animated-spinnerjs)
   * [8.2 Modify the LIVESTOCK REDUCTION IMPACTS GRASSLANDS section](#82-modify-the-livestock-reduction-impacts-grasslands-section)
     + [8.3.1 How does it work?](#831-how-does-it-work)
 	+ [8.3.2 Modify the HEADER and SUBHEADER](#832-modify-the-header-and-subheader)
@@ -354,7 +360,7 @@ Instructions:
 2. Dind `SERVICES` section
 3. Modify directly, save, and reload the page
 
-### 7.1.2 Modify cards content:
+### 7.1.2 Modify cards content
 
 - Option 1: directly modify `index_offerings` table in MySQL
 - Option 2: open `../db_backup/index_offerings.sql` in notepad, modify the content, and import it to MySQL
@@ -381,25 +387,30 @@ Instructions:
    ```php
    <?php echo htmlspecialchars_decode($spinner_full);?>
    ```
-2. Open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section "1) Spinner", perform manipulations, save the file, and reload the page
+2. Open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section `1) Spinner`, perform manipulations, save the file, and reload the page
 
 #### 8.1.3 Javascript spinner animated-spinner.js
 - The following javascript file is responsible for the spinner execution on load of the page (located at the bottom of the `<body>` section:
   ```javascript
   <script src="js/amazing-grazing/animated-spinner.js"></script>
   ```  
-**Note:** each time page is resized, it needs to be refreshed to ensure that the spinner fits the screen size - **suggested future improvement**. Refer to the file to read more.
+**Note:** each time page is resized, it needs to be refreshed to ensure that the spinner fits the screen size - **suggested future improvement**. Refer to the 
+`../js/amazing-grazing/animated-spinner.js` file to read more.
 
 ### 8.2 Modify the LIVESTOCK REDUCTION IMPACTS GRASSLANDS section
 
-- Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieve content from the database):
+### 8.2.1 Modify the HEADER, SUBHEADER, and CONTENT
+
+- Option 1: directly modify `livestock_landing` table in MySQL
+- Option 2: open `../db_backup/livestock_landing.sql` in notepad, modify the content, and import it to MySQL
+
+### 8.2.2 Modify the HEADER, SUBHEADER, and CONTENT in HTML
+
+1. Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieve content from the database):
   ```php
   <?php echo htmlspecialchars_decode($live_intro);?>
   ```
-- To modify HEADER, SUBHEADER, and CONTENT:
-   - Option 1: directly modify `livestock_landing` table in MySQL
-   - Option 2: open `../db_backup/livestock_landing.sql` in notepad, modify the content, and import it to MySQL
-- The HTML is generated via .PHP file. To modify it, open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section `2) Intro`, perform manipulations, save the file, and reload the page
+2. Open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section `2) Intro`, perform manipulations, save the file, and reload the page
 
 ### 8.3 Modify the CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE section
 
