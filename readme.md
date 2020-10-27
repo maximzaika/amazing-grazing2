@@ -617,14 +617,15 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 	   <?php echo retrieveTechniquePage($con, "PATCH-BURN GRAZING", "No");?>
 	   ```
   4. Above lines connect to the database table `technique_selected` to retrieve the content of all the pages that can be accessed by clicking `Read more` buttons  
+  
 **Note:** refer to commented out sections of `../php/retrieve_techniques.php` to learn more.
 
 #### 10.1.2 Modify carousel in HTML
 
-**Note**: Perform operations if necessary ONLY
-1. Directly access `../php/retrieve_techniques.php` file in notepad
+**Note**: perform operations if necessary ONLY
+1. Directly access `../php/retrieve_techniques.php` in notepad
 2. Find `retrieveTechniques($con)` section
-3. Read comments and modify directly
+3. Read comments, modify, save, and reload the page
 
 #### 10.1.3 Modify carousel content
 
@@ -667,8 +668,8 @@ To modify the suggestions content:
 
 #### 10.1.8 Modify grazing techniques in HTML
 
-**Note**: Perform operations if necessary ONLY
-1. Directly access `../php/retrieve_techniques.php` file in notepad
+**Note**: perform operations if necessary ONLY
+1. Directly access `../php/retrieve_techniques.php` in notepad
 2. Find `retrieveTechniquePage($con, $page, $extraContent)` section
 3. Read comments and modify directly
 
@@ -678,16 +679,16 @@ To modify the suggestions content:
 
 - On load:
   1. Executes section `2: Drought species impact grasslands` with the two following sections:
-    1. `Graph containing drought regions`
-	  + This section executes tableau graph together with the javascript `Description: executes the drought page graph` at the bottom of the page. Refer to 
-	    [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more. 
-	2. `Invasive species impact grasslands section`
-	  + This section executes the "DROUGHT IMPACTS GRASSLANDS" section, the subheader, and the content using the following line:
-	    ```php
-		<?php echo htmlspecialchars_decode($drought_intro);?>
-		```
-	    which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
-	  + Section `1) Intro` of this file retrieves the information from the `drought_landing` table and generates HTML that is sent to the client
+     1. `Graph containing drought regions`
+	    - This section executes tableau graph together with the javascript `Description: executes the drought page graph` at the bottom of the page. Refer to 
+	      [6.7 Configure tableau graphs](#67-configure-tableau-graphs) section to learn more. 
+	 2. `Invasive species impact grasslands section`
+	    - This section executes the "DROUGHT IMPACTS GRASSLANDS" section, the subheader, and the content using the following line:
+	      ```php
+		  <?php echo htmlspecialchars_decode($drought_intro);?>
+		  ```
+	      which connects to the server's database through the server file `../php/generate-feedback-tab.php`.
+	    - Section `1) Intro` of this file retrieves the information from the `drought_landing` table and generates HTML that is sent to the client
   2. Executes section `3: What the government does`:
     1. The HEADER and SUBHEADER are executed in the HTML itself
 	2. Section `Flip cards` contains the following line of code:
