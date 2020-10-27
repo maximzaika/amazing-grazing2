@@ -535,6 +535,76 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 - Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section '2) Agricultural communities', perform changes, save, ane reload the page
   - Section '2) Agricultural communities' retrieves content directly from the database's table `emp_agri_comm` and converts it to HTML
 
+## 10.0 Configure techniques.php page
+
+### 10.1 Modify Carousel section
+
+#### 10.1.1 How does it work?
+
+- On load:
+  1. Section `Section 2: Grazing Technqiues` of the webpage contains the following line, which connects to the server file called `../php/retrieve_techniques.php`:
+    ```php
+    <?php echo htmlspecialchars_decode(retrieveTechniques($con));?>
+    ```
+  2. The line above connects to the database table `techniques_landing` to retrieve all 4 techniques
+  3. Sections `Pop up seasonal grazing modal`, `Pop up rotational grazing modal`, and `Pop up patch-burn grazing modal` contain the following lines of code, 
+     which also connects to the server file called `../php/retrieve_techniques.php`::
+     - `Pop up seasonal grazing modal`:
+	   ```php
+	   <?php echo retrieveTechniquePage($con, "SEASONAL GRAZING", "Carousel");?>
+	   ```
+	 - `Pop up rotational grazing modal`:
+	   ```php
+	   <?php echo retrieveTechniquePage($con, "ROTATIONAL GRAZING", "Methods");?>
+	   ```
+	 - `Pop up patch-burn grazing modal`:
+	   ```php
+	   <?php echo retrieveTechniquePage($con, "PATCH-BURN GRAZING", "No");?>
+	   ```
+  4. Above lines connect to the database table `technique_selected` to retrieve the content of all the pages, that can be accessed by clicking `Read more` buttons
+**Note:** refer to commented out sections of `../php/retrieve_techniques.php` to learn more.
+
+#### 10.1.2 Modify carousel in HTML
+
+**Note**: Perform operations if necessary ONLY
+1. Directly access `../php/retrieve_techniques.php` file in notepad
+2. Find `retrieveTechniques($con)` section
+3. Read comments and modify directly
+
+#### 10.1.3 Modify carousel content
+
+- Option 1: directly modify `techniques_landing` table in MySQL
+- Option 2: open `../db_backup/techniques_landing.sql` in notepad, modify the content, and import it to MySQL
+
+#### 10.1.4 Modify seasonal grazing content
+
+- Option 1: directly modify `technique_selected` table in MySQL
+  - Column `selected-techn` contains the title of the techniques, for example `SEASONAL GRAZING`. The row related to this content needs to be modified.
+- Option 2: open `../db_backup/technique_selected.sql` in notepad, modify the content, and import it to MySQL
+
+#### 10.1.5 Modify continuous grazing content
+
+**Note:** there is not dedicated content for this resource because the objective of the website is to avoid promoting this technique
+
+#### 10.1.6 Modify rotational grazing content
+
+- Option 1: directly modify `technique_selected` table in MySQL
+  - Column `selected-techn` contains the title of the techniques, for example `ROTATIONAL GRAZING`. The row related to this content needs to be modified.
+- Option 2: open `../db_backup/technique_selected.sql` in notepad, modify the content, and import it to MySQL
+
+#### 10.1.7 Modify patch-burn grazing content
+
+- Option 1: directly modify `technique_selected` table in MySQL
+  - Column `selected-techn` contains the title of the techniques, for example `PATCH-BURN GRAZING`. The row related to this content needs to be modified.
+- Option 2: open `../db_backup/technique_selected.sql` in notepad, modify the content, and import it to MySQL
+
+#### 10.1.2 Modify grazing techniques in HTML
+
+**Note**: Perform operations if necessary ONLY
+1. Directly access `../php/retrieve_techniques.php` file in notepad
+2. Find `retrieveTechniquePage($con, $page, $extraContent)` section
+3. Read comments and modify directly
+
 ## Licence / Copyright
 
 - HTML5/Bootstrap 4 template is provided by [Colorlib](https://colorlib.com/wp/templates/)
