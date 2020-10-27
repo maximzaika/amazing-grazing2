@@ -83,6 +83,10 @@ $(function() {
 					x.className = "show"; // trigger notification update
 					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 					grecaptcha.reset();
+				} else if (data.feedback == "feedback-bracket-character") {
+					var x = document.getElementById("feedback-bracket-character");
+					x.className = "show"; // trigger notification update
+					setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 				} else {
 					var x = document.getElementById("feedback-captcha");
 					x.className = "show"; // trigger notification update
