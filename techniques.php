@@ -273,10 +273,9 @@
 					  - none, but carousel needs to be functional
 				*/
 				$('.carousel-farmer-actions').owlCarousel({
-					center: true,
+					center: false,
 					loop: false,
 					rewind: true,
-					startPosition: 1,
 					items:4,
 					margin: 30,
 					stagePadding: 0,
@@ -288,22 +287,28 @@
 					navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 					responsive:{
 						0:{
-							items: 1
+							items: 1,
+							startPosition: 1
 						},
 						600:{
-							items: 1
+							items: 1,
+							startPosition: 1
 						},
 						768:{
-							items: 2
+							items: 2,
+							startPosition: 0
 						},
 						1000:{
-							items: 3
+							items: 3,
+							startPosition: 0
 						},
 						1440:{
-							items: 3
+							items: 3,
+							startPosition: 0
 						},
 						1600:{
-							items: 3
+							items: 3,
+							startPosition: 0
 						}
 					}
 				});
@@ -323,12 +328,15 @@
 						$('.carousel-seasons').owlCarousel({
 							center: true,
 							loop: true,
-							items:1,
+							startPosition: 0,
+							items:3,
 							margin: 30,
 							stagePadding: 0,
-							nav: false,
+							mouseDrag: false,
+							nav: true,
 							autoplay: true,
 							autoplayHoverPause: true,
+							autoplayTimeout: 7000,
 							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 							responsive:{
 								0:{
