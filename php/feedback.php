@@ -73,7 +73,7 @@
 	if ($captcha_success->success==false) {
 		$server_feedback = 'error-captcha';
 	} else if ($captcha_success->success==true) {
-		if ((str_contains($feedback, '<') !== false) || (str_contains($feedback, '>') !== false)) { // if feedback contains characters < > notify user to remove
+		if ((str_contains($feedback, '<')) || (str_contains($feedback, '>'))) { // if feedback contains characters < > notify user to remove
 			$server_feedback = 'feedback-bracket-character';
 			$test = 'errrrrro';
 		} else { // no < > found so continue writing
