@@ -265,7 +265,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  
 ### 6.2 Configure the headers of every page
 
-1. Headers are not stored in the database. To modify the images or text, open any of the web page file using notepad.
+1. Headers (main image and the title) are not stored in the database. To modify the images or text, open any of the web page file using notepad.
 2. Go to commented out section called `Page header`, make direct modifications, save them, and reload the page
 	
 ### 6.3 Configure the footers/license of every page
@@ -288,47 +288,47 @@ the tokens (read more below) to ensure that the sender is authorized, and uses s
 
 #### 6.5.2 The following code needs to be inside the page
 
-**Note:** Perform these actions when creating a new page ONLY 
+**Note:** perform these actions when creating a new page ONLY 
 - Add the following line to the `<body>` of the webpage: 
-```php
-<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
-```
+  ```php
+  <?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
+  ```
 - Add the following code to the top of the webpage before `<html>`:
-```php
-<?php 
-  session_start();
-  if (empty($_SESSION['csrf_token'])) {
-	$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-  }
-?>
+  ```php
+  <?php 
+    session_start();
+    if (empty($_SESSION['csrf_token'])) {
+	   $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
+  ?>
 ```
 - Add the following code to the top of the webpage inside the `<head>` section (used for sending tokens between the client and server to verify the identity):
-```html
-<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
-```
+  ```html
+  <meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
+  ```
 - Add the following scripts to the bottom of the `<body>` section:
-```html
-<script src="js/amazing-grazing/feedback.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-```
+  ```html
+  <script src="js/amazing-grazing/feedback.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  ```
 - The HTML is generated via .PHP file. To modify it, open `../php/generate-feedback-tab.php` in notepad, read comments, perform direct manipulations, save the file, and reload the page
 	  
 ### 6.6 Configure & set up the floating back to top button
 
-**Note:** Perform these actions when creating a new page ONLY 
+**Note:** perform these actions when creating a new page ONLY 
 - Add the following line to the bottom of the `<body>` section before `<scripts>`:
-```html
-<div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
-```
+  ```html
+  <div class="scrollToTop js-top"><a href="" class="js-gotop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div>
+  ```
 - Add the following script to the bottom of the `<body>` section:
-```html
-<script src="js/amazing-grazing/main.js"></script>
-```
+  ```html
+  <script src="js/amazing-grazing/main.js"></script>
+  ```
 - `Scroll to top button...` section of `../js/amazing-grazing/main.js` file is responsible for the back to top button
 
 ### 6.7 Configure tableau graphs
 
-**Note:** Perform these actions if necessary ONLY
+**Note:** perform these actions if necessary ONLY
 - Tableau graphs are located on the `livestock-statistics.php`, `employment-statistics.php`, `drought.php`, and `invasive-species.php` pages
 - Tableau server needs to be installed on the local machine to perform modifications (refer to [Tableau documentation](https://www.tableau.com/) to learn more)
 
@@ -348,17 +348,24 @@ Instructions:
 
 ### 7.1 Modify the SERVICES section
 
-- To modify the HEADER and SUBHEADER: 1) directly access `index.php` file in notepad, 2) scroll down to `SERVICES` section 3) modify directly
-- To modify cards:
+### 7.1.1 Modify the HEADER and SUBHEADER
+
+1. Directly access `index.php` in notepad
+2. Dind `SERVICES` section
+3. Modify directly, save, and reload the page
+
+### 7.1.2 Modify cards content:
+
+- Option 1: directly modify `index_offerings` table in MySQL
+- Option 2: open `../db_backup/index_offerings.sql` in notepad, modify the content, and import it to MySQL
+  
+### 7.1.3 Modify cards in HTML
+
 - Ensure that the the following line is inside the `SERVICES CARDS` section (it is used to retrieved content from the database):
   ```php
   <?php echo htmlspecialchars_decode(generateOfferings2($con));?>
   ```
-- Content can be modified via the database:
-  - Option 1: directly modify `index_offerings` table in MySQL
-  - Option 2: open `../db_backup/index_offerings.sql` in notepad, modify the content, and import it to MySQL
-- Make direct changes to HTML/PHP code:
-  - Open`../php/home_offerings.php` in notepad, read comments, modify the content, save it, and reload the page
+- Open`../php/home_offerings.php` in notepad, read comments, modify the content, save it, and reload the page
 
 ## 8.0 Configure livestock-statistics.php page
 
@@ -386,13 +393,13 @@ Instructions:
 ### 8.2 Modify the LIVESTOCK REDUCTION IMPACTS GRASSLANDS section
 
 - Ensure that the the following line is inside the "Livestock reduction impacts..." section (it is used to retrieve content from the database):
-```php
-<?php echo htmlspecialchars_decode($live_intro);?>
-```
+  ```php
+  <?php echo htmlspecialchars_decode($live_intro);?>
+  ```
 - To modify HEADER, SUBHEADER, and CONTENT:
-- Option 1: directly modify `livestock_landing` table in MySQL
-- Option 2: open `../db_backup/livestock_landing.sql` in notepad, modify the content, and import it to MySQL
-- The HTML is generated via .PHP file. To modify it, open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section 2) Intro, perform manipulations, save the file, and reload the page
+   - Option 1: directly modify `livestock_landing` table in MySQL
+   - Option 2: open `../db_backup/livestock_landing.sql` in notepad, modify the content, and import it to MySQL
+- The HTML is generated via .PHP file. To modify it, open `../php/livestock-statistics-content.php` in notepad, read comments, refer to section `2) Intro`, perform manipulations, save the file, and reload the page
 
 ### 8.3 Modify the CONSEQUENCES OF LIVESTOCK REDUCTION IN THE FUTURE section
 
@@ -418,23 +425,24 @@ Instructions:
 		  
 #### 8.3.2 Modify the HEADER and SUBHEADER
 
-It is not stored in database
-1. Directly access `livestock-statistics.php` file in notepad
+These are not stored in the database
+1. Directly access `livestock-statistics.php` in notepad
 2. Scroll down to "CONSEQUENCES OF LIVESTOCK..." section
 3. Modify directly
 
 #### 8.3.3 Modify SORT options
 
-It is not stored in database
-1. Directly access `livestock-statistics.php` file in notepad
+It is not stored in the database
+1. Directly access `livestock-statistics.php` in notepad
 2. Scroll down to "Sorting" section
 3. Modify directly
 
 #### 8.3.4 Add/modify/remove tableau graphs
 
 - Option 1: directly modify `livestock_graph` table in MySQL
-- Option 2: open `../db_backup/livestock_graph.sql` in notepad, modify the content, and import it to MySQL
-**Note:** Refer to section * [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
+- Option 2: open `../db_backup/livestock_graph.sql` in notepad, modify the content, and import it to MySQL  
+
+**Note:** refer to section * [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it
 
 #### 8.3.5 Add/modify/remove card content
 
@@ -443,8 +451,8 @@ It is not stored in database
 	
 #### 8.3.6 Modify cards in HTML
 
-**Note:** Perform operations if necessary ONLY
-- Open `../js/amazing-grazing/livestock-prediction.js`
+**Note:** perform operations if necessary ONLY
+- Open `../js/amazing-grazing/livestock-prediction.js` in notepad
 - Find function `contentHTML()`
 - Perform modifications, save, and refresh the page
 
@@ -453,8 +461,8 @@ It is not stored in database
 #### 8.4.1 Livestock datasets 
 
 1. Accessed by going to `../dataset_and_tableau/datasets-livestock-statistics/`:
-  - File 1: `livestock_year_1973_2016.xlsx` is the original datasets. It is not in database and not used.
-  - File 2: `livestock_year_2017_2060.xlsx` is the predicted dataset based on the previous dataset. It is stored in `livestock_prediction_dataset` database table.
+    - File 1: `livestock_year_1973_2016.xlsx` is the original datasets. It is not in database and not used.
+    - File 2: `livestock_year_2017_2060.xlsx` is the predicted dataset based on the previous dataset. It is stored in `livestock_prediction_dataset` database table.
 
 #### 8.4.2 Livestock tableau graphs
 
@@ -476,7 +484,7 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
 
 ### 9.1.2 Modify in HTML
 
-**Note:** Perform operations if necessary ONLY
+**Note:** perform operations if necessary ONLY
 - `employment-statstics.php` contains `"Left and right sides (video & content) retrieved from db"` section that stores the following code (used to access the database and create HTML content):
   ```php
   <?php echo htmlspecialchars_decode($emp_landing);?>	
@@ -493,7 +501,7 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
      default. Examples of ids: `#e-beef`, `#e-dairy`, and `#e-sheep`.
   2. These buttons have `.select-employment` class. Function `selectEmployment()` in the `../js/amazing-grazing/employment-picker.js` is listening for a click of this class, which is simulated in step 1.
   3. Once this function is triggered, it receives the `id` of step 1, and sends this `id` to function `selectEmploymentType()` in the same file.
-  4. This function compares the `received id` with the `clicked id` and retrieves the content of the graph and its license (graph data and license are not stored in database - ***suggested improvement***).
+  4. This function compares the `received id` with the `clicked id` and retrieves the content of the graph and its license (graph data and license are not stored in the database - ***suggested improvement***).
   5. Then this function sends all the content of step 4 to the function `placeGraph()` in the same file, which generates the graph. This function inserts the graph into `employment-statistics.php` section that has 
      `id` set as `#tableau-chart`. Addtitionally sets license to a text box with `id` `#reference`
   6. Function `selectEmployment()` from step 2 continues execution and sends a request using function `.ajax()` to the server file `../php/employment-card-POST.php` to retrieve the content of all the cards in HTML format.
@@ -505,15 +513,15 @@ Both headers, subheaders, content, image, and video can be modified through MySQ
 
 #### 9.2.2 Modify the HEADER and SUBHEADER
 
-**Note:** It is not stored in database
-1. Directly access `employment-statistics.php` file in notepad
+**Note:** It is not stored in the database
+1. Directly access `employment-statistics.php` in notepad
 2. Find "Section 3: NUMBER OF EDUCATED..." section
 3. Modify directly
 
 #### 9.2.3 Modify SORT options
 
-**Note:** It is not stored in database
-1. Directly access `employment-statistics.php` file in notepad
+**Note:** It is not stored in the database
+1. Directly access `employment-statistics.php` in notepad
 2. Find "Sorting" section
 3. Modify directly
 
@@ -521,22 +529,24 @@ Additionally, if more sorting options have been added to HTML, then the function
 
 #### 9.2.4 Add/modify/remove tableau graphs
 
-**Note:** It is not stored in the database - ***suggested improvement***
+**Note:** it is not stored in the database - ***suggested improvement***
 1. Open `../js/amazing-grazing/employment-picker.js` in notepad
 2. Find function `selectEmploymentType()`
 3. Replace content where necessary, save, and reload page  
+
 **Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it from.
 
 #### 9.2.5 Add/modify/remove card content
 
 - Option 1: directly modify `emp_cards` table in MySQL 
 - Option 2: open `../db_backup/emp_cards.sql` in notepad, modify the content, and import it to MySQL  
+
 **Note:** tables `emp_age`, `emp_education`, and `emp_state` are related to each card. This data can be modified, but it is related to datasets used in this project. Refer to 
 section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
 #### 9.2.6 Modify cards in HTML
 
-**Note:** Perform operations if necessary ONLY
+**Note:** perform operations if necessary ONLY
 1. Open `../php/employment-card-POST.php`
     - This file retrieves card, employee age, employee education, and employee region affected content from MySQL database from the following tables:
       - `emp_state`,
@@ -551,7 +561,7 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 #### 9.3.1 Employment datasets 
 
 1. Accessed by going to `../dataset_and_tableau/datasets-employment-statistics/`:
-    - File 1: `livestock_farmers.xlsx` is the original datasets. It is not in database and not used.
+    - File 1: `livestock_farmers.xlsx` is the original dataset. It is not in database and not used.
     - File 2: `farmers_data.xlsx`. Data wrangling has been performed on this file. It is stored in the following tables: 
       - `emp_state`,
 	  - `emp_education`,
@@ -570,8 +580,8 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
 #### 9.4.1 Modify the HEADER and SUBHEADER
 
-**Note:** It is not stored in database
-1. Directly access `employment-statistics.php` file in notepad
+**Note:** these are stored in the database
+1. Directly access `employment-statistics.php` in notepad
 2. Find "Section 4: AGRICULTURAL COMMUNITIES" section
 3. Modify directly
 
@@ -582,12 +592,12 @@ section [9.4.1 Employment datasets](941-employment-datasets) to learn more.
 
 #### 9.4.3 Modify Carousel in HTML
 
-**Note:** Perform operations if necessary ONLY
+**Note:** Pperform operations if necessary ONLY
 - `employment-statistics.php` contains `Start carousel` section that stores the following code (used to access the database and create HTML content):
   ```php
   <?php echo htmlspecialchars_decode($emp_agri);?>
   ```
-- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section '2) Agricultural communities', perform changes, save, ane reload the page
+- Open `../php/employee-statistics-content.php` file in notepad, read the comments, scroll down to section "2) Agricultural communities", perform changes, save, ane reload the page
   - Section '2) Agricultural communities' retrieves content directly from the database's table `emp_agri_comm` and converts it to HTML
 
 ## 10.0 Configure techniques.php page
@@ -710,13 +720,13 @@ To modify the suggestions content:
 
 ### 11.2.1 Modify content
 
-**Note:** Both headers, subheaders, content, image, and video can be modified through MySQL database:
+**Note:** both headers, subheaders, content, image, and video can be modified through MySQL database:
 - Option 1: directly modify `drought_landing` table in MySQL
 - Option 2: open `../db_backup/drought_landing.sql` in notepad, modify the content, and import it to MySQL
 
 ### 11.2.2 Modify content in HTML
 
-**Note**: Perform operations if necessary ONLY
+**Note**: perform operations if necessary ONLY
 1. Directly access `../php/drought-content.php` file in notepad
 2. Find `1) Intro` section
 3. Read comments and modify directly
@@ -725,16 +735,17 @@ To modify the suggestions content:
 
 #### 11.3.1 Add/modify/remove tableau map
 
-**Note:** It is not stored in the database - ***suggested improvement***
+**Note:** it is not stored in the database - ***suggested improvement***
 1. Open `drought.php` in notepad
 2. Find section `Graph containing drought regions`
 3. Replace content where necessary, save, and reload page  
-**Note:** Refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it from.
+
+**Note:** refer to section [6.7 Configure tableau graphs](#67-configure-tableau-graphs) to learn what each string related to tableau does and where to get it from.
 
 #### 11.3.2 Drought tableau datasets
 
-1. Accessed by going to `../dataset_and_tableau/datasets-drought/`:
-    - File 1: `drought-condition.xlsx` is the dataset that has been data wranggled and inserted into the tableau. It is not stored in the database.
+- Accessed by going to `../dataset_and_tableau/datasets-drought/`:
+    - File 1: `drought-condition.xlsx` is the dataset that has been data wrangled and inserted into the tableau. It is not stored in the database.
 
 #### 11.3.3 Drought tableau graphs
 
@@ -748,7 +759,7 @@ To modify the suggestions content:
 
 ### 11.4.1 Modify HEADER and SUBHEADER
 
-**Note:** It is not stored in database
+**Note:** these are not stored in the database
 1. Directly access `drought.php` file in notepad
 2. Find "Section 3: What the government does" section
 3. Modify directly
@@ -760,7 +771,7 @@ To modify the suggestions content:
 
 ### 11.4.3 Modify flip cards content in HTML
 
-**Note**: Perform operations if necessary ONLY
+**Note**: perform operations if necessary ONLY
 1. The following line must be within the `Flip cards` section of the `drought.php` webpage (it retrieves database content from a `drought-content.php` file)
    ```php
    <?php echo htmlspecialchars_decode($governmentInfo);?>
@@ -770,7 +781,7 @@ To modify the suggestions content:
 
 ### 11.4.4 Modify URL of source
 
-**Note:** It is not stored in database
+**Note:** it is not stored in the database
 1. Directly access `drought.php` file in notepad
 2. Find "Flip cards get inserted here" section
    ```html
@@ -782,7 +793,7 @@ To modify the suggestions content:
 
 ### 11.5.1 HEADER and SUBHEADER
 
-**Note:** It is not stored in database
+**Note:** It is not stored in the database
 1. Directly access `drought.php` file in notepad
 2. Find "Section 4: PREPARE YOURSELF FOR DROUGHT" section
 3. Modify directly
@@ -818,7 +829,7 @@ To modify the suggestions content:
    ```php
    <?php echo htmlspecialchars_decode($spinner_full);?>
    ```
-2. Open `../php/invasive-species-content.php` file in notepad
+2. Open `../php/invasive-species-content.php` in notepad
 3. Read comments, find `1) Spinner` section, perform changes directly, save, and reload the page
 
 #### 12.1.3 Javascript spinner animated-spinner.js
@@ -832,7 +843,7 @@ To modify the suggestions content:
 
 ### 12.2.1 Modify content
 
-**Note:** Both headers, subheaders, content, image, and video can be modified through MySQL database:
+**Note:** Both headers, subheaders, and content can be modified through MySQL database:
 - Option 1: directly modify `species_landing` table in MySQL
 - Option 2: open `../db_backup/species_landing.sql` in notepad, modify the content, and import it to MySQL
 
@@ -843,7 +854,7 @@ To modify the suggestions content:
    ```php
    <?php echo htmlspecialchars_decode($species_intro);?>
    ```
-2. Open `../php/invasive-species-content.php` file in notepad
+2. Open `../php/invasive-species-content.php` in notepad
 3. Read comments, find `2) Intro` section, perform changes directly, save, and reload the page
 
 ### 12.3 Modify INVASIVE SPECIES & LOCATIONS (GALLERY)
@@ -852,7 +863,7 @@ To modify the suggestions content:
 
 - On load:
   1) `.ajax()` function (located at the bottom of `invasive-species.php` file) that accesses the server's `../php/invasive-species-gallery.php` file to
-     retrieve the gallery content in HTML format from the database's table `species_types` and push it to `id` `#animals-content` (located in the `Gallery` section
+     retrieve the gallery content in HTML format from the database's table `species_types` and push it to the content with `id` `#animals-content` (located in the `Gallery` section
 	 of the `invasive-species.php`:
 	 ```html
      <div class="col-md-12 sort-species-item filter-animals">
@@ -861,9 +872,9 @@ To modify the suggestions content:
 	    </div>
      </div>
      ```
-     - class `sort-species-item` is related to the `sort-species-flters` in step 3, which represents that everything within this class is treated as a sortable item.
-  2) It also resizes the gallery items to make the height similar.
-  3) It activates the carousel, sorting/filtering animations.
+     - class `sort-species-item` represents that everything within this class is treated as a sortable item.
+  2) `.ajax()` resizes the gallery items to make the height similar.
+  3) `.ajax()` activates the carousel, sorting/filtering animations.
   
 - On "Show affected areas" click;
   1) These buttons contain `.location-button` class, which is triggered upon users click.
@@ -876,7 +887,7 @@ To modify the suggestions content:
   4) Content retrieved in step 3 is used to generate the graph, push it inside the `#tableau-chart`.
   5) Then this function generates the license container that goes below the graph.
   
-**Note:** The following code of the "Sort" section is responsible for sorting the galleries:
+**Note:** the following code of the "Sort" section is responsible for sorting the galleries:
    ```html
    <li data-filter=".filter-plants" class="filter-active">Plants</li>
    ```
@@ -893,7 +904,7 @@ To modify the suggestions content:
 
 #### 12.3.3 HEADER and SUBHEADER
 
-**Note:** It is not stored in database
+**Note:** these are not stored in the database
 1. Directly access `invasive-species.php` file in notepad
 2. Find "3: INVASIVE SPECIES & LOCATIONS" section
 3. Modify directly
@@ -905,7 +916,7 @@ To modify the suggestions content:
 
 #### 12.3.5 Gallery cards in HTML
 
-**Note:** Perform operations if necessary ONLY
+**Note:** perform operations if necessary ONLY
 - It is retrieved by the system using `.ajax()` from the `../php/invasive-species-gallery.php` file and `species_type` database table. Refer to [12.3.1 How does it work?](1231-how-does-it-work) to learn more.
 
 Instructions:
@@ -916,17 +927,17 @@ Instructions:
 
 #### 12.4.1 HEADER, SUBHEADER, and HEADERS of Plants & Animal cards
 
-**Note:** These are not stored in database
+**Note:** these are not stored in the database
 1. Directly access `invasive-species.php` file in notepad
 2. Find "4: PREVENTATIVE MEASURES" section
 3. Modify directly
 
-#### 12.4.2 Plants & Animal card content
+#### 12.4.2 Plants & Animal cards content
 
 - Option 1: directly modify `species_measures` table in MySQL
 - Option 2: open `../db_backup/species_measures.sql` in notepad, modify the content, and import it to MySQL
 
-#### 12.4.3 Plants & Animal card in HTML
+#### 12.4.3 Plants & Animal cards in HTML
 
 **Note:** Perform operations if necessary ONLY
 1. The following lines must be within the `Invasive species impact grasslands` section of the `invasive-species.php` webpage (it retrieves database content from a `../php/invasive-species-content.php` file)
@@ -937,7 +948,7 @@ Instructions:
    ```php
    <?php echo htmlspecialchars_decode($animal_measures);?>
    ```
-2. Open `../php/invasive-species-content.php` file in notepad
+2. Open `../php/invasive-species-content.php` in notepad
 3. Read comments, find `3) Preventative Masures` section, perform changes directly, save, and reload the page
 
 ### 12.5 Invasive species tableau graphs and datasets
@@ -945,23 +956,23 @@ Instructions:
 #### 12.5.1 Invasive species datasets 
 
 1. Accessed by going to `../dataset_and_tableau/datasets-invasive-species/`:
-  - File 1: `Athel Pine.xlsx` is the data wrangled file that contains the locations of Athel Pine plant.
-  - File 2: `Buffalos.xlsx` is the data wrangled file that contains the locations of Buffalo animals.
-  - File 3: `Buffel Grass.xlsx` is the data wrangled file that contains the locations of Buffel Grass plant.
-  - File 4: `Camels.xlsx` is the data wrangled file that contains the locations of Camels animals.
-  - File 5: `Cattle.xlsx` is the data wrangled file that contains the locations of Cattle animals.
-  - File 6: `Donkeys.xlsx` is the data wrangled file that contains the locations of Donkey animals.
-  - File 7: `Goat.xlsx` is the data wrangled file that contains the locations of Goat animals.
-  - File 8: `Horses.xlsx` is the data wrangled file that contains the locations of Horse animals.
-  - File 9: `Kangaroos.xlsx` is the data wrangled file that contains the locations of Kangaroo animals.
-  - File 10: `Mesquite.xlsx` is the data wrangled file that contains the locations of Mesquite plants.
-  - File 11: `Mission Grass.xlsx` is the data wrangled file that contains the locations of Mission Grass plants.
-  - File 12: `Pigs.xlsx` is the data wrangled file that contains the locations of Pig animals.
-  - File 13: `Prickly_Acacia.xlsx` is the data wrangled file that contains the locations of Prickly Acacia plants.
-  - File 14: `Rabbit.xlsx` is the data wrangled file that contains the locations of Mission Rabbit animals.
-  - File 15: `Reed Sweetgrass.xlsx` is the data wrangled file that contains the locations of Reed Sweetgrass plants.
+    - File 1: `Athel Pine.xlsx` is the data wrangled file that contains the locations of Athel Pine plant.
+    - File 2: `Buffalos.xlsx` is the data wrangled file that contains the locations of Buffalo animals.
+    - File 3: `Buffel Grass.xlsx` is the data wrangled file that contains the locations of Buffel Grass plant.
+    - File 4: `Camels.xlsx` is the data wrangled file that contains the locations of Camels animals.
+    - File 5: `Cattle.xlsx` is the data wrangled file that contains the locations of Cattle animals.
+    - File 6: `Donkeys.xlsx` is the data wrangled file that contains the locations of Donkey animals.
+    - File 7: `Goat.xlsx` is the data wrangled file that contains the locations of Goat animals.
+    - File 8: `Horses.xlsx` is the data wrangled file that contains the locations of Horse animals.
+    - File 9: `Kangaroos.xlsx` is the data wrangled file that contains the locations of Kangaroo animals.
+    - File 10: `Mesquite.xlsx` is the data wrangled file that contains the locations of Mesquite plants.
+    - File 11: `Mission Grass.xlsx` is the data wrangled file that contains the locations of Mission Grass plants.
+    - File 12: `Pigs.xlsx` is the data wrangled file that contains the locations of Pig animals.
+    - File 13: `Prickly_Acacia.xlsx` is the data wrangled file that contains the locations of Prickly Acacia plants.
+    - File 14: `Rabbit.xlsx` is the data wrangled file that contains the locations of Mission Rabbit animals.
+    - File 15: `Reed Sweetgrass.xlsx` is the data wrangled file that contains the locations of Reed Sweetgrass plants.
   
-**Note:** above datasets are not stored in database but directly forwarded to tableau API map.
+**Note:** above datasets are not stored in the database but directly forwarded to tableau API map.
 
 #### 12.5.2 Invasive species tableau graphs
 
