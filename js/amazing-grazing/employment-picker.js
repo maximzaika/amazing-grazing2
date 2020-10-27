@@ -296,8 +296,9 @@ $(function(){
 					}
 					
 					owl.owlCarousel({
-						center: true,
-						loop: true,
+						center: false,
+						loop: false,
+						rewind: true,
 						items:1,
 						margin: 30,
 						stagePadding: 0,
@@ -307,16 +308,20 @@ $(function(){
 						navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 						responsive:{
 							0:{
-								items: 1
+								items: 1,
+								startPosition: 1
 							},
 							600:{
-								items: 2
+								items: 2,
+								startPosition: 0
 							},
 							1000:{
-								items: 2
+								items: 2,
+								startPosition: 0
 							},
 							1600:{
-								items: 2
+								items: 3,
+								startPosition: 0
 							}
 						}
 					});
