@@ -72,7 +72,6 @@ $(function() {
 				   response: grecaptcha.getResponse(),
 				   page: page_received},
 			success: function(data) {
-				console.log(data.test);
 				if (data.feedback == "Unsuccessful update") {
 					var x = document.getElementById("feedback-not-sent");
 					x.className = "show"; // trigger notification update
