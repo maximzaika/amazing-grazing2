@@ -8,6 +8,7 @@
 
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
+**Repository:** [Github](https://github.com/maximzaika/amazing-grazing2)
 **Audience:** Australian English speaking farmers age 30-45  
 
 ## Table of Contents
@@ -122,7 +123,11 @@
   * [12.5 Invasive species tableau graphs and datasets](#125-invasive-species-tableau-graphs-and-datasets)
     + [12.5.1 Invasive species datasets](#1251-invasive-species-datasets)
 	+ [12.5.2 Invasive species tableau graphs](#1252-invasive-species-tableau-graphs)
-
+- [13.0 Configure news.php page](#130-configure-newsphp-page)
+  * [13.1 How does it work?](#131-how-does-it-work)
+  * [13.2 Modify topics](#132-modify-topics)
+  * [13.3 Modify countries/regions](#133-modify-countriesregions)
+  
 ## 1.0 Team members
 - **Maxim Zaika**
   - *Education: Bachelors in Computer Science & Masters in Business Information Systems*
@@ -189,6 +194,7 @@ On top of that, users can download brochures of the preventative measures for th
 
 ## 5.0 Set up website
 
+**Note**: find additional documentation like ER Diagram, System Architecture, etc. in the `../readme/` folder.
 1. [Locally] Configure [XAMPP Control Panel v3.2.4](https://www.apachefriends.org/index.html) (or any other alternative):
     - Apache & MySQL must be configured within the XAMPP
 2. [Externally] Configure [Amazon Web Server EC2](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23compute&trk=ps_a134p000003yHreAAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_MY&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=MY&sc_geo=APAC&sc_outcome=acq&sc_detail=aws%20ec2&sc_content=EC2_e&sc_segment=444351555594&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|Product|MY|EN|Text&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xY8mxb7H2tB-ejFW8v85-wPynxciO11EWIbKO0-_aFFzP_uLUQgnD4aAtONEALw_wcB:G:s&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2)
@@ -1041,7 +1047,7 @@ Instructions:
 - Option 1: directly modify `news_topic_content` table in MySQL
 - Option 2: open `../db_backup/news_topic_content.sql` in notepad, modify the content, and import it to MySQL
 
-## 13.2 Modify countries/regions
+## 13.3 Modify countries/regions
 
 - Option 1: directly modify `news_region_content` table in MySQL
 - Option 2: open `../db_backup/news_region_content.sql` in notepad, modify the content, and import it to MySQL  
