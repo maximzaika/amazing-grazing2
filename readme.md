@@ -8,7 +8,7 @@
 
 **Website:** [Amazing Grazing](https://amazing-grazing.ml/)  
 **Product video:** [Product Video @ Youtube](https://www.youtube.com/watch?v=G00baoJcJ38&feature=emb_title)  
-**Repository:** [Github](https://github.com/maximzaika/amazing-grazing2)
+**Repository:** [Github](https://github.com/maximzaika/amazing-grazing2)  
 **Audience:** Australian English speaking farmers age 30-45  
 
 ## Table of Contents
@@ -1017,30 +1017,32 @@ Instructions:
 	   ```php
 	   <?php echo htmlspecialchars_decode(generateNewsNav($con, $startDate));?>
 	   ```
-     - Once it is connected, the topics and regions of are retrieved from the following tables: `news_region_content` and `news_topic_content`. This content is used to 
+     - Once it is connected, the topics and regions are retrieved from the following tables: `news_region_content` and `news_topic_content`. This content is used to 
        generate the HTML code, which is sent to the client to display the navigation bar. Read comments in `../php/news_navigation.php` to learn more.
   2. Client connects to another server's file `../php/gnewsAPI.php` to do the following actions:
      - The following php line must be located inside the `All The news are displayed here` section of the `news.php`:
 	   ```php
 	   <?php echo htmlspecialchars_decode(newsGenerator($newsData, $totalNews));?>
 	   ```
-	 1. Retrieve the token from the server's table `g_news_api`, use it, and increase the counter of `g_news_count` row in the table.
-	 2. Retrieves user's current date, and reduces it by 3, to ensure that the news are 3 days old.
-	 3. Connects to the GnewsAPI using its dedicated URL, which retrives the news in JSON format.
-	 4. Then it uses `newsGenerator($data, $total)` function to generate the news in HTML format, which is pushed to the client's side to display the news.
-	    Refer comments in `../php/gnewsAPI.php` to learn more.
+	   1. Retrieves the token from the server's table `g_news_api`, use it, and increases the counter of `g_news_count` row in the table.
+	   2. Retrieves user's current date and reduces it by 3 to ensure that the news are 3 days old.
+	   3. Connects to the GnewsAPI using its dedicated URL, which retrives the news in JSON format.
+	   4. Then it uses `newsGenerator($data, $total)` function to generate the news in HTML format, which is pushed to the client's side to display the news.
+	      Refer comments in `../php/gnewsAPI.php` to learn more.
 - On topic, country, or date selection:
-  1. The javascript `../js/amazing-graizing/news-picker.js` is listening for a click on any of the drop-down items using `.updateNewsJS` class
+  1. The javascript `../js/amazing-graizing/news-picker.js` is listening for a click of any of the drop-down items using `.updateNewsJS` class
   2. Then it retrieves the `id` of the clicked class, which allows it to catch what option user has selected
   3. It retrieves all of the user's selections, converts the long names of the states to short, like "Australia" is converted to "au"
   4. It clears the current news section that has `id` `#update-news`
   5. Uses `.ajax()` function to connect to the server's file `../php/gnewsAPI_POST.php` (which is similar to `gnewsAPI.php` but with slight modifications)
   6. Then, `../php/gnewsAPI_POST.php`:
-     1. Retrieve the token from the server's table `g_news_api`, use it, and increase the counter of `g_news_count` row in the table.
-	 2. Retrieves user's current date, and reduces it by 3, to ensure that the news are 3 days old.
+     1. Retrieves the token from the server's table `g_news_api`, use it, and increases the counter of `g_news_count` row in the table.
+	 2. Retrieves user's current date and reduces it by 3 to ensure that the news are 3 days old.
 	 3. Connects to the GnewsAPI using its dedicated URL, which retrives the news in JSON format.
-	 4. Then it uses `($data, $total, $sort)` function to generate the news based on the sort user has selected in HTML format. This HTML code is pushed back to `.ajax()` function, which sends 
-	    this HTML code to the `id` called `update-news` 250 miliseconds after. Refer comments in `./php/gnewsAPI_POST.php` to learn more.
+	 4. Then it uses `newsGenerator($data, $total, $sort)` function to generate the news based on the sort user has selected in HTML format. This HTML code is pushed back to `.ajax()` function, which sends 
+	    this HTML code to the `id` called `update-news` 250 milliseconds after. Refer to comments in `./php/gnewsAPI_POST.php` to learn more.  
+		
+**Note:** The system can be improved by automatically resetting the GnewsAPI tokens when reached the limit.
 
 ## 13.2 Modify topics
 
@@ -1056,8 +1058,8 @@ Then, open `../js/amazing-graizing/news-picker.js` in notepad, find `Country sel
 ```javascript
 if (regionName == "Country_Long_Name") { regionName = "Country_Short_name" }
 ```
-- where `Countr_Long_Name` is the same name as inside the drop down menu or `news_reg_topic` column on `news_region_content` table.
-- where `Country_Short_name` is the short name for the country, for example if the long name is `Australia`, then the short name is `au`.
+- Where `Country_Long_Name` is the same name as inside the drop down menu or `news_reg_topic` column in `news_region_content` table.
+- Where `Country_Short_name` is the short name for the country, for example if the long name is `Australia`, then the short name is `au`.
 
 **Note:** Refer to comments in `../db_backup/news_region_content.sql` to learn more.
 
