@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 27, 2020 at 08:04 AM
+-- Generation Time: Oct 28, 2020 at 10:37 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -43,7 +43,7 @@ CREATE TABLE `drought_government` (
 INSERT INTO `drought_government` (`govern_id`, `govern_ico`, `govern_title`, `govern_fron_descr`, `govern_back_descr`, `govern_url`) VALUES
 (1, 'flaticon-mortgage-loan', 'Drought Loans', 'All eligible farm owners can get a loan', 'The government can provide up to $2 million in loans at any time during drought seasons. Refer to the Australian government website to learn more.', 'https://www.ric.gov.au/drought'),
 (2, 'flaticon-eco-friendly', 'Community Support', 'All eligible farm owners can get support from charities', 'Support can be provided after evaluating the severity, economic impact, and the damage was done. Refer to the Australian government website to learn more.', 'https://www.regional.gov.au/regional/programs/drought-communities.aspx'),
-(3, 'flaticon-mental-health', 'Health Support', 'The overnment\'e provided to get immediate support. Drought sis priority is the wellbeing of Australian farmers', 'Hotlines are provided to get immediate support. The drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.', 'https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'),
+(3, 'flaticon-mental-health', 'Health Support', 'The government aims to provide immediate support.  Their priority is the wellbeing of Australian farmers', 'Hotlines are provided to get immediate support. The drought situation is stressful. Do not keep the thoughts to yourself, press the button below to get in touch.', 'https://www.agriculture.gov.au/ag-farm-food/drought/assistance/social-community-support-services'),
 (4, 'flaticon-water-tank', 'Water Infrastructure', 'The government provides rebates for water infrastructure utilised by the farms', 'Up to an additional $50 million of funding is provided to farmers to support the expansion. Visit the Australian government website now, to learn more.', 'https://www.agriculture.gov.au/water/national/on-farm-infrastructure-rebate');
 
 -- --------------------------------------------------------
@@ -416,7 +416,7 @@ CREATE TABLE `g_news_api` (
 --
 
 INSERT INTO `g_news_api` (`g_news_id`, `g_news_count`, `g_news_token`) VALUES
-(1, 0, '2f43dc9d754f3008f68a7f50b670c208'),
+(1, 26, '2f43dc9d754f3008f68a7f50b670c208'),
 (2, 0, 'c29b556f2f1ddd7ada7f2d7b6834b2c7'),
 (3, 0, 'c3fae1827597a016ef41d4fb9c4f95fe'),
 (4, 0, '9e0677170130c646c24d9d907974166c'),
@@ -1405,7 +1405,9 @@ INSERT INTO `user_feedback` (`feedback_id`, `feedback_page`, `feedback_date`, `f
 (28, 'techniques.php', '25-10-2020', '01:15:17pm', 3, 'test'),
 (29, 'news.php', '25-10-2020', '01:18:09pm', 5, 'test test'),
 (30, 'index.php', '25-10-2020', '01:25:59pm', 5, 'tettetetet'),
-(31, 'index.php', '26-10-2020', '06:48:44pm', 5, '\'<>slq');
+(31, 'index.php', '26-10-2020', '06:48:44pm', 5, '\'<>slq'),
+(32, 'livestock-statistics.php', '27-10-2020', '08:18:57am', 5, 'test sending <'),
+(33, 'index.php', '27-10-2020', '08:38:55am', 5, 'test \'');
 
 --
 -- Indexes for dumped tables
@@ -1857,7 +1859,7 @@ ALTER TABLE `technique_selected`
 -- AUTO_INCREMENT for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
