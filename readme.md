@@ -195,9 +195,9 @@ On top of that, users can download brochures of the preventative measures for th
 ## 5.0 Set up website
 
 **Note**: find additional documentation like ER Diagram, System Architecture, etc. in the `../readme/` folder.
-1. [Locally] Configure [XAMPP Control Panel v3.2.4](https://www.apachefriends.org/index.html) (or any other alternative):
+1. *[Locally]* Configure [XAMPP Control Panel v3.2.4](https://www.apachefriends.org/index.html) (or any other alternative):
     - Apache & MySQL must be configured within the XAMPP
-2. [Externally] Configure [Amazon Web Server EC2](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23compute&trk=ps_a134p000003yHreAAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_MY&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=MY&sc_geo=APAC&sc_outcome=acq&sc_detail=aws%20ec2&sc_content=EC2_e&sc_segment=444351555594&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|Product|MY|EN|Text&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xY8mxb7H2tB-ejFW8v85-wPynxciO11EWIbKO0-_aFFzP_uLUQgnD4aAtONEALw_wcB:G:s&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2)
+2. *[Externally]* Configure [Amazon Web Server EC2](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23compute&trk=ps_a134p000003yHreAAE&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_MY&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=MY&sc_geo=APAC&sc_outcome=acq&sc_detail=aws%20ec2&sc_content=EC2_e&sc_segment=444351555594&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|Product|MY|EN|Text&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2&ef_id=Cj0KCQjwxNT8BRD9ARIsAJ8S5xY8mxb7H2tB-ejFW8v85-wPynxciO11EWIbKO0-_aFFzP_uLUQgnD4aAtONEALw_wcB:G:s&s_kwcid=AL!4422!3!444351555594!e!!g!!aws%20ec2)
 (or any other alternative) with LAMPP (or any other alternative):
     - Apache & MySQL must be configured within the LAMPP
 3. Website files must be stored in any of the methods mentioned above:
@@ -222,7 +222,7 @@ On top of that, users can download brochures of the preventative measures for th
 	  ```
       - Modify `DB_SERVER` (server name), `DB_USERNAME` (username to access the database), `DB_PASSWORD` (password to access the database), and `DB_NAME` (table name)
     - Go to `../db_backup/full_db_backup`. Import `amazing-grazing.sql` file to MySQL database
-5. [Website can run without this step, but the website becomes vulnerable] When the server is fully configured, add `.htaccess` file to main directory **(if it is not there yet)**:
+5. *[Website can run without this step, but it becomes vulnerable]* When the server is fully configured, add `.htaccess` file to main directory **(if it is not there yet)**:
 	```apacheconf
 	# Prevent access to Directory Listing
 	Options -Indexes
