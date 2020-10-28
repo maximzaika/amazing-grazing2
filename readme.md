@@ -997,13 +997,13 @@ Instructions:
   retrieve required content, and update `species_types` table. Refer to [6.7 Configure tableau graphs](#67-configure-tableau-graphs) 
   section to learn more.
 
-## 12.0 Configure news.php page
+## 13.0 Configure news.php page
 
 **Note:** News are generated using GnewsAPI. News are not stored in the database. Tokens that are used to connect to google servers are stored in the database. 
           There are 7 tokens in database and each token allows 100 transactions daily. **It is important to reset the counter every day to 0 to let users use them.**
 		  Drop down content of the topics and region is also stored in the database. Refer to [12.1 How does it work?](121-how-does-it-work) section to learn more.
 		  
-## 12.1 How does it work?
+## 13.1 How does it work?
 
 - On load:
   1. Client connects to the server's file `../php/news_navigation.php` to generate the drop down buttons.
@@ -1036,12 +1036,12 @@ Instructions:
 	 4. Then it uses `($data, $total, $sort)` function to generate the news based on the sort user has selected in HTML format. This HTML code is pushed back to `.ajax()` function, which sends 
 	    this HTML code to the `id` called `update-news` 250 miliseconds after. Refer comments in `./php/gnewsAPI_POST.php` to learn more.
 
-## 12.2 Modify topics
+## 13.2 Modify topics
 
 - Option 1: directly modify `news_topic_content` table in MySQL
 - Option 2: open `../db_backup/news_topic_content.sql` in notepad, modify the content, and import it to MySQL
 
-## 12.2 Modify countries/regions
+## 13.2 Modify countries/regions
 
 - Option 1: directly modify `news_region_content` table in MySQL
 - Option 2: open `../db_backup/news_region_content.sql` in notepad, modify the content, and import it to MySQL  
@@ -1055,7 +1055,7 @@ if (regionName == "Country_Long_Name") { regionName = "Country_Short_name" }
 
 **Note:** Refer to comments in `../db_backup/news_region_content.sql` to learn more.
 
-## 13.0 Licence / Copyright
+## 14.0 Licence / Copyright
 
 - HTML5/Bootstrap 4 template is provided by [Colorlib](https://colorlib.com/wp/templates/)
 - Icons are retrieved from the [Flaticon](https://www.flaticon.com/)
