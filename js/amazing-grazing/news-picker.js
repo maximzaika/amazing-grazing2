@@ -70,14 +70,15 @@ $(function(){
 			var regionName = document.querySelector('#drop-region').textContent;
 		}
 		
+		/* Country selection */
 		if (regionName == "Australia") { regionName = "au" }
 		if (regionName == "Canada") { regionName = "ca" }
 		if (regionName == "United Kingdom") { regionName = "uk" }
 		if (regionName == "New Zealand") { regionName = "nz" }
 		if (regionName == "United States") { regionName = "us" }
-			
+		
 		$("#update-news").empty(); /*reset the news div*/
-
+		
 		$.ajax({
 			url: 'php/gnewsAPI_POST.php',
 			type: "POST",
@@ -86,7 +87,9 @@ $(function(){
 			       receivedNewsRegion: regionName,
 				   receivedNewsStart: startDate},
 			success: function (data) {
+				
 				setTimeout(function() {
+					
 					var newsDiv = document.getElementById('update-news');
 					newsDiv.innerHTML = data.newsHTML;
 				}, 250);
@@ -98,5 +101,4 @@ $(function(){
 	};
 	
 	$(".updateNewsJS").click(updateNewsFunc);
-	$("#enter-start-date").change(updateNewsFunc);
 });
