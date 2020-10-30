@@ -20,7 +20,7 @@
   * [4.1 Iteration 1](#41-iteration-1)
   * [4.2 Iteration 2](#42-iteration-2)
   * [4.3 Iteration 3](#43-iteration-3)
-- [5.0 Set up website](#50-set-up-website)
+- [5.0 Setup website](#50-setup-website)
 - [6.0 Configure identical parts of every page](#60-configure-identical-parts-of-every-page)
   * [6.1 Configure the navigation bar](#61-configure-the-navigation-bar)
     + [6.1.1 Edit content](#611-edit-content)
@@ -192,7 +192,7 @@ Additionally, farmers can learn preventative measures against them and what stat
 retrieved from [WeedsAustralia](https://weeds.org.au/) and [Australian Government Department of Agriculture, Water and the Environment](https://www.environment.gov.au/biodiversity/invasive-species/feral-animals-australia). 
 On top of that, users can download brochures of the preventative measures for their convenience.
 
-## 5.0 Set up website
+## 5.0 Setup website
 
 **Note**: find additional documentation like ER Diagram, System Architecture, etc. in the `../readme/` folder.
 1. *[Locally]* Configure [XAMPP Control Panel v3.2.4](https://www.apachefriends.org/index.html) (or any other alternative):
