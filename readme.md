@@ -17,9 +17,9 @@
 - [2.0 Programming languages](#20-programming-languages)
 - [3.0 Project description](#30-project-description)
 - [4.0 Project iterations](#40-project-iterations)
-  * [4.1 Iteration 1](#41-iteration-1)
-  * [4.2 Iteration 2](#42-iteration-2)
-  * [4.3 Iteration 3](#43-iteration-3)
+  * [4.1 Iteration 1 & Open Data](#41-iteration-1--open-data)
+  * [4.2 Iteration 2 & Open Data](#42-iteration-2--open-data)
+  * [4.3 Iteration 3 & Open Data](#43-iteration-3--open-data)
 - [5.0 Setup website](#50-setup-website)
 - [6.0 Configure identical parts of every page](#60-configure-identical-parts-of-every-page)
   * [6.1 Configure the navigation bar](#61-configure-the-navigation-bar)
@@ -127,6 +127,7 @@
   * [13.1 How does it work?](#131-how-does-it-work)
   * [13.2 Modify topics](#132-modify-topics)
   * [13.3 Modify countries/regions](#133-modify-countriesregions)
+- [14.0 Licence / Copyright](#140-licence--copyright)
   
 ## 1.0 Team members
 - **Maxim Zaika**
@@ -160,14 +161,15 @@ of 3 iterations in 3 months.
 	
 ## 4.0 Project iterations
 
-### 4.1 [Iteration 1](https://amazing-grazing.ml/iteration1)
+### 4.1 [Iteration 1 & Open Data](https://amazing-grazing.ml/iteration1)
 
 * Latest news regarding grazing, wildfires, drought, and livestock. These news’ are the latest possible and can be 
-filtered based on the country and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3.
+filtered based on the country and sorted by date. Few bugs are present here, which are fixed later on in iterations 2 and 3. To 
+implement this feature [GnewsAPI](https://gnews.io/) has been used.
 * Grazing techniques that need to be avoided/utilized by the farmers. Animated images, developed by us, are provided with 
 the quick bullet-point information. Users can read additional information regarding these techniques and can download brochures.
 
-### 4.2 [Iteration 2](https://amazing-grazing.ml/iteration2)
+### 4.2 [Iteration 2 & Open Data](https://amazing-grazing.ml/iteration2)
 
 * Improvements: bug fixes of iteration 1. Iteration 1 content has no visible change due to not keeping track of this change.
 * Livestock statistics page contains the facts regarding the current livestock situation in Australia based on the dataset retrieved 
@@ -178,10 +180,10 @@ Additionally, the user can view the graph.
 * Employment statistics show the current employment situation of farmers responsible for dairy or beef cattle, or sheep livestock. Employment numbers are shown by state. 
 The highest qualification and age groups are provided. The datasets were retrieved from: [Australian Government Joboutlook 1](https://joboutlook.gov.au/occupations/dairy-cattle-farmers?occupationCode=121313),
 [Australian Government Joboutlook 2](https://joboutlook.gov.au/occupations/beef-cattle-farmers?occupationCode=121312), and 
-[Australian Government Joboutlook 3](https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322). Additionally, 
+[Australian Government Joboutlook 3](https://joboutlook.gov.au/occupations/sheep-farmers?occupationCode=121322). These datasets are represented using [Tableau API](https://www.tableau.com/). Additionally, 
 analysis & URLs to various agricultural communities, where farmers can communicate with other farmers, are provided.
 
-### 4.3 [Iteration 3](https://amazing-grazing.ml/iteration3)
+### 4.3 [Iteration 3 & Open Data](https://amazing-grazing.ml/iteration3)
 
 * Lots of improvements to iterations 1 and 2. Various bug fixes and UX improvements. Mobile version is completely user friendly now on both mobile and desktop devices.
 * The drought page contains locations of drought based on the rainfall (mm). Users can learn what seasons are usually affected by drought. The dataset was retrieved from 
@@ -190,7 +192,7 @@ dedicated websites), and what they can do to protect themselves.
 * The invasive species page contains various species (plants & animals). Farmers can know what impact do these species have on grassland and their livestock. 
 Additionally, farmers can learn preventative measures against them and what states in Australia are infested by these species. Plant and animal datasets were 
 retrieved from [WeedsAustralia](https://weeds.org.au/) and [Australian Government Department of Agriculture, Water and the Environment](https://www.environment.gov.au/biodiversity/invasive-species/feral-animals-australia). 
-On top of that, users can download brochures of the preventative measures for their convenience.
+These datasets are represented using [Tableau API](https://www.tableau.com/). On top of that, users can download brochures of the preventative measures for their convenience.
 
 ## 5.0 Setup website
 
