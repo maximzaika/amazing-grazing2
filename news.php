@@ -1,10 +1,27 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the news page by typing news.php in the browser
+-->
 
 <?php 
+	/* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+		
     /* Server side files */
-	require_once "server_config.php";
-	require_once "php/gnewsAPI.php";
-	require_once "php/navigation.php";
-	require_once "php/news_navigation.php";
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/gnewsAPI.php"; // retrieves the content from gnews API
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/news_navigation.php"; // Generates the News Navigation located above the news
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 
@@ -13,6 +30,7 @@
 	<head>
 		<title>Amazing Grazing - News</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 		<!-- Browser tab logo -->
@@ -101,11 +119,11 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							<h5 class="text-justify" style="color: rgba(255, 255, 255, 0.7);">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
 													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
 													These impacts cannot be prevented but can be controlled.
-													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</h5>
 						</div>
 					</div>
 			  
@@ -166,8 +184,18 @@
 	<!-- Added in Iteration 3 -->
 	<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 	<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
-	<script type='text/javascript'> <!-- Changes the icon for the news filter in mobile version -->					
-		$("#show-filter").click(function() { // renames the filter button upon click
+	<script type='text/javascript'>			
+		/* 
+			Description: renames the filter button upon clicking on the filter (mobile version only)
+			Pre-condition:
+			  - must be mobile version
+			  - user needs to click on the filter button with id 'show-filter'
+			Post-condition
+			  - rename button to 'Open filter' or 'Close filter'
+			Return:
+			  - none, but renames the button
+		*/
+		$("#show-filter").click(function() { 
 			var max_btn = '<i class="fa fa-plus" aria-hidden="true"></i> Open filter';
 			var min_btn = '<i class="fa fa-minus" aria-hidden="true"></i> Close filter';
 			

@@ -1,12 +1,27 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the main page by typing index.php in the browser
+-->
 
 <?php 
-    /* Server side files */
-	require_once "server_config.php";
-	//require_once "php/gnewsAPI.php";
-	require_once "php/navigation.php";
-	require_once "php/home_offerings.php";
-	//require_once "php/news_navigation.php";
-	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
+    /* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
+	/* Server side files */
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/home_offerings.php"; // Generates 'SERVICES' section of the website
+	require_once "php/generate-feedback-tab.php"; // Generates the 'Feedback' tab
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +29,7 @@
 	<head>
 		<title>Amazing Grazing - Protecting Australian Grasslands</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -50,8 +66,8 @@
 				<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h2 class="subheading"><i>Welcome to Amazing Grazing</i></h2>
-						<h1>Make a difference in protecting Australian grasslands</h1>
-						<p class="mb-4">By effective grazing and preserving your livestock</p>
+						<h1>Farmers make a difference in protecting Australian grasslands</h1>
+						<h5 style="color: white; font-weight: bold;"><i>By effective grazing, keeping track of drought, and removing invasive species</i></h5> <!--<p class="mb-4"></p>-->
 						<p><a href="#offerings" class="btn btn-primary mr-md-4 py-2 px-4">Learn more <span class="ion-ios-arrow-forward"></span></a></p>
 					</div>
 				</div>
@@ -63,7 +79,6 @@
 		<?php echo htmlspecialchars_decode(feedbackRead(basename(__FILE__, '.php')));?>
 		<!-- End Feedback Section -->
 
-		
 		<!-- Section 2: SERVICES -->
 		<section id="offerings" class="ftco-section bg-light" style="padding-bottom: 4em; padding-top: 4em;"">
 			<div class="container">
@@ -77,7 +92,9 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="carousel-services owl-carousel ftco-owl">
+							    <!-- SERVICES CARDS SECTION -->
 								<?php echo htmlspecialchars_decode(generateOfferings2($con));?>
+								<!-- /SERVICES CARDS SECTION -->
 							</div>
 						</div>
 					</div>
@@ -93,11 +110,11 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							<h5 class="text-justify" style="color: rgba(255, 255, 255, 0.7);">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
 													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
 													These impacts cannot be prevented but can be controlled.
-													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</h5>
 						</div>
 					</div>
 			  
@@ -149,7 +166,7 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
 		<script src="js/main.js"></script>
-	  
+		
 		<!-- Added in Iteration 2 -->
 		<script src="js/amazing-grazing/main.js"></script> <!-- Floating back to top button, scroll to anchor -->
 		
@@ -157,8 +174,29 @@
 		<script src="js/amazing-grazing/feedback.js"></script> <!-- used for feedback section -->
 		<script src='https://www.google.com/recaptcha/api.js'></script> <!-- used for feedback section -->
 		<script type="text/javascript">
+			/* 
+				Description: executes the carousel and resizes SERVICES cards to the same height
+				Pre-condition:
+				  - the page is fully loaded
+				  - all the cards must have class 'p_' to identify 
+				Post-condition
+				  - enable .owlCarousel() execution
+				  - Resize the cards with class 'p_' by looping through all of them
+				    and getting the maximum height of all the cards
+				Return:
+				  - none, but carousel needs to be functional, and cards must be the same height
+			*/
 			$(document).ready(function(){		
-				//----- Start: Initiate carousel -----
+				/* 
+					Description: executes the carousel
+					Pre-condition:
+					  - carousel must have class 'carousel-services'
+					  - js/owl.carousel.min.js file MUST BE executed
+					Post-condition
+					  - send the attributes to the owl.carousel.min.js
+					Return:
+					  - none, but carousel needs to be functional
+				*/
 				$('.carousel-services').owlCarousel({
 					center: true,
 					loop: true,
@@ -186,23 +224,30 @@
 						}
 					}
 				});
-				//----- End: Initiate carousel -----
 				
-				//----- Start: Initiate resizing the service containers to make sure the size of these containers is the same -----
+				/* 
+					Description: scan through each SERVICES card and resize based on the maximum height
+					Pre-condition:
+					  - origin max height must be -1 (anything below 0)
+					  - card must have 'p_' class
+					  - page must be refreshed each time if the screen size changes
+					Post-condition
+					  - scan throught 'p_' class
+					  - find max height
+					  - resize all the max height
+					Return:
+					  - none, visually change the height of each card
+				*/
 				var maxHeight = -1
 				
 				$('.p_').each(function() { // get the max height out of all plants containers
 					maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 				});
 				
-				//maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
-				
 				$('.p_').each(function() { // change the height of all plants containers to max
 				   $(this).height(maxHeight);
 				 });
-				//----- End: Initiate resizing the service containers to make sure the size of these containers is the same -----
 			});
-				
 		</script>
 	</body>
 </html>

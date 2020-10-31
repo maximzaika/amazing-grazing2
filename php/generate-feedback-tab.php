@@ -1,10 +1,40 @@
 <?php
+	/*
+	 * Last Edited: 25/10/2020
+	 *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+	 *
+	 * Description::
+	 *  - generates the feedback html code to be displayed on the page
+	 *
+	 * Attributes:
+	 *  - $page_received: file page name
+	 *
+	 * Pre-condition:
+	 *  - called by any of the following web pages:
+	 *    * index.php
+	 *    * employment-statistics.php
+	 *    * livestock-statistics.php
+	 *    * techniques.php
+	 *    * drought.php
+	 *    * invasive-species.php
+	 *  - must be called within the page itself
+	 * Post-condition
+	 *  - generate full HTML code into $feedback_form variable
+	 * Return:
+	 *  - $feedback_form HTML code
+	*/
+	
 	function feedbackRead($page_received) {
 		$page_received = $page_received.'.php';
 		$feedback_form = 
-			'<div id="feedback-sent">Feedback has been sent to our team.</div>'.
+			'<div id="feedback-sent">Thank you! Your feedback has been sent to our team.</div>'.
 			'<div id="feedback-captcha">Please check reCAPTCHA to verify that you are a person.</div>'.
-			'<div id="feedback-not-sent">Unknown problem sending your feedback, please try again.</div>'.
+			'<div id="feedback-bracket-character">Avoid using characters like < >, please, try again.</div>'.
+			'<div id="feedback-not-sent">Unknown problem sending your feedback, please, try again.</div>'.
 			'<div id="feedback-tab" class="" data-toggle="modal" href="#feedback-modal">Feedback</div>'.
 			
 			'<div class="modal fade" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">'.

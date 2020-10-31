@@ -1,9 +1,36 @@
 <?php
+	
+	/*
+	 * Last Edited: 25/10/2020
+     *
+	 * Developed by: MC CM Team (Monash Students)
+	 * Project Name: Amazing Grazing
+	 * Project Description: Protecting Australia Grasslands by 
+	 *                      encouraging farmer education
+     *
+	 * Description::
+	 *  - called by the livestock-prediction.js when user to decides to replace the filters
+     *    * related to livestock-statistics.php web page
+	 *  - retrieves the card content from the database
+     * 
+     * Pre-condition:
+	 *  - server_config.php file must be available
+     *  - must be called by livestock-prediction.js's .ajax()
+	 *  - db table must be available: livestock_prediction_dataset & livestock_cards
+     *
+	 * Post-condition:
+	 *  - access livestock_prediction_dataset table to retrieve the predict values of all the livestock
+     *  - access livestock_cards to retrieve the content related to the datasets
+     *
+	 * Return:
+     *  - JSON Array containing the predicted values & card content
+	*/
+	
  	require_once "../server_config.php";
-
+	
 	$year = $_POST['selectedYear'];
 	
-	/* Get the Token from the DB */
+	/* Get the predicted values from the database */
 	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
 	$all_years = $con -> query($get_yrData);
 	
@@ -63,10 +90,7 @@
 		}
 	}
 	
-	
-	
-	
-	/* Get the Token from the DB */
+	/* Get the livestock card content from the database */
 	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM livestock_cards";
 	$card_Data = $con -> query($get_cardData);
 
@@ -105,7 +129,6 @@
 	$preview_total = array();
 	$modal_total_title = array();
 	$modal_total_text = array();
-	
 	
 	if ($card_Data->num_rows > 0) {
 		while($row = $card_Data->fetch_assoc()) {

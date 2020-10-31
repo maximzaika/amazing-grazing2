@@ -41,12 +41,12 @@ CREATE TABLE `index_offerings` (
 --
 
 INSERT INTO `index_offerings` (`ofr_id`, `ofr_icon`, `ofr_title`, `ofr_descr`, `ofr_url`) VALUES
-(1, 'flaticon-news', 'Latest News', 'Today\'s news regarding grazing, livestock, drought & wildfires', 'news.php'),
-(2, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Various grazing techniques required to preserve grassland\'s nature', 'techniques.php'),
-(3, 'flaticon-chicken', 'Livestock Statistics', 'Livestock situation and affect on grassland and economy', 'livestock-statistics.php'),
-(4, 'flaticon-teacher', 'Employment Statistics', 'The employment situation, agricultural communities, and promotion of the farming profession', 'employment-statistics.php'),
-(5, 'flaticon-drought', 'Drought', 'Drought locations, impacts, action plan, and government support', 'drought.php'),
-(6, 'flaticon-bug', 'Invasive Species', 'Invasive species locations, impacts, and preventative measures', 'invasive-species.php');
+(1, 'flaticon-chicken', 'Livestock Statistics', 'Livestock situation and affect on grassland and economy', 'livestock-statistics.php'),
+(2, 'flaticon-teacher', 'Employment Statistics', 'The employment situation, agricultural communities, and promotion of the farming profession', 'employment-statistics.php'),
+(3, 'flaticon-horse-grazing-black-silhouette', 'Grazing Techniques', 'Various grazing techniques required to preserve grassland\'s nature', 'techniques.php'),
+(4, 'flaticon-drought', 'Drought', 'Drought locations, impacts, action plan, and government support', 'drought.php'),
+(5, 'flaticon-bug', 'Invasive Species', 'Invasive species locations, impacts, and preventative measures', 'invasive-species.php'),
+(6, 'flaticon-news', 'Latest News', 'Today\'s news regarding grazing, livestock, drought & wildfires', 'news.php');
 
 --
 -- Indexes for dumped tables

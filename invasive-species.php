@@ -1,9 +1,26 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the invasive species page by typing invasive-species.php in the browser
+-->
 
 <?php 
+	/* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
     /* Server side files */
-	require_once "server_config.php"; // Accesses to the database
-	require_once "php/navigation.php"; // Updates the navigation bar
-	require_once "php/invasive-species-content.php"; // Used to update the landing (spinner, intro, filter & year controls)
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/invasive-species-content.php"; // Used to update the landing (spinner, intro, preventative measures)
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 	require_once "php/invasive-species-gallery-get-js.php"; // Returns the javascript code to the bottom of the page that stores the maps from the db
 ?>
@@ -13,6 +30,7 @@
 	<head>
 		<title>Amazing Grazing - Invasive Species</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -93,7 +111,7 @@
 		</div>
 		<!-- End Breadcrumb -->
 		
-		<!-- Section 1: Invasive species impact grasslands -->
+		<!-- Section 2: Invasive species impact grasslands -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light iq-features ftco-animate">
 			<div class="container">
 				<div class="row ">
@@ -111,9 +129,9 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Section 1: Invasive species impact grasslands -->
+		<!-- End Section 2: Invasive species impact grasslands -->
 		
-		<!-- Section 2: INVASIVE SPECIES & LOCATIONS -->
+		<!-- Section 3: INVASIVE SPECIES & LOCATIONS -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-animate sort-species">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
@@ -152,9 +170,9 @@
 				<!-- /Gallery -->
 			</div>
 		</section>
-		<!-- End Section 2: INVASIVE SPECIES & LOCATIONS -->
+		<!-- End Section 3: INVASIVE SPECIES & LOCATIONS -->
 		
-		<!-- Section 3: PREVENTATIVE MEASURES -->
+		<!-- Section 4: PREVENTATIVE MEASURES -->
 		<section class="ftco-section ftco-no-pt ftco-no-pb bg-light ftco-animate">
 			<div class="container">
 				<div class="container" style="padding-top: 4em;">
@@ -218,7 +236,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- eND Section 3: PREVENTATIVE MEASURES -->
+		<!-- END Section 3: PREVENTATIVE MEASURES -->
 		
 		<!-- Section 4: Footer -->
 		<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -227,11 +245,11 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							<h5 class="text-justify" style="color: rgba(255, 255, 255, 0.7);">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
 													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
 													These impacts cannot be prevented but can be controlled.
-													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</h5>
 						</div>
 					</div>
 			  
@@ -293,7 +311,17 @@
 		<script src="js/aos.js"></script>
 		<script src="js/readMoreJS.min.js"></script>
 		<script src="js/readMoreJS2.min.js"></script>
+		<script src="js/amazing-grazing/animated-spinner.js"></script><!-- triggers spinner when the page is fully loaded -->	
 		<script type='text/javascript'>
+			/* 
+				Description: initiates the execution of AOS function that initiates sorting/animations (Learn more online)
+				Pre-condition:
+				  - data-aos must be within the container to identify where it needs to be executed
+				Post-condition
+				  - used to sort the species (by plants or animals)
+				Return:
+				  - none, but makes a visual difference
+			*/
 			function aos_init() {
 				AOS.init({
 				  duration: 1000,
@@ -301,18 +329,48 @@
 				});
 			}
 			
+			/* Execute on load */
 			$(window).on('load', function() {
-				$.ajax({ // receive the gallery content from the database
+				/* 
+					Description: receive the gallery content from the database
+					Pre-condition:
+					  - page must be fully loaded
+					  - container with ids must be on the page (where gallery will go):
+						* animals-content
+					    * plants-content
+					Post-condition
+					  - calls invasive-species-gallery.php server file to generate the gallery
+					  - calls readMoreJS to enable hide/show long/short text
+				      - resize the containers of the gallery to match the height (based on maximum height)
+				      - initializes carousel
+					  - initializes animations
+                      - initializes the conversion of special characters in the graph into HTML readable format
+					  - inserts the graph inside the modal based on user selection
+					Return:
+					  - none, but makes a visual difference
+				*/
+				$.ajax({
 					type: "POST",
 					dataType: 'json',
 					url: 'php/invasive-species-gallery.php',
 					data: {},
 					success: function(data) {
-						document.getElementById('animals-content').innerHTML = data.animals; // replace the contant of the animals gallery with the content retrieved from the db
-						document.getElementById('plants-content').innerHTML = data.plants; // replace the contant of the plants gallery with the content retrieved from the db
+						document.getElementById('animals-content').innerHTML = data.animals; // replace the content of the animals gallery with the content retrieved from the db
+						document.getElementById('plants-content').innerHTML = data.plants; // replace the content of the plants gallery with the content retrieved from the db
 						
 						$(document).ready(function(){
-							//----- Start readMore function to enable hide/show the of the images -----//
+							/* 
+								Description: - calls readMoreJS.min.js file to add hide/show button to long/short text
+										     - Used for the description of teh gallery text
+								Pre-condition:
+								  - readMoreJS.min.js needs to be called (it is custom modified to work with our website
+									any other readMoreJS.min.js version is not going to function)
+								  - every text that needs to be hidden/shown must contain 'dummy' id and '<a>' inside this id
+								Post-condition
+								  - adds hide/show button to long/short text
+								Return:
+								  - none, but renames the button
+							*/
 							$readMoreJS.init({
 								target: '.dummy a',
 								numOfWords: 10,
@@ -320,9 +378,21 @@
 								moreLink: ' <i>read more</i>',
 								lessLink: ' <i>read less</i>'
 							});
-							//----- End readMore function to enable hide/show the of the images -----//
 							
-							//----- Start resize the gallery container on initial load -----//
+							/* 
+								Description: scan through each GALLERY card and resize based on the maximum height
+								Pre-condition:
+								  - origin max height must be -1 (anything below 0)
+								  - card must have 'p_' class
+								  - page must be refreshed each time if the screen size changes
+								Post-condition
+								  - scan throught 'p_' class
+								  - find max height
+								  - resize all the max height
+								  - add extra 25 height to accomodate space for the button
+								Return:
+								  - none, visually change the height of each card
+							*/
 							var maxHeight = -1
 				
 							$('.p_').each(function() { // get the max height out of all plants containers
@@ -331,13 +401,28 @@
 							
 							maxHeight = maxHeight+25; // increase height to provide enough space for the bottom button
 							
+							
 							$('.p_').each(function() { // change the height of all plants containers to max
 							   $(this).height(maxHeight);
 							 });
 							 
-							 var maxHeight = -1
-							 
-							 $('.a_').each(function() { // get the max height out of all animals containers
+							var maxHeight = -1
+							
+							/* 
+								Description: scan through each GALLERY card and resize based on the maximum height
+								Pre-condition:
+								  - origin max height must be -1 (anything below 0)
+								  - card must have 'a_' class
+								  - page must be refreshed each time if the screen size changes
+								Post-condition
+								  - scan throught 'a_' class
+								  - find max height
+								  - resize all the max height
+								  - add extra 25 height to accomodate space for the button
+								Return:
+								  - none, visually change the height of each card
+							*/
+							$('.a_').each(function() { // get the max height out of all animals containers
 								maxHeight = maxHeight > $(this).height() ? maxHeight :     $(this).height();
 							});
 							
@@ -346,42 +431,49 @@
 							$('.a_').each(function() { // change the height of all animals containers to max
 							   $(this).height(maxHeight);
 							 });
-							//----- End resize the gallery container on initial load -----//
 							
 							$('.filter-active').click(); // trigger the click of the filter just to resize the whole gallery container
 						});
 
-						//----- Start initiate owl carousel -----//
+						/* 
+							Description: executes the carousel for the seasonal grazing technique page ONLY
+							Pre-condition:
+							  - carousel must have class 'carousel-species'
+							  - js/owl.carousel.min.js file MUST BE executed
+							Post-condition
+							  - send the attributes to the owl.carousel.min.js
+							Return:
+							  - none, but carousel needs to be functional
+						*/
 						$('.carousel-species').owlCarousel({
-							center: true,
+							center: false,
 							loop: false,
 							rewind: true,
-							startPosition: 2,
 							items:5,
 							margin: 30,
 							stagePadding: 0,
 							mouseDrag: false,
 							nav: true,
-							//autoplay: true,
-							//autoplayHoverPause: true,
-							//autoplayTimeout: 7000,
 							navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 							responsive:{
 								0:{
-									items: 1
+									items: 1,
+									startPosition: 1
 								},
 								600:{
-									items: 2
+									items: 2,
+									startPosition: 0
 								},
 								1000:{
-									items: 3
+									items: 3,
+									startPosition: 0
 								},
 								1600:{
-									items: 4
+									items: 4,
+									startPosition: 0
 								}
 							}
 						});
-						//----- End initiate owl carousel -----//
 						
 						//----- Start initiates the animations required for the filter (Plants/Feral Animals) -----//
 						var portfolioIsotope = $('.sort-species-container').isotope({
@@ -405,15 +497,33 @@
 						aos_init();
 						//----- End initiates the animations required for the filter (Plants/Feral Animals) -----//
 						
-						
-						
-						//----- Start converts the species characters like $#47 to /
-						//      It is required because the tableau links contain special characters that browser cannot read for some reason if received from js -----//
+						/* 
+							Description: converts special chars "&#47" to "/" to make it a tableau URL
+							Pre-condition:
+							  - must be called the .ajax() triggered by the button "SHOW GRAPH" with id "hide-graph"
+							Attributes:
+							  - str: string sent by the .ajax() retrieved from the database table
+							Post-condition
+							  - replaces "&#47" withj "/"
+							Return:
+							  - clean URL string back to $("#hide-graph").click(function())
+						*/
 						function specialToHTML(str) {
 							return str.replaceAll("&#47;", "/");
 						}
-						//----- End converts the species characters like $#47 to /
 						
+						/* 
+							Description: display the graph selected by the user
+							Pre-condition:
+							  - the modal container must have an id "tableau-chart" which indicates where the graph needs to go
+							  - php file php/invasive-species-gallery-get-js.php must be read on page load
+							Attributes:
+							  - none
+							Post-condition
+							 - creates the graph with the data received from the php file 
+							Return:
+							  - graph
+						*/
 						$(".location-button").click(function() {
 							$("#tableau-chart").empty(); // clear the char just in case there is something inside there (usually after user clicks the button 2nd time)
 							
@@ -561,6 +671,19 @@
 				});
 			});  
 			
+			/* 
+				Description: calls readMoreJS2.min.js file to add hide/show button to long/short text
+							 The second one is used for the "PREVENTATIVE MEASURES"
+				Pre-condition:
+				  - page must be loaded
+				  - readMoreJS2.min.js needs to be called (it is custom modified to work with our website
+					any other readMoreJS.min.js version is not going to function)
+				  - every text that needs to be hidden/shown must contain 'd2' id and '<a>' inside this id
+				Post-condition
+				  - adds hide/show button to long/short text
+				Return:
+				  - none, but renames the button
+			*/
 			$(document).ready(function(){
 				$readMoreJS2.init({
 					target: '.d2 a',
@@ -569,74 +692,6 @@
 					moreLink: ' <i>read more</i>',
 					lessLink: ' <i>read less</i>'
 				});
-			
-				//----- Start control the Animated Spinner that containes 5 items -----//
-				let i=2;
-
-				var radius = 200;
-				var fields = $('.itemDot');
-				var container = $('.dotCircle');
-				var width = container.width();
-				radius = width/2.5;
-				 
-				var height = container.height();
-				var angle = 0, step = (2*Math.PI) / fields.length;
-				fields.each(function() {
-					var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
-					var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
-
-					$(this).css({
-						left: x + 'px',
-						top: y + 'px'
-					});
-					
-					angle += step;
-				});
-		
-				$('.itemDot').click(function(){
-					var dataTab = $(this).data("tab");
-					$('.itemDot').removeClass('active');
-					$(this).addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+ dataTab).addClass('active');
-					i = dataTab;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-1)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-1)*36)+"deg)",
-						"transition":"1s"
-					});
-				});
-		
-				setInterval (function() { // Function that auto executes every 5 seconds to enable auto spin
-					var dataTab = $('.itemDot.active').data("tab");
-					
-					if (dataTab>5 || i>5) {
-						dataTab=1;
-						i=1;
-					};
-					
-					$('.itemDot').removeClass('active');
-					$('[data-tab="'+i+'"]').addClass('active');
-					$('.CirItem').removeClass('active');
-					$( '.CirItem'+i).addClass('active');
-					i++;
-					
-					$('.dotCircle').css({ // controls the rotations of the spinning circle
-						"transform":"rotate("+((i-2)*36)+"deg)",
-						"transition":"2s"
-					});
-					
-					$('.itemDot').css({ // controls the rotations of the boxes. Must be opposite of the spinning circle
-						"transform":"rotate("+((-1)*(i-2)*36)+"deg)",
-						"transition":"1s"
-					});
-				}, 5000); 
-				//----- End control the Animated Spinner that containes 5 items -----//
 			});
 		</script>
 	</body>

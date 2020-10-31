@@ -3231,7 +3231,7 @@ input[type="button"].btn-block {
   .dropdown-item.active, .dropdown-item:active {
     color: #fbd341;
     text-decoration: none;
-    /*background-color: #fff; */}
+    background-color: #4e9525; }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #6c757d;
     pointer-events: none;
@@ -10127,7 +10127,7 @@ h1, h2, h3, h4, h5,
       font-size: 17px;
        } /* color: #000000; */
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
-        background: #4e9525;
+        /*background: white;*/
         color: #fbd341; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
@@ -10774,17 +10774,73 @@ position: relative;
 -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
 box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14); }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 320px) {
   .wrap .techniques { 
-    height: 465px;
+    height: 283px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .wrap .techniques { 
+    height: 337px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  .wrap .techniques { 
+    height: 372px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .wrap .techniques { 
+    height: 497px;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .wrap .techniques { 
+    height: 577px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrap .techniques { 
+    height: 337px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wrap .techniques { 
+    height: 452px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .wrap .techniques { 
+    height: 294px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrap .techniques { 
+    height: 340px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .wrap .techniques { 
-    height: 500px;
+    height: 415px;
   }
 }
+
+@media screen and (min-width: 1600px) {
+  .wrap .techniques { 
+    height: 464px;
+  }
+}
+
+
 
 .ftco-section-parallax {
   position: relative; }

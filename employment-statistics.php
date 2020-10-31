@@ -1,9 +1,26 @@
+<!--
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - loads the livestock statistics page by typing employment-statistics.php in the browser
+-->
 
 <?php 
+	/* Generate Unique Session & Unique Token */
+	session_start();
+	if (empty($_SESSION['csrf_token'])) {
+		$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+	}
+	
     /* Server side files */
-	require_once "server_config.php";
-	require_once "php/navigation.php";
-	require_once "php/employee-statistics-content.php";
+	require_once "server_config.php"; // Accesses the database
+	require_once "php/navigation.php"; // Generates the Navigation attached to the top of the website
+	require_once "php/employee-statistics-content.php"; // Used to update the landing (intro & agricultural communities)
 	require_once "php/generate-feedback-tab.php"; // Accesses the file that generates the feedback tab
 ?>
 
@@ -12,6 +29,7 @@
 	<head>
 		<title>Amazing Grazing - Employment Statistics</title>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="<?php $_SESSION['csrf_token']; echo $_SESSION['csrf_token']; ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Browser tab logo -->
@@ -103,6 +121,7 @@
 				<div class="container">
 					<div class="container" style="padding-left: 0px; padding-right: 0px; padding-bottom:15px;">
 						<div class="row">
+							<!-- Sorting -->
 							<div class="col-md-12">										
 								<h5><i class="fa fa-hand-o-up" aria-hidden="true"></i> Select employment type</h5>
 								<div class="dropdown" >
@@ -115,6 +134,7 @@
 								</div>
 								<br>
 							</div>
+							<!-- Sorting -->
 							
 							
 							<div class="col-md-12">
@@ -174,11 +194,11 @@
 					<div class="col-md-6">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="logo"><a href="#">Why does <span>Grazing matter?</span></a></h2>
-							<p class="text-justify">Livestock is playing an important role in the Australian economy.
+							<h5 class="text-justify" style="color: rgba(255, 255, 255, 0.7);">Livestock is playing an important role in the Australian economy.
 							                        However, its numbers have been reducing yearly since the 1970s.
 													The cause of it is ineffective grazing techniques, reduction of high qualification farmers, droughts, and invasive species.
 													These impacts cannot be prevented but can be controlled.
-													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</p>
+													The objective is to educate farmers and bring awareness to everyone who has an interest in our future.</h5>
 						</div>
 					</div>
 			  
@@ -237,7 +257,17 @@
 		<script src="js/amazing-grazing/employment-picker.js"></script>
 		<script src="js/amazing-grazing/counterup.min.js"></script>
 		<script type='text/javascript'> // Trigger map and cards when page is loaded
-			/* Added in iteration 3 - Owl-carousell settings so that when hover over, it would pause rotation */
+			/* 
+				Description: pauses & initiates the agricultural communities carousel rotation upon hovering it
+				Pre-condition:
+				  - initiates auto rotation on load every 4 second
+                  - the carousel must have classe "owl-item"
+				Post-condition
+				  - detects hover over and sends pause/start to owlCarousel
+                  - unique to this webpage only
+				Return:
+				  - none, but visually executes the carousel rotation
+			*/
 			var block = false;
 			var owl1 = $('.carousel-testimony');
 			$(".owl-item").mouseenter(function(){
@@ -256,6 +286,15 @@
 				}
 			});
 			
+			/* 
+				Description: pop-ups to play the video on the page
+				Pre-condition:
+				  - the video container must have an id "#headerVideoLink"
+				Post-condition
+				  - pops up the video container
+				Return:
+				  - none, but visaully pop up on the screen
+			*/
 			/* Added in iteration 3 - pop-up to play the video */
 			$('#headerVideoLink').magnificPopup({ 
 				type:'inline',
@@ -268,7 +307,15 @@
 				/* Added in iteration 3 - Enables auto play on the carousel */
 				owl1.trigger('play.owl.autoplay',[4000]); 
 				
-				/* Triggers a click on the drop down employment type selection */
+				/* 
+					Description: triggers a click on the drop down employment type selection
+					Pre-condition:
+					  - by default button must be set to a correct name of the record
+					Post-condition
+					  - trigger click on any of the buttons to intiate page update
+					Return:
+					  - none, but visaully show the changes (graph, cards, etc)
+				*/
 				var emp_type = document.getElementById("drop-employment").textContent;
 				if (emp_type == 'Beef cattle employment rate') {
 					var emp_type_select = "#e-beef";
@@ -286,15 +333,37 @@
 				
 				execute_once++;
 				
+				/* 
+					Description: scan through agricultural community card and resize based on max height
+					Pre-condition:
+					  - origin max height must be 0 (anything below 0)
+					  - card must have 'testimony-wrap' class
+					  - page must be refreshed each time if the screen size changes
+					Post-condition
+					  - scan throught 'testimony-wrap' class
+					  - find max height
+					  - resize all the max height
+					Return:
+					  - none, visually change the height of each card
+				*/
 				var maxHeight = 0;
 				$(".testimony-wrap").each(function(){
 					maxHeight = Math.max(maxHeight, $(this).height());  
 				});
 				$(".testimony-wrap").height(maxHeight);
 			});
-		</script>
-		<script type='text/javascript'>					
-			/* Renames the drop down employment type button & triggers the graph */
+
+			/* 
+				Description: renames the drop down employment type button & triggers the graph update
+				Pre-condition:
+				  - employment type must be clicked with the class "select-employment"
+				Post-condition
+				  - identify clicked drop down button, and rename the original button with the clicked button
+                  - trigger the click to execute the graph and cards
+                  - trigger update notification that lasts for 3 seconds
+				Return:
+				  - none, visually change the height of each card
+			*/
 			$(".select-employment").click(function() {
 				if (execute_once > 0) {
 					var x = document.getElementById("update-notification");

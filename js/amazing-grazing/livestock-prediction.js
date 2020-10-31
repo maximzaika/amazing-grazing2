@@ -1,6 +1,41 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - called by livestock-statistics.php when year is selected (class "lvstYearPrediction" clicked)
+ *
+ * Description:
+ *  - retrieves the prediction dataset from the database
+ *  - contains functions:
+ *    * readNumber(nStr, title) : converts calculations of large number to human readable format example: 1 thousand,
+ *    * contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText, URL) : decides what content goes to yearSelection()
+ *    * enableCarousel(owl, number2, number) : restarts the carousel on load or after user selects other filters
+ *    * yearSelection() : decies what cards send to the client (livestock-statistics.php) by sending a request to contentHTML() function
+ *
+ * This file is called by the following web page:
+ *  - livestock-statistics.php
+*/
+
 $(function(){
-	/* This function rounds large values and added bil, mil, etc. 
-	   based on the value */
+	/* 
+		Description: rounds large values and added bil, mil, etc. based on the value
+        Attributes:
+          - nStr: calculated value to be displayed on the page
+          - title: title of the card
+		Pre-condition:
+		  - must be called by contentHTML() with the value and title of the card
+          - Math must be available
+		Post-condition
+		  - convert numbers to human readable format, example '1,000' convert to '1 thousand'
+            by calculating
+		Return:
+		  - nStr, word: new value and the word
+	*/
 	function readNumber(nStr, title) {
 		if (title.includes("QTY")) {
 			word = "";
@@ -32,13 +67,25 @@ $(function(){
 		}
 	}
 	
-	/* Converts special characters into HTML readable format 
-	   Returns: converted string */
-	function specialToHTML(str) {
-		return str.replaceAll("&#47;", "/");
-	}
-	
-	/* This function decides what content needs to be sent to the client */
+	/* 
+		Description: decides what content needs to be sent to the client (livestock-statistics.php)
+        Attributes:
+          - icon: icon of the card from the database
+          - title: title of teh card
+          - curVal: latest year (2020,2030,2040, etc)
+          - year: lowest year for comparison (2016)
+          - remainVal: remaining value after the calculation
+          - modalTitle: title of the modal after it is clicked
+          - modalText: the text that goes inside the modal
+          - URL: link to the page of the related grazing technique
+		Pre-condition:
+		  - must be called by yearSelection()
+          - Math must be available
+		Post-condition
+		  - creates HTML content that is sent to the client (livestock-statistics.php) based on the filters selected
+		Return:
+		  - content: html content
+	*/
 	function contentHTML(icon, title, curVal, year, remainVal, preview, modalTitle, modalText, URL){
 		icon_same = "fa-dot-circle-o";
 		icon_good = "fa-arrow-circle-up";
@@ -81,10 +128,8 @@ $(function(){
 		
 		var randomVal = 'random'+Math.floor(Math.random() * 1000);
 		var openModal = randomVal+'_modal';
-		/* Added modal to expand the text */
 		
-		var content = //'<div id="card-height-'+randomVal+'" style="padding-bottom:40px;" class="card-height col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 col-xxxl-3 align-items-stretch animated fadeInLeft">'+
-						'<div class="item d-flex align-items-stretch">'+
+		var content = '<div class="item d-flex align-items-stretch">'+
 							'<div class="wrap">'+
 								'<div id="card-height-'+randomVal+'" class="bg-light services card-height text-center card-height-replace" style="padding-bottom: 10px;">'+
 									'<div class="icon justify-content-center align-items-center">'+
@@ -175,36 +220,51 @@ $(function(){
 							'</div>'+
 						'</div>'+
 					'</div>';
-						//'</div>';
-		
 		return content;
 	}
 	
+	/* 
+		Description: restart the carousel after user selected new filters
+        Attributes:
+          - owl: class of the carousel on the page (carousel-services)
+          - number2: how many card to show when the size of the screen is more than or equal 1000
+          - number: how many card to show when the size of the screen is more than or equal 1600
+		Pre-condition:
+		  - must be called by yearSelection()
+          - carousel needs to be initially executed on page load, otherwise there is an error
+		Post-condition
+		  - send the attrbitues to the carousel for execution
+		Return:
+		  - none: visually enables carousel
+	*/
 	function enableCarousel(owl, number2, number) {
 		owl.owlCarousel({
-			center: true,
-			loop: true,
+			center: false,
+			loop: false,
+			rewind: true,
+		    startPosition: 1,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
 			mouseDrag: false,
 			nav: true,
-			//autoplay: true,
-			//autoplayHoverPause: true,
-			//autoplayTimeout: 5000,
 			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 			responsive:{
 				0:{
-					items: 1
+					items: 1,
+					startPosition: 1
 				},
 				600:{
-					items: 2
+					items: 2,
+					startPosition: 0
 				},
 				1000:{
-					items: number2
+					items: number2,
+					startPosition: 0
 				},
 				1600:{
-					items: number
+					items: number,
+					startPosition: 0
 				}
 			}
 		});
@@ -212,9 +272,22 @@ $(function(){
 	
 	var executeCarousel=0; // 0 execute initially, 1 execute after updating filters
 	var owl = $('.carousel-services');
-	/* This function 1) changes the value of the year selection button, 
-					 2) calculates facts based on the formulas
-					 3) decides what cards to show based on the filter selection */
+	
+	/* 
+		Description: change year based on selection, calculate facts using formulas, decide what cards to show based on the filters
+        Attributes:
+          - none
+		Pre-condition:
+		  - year selector with the class "lvstYearPrediction" must be clicked
+		Post-condition
+          - makes a request to the server's file 'prediction_POST.php' that retrieves all the content
+		  - change the year based on the user selection
+          - calculate facts using formulas (shown below)
+          - decides what cards to show based on the filters:
+            * true true true false (meaning that BEEF CATTLE DAIRY CATTLE SHEEP are active and TOTAL is inactive)
+		Return:
+		  - none: visually updates the clients page (livestock-statistics.php)
+	*/
 	var yearSelection = function() {
 		var year_id = $(this).attr("id");
 		var prefix_id = year_id.substr(0,2); // get the y_ prefix
@@ -234,7 +307,7 @@ $(function(){
 				checkActive.push($(buttons[i]).hasClass(class_on));
 			}
 			
-			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3];
+			check_active = checkActive[0] + " " + checkActive[1] + " " + checkActive[2] + " " + checkActive[3]; // makes the string true true true false (or any other)
 
 			$('#prediction-data').addClass('animated fadeOutDown');  // add fade out animation class
 			setTimeout(function() { // delay the executing of the fade effects just to give them time to execute
@@ -321,7 +394,7 @@ $(function(){
 						var beefQTY = contentHTML(icons[0], title[0], latestYr, year, selYr, preview_beef, modal_beef_title, modal_beef_text, patch_burn);
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text, patch_burn);
 						var beefLandUse = contentHTML(icons[4], title[5], latestLandBeef, year, remainLandBeef, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY + beefLandUse;
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY + beefLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "false true false false") {
 						var latestYr = current_dairy_qty * 1000000; // latest livestock number - qty
@@ -336,7 +409,7 @@ $(function(){
 						var dairyQTY = contentHTML(icons[0], title[1], latestYr, year, selYr, preview_dairy, modal_dairy_title, modal_dairy_text, rotational); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text, rotational);
 						var dairyLandUse = contentHTML(icons[4], title[5], latestDairyBeef, year, remainDairyBeef, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = dairyQTY + milkQTY + dairyLandUse;
+						document.getElementById("prediction-data").innerHTML = milkQTY + dairyQTY + dairyLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "false false true false") {
 						var latestYr = current_sheep_qty * 1000000; //current year sheep - qty
@@ -355,7 +428,7 @@ $(function(){
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
 						var sheepLandUse = contentHTML(icons[4], title[5], latestLandSheep, year, remainLandSheep, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = sheepQTY + woolProduction + yarnProduction + sheepLandUse;
+						document.getElementById("prediction-data").innerHTML = woolProduction + sheepQTY + yarnProduction + sheepLandUse;
 						enableCarousel(owl, 2, 2);
 					} else if (check_active == "true false true false") {
 						var latestYr_beef = current_beef_qty * 1000000; // latest livestock number - qty
@@ -382,7 +455,7 @@ $(function(){
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML =  beefMeatQTY + beefQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -407,7 +480,7 @@ $(function(){
 						var dairyQTY = contentHTML(icons[0], title[1], latestYr_dairy, year, selYr_dairy, preview_dairy, modal_dairy_title, modal_dairy_text, rotational); 
 						var milkQTY = contentHTML(icons[1], title[3], latestRemainMilk, year, selRemainMilk, preview_milk, modal_milk_title, modal_milk_text, rotational);
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY +
 																				dairyQTY + milkQTY +
 																				totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -436,7 +509,7 @@ $(function(){
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML =  dairyQTY + milkQTY +
+						document.getElementById("prediction-data").innerHTML =  milkQTY + dairyQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -474,7 +547,7 @@ $(function(){
 						var beefMeatQTY = contentHTML(icons[2], title[4], latestRemainMeat, year, selRemainMeat, preview_meat, modal_meat_title, modal_meat_text, patch_burn);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML = totalQTY + milkQTY +
+						document.getElementById("prediction-data").innerHTML = milkQTY + totalQTY +
 																				beefMeatQTY + woolProduction +
 																				yarnProduction + totalLAndUse;
 						enableCarousel(owl, 2, 2);
@@ -512,7 +585,7 @@ $(function(){
 						var totalLAndUse = contentHTML(icons[4], title[5], totalLatestLand, year, totalRemainLand, preview_land, modal_land_title, modal_land_text, techniques);
 						var woolProduction = contentHTML(icons[5], title[6], latestWoolProduction, year, selWoolProduction, preview_wool, modal_wool_title, modal_wool_text, seasonal);
 						var yarnProduction = contentHTML(icons[6], title[7], latestYarnProduction, year, selYarnProduction, preview_yarn, modal_yarn_title, modal_yarn_text, seasonal);
-						document.getElementById("prediction-data").innerHTML = beefQTY + beefMeatQTY +
+						document.getElementById("prediction-data").innerHTML = beefMeatQTY + beefQTY +
 																				dairyQTY + milkQTY +
 																				sheepQTY + woolProduction +
 																				yarnProduction + totalLAndUse;

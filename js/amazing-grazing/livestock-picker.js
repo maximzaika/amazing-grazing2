@@ -1,12 +1,37 @@
+/*!
+ * Last Edited: 25/10/2020
+ * 
+ * Developed by: MC CM Team (Monash Students)
+ * Project Name: Amazing Grazing
+ * Project Description: Protecting Australia Grasslands by 
+ *					    encouraging farmer education
+ *
+ * Usage:
+ *  - called by livestock-statistics.php when filter is selected with the class "update-livestock"
+ *
+ * Description:
+ *  - contains functions:
+ *    * checkactiveBtn(arr, fnc): counts how many buttons are active to prevent user from deactivating all the buttons
+ *    * selectLivestock(): activate/deactivates filter buttons, identifies which buttons are clicked, and triggers year click
+ *                         initiate the update of the page
+ *
+ * This file is called by the following web page:
+ *  - livestock-statistics.php
+*/
+
 $(function(){
-	/* Converts special characters into HTML readable format 
-	   Returns: converted string */
-	function specialToHTML(str) {
-		return str.replaceAll("&#47;", "/");
-	}
-	
-	/* Counts active / intective buttons. 
-	   Returns: number of active buttons */
+	/* 
+		Description: counts active / intective buttons.
+		Attributes: 
+          - arr: table containing the ids of the filter buttons 
+          - fnc: class of the button (class_on or class_off)
+		Pre-condition:
+		  - filter buttons must have the same ids as inside the arr
+		Post-condition
+		  - main use of this function is to identify wheteher 0 buttons are selected to prompt an error
+		Return:
+		  - countActive: number of active buttons
+	*/
 	function checkActiveBtn(arr, fnc) {
 		var countActive = 0;
 		for (i = 0; i < 4; i++) {
@@ -15,20 +40,28 @@ $(function(){
 			}
 			
 		}
-		
 		return countActive;
 	}
 	
-	/* Identifies active and inactive buttons.
-	   Returns: none instead pushes to HTML */
+	/* 
+		Description: Identifies active and inactive buttons & trigger year button click to initiate updating the content
+		Attributes: 
+          - none
+		Pre-condition:
+		  - filter button with the class "update-livestock" must be clicked
+		Post-condition
+		  - unchecks all the buttons if TOTAL is selected (when total is on, others cannot be ON)
+		  - checks whether currently clicked filter is active/deactive then deactivate/activate it
+		  - checks whether 0 buttons is selected and propmts error if true, if false triggers year click to initiate update
+		Return:
+		  - none, instead visually updates the page
+	*/
 	var selectLivestock = function() {
 		var livestock_id = $(this).attr("id"); /* get the id of the clicked button */
 		var id = "#" + livestock_id;
 		
 		var class_on  = 'btn-amazing-livestock-on';
 		var class_off = 'btn-amazing-livestock-off';
-		
-		//var txtContent = document.querySelector(id).textContent;
 		
 		if (livestock_id.substr(0,10) == "livestock_") { // check whether clicked button is reletated to livestock
 			var checkActive = [];
