@@ -28,6 +28,8 @@
 
  	require_once "../server_config.php";
 	
+	header('Content-type: application/json');
+	
 	$year = $_POST['selectedYear'];
 	
 	// Get the predicted values from the database
