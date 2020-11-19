@@ -329,10 +329,9 @@ $(function(){
 				success: function (data) {
 					console.log(data.year);
 					console.log(data.current_total_qty);
-					console.log(data.modal_total_text.split('~'));
 					var preview_beef = data.preview_beef.split('~');
-					/*var modal_beef_title = data.modal_beef_title.split('~');
-					var modal_beef_text = data.modal_beef_text.split('~');
+					var modal_beef_title = data.modal_beef_title.split('~');
+					/*var modal_beef_text = data.modal_beef_text.split('~');
 					var preview_dairy = data.preview_dairy.split('~');
 					var modal_dairy_title = data.modal_dairy_title.split('~');
 					var modal_dairy_text = data.modal_dairy_text.split('~');
