@@ -328,6 +328,7 @@ $(function(){
 				data: {"selectedYear": year},
 				success: function (data) {
 					console.log(data.year);
+					console.log(data.current_total_qty);
 					/*var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
