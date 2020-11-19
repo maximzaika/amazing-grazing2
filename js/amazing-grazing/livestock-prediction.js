@@ -327,6 +327,7 @@ $(function(){
 				/*dataType: 'json',*/
 				data: {selectedYear: year},
 				success: function (data) {
+					console.log(data);
 					var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
