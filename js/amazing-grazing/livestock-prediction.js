@@ -329,6 +329,18 @@ $(function(){
 				success: function (data) {
 					console.log(data.year);
 					console.log(data.current_total_qty);
+					
+					// Data retrieved from the DB - predicted data
+					var current_beef_qty = data.current_beef_qty;
+					var current_dairy_qty = data.current_dairy_qty;
+					var current_sheep_qty = data.current_sheep_qty;
+					var current_total_qty = data.current_total_qty;
+					
+					var selected_beef_qty = data.selected_beef_qty;
+					var selected_dairy_qty = data.selected_dairy_qty;
+					var selected_sheep_qty = data.selected_sheep_qty;
+					var selected_total_qty = data.selected_total_qty;
+					
 					var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					/*var modal_beef_text = data.modal_beef_text.split('~');
@@ -356,18 +368,6 @@ $(function(){
 					var preview_total = data.preview_total.split('~');
 					var modal_total_title = data.modal_total_title.split('~');
 					var modal_total_text = data.modal_total_text.split('~');
-					
-					// Data retrieved from the DB - predicted data
-					var current_beef_qty = data.current_beef_qty;
-					var current_dairy_qty = data.current_dairy_qty;
-					var current_sheep_qty = data.current_sheep_qty;
-					var current_total_qty = data.current_total_qty;
-					
-					var selected_beef_qty = data.selected_beef_qty;
-					var selected_dairy_qty = data.selected_dairy_qty;
-					var selected_sheep_qty = data.selected_sheep_qty;
-					var selected_total_qty = data.selected_total_qty;
-					
 					
 					// QTY 
 					var latestYr = data.latestYr * 1000000; // latest livestock number - qty
