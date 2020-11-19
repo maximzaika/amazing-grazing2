@@ -324,65 +324,37 @@ $(function(){
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
-				dataType: 'text',
+				dataType: 'json',
+				contentType: 'application/json; charset=utf-8',
 				data: {selectedYear: year},
 				success: function (data) {
-					/*
-						var preview_beef = data.preview_beef.split('~');
-						var modal_beef_title = data.modal_beef_title.split('~');
-						var modal_beef_text = data.modal_beef_text.split('~');
-						var preview_dairy = data.preview_dairy.split('~');
-						var modal_dairy_title = data.modal_dairy_title.split('~');
-						var modal_dairy_text = data.modal_dairy_text.split('~');
-						var preview_milk = data.preview_milk.split('~');
-						var modal_milk_title = data.modal_milk_title.split('~');
-						var modal_milk_text = data.modal_milk_text.split('~');
-						var preview_sheep = data.preview_sheep.split('~');
-						var modal_sheep_title = data.modal_sheep_title.split('~');
-						var modal_sheep_text = data.modal_sheep_text.split('~');
-						var preview_wool = data.preview_wool.split('~');
-						var modal_wool_title = data.modal_wool_title.split('~');
-						var modal_wool_text = data.modal_wool_text.split('~');
-						var preview_land = data.preview_land.split('~');
-						var modal_land_title = data.modal_land_title.split('~');
-						var modal_land_text = data.modal_land_text.split('~');
-						var preview_meat = data.preview_meat.split('~');
-						var modal_meat_title = data.modal_meat_title.split('~');
-						var modal_meat_text = data.modal_meat_text.split('~');
-						var preview_yarn = data.preview_yarn.split('~');
-						var modal_yarn_title = data.modal_yarn_title.split('~');
-						var modal_yarn_text = data.modal_yarn_text.split('~');
-						var preview_total = data.preview_total.split('~');
-						var modal_total_title = data.modal_total_title.split('~');
-						var modal_total_text = data.modal_total_text.split('~');
-					*/
-					var preview_beef = data.preview_beef;
-					var modal_beef_title = data.modal_beef_title;
-					var modal_beef_text = data.modal_beef_text;
-					var preview_dairy = data.preview_dairy;
-					var modal_dairy_title = data.modal_dairy_title;
-					var modal_dairy_text = data.modal_dairy_text;
-					var preview_milk = data.preview_milk;
-					var modal_milk_title = data.modal_milk_title;
-					var modal_milk_text = data.modal_milk_text;
-					var preview_sheep = data.preview_sheep;
-					var modal_sheep_title = data.modal_sheep_title;
-					var modal_sheep_text = data.modal_sheep_text;
-					var preview_wool = data.preview_wool;
-					var modal_wool_title = data.modal_wool_title;
-					var modal_wool_text = data.modal_wool_text;
-					var preview_land = data.preview_land;
-					var modal_land_title = data.modal_land_title;
-					var modal_land_text = data.modal_land_text;
-					var preview_meat = data.preview_meat;
-					var modal_meat_title = data.modal_meat_title;
-					var modal_meat_text = data.modal_meat_text;
-					var preview_yarn = data.preview_yarn;
-					var modal_yarn_title = data.modal_yarn_title;
-					var modal_yarn_text = data.modal_yarn_text;
-					var preview_total = data.preview_total;
-					var modal_total_title = data.modal_total_title;
-					var modal_total_text = data.modal_total_text;
+					var preview_beef = data.preview_beef.split('~');
+					var modal_beef_title = data.modal_beef_title.split('~');
+					var modal_beef_text = data.modal_beef_text.split('~');
+					var preview_dairy = data.preview_dairy.split('~');
+					var modal_dairy_title = data.modal_dairy_title.split('~');
+					var modal_dairy_text = data.modal_dairy_text.split('~');
+					var preview_milk = data.preview_milk.split('~');
+					var modal_milk_title = data.modal_milk_title.split('~');
+					var modal_milk_text = data.modal_milk_text.split('~');
+					var preview_sheep = data.preview_sheep.split('~');
+					var modal_sheep_title = data.modal_sheep_title.split('~');
+					var modal_sheep_text = data.modal_sheep_text.split('~');
+					var preview_wool = data.preview_wool.split('~');
+					var modal_wool_title = data.modal_wool_title.split('~');
+					var modal_wool_text = data.modal_wool_text.split('~');
+					var preview_land = data.preview_land.split('~');
+					var modal_land_title = data.modal_land_title.split('~');
+					var modal_land_text = data.modal_land_text.split('~');
+					var preview_meat = data.preview_meat.split('~');
+					var modal_meat_title = data.modal_meat_title.split('~');
+					var modal_meat_text = data.modal_meat_text.split('~');
+					var preview_yarn = data.preview_yarn.split('~');
+					var modal_yarn_title = data.modal_yarn_title.split('~');
+					var modal_yarn_text = data.modal_yarn_text.split('~');
+					var preview_total = data.preview_total.split('~');
+					var modal_total_title = data.modal_total_title.split('~');
+					var modal_total_text = data.modal_total_text.split('~');
 					
 					/* Data retrieved from the DB - predicted data */
 					var current_beef_qty = data.current_beef_qty;
