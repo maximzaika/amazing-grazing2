@@ -343,8 +343,8 @@ $(function(){
 					
 					var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
-					var modal_beef_text = data.modal_beef_text.split('~');
-					/*var preview_dairy = data.preview_dairy.split('~');
+					/*var modal_beef_text = data.modal_beef_text.split('~');
+					var preview_dairy = data.preview_dairy.split('~');
 					var modal_dairy_title = data.modal_dairy_title.split('~');
 					var modal_dairy_text = data.modal_dairy_text.split('~');
 					var preview_milk = data.preview_milk.split('~');
