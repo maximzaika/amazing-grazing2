@@ -329,7 +329,7 @@ $(function(){
 				success: function (data) {
 					console.log(data.year);
 					console.log(data.current_total_qty);
-					console.log(data.modal_total_text);
+					console.log(data.card_title);
 					/*var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
