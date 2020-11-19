@@ -25,13 +25,13 @@
 	 * Return:
      *  - JSON Array containing the predicted values & card content
 	*/
-	header("Content-Type: application/json");
+
  	require_once "../server_config.php";
 	
 	$year = $_POST['selectedYear'];
-	
-	/* Get the predicted values from the database */
-	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
+	echo json_encode(array("year"=>$year));
+	// Get the predicted values from the database
+	/*$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
 	$all_years = $con -> query($get_yrData);
 	
 	$selected_beef_qty = 0;
@@ -50,7 +50,7 @@
 			$predict_type = $row['predict_type'];
 			$predict_qty = $row['predict_qty'];
 			
-			/* Selected data (future) */
+			// Selected data (future)
 			if (($predict_type == "Beef cattle") && ($year == $predict_yr)) {
 				$selected_beef_qty = $predict_qty;
 			}
@@ -67,7 +67,7 @@
 				$selected_total_qty = $predict_qty;
 			}
 			
-			/* Current data (today) */
+			// Current data (today)
 			if (($predict_type == "Beef cattle") && (date("Y") == $predict_yr)) {
 
 				$current_beef_qty = $predict_qty;
@@ -90,7 +90,7 @@
 		}
 	}
 	
-	/* Get the livestock card content from the database */
+	// Get the livestock card content from the database
 	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM livestock_cards";
 	$card_Data = $con -> query($get_cardData);
 
@@ -212,5 +212,5 @@
 						   "modal_yarn_text"=>implode('~',$modal_yarn_text),
 						   "preview_total"=>implode('~',$preview_total),
 						   "modal_total_title"=>implode('~',$modal_total_title),
-						   "modal_total_text"=>implode('~',$modal_total_text))); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
+						   "modal_total_text"=>implode('~',$modal_total_text)));*/
 ?>
