@@ -343,7 +343,7 @@ $(function(){
 					
 					var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
-					/*var modal_beef_text = data.modal_beef_text.split('~');
+					var modal_beef_text = data.modal_beef_text.split('~');
 					var preview_dairy = data.preview_dairy.split('~');
 					var modal_dairy_title = data.modal_dairy_title.split('~');
 					var modal_dairy_text = data.modal_dairy_text.split('~');
@@ -368,7 +368,7 @@ $(function(){
 					var preview_total = data.preview_total.split('~');
 					var modal_total_title = data.modal_total_title.split('~');
 					var modal_total_text = data.modal_total_text.split('~');
-					
+					/*
 					// QTY 
 					var latestYr = data.latestYr * 1000000; // latest livestock number - qty
 					var selYr = data.selYr * 1000000; // selected livestock number - qty
