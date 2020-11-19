@@ -282,13 +282,11 @@ $(function(){
 		
 		selectEmploymentType(active_id, e_beef, e_dairy, e_sheep);
 		
-		var sendThis = {active: active_id};
 		$.ajax({
 				url: 'php/employment-card-POST.php',
 				type: "POST",
-				contentType: "application/json; charset=utf-8",
 				dataType: 'json',
-				data: JSON.stringify(sendThis),
+				data: {active: active_id},
 				success: function (data) {					
 					$("#cards-data").empty();
 					document.getElementById('cards-data').innerHTML = data.card;
