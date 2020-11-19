@@ -196,8 +196,8 @@
 						   "preview_dairy"=>implode('~',$preview_dairy),
 						   "modal_dairy_title"=>implode('~',$modal_dairy_title),
 						   "modal_dairy_text"=>implode('~',$modal_dairy_text),
-						   "preview_milk"=>implode('~',$preview_milk),
-						   "modal_milk_title"=>implode('~',$modal_milk_title),
+						   "preview_milk"=>implode('~',$preview_milk)));
+						   /*"modal_milk_title"=>implode('~',$modal_milk_title),
 						   "modal_milk_text"=>implode('~',$modal_milk_text),
 						   "preview_sheep"=>implode('~',$preview_sheep),
 						   "modal_sheep_title"=>implode('~',$modal_sheep_title),
@@ -216,5 +216,5 @@
 						   "modal_yarn_text"=>implode('~',$modal_yarn_text),
 						   "preview_total"=>implode('~',$preview_total),
 						   "modal_total_title"=>implode('~',$modal_total_title),
-						   "modal_total_text"=>implode('~',$modal_total_text)));
+						   "modal_total_text"=>implode('~',$modal_total_text)/*));
 ?>

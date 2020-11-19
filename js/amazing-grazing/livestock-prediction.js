@@ -337,7 +337,7 @@ $(function(){
 					var modal_dairy_title = data.modal_dairy_title.split('~');
 					var modal_dairy_text = data.modal_dairy_text.split('~');
 					var preview_milk = data.preview_milk.split('~');
-					var modal_milk_title = data.modal_milk_title.split('~');
+					/*var modal_milk_title = data.modal_milk_title.split('~');
 					var modal_milk_text = data.modal_milk_text.split('~');
 					var preview_sheep = data.preview_sheep.split('~');
 					var modal_sheep_title = data.modal_sheep_title.split('~');
@@ -609,7 +609,7 @@ $(function(){
 					$(".card-height").each(function(){
 						maxHeight = Math.max(maxHeight, $(this).height());     
 					});
-					$(".card-height-replace").height(maxHeight);
+					$(".card-height-replace").height(maxHeight);*/
 				},
 				'error': function(jqXHR, status, error) {
 					console.log(status);
