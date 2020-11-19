@@ -182,10 +182,7 @@
 	}
 	
 	echo json_encode(array("year"=>$year,
-						   "current_total_qty"=>$current_total_qty,
-						   "modal_total_text"=>implode('~',$preview_beef)));
-	/*
-	echo json_encode(array("selected_beef_qty"=>$selected_beef_qty, 
+	                       "selected_beef_qty"=>$selected_beef_qty, 
 						   "selected_dairy_qty"=>$selected_dairy_qty,
 						   "selected_sheep_qty"=>$selected_sheep_qty,
 						   "selected_total_qty"=>$selected_total_qty,
@@ -219,5 +216,5 @@
 						   "modal_yarn_text"=>implode('~',$modal_yarn_text),
 						   "preview_total"=>implode('~',$preview_total),
 						   "modal_total_title"=>implode('~',$modal_total_title),
-						   "modal_total_text"=>implode('~',$modal_total_text)));*/
+						   "modal_total_text"=>implode('~',$modal_total_text)));
 ?>

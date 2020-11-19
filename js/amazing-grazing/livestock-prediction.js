@@ -330,7 +330,7 @@ $(function(){
 					console.log(data.year);
 					console.log(data.current_total_qty);
 					console.log(data.modal_total_text.split('~'));
-					/*var preview_beef = data.preview_beef.split('~');
+					var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
 					var preview_dairy = data.preview_dairy.split('~');
@@ -609,7 +609,7 @@ $(function(){
 					$(".card-height").each(function(){
 						maxHeight = Math.max(maxHeight, $(this).height());     
 					});
-					$(".card-height-replace").height(maxHeight);*/
+					$(".card-height-replace").height(maxHeight);
 				},
 				'error': function(jqXHR, status, error) {
 					console.log(status);
