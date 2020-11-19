@@ -25,7 +25,7 @@
 	 * Return:
      *  - JSON Array containing the predicted values & card content
 	*/
-	
+	header("Content-Type: application/json");
  	require_once "../server_config.php";
 	
 	$year = $_POST['selectedYear'];

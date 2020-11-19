@@ -324,7 +324,7 @@ $(function(){
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
-				dataType: 'json',
+				/*dataType: 'json',*/
 				data: {"selectedYear": year},
 				success: function (data) {
 					var preview_beef = data.preview_beef.split('~');
