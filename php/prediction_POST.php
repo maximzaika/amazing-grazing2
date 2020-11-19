@@ -192,7 +192,7 @@
 						   "current_total_qty"=>$current_total_qty,
 						   "preview_beef"=>implode('~',$preview_beef),
 						   "modal_beef_title"=>implode('~',$modal_beef_title),
-						   //"modal_beef_text"=>implode('~',$modal_beef_text),
+						   "modal_beef_text"=>$modal_beef_text,
 						   "preview_dairy"=>implode('~',$preview_dairy),
 						   "modal_dairy_title"=>implode('~',$modal_dairy_title),
 						   //"modal_dairy_text"=>implode('~',$modal_dairy_text),
