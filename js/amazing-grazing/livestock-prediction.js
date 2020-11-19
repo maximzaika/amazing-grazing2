@@ -324,10 +324,11 @@ $(function(){
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
-				/*dataType: 'json',*/
+				dataType: 'json',
 				data: {"selectedYear": year},
 				success: function (data) {
-					var preview_beef = data.preview_beef.split('~');
+					console.log(data.year);
+					/*var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
 					var preview_dairy = data.preview_dairy.split('~');
@@ -355,7 +356,7 @@ $(function(){
 					var modal_total_title = data.modal_total_title.split('~');
 					var modal_total_text = data.modal_total_text.split('~');
 					
-					/* Data retrieved from the DB - predicted data */
+					// Data retrieved from the DB - predicted data
 					var current_beef_qty = data.current_beef_qty;
 					var current_dairy_qty = data.current_dairy_qty;
 					var current_sheep_qty = data.current_sheep_qty;
@@ -367,11 +368,11 @@ $(function(){
 					var selected_total_qty = data.selected_total_qty;
 					
 					
-					/* QTY */
+					// QTY 
 					var latestYr = data.latestYr * 1000000; // latest livestock number - qty
 					var selYr = data.selYr * 1000000; // selected livestock number - qty
 					
-					/* icons */
+					// icons
 					var icons = ['flaticon-livestock', 'flaticon-milk', 'flaticon-meat', 'flaticon-sheep', 'flaticon-region', 'flaticon-sheep-1', 'flaticon-wool'];
 					var title = ['Beef cattle QTY in', 'Dairy cattle QTY in', 'Sheep QTY in', 'Milk produced in', 'Beef produced in', 'Land used in', 'Wool produced in', 'Yarn produced in', 'Livestock QTY in'];
 					
@@ -380,7 +381,7 @@ $(function(){
 					var seasonal = "techniques.php";
 					var techniques = "techniques.php"
 					
-					/* HTML content */				 
+					// HTML content 			 
 					if (check_active == "true false false false") {
 						var latestYr = current_beef_qty * 1000000; // latest livestock number - qty
 						var selYr = selected_beef_qty * 1000000; // selected livestock number - qty
@@ -592,7 +593,7 @@ $(function(){
 						enableCarousel(owl, 2, 2);
 					}
 					
-					/* Enable number count */
+					// Enable number count
 					$('[data-toggle="counter-up"]').counterUp({
 						delay: 10,
 						time: 500
@@ -600,13 +601,13 @@ $(function(){
 					
 					executeCarousel = 1; // enable executing of more than 2 carousels after selecting filters
 
-					/* control the height of the cards 
-					   make the same height when the container is not expanded */
+					// control the height of the cards 
+					   //make the same height when the container is not expanded 
 					var maxHeight = 0;
 					$(".card-height").each(function(){
 						maxHeight = Math.max(maxHeight, $(this).height());     
 					});
-					$(".card-height-replace").height(maxHeight);
+					$(".card-height-replace").height(maxHeight);*/
 				},
 				error: (error) => {
 					console.log(JSON.stringify(error));
