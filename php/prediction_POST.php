@@ -183,7 +183,7 @@
 	
 	echo json_encode(array("year"=>$year,
 						   "current_total_qty"=>$current_total_qty,
-						   "modal_total_text"=>$modal_total_text));
+						   "modal_total_text"=>implode('~',$preview_beef)));
 	/*
 	echo json_encode(array("selected_beef_qty"=>$selected_beef_qty, 
 						   "selected_dairy_qty"=>$selected_dairy_qty,
