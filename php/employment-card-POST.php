@@ -590,6 +590,6 @@
 	
 	
 	echo json_encode(array("card"=>$all_cards,
-						   "modal"=>$modals));
+						   "modal"=>$modals), JSON_UNESCAPED_UNICODE);
 	
 ?>
