@@ -99,7 +99,8 @@
 
 	$preview_beef = array();
 	$modal_beef_title = array();
-	$modal_beef_text = array();
+	//$modal_beef_text = array();
+	$modal_beef_text = "";
 	
 	$preview_dairy = array();
 	$modal_dairy_title = array();
@@ -144,11 +145,17 @@
 			if ($card_type == "beef cattle") {
 				array_push($preview_beef, $card_preview);
 				array_push($modal_beef_title, $card_title);
-				array_push($modal_beef_text, $card_text);
+				//array_push($modal_beef_text, $card_text);
+				if (count($modal_beef_title)==1) {
+					$modal_beef_text = $modal_beef_text.$card_text;
+				} else {
+					$modal_beef_text = $modal_beef_text."~".$card_text;
+				}
 			} else if ($card_type == "Dairy cattle") {
 				array_push($preview_dairy, $card_preview);
 				array_push($modal_dairy_title, $card_title);
 				array_push($modal_dairy_text, $card_text);
+				//$modal_dairy_text = "~"+$card_text;
 			} else if ($card_type == "Milk") {
 				array_push($preview_milk, $card_preview);
 				array_push($modal_milk_title, $card_title);
