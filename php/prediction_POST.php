@@ -90,9 +90,7 @@
 		}
 	}
 	
-	echo json_encode(array("year"=>$year,
-						   "current_total_qty"=>$current_total_qty));
-	/*
+	
 	// Get the livestock card content from the database
 	$get_cardData = "SELECT card_id, card_type, card_preview, card_title, card_text FROM livestock_cards";
 	$card_Data = $con -> query($get_cardData);
@@ -181,6 +179,10 @@
 		}
 	}
 	
+	echo json_encode(array("year"=>$year,
+						   "current_total_qty"=>$current_total_qty,
+						   "modal_total_text"=>$modal_total_text));
+	/*
 	echo json_encode(array("selected_beef_qty"=>$selected_beef_qty, 
 						   "selected_dairy_qty"=>$selected_dairy_qty,
 						   "selected_sheep_qty"=>$selected_sheep_qty,
