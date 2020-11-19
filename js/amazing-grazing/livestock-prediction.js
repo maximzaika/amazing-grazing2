@@ -329,7 +329,7 @@ $(function(){
 				success: function (data) {
 					console.log(data.year);
 					console.log(data.current_total_qty);
-					console.log(data.card_title);
+					console.log(data.modal_total_text);
 					/*var preview_beef = data.preview_beef.split('~');
 					var modal_beef_title = data.modal_beef_title.split('~');
 					var modal_beef_text = data.modal_beef_text.split('~');
@@ -611,8 +611,9 @@ $(function(){
 					});
 					$(".card-height-replace").height(maxHeight);*/
 				},
-				error: (error) => {
-					console.log(JSON.stringify(error));
+				'error': function(jqXHR, status, error) {
+					console.log(status);
+					console.log(error);
 				}
 			});
 		}

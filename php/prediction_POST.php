@@ -181,7 +181,7 @@
 	
 	echo json_encode(array("year"=>$year,
 						   "current_total_qty"=>$current_total_qty,
-						   "card_title"=>$card_title));
+						   "modal_total_text"=>$modal_total_text));
 	/*
 	echo json_encode(array("selected_beef_qty"=>$selected_beef_qty, 
 						   "selected_dairy_qty"=>$selected_dairy_qty,
