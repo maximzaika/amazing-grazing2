@@ -324,7 +324,7 @@ $(function(){
 			$.ajax({
 				url: 'php/prediction_POST.php',
 				type: "POST",
-				dataType: 'json',
+				dataType: 'text',
 				data: {selectedYear: year},
 				success: function (data) {
 					/*
