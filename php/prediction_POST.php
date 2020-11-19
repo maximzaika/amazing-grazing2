@@ -29,7 +29,6 @@
  	require_once "../server_config.php";
 	
 	$year = $_POST['selectedYear'];
-	header("Content-Type: application/json", true);
 	
 	/* Get the predicted values from the database */
 	$get_yrData = "SELECT predict_id, predict_year, predict_type, predict_qty FROM livestock_prediction_dataset";
@@ -214,5 +213,4 @@
 						   "preview_total"=>implode('~',$preview_total),
 						   "modal_total_title"=>implode('~',$modal_total_title),
 						   "modal_total_text"=>implode('~',$modal_total_text))); /* Encode back into the json and send to the javascript, which will push the data to the HTML */
-	exit;
 ?>
