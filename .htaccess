@@ -1,6 +1,3 @@
-AddDefaultCharset UTF-8
-AddCharset UTF-8 .php
-
 # Prevent access to Directory Listing
 Options -Indexes
 
